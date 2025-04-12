@@ -1,0 +1,12 @@
+.home-page-layout {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .home-page-main-content {
+    flex-grow: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+  }

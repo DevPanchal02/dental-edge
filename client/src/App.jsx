@@ -1,10 +1,11 @@
 import React from 'react';
+import HomePage from './pages/HomePage';
+import './styles/App.css';
 
 function App() {
+  // Renders the main application page
   return (
-    <div>
-      <h1>Vite + React App</h1>
-    </div>
+    <HomePage />
   );
 }
 

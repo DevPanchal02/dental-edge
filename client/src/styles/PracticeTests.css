@@ -1,0 +1,105 @@
+.practice-tests-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    flex-grow: 1;
+    margin-top: 30px; /* Spacing from top */
+}
+
+.practice-tests-loading,
+.practice-tests-error,
+.practice-tests-info {
+    padding: 20px;
+    text-align: center;
+    color: #aaa;
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.practice-tests-error {
+    color: #ff8a8a;
+    background-color: #3b2424;
+}
+
+
+.practice-test-item-button {
+    display: flex;
+    align-items: center;
+    background-color: #2a2a2a;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.practice-test-item-button:hover {
+    background-color: #333;
+}
+
+.test-number-circle {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #444;
+    color: #ccc;
+    font-size: 0.9em;
+    font-weight: 500;
+    margin-right: 15px;
+    flex-shrink: 0;
+}
+
+.test-name {
+    flex-grow: 1;
+    font-size: 1em;
+    color: #eee;
+    margin-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.test-score-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 200px; /* Consistent alignment */
+    justify-content: flex-end;
+    flex-shrink: 0;
+}
+.test-score-section.no-score {
+    min-height: 24px; /* Maintain height */
+}
+
+.latest-score-label {
+    font-size: 0.8em;
+    color: #aaa;
+    white-space: nowrap;
+}
+
+.score-progress-bar {
+    width: 80px;
+    height: 6px;
+    background-color: #444;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.score-progress-fill {
+    height: 100%;
+    background-color: #00bcd4; /* Progress color */
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.score-text {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #00bcd4; /* Score color */
+    min-width: 45px;
+    text-align: right;
+    white-space: nowrap;
+}
