@@ -1,0 +1,232 @@
+/* FILE: client/src/styles/ResultsPage.css */
+.results-page-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px 30px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+}
+
+.results-header {
+    border-bottom: 1px solid #444;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.back-button-results {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    border: none;
+    color: #00bcd4;
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+.back-button-results:hover {
+    text-decoration: underline;
+}
+
+.results-title {
+    text-align: center;
+    color: #e0e0e0;
+    font-size: 1.8em;
+    margin: 0;
+    padding-top: 5px;
+    font-weight: 500;
+}
+
+.results-summary {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #2a2a2a;
+    border-radius: 6px;
+}
+
+.results-summary h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #ccc;
+    font-weight: 400;
+}
+
+.results-summary .score {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #eee;
+}
+
+.results-summary .score-value {
+    color: #4CAF50; /* Green for score */
+}
+
+.results-summary .score-percentage {
+    font-size: 0.6em;
+    font-weight: normal;
+    color: #aaa;
+    margin-left: 10px;
+}
+
+.results-summary .timestamp {
+    font-size: 0.85em;
+    color: #888;
+    margin-top: 15px;
+}
+
+/* Style for optional raw total info */
+.total-raw-info {
+    font-size: 0.8em;
+    color: #999;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+
+
+.results-details {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    gap: 30px;
+    margin-bottom: 30px;
+    border-top: 1px solid #444;
+    padding-top: 25px;
+}
+
+.results-column {
+    flex: 1;
+    min-width: 250px; /* Minimum width before wrapping */
+    background-color: #2a2a2a;
+    padding: 15px 20px;
+    border-radius: 6px;
+}
+
+.results-column h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+    border-bottom: 1px solid #444;
+    padding-bottom: 8px;
+}
+
+.correct-column h3 {
+    color: #4CAF50; /* Green */
+}
+
+.incorrect-column h3 {
+    color: #f44336; /* Red */
+}
+
+.results-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px; /* Limit height and allow scrolling */
+    overflow-y: auto;
+    /* Basic scrollbar styling */
+    scrollbar-width: thin;
+    scrollbar-color: #555 #333;
+}
+/* Webkit scrollbar styling */
+.results-column ul::-webkit-scrollbar {
+    width: 8px;
+}
+.results-column ul::-webkit-scrollbar-track {
+    background: #333;
+    border-radius: 4px;
+}
+.results-column ul::-webkit-scrollbar-thumb {
+    background-color: #555;
+    border-radius: 4px;
+    border: 2px solid #333;
+}
+
+
+.results-column li {
+    margin-bottom: 8px;
+    padding: 5px 0;
+    border-bottom: 1px dotted #444;
+}
+.results-column li:last-child {
+    border-bottom: none;
+}
+
+.results-column li a {
+    color: #00bcd4;
+    text-decoration: none;
+    font-size: 0.95em;
+    display: block; /* Make link take full width */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.results-column li a:hover {
+    text-decoration: underline;
+    color: #1ad3eb;
+}
+
+.results-column p { /* Style for 'None' message */
+    color: #888;
+    font-style: italic;
+}
+
+.user-answer-preview {
+    font-size: 0.8em;
+    color: #aaa;
+    margin-left: 8px;
+    font-style: italic;
+}
+
+.results-actions {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+.review-button,
+.back-to-topic-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    text-align: center; /* Ensure text is centered */
+}
+
+.back-to-topic-button {
+    background-color: #6c757d;
+}
+
+.review-button:hover {
+    background-color: #0056b3;
+}
+.back-to-topic-button:hover {
+     background-color: #5a6268;
+}
+
+/* General Back button (used in error states etc.) */
+.back-button {
+    display: inline-block; /* Change from block */
+    margin-top: 20px; /* Add margin */
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none; /* In case it's rendered as a link */
+}
+.back-button:hover {
+    background-color: #0056b3;
+}

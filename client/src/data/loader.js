@@ -1,14 +1,15 @@
-// FILE: client/src/data/loader.js (REVISED V8 - Corrected 'question-bank' check)
+// FILE: client/src/data/loader.js (REVISED V9 - Exported formatDisplayName)
 
-console.log("[Loader V8 - Corrected QB Check] Starting...");
+console.log("[Loader V9 - Exported Helpers] Starting..."); // Updated version marker
 
 const modules = import.meta.glob('/src/data/**/*.json', { eager: true });
-console.log(`[Loader V8] Found ${Object.keys(modules).length} JSON modules.`);
+console.log(`[Loader V9] Found ${Object.keys(modules).length} JSON modules.`);
 
 const topicsData = {};
 
-// --- Helper Functions (Keep as before) ---
-const formatDisplayName = (rawName) => {
+// --- Helper Functions ---
+// ADD 'export' keyword here
+export const formatDisplayName = (rawName) => {
     if (!rawName) return '';
     return rawName
         .replace(/[-_]/g, ' ') // Replace hyphens and underscores with spaces
@@ -18,6 +19,7 @@ const formatDisplayName = (rawName) => {
         .replace(/\b\w/g, char => char.toUpperCase()); // Capitalize words
 };
 
+// formatId and getSortOrder do not need to be exported currently
 const formatId = (rawName) => {
     if (!rawName) return '';
     const baseName = rawName.replace(/\.json$/i, ''); // Remove extension first
@@ -36,52 +38,35 @@ const getSortOrder = (fileName) => {
 };
 // --- End Helper Functions ---
 
-// --- Process Modules ---
+// --- Process Modules (Keep same logic as V8) ---
 for (const path in modules) {
-    // console.log(`\n[Loader V8] Processing path: ${path}`); // Keep commented unless needed
+    // console.log(`\n[Loader V9] Processing path: ${path}`); // Keep commented unless needed
 
     const parts = path.split('/').filter(p => p && p !== 'src' && p !== 'data');
-    // Lengths:
-    // 2: Bio/Chem PT
-    // 3: PA/RC PT
-    // 4: Bio/Chem QB (parts[1] === 'question-bank')
-    // 5: PA/RC QB (parts[2] === 'question-bank')
-
-    if (parts.length < 2) {
-        // console.warn(`[Loader V8]  -> Skipping path (too short): ${path}`);
-        continue;
-    }
+    if (parts.length < 2) continue;
 
     const topicId = parts[0];
-    const topicName = formatDisplayName(topicId);
+    const topicName = formatDisplayName(topicId); // Use the helper
     const fileNameWithExt = parts[parts.length - 1];
     const quizData = modules[path].default;
+    if (!quizData) continue;
 
-    if (!quizData) {
-        // console.warn(`[Loader V8]  -> Skipping path (no data): ${path}`);
-        continue;
-    }
-
-    // Initialize topic if needed
     if (!topicsData[topicId]) {
-        console.log(`[Loader V8]  -> Initializing topic: ${topicId}`);
+        // console.log(`[Loader V9]  -> Initializing topic: ${topicId}`);
         topicsData[topicId] = { id: topicId, name: topicName, practiceTests: [], questionBanks: {} };
     }
 
     const totalQuestions = Array.isArray(quizData) ? quizData.filter(q => q && !q.error).length : 0;
     const sortOrder = getSortOrder(fileNameWithExt);
     const quizId = formatId(fileNameWithExt);
-    const quizName = formatDisplayName(fileNameWithExt);
+    const quizName = formatDisplayName(fileNameWithExt); // Use the helper
     const lowerCaseFileName = fileNameWithExt.toLowerCase();
     const isTestFile = lowerCaseFileName.startsWith('test_');
 
-    // --- Classification Logic (Corrected 'question-bank') ---
     let classified = false;
-    // console.log(`[Loader V8]  -> Path Parts: ${JSON.stringify(parts)}, Length: ${parts.length}, IsTest: ${isTestFile}`); // Keep commented unless needed
 
-    // 1. Check for Bio/Chem Practice Test (Depth 2)
+    // Condition 1: Bio/Chem PT
     if (parts.length === 2 && isTestFile) {
-        // console.log(`[Loader V8]  --> Classified as Practice Test (Style 1 - Bio/Chem): ${fileNameWithExt}`);
         const testNumberMatch = lowerCaseFileName.match(/test_(\d+)/);
         const testNumber = testNumberMatch ? parseInt(testNumberMatch[1], 10) : sortOrder;
         topicsData[topicId].practiceTests.push({
@@ -90,9 +75,8 @@ for (const path in modules) {
         });
         classified = true;
     }
-    // 2. Check for PA/RC Practice Test (Depth 3)
+    // Condition 2: PA/RC PT
     else if (!classified && parts.length === 3 && parts[1]?.toLowerCase() === 'practice-test' && isTestFile) {
-        // console.log(`[Loader V8]  --> Classified as Practice Test (Style 2 - PA/RC): ${fileNameWithExt}`);
         const testNumberMatch = lowerCaseFileName.match(/test_(\d+)/);
         const testNumber = testNumberMatch ? parseInt(testNumberMatch[1], 10) : sortOrder;
         topicsData[topicId].practiceTests.push({
@@ -101,13 +85,10 @@ for (const path in modules) {
         });
         classified = true;
     }
-    // 3. Check for Bio/Chem Question Bank (Depth 4)
-    //    CORRECTED: Check for 'question-bank' (singular)
+    // Condition 3: Bio/Chem QB
     else if (!classified && parts.length === 4 && parts[1]?.toLowerCase() === 'question-bank') {
-        const categoryName = formatDisplayName(parts[2]); // Category is 3rd part (index 2)
-        // console.log(`[Loader V8]  --> Classified as Question Bank (Style 1 - Bio/Chem): ${fileNameWithExt} in Category: ${categoryName}`);
+        const categoryName = formatDisplayName(parts[2]);
         if (!topicsData[topicId].questionBanks[categoryName]) {
-             // console.log(`[Loader V8]      Initializing category: ${categoryName}`);
             topicsData[topicId].questionBanks[categoryName] = [];
         }
         topicsData[topicId].questionBanks[categoryName].push({
@@ -116,13 +97,10 @@ for (const path in modules) {
         });
         classified = true;
     }
-    // 4. Check for PA/RC Question Bank (Depth 5)
-    //    CORRECTED: Check for 'question-bank' (singular) at index 2
+    // Condition 4: PA/RC QB
     else if (!classified && parts.length === 5 && parts[1]?.toLowerCase() === 'practice-test' && parts[2]?.toLowerCase() === 'question-bank') {
-        const categoryName = formatDisplayName(parts[3]); // Category is 4th part (index 3)
-        // console.log(`[Loader V8]  --> Classified as Question Bank (Style 2 - PA/RC): ${fileNameWithExt} in Category: ${categoryName}`);
+        const categoryName = formatDisplayName(parts[3]);
          if (!topicsData[topicId].questionBanks[categoryName]) {
-            // console.log(`[Loader V8]      Initializing category: ${categoryName}`);
             topicsData[topicId].questionBanks[categoryName] = [];
         }
         topicsData[topicId].questionBanks[categoryName].push({
@@ -132,18 +110,13 @@ for (const path in modules) {
         classified = true;
     }
 
-    // Log if no classification matched
-    if (!classified) {
-        console.warn(`[Loader V8]  -> *** Could not classify path: ${path} ***`);
-        console.warn(`       Parts: ${JSON.stringify(parts)}, Length: ${parts.length}`);
-        console.warn(`       parts[1]?.toLowerCase(): ${parts[1]?.toLowerCase()}`); // Log relevant parts for debugging
-        console.warn(`       parts[2]?.toLowerCase(): ${parts[2]?.toLowerCase()}`);
-        console.warn(`       IsTestFile: ${isTestFile}`);
-    }
+    // if (!classified) {
+    //     console.warn(`[Loader V9]  -> Could not classify path: ${path}`);
+    // }
 }
 // --- End Process Modules ---
 
-// --- Sort Items ---
+// --- Sort Items (Keep as before) ---
 Object.values(topicsData).forEach(topic => {
     if (topic.practiceTests) {
         topic.practiceTests.sort((a, b) => a._sortOrder - b._sortOrder);
@@ -162,7 +135,7 @@ Object.values(topicsData).forEach(topic => {
 });
 // --- End Sort Items ---
 
-console.log("[Loader V8] Final processed topicsData:", JSON.stringify(topicsData, null, 2));
+// console.log("[Loader V9] Final processed topicsData:", JSON.stringify(topicsData, null, 2)); // Keep commented unless needed
 
 // --- API Functions (Keep as before) ---
 export const fetchTopics = async () => {
@@ -199,7 +172,7 @@ export const getQuizData = (topicId, sectionType, quizId) => {
         }
     }
     if (!quiz) return null;
-    return Array.isArray(quiz.data) ? quiz.data.filter(q => q && !q.error) : [];
+    return Array.isArray(quiz.data) ? quiz.data : []; // Return raw data
 };
 export const getQuizMetadata = (topicId, sectionType, quizId) => {
      const topic = topicsData[topicId];
@@ -214,6 +187,6 @@ export const getQuizMetadata = (topicId, sectionType, quizId) => {
         }
     }
     if (!quizMeta) return null;
-    const validQuestions = Array.isArray(quizMeta.data) ? quizMeta.data.filter(q => q && !q.error).length : 0;
-    return { name: quizMeta.name, totalQuestions: validQuestions > 0 ? validQuestions : quizMeta.totalQuestions };
+    const totalQuestions = Array.isArray(quizMeta.data) ? quizMeta.data.length : 0; // Use raw length
+    return { name: quizMeta.name, totalQuestions: totalQuestions };
 };

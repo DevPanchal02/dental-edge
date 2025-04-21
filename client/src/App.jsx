@@ -1,33 +1,32 @@
 // FILE: client/src/App.jsx
-import React, { useState, useEffect } from 'react'; // Import useState and useEffect
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'; // Added useLocation
 import Layout from './components/Layout';
 import TopicPage from './pages/TopicPage';
 import QuizPage from './pages/QuizPage';
-
-// Import the function to fetch topics, NOT the raw data object
+import ResultsPage from './pages/ResultsPage'; // Import the new ResultsPage
 import { fetchTopics } from './data/loader';
 
 function App() {
-  // Use state to store the first topic ID once fetched
   const [firstTopicId, setFirstTopicId] = useState(null);
   const [loadingTopics, setLoadingTopics] = useState(true);
   const [fetchError, setFetchError] = useState(null);
+  const location = useLocation(); // Get location for key prop
 
   useEffect(() => {
-    // Fetch topics when the App component mounts
     const getFirstTopic = async () => {
+      setLoadingTopics(true); // Ensure loading state is set
       try {
         const topics = await fetchTopics();
         if (topics && topics.length > 0) {
-          setFirstTopicId(topics[0].id); // Get the ID of the first topic
+          setFirstTopicId(topics[0].id);
         } else {
-          setFirstTopicId('no-topics'); // Set placeholder if no topics found
+          setFirstTopicId('no-topics');
           setFetchError("No topics found in data/loader.js");
         }
       } catch (error) {
         console.error("Error fetching initial topics in App.jsx:", error);
-        setFirstTopicId('no-topics'); // Set placeholder on error
+        setFirstTopicId('no-topics');
         setFetchError("Error loading topics.");
       } finally {
         setLoadingTopics(false);
@@ -36,29 +35,26 @@ function App() {
     getFirstTopic();
   }, []); // Empty dependency array ensures this runs only once
 
-  // Show loading state while fetching the first topic ID
   if (loadingTopics) {
-    // You might want a more sophisticated loading screen here
     return <div className="page-loading">Initializing...</div>;
   }
 
-  // Handle potential errors during initial topic fetch
-  // if (fetchError) {
-  //    return <div className="page-error">{fetchError}</div>;
- // }
+  // Use the determined firstTopicId for the initial redirect
+  const initialRedirectPath = firstTopicId ? `/topic/${firstTopicId}` : '/topic/no-topics';
 
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
-        {/* Redirect base path dynamically based on fetched firstTopicId */}
-        <Route index element={<Navigate to={`/topic/${firstTopicId}`} replace />} />
-        {/* Route for selecting tests/banks within a topic */}
+        <Route index element={<Navigate to={initialRedirectPath} replace />} />
         <Route path="topic/:topicId" element={<TopicPage />} />
-        {/* Route for taking a quiz */}
-        {/* sectionType can be 'practice' or 'qbank' */}
-        <Route path="quiz/:topicId/:sectionType/:quizId" element={<QuizPage />} />
-        {/* Optional: Add a 404 page or handle 'no-topics' */}
-        <Route path="/topic/no-topics" element={<div className="page-info">No topics found in the data directory. Please check the structure and file names.</div>} />
+        {/* Add key to QuizPage to force remount/reset state when navigating between quizzes */}
+        <Route
+            path="quiz/:topicId/:sectionType/:quizId"
+            element={<QuizPage key={location.pathname} />} // Use location.pathname as key
+        />
+        {/* Add Route for Results Page */}
+        <Route path="results/:topicId/:sectionType/:quizId" element={<ResultsPage />} />
+        <Route path="/topic/no-topics" element={<div className="page-info">No topics found. Check data folder structure and loader.js logs.</div>} />
         {/* <Route path="*" element={<NotFoundPage />} /> */}
       </Route>
     </Routes>

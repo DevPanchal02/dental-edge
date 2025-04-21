@@ -305,3 +305,21 @@
     padding-left: 0.5em;
     color: #bbb;
 }
+.option-label.review-mode {
+    cursor: default; /* No pointer cursor */
+}
+
+.option-label.review-mode:hover {
+    background-color: #333; /* Disable hover effect */
+}
+
+.option-label.review-mode.selected {
+    /* Keep selected border, but maybe slightly different? */
+    border-color: #008ead;
+    background-color: #333; /* Less pronounced background */
+}
+
+.option-label.review-mode.crossed-off .option-label-text {
+     text-decoration-color: #b35b5b; /* Maybe slightly different cross-off color */
+     opacity: 0.5;
+}
