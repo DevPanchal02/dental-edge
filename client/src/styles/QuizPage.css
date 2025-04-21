@@ -1,3 +1,4 @@
+/* FILE: client/src/styles/QuizPage.css */
 .quiz-page-container {
     max-width: 900px;
     margin: 0 auto;
@@ -6,57 +7,99 @@
     flex-direction: column;
   }
   
+  /* --- Header Adjustments --- */
   .quiz-header {
-    margin-bottom: 15px; /* Reduced margin */
-    padding-bottom: 15px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #444;
     position: relative;
-    /* Removed padding-top, timer is no longer here */
+    display: flex;
+    align-items: center; /* Vertically center all items in the header */
+    justify-content: space-between; /* Creates space */
+    min-height: 40px;
   }
   
   .back-button-quiz {
-      position: absolute;
-      top: 0;
-      left: 0;
+      /* Position on the left */
+      flex: 0 0 auto; /* Don't grow, don't shrink, use auto size */
+      margin-right: 15px;
       background: none;
       border: none;
       color: #00bcd4;
       cursor: pointer;
       font-size: 0.9em;
       padding: 5px 0;
+      white-space: nowrap;
+      text-align: left;
   }
   .back-button-quiz:hover {
       text-decoration: underline;
   }
   
+  /* Container for Title - Centered */
+  .quiz-title-container { /* Reintroduce this wrapper */
+      flex: 1 1 auto; /* Allow grow/shrink, use auto size */
+      text-align: center; /* Center the title text within this container */
+      min-width: 0; /* Allow shrinking */
+      padding: 0 10px; /* Prevent touching edges */
+  }
+  
   .quiz-title {
-    text-align: center;
-    color: #e0e0e0;
-    font-size: 1.6em;
-    margin: 0 0 5px 0; /* Adjusted margin */
-    padding-top: 5px; /* Add padding if back button pushes it down */
-    font-weight: 500;
+      color: #e0e0e0;
+      font-size: 1.6em;
+      margin: 0;
+      font-weight: 500;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      line-height: 1.2;
+      display: inline-block; /* Keep it from taking full width */
   }
   
+  /* Question Progress - Positioned Right */
   .quiz-progress {
-    text-align: center;
-    color: #aaa;
-    font-size: 0.9em;
-    margin-top: 5px;
+      /* Position on the right */
+      flex: 0 0 auto; /* Don't grow, don't shrink, use auto size */
+      color: #aaa;
+      font-size: 0.9em;
+      margin: 0;
+      margin-left: 15px; /* Space before progress */
+      white-space: nowrap;
+      text-align: right;
+  }
+  /* --- End Header Adjustments --- */
+  
+  
+  /* --- Top Controls Area Adjustments --- */
+  .quiz-controls-top {
+      display: flex;
+      justify-content: space-between; /* Space between review and timer */
+      align-items: center; /* Vertical alignment */
+      margin-bottom: 15px;
+      min-height: 40px;
+      padding: 5px 0;
   }
   
-  /* NEW: Wrapper for Timer and Card */
-  .quiz-content-area {
-      position: relative; /* Establish positioning context for the timer */
-      padding-top: 50px; /* Add space at the top for the absolute timer */
-      margin-bottom: 20px; /* Space before navigation */
+  .review-button-inline {
+      background-color: #6c757d;
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+      /* order: 1; (default) */
+  }
+  .review-button-inline:hover {
+      background-color: #5a6268;
   }
   
-  /* UPDATED: Timer Styling */
+  /* Timer Styling */
   .timer-display {
-      position: absolute; /* Position absolutely within quiz-content-area */
-      top: 0; /* Position at the top of the content area */
-      right: 0; /* Position to the right */
+      /* order: 2; (default) */
       background-color: #333;
       color: #eee;
       padding: 6px 12px;
@@ -66,39 +109,32 @@
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
       min-width: 130px;
       text-align: right;
-      z-index: 10; /* Ensure timer is above the card if overlap occurs */
-      margin-bottom: 10px; /* Add some space below the timer */
+      flex-shrink: 0;
+  }
+  .timer-display .timer-low { color: #ffc107; font-weight: bold; }
+  .timer-display .timer-total { font-size: 0.8em; color: #aaa; margin-left: 5px; }
+  /* --- End Top Controls Area Adjustments --- */
+  
+  
+  .quiz-content-area {
+      /* position: relative; No longer needed for timer */
+      /* padding-top: 0; Remove padding */
+      margin-bottom: 20px;
   }
   
-  .timer-display .timer-low {
-      color: #ffc107;
-      font-weight: bold;
-  }
-  
-  .timer-display .timer-total {
-      font-size: 0.8em;
-      color: #aaa;
-      margin-left: 5px;
-  }
-  
-  
-  /* Question Card style (ensure it doesn't have conflicting position/margin-top) */
   .question-card {
-     /* Remove margin-top if it exists, handled by quiz-content-area padding */
      margin-top: 0;
-     /* Other styles remain the same */
       background-color: #2a2a2a;
       border-radius: 8px;
       padding: 25px 30px;
-      /* margin-bottom: 20px; Removed, handled by quiz-content-area */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   
-  
+  /* --- Navigation Area Adjustments --- */
   .quiz-navigation {
     display: flex;
-    justify-content: space-between;
-    /* margin-top: 30px; Removed, space handled by quiz-content-area */
+    justify-content: space-between; /* Pushes Previous/Submit|Finish to ends */
+    align-items: center; /* Vertically align buttons */
     padding-top: 20px;
     border-top: 1px solid #444;
   }
@@ -112,34 +148,74 @@
     font-size: 1em;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    white-space: nowrap;
+  }
+  .nav-button:hover:not(:disabled) { background-color: #444; }
+  .nav-button:disabled { background-color: #2a2a2a; color: #666; cursor: not-allowed; }
+  
+  .prev-button {
+      margin-right: auto; /* Push other buttons to the right */
+      order: 1; /* Ensure it's first */
   }
   
-  .nav-button:hover:not(:disabled) {
-    background-color: #444;
+  /* Mark Button in Navigation */
+  .mark-button-nav {
+      background-color: #555;
+      color: #eee;
+      border: 1px solid #777;
+      padding: 8px 15px; /* Slightly larger padding */
+      margin: 0 15px; /* Horizontal margin */
+      border-radius: 4px;
+      font-size: 0.95em; /* Slightly larger font */
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      order: 2; /* Place between Prev and Submit/Finish */
+      margin-left: auto; /* Push Mark button towards the right, before Submit */
+      margin-right: 15px; /* Space between Mark and Submit/Finish */
+  }
+  .mark-button-nav:hover:not(:disabled) { background-color: #666; border-color: #999; }
+  .mark-button-nav.marked { background-color: #ffeb3b; color: #333; border-color: #fbc02d; font-weight: bold; }
+  .mark-button-nav.marked:hover:not(:disabled) { background-color: #fdd835; border-color: #f9a825; }
+  .mark-button-nav:disabled { opacity: 0.5; cursor: not-allowed; }
+  .mark-button-nav-placeholder { /* For Review Mode */
+      min-width: 90px; /* Match approx width of button */
+      margin: 0 15px;
+      order: 2;
+      margin-left: auto;
+      margin-right: 15px;
   }
   
-  .nav-button:disabled {
-    background-color: #2a2a2a;
-    color: #666;
-    cursor: not-allowed;
-  }
   
-  .finish-button {
+  /* Submit Button (Formerly Next) */
+  .submit-button {
+      background-color: #007bff; /* Blue color */
+      color: white;
+      order: 3; /* Place on the far right */
+  }
+  .submit-button:hover:not(:disabled) { background-color: #0056b3; }
+  
+  /* Finish Quiz Button */
+  .submit-quiz-button {
       background-color: #008c9e;
+      color: white;
+       order: 3; /* Place on the far right */
   }
-  .finish-button:hover {
-      background-color: #00bcd4;
-  }
+  .submit-quiz-button:hover { background-color: #00bcd4; }
+  /* --- End Navigation Area Adjustments --- */
   
-  .back-button { /* General back button style for error pages etc. */
-      display: block;
-      margin: 20px auto 0 auto;
+  
+  /* General Back button (used in error states etc.) */
+  .back-button {
+      display: inline-block;
+      margin-top: 20px;
       padding: 8px 15px;
       background-color: #007bff;
       color: white;
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      text-decoration: none;
   }
   .back-button:hover {
       background-color: #0056b3;

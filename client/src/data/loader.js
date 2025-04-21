@@ -86,7 +86,7 @@ for (const path in modules) {
         classified = true;
     }
     // Condition 3: Bio/Chem QB
-    else if (!classified && parts.length === 4 && parts[1]?.toLowerCase() === 'question-bank') {
+    else if (!classified && parts.length === 4 && parts[1]?.toLowerCase() === 'question-bank') { // Corrected check
         const categoryName = formatDisplayName(parts[2]);
         if (!topicsData[topicId].questionBanks[categoryName]) {
             topicsData[topicId].questionBanks[categoryName] = [];
@@ -98,7 +98,7 @@ for (const path in modules) {
         classified = true;
     }
     // Condition 4: PA/RC QB
-    else if (!classified && parts.length === 5 && parts[1]?.toLowerCase() === 'practice-test' && parts[2]?.toLowerCase() === 'question-bank') {
+    else if (!classified && parts.length === 5 && parts[1]?.toLowerCase() === 'practice-test' && parts[2]?.toLowerCase() === 'question-bank') { // Corrected check
         const categoryName = formatDisplayName(parts[3]);
          if (!topicsData[topicId].questionBanks[categoryName]) {
             topicsData[topicId].questionBanks[categoryName] = [];
@@ -116,7 +116,7 @@ for (const path in modules) {
 }
 // --- End Process Modules ---
 
-// --- Sort Items (Keep as before) ---
+// --- Sort Items ---
 Object.values(topicsData).forEach(topic => {
     if (topic.practiceTests) {
         topic.practiceTests.sort((a, b) => a._sortOrder - b._sortOrder);
@@ -137,7 +137,7 @@ Object.values(topicsData).forEach(topic => {
 
 // console.log("[Loader V9] Final processed topicsData:", JSON.stringify(topicsData, null, 2)); // Keep commented unless needed
 
-// --- API Functions (Keep as before) ---
+// --- API Functions ---
 export const fetchTopics = async () => {
     return Object.values(topicsData).map(({ id, name }) => ({ id, name }));
 };
@@ -159,6 +159,7 @@ export const fetchTopicData = async (topicId) => {
         questionBanks: questionBanksArray,
     };
 };
+// Return ALL data, including potential errors, for results page calculation
 export const getQuizData = (topicId, sectionType, quizId) => {
     const topic = topicsData[topicId];
     if (!topic) return null;
@@ -174,6 +175,7 @@ export const getQuizData = (topicId, sectionType, quizId) => {
     if (!quiz) return null;
     return Array.isArray(quiz.data) ? quiz.data : []; // Return raw data
 };
+// Return total count based on raw data length
 export const getQuizMetadata = (topicId, sectionType, quizId) => {
      const topic = topicsData[topicId];
      if (!topic) return null;

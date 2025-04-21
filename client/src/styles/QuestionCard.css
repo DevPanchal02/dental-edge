@@ -3,17 +3,19 @@
     background-color: #2a2a2a;
     border-radius: 8px;
     padding: 25px 30px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Re-add margin if needed between card and nav */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   
   .question-card.error-card {
       background-color: #3b2424; /* Error background */
       border: 1px solid #772d2d;
+      padding: 20px; /* Adjust padding for error message */
   }
   .error-message {
       color: #ff8a8a;
       font-weight: 500;
+      margin: 0; /* Reset margin for error message */
   }
   .error-details {
       color: #f1b1b1;
@@ -31,7 +33,7 @@
   .question-number {
       font-size: 0.9em;
       color: #888;
-      margin-bottom: 10px;
+      margin-bottom: 10px; /* Restore margin */
   }
   
   .question-text {
@@ -39,6 +41,7 @@
     color: #e0e0e0;
     line-height: 1.6;
     margin-bottom: 15px;
+    margin-top: 0;
   }
   
   .question-images img, .option-image, .explanation-images img {
@@ -73,7 +76,7 @@
     padding: 12px 15px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease; /* Added opacity transition */
     border: 2px solid transparent; /* For selected/correct/incorrect states */
     position: relative; /* For percentage positioning */
   }
@@ -99,7 +102,7 @@
   }
   
   /* Styling based on state */
-  .option-label:not(.submitted):hover { /* Only hover if not submitted */
+  .option-label:not(.submitted):not(.crossed-off):hover { /* Only hover if not submitted/crossed */
     background-color: #404040;
   }
   
@@ -136,6 +139,58 @@
   .option-label.submitted {
     cursor: default;
   }
+  .option-label.submitted:hover {
+      background-color: #333; /* Reset hover */
+       /* Reset specific correct/incorrect background if needed */
+       &.correct { background-color: #2a3a2b; }
+       &.incorrect { background-color: #3a2a2a; }
+  }
+  
+  
+  /* Cross-off Styling */
+  .option-label.crossed-off .option-label-text {
+      text-decoration: line-through;
+      text-decoration-thickness: 2px;
+      text-decoration-color: #ff7b7b; /* Or another contrasting color */
+      opacity: 0.6; /* Dim crossed-off options */
+  }
+  /* Ensure crossed-off doesn't override correct/incorrect visual cues */
+  .option-label.crossed-off.correct .option-label-text,
+  .option-label.crossed-off.incorrect .option-label-text {
+       opacity: 0.7; /* Keep slightly more visible if also correct/incorrect */
+  }
+  /* Allow un-crossing */
+  .option-label.crossed-off:hover {
+      background-color: #333; /* Keep original background */
+      cursor: pointer;
+  }
+  /* Adjust radio button visibility when crossed off */
+  .option-label.crossed-off .option-radio {
+      /* Optionally hide radio completely or just keep it disabled */
+       /* visibility: hidden; */
+  }
+  
+  
+  /* Styles for Review Mode */
+  .option-label.review-mode {
+      cursor: default; /* No pointer cursor */
+  }
+  .option-label.review-mode:hover {
+      background-color: #333; /* Disable hover effect */
+       /* Reset specific correct/incorrect background if needed */
+       &.correct { background-color: #2a3a2b; }
+       &.incorrect { background-color: #3a2a2a; }
+  }
+  .option-label.review-mode.selected {
+      /* Keep selected border, but maybe slightly different? */
+      border-color: #008ead;
+      background-color: #333; /* Less pronounced background */
+  }
+  .option-label.review-mode.crossed-off .option-label-text {
+       text-decoration-color: #b35b5b; /* Maybe slightly different cross-off color */
+       opacity: 0.5;
+  }
+  
   
   .option-percentage {
       position: absolute;
@@ -157,11 +212,16 @@
   .action-buttons {
       margin-top: 25px;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-end; /* Keep buttons aligned right */
+      gap: 10px;
+      min-height: 40px; /* Ensure consistent height even if button is hidden */
   }
   
-  .submit-button, .explanation-button {
-      background-color: #007bff;
+  /* REMOVED .view-answer-button styles */
+  
+  /* Explanation Button Style (Regular Button) */
+  .explanation-button {
+      background-color: #6c757d; /* Slightly different grey */
       color: white;
       border: none;
       padding: 10px 20px;
@@ -169,18 +229,6 @@
       font-size: 1em;
       cursor: pointer;
       transition: background-color 0.2s ease;
-  }
-  .submit-button:hover:not(:disabled) {
-      background-color: #0056b3;
-  }
-  .submit-button:disabled {
-      background-color: #555;
-      cursor: not-allowed;
-      opacity: 0.7;
-  }
-  
-  .explanation-button {
-      background-color: #6c757d;
   }
   .explanation-button:hover {
       background-color: #5a6268;
@@ -231,95 +279,29 @@
       margin-bottom: 5px;
   }
   
-  /* Improve POE formatting */
-  .explanation-content div > strong {
-      display: block;
-      margin-top: 0.5em;
+  /* Style for POE headers and text */
+  .poe-section {
+      margin-top: 1.5em;
+      padding-top: 1em;
+      border-top: 1px dashed #444;
+  }
+  
+  .poe-section h4 {
+      margin-bottom: 0.8em;
       color: #ddd;
   }
-  .explanation-content div > span {
-      display: inline; /* Keep text flowing */
+  
+  .poe-header {
+      display: block;
+      margin-top: 0.7em;
+      margin-bottom: 0.2em;
+      color: #e0e0e0; /* Make headers stand out a bit */
+      font-weight: 600;
   }
-  .poe-section {
-    margin-top: 1.5em;
-    padding-top: 1em;
-    border-top: 1px dashed #444;
-}
-
-.poe-section h4 {
-    margin-bottom: 0.8em;
-    color: #ddd;
-}
-
-.poe-header {
-    display: block;
-    margin-top: 0.7em;
-    margin-bottom: 0.2em;
-    color: #e0e0e0; /* Make headers stand out a bit */
-    font-weight: 600;
-}
-
-.poe-text {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    padding-left: 0.5em; /* Indent text slightly under header */
-    color: #bbb; /* Slightly dimmer text for POE */
-}
-/* Cross-off Styling */
-.option-label.crossed-off .option-label-text {
-    text-decoration: line-through;
-    text-decoration-thickness: 2px;
-    text-decoration-color: #ff7b7b; /* Or another contrasting color */
-    opacity: 0.6; /* Dim crossed-off options */
-}
-
-/* Ensure crossed-off doesn't override correct/incorrect visual cues */
-.option-label.crossed-off.correct .option-label-text,
-.option-label.crossed-off.incorrect .option-label-text {
-     opacity: 0.7; /* Keep slightly more visible if also correct/incorrect */
-}
-
-/* Prevent hover effect on crossed-off options */
-.option-label.crossed-off:hover {
-    background-color: #333; /* Keep original background */
-}
-
-/* Adjust radio button visibility when crossed off */
-.option-label.crossed-off .option-radio {
-    /* Optionally hide radio completely or just keep it disabled */
-     /* visibility: hidden; */
-}
-
-/* Style for POE headers and text */
-.poe-header {
-    display: block;
-    margin-top: 0.7em;
-    margin-bottom: 0.2em;
-    color: #e0e0e0;
-    font-weight: 600;
-}
-
-.poe-text {
-    margin-top: 0;
-    margin-bottom: 0.5em;
-    padding-left: 0.5em;
-    color: #bbb;
-}
-.option-label.review-mode {
-    cursor: default; /* No pointer cursor */
-}
-
-.option-label.review-mode:hover {
-    background-color: #333; /* Disable hover effect */
-}
-
-.option-label.review-mode.selected {
-    /* Keep selected border, but maybe slightly different? */
-    border-color: #008ead;
-    background-color: #333; /* Less pronounced background */
-}
-
-.option-label.review-mode.crossed-off .option-label-text {
-     text-decoration-color: #b35b5b; /* Maybe slightly different cross-off color */
-     opacity: 0.5;
-}
+  
+  .poe-text {
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      padding-left: 0.5em; /* Indent text slightly under header */
+      color: #bbb; /* Slightly dimmer text for POE */
+  }
