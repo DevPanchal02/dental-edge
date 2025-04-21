@@ -1,0 +1,2608 @@
+[
+  {
+    "question_number": 1,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/51C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(36.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(52.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "52.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/51C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/52B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/52B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/53D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(50.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(42.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "42.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/53D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/54B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(49.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(44.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "49.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/54B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/55B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(80.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "80.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/55B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/56A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(83.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "83.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/56A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/57A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(94.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "94.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/57A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/58D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(38.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(48.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "48.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/58D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/59C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(95.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "95.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/59C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/60C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(25.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(61.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "61.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/60C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 11,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/61C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(78.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "78.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/61C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 12,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/62C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(14.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(48.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(24.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "48.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/62C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 13,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/63B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(68.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(15.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "68.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/63B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 14,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/64B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(Not available yet)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(Not available yet)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(Not available yet)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(Not available yet)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "92.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/64B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 15,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/65B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(82.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "82.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/65B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 16,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/66B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(15.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(79.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "79.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/66B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 17,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/67D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(70.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "70.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/67D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 18,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/68C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(30.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(54.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "54.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/68C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 19,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/69C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(91.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "91.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/69C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 20,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/70A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(62.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(20.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "62.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/70A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 21,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/71C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(48.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(44.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "44.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/71C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 22,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/72D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(39%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(58.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "58.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/72D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 23,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/73A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(83%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "83%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/73A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 24,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/74D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(37.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(56.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "56.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/74D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 25,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/75A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(73.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(19.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "73.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/75A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 26,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/76A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(80.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(15.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "80.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/76A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 27,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/77C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(24.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(60.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "60.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/77C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 28,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/78A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/78A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 29,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/79D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(95.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "95.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/79D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 30,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/80D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(23.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(74.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "74.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/80D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 31,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/81A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(64.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(23.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "64.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/81A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 32,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/82C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(34.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(31.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(27.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "31.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/82C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 33,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/83C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(35%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(57.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "57.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/83C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 34,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/84C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(74.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "74.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/84C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 35,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/85A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(59.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(28.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "59.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/85A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 36,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/86C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(86.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "86.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/86C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 37,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/87B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(73.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(22.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "73.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/87B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 38,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/88B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(88.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "88.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/88B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 39,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/89B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(83%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "83%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/89B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 40,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/90B.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(21.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(69.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "69.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/90B+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 41,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/91A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(55.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(40.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "55.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/91A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 42,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/92C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(61%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(36.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "36.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/92C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 43,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/93A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(88.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "88.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/93A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 44,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/94A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(55%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(17.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(21%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "55%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/94A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 45,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/95D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(30.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(67.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "67.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/95D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 46,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/96D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/96D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 47,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/97C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(23.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(63.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "63.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/97C+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 48,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/98A.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(78.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(14.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "78.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/98A+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 49,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/99D.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(90.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "90.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/99D+Solution.png"
+      ]
+    }
+  },
+  {
+    "question_number": 50,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/100C.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(18.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(76.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "76.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/AngleRanking/Qbank/100C+Solution.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q50: Message: \nStacktrace:\n0   chromedriver                        0x00000001053b6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001053af0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104ef68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104f3d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104f7e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104f31a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x000000010537bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010537ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x000000010535ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010537f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x000000010534cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010539f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010539fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001053aecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 50,
+    "category": "Angle Ranking",
+    "question_bank": "Angle Ranking Question Bank #2"
+  }
+]

@@ -1,0 +1,560 @@
+[
+  {
+    "question_number": 1,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "Colligative properties are properties that depend directly on",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the type of solute particles.",
+        "images": [],
+        "percentage_selected": "(14.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "the number of solute particles.",
+        "images": [],
+        "percentage_selected": "(79.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "the temperature of the solution.",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "the molar mass of solute particles.",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "the volume of the solution.",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "the number of solute particles.",
+    "analytics": {
+      "percent_correct": "79.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving colligative properties , we need to know that colligative properties are properties that directly depend on the number or concentration of solute particles, but not upon the identity of the solute. The four main colligative properties are: In this case, colligative properties are properties that directly depend on the number of solute particles. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "Which of the following properties is a non-colligative property?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Vapor-pressure depression",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Surface tension",
+        "images": [],
+        "percentage_selected": "(95.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Boiling-point elevation",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Freezing-point depression",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Osmotic pressure",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Surface tension",
+    "analytics": {
+      "percent_correct": "95.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving non-colligative properties , we need to know non-colligative properties are properties that depend on the identity of the dissolved species and the solvent. The main non-colligative properties are: In this case, a non-colligative property is surface tension. The rest of the options are colligative properties. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "Each of the following properties is a non-colligative property EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Surface tension",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Viscosity",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Color",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Solubility",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Boiling point elevation",
+        "images": [],
+        "percentage_selected": "(94.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Boiling point elevation",
+    "analytics": {
+      "percent_correct": "94.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving non-colligative properties , we need to know non-colligative properties are properties that depend on the identity of the dissolved species and the solvent. The main non-colligative properties are: In this case, each of the listed properties is a non-colligative property except for boiling point elevation. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "Solution A contains 0.5 M of NaCl and Solution B contains 1.0 M of glucose. Solution A and B have",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the same colligative but different non-colligative properties.",
+        "images": [],
+        "percentage_selected": "(43.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "the same colligative and the same non-colligative properties.",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "different colligative but the same non-colligative properties.",
+        "images": [],
+        "percentage_selected": "(13.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "different colligative and different non-colligative properties.",
+        "images": [],
+        "percentage_selected": "(41.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "the same colligative but different non-colligative properties.",
+    "analytics": {
+      "percent_correct": "43.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving colligative and non-colligative properties , we need to know the definitions of the properties. STEP 1: First, we need to calculate the concentration of particles for 0.5 M of NaCl, keeping in mind that NaCl dissociates in water into 1 Na + ion and 1 Cl - ion: STEP 2: Next, we need to calculate the concentration of particles for 1.0 M of glucose, keeping in mind that glucose does not dissociate in water and stays as 1 molecule: In this case, the number of dissolved particles for 1.0 M of NaCl and 0.5 M of glucose are the same. Since both solutions share the same number of dissolved particles, they exhibit the same colligative properties. However, they differ in non-colligative properties due to the distinct identities of the dissolved species. As a result, 0.5 M of NaCl and 1.0 M of glucose have the same colligative but different non-colligative properties. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Colligative+vs.+Non-Colligative+Properties/Question+4+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Colligative+vs.+Non-Colligative+Properties/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "Which of the following pairs of aqueous solutions share the same colligative properties but different non-colligative properties?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3.0 M NaCl solution; 6.0 M glucose solution",
+        "images": [],
+        "percentage_selected": "(86.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "1.0 M glucose solution; 1.0 M H 2 SO 4 solution",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1.0 M H 2 SO 4 solution; 3.0 M HCl solution",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.5 M NaCl solution; 1.0 M H 2 SO 4 solution",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "3.0 M NaCl solution; 3.0 M MgCl 2 solution",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3.0 M NaCl solution; 6.0 M glucose solution",
+    "analytics": {
+      "percent_correct": "86.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving colligative and non-colligative properties , we need to know the definitions of the properties. For this question, we need to find a pair that share the same number or concentration of particles, but do not share the same chemical compounds. Option A. 3.0 M NaCl solution; 6.0 M glucose solution Correct. 3.0 M NaCl solution has 3.0 × 2 = 6.0 M of particles because NaCl dissociates into 1 Na + ion and 1 Cl - ion. 6.0 M glucose solution has 6.0 × 1 = 6.0 M of particles because glucose does not dissociate and stays as 1 molecule. Since both solutions have the same concentration of particles, they share the same colligative properties, but different non-colligative properties. Option B. 1.0 M glucose solution; 1.0 M H 2 SO 4 solution Incorrect. 1.0 M glucose solution has 1.0 × 1 = 1.0 M of particles because glucose does not dissociate. 1.0 M H 2 SO 4 solution has 1.0 × 3 = 3.0 M of particles because H 2 SO 4 dissociates into 2 H + ions and 1 SO 4 2- ion. Since the solutions have different concentrations of particles, they do not share the same colligative properties. Option C. 1.0 M H 2 SO 4 solution; 3.0 M HCl solution Incorrect. 1.0 M H 2 SO 4 solution has 1.0 × 3 = 3.0 m of particles because H 2 SO 4 dissociates into 2 H + ions and 1 SO 4 2- ion. 3.0 M HCl solution has 3.0 × 2 = 6.0 M of particles because HCl dissociates into 1 H + ion and 1 Cl - ion. Since the solutions have different concentrations of particles and different identities of dissolved solutes, they exhibit different colligative and non-colligative properties. Option D. 0.5 M NaCl solution; 1.0 M H 2 SO 4 solution Incorrect. 0.5 M NaCl solution has 0.5 × 2 = 1.0 M of particles because NaCl dissociate into 1 Na + ion and 1 Cl - ion. 1.0 M H 2 SO 4 solution has 1.0 × 3 = 3.0 M of particles because H 2 SO 4 dissociates into 2 H + ion and 1 SO 4 2- ion. Since the solutions have different concentrations of particles, they do not share the same colligative properties. Option E. 3.0 M NaCl solution; 3.0 M MgCl 2 solution Incorrect. 3.0 M NaCl solution has 3.0 × 2 = 6.0 M of particles because NaCl dissociates into 1 Na + ion and 1 Cl - ion. 3.0 M MgCl 2 solution has 3.0 × 3 = 9.0 M because MgCl 2 dissociates into 1 Mg 2+ ions and 2 Cl - ion. Since the solutions have different concentrations of particles and different identities of dissolved solutes, they exhibit different colligative and non-colligative properties. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "Which of the following pairs of aqueous solutions share the same non-colligative properties and colligative properties?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.5 M NaCl solution; 0.5 M KCl solution",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3.0 M CH 3 OH solution; 1.5 M KCl solution",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10 M NaCl solution; 10 M NaCl solution",
+        "images": [],
+        "percentage_selected": "(88.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "1.5 M NaCl solution; 0.67 M MnCl 2 solution",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5.0 M KCl solution; 2.0 M KCl solution",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "10 M NaCl solution; 10 M NaCl solution",
+    "analytics": {
+      "percent_correct": "88.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving colligative and non-colligative properties , we need to know the definitions of the properties. For this question, we need to find a pair that share the same chemical compounds and the same number of solute particles. Option A. 0.5 M NaCl solution; 0.5 M KCl solution Incorrect. Since NaCl and KCl are made up of different ions, they do not share the same non-colligative properties. Option B. 3.0 M CH 3 OH solution; 1.5 M KCl solution Incorrect. Since CH 3 OH and KCl are made up of different ions, they do not share the same non-colligative properties. Option C. 10 M NaCl solution; 10 M NaCl solution Correct. Both solutions are made up NaCl and share the same concentration of particles. Therefore, this pair shares the same non-colligative and colligative properties. Option D. 1.5 M NaCl solution; 0.67 M MnCl 2 solution Incorrect. Since NaCl and MnCl 2 are up of different ions, they do not share the same non-colligative properties. Option E. 5.0 M KCl solution; 2.0 M KCl solution Incorrect. Both solutions are made up of KCl but contain different numbers of dissolved particles. Therefore, this pair does not share the same non-colligative and colligative properties. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "Container A has 116 g of NaCl. Container B has 58 mL of NaCl (2 g·mL -1 ). Which of the following observations is accurate based on the given information about Container A and Container B, assuming the same volume of water is poured into each container?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Container A has more molecules than container B",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Both containers share the same colligative properties and non-colligative properties",
+        "images": [],
+        "percentage_selected": "(81.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Container A has higher boiling point than container B, but have the same density",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Container A has less freezing point than container B, but have the same color",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Both containers only share colligative properties",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Both containers share the same colligative properties and non-colligative properties",
+    "analytics": {
+      "percent_correct": "81.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving colligative and non-colligative properties , we need to know the definitions of the properties. STEP 1: First, we will calculate the number of moles for container A: STEP 2: Next, we will calculate the number of moles for container B: As we can see, container A and container B share the same number of moles of NaCl. Therefore, both containers share the same colligative properties and non-colligative properties. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Colligative+vs.+Non-Colligative+Properties/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Colligative+vs.+Non-Colligative+Properties/Question+7+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "A student accidentally uses a 3.0 M aqueous solution of glucose instead of the intended 1.0 M aqueous solution of H 2 SO 4 . In this case, a property that differs between the solutions is",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "osmotic pressure.",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "freezing point depression.",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "boiling point elevation.",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "vapor pressure depression.",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "surface tension.",
+        "images": [],
+        "percentage_selected": "(87.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "surface tension.",
+    "analytics": {
+      "percent_correct": "87.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving non-colligative properties , we need to know non-colligative properties are properties that depend on the identity of the dissolved species and the solvent. The main non-colligative properties are: Since the student changed 1.0 M of H­ 2 SO 4 to 3.0 M of glucose, we need to calculate if both solutions share the same number of solute particles. Since both solutions share the same concentration of solute particles, they share the same colligative properties. However, they do not share the same non-colligative properties due to a change in the identity of the solution. Therefore, a property that changes is surface tension. The rest of the options are colligative properties. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "A solution of 2.0 M NaCl is changed to a 2.0 M HCl solution. In this case, a property that remains the same is",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "surface tension.",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "osmotic pressure.",
+        "images": [],
+        "percentage_selected": "(91.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "solubility.",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "viscosity.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "density.",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "osmotic pressure.",
+    "analytics": {
+      "percent_correct": "91.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving colligative properties , we need to know that colligative properties are properties that depend on the number or concentration of solute particles, but not upon the identity of the solute. The four main colligative properties are: Since a solution is changed from 2.0 M NaCl to 2.0 M HCl, the number of solute particles remains the same: Since the number of solute particles remain the same, the colligative properties stay the same. Therefore, the property that remains the same is osmotic pressure. The rest of the options are non-colligative properties. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties",
+    "question": {
+      "text": "Which of the following properties does a 3.0 M AgCl and 2.0 M K 2 CO 3 aqueous solution have in common?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Surface tension",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Density",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Boiling-point elevation",
+        "images": [],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Freezing-point depression",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "No property shared",
+        "images": [],
+        "percentage_selected": "(78.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "No property shared",
+    "analytics": {
+      "percent_correct": "78.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving colligative and non-colligative properties , we need to know the definitions of the properties. STEP 1: First, we need to calculate the concentration of particles in 3.0 M AgCl, keeping in mind that AgCl does not dissociate in water and stays as 1 molecule: STEP 2: Next, we need to calculate the concentration of particles for 2.0 K­ 2 CO 3 , keeping in mind that K 2 CO 3 dissociate into 2 K + ions and 1 CO 3 2- ion: The solutions do not share the same colligative properties because the solutions do not have the same concentration of solute particles. The solutions also do not share the same non-colligative properties because AgCl and K 2 CO 3 are made up of different ions. Therefore, 3.0 M AgCl and 2.0 M K 2 CO 3 have no property shared. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Colligative+vs.+Non-Colligative+Properties/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Colligative+vs.+Non-Colligative+Properties/Question+10+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001053eee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001053e70ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104f2e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104f756a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104fb67b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104f69a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x00000001053b3c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x00000001053b6f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000105393a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x00000001053b77e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000105384b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001053d79c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001053d7b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001053e6cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Colligative vs. Non-Colligative Properties"
+  }
+]

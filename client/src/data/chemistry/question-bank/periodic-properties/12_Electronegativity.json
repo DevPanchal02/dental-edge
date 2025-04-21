@@ -1,0 +1,580 @@
+[
+  {
+    "question_number": 1,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "Electronegativity is the measurement of an atom’s ability to",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "gain electrons to form anions.",
+        "images": [],
+        "percentage_selected": "(8.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "attract electrons in a bond.",
+        "images": [],
+        "percentage_selected": "(85.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "hold its electron cloud.",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "lose electrons to form cations.",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "react with other elements.",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "attract electrons in a bond.",
+    "analytics": {
+      "percent_correct": "85.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity , we begin by defining electronegativity as the measurement of an atom’s ability to attract electrons in a bond . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "In the periodic table, the least electronegative element is found in the",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "upper left corner.",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "upper right corner.",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "lower left corner.",
+        "images": [],
+        "percentage_selected": "(94.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "lower right corner.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "lower center.",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "lower left corner.",
+    "analytics": {
+      "percent_correct": "94.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity trends , we begin by discussing trends in the periodic table that increase electronegativity (the ability to attract electrons in a bond): In this case, we can say that the most electronegative atom is found in the upper right corner. On the other hand, the least electronegative atom can be found in the lower left corner . Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "Each of the following properties increases when moving up a group in the periodic table EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Electron affinity",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Atomic radius",
+        "images": [],
+        "percentage_selected": "(96.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Electronegativity",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Ionization energy",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Nuclear attraction to valence electrons",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Atomic radius",
+    "analytics": {
+      "percent_correct": "96.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind that we need to find the property that decreases when moving up a group. Option A. Electron affinity Incorrect. Electron affinity is the amount of energy released when an electron is added to an atom. Going up a group, the number of energy levels decrease, bringing outer shell electrons closer to the positive nucleus, increasing nuclear attraction, so more energy is released. Option B . Atomic radius Correct. Atomic radius is the measurement of an atom’s size. Going up a group, the number of electron shells surrounding the nucleus decreases, decreasing the atom’s size. Option C. Electronegativity Incorrect. Electronegativity is the measurement of an atom’s ability to attract electrons in a bond. Going up a group, the number of energy levels decrease, bringing bonded electrons closer to the nucleus, increasing the attraction of electrons in a bond. Option D. Ionization energy Incorrect. Ionization energy is the energy needed to remove an electron from an atom or ion. Going up a group, the number of energy levels decrease, bringing outer shell electrons closer to the positive nucleus, increasing nuclear attraction, and making it harder to remove electrons. Option E. Nuclear attraction to valence electrons Incorrect. Going up a group, the number of energy levels decrease, bringing outer shell valence electrons closer to the positive nucleus, increasing nuclear attraction. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "Which of the following is true regarding electronegativity in a water molecule?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Hydrogen has higher electronegativity",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Oxygen has higher electronegativity",
+        "images": [],
+        "percentage_selected": "(95.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Electronegativity does not apply to water",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Hydrogen and oxygen have equal electronegativity",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The net electronegativity is zero",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Oxygen has higher electronegativity",
+    "analytics": {
+      "percent_correct": "95.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity trends , we begin by discussing trends in the periodic table that increase electronegativity (the ability to attract electrons in a bond): In this case, we know that a water molecule is H 2 O. Because hydrogen is one period above oxygen, and oxygen is towards the very right of the periodic table, it is difficult to determine which has higher electronegativity. It is helpful to know that the Pauling Scale assigns higher numbers to elements that attract electrons in a bond more strongly. On the Pauling Scale, oxygen’s electronegativity is 3.5 and hydrogen’s is 2.1. This means that oxygen has higher electronegativity . This relationship is one that is difficult to determine using periodic trends, but is important to know. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "Each of the following factors directly contribute to the observed trends in electronegativity in the periodic table EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Atomic radius",
+        "images": [],
+        "percentage_selected": "(19.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Effective nuclear charge",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Number of energy levels",
+        "images": [],
+        "percentage_selected": "(14.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Number of protons",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Ionization energy",
+        "images": [],
+        "percentage_selected": "(50.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Ionization energy",
+    "analytics": {
+      "percent_correct": "50.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity trends , we begin by discussing trends in the periodic table that increase electronegativity (the ability to attract electrons in a bond): Keep in mind that we are looking for the factor that does not directly contribute to electronegativity trends. Option A. Atomic radius Incorrect. A decreased atomic radius brings bonded electrons closer to the nucleus, directly increasing electronegativity. Option B. Effective nuclear charge Incorrect. Going from left to right across a period, electron shielding is constant but effective nuclear charge increases, directly increasing electronegativity. Option C. Number of energy levels Incorrect. Going up a group, the number of energy levels decrease, bringing bonded electrons closer to the nucleus, directly increasing electronegativity. Option D. Number of protons Incorrect. Going from left to right across a period, electron shielding is constant, but the number of protons increases, directly increasing electronegativity. Option E. Ionization energy Correct. Ionization energy is the energy needed to remove an electron from an atom or ion. Ionization energy does not directly contribute to electronegativity, though they both have similar trends. Therefore, the answer is E.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "Of the period 4 elements listed below, which has the greatest electronegativity?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ga",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Ge",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Se",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "K",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Br",
+        "images": [],
+        "percentage_selected": "(97.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Br",
+    "analytics": {
+      "percent_correct": "97.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity trends , we begin by discussing trends in the periodic table that increase electronegativity (the ability to attract electrons in a bond): For the period 4 elements, moving from left to right, we encounter K, Ga, Ge, Se, Br, in that order. Since electronegativity increases left to right across a period, the element with the greatest electronegativity is Br . Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "Which of the following has the least electronegativity?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Na",
+        "images": [],
+        "percentage_selected": "(98.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "B",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Si",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "O",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "S",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Na",
+    "analytics": {
+      "percent_correct": "98.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity trends , we begin by discussing trends in the periodic table that increase electronegativity (the ability to attract electrons in a bond): STEP 1: First, we identify that B and O are period 2 elements, while Na, Si, and S are period 3 elements. Since electronegativity increases up a group, to find the element with the least electronegativity, we only need to consider the period 3 elements. STEP 2: Moving from left to right across a period, we encounter Na, Si, and S in that order. Since electronegativity increases from left to right across a period, to find the element with the least electronegativity, we select the leftmost element Na . Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "Which of the following rankings correctly orders elements from least to greatest electronegativity?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Na < K < Si < S < O",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "K < Na < S < O < Si",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Na < K < O < S < Si",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "K < Na < Si < S < O",
+        "images": [],
+        "percentage_selected": "(95.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "S < K < Si < Na < O",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "K < Na < Si < S < O",
+    "analytics": {
+      "percent_correct": "95.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity trends , we begin by discussing trends in the periodic table that increase electronegativity (the ability to attract electrons in a bond): STEP 1: First, we identify that O is a period 2 element, Na, Si, and S are period 3 elements, while K is a period 4 elements. Since electronegativity increases up a group, we can rank their electronegativities as: K < Na = Si = S < O STEP 2: Next, we identify that moving from left to right across period 3, we encounter Na, Si, and S in that order. Since electronegativity increases from left to right across a period, we can rank their electronegativities as: K < Na < Si < S < O Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "The electronegativities of C and P are 2.55 and 2.19, respectively. Given these data, what is the expected electronegativity of Si?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1.90",
+        "images": [],
+        "percentage_selected": "(79.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "2.19",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2.37",
+        "images": [],
+        "percentage_selected": "(17.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2.55",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "3.04",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1.90",
+    "analytics": {
+      "percent_correct": "79.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity trends , we begin by discussing trends in the periodic table that increase electronegativity (the ability to attract electrons in a bond): STEP 1: First, we identify C is a period 2 element, and Si and P are period 3 elements. STEP 2: Since electronegativity increases up a group, and Si is below C, Si is expected to have an electronegativity less than 2.55. This allows us to eliminate answer choices D and E. STEP 3: Since electronegativity increases from left to right across a period, and Si is to the left of P, Si is expected to have an electronegativity less than 2.19. Our answer is 1.90 (Option A). Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity",
+    "question": {
+      "text": "If the electronegativities of Li, B, and Mg are 0.98, 2.04, and 1.31, respectively, what is the expected electronegativity of Be?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.82",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.98",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1.17",
+        "images": [],
+        "percentage_selected": "(12.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1.45",
+        "images": [],
+        "percentage_selected": "(83.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "2.19",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1.45",
+    "analytics": {
+      "percent_correct": "83.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electronegativity trends , we begin by discussing trends in the periodic table that increase electronegativity (the ability to attract electrons in a bond): STEP 1: First, we identify that moving from left to right across period 2 on the periodic table, we encounter Li, Be, and B, in that order. STEP 2: Since electronegativity increases moving left to right across a period, the electronegativity of Be is expected to be greater than Li’s (0.98) but less than B’s (2.04). STEP 3: Next, we identify that Be is above Mg in the periodic table. Since electronegativity increases up a group, the electronegativity of Be is expected to be greater than Mg’s (1.31). STEP 4: We conclude that Be’s electronegativity is greater than 1.31 but less than 2.04. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+3%3A+Electronegativity/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001011a2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x000000010119b0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000100ce28d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000100d296a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000100d6a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100d1da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000101167c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010116af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000101147a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010116b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000101138b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010118b9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010118bb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x000000010119acf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Electronegativity"
+  }
+]

@@ -1,0 +1,562 @@
+[
+  {
+    "question_number": 1,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "What is the importance of having a salt bridge/porous barrier in an electrochemical cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "To maintain electrical neutrality in the half-cells via the migration of ions",
+        "images": [],
+        "percentage_selected": "(67.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "To provide a means for electrons to travel from the cathode to the anode",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "To provide a source of ions to react at the anode and cathode",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "To provide a means for electrons to travel from the anode to the cathode",
+        "images": [],
+        "percentage_selected": "(18.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "To provide oxygen to facilitate oxidation at the anode",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "To maintain electrical neutrality in the half-cells via the migration of ions",
+    "analytics": {
+      "percent_correct": "67.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to understand the importance of a salt bridge/porous barrier. A salt bridge is used in voltaic cells, whereas a porous barrier is used in electrolytic cells. A salt bridge is a tube filled with nonreactive electrolytes, including examples such as NaNO 3 and KNO 3 . Because atoms are oxidized in the anode, resulting in the loss of electrons, positive ions build up within the aqueous solution. The anions in the salt bridge will flow towards the anode to balance this. Meanwhile, atoms are reduced at the cathode, resulting in the gain of electrons and loss of positive ions in the aqueous solution. The cations in the salt bridge will flow towards the cathode to balance this. As electrons move from the anode to the cathode, we can see that charges build up on both sides of the cell. The salt bridge maintains the movement of ions between the two half-cells, ensuring a balance in these charges. The porous barrier in electrolytic cells serve a very similar purpose, selectively allowing the movement of ions between the two-half cells to balance charges. In this case, the importance of having a salt bridge/porous barrier in an electrochemical cell is to maintain electrical neutrality in the half-cells via the migration of ions . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "Which of the following accurately compares electrolytic and galvanic cells?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Galvanic cells are non-spontaneous, but electrolytic cells are not",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Galvanic cells convert electrical to chemical energy, and electrolytic cells do the opposite",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Both cells require an external power source to promote electron flow",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Galvanic cells use a porous barrier, but electrolytic cells use a salt bridge",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Electrons in both cells flow from the anode to the cathode",
+        "images": [],
+        "percentage_selected": "(94.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Electrons in both cells flow from the anode to the cathode",
+    "analytics": {
+      "percent_correct": "94.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we can review the following table: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source Option A. Galvanic cells are non-spontaneous, but electrolytic cells are not Incorrect. Galvanic cells are spontaneous, but electrolytic cells are non-spontaneous. Option B. Galvanic cells convert electrical to chemical energy, and electrolytic cells do the opposite Incorrect. Galvanic cells convert chemical to electrical energy, and electrolytic cells do the opposite. Option C. Both cells require an external power source to promote electron flow Incorrect. Galvanic cells do not require an external power source because the spontaneous redox reaction generates energy. In contrast, electrolytic cells require an external power source because of the non-spontaneous redox reaction. Option D. Galvanic cells use a porous barrier, but electrolytic cells use a salt bridge Incorrect. Galvanic cells use a salt bridge, but electrolytic cells use a porous barrier. Option E. Electrons in both cells flow from the anode to the cathode Correct. In both galvanic and electrolytic cells, electrons flow from the anode to the cathode. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "All of the following statements are true regarding the difference between voltaic cells and electrolytic cells EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Galvanic cells do not require an external power source, but electrolytic cells do",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Galvanic cells convert electrical to chemical energy, and electrolytic cells do the opposite",
+        "images": [],
+        "percentage_selected": "(89.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Anodes are negatively charged for galvanic cells but positive for electrolytic cells",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "In both galvanic and electrolytic cells, electrons flow from the anode to the cathode.",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Galvanic cells have positively charged cathodes, but electrolytic cells have positively charged anodes",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Galvanic cells convert electrical to chemical energy, and electrolytic cells do the opposite",
+    "analytics": {
+      "percent_correct": "89.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we can review the following table: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source Keep in mind that we are looking for an incorrect statement about the difference between voltaic cells and electrolytic cells. Option A. Galvanic cells do not require an external power source, but electrolytic cells do Incorrect. Galvanic cells do not require an external power source because it contains a spontaneous redox reaction, while electrolytic cells require an external power source to drive a non-spontaneous redox reaction. Option B. Galvanic cells convert electrical to chemical energy, and electrolytic cells do the opposite Correct. Galvanic cells convert chemical to electrical energy, and electrolytic cells do the opposite. Option C. Anodes are negatively charged for galvanic cells but positive for electrolytic cells Incorrect. Anodes are negatively charged for galvanic cells, but positive for electrolytic cells. Option D. In both galvanic and electrolytic cells, electrons flow from the anode to the cathode. Incorrect. In both galvanic and electrolytic cells, electrons flow from the anode to the cathode. Option E. Galvanic cells have positively charged cathodes, but electrolytic cells have positively charged anodes Incorrect. Galvanic cells have positively charged cathodes. Electrolytic cells have positively charged anodes. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "Which of the following is a shared feature between a voltaic cell and an electrolytic cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Electrons flow from the anode to the cathode",
+        "images": [],
+        "percentage_selected": "(95.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "The anode is positively charged",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The cathode is negatively charged",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Electrons are positively charged",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The anode undergoes reduction",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Electrons flow from the anode to the cathode",
+    "analytics": {
+      "percent_correct": "95.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review the characteristics of both galvanic cells and electrolytic cells: Galvanic (voltaic) cells Electrolytic cells Spontaneous redox reactions Nonspontaneous redox reactions Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemical energy Does not require an external power source Requires an external power source In this case, a shared feature between a voltaic cell and an electrolytic cell is that electrons flow from the anode to the cathode . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "Both voltaic and electrolytic cells",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "have the same number of electrons.",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "undergo oxidation at the anode and reduction at the cathode.",
+        "images": [],
+        "percentage_selected": "(93.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "contain positively charged anode.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "contain negatively charged cathode.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "undergo nonspontaneous redox reaction.",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "undergo oxidation at the anode and reduction at the cathode.",
+    "analytics": {
+      "percent_correct": "93.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review the characteristics of both galvanic cells and electrolytic cells: Galvanic (voltaic) cells Electrolytic cells Spontaneous redox reactions Nonspontaneous redox reactions Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemical energy Does not require an external power source Requires an external power source In this case, both voltaic and electrolytic cells undergo oxidation at the anode and reduction at the cathode . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "All of the following statements are true regarding an electrochemical cell notation EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The anode is always placed on the left side",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The cathode is always placed on the right side",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The notation is not valid for electrolytic cells",
+        "images": [],
+        "percentage_selected": "(78.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "The salt bridge is represented by a double vertical line",
+        "images": [],
+        "percentage_selected": "(10.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Phase changes are represented by a vertical line",
+        "images": [],
+        "percentage_selected": "(9.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The notation is not valid for electrolytic cells",
+    "analytics": {
+      "percent_correct": "78.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review how the electrochemical cell notation is written. A ( s ) | A + ( aq ) ‖ B + ( aq) | B ( s ) Keep in mind we need to find the statement that is not true regarding electrochemical cell notation. Option A. The anode is always placed on the left side Incorrect. The anode is typically placed on the left side of the electrochemical cell notation. Option B. The cathode is always placed on the right side Incorrect. The cathode is placed on the right side of the electrochemical cell notation. Option C. The notation is not valid for electrolytic cells Correct. The notation can be used for both galvanic cells and electrolytic cells. Option D. The salt bridge is represented by a double vertical line Incorrect. The salt bridge is represented by a double vertical in the notation. Option E. Phase changes are represented by a vertical line Incorrect. Phase changes are represented by a single vertical line. Therefore, the answer is C.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "Which of the following is the correct electrochemical cell notation for the electrolytic cell below?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Galvanic+%26+Electrolytic+Cells%3A+Electrochemical+Cells+(advanced)/Question+7+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Cu 2+ ( aq ) |Cu ( s ) ‖ Zn ( s ) |Zn 2+ ( aq )",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Cu ( s ) |Zn 2+ ( aq ) ‖ Cu 2+ ( aq ) |Zn ( s )",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Zn ( s ) |Cu 2+ ( aq ) ‖ Zn 2+ ( aq ) |Cu ( s )",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Zn ( s ) |Zn 2+ ( aq ) ‖ Cu 2+ ( aq ) |Cu ( s )",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cu ( s ) |Cu 2+ ( aq ) ‖ Zn 2+ ( aq ) |Zn ( s )",
+        "images": [],
+        "percentage_selected": "(74.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Cu ( s ) |Cu 2+ ( aq ) ‖ Zn 2+ ( aq ) |Zn ( s )",
+    "analytics": {
+      "percent_correct": "74.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review how the electrochemical cell notation is written. A + ( s ) |A ( aq ) ‖ B ( aq ) |B + ( s ) In this case, the diagram shows that Therefore, the correct electrochemical cell notation is: Cu ( s ) |Cu 2+ ( aq ) ‖ Zn 2+ ( aq ) |Zn ( s ) Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "Which of the following pairs of molecules are involved in the redox reaction below?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Galvanic+%26+Electrolytic+Cells%3A+Electrochemical+Cells+(advanced)/Question+8+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Cu 2+ and Zn",
+        "images": [],
+        "percentage_selected": "(98.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Ag and Ag +",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Fe 3+ and Fe",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H + and OH -",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "NaCl and Na",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cu 2+ and Zn",
+    "analytics": {
+      "percent_correct": "98.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review how the electrochemical cell notation is written. A + ( s ) |A ( aq ) ‖ B ( aq ) |B + ( s ) In this case, the diagram shows that Therefore, the pair of molecules that are involved in the redox reaction is Cu 2+ and Zn . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "What pair of molecules can be used in a salt bridge to facilitate ion flow between the two half-cells in a galvanic cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ag and Ag +",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Na + and NO 3 -",
+        "images": [],
+        "percentage_selected": "(85.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "H + and H 2 O",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Na and Na +",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "F - and Cl -",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Na + and NO 3 -",
+    "analytics": {
+      "percent_correct": "85.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to know the types of ions used in a salt bridge. A salt bridge is used to maintain electrical neutrality within the half-cells. The bridge is filled with non-reaction electrolytes, including examples such as NaNO 3 and KNO 3 . The reason these molecules are helpful in the salt bridge is because they dissociate into a pair of anions and cations, which can flow to maintain a balance of charges: NaNO 3( s ) → Na + ( aq ) + NO 3 - ( aq ) KNO 3( s ) → K + ( aq ) + NO 3 - ( aq ) Therefore, the pair of molecules that can be used to facilitate ion flow between the two half-cells in a galvanic cell is Na + and NO 3 - . The other options do not offer a pair of anions and cations. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)",
+    "question": {
+      "text": "Which of the following happens at the cathode during the electroplating process?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The salt bridge gets ionized",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Metal ions are reduced, forming a plated layer",
+        "images": [],
+        "percentage_selected": "(92.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Metal ions are oxidized",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The cathode remains unchanged",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The mass of the cathode stays the same",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Metal ions are reduced, forming a plated layer",
+    "analytics": {
+      "percent_correct": "92.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cell s, we need to know the electroplating process. Electroplating is the process of plating a metal onto another, covering it with a thin layer. The anode (containing the metal needed for plating) and cathode (containing the item to be plated) are both submerged in a solution containing a dissolved metal salt. At the anode, the oxidation of ions occurs, causing solid atoms to lose electrons and become aqueous ions in the shared solution. At the cathode, the reduction of ions occurs, causing the aforementioned aqueous ions to gain electrons and become solid. These solid atoms then deposit onto the cathode, resulting in a gain in mass and the electroplating of the cathode. There is an overall loss of mass at the anode and a gain of mass at the cathode. In this case, at the cathode, metal ions are reduced, forming a plated layer . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x00000001033c2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001033bb0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000102f028d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000102f496a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000102f8a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000102f3da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000103387c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010338af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000103367a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010338b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000103358b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001033ab9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001033abb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001033bacf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells (Advanced)"
+  }
+]

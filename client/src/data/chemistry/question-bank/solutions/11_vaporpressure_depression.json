@@ -1,0 +1,602 @@
+[
+  {
+    "question_number": 1,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "According to vapor pressure depression, the vapor pressure of a pure solvent is",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "greater than that of a solution with a non-volatile solute.",
+        "images": [],
+        "percentage_selected": "(67.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "greater than that of a solution with a volatile solute.",
+        "images": [],
+        "percentage_selected": "(12.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "less than that of a solution with a non-volatile solute.",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "less than that of a solution with a volatile solute.",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "independent of the addition of solutes.",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "greater than that of a solution with a non-volatile solute.",
+    "analytics": {
+      "percent_correct": "67.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: Since the presence of a solute causes X A to be smaller than 1, P A is lower than P° A . As a result, the vapor pressure of a pure solvent is greater than that of a solution with a non-volatile solute. Therefore, the answer is A.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "Decreasing the mole fraction of the solvent in a solution will result in",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "a decrease in vapor pressure",
+        "images": [],
+        "percentage_selected": "(86.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "the same vapor pressure.",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "an increase in vapor pressure.",
+        "images": [],
+        "percentage_selected": "(11.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "the complete absence of vapor pressure.",
+        "images": [],
+        "percentage_selected": "(0%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "a decrease in vapor pressure",
+    "analytics": {
+      "percent_correct": "86.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: As we can see, the vapor pressure of the solution is directly proportional to the mole fraction of the solvent. We can say that decreasing the mole fraction of the solvent in a solution will result in a decrease in vapor pressure. Therefore, the answer is A.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "According to Raoult’s law, the vapor pressure of a solution with a non-volatile solute is directly proportional to",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the volume of the solution.",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "the temperature of the solution.",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "the mole fraction of the solvent in the solution.",
+        "images": [],
+        "percentage_selected": "(91.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "the number of molecules of solute.",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "the molar mass of the solvent.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "the mole fraction of the solvent in the solution.",
+    "analytics": {
+      "percent_correct": "91.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: As we can see from the formula, the vapor pressure of a solution with a non-volatile solute is directly proportional to the mole fraction of the solvent in the solution. Therefore, the answer is C.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "According to Raoult’s law, the vapor pressure of a solution can be increased by",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "decreasing the energy of the solution.",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "decreasing the amount of solute.",
+        "images": [],
+        "percentage_selected": "(69%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "decreasing the temperature of the solution.",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "increasing the volume of the solution.",
+        "images": [],
+        "percentage_selected": "(16.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "reducing the freezing point of the solution.",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "decreasing the amount of solute.",
+    "analytics": {
+      "percent_correct": "69%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: As we can see, the vapor pressure of a solution is directly proportional to the mole fraction of the solvent: In this case, when the amount of solute is decreased, the denominator of the mole fraction will decrease, increasing the overall value of the fraction and resulting in the increase of the vapor pressure of the solution. Therefore, the vapor pressure of a solution can be increased by decreasing the amount of solute. Therefore, the answer is B.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+4+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "According to the Raoult’s law, by what factor is the vapor pressure of the solution changed by when the mole fraction is tripled, and the vapor pressure of the pure solvent is decreased by a factor of 5?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3/5",
+        "images": [],
+        "percentage_selected": "(84.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "5/3",
+        "images": [],
+        "percentage_selected": "(9.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "15",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3/5",
+    "analytics": {
+      "percent_correct": "84.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: STEP 1: First, we need to know that Raoult’s law tells us that the vapor pressure of a solution is proportional to the mole fraction of a solvent and the pure vapor pressure of the solvent: STEP 2: Next, we can calculate for the factor of change in the vapor pressure of the solution when the mole fraction is tripled, and the vapor pressure of the pure solvent is decreased by a factor of 5 (divided by 5): The factor of change in the vapor pressure of the solution is 3/5. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+5+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "What is the mole fraction of the solvent when the vapor pressure of the solution is measured to be 30 torr after glucose was added? The vapor pressure of pure water is 50 torr.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "(30)(50)",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "80",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "20",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "30/50",
+        "images": [],
+        "percentage_selected": "(91.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "50/30",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "30/50",
+    "analytics": {
+      "percent_correct": "91.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: P A = vapor pressure of the solution In this case, we can calculate for the mole fraction of the solvent using Raoult’s law, knowing that the vapor pressure of pure water is 50 torr ( P° A = 50 torr) and the vapor pressure of the solution is 30 torr ( P A = 30 torr): The correct mole fraction of solvent is 30/50 . Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+6+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "What is the pure vapor pressure of the solvent in a solution with a solvent mole fraction of 0.75 and an overall vapor pressure of 70 torr?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.10 torr",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.75 torr",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "70.00 torr",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "70.75 torr",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "93.33 torr",
+        "images": [],
+        "percentage_selected": "(89.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "93.33 torr",
+    "analytics": {
+      "percent_correct": "89.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: In this case, we can calculate for the pure vapor pressure of the solvent by using Raoult’s law, knowing that the mole fraction of the sample is 0.75 ( X A = 0.75) and the vapor pressure of the solution is 70 torr ( P A = 70 torr): The pure vapor pressure of the solvent of the sample with a vapor pressure of 70 torr and a mole fraction of 0.75 is 93.33 torr. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "A researcher listed the X A (mole fraction of solvent A) and P o A (pure vapor pressure of solvent A) values, respectively, for 4 different solutions below. Which of the following is correct based on Raoult’s law? Solution A: 0.20; 50 torr Solution B: 0.40; 30 torr Solution C: 0.80; 20 torr Solution D: 1.00; 15 torr",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Solution A’s vapor pressure is higher than Solution B’s",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Solution A’s vapor pressure is higher than Solution C’s",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Solution B’s vapor pressure is higher than Solution C’s",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Solution C’s vapor pressure is lower than Solution A’s",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Solution D’s vapor pressure is lower than Solution C’s",
+        "images": [],
+        "percentage_selected": "(88.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Solution D’s vapor pressure is lower than Solution C’s",
+    "analytics": {
+      "percent_correct": "88.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: We need to calculate for the vapor pressure of each solution using Raoult’s law: As we can see, Solution D’s vapor pressure is lower than Solution C’s . Option A. Solution A’s vapor pressure is higher than Solution B’s Incorrect. Solution A’s vapor pressure (10 torr) is lower than Solution B’s vapor pressure (12 torr). Option B. Solution A’s vapor pressure is higher than Solution C’s Incorrect. Solution A’s vapor pressure (10 torr) is lower than Solution C’s vapor pressure (16 torr). Option C. Solution B’s vapor pressure is higher than Solution C’s Incorrect. Solution B’s vapor pressure (12 torr) is lower than Solution C’s vapor pressure (16 torr). Option D. Solution C’s vapor pressure is lower than Solution A’s Incorrect. Solution C’s vapor pressure (16 torr) is higher than Solution A’s vapor pressure (10 torr) Option E. Solution D’s vapor pressure is lower than Solution C’s Correct. Solution D’s vapor pressure (15 torr) is lower than Solution C’s vapor pressure (16 torr). Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+8+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+8+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+8+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+8+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "Given the vapor pressure of pure water is 50 torr at 37°C, approximately which of the following is the vapor pressure of a solution made by dissolving 360 g of glucose (180 g · mol -1 ) in 720 g of water (18 g · mol -1 )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 torr",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2 torr",
+        "images": [],
+        "percentage_selected": "(15%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10 torr",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "32 torr",
+        "images": [],
+        "percentage_selected": "(10.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "48 torr",
+        "images": [],
+        "percentage_selected": "(65.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "48 torr",
+    "analytics": {
+      "percent_correct": "65.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: STEP 1: First, we need to calculate the moles of the solute and solvent to calculate for the mole fraction of the solvent: STEP 2: Next, we need to calculate the mole fraction of the solvent: STEP 3: Then, we can use the mole fraction ( X solvent = 40/42) and the vapor pressure of pure water ( P° solvent = 50 torr) to calculate for the vapor pressure of the solution: In this case, the vapor pressure of a solution made by dissolving 360 g of glucose in 720 g of water is 48 torr. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+9+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+9+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+9+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression",
+    "question": {
+      "text": "In a container, there exists a collective 5 moles of solute and solvent. At a temperature of 20 o C, the pure solvent, methanol, displays a vapor pressure of 94 torr. In contrast, the solution has a vapor pressure of 65 torr. What is the number of solvent molecules in this solution?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(80.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "80.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving vapor pressure depression , we need to know that vapor pressure depression, a colligative property, depends on the concentration or number of solute particles within the solution. Its explanation is based on Raoult's law: STEP 1: First, we need to calculate for the mole fraction of a solvent by using Raoult’s law, knowing that the vapor pressure of pure methanol is 94 torr ( P° A = 94 torr) and the vapor pressure of the solution is 65 torr ( P A = 65 torr): STEP 2: Next, we can calculate for the moles of the solvent in the solution by using the mole fraction ( X solvent = 65/94) and the total moles of the solution (mol solution = 5 moles): STEP 3: Then, we can calculate for the number of solvent molecules by using the Avogadro’s number: The number of solvent molecules in the solution is Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Vapor-Pressure+Depression/Question+10+Solution+3.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001053eee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001053e70ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104f2e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104f756a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104fb67b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104f69a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x00000001053b3c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x00000001053b6f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000105393a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x00000001053b77e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000105384b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001053d79c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001053d7b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001053e6cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Vapor-Pressure Depression"
+  }
+]

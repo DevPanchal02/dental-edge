@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "The empirical formula represents the",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "actual number of atoms in a molecule.",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "average mass of all atoms in a molecule.",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "simplest whole-number ratio of atoms in a molecule.",
+        "images": [],
+        "percentage_selected": "(95.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "molar mass of all atoms in a molecule.",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "molecular structure of atoms in a molecule.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "simplest whole-number ratio of atoms in a molecule.",
+    "analytics": {
+      "percent_correct": "95.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: In this case, we can say that the empirical formula represents the simplest whole-number ratio of atoms in a molecule . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "Which of the following is the empirical formula for C 6 H 12 O 6 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CHO",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CH 2 O",
+        "images": [],
+        "percentage_selected": "(95.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "C 2 H 4 O 2",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 3 H 6 O 3",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 6 H 12 O 6",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 2 O",
+    "analytics": {
+      "percent_correct": "95.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: In this case, we are given the molecular formula C 6 H 12 O 6 , and we need to find the empirical formula. To do this, we divide the molecular formula by the subscripts’ largest common factor. Since the subscripts are 6, 12, and 6, the largest common factor is 6. The empirical formula of C 6 H 12 O 6 is C 6/6 H 12/6 O 6/6 = CH 2 O . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "Which of the following represents an empirical formula?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N 4 OH",
+        "images": [],
+        "percentage_selected": "(97.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "H 2 O 2",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 4 H 8 O 2",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 6 H 9 O 6",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 8 H 10 N 4 O 2",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N 4 OH",
+    "analytics": {
+      "percent_correct": "97.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: In this case, only N 4 OH (Option A) is in its simplest, whole-number ratio of atoms, and therefore, represents an empirical formula. The other options are molecular formulas that can be further simplified into their respective empirical formulas. To re-write a molecular formula into an empirical formula, we divide the molecular formula by the subscripts’ largest common factor. Option A. N 4 OH Correct. The subscripts for N 4 OH are 4, 1, and 1. Since the largest common factor is 1, the empirical formula for N 4 OH is N 4/1 O 1/1 H 1/1 = N 4 OH, so N 4 OH is already an empirical formula. Option B. H 2 O 2 Incorrect. The subscripts for H 2 O 2 are 2 and 2. Since the largest common factor is 2, the empirical formula for H 2 O 2 is H 2/2 O 2/2 = HO. Option C. C 4 H 6 O 2 Incorrect. The subscripts for C 4 H 6 O 2 are 4, 6, and 2. Since the largest common factor is 2, the empirical formula for C 4 H 6 O 2 is C 4/2 H 6/2 O 2/2 = C 2 H 3 O. Option D. C 6 H 9 O 6 Incorrect. The subscripts for C 6 H 9 O 6 are 6, 9, and 6. Since the largest common factor is 3, the empirical formula for C 6 H 9 O 6 is C 6/3 H 9/3 O 6/3 = C 2 H 3 O 2 . Option E. C 8 H 10 N 4 O 2 Incorrect. The subscripts for C 8 H 10 N 4 O 2 are 8, 10, 4, and 2. Since the largest common factor is 2, the empirical formula for C 8 H 10 N 4 O 2 is C 8/2 H 10/2 N 4/2 O 2/2 = C 4 H 5 N 2 O. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "Each of the following formulas is an empirical formula EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "C 2 H 5 O",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 9 H 8 O 4",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CO 2",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 7 H 8",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 4 H 6 Si 2",
+        "images": [],
+        "percentage_selected": "(96.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "C 4 H 6 Si 2",
+    "analytics": {
+      "percent_correct": "96.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: In this case, only C­ 4 H 6 Si 2 (Option E) is not in its simplest, whole-number ratio of atoms, and therefore, does not represent an empirical formula. The other options are empirical formulas that cannot be further simplified. To re-write a molecular formula into an empirical formula, we divide the molecular formula by the subscripts’ largest common factor. Keep in mind that we are looking for the formula that is not an empirical formula. Option A. C 2 H 5 O Incorrect. The subscripts for C­ 2 H 5 O are 2 5, and 1. Since the largest common factor is 1, the empirical formula for C 2 H 5 O is C 2/1 H 5/1 O 1/1 = C 2 H 5 O, so C 2 H 5 O is already an empirical formula. Option B. C 9 H 8 O 4 Incorrect. The subscripts for C 9 H 8 O 4 are 9, 8, and 4. Since the largest common factor is 1, the empirical formula for C 9 H 8 O 4 is C 9/1 H 8/1 O 4/1 = C 9 H 8 O 4 , so C 9 H 8 O 4 is already an empirical formula. Option C. CO 2 Incorrect. The subscripts for CO 2 are 1 and 2. Since the largest common factor is 1, the empirical formula for CO 2 is C 1/1 O 2/1 = CO 2 , so CO 2 is already an empirical formula. Option D. C 7 H 8 Incorrect. The subscripts for C 7 H 8 are 7 and 8. Since the largest common factor is 1, the empirical formula for C 7 H 8 is C 7 H 8 = C 7/1 H 8/1 , so C 7 H 8 is already an empirical formula. Option E. C 4 H 6 Si 2 Correct. The subscripts for C 4 H 6 Si 2 are 4, 6, and 2. Since the largest common factor is 2, the empirical formula for C 4 H 6 Si 2 = C 4/2 H 6/2 Si 2/2 = C 2 H 3 Si. Therefore, C 4 H 6 Si 2 can be further reduced into simpler, whole number ratios, indicating that it is not an empirical formula. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "Given a compound containing 6 carbon, 18 hydrogen, and 12 oxygen atoms, what is the empirical formula for the compound?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 2 O",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CH 3 O",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CH 3 O 2",
+        "images": [],
+        "percentage_selected": "(97.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "C 2 H 6 O 4",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 3 H 9 H 6",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 3 O 2",
+    "analytics": {
+      "percent_correct": "97.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: In this case, we know that our compound contains 6 carbon, 18 hydrogen, and 12 oxygen atoms, so its molecular formula is C 6 H 18 O 12 . To re-write a molecular formula into an empirical formula, we divide the molecular formula by the subscripts’ largest common factor. The subscripts of C 6 H 18 O 12 are 6, 18, and 12. Since the largest common factor is 6, the empirical formula for C 6 H 18 O 12 is C 6/6 H 18/6 O 12/6 = CH 3 O 2 . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "Which of the following molecular formulas has the empirical formula CH?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 2 H 3",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 2 H 6",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 3 H 8",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 6 H 6",
+        "images": [],
+        "percentage_selected": "(97%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "C 6 H 6",
+    "analytics": {
+      "percent_correct": "97%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: In this case, we know that our empirical formula is CH. This implies that the ratio of C to H is 1 to 1. The only compound from our answer choices that has a ratio of C to H that is 1 to 1 is C 6 H 6 . To re-write a molecular formula into an empirical formula, we divide the molecular formula by the subscripts’ largest common factor. The subscripts of C 6 H 6 are 6 and 6. Since the largest common factor is 6, the empirical formula for C 6 H 6 is C 6/6 H 6/6 = CH. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "Each of the following formulas is a possible molecular formula for CH 4 O 2 EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 4 O 2",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 2 H 8 O 4",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 3 H 12 O 6",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 4 H 16 O 10",
+        "images": [],
+        "percentage_selected": "(92.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "C 6 H 24 O 12",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "C 4 H 16 O 10",
+    "analytics": {
+      "percent_correct": "92.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: In this case, CH 4 O 2 can be considered our empirical formula. All the possible molecular formulas for CH 4 O 2 must therefore have subscripts that are multiples of the subscripts in CH 4 O 2 . In other words, we should be able to simplify all possible molecular formulas to CH 4 O 2 . Of the answer choices, only C 4 H 16 O 10 (Option D) cannot be simplified to CH 4 O 2 (the ratio of its subscripts does not match those of CH 4 O 2 ), so it is not a possible molecular formula of CH 4 O 2 . To re-write a molecular formula into an empirical formula, we divide the molecular formula by the subscripts’ largest common factor. Keep in mind that we need to find the molecular formula that cannot be simplified to CH 4 O 2 . Option A. CH 4 O 2 . Incorrect. The subscripts for CH 4 O 2 are 1, 4, and 2. Since the largest common factor is 1, the empirical formula for CH 4 O 2 is C 1/1 H 4/1 O 2/1 = CH 4 O 2 , so CH 4 O 2 is a possible molecular formula. Keep in mind that CH 4 O 2 can be both an empirical and molecular formula. Option B. C 2 H 8 O 4 Incorrect. The subscripts for C 2 H 8 O 4 are 2, 8, and 4. Since the largest common factor is 2, the empirical formula for C 2 H 8 O 4 is C 2/2 H 8/2 O 4/2 = CH 4 O 2 , so C 2 H 8 O 4 is a possible molecular formula. Option C. C 3 H 12 O 6 Incorrect. The subscripts for C 3 H 12 O 6 are 3, 12, and 6. Since the largest common factor is 3, the empirical formula for C 3 H 12 O 6 is C 3/3 H 12/3 O 6/3 = CH 4 O 2 , so C 3 H 12 O 6 is a possible molecular formula. Option D. C 4 H 16 O 10 Correct. The subscripts for C 4 H 16 O 10 are 4, 16, and 10. Since the largest common factor is 2, the empirical formula for C 4 H 16 O 10 is C 4/2 H 16/2 O 10/2 = C 2 H 8 O 5 , so C 4 H 16 O 10 cannot be simplified into CH 4 O 2 . This means that C 4 H 16 O 10 is not a possible molecular formula. Option E. C 6 H­­ 24 O 12 Incorrect. The subscripts for C 6 H 24 O 12 are 6, 24, and 12. Since the largest common factor is 6, the empirical formula for C 6 H 24 O 12 is C 6/6 H 24/6 O 12/6 = CH 4 O 2 so C 6 H 24 O 12 is a possible molecular formula. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "A chemist performs an experiment and yields the chemical formula C 2.5 H 3 N 0.5 . Which of the following is the empirical formula for this compound?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "C 4 H 6 N",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 4 H 6 N 2",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 5 H 6 N",
+        "images": [],
+        "percentage_selected": "(95.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "C 5 H 6 N 2",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 5 H 8 N 2",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "C 5 H 6 N",
+    "analytics": {
+      "percent_correct": "95.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: In this case, we know that our chemical formula is C 2.5 H 3 N 0.5 . Keep in mind that the empirical formula is the simplest, whole-number ratio of atoms in a compound. To re-write this chemical formula into an empirical formula, we divide the chemical formula by the subscript’s largest common factor. The subscripts of C 2.5 H 3 N 0.5 are 2.5, 3, and 0.5. Since the largest fractional common factor is 0.5, the empirical formula for C 2.5 H 3 N 0.5 is C 2.5/0.5 H 3/0.5 N 0.5/0.5 = C 5 H 6 N . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "What is the molar mass, in g•mol -1 , of the empirical formula for N 4 H 8 O 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "24",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "26",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "48",
+        "images": [],
+        "percentage_selected": "(82.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "64",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "96",
+        "images": [],
+        "percentage_selected": "(15.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "48",
+    "analytics": {
+      "percent_correct": "82.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: STEP 1: First, we need to find the empirical formula of N 4 H 8 O 2 . To do this, we divide the molecular formula by the subscripts’ largest common factor, which is 2. The empirical formula for N 4 H 8 O 2 is N 4/2 H 8/2 O 2/2 = N 2 H 4 O. STEP 2: Next, we need to find the molar mass of N 2 H 4 O. Approximately, N has an atomic mass of 14 amu, H has an atomic mass of 1 amu, and O has an atomic mass of 16 amu. This implies that the molar mass of N 2 H 4 O is (2 × 14) + (4 × 1) + (1 × 16) = 28 + 4 + 16 = 48 g•mol -1 . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula",
+    "question": {
+      "text": "A compound is found to have a molecular mass of 54 g•mol -1 . If its empirical formula is found by dividing its subscripts by 3, what is the molecular mass of its empirical formula?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "18 g•mol -1",
+        "images": [],
+        "percentage_selected": "(90.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "27 g•mol -1",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "54 g•mol -1",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "108 g•mol -1",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "162 g•mol -1",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "18 g•mol -1",
+    "analytics": {
+      "percent_correct": "90.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving empirical formulas , let’s begin by defining two keywords: Recall that the empirical formula is a simplified, whole-number ratio of the subscripts in the molecular formula. This means that the molecular formula is essentially a “scaled-up” version of the empirical formula. Similarly, the overall mass of the molecular formula is a “scaled-up” version of the mass of the empirical formula. In this case, we know that the molecular mass of our sample is 54 g•mol -1 . Since the empirical formula is found by dividing the subscripts of the molecular formula by 3, the molecular mass of the empirical formula is found by dividing 54 g•mol -1 by 3, which is 18 g•mol -1 . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000104cb6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104caf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001047f68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010483d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010487e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104831a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104c7bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104c7ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104c5ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104c7f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104c4cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104c9f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104c9fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104caecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical Formula"
+  }
+]

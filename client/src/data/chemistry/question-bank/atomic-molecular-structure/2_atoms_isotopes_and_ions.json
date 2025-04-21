@@ -1,0 +1,571 @@
+[
+  {
+    "question_number": 1,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "The mass number is the total number of",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "protons and neutrons.",
+        "images": [],
+        "percentage_selected": "(95.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "protons and electrons.",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "electrons and neutrons.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "protons.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "protons, neutrons, and electrons.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "protons and neutrons.",
+    "analytics": {
+      "percent_correct": "95.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic notation, recall that atomic notation includes the chemical symbol, the mass number, and the atomic number: In this case, we see that the mass number is the total number of protons and neutrons . Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Atoms+%26+Subatomic+Particles%3A+Atoms%2C+Isotopes%2C+and+Ions/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "The atom below has",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Atoms+%26+Subatomic+Particles%3A+Atoms%2C+Isotopes%2C+and+Ions/Question+2+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "9 protons, 19 neutrons and 9 electrons.",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "10 protons, 9 neutrons and 10 electrons.",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10 protons, 19 neutrons and 10 electrons.",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "9 protons, 10 neutrons and 9 electrons.",
+        "images": [],
+        "percentage_selected": "(93.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "9 protons, 9 neutrons and 9 electrons.",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "9 protons, 10 neutrons and 9 electrons.",
+    "analytics": {
+      "percent_correct": "93.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic notation , recall that atomic notation includes the chemical symbol, the mass number, and the atomic number: In this case, we can use the atomic notation of fluorine to determine the number of protons, neutrons, and electrons in each fluorine atom: STEP 1 : First, we can determine the number of protons using the atomic number (Z). Since the atomic number of fluorine is 9, fluorine has 9 protons. STEP 2 : Next, we can determine the number of electrons using the overall charge. This fluorine atom is electrically neutral since no charge is specified in the atomic notation. As a result, the number of electrons (negative charge) equals the number of protons (positive charge), so this fluorine atom has 9 electrons . STEP 3 : Finally, we can determine the number of neutrons using the formula: mass number = (# of protons) + (# of neutron) Since the mass number (A) of fluorine is 19, we can subtract 9 (i.e., the number of protons) and calculate that this fluorine atom has 10 neutrons. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Atoms+%26+Subatomic+Particles%3A+Atoms%2C+Isotopes%2C+and+Ions/Question+2+Top+Figure+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Atoms+%26+Subatomic+Particles%3A+Atoms%2C+Isotopes%2C+and+Ions/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "An electrically neutral beryllium atom is comprised of 4 protons, 4 electrons, and 5 neutrons. Which of the following are beryllium’s atomic and mass numbers?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Z = 5, A = 9",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Z = 5, A = 4",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Z = 4, A = 5",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Z = 4, A = 9",
+        "images": [],
+        "percentage_selected": "(83.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Z = 9, A = 4",
+        "images": [],
+        "percentage_selected": "(13.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Z = 4, A = 9",
+    "analytics": {
+      "percent_correct": "83.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic notation , recall that atomic notation includes the chemical symbol, the mass number, and the atomic number: In this case, we are told that each beryllium atom is comprised of 4 protons, 4 electrons, and 5 neutrons. STEP 1 : First, we can determine beryllium’s atomic number (Z) by looking at the total number of protons. Since each beryllium atom has 4 protons, the atomic number is 4 (Z = 4) . STEP 2 : Next, we can use the mass number formula (mass number = (# of protons) + (# of neutrons)) to determine the mass number (A). Since there are a total of 4 protons and 5 neutrons, the mass number of beryllium is 9 (A = 9) . Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Atoms+%26+Subatomic+Particles%3A+Atoms%2C+Isotopes%2C+and+Ions/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "An element is defined by the number of",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "valence electrons.",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "electrons.",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "neutrons.",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "positrons.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "protons.",
+        "images": [],
+        "percentage_selected": "(95.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "protons.",
+    "analytics": {
+      "percent_correct": "95.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atoms , recall that each element has a unique atomic number . The atomic number is the number of protons in an element. Changing the number of protons changes the identity of the element. As an example, carbon has an atomic number of 6, meaning there are 6 protons in the nucleus. If you were able to add an additional proton, you would no longer have a carbon atom. Instead, you would have a nitrogen atom, which characteristically has 7 protons. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "Isotopes are atoms that",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "have the same number of protons but different number of electrons.",
+        "images": [],
+        "percentage_selected": "(10.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "have the same number of electrons but different number of protons.",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "have the same number of protons but different number of neutrons.",
+        "images": [],
+        "percentage_selected": "(84.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "have the same number of neutrons but different number of electrons.",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "have the same number of neutrons but different number of protons.",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "have the same number of protons but different number of neutrons.",
+    "analytics": {
+      "percent_correct": "84.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atoms , recall that changing the number of protons, electrons, and neutrons will each uniquely affect an atom: In this case, isotopes are atoms that have the same number of protons but different numbers of neutrons . Simply, isotopes are heavier or lighter versions of an element. For instance, naturally occurring nitrogen has two stable isotopes: nitrogen-14 and nitrogen-15. Although both isotopes have 7 protons, nitrogen-15 is slightly heavier since nitrogen-15 has 8 neutrons while nitrogen-14 only has 7. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "Compared to carbon-12, carbon-14 has",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2 additional neutrons.",
+        "images": [],
+        "percentage_selected": "(94.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "1 additional neutron and 1 additional proton.",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2 additional protons.",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1 additional electron and 1 additional proton.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2 additional electrons.",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2 additional neutrons.",
+    "analytics": {
+      "percent_correct": "94.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atoms , recall that changing the number of protons, electrons, and neutrons will each uniquely affect an atom: In this case, begin by identifying that carbon-12 and carbon-14 are isotopes. Isotopes are atoms that have the same number of protons but different numbers of neutrons. Next, since we know that each carbon atom has 6 protons, we can determine the number of neutrons that each isotope has using the formula: mass number = (# of protons) + (# of neutrons) As a result, compared to carbon-12, carbon-14 has 2 additional neutrons . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "Adding one proton to carbon-12 results in the formation of",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "carbon-13.",
+        "images": [],
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "carbon-14.",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "nitrogen-12.",
+        "images": [],
+        "percentage_selected": "(13.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "nitrogen-13.",
+        "images": [],
+        "percentage_selected": "(61.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "nitrogen-14.",
+        "images": [],
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "nitrogen-13.",
+    "analytics": {
+      "percent_correct": "61.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atoms , recall that changing the number of protons, electrons, and neutrons will each uniquely affect an atom: STEP 1 : First, begin by identifying the number of protons and neutrons in a carbon-12 atom. Since we know that each carbon atom has 6 protons, we can determine the number of neutrons that each isotope has using the formula: mass number = (# of protons) + (# of neutrons) 12 (mass number) – 6 (# of protons) = 6 (# of neutrons) Therefore, each carbon-12 atom has 6 protons and 6 neutrons. STEP 2 : Next, understand that adding a proton will change the identity of the element . Since we added one proton to carbon-12, we have formed a nitrogen atom, which characteristically has 7 protons . STEP 3 : Finally, determine the mass number using the formula: mass number = (# of protons) + (# of neutrons) It is important to understand that the number of neutrons remains unchanged since the question did not specify any addition or removal of neutrons: mass number = 7 (# of protons) + 6 (# of neutrons) = 13 As a result, adding one proton to carbon-12 results in the formation of nitrogen-13 . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "The atomic weight",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "is the sum of the number of neutrons and protons in an atom.",
+        "images": [],
+        "percentage_selected": "(38%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "depends on the relative abundance of the isotopes found in nature.",
+        "images": [],
+        "percentage_selected": "(57.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "can be altered by adding or removing electrons.",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "of anions is higher than the atomic weight of cations.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "is the sum of neutrons, protons, and electrons of an atom.",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "depends on the relative abundance of the isotopes found in nature.",
+    "analytics": {
+      "percent_correct": "57.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atoms , we will need to recall some important terms and definitions: Let’s use nitrogen as an example to explain this concept: Naturally occurring nitrogen exists as two stable isotopes: nitrogen-14 and nitrogen-15. Molecular weight is the sum of the number of neutrons and protons in an atom. Nitrogen-14 has a molecular weight of 14 amu since each atom has 7 protons and 7 neutrons. Similarly, the molecular weight of nitrogen-15 is 15 amu since each atom has 7 protons and 8 neutrons. In contrast, looking at a periodic table, we see that nitrogen’s atomic weight is given as 14.007 amu. The atomic weight depends on the relative abundance of the isotopes found in nature . The vast majority of naturally occurring nitrogen is nitrogen-14 (99.6%), with the remainder existing as nitrogen-15 (0.3%). Predictably, nitrogen’s atomic weight is heavily skewed towards 14. Therefore, the answer is B . Note : the number of electrons has no effect on either the molecular weight or the atomic weight – this is because the weight of an electron is negligible compared to the weight of a proton or neutron.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "The ion below has",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Atoms+%26+Subatomic+Particles%3A+Atoms%2C+Isotopes%2C+and+Ions/Question+9+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "13 protons, 13 neutrons and 11 electrons.",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "13 protons, 14 neutrons and 2 electrons.",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "14 protons, 13 neutrons and 2 electrons.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "15 protons, 13 neutrons and 13 electrons.",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "13 protons, 14 neutrons and 11 electrons.",
+        "images": [],
+        "percentage_selected": "(92.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "13 protons, 14 neutrons and 11 electrons.",
+    "analytics": {
+      "percent_correct": "92.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic notation , recall that atomic notation includes the chemical symbol, the mass number, and the atomic number: In this case, we can use the atomic notation of the aluminum ion to determine the number of protons, neutrons, and electrons in each ion. STEP 1 : First, we can determine the number of protons using the atomic number. Since the atomic number of aluminum is 13, each aluminum atom/ion has 13 protons. STEP 2 : Next, we can determine the number of electrons using the overall charge. Since the overall charge is positive, this is a cation. More specifically, an overall charge of 2+ means that there are 2 more protons than electrons. Importantly, the number of protons never changes – only the number of electrons can change to affect the overall charge. As a result, there is a total of 13 – 2 = 11 electrons . STEP 3 : Finally, we can determine the number of neutrons using the formula: mass number = (# of protons) + (# of neutrons) Since the mass number of aluminum is 27, we can subtract 13 (i.e., the number of protons) and calculate that aluminum has 14 neutrons. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Atoms+%26+Subatomic+Particles%3A+Atoms%2C+Isotopes%2C+and+Ions/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions",
+    "question": {
+      "text": "Which of the following is the correct charge for a phosphorus ion with 7 valence electrons?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3+",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2+",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1+",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2-",
+        "images": [],
+        "percentage_selected": "(83.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "3-",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2-",
+    "analytics": {
+      "percent_correct": "83.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atoms , we will need to compare the number of protons to the number of electrons in the new anion to determine the overall charge. STEP 1 : First, find the number of valence electrons in a neutrally charged phosphorus atom. Altogether, each electrically neutral phosphorus atom has a total of 15 protons and 15 electrons. Looking at the periodic table, phosphorus is found in group 15 , meaning that phosphorus has 5 valence electrons (therefore, the remaining 10 electrons are non-valence electrons). STEP 2 : Next, we compare the number of valence electrons in a neutrally charged phosphorus to the “new” phosphorus ion in our question. If we add 2 valence electrons , we will have a total of 7 valence electrons. Therefore, the phosphorus ion will have a total of 15 protons and 17 electrons. STEP 3 : Finally, we can determine the overall charge by comparing the number of protons to the number of electrons. Since the ion has 2 more electrons than protons, it will have an overall 2- charge . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x000000010502ee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001050270ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104b6e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104bb56a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104bf67b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104ba9a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104ff3c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104ff6f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104fd3a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104ff77e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104fc4b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001050179c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000105017b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000105026cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Atoms, Isotopes, and Ions"
+  }
+]

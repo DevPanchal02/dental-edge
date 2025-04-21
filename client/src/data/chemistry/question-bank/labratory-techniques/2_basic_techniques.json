@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "The function of the tare button on a digital scale is to",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "activate the display backlight.",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "start the built-in timer.",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "reset the reading to 0.",
+        "images": [],
+        "percentage_selected": "(96.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "calibrate the scale’s internal settings.",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "switch between measurement units.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "reset the reading to 0.",
+    "analytics": {
+      "percent_correct": "96.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving digital scales , we can recall that the tare button on a digital scale resets the reading to “0” , ensuring that the current weight of any object on the scale is not included in the final measurement. This is particularly useful when we want to measure the net weight of an object without the weight of the container. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "Which of the following lists the correct procedure for measuring the mass of a liquid on a digital scale?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Tare the scale, place the beaker on the scale, pour the liquid in the beaker",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Place the beaker on the scale, pour the liquid in the beaker, tare the scale",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Tare the scale, pour the liquid in the beaker, place the beaker on the scale",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Place the beaker on the scale, tare the scale, pour the liquid in the beaker",
+        "images": [],
+        "percentage_selected": "(92.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Pour the liquid in the beaker, place the beaker on the scale, tare the scale",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Place the beaker on the scale, tare the scale, pour the liquid in the beaker",
+    "analytics": {
+      "percent_correct": "92.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving digital scales , we should review the procedure required to measure the mass of a liquid. Keep in mind that we are only interested in the mass of the liquid inside the beaker, and not the beaker itself. First, the beaker is placed on the scale. Then, the scale is tared. Taring resets the scale to “0”, ensuring that the weight of the beaker is not included in the final measurement. Finally, the liquid is poured into the beaker and the weight of the liquid is read. Option A. Tare the scale, place the beaker on the scale, pour the liquid in the beaker Incorrect. Taring the scale before placing the beaker results in a final measurement that includes both the weight of the beaker and the liquid. We only want the weight of the liquid. Option B. Place the beaker on the scale, pour the liquid in the beaker, tare the scale Incorrect. Taring the scale after placing the liquid-filled beaker on it will make the measurement “0”, because taring resets the scale. Option C. Tare the scale, pour the liquid in the beaker, place the beaker on the scale Incorrect. Taring the scale before placing the beaker results in a final measurement that includes both the weight of the beaker and the liquid. We only want the weight of the liquid. Option D. Place the beaker on the scale, tare the scale, pour the liquid in the beaker Correct. Placing the beaker on the scale before taring ensures that only the weight of the liquid is included in the final measurement. The weight of the beaker is omitted. Option E. Pour the liquid in the beaker, place the beaker on the scale, tare the scale Incorrect. Taring the scale after placing the liquid-filled beaker on it will make the measurement “0”, because taring resets the scale. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "What is an example of a bad practice when using digital scales?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Placing the sample directly on the scale",
+        "images": [],
+        "percentage_selected": "(97.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Taring the scale prior to use",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Cleaning the scale before and after use",
+        "images": [],
+        "percentage_selected": "(0%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Storing the scale in a clean, dry area",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Placing the scale on a flat surface",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Placing the sample directly on the scale",
+    "analytics": {
+      "percent_correct": "97.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind that we need to find the example of a bad practice when using digital scales. Option A. Placing the sample directly on the scale Correct. This is an example of bad practice because placing the sample directly on the scale may affect the accuracy of the scale through damage, contamination, corrosion, and can be a safety hazard. Option B . Taring the scale prior to use Incorrect. This is an example of good practice because taring the scale is an essential step to ensuring that the scale only measures the object of interest. Option C. Cleaning the scale before and after use Incorrect. This is an example of good practice because cleaning the scale before and after use prevents contaminants or residues on the scale from affecting measurements. Option D. Storing the scale in a clean, dry area Incorrect. This is an example of good practice because storing the digital scale in a clean, dry area prevents environmental factors from damaging the scale and its electronics. Option E. Placing the scale on a flat surface Incorrect. This is an example of good practice because placing the scale on a flat surface ensures the scale’s stability, minimizing the risk of spilling and increasing the measurement accuracy. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "After centrifuging a sample, what is found in the pellet?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The liquid portion remaining on the top",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The titanium balls used to mix the components",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The gas bubbles that have accumulated",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The solid particles that have sedimented",
+        "images": [],
+        "percentage_selected": "(87%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "The mixture of liquid and solid components",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The solid particles that have sedimented",
+    "analytics": {
+      "percent_correct": "87%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving centrifuges , we can recall that a centrifuge is an instrument used to separate the components of a mixture based on their density difference. A centrifuge spins the samples at high speeds, creating a centrifugal force. The pellet (or precipitate) with heavier density settles to the bottom of the test tube, while the remaining solution is called the supernatant. In this case, we can say that the pellet is composed of solid particles that have sedimented . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "A centrifuge is used to",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "filter solid particles from a liquid.",
+        "images": [],
+        "percentage_selected": "(14%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "separate mixtures based on density.",
+        "images": [],
+        "percentage_selected": "(84.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "dissolve solid particles into a liquid.",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "measure concentrations using light.",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "distinguish particles based on concentration.",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "separate mixtures based on density.",
+    "analytics": {
+      "percent_correct": "84.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving centrifuges , we can recall that a centrifuge is an instrument used to separate components of a mixture based on their density differences . This technique is performed using a centrifuge, which spins at high speeds around an axis, creating a centrifugal force. This force pushes higher-density components away from the axis and toward the bottom of the test tube. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "Each of the following statements is correct regarding centrifuges EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Centrifugal forces separate mixtures.",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The solid component is the pellet.",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Heavier components settle at the bottom.",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The liquid component is the supernatant.",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Heat is used to accelerate separation.",
+        "images": [],
+        "percentage_selected": "(90.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Heat is used to accelerate separation.",
+    "analytics": {
+      "percent_correct": "90.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving centrifuges , we can recall that a centrifuge is an instrument used to separate the components of a mixture based on their density difference. A centrifuge spins the sample at high speeds, creating a centrifugal force. The pellet (or precipitate) with heavier density settles to the bottom of the test tube, while the remaining solution is called the supernatant. Accordingly, all of the statements are correct regarding centrifuges, except Option E. Heat is not used to accelerate separation. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "The endpoint of a titration with an indicator is reached when",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the temperature of the solution increases.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "the pH of the solution is neutral.",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "the reaction stops completely.",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "the mass of the solution decreases.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "the color of the solution changes.",
+        "images": [],
+        "percentage_selected": "(90.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "the color of the solution changes.",
+    "analytics": {
+      "percent_correct": "90.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving titrations , we need to recall that in a titration with an indicator, a change in the color of the indicator signifies the endpoint, or “completion” of the titration. More information about titrations will be taught in later chapters about acid-base equilibria. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "Calorimeters are used to study the change in the",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "heat for a chemical reaction.",
+        "images": [],
+        "percentage_selected": "(92.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "molar mass of a substance.",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "light energy for a chemical change.",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "solubility of a substance.",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "speed of a chemical reaction.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "heat for a chemical reaction.",
+    "analytics": {
+      "percent_correct": "92.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calorimeters , we need to recall that calorimeters are used to measure the change in the heat of a chemical reaction . Calorimetry is a tool we use to determine whether a reaction is exothermic (heat released) or endothermic (heat absorbed). Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "What conclusion can be inferred from a drop in temperature in a calorimeter?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The chemical reaction is not occurring.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The reaction is exothermic.",
+        "images": [],
+        "percentage_selected": "(29.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The calorimeter is malfunctioning.",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The reaction is endothermic.",
+        "images": [],
+        "percentage_selected": "(67.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "The calorimeter is not properly insulated.",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The reaction is endothermic.",
+    "analytics": {
+      "percent_correct": "67.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calorimeters , we need to recall that calorimeters are used to measure the amount of released or absorbed heat energy for a chemical reaction . Calorimetry helps us determine whether a reaction is exothermic (heat released) or endothermic (heat absorbed). In this case, a drop in temperature in a calorimeter implies that the reaction was endothermic . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques",
+    "question": {
+      "text": "A basic calorimetry setup consists of a thermometer and water in a",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "plastic cup.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Erlenmeyer flask.",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "paper cup.",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Styrofoam cup.",
+        "images": [],
+        "percentage_selected": "(85.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Bunsen burner.",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Styrofoam cup.",
+    "analytics": {
+      "percent_correct": "85.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calorimeters , we need to recall that calorimeters are used to measure the amount of released or absorbed heat energy for a chemical reaction . Calorimetry helps us determine whether a reaction is exothermic (heat released) or endothermic (heat absorbed). A basic calorimetry setup consists of a thermometer and water in a Styrofoam cup. Styrofoam is used because it is a good insulator, which minimizes heat loss or gain between the water and the surrounding environment. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000100a76e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100a6f0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001005b68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001005fd6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010063e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001005f1a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100a3bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100a3ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100a1ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100a3f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100a0cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100a5f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100a5fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100a6ecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Laboratory Techniques",
+    "question_bank": "Basic Techniques"
+  }
+]

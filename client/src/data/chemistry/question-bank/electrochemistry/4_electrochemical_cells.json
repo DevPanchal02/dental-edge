@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "Which of the following cells converts chemical energy to electrical energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Galvanic cell",
+        "images": [],
+        "percentage_selected": "(88.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Non-voltaic cell",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "All electrochemical cells",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Electrolytic cell",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "No cells do this",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Galvanic cell",
+    "analytics": {
+      "percent_correct": "88.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review the characteristics of both galvanic cells and electrolytic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source In this case, the cell that converts chemical energy to electrical energy is a galvanic cell . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "Which of the following correctly describes the mechanism of a galvanic cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The redox reaction is non-spontaneous",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Electrons flow from the cathode to the anode",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The anions in the salt bridge flow towards to the cathode",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "It does not require an external power source",
+        "images": [],
+        "percentage_selected": "(88.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "The anode is positively charged due to oxidation",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "It does not require an external power source",
+    "analytics": {
+      "percent_correct": "88.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review the characteristics of both galvanic cells and electrolytic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source In this case, the statement that correctly describes the mechanism of a galvanic cell is it does not require an external power source . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "All of the following statements are true regarding voltaic cells EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Redox reactions are spontaneous",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The anode is oxidized",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Current is produced by the transfer of electrons",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Anions in the salt bridge flow towards the cathode",
+        "images": [],
+        "percentage_selected": "(73.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Voltaic cells are composed of two separated half-cells",
+        "images": [],
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Anions in the salt bridge flow towards the cathode",
+    "analytics": {
+      "percent_correct": "73.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review the characteristics of both galvanic cells and electrolytic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source In a voltaic cell, the salt bridge contains ions that flow to balance the charges in the half-cells. Anions in the salt bridge flow towards the anode because at the anode, oxidation occurs, which results in an increase of positive charge. The flow of anions helps neutralize this extra positive charge. Therefore, all the statements are true regarding voltaic (galvanic) cells except for “ anions in the salt bridge flow towards the cathode ” – anions in the salt bridge flow towards the anode instead. Keep in mind that we are looking for an incorrect statement about voltaic cells. Option A. Redox reactions are spontaneous Incorrect. Voltaic cells involve spontaneous redox reactions that generate electrical energy. Option B. The anode is oxidized Incorrect. In a voltaic cell, the anode undergoes oxidation, releasing electrons. This increases the amount of positive charge without the solution. Option C. Current is produced by the transfer of electrons Incorrect. In a voltaic cell, electrons flow from the anode to the cathode through an external circuit, producing an electric current. Option D. Anions in the salt bridge flow towards the cathode Correct. In a voltaic cell, the salt bridge contains ions that flow to balance the charges in the half-cells. Anions in the salt bridge flow towards the anode because at the anode, oxidation occurs, which results in an increase of positive charge in the solution that the anode is immersed in. The flow of anions helps neutralize this positive charge. Meanwhile, in the cathode, positive charge is lost in the solution as the cathode undergoes reduction. This means that cations in the salt bridge flows towards the cathode, in order to balance out the lost positive charge. It is easier to logically reason out which ions flow towards which direction, instead of memorizing by heart! Option E. Voltaic cells are composed of two separated half-cells Incorrect. Voltaic cells consist of two half-cells, each containing an electrolyte and an electrode. The half-cells are separated physically but connected via a salt bridge. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "In a galvanic cell, electrons get oxidized at the",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "negatively charged cathode, and flow to the anode",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "negatively charged anode, and flow to the cathode.",
+        "images": [],
+        "percentage_selected": "(92%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "positively charged cathode, and flow to the anode.",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "positively charged anode, and flow to the cathode.",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "neutral cathode, and does not flow anywhere.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "negatively charged anode, and flow to the cathode.",
+    "analytics": {
+      "percent_correct": "92%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to know what happens at both the anode and the cathode of galvanic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source Therefore, in a galvanic cell, electrons get oxidized at the negatively charged anode, and flow to the cathode . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "All of the following are true of an electrolytic cell EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The anode is positive",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The cell is nonspontaneous",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The cathode is the site of reduction",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The cathode gains mass",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Electrons flow from the cathode to the anode",
+        "images": [],
+        "percentage_selected": "(81.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Electrons flow from the cathode to the anode",
+    "analytics": {
+      "percent_correct": "81.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review the characteristics of electrolytic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source In this case, all of the statements are true except the statement: electrons flow from the cathode to the anode . For both voltaic and electrolytic cells, the electrons flow from the anode to the cathode. Keep in mind that we are looking for an incorrect statement about electrolytic cells. Option A. The anode is positive Incorrect. In an electrolytic cell, the anode is positively charged. Meanwhile, the anode is negatively charged for a galvanic cell. Option B. The cell is nonspontaneous Incorrect. The cell is nonspontaneous, meaning that it requires an external source of electrical energy to drive the nonspontaneous redox reaction. Meanwhile, galvanic cells are spontaneous. Option C. The cathode is the site of reduction Incorrect. In an electrolytic cell, the cathode is the electrode where reduction occurs. In fact, the cathode is always the site of reduction, whether it is a galvanic cell or electrolytic cell. Option D. The cathode gains mass Incorrect. During the electroplating process, the metal being plated by the other metal is made into the cathode. At the cathode, the reduction of ions occurs, causing aqueous ions to transform into solid atoms. These solid atoms then deposit onto the cathode, resulting in a gain in mass and electroplating. At the anode, the opposite happens. Solid atoms on the anode oxidize and enter the solution, leading to the dissolution of the anode. This results in a loss of mass for the anode. Option E. Electrons flow from the cathode to the anode Correct. In an electrolytic cell, electrons flow from the anode to the cathode. In fact, electrons always flow from the anode to the cathode. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "In an electrolytic cell, the electrons flow from the",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "negatively charged cathode.",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "negatively charged anode.",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "positively charged anode.",
+        "images": [],
+        "percentage_selected": "(93.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "positively charged cathode.",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "neutrally charged cathode.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "positively charged anode.",
+    "analytics": {
+      "percent_correct": "93.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to know what happens at both the anode and the cathode of electrolytic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source Therefore, in an electrolytic cell, the electrons flow from the positively charged anode . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "Which of the following correctly describes the setup of an electrolytic cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Instead of a porous barrier, there is a salt bridge",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "In an electrolytic cell, E° cell < 0",
+        "images": [],
+        "percentage_selected": "(91.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "There is a spontaneous redox reaction",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Electrons flow from the cathode to the anode",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The cell does not require an external power source",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "In an electrolytic cell, E° cell < 0",
+    "analytics": {
+      "percent_correct": "91.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review the characteristics of electrolytic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source In an electrolytic cell, the standard cell potential is negative because the cell requires an external power source to drive a non-spontaneous reaction. Therefore, in an electrolytic cell, E° cell < 0 . Option A. Instead of a porous barrier, there is a salt bridge Incorrect. In an electrolytic cell, there is a porous barrier that allows ions to move between the half-cells, which maintains charge neutrality. Instead, the salt bridge can be found in a galvanic cell. Option B. In an electrolytic cell, E° cell < 0 Correct. In an electrolytic cell, the standard cell potential is negative because the cell requires an external power source to drive a non-spontaneous reaction. Option C. There is a spontaneous redox reaction Incorrect. In an electrolytic cell, the redox reaction is non-spontaneous. In a galvanic cell, there is a spontaneous redox reaction. Option D. Electrons flow from the cathode to the anode Incorrect. In an electrolytic cell, electrons flow from the anode to the cathode by using the power source that forces the nonspontaneous movement of electrons. Remember, electrons always flow from the anode to the cathode. Option E. The cell does not require an external power source Incorrect. The electrolytic cell requires an external power source to provide the energy needed to drive the non-spontaneous redox reaction. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "Which of the following is typically plated in an electrolytic cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The anode",
+        "images": [],
+        "percentage_selected": "(11.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The porous barrier",
+        "images": [],
+        "percentage_selected": "(17.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The salt bridge",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The cathode",
+        "images": [],
+        "percentage_selected": "(62.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Electrolytes",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The cathode",
+    "analytics": {
+      "percent_correct": "62.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to know the electroplating process. Electroplating is the process of plating a metal onto another, covering it with a thin layer. The anode (containing the metal needed for plating) and cathode (containing the item to be plated) are both submerged in a solution containing a dissolved metal salt. At the anode, the oxidation of ions occurs, causing solid atoms to lose electrons and become aqueous ions in the shared solution. At the cathode, the reduction of ions occurs, causing the aforementioned aqueous ions to gain electrons and become solid. These solid atoms then deposit onto the cathode, resulting in a gain in mass and the electroplating of the cathode. There is an overall loss of mass at the anode and a gain of mass at the cathode. In this case, the cathode is typically plated in an electrolytic cell. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "Which of the following correctly describes the role of a power source in an electrolytic cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "It generates ions in the electrolyte",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "It balances the redox reaction",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "It forces electrons to flow non-spontaneously",
+        "images": [],
+        "percentage_selected": "(87.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "It converts chemical energy into electrical energy",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "It strengthens the porous barrier",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "It forces electrons to flow non-spontaneously",
+    "analytics": {
+      "percent_correct": "87.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to review the characteristics of electrolytic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source In an electrolytic cell, the chemical reaction is not spontaneous under normal conditions. It requires an external force to drive the reaction against its natural tendency. In this case, the role of the power source in an electrolytic cell is that it forces electrons to flow non-spontaneously . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells",
+    "question": {
+      "text": "In an electrolytic cell, reduction takes place at the",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "negatively charged cathode.",
+        "images": [],
+        "percentage_selected": "(90.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "negatively charged anode.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "positively charged cathode.",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "positively charged anode.",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "salt bridge.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "negatively charged cathode.",
+    "analytics": {
+      "percent_correct": "90.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electrochemical cells , we need to know what happens at both the anode and the cathode of electrolytic cells: Galvanic (voltaic) cells (E° cell > 0) Electrolytic cells (E° cell < 0) Spontaneous redox reactions (ΔG < 0) Nonspontaneous redox reactions (ΔG > 0) Electrons flows from negatively-charged anode to positively-charged cathode Electrons flow from positively-charged anode to negatively-charged cathode Converts chemical to electrical energy Converts electrical to chemistry energy Does not require an external power source Requires an external power source Recall that oxidation always occurs at the anode and reduction always occurs at the cathode, regardless of the cell type. Because we are told that we are interested in a reduction , this allows us to narrow our answer choice to only answer choices A and C. Recall that in an electrolytic cell, the cathode is negatively charged. Therefore, we can say that, in an electrolytic cell, reduction takes place at the negatively charged cathode . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x00000001033c2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001033bb0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000102f028d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000102f496a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000102f8a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000102f3da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000103387c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010338af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000103367a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010338b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000103358b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001033ab9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001033abb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001033bacf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Electrochemistry",
+    "question_bank": "Electrochemical Cells"
+  }
+]

@@ -1,0 +1,581 @@
+[
+  {
+    "question_number": 1,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "Which of the following statements best describes ionization energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The energy required to form a cation",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The energy required to add an electron",
+        "images": [],
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The energy required to form an anion",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The energy required to remove an electron",
+        "images": [],
+        "percentage_selected": "(89.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "The energy required to convert a solid to liquid",
+        "images": [],
+        "percentage_selected": "(0%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The energy required to remove an electron",
+    "analytics": {
+      "percent_correct": "89.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy , we begin by defining ionization energy as the energy needed to remove a valence electron from a gaseous atom or ion. In this case, Option D (the energy required to remove an electron) is the best description of ionization energy. Although Option A (the energy required to form a cation) is tempting, it is not always the case. Ionization energy is a general term used to describe the energy needed to remove an electron. While removing an electron from a neutral atom (ex: H) forms a cation (H + ), the amount of energy required to remove an electron from an anion (H – ) to form a neutral atom (H) is also referred to as ionization energy. On the other hand, the n th ionization energy is the energy required to remove the n th electron after the first n -1 electrons have been removed (2nd ionization energy involves removing the 2nd electron after the 1st electron has been removed). Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "On the periodic table, ionization energy generally increases",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "from left to right in a period, and down a group.",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "from left to right in a period, and up a group.",
+        "images": [],
+        "percentage_selected": "(93.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "from right to left in a period, and down a group.",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "from right to left in a period, and up a group.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "from right to left in a period, and constant in a group.",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "from left to right in a period, and up a group.",
+    "analytics": {
+      "percent_correct": "93.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, we can say that on the periodic table, ionization energy generally increases from left to right in a period, and up a group . Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "The best explanation for ionization energy decreasing from right to left across a period is a decrease in the",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "number of protons.",
+        "images": [],
+        "percentage_selected": "(69.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "number of neutrons.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "number of electrons.",
+        "images": [],
+        "percentage_selected": "(19.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "atomic mass.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "number of electron shells.",
+        "images": [],
+        "percentage_selected": "(9.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "number of protons.",
+    "analytics": {
+      "percent_correct": "69.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, the best explanation for ionization energy decreasing from right to left across a period is a decrease in the number of protons (Option A). Decreasing the number of protons in the nucleus decreases effective nuclear charge and nuclear attraction. Option A. number of protons. Correct. Moving from right to left across a period decreases the number of protons, resulting in decreased effective nuclear charge, lowering nuclear attraction to outer shell electrons. This implies that the ionization energy (energy to remove an electron) is decreased. Option B. number of neutrons. Incorrect. Neutrons have no charge, which means that it has little impact on ionization energy. Option C. number of electrons. Incorrect. Moving from right to left across a period decreases the number of electrons. Although this can decrease electron-electron repulsion, its effect on ionization energy is not as important as the decrease in the number of protons. Option D. atomic mass. Incorrect. Moving from right to left across a period decreases atomic mass, but this is not a good, nor direct, explanation as to why ionization energy decreases. Option E. number of electron shells. Incorrect. Moving from right to left across a period can sometimes result in fewer electron shells, which decreases the shielding effect, resulting in increased ionization energy. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "Why does ionization energy increase up a group on the periodic table?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increased shielding",
+        "images": [],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Decreased electron affinity",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Increased atomic size",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Decreased atomic size",
+        "images": [],
+        "percentage_selected": "(69.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Increased nuclear charge",
+        "images": [],
+        "percentage_selected": "(11.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Decreased atomic size",
+    "analytics": {
+      "percent_correct": "69.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, we can say that ionization energy increases up a group because the outer shell electrons are drastically closer to the positive nucleus, resulting in increasing nuclear attraction. This implies that ionization energy increases up a group because there is decreased atomic size . Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "Each of the following factors directly affects periodic trends in ionization energy EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Atomic radius",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Number of protons",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Number of electron shells",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Oxidation state",
+        "images": [],
+        "percentage_selected": "(79%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Atomic number",
+        "images": [],
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Oxidation state",
+    "analytics": {
+      "percent_correct": "79%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, all the listed factors except oxidation state (Option D) directly affect periodic trends in ionization energy. Keep in mind we need to find the factor that does not directly affect ionization energy trends. Option A. Atomic radius Incorrect. An increase in atomic radius brings outer shell electrons farther away from the positive nucleus, decreasing nuclear attraction, and directly decreasing ionization energy. Option B. Number of protons Incorrect. An increase in the number of protons increases nuclear attraction between protons and outer shell electrons, directly increasing ionization energy. Option C. Number of electron shells Incorrect. An increase in the number of electron shells brings outer shell electrons farther away from the positive nucleus, decreasing nuclear attraction, and directly decreasing ionization energy. Option D. Oxidation state Correct. The oxidation state of an atom or ion is its hypothetical charge if all of its bonds to different atoms were fully ionic. This does not directly affect ionization energy. Option E. Atomic number Incorrect. An increase in atomic number (number of protons) increases nuclear attraction between protons and outer shell electrons, directly increasing ionization energy. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "Which of the following atoms has the lowest ionization energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ca",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Sr",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Ba",
+        "images": [],
+        "percentage_selected": "(94.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Be",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Mg",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ba",
+    "analytics": {
+      "percent_correct": "94.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, all of our options are from Group 2 (alkali earth metals) in the periodic table. Since ionization energy increases going up a group, the atom with the lowest ionization energy will be the bottommost option, which is Ba . Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "Which of the following atoms has the highest ionization energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "S",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Cl",
+        "images": [],
+        "percentage_selected": "(97.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Al",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Si",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "P",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cl",
+    "analytics": {
+      "percent_correct": "97.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, all of our options are from Period 3 of the periodic table. Since ionization energy increases going from left to right across a period due to an increase in nuclear attraction, the atom with the highest ionization energy will be the rightmost option, which is Cl . Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "Which of the following elements has the lowest first ionization energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "K",
+        "images": [],
+        "percentage_selected": "(90.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Sc",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Zn",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Br",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Kr",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "K",
+    "analytics": {
+      "percent_correct": "90.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, all of our options are from Period 4 in the periodic table. Since ionization energy increases going from left to right across a period due to an increase in nuclear attraction, the atom with the lowest ionization energy will be the leftmost option, which is K . Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "Which of the following elements has the highest ionization energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Li",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "F",
+        "images": [],
+        "percentage_selected": "(97.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Na",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Mg",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cl",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "F",
+    "analytics": {
+      "percent_correct": "97.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, because ionization energy increases going up a group, Li and F will have higher ionization energies than other atoms because they are in period 2, while Mg, Cl, and Na are in period 3. Furthermore, because ionization energy increases from left to right across a period, F will have higher ionization energy than Li. We can say that F has the highest ionization energy. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy",
+    "question": {
+      "text": "Which of the following elements has the lowest first ionization energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ar",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Kr",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Li",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Ca",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "K",
+        "images": [],
+        "percentage_selected": "(89.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "K",
+    "analytics": {
+      "percent_correct": "89.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionization energy trends , we first discuss the trends that increase nuclear attraction, which are attractive forces between the positive nucleus and the negative electrons. Increases in nuclear attraction make it harder to ionize (remove) electrons. In this case, because ionization energy increases going up a group, Kr, Ca, and K will have lower ionization energies because they are in period 4 while the rest are either in periods 2 or 3. Furthermore, because ionization energy increases from left to right across a period, K will have lower ionization energy than Ca and Kr. We can say that K has the lowest ionization energy. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+2%3A+Ionization+Energy/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001011a2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x000000010119b0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000100ce28d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000100d296a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000100d6a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100d1da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000101167c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010116af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000101147a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010116b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000101138b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010118b9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010118bb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x000000010119acf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Ionization Energy"
+  }
+]

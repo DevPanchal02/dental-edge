@@ -1,0 +1,2141 @@
+[
+  {
+    "test_number": 7,
+    "question_number": 1,
+    "question": {
+      "text": "Which of the following best describes the role of T-cells in the immune system?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Involved in cell-mediated response",
+        "percentage_selected": "(81.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Cause humoral responses",
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Create antibodies",
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Can engulf foreign bodies",
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Release histamine",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Involved in cell-mediated response",
+    "analytics": {
+      "percent_correct": "81.4%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "T cells are a type of leukocyte (white blood cell) that are an essential part of the immune system. T cells originate in the bone marrow and mature in the thymus. In the thymus, each T cell multiplies and differentiates into one of four types of T cells: helper, cytotoxic, regulatory, or memory T cell. They are then sent to peripheral tissues or circulate in the blood or lymphatic system. Every T cell has a unique T cell receptor (TCR) that can bind to only one kind of antigen. Once stimulated by the appropriate antigen, each T cell carries out its respective function. Helper T cells (aka CD4 T cells) secrete chemical messengers called cytokines , which stimulate the differentiation of B cells into plasma cells that produce antibodies. Regulatory T cells act to control immune reactions through negative feedback. Memory T cells provide long-term protection against specific antigens and proliferate once the antigen is detected again. T cells are crucial in the immune system’s cell-mediated immunity. A Cell-mediated response is an immune response that does not involve antibodies. Rather, a cell-mediated response is the activation of phagocytes, antigen-specific cytotoxic T-lymphocytes, and the release of various cytokines in response to an antigen. On the other hand, humoral immunity is carried out by antibodies floating in bodily fluids (humors = body fluids) to eliminate extracellular pathogens. The difference between cell-mediated and humoral immunity is also illustrated in the image below, where T-Cells are mainly involved in Cell-mediated immunity. CC BY 4.0",
+      "poe_text": "Option B. Cause humoral responses – This option is incorrect because the role of the T-cells involves cell-mediated immunity. They are not involved in humoral responses such as antibody release. It is important to distinguish between the two types of adaptive immunity: humoral immunity and cell-mediated immunity. Humoral immunity produces antigen-specific antibodies that circulate in bodily fluids to neutralize and eliminate extracellular pathogens. This is driven by B cells. On the other hand, cell-mediated immunity does not depend on antibodies to function and instead uses mature T cells to directly address intracellular pathogens. Option C. Create antibodies – This option is incorrect because creating antibodies is a part of humoral immunity which involves B-cells. Recall that an alternate name for this immune response is antibody-mediated immunity. T-cells are not involved in this process but, rather, are involved in cell-mediated immunity such as initiating cell death (apoptosis) in infected cells or causing cell lysis using perforin. Option D. Can engulf foreign bodies – This option is incorrect because the engulfment of foreign bodies is known as phagocytosis which is done by cells of the innate immune system, specifically, monocytes, macrophages, neutrophils, dendritic cells, and mast cells. T-cells are not involved in this process as they are a part of the adaptive immune system and have roles in cell-mediated immunity. Instead, T cells eliminate pathogens by initiating programmed cell death (apoptosis) in infected cells or causing cell lysis using perforin. Option E. Release histamine – Histamine is a chemical that is crucial for the formation of inflammation. Histamine is released in response to an injury, and it causes nearby capillaries to dilate which then increases blood flow and blood vessel permeability. This opens the way for immune cells and nutrients to address the injury. This option is incorrect because histamine is released by mast cells and basophils. T-cells are not involved in the release of histamine and are instead involved in cell-mediated immunity such as the killing of infected cells.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+1+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 2,
+    "question": {
+      "text": "All of the following species have segmentation EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Cnidaria",
+        "percentage_selected": "(81.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Arthropods",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Annelids",
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Vertebrates",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Chordates",
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cnidaria",
+    "analytics": {
+      "percent_correct": "81.9%",
+      "time_spent": "0 min, 16 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "Segmentation is the repetition of similar organs, tissues, cell types, or body cavities along the anterior-posterior axis of symmetric animals. Without segmentation, organisms would lack complex means of movement and complex body structures that enable advanced functions. More specifically, segmentation provides the means for an organism to travel and protect its sensitive organs from damage. Segmentation also provides the ability to divide functions into different portions of the body and allow an organism to perform increasingly complex activities and use different segments to perform varying functions. Additionally, segmentation allows for a greater degree of variety among species. Some common organisms that are segmented include arthropods, annelids, chordates, and vertebrates. Body segmentation is controlled by Hox genes. These genes are responsible for the early morphogenesis (body formation) of many animal embryos. Specifically, they control the body position and placement of the anatomic structures in a developing embryo. In other words, these genes provide the instructions that place the head at the top of the body and the feet at the bottom, as opposed to any other possible combination. If the Hox genes are absent or mutated, the embryo will develop with misplaced body parts and is unlikely to survive. Moreover, Hox genes are highly conserved in plants, animals, and fungi. That is, they have remained mostly unchanged throughout their multi-species evolution. This multi-species relationship is illustrated in the image below. To answer this question, it may be helpful to first visualize all the animal phyla in order of least to most complex (i.e., Porifera and Cnidaria through Chordata) and realize that, generally, the less complex the body of a Phylum, the less chance there is for segmentation . For example, given that Phyla with bilateral symmetry are more complex than those with radial symmetry or no symmetry at all, it makes sense that segmentation can be found only in Phyla with bilateral symmetry. Using these two pointers can aid your process of elimination for this question. CC BY 4.0",
+      "poe_text": "Option B. Arthropods – Recall that, as seen in the image above, the classic example of body segmentation and Hox genes is that of a fruit fly, which is an arthropod. This option is incorrect because arthropods such as spiders and insects DO have segmentation because their body parts are divided into discrete sections with specific functions such as the head, thorax, abdomen, etc. Option C. Annelids – This answer option might be tempting given that Annelids are not as complex as Arthropods or Chordates in body structure. However, this option is incorrect because annelids such as earthworms DO exhibit bilateral symmetry and they DO have segmentation as their body parts are divided into discrete sections. Thus, Annelids are more complex in body structure when compared to option A, Cnidaria. Option D. Vertebrates – This option is incorrect because vertebrates such as humans and other mammals have bilateral symmetry and they DO have segmentation as their body parts are divided into discrete sections with specific sections such as the head, thorax, abdomen, etc. Recall that vertebrates are part of the Phylum Chordates, which is the most complex phylum given their highly specialized organs and tissue. This increased complexity in body structure should be another pointer that vertebrates exhibit segmentation. Option E. Chordates – This option is incorrect because chordates such as humans and other mammals have bilateral symmetry and they DO have segmentation as their body parts are divided into discrete sections with specific sections such as the head, thorax, abdomen, etc. Recall again that Chordates are the most complex Phylum, thus this should be one of the first options to be eliminated.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+2+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 3,
+    "question": {
+      "text": "Where is chromosomal DNA found in bacteria?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Nucleus",
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Capsule",
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Plasmid",
+        "percentage_selected": "(15.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Nucleoid",
+        "percentage_selected": "(77.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Flagella",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Nucleoid",
+    "analytics": {
+      "percent_correct": "77.3%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Recall that prokaryotes are made up of the domains Bacteria and Archaea. Most bacteria contain their DNA in only one circular, double-stranded chromosome, located in a region of the cell called a nucleoid – an irregularly shaped region inside all prokaryotic cells. Therefore, Option D , Nucleoid , is the correct answer. The nucleoid is not to be confused with the nucleus; all prokaryotes, including bacteria, lack a nucleus. Genetic information can also be present in the form of a plasmid , which is a small circular double-stranded DNA molecule. However, it is important to note that plasmids DO NOT contain the bacterium’s own chromosomal DNA. Plasmids are independent genetic molecules that can be transmitted from one bacterium to another; they are not part of the bacterium’s chromosome. Plasmids can carry genetic information for traits such as antibiotic resistance, which can be spread from one bacterium to another. CC BY 4.0",
+      "poe_text": "Option A. Nucleus – This option is incorrect because bacteria are prokaryotic cells and therefore DO NOT contain membrane-bound organelles such as a nucleus. In prokaryotic cells, the chromosomal DNA is tightly condensed in the nucleoid region, which is not enclosed by any membrane. In eukaryotic cells, the nucleus functions as the cell’s control center for gene expression, protein synthesis, and cell division. Option B. Capsule – This option is incorrect because the capsule is the outer envelope of some bacterial cells and is made of polysaccharides. It functions to protect the bacterium from being phagocytosed; therefore, a bacterium with capsules tends to be more virulent. Since the capsule is the outer envelope of the entire bacterium this option cannot be correct. Option C. Plasmid – This option might be tempting if you do not read the question carefully. Indeed, a plasmid is a piece of DNA found inside bacteria. However, the question is specifically asking about chromosomal DNA (i.e., the bacterium’s own DNA which codes for its own structure and function). Plasmids are NOT part of the chromosomal DNA of a bacterium. Plasmids are independent circular DNA molecules found physically separate from the bacterium’s chromosomal DNA and can be shared between bacteria via conjugation. Recall that transduction and transformation are two additional ways for prokaryotes to share DNA with each other. However, out of the three methods, only conjugation involves plasmids. Option E. Flagella – This option is incorrect because flagella are not involved in the storage of DNA. Instead, flagella are whip-like structures that contribute to the locomotion of the cell. They are found in bacteria, archaea, and even some eukaryotes.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 4,
+    "question": {
+      "text": "Which of the following strongly supports the endosymbiotic theory regarding the origins of mitochondria and chloroplasts?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Both contain circular DNA",
+        "percentage_selected": "(83.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Both have a single membrane",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Both contain single-stranded DNA",
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Both have histone proteins",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Both have 80S ribosomes",
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Both contain circular DNA",
+    "analytics": {
+      "percent_correct": "83.8%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "Eukaryotic cells may have evolved when multiple cells joined together into one and began to live in symbiotic relationships. The theory that explains how this could have happened is called endosymbiotic theory. An endosymbiont is one organism that lives inside of another one. The mitochondrion and the chloroplast are both organelles that were once free-living prokaryotic cells that were endocytosed by other cells known as host cells. Rather than being digested by or killing the host cell, the inner cell survived, and they thrived together. The host cell provides a comfortable, safe place to live, and the organelle makes energy that the host cell can use. This happened a long time ago, and over time the organelle and host cell evolved together. Now one cannot exist without the other as they function as a single organism. The main evidence for this theory is the prokaryotic properties of mitochondria and chloroplasts. Mitochondria and chloroplasts are surrounded by double-membrane envelopes, the inner one (according to endosymbiotic theory) derived from the cell membrane of the small prokaryote that got endocytosed, just like a prokaryotic cell does. The endosymbiotic theory also explains why mitochondria and chloroplasts have a double membrane . As illustrated in the image below, during endocytosis, the endosymbiont retains its original cell membrane in addition to being engulfed by the cell membrane of the host cell, resulting in a double membrane. Mitochondria and chloroplasts also have their own circular DNA genome, just like a bacteria’s genome. This DNA is passed from a mitochondrion to its offspring and is separate from the host cell’s genome in the nucleus. Mitochondria resemble tiny bacteria. The endosymbiotic event that generated mitochondria happened early in the history of eukaryotes as all eukaryotes have them. Later on, a similar event brought chloroplasts into some eukaryotic cells, creating the lineage that led to plants. Therefore, the correct answer is Option A. Both contain circular DNA . CC BY 4.0",
+      "poe_text": "Option B. Both have a single membrane – This option is incorrect because both have a double membrane which means that they may have been engulfed by other cells through endocytosis. During endocytosis, their original cell membrane is retained and is engulfed by the new cell membrane of the host cell. As a result, mitochondria and chloroplast now have two membranes instead of one. Moreover, both mitochondria and chloroplasts will be unable to function without a double membrane since it plays a vital role in their function. Recall that the proton gradient and electron transport chain of mitochondria and chloroplasts cannot function without the presence of two membranes. Option C. Both contain single-stranded DNA – This option is incorrect because both have double-stranded DNA. Recall that single-stranded DNA is a lot less stable and thus more susceptible to damage over time. If mitochondria and chloroplasts had single-stranded DNA, they likely would not have survived the billions of years of evolution so far. Single-stranded DNA is mostly found in viruses such as retroviruses and bacteriophages (viruses that infect bacteria). Living organisms always have DNA in the double-stranded form. Option D. Both have histone proteins – The DNA of eukaryotic cells wraps around histone proteins to form chromatin, a condensed version of DNA. This option is incorrect because neither mitochondrial nor chloroplast DNA wraps around histone proteins. The absence of histone proteins in mitochondrial and chloroplast DNA further supports the endosymbiotic theory. This is because histone proteins are NOT found in prokaryotic DNA -- they are found only in eukaryotic DNA. Option E. Both have 80S ribosomes – This option is incorrect because both have 70S ribosomes, the same as prokaryotic cells. Recall that a larger S value (Svedberg value) indicates a heavier molecule. The ribosomal characteristics of mitochondria and chloroplasts are another indicator in favor of the endosymbiotic theory. Although eukaryotic ribosomes are 80S, their mitochondria and chloroplasts have 70S ribosomes, much like prokaryotes.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+4+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 5,
+    "question": {
+      "text": "Which of the following is the most superficial layer of the epidermis?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Stratum corneum",
+        "percentage_selected": "(88.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Stratum spinosum",
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Stratum granulosum",
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Stratum lucidum",
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Stratum germinativum",
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Stratum corneum",
+    "analytics": {
+      "percent_correct": "88.9%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The skin can be divided into three main layers. From most superficial to least, the order is epidermis , dermis , and hypodermis (subcutaneous tissue). Within the most superficial layer of the skin, the epidermis, there are 5 distinct layers . The most superficial layer of the epidermis is called the stratum corneum . It consists of 25-30 layers of dead cells. It consists of keratin, lipids, and lamellar granules which makes it water-repellant. A mnemonic to help you remember the layers of the skin from most superficial to deepest: C ome L et’s G et S un B urnt, corresponding to the stratum C orneum, L ucidum, G ranulosum, S pinosum, and B asale. Be careful and recall that the deepest layer of the epidermis, basale, is also commonly referred to as germinativum. Do not fall for the common mistake of confusing the two layers that start with the letter G (granulosum vs germinativum). In the mnemonic, the ‘G’ refers to the ‘stratum granulosum’ while the ‘B’ refers to the deepest layer, ‘stratum basale’ also known as the ‘stratum germinativum.’ Make sure you memorize both names of the deepest layer because they can be used interchangeably in the test. CC BY 4.0",
+      "poe_text": "Option B. Stratum spinosum – This option is incorrect because the stratum spinosum is deeper than the stratum corneum. The stratum spinosum contributes to the overall strength and flexibility of the epidermis. This is achieved through its high number of desmosome junctions holding together its keratinocytes. This high prevalence of desmosome junctions also gives this layer a “spiny” appearance, hence the name spinosum. The stratum spinosum is also critical in the skin's immune response because this layer holds the highest number of Langerhans cells. Option C. Stratum granulosum – This option is incorrect because it is the next layer deeper than the stratum lucidum layer. The stratum granulosum is composed of 3-5 layers of dying keratinocytes that have migrated from the stratum spinosum. The keratinocytes in this layer release hydrophobic lipids which contribute to the skin’s water barrier. These hydrophobic lipids are also known as lamellar granules, hence the name granulosum. Option D. Stratum lucidum – This option is incorrect because it is the next layer deeper than the stratum corneum layer. An important detail regarding the stratum lucidum is that this layer is present only in the palms of the hands and soles of the feet. As a result, these areas have an increased thickness of the skin and thus more protection against damage and water loss. A useful mnemonic is to remember that the letter L (for Lucidum) looks like the foot of a stick figure, thus Lucidum is the layer present in hands and feet! Option E. Stratum germinativum – This option is incorrect because this is the deepest layer of the epidermis. It is important to remember that the stratum germinativum is also known as the stratum basale and should not be confused with the stratum granulosum. Since this is the deepest layer of the epidermis, this is where keratinocyte stem cells divide to produce keratinocytes that are gradually pushed up to the most superficial layer of the epidermis. The stratum germinativum also houses melanocytes, responsible for skin pigmentation and protection from UV radiation, as well as Merkel cells, responsible for the sensation of light touch.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+5+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 6,
+    "question": {
+      "text": "Which of the following proteins are most likely to be found in the extracellular matrix?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Keratin",
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Collagen",
+        "percentage_selected": "(83.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Tubulin",
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Actin",
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Centrioles",
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Collagen",
+    "analytics": {
+      "percent_correct": "83.6%",
+      "time_spent": "0 min, 18 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The extracellular matrix (ECM) is a mesh of various proteins and carbohydrates that, as the name suggests, are located outside of cells (extra- meaning “outside”). More specifically the ECM occupies the space between adjacent animal cells. Its two main purposes are to provide mechanical support as cells hold onto and support each other as well as to aid in cell signaling between cells. The main component of the ECM is the protein collagen . Therefore, Option B , Collagen , is the correct answer. In fact, collagen is the most abundant protein not just in the ECM, but the entire body. It is produced by fibroblast cells and gives structural integrity to tissues in the body. The ECM can connect to the cell membrane thanks to the protein’s integrin, laminin, and fibronectin. Recall that integrins are considered transmembrane proteins because they span the entire double membrane of the cell, connecting the ECM to the inside of the cell. Integrins act as a communication channel for signals across the cell membrane while also providing structural integrity. Laminin and fibronectin, on the other hand, serve as adhesion points for the ECM to hold onto the integrin proteins. On the opposing end of integrin proteins (inside the cell) these transmembrane proteins attach to the cell's cytoskeleton. The image below demonstrates the structure of the extracellular matrix and how it interacts with cellular structures. CC BY 4.0",
+      "poe_text": "Option A. Keratin – This option is incorrect because keratin is a protein involved in maintaining cell shape as an intermediate filament inside of the cell. This option may be tempting, however, keratin is NOT part of the extracellular matrix. Instead, keratin is what attaches the extracellular matrix to the cell in hemidesmosome junctions. Option C. Tubulin – This option is incorrect because tubulin is a protein that is involved in the formation of the eukaryotic cytoskeleton inside the cell, not in the extracellular matrix. If enough tubulin molecules are assorted together, they make up a microtubule. Recall that microtubules are vital in the cell because of their role in cell structure, locomotion, and division—no cell would be able to divide without a microtubule organizing center (MTOCs) to form a spindle apparatus. Option D. Actin – This option is incorrect because this is a protein that has many functions inside cells such as motility and shape maintenance inside of the cell, not outside .  This option may have been tempting; however, actin is NOT located in the extracellular matrix. Instead, keratin is what attaches the extracellular matrix to the cell in focal adhesion junctions. Option E. Centrioles – This option is incorrect because these act inside cells to form spindle fibers during cell division. Also, though they are mainly made of proteins like tubulin, they are themselves an organelle and are not located in the extracellular matrix.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+6+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 7,
+    "question": {
+      "text": "A man with type A+ blood had children with a woman with type AB- blood. All of the following are possible blood types they could have EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "A -",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "B +",
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "AB -",
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "B -",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "O +",
+        "percentage_selected": "(86.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "O +",
+    "analytics": {
+      "percent_correct": "86.2%",
+      "time_spent": "3 min, 1 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Erythrocytes (red blood cells) are responsible for carrying oxygen to body tissues to be used for ATP production. Erythrocytes have a double concave shape which allows for an increased rate of gas exchange because of the increased surface area but also allows various antigens to attach to the surface. Individuals with type A blood have only antigen A on their erythrocytes, individuals with type B blood have only antigen B, individuals with type AB blood have both antigens, whereas type O blood has neither A nor B antigens. The Rhesus factor (Rh) is another important antigen that attaches to the red blood cells of some but not all individuals. A person whose red blood cells carry the Rh factor is said to be Rh positive (+), otherwise, a person who lacks the antigen is said to be Rh negative (-). As shown in the image below, every person’s immune system produces antibodies against non-self-antigens. Our immune system does NOT produce antibodies against its own type of antigen, otherwise our body would be constantly attacking its own red blood cells. CC BY 4.0 For questions regarding blood type, recall that the O allele is recessive , whereas A and B alleles are dominant . Therefore, it has become convention when discussing phenotypes to omit the O allele if it is being dominated by another allele. Moreover, if the genotype is composed of the same two alleles—for example, BB— the phenotype can be expressed as just “type B.” In this question, the man’s phenotype is A + , therefore, his genotype must be either AO + or AA + . The woman’s genotype is AB – . By creating a Punnet square, we can determine the possibilities of different offspring with type A, B, or AB blood. Since the allele O is recessive, the only way for an individual to have a phenotype O is to have the genotype OO. Using the Punnet square we can see that an offspring between these two individuals cannot have blood type O. Therefore, Option E. O + is correct .",
+      "poe_text": "Option A. A – – This option is incorrect because when an A + individual and an AB – individual have a child, there is a 50% chance of type A blood, 25% chance of type B blood, and a 25% chance of type AB blood. Also, both positive and negative blood types can be possible since the A + individual may be heterozygote (Rh + /Rh – ). Since we want to choose an option that is not a possibility for a child, this answer is incorrect. Option B. B + – This option is incorrect because when an A + individual and an AB – individual have a child, there is a 50% chance of type A blood, 25% chance of type B blood, and a 25% chance of type AB blood. Also, both positive and negative blood types can be possible since the A + individual may be heterozygote (Rh + /Rh – ). Since we want to choose an option that is not a possibility for a child, this answer is incorrect. Option C. AB – – This option is incorrect because when an A + individual and an AB – individual have a child, there is a 50% chance of type A blood, 25% chance of type B blood, and a 25% chance of type AB blood. Also, both positive and negative blood types can be possible since the A + individual may be heterozygote (Rh + /Rh – ). Since we want to choose an option that is not a possibility for a child, this answer is incorrect. Option D. B – – This option is incorrect because when an A + individual and an AB – individual have a child, there is a 50% chance of type A blood, 25% chance of type B blood, and a 25% chance of type AB blood. Also, both positive and negative blood types can be possible since the A + individual may be heterozygote (Rh + /Rh – ). Since we want to choose an option that is not a possibility for a child, this answer is incorrect.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+7+Solution+2.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 8,
+    "question": {
+      "text": "Secondary messengers are important in cell signaling pathways and can greatly amplify the strength of the signal. All of the following are secondary messengers EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "cAMP",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "IP3",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Calcium",
+        "percentage_selected": "(15.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "GTP",
+        "percentage_selected": "(75.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "DAG",
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "GTP",
+    "analytics": {
+      "percent_correct": "75.3%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Secondary messengers are molecules that relay signals received at receptors on the cell surface to target molecules in the cytosol and/or nucleus. In addition to their job as relay molecules, secondary messengers greatly amplify the signal's strength. The binding of a ligand to a single receptor at the cell surface may end up causing massive changes in the biochemical activities within the cell, such as gene expression, metabolism, and cell division. A malfunction of secondary messenger signaling in the body may lead to numerous diseases. Some examples include the loss of function of a particular cell or the gain of function, leading to uncontrolled cell growth. There are 3 major classes of secondary messengers to know for the test:",
+      "poe_text": "Option A. cAMP – This option is incorrect because cAMP (cyclic adenosine monophosphate) is a secondary messenger and can activate an enzyme called “Protein Kinase A” (PKA), enabling it to phosphorylate its targets and pass along the signal. Protein kinase A is found in a variety of types of cells, and it has different target proteins in each. This allows the same cAMP secondary messenger to produce different responses in different contexts. Option B. IP3 – This option is incorrect because IP3 (inositol triphosphate) is a secondary messenger. It diffuses into the cytoplasm and can bind to ligand-gated calcium channels in the endoplasmic reticulum, releasing Ca 2+ ions into the cytosol that continue the signal cascade. Option C. Calcium – This option is incorrect because Ca 2+ (calcium ions) are a widely used type of secondary messenger. In pathways that use calcium ions as a secondary messenger, upstream signaling events release a ligand that binds to and opens ligand-gated calcium ion channels. These channels open and allow the higher levels of Ca 2+ that are present outside the cell (or in intracellular storage compartments) to flow into the cytoplasm, raising the concentration of cytoplasmic Ca 2+ . Option E. DAG – This option is incorrect because DAG (diacylglycerol) is a secondary messenger. It stays in the plasma membrane and can activate a target called protein kinase C (PKC), allowing it to phosphorylate its own targets.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 9,
+    "question": {
+      "text": "The thoracic cavity contains all of the following EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Lungs",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Heart",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Esophagus",
+        "percentage_selected": "(9.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Thymus gland",
+        "percentage_selected": "(11.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Stomach",
+        "percentage_selected": "(76.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Stomach",
+    "analytics": {
+      "percent_correct": "76.9%",
+      "time_spent": "0 min, 37 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The thoracic cavity is the second largest hollow space of the body. It is also called the “chest cavity” and is enclosed by the ribs, the vertebral column, and the sternum (or breastbone). The cavity is lined by a two-layered membrane; the visceral pleura lines the surface of the lungs, and the parietal pleura lines the inside of the chest cavity, leaving the in-between space known as the intrapleural space . The thoracic cavity sits above the abdominal cavity (the body’s largest hollow space) and the two are separated by the diaphragm, a large, dome-shaped muscle as shown in the image below. The diaphragm is sometimes thought of as just the lower border of the chest cavity and its significance is overlooked. It is important to remember that it would be impossible for our lungs to inhale and exhale air without the proper function of the diaphragm. Due to the diaphragm’s shape, once it contracts, it flattens out and increases the volume of the chest cavity. As a result, negative pressure is created and air rushes in the lungs. The structures within the thoracic cavity include organs like the heart, lungs, trachea, esophagus, endocrine glands, and the thymus. Since the stomach is not part of the thoracic cavity, Option E , Stomach , is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Lungs – This option is incorrect because the lungs are located within the thoracic cavity as shown in the image above. One of the thoracic cavity's major functions is to safely hold major organs like the lungs. The lungs are a pair of organs whose primary function is to facilitate the disposal of carbon dioxide byproducts from cellular respiration as well as the oxygenation of blood before it is sent to tissues and organs all over the body. The site of gas exchange in the lungs is the alveoli – very small air sacs that are wrapped in capillaries (very thin blood vessels). Option B. Heart – This option is incorrect because the heart is located within the thoracic cavity, as shown in the image above. One of the thoracic cavity's major functions is to safely hold major organs like the heart. The heart is the main organ of the circulatory system and functions to deliver oxygen-rich blood to organs and tissues in need, while also removing excess waste and byproducts such as carbon dioxide. The heart is divided into four chambers: two upper chambers called the atria, and two lower chambers called the ventricles. Using the depolarization signals of the sinoatrial (SA) node as a pacemaker, the four chambers work together to pump deoxygenated blood to the lungs and oxygenated blood to the rest of the body. Option C. Esophagus – This option is incorrect because the esophagus is located within the thoracic cavity, as shown in the image above. The esophagus is a muscular tube connecting the throat to the stomach. Using the upper and lower esophageal sphincters and peristalsis motion, chewed food (bolus) is guided to the stomach while preventing the reflux of gastric contents. Option D. Thymus gland – This option is incorrect because the thymus gland is located within the thoracic cavity, as shown in the image above. Located in the upper chest, the thymus gland is a crucial organ of the immune system. Its primary function is the maturation of T cells, which play a vital role in the body's adaptive immune response. Remember that the thymus is not involved in T cell production , rather, just the T cell maturation.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+9+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 10,
+    "question": {
+      "text": "The improper use of antibiotics can result in __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Sunburn",
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Hair loss",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Vitamin deficiency",
+        "percentage_selected": "(91.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Blindness",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Muscle Hypertrophy",
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Vitamin deficiency",
+    "analytics": {
+      "percent_correct": "91.4%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Antibiotics are medicines designed to kill bacteria and/or stop their growth. They do this by interfering with vital cell structures (e.g. cell wall) or cell processes (e.g. DNA replication or protein synthesis). Despite their life-saving use in medicine, antibiotics come with certain risks. The misuse of antibiotics (primarily their overuse) may lead to serious complications. For example, certain antibiotics reduce Vitamin K absorption in the body by killing off the \"good\" bacteria in your digestive system responsible for facilitating vitamin synthesis or absorption. As such, improper use of antibiotics can lead to a vitamin deficiency in the body, which makes Option C the correct answer. Antibiotic resistance is another risk of antibiotic use that may appear on your test. Antibiotic resistance occurs when bacteria evolve and can survive exposure to antibiotics that were once effective in killing them. This process is accelerated by the overuse of antibiotics. When antibiotics are used unnecessarily, such as for viral infections (against which they are ineffective), or when courses of antibiotics are not completed, it creates additional selective pressure that favors the survival and spread of resistant bacteria. This can lead to persistent infections, posing a significant threat to public health. The image below shows how antibiotic resistance happens. CC BY 4.0",
+      "poe_text": "Option A. Sunburn – This option is incorrect because sunburn is not caused by the use of antibiotics. Instead, sunburn is caused when too much ultraviolet (UV) light from the sun hits the skin. Because of the UV radiation, DNA damage occurs in keratinocytes, which then illicit an immune response and result in the redness and swelling commonly associated with sunburns. Option B. Hair loss – This option is incorrect because the use of antibiotics does not impact hair loss since it is not a symptom of a lack of vitamin K. Some medications that can indeed cause hair loss are blood thinners, chemotherapy drugs, and certain antidepressants. Option D. Blindness – This option is incorrect because although antibiotics may cause visual disturbances, they will not cause complete blindness. Some factors that can indeed cause hair loss are untreated diabetes and smoking. Option E. Muscle Hypertrophy – This option is incorrect because antibiotics do not have any direct impact on muscle growth; their main purpose is to kill and/or stop the growth of bacteria. They achieve this by interfering with vital cell structures (e.g. cell wall) or cell processes (e.g. DNA replication or protein synthesis). On the other hand, muscle growth is primarily influenced by factors such as exercise, nutrition, and certain hormones such as testosterone. It's important to distinguish between antibiotics and anabolic steroids, which are synthetic hormones that can directly promote muscle growth.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+10+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 11,
+    "question": {
+      "text": "A skunk screeches to alert its fellow population of a predator nearby. What is the benefit of this behavior?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Decreases rate of mutations",
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Utilizes camouflage effectively",
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Scares the predator due to mimicry",
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Boosts immune system activity",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Increases inclusive fitness",
+        "percentage_selected": "(91.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Increases inclusive fitness",
+    "analytics": {
+      "percent_correct": "91.2%",
+      "time_spent": "0 min, 20 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Many of the behaviors observed in animals can be attributed to evolution and natural selection. Remember that these processes do not only select for the ability to survive but just as importantly, they select for the ability to pass down one’s genes. Interestingly, some animals have evolved behaviors that decrease the individual’s survival to increase their relatives’ survival. In this question, a skunk’s act of screeching to alert of a nearby predator is decreasing its own chances of survival by making itself more obvious to the predator. Why would evolution select for a behavior that decreases the individual’s fitness? Because the nearby skunks who benefit from this behavior (relatives) are highly likely to share identical genes and will therefore pass down many of the screeching skunk's genes. Remember that natural selection favors genetic success, not necessarily reproductive success. This unselfish behavior is a type of altruistic behavior, and it increases the inclusive fitness of the population. Inclusive fitness is the sum of an animal’s direct and indirect fitness. Direct fitness refers to the genes an individual can pass on to the next generation on its own, while indirect fitness refers to the genes that are passed on through the individual’s relatives. Therefore, Option E , Increases inclusive fitness , is the correct answer.",
+      "poe_text": "Option A. Decreases rate of mutations – This option is incorrect because the skunk’s screech would not affect the rate of mutations. Recall that mutations are permanent changes in an organism’s DNA sequence, and they occur either randomly or due to exposure to mutagens such as certain chemicals, infectious agents, or radiation. Option B. Utilizes camouflage effectively – This option is incorrect because camouflage is a defense mechanism meant to disguise the animal and decrease the chances of it being spotted by a predator. In this example, the skunk’s screech has the opposite effect. By screeching, the skunk brings the predator’s attention to itself. Moreover, not only do skunks NOT use camouflage, but they also exhibit aposematic coloration, which is a bold and distinctive coloration on their fur to visually stand out and warn predators to stay away. Option C. Scares the predator due to mimicry – This option is incorrect because mimicry occurs when two or more distinct species evolve to resemble each other in physical appearance, and this is not the case in this example. When a skunk screeches, it is not mimicking another species. Rather, it is communicating to its relatives that there is a potentially dangerous predator nearby. Option D. Boosts immune system activity – This option is incorrect because there is no direct causal link between a skunk screeching and a boost in its immune system. It should be noted that there is a link between acute stress (such as fight or flight response) affecting the activity of certain immune cells, however, this change in immune activity is caused by stress hormones (e.g., cortisol and epinephrine), NOT the screeching, as the answer choice suggests.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 12,
+    "question": {
+      "text": "During embryologic development, the stage that is best described as a hollow sphere of cells is called a __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Gastrula",
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Blastula",
+        "percentage_selected": "(64.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Morula",
+        "percentage_selected": "(11.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Blastomere",
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Blastopore",
+        "percentage_selected": "(10.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Blastula",
+    "analytics": {
+      "percent_correct": "64.1%",
+      "time_spent": "0 min, 22 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "The blastula is a key stage during embryological development where a hollow sphere of cells is formed. First, fertilization of the egg by the sperm usually takes place in the oviduct (aka fallopian tube). As the zygote travels through the oviduct toward the uterus, the cleavage process takes place. During this process, the zygote undergoes cell division without increasing in overall size. In other words, the total mass and total volume occupied by the sum of cells remain constant as the cells within the zona pellucida are further subdividing. Each new cell formed is termed a blastomere and each daughter cell is smaller (less cytoplasm) than its mother cell. Once the solid ball of cells reaches a quantity of 16-32, it is termed a morula. After that, the liquid starts to fill within the morula, pushing the middle cells outward as they continuously divide, creating a blastocoel (empty cavity) within the middle. The blastocoel cavity continues to grow outward and once complete, it forms a blastula , a hollow sphere of cells. Therefore, Option B , Blastula , is the correct answer. Blastula cells are pluripotent, meaning they can develop into any type of cell EXCEPT an entire organism. On the other hand, morula cells are totipotent because they CAN develop into an entire organism in addition to any cell type. The cleavage process ends once the blastula is formed. The image below provides a visualization of the process of cleavage. Note that in mammals, the blastula is called the blastocyst. The distinguishing feature of blastocysts is that they contain the inner cell mass (ICM), whereas blastula does not. The ICM is a mass of pluripotent cells located inside the blastocyst and eventually gives rise to the epiblast and hypoblast. CC BY 4.0",
+      "poe_text": "Option A. Gastrula – This option is incorrect because the gastrula is formed after the hollow sphere of cells (blastula). Gastrulation is the formation of a trilaminar (three-layered) embryo. By late gastrulation, the trilaminar disc is composed of the ectoderm, mesoderm, and endoderm layers. Each of these layers will go on to form distinct organs in the embryo. Option C. Morula – This option is incorrect because the morula precedes the blastula in the cleavage process, and it is simply a solid ball of cells lacking the hollow cavity known as the blastocoel. The blastocoel begins forming when the morula is made up of approximately 128 cells. Option D. Blastomere – This option is incorrect because blastomeres are the newly formed cells of the cleavage process. That is, each new cell being produced is called a blastomere. Until the morula is formed, all blastomeres being produced are identical totipotent stem cells. Totipotent cells can give rise to any and all types of human cells, and even an entire functional organism. In contrast, the blastomeres being produced after the morula stage (during the blastula stage) are pluripotent cells, which can give rise to any tissue type, but not an entire functional organism. Option E. Blastopore – This option is incorrect because the blastopore is an invagination within the gastrula that can later in development become either the mouth or the anus, depending on the type of organism. In protostomes, the blastopore becomes the mouth, and in deuterostomes, it becomes the anus. The blastopore is a crucial structure in the development of the three germ layers – ectoderm, mesoderm, and endoderm. The outermost layer, ectoderm, gives rise to skin, hair, enamel of teeth, nails, and the nervous system. The middle layer, mesoderm, gives rise to muscles, bones, heart, blood, kidneys, and reproductive organs. Lastly, the innermost layer, the endoderm, gives rise to the lining of the digestive tract, the lymphatic system, the pancreas, the liver, the thymus, the thyroid, and the parathyroid.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+12+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 13,
+    "question": {
+      "text": "Which of the following smells like rotten eggs and is produced under anaerobic conditions in swamps and sewers?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CO 2",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CH 4",
+        "percentage_selected": "(11.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "NH 3",
+        "percentage_selected": "(13.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H 2 S",
+        "percentage_selected": "(71.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "HCN",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H 2 S",
+    "analytics": {
+      "percent_correct": "71.8%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The key to answering this question is to look for the answer choice that contains sulfur because it is known to smell like rotten eggs . Therefore, Option D , H 2 S , which contains the only compound with sulfur, is the correct answer. If you’ve ever gotten a hair perm, you must have noticed the distinctive rotten egg odor it leaves. This is caused by the denaturation of the sulfur-containing disulfide bonds found in hair. Even some car owners report their exhaust smelling like rotten eggs, which is caused by a faulty exhaust system that does not process fuel correctly and leaves higher concentrations of sulfur as a byproduct. Hydrogen sulfide (H 2 S) is produced by the metabolism of organic material in anaerobic conditions (absence of oxygen). In anaerobic conditions, sulfur rather than oxygen can be reduced to H 2 S. Such microbes reside in swamps, marshes, bogs, and sewers. Another byproduct of metabolism in these microbes is methane (CH 4 ), and carbon dioxide (CO 2 ), which together constitute “swamp gas”.",
+      "poe_text": "Option A. CO 2 – This option is incorrect because carbon dioxide gas is odorless. Moreover, it does not contain any sulfur, which is known to have a smell similar to rotten eggs. Our most common exposure to CO 2 is as a byproduct of respiration and combustion. Option B. CH 4 – This option is incorrect because methane gas does not contain any sulfur, (which causes a smell like rotten eggs). Instead, methane’s odor is commonly associated with swamps and landfills because it is produced by decomposing organic matter. The human digestive system also produces methane as a byproduct of digestion; however, it does not give off an odor similar to rotten eggs. Option C. NH 3 – This option is incorrect because ammonia gas does not contain any sulfur (which causes a smell like rotten eggs). Instead, the odor of ammonia gas is often compared to that of urine. This is because urea, one of the main waste products found in urine, can further break down into ammonia. Option E. HCN – This option is incorrect because hydrogen cyanide gas does not contain any sulfur (which causes a smell like rotten eggs). Hydrogen cyanide gas is flammable and extremely poisonous. It has an odor similar to almonds.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 14,
+    "question": {
+      "text": "Which of the following organs is correctly matched with its embryonic germ layer of origin?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Lungs and cilia – Ectoderm",
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Eyes and epidermis – Ectoderm",
+        "percentage_selected": "(77.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Neurons and Muscle – Mesoderm",
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Liver and Spleen – Ectoderm",
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cardiac Muscle and reproductive tract – Endoderm",
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Eyes and epidermis – Ectoderm",
+    "analytics": {
+      "percent_correct": "77.9%",
+      "time_spent": "0 min, 40 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "Triploblastic organisms have three germ layers: the ectoderm, mesoderm, and endoderm. The three germ layers are formed during early embryonic development and give rise to all the organs and tissue of the eventual organism. When trying to match a tissue or organ to its germ layer, it might be helpful to simplify the concept and memorize the exceptions. For example, a simplified way of tackling this question would be to recognize that the innermost layer ( endoderm) gives rise to the inner lining of the gastrointestinal and respiratory cavities, plus some exceptions included such as the liver, pancreas, thyroid, and parathyroid gland. On the other end of the spectrum, the outermost layer ( ectoderm ) gives rise to anything visible from the outside like the epidermis – or anything that has direct interaction with the outside like the nervous system. Lastly, everything else can be considered part of the middle layer ( mesoderm) . Remember that this should only be used as a general guide and should not substitute memorizing the germ layer derivatives. Now, to go into more specific detail, the ectoderm is the outermost germ layer in the developing embryo and develops into the nervous system (spine, peripheral nerves, and brain), tooth enamel, epidermis, hair, and nails. Regarding the eye, the ectoderm contributes to the formation of the lens, eyelid, and corneal epithelium. Therefore, Option B , Eyes, and epidermis – Ectoderm , is the correct answer. The mesoderm is the middle of three germ layers, and it gives rise to muscles, bones, the heart, blood, kidneys, the lymphatic system, and the reproductive organs. The endoderm is the innermost layer and gives rise to the epithelial lining of the digestive and respiratory tract, parts of the liver, pancreas, gall bladder, thyroid & parathyroid, thymus, and urinary bladder lining. CC BY 4.0",
+      "poe_text": "Option A. Lungs and cilia – Ectoderm – This option is incorrect because the lungs arise from the endoderm. Also, the cilia do not arise from any germ layer and are considered a cellular structure, not an organ. Cilia are used by cells for locomotion through space or to move waste and debris past a cell (e.g., cilia located along the airway tract move debris out of the airway). The lungs are the main organ of the respiratory system, and they facilitate the exchange of carbon dioxide from the blood with oxygen from the atmosphere through breathing. Option C. Neurons and Muscle – Mesoderm – This option is incorrect because neurons are derived from the ectoderm layer. Even though muscles arise from the mesoderm and are therefore matched correctly, the neurons part of this answer choice does not match correctly, which makes option C incorrect. Neurons are the basic functional unit of the nervous system, and they transmit electrical signals known as action potentials to facilitate functions as basic as breathing and moving to as complex as thinking and playing a musical instrument. Option D. Liver and Spleen – Ectoderm – This option is incorrect because the liver is derived from the endoderm layer and the spleen is derived from the mesoderm layer. The liver is located between the diaphragm and the stomach. The liver's main functions are the production of bile and the filtration and detoxification of blood. The spleen is part of the lymphatic system and functions to control the level of leukocytes (white blood cells) in the blood while also removing old or damaged red blood cells. Option E. Cardiac Muscle and reproductive tract – Endoderm – This option is incorrect because cardiac muscle is derived from the mesoderm layer. In fact, all three types of muscle in the body – skeletal, smooth, and cardiac muscle – are derived from the mesoderm. Unlike skeletal and smooth muscle, the contraction of cardiac muscle does not need stimulation from external nerves, instead, it is controlled by the depolarization signals coming from the SA (sinoatrial) node.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+14+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 15,
+    "question": {
+      "text": "Which of the following types of cells resorb bone matrix?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Osteoblasts",
+        "percentage_selected": "(14.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Osteoclasts",
+        "percentage_selected": "(76.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Osteocytes",
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Osteons",
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Chondroblasts",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Osteoclasts",
+    "analytics": {
+      "percent_correct": "76.1%",
+      "time_spent": "0 min, 17 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Bone matrix is made up of various substances, including calcium, collagen, and water. Bone is continually created, broken down, and remodeled. Components of the matrix are produced by cells known as osteoblasts. In other words, osteoblasts are responsible for the process of laying down new bone material in a process known as ossification. Osteocyte cells play a maintenance role and can also build bone. Osteoclast cells are involved in the resorption of bone by releasing acid and enzymes to break down components of the matrix, then engulfing and digesting fragments. Therefore, Option B , Osteoclasts , is the correct answer. The process of bone remodeling constantly switches between ossification and resorption based on the needs of the body such as bone growth, bone repair, and regulating blood calcium levels. Bone remodeling is mainly regulated by vitamin D, calcitonin, and parathyroid hormone (PTH). Vitamin D achieves this by stimulating osteoblast activity while also helping the body absorb calcium from the intestines. Calcitonin is produced by the thyroid gland and functions to inhibit osteoclast activity. In other words, calcitonin slows down bone resorption and indirectly promotes bone formation. On the other hand, parathyroid hormone (PTH) stimulates osteoclast activity which induces bone resorption. One can see the importance of healthy hormone levels in the body, in addition to the healthy function of the glands secreting said hormones. Individuals with abnormal thyroid or parathyroid glands experience problematic bone remodeling as one of their symptoms. Matrix cells have a common naming convention. Cells ending in “-blast” build matrix (blast = build), cells ending in “-cyte” are involved in maintenance, and cells ending in “-clast” are involved in the breakdown. For example, chondroblasts produce the matrix of cartilage. The image below illustrates the roles of these cells in the bone remodeling process. CC BY 4.0",
+      "poe_text": "Option A. Osteoblasts – This option is incorrect because osteoblasts are not responsible for resorbing bone matrix. In fact, osteoblasts accomplish the opposite of bone resorption; osteoblasts build bone. They accomplish this by secreting bone matrix containing the collagen, proteins, and minerals used to make bone. One helpful mnemonic is the osteo B lasts B uild bone. At a certain point, osteoblasts get enveloped by the surrounding bone matrix they have secreted, and they differentiate to become osteocytes. Option C. Osteocytes – This option is incorrect because these are cells that maintain the bone matrix and therefore are not responsible for resorbing bone matrix. Moreover, osteocytes are the matured version of osteoblasts. They are incapable of mitosis and use blood for the exchange of nutrients and waste products, helping to maintain the bone. Osteocytes have good access to blood vessels because they are in the osteon's lacunae (functional unit of compact bone). There, osteocytes surround the Haversian canals of bone, which contain blood vessels, nerves, and lymphatic vessels. Option D. Osteons – This option is incorrect because this is the functional unit of compact bone. These are roughly cylindrical structures consisting of a central Haversian canal containing a blood supply and concentric layers called lamellae. The lamellae are made of collagen fibers and mineralized bone matrix. Because of this, osteons provide strength and resistance to forces such as compression, bending, and twisting. Moreover, the osteon is crucial in the exchange of blood and nutrients to the bone because it shapes the Haversian canal, which houses blood vessels, lymphatic vessels, and nerves. Option E. Chondroblasts – This option is incorrect because these are cells that produce the matrix of cartilage and therefore are not responsible for resorbing bone matrix. Chondroblasts are part of connective tissue, not bone. However, chondroblasts are crucial in the smooth and healthy connection and function of different bones with each other. Chondroblasts secrete cartilaginous matrix which gives cartilage its strength and elasticity because of the collagen and elastin it is made from. Like osteoblasts, chondroblasts eventually get enveloped by the surrounding matrix they’ve secreted, and they differentiate to become chondrocytes. Unlike osteoblasts, however, chondroblasts do not have a good blood supply and, as a result, cannot repair cartilage as quickly as bone.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+15+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 16,
+    "question": {
+      "text": "An experiment on a nerve cell comes to an abrupt end due to an accidental mutation that disables the cell’s Na + /K + pump. Which of the following would result from the lack of Na + /K + pump function?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Less sodium outside the cell",
+        "percentage_selected": "(58.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Sodium will continue to diffuse out of the cell",
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Potassium levels will fall extracellularly",
+        "percentage_selected": "(11.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Sodium levels increase extracellularly",
+        "percentage_selected": "(19.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Potassium will continue to diffuse into the cell",
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Less sodium outside the cell",
+    "analytics": {
+      "percent_correct": "58.2%",
+      "time_spent": "1 min, 13 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The Na⁺/K⁺ pump plays a crucial role in maintaining the correct ion balance at the resting membrane potential of a cell. At rest, sodium ions exist in high concentration outside the cell, while potassium levels are high inside of the cell. During a normal action potential, voltage-gated sodium channels open, allowing Na⁺ ions to flow into the cell. This causes the membrane potential to become more positive and results in a high sodium concentration inside the cell. During the repolarization that follows to return the membrane potential to a resting state, voltage-gated potassium channels open, causing potassium ions to rush out of the cell. At this point, the cell has restored its membrane potential but has an ion imbalance: sodium needs to be brought back outside the cell, and potassium needs to be brought back inside. This requires the use of the Na⁺/K⁺ pump. The pump uses ATP to actively transport 3 Na⁺ ions out of the cell and bring 2 K⁺ ions into the cell, which restores the normal ion balance. The pump requires ATP for energy to drive the exchange of ions, so if it cannot respond to ATP, it cannot function and will no longer transport Na⁺ out of the cell, leading to less sodium in the extracellular space (as sodium would instead be trapped inside the cell after a depolarization). Therefore, Option A. Less sodium outside the cell is the correct answer. One fun mnemonic for the ratio of ions being exchanged is “321 NOKIA”: 3 N a + O utside 2 K + I nside 1 A tp used CC BY 3.0",
+      "poe_text": "Option B. Sodium will continue to diffuse out of the cell – This option is incorrect because the role of the sodium-potassium pump is to pump 3 sodium ions outside of the cell while also pumping 2 potassium ions inside the cell. Without a properly functioning sodium potassium pump, sodium cannot diffuse out of the cell. Option C. Potassium levels will fall extracellularly – This option is incorrect because the role of the sodium-potassium pump is to pump 3 sodium ions outside of the cell while also pumping 2 potassium ions inside the cell. Without a properly functioning sodium potassium pump, potassium ions cannot move from the outside of the cell to the inside. Therefore, potassium ions will be stuck outside of the cell, and this will cause an increase in extracellular potassium levels. Option D. Sodium levels increase extracellularly – This option is incorrect because the role of the sodium-potassium pump is to pump 3 sodium ions outside of the cell while also pumping 2 potassium ions inside the cell. Without a properly functioning sodium potassium pump, sodium ions will not be able to move from the inside of the cell to the outside. Therefore, sodium ions will be stuck inside the cell, and this will cause a fall in the extracellular sodium levels. Option E. Potassium will continue to diffuse into the cell – This option is incorrect because the role of the sodium-potassium pump is to pump 3 sodium ions outside of the cell while also pumping 2 potassium ions inside the cell. Without a properly functioning sodium potassium pump, potassium cannot diffuse into the cell.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+16+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 17,
+    "question": {
+      "text": "Which of the following is most analogous to chlorophyll in chloroplasts?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Albumin in serum",
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Interleukin in leukocytes",
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Bilirubin in hepatocytes",
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Heme in hemoglobin",
+        "percentage_selected": "(82%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Heme in hemoglobin",
+    "analytics": {
+      "percent_correct": "82%",
+      "time_spent": "0 min, 37 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Solving this problem requires recognizing that both heme and chlorophyll are pigments with a metal atom coordinated in their center, as shown in the image below. They both have color because of an extended conjugated system. This conjugated system refers to the alternating single and double bonds in both molecules. In fact, both heme and chlorophyll are porphyrins , a class of conjugated systems with a large cyclic structure. Therefore, Option D . Heme in hemoglobin is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Albumin in serum – This option is incorrect because albumin is a water-soluble protein that transports water-insoluble fatty acids. It is not a pigment like chlorophyll, nor does it have a coordinated metal atom in its center. Albumin is produced by the liver, and it is the most abundant protein found in the blood. It can function as a protein carrier while also regulating many aspects of the body such as blood pressure, blood pH levels, and inflammation. Option B. Interleukin in leukocytes – This option is incorrect because interleukins are cytokines produced by activated helper T cells to stimulate other lymphocytes in response to detected pathogens. Interleukins are not pigments and do not share any structural similarities with heme and chlorophyll. While leukocytes are called white blood cells, they are, in fact, colorless (appear white under light microscopy). Option C. Bilirubin in hepatocytes – This option is incorrect because bilirubin is a yellow compound resulting from the breakdown of heme. Its structure resembles a cyclic heme molecule that was cut on one part of the loop and has lost the coordinate metal atom. As a result, bilirubin cannot be considered analogous to the structure of chlorophyll in chloroplasts as it lacks the central metal atom.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+17+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 18,
+    "question": {
+      "text": "The following statements are true regarding the left ventricle EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The wall of the left ventricle is the thickest of the heart",
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The left ventricle receives blood through the tricuspid valve",
+        "percentage_selected": "(80.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "The left ventricle pumps blood to systemic circulation",
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The left ventricle pushes blood out through the aortic valve",
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The left ventricle receives blood from the left atrium",
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The left ventricle receives blood through the tricuspid valve",
+    "analytics": {
+      "percent_correct": "80.6%",
+      "time_spent": "1 min, 1 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Blood returning from the body enters the heart into the right atrium via the superior and inferior vena cava. It then flows into the right ventricle through the tricuspid valve, and then through the pulmonary valve and pulmonary arteries to receive oxygen from the pulmonary circulation. This blood returns to the heart through the pulmonary veins, into the left atrium , and then through the mitral (aka bicuspid) valve into the left ventricle . Blood from here is pumped to the systemic circulation – and by extension, the tissues of the body – through the aortic valve and out the aorta. Since the left ventricle must create enough force for blood to be pushed out to the entire body, it has a thick muscular wall. Remember that the heart is a muscle and has many things in common with all the other muscles of the body. For example, every time the heart beats, it does so because of an action potential. However, the action potentials that contract the heart do not originate from an external nerve, instead, they are generated by the sinoatrial (SA) node, sometimes referred to as the pacemaker of the heart. Remember that the left ventricle receives blood from the pulmonary vein , which carries the highest concentration of oxygenated blood in circulation. In contrast, the pulmonary artery carries the lowest concentration of oxygenated blood. The image below details the structure of the heart and the path taken by the blood. CC BY 4.0",
+      "poe_text": "Option A. The wall of the left ventricle is the thickest of the heart – This option is incorrect because this is a true statement. As oxygenated blood arrives at the left atrium via the pulmonary vein, it is pumped to the left ventricle through the mitral valve. The left ventricle must then create enough force for this blood to be pumped through the body’s largest blood vessel (aorta) and to be carried out to oxygenate the entire body. To generate this much force, the left ventricle has a thick muscular wall. Option C. The left ventricle pumps blood to systemic circulation – This option is incorrect because this is a true statement. The left ventricle pumps oxygenated blood to the systemic circulation for the entire body to use. In the capillaries (very thin blood vessels) of the tissues, oxygen and nutrients are released from the blood, and carbon dioxide is absorbed. From there, carbon dioxide and other waste products are carried to the heart via the superior and inferior vena cava. Option D. The left ventricle pushes blood out through the aortic valve – This option is incorrect because this is a true statement. For oxygenated blood to reach the aorta to be distributed throughout the body, it passes through the aortic valve. Immediately after, the aortic valve closes to prevent the backflow of blood into the left ventricle. The aorta is an artery, and it has the highest blood pressure of any blood vessel because it carries the entire blood volume of each ventricular contraction. The aorta travels upward the throat and curves down toward the pelvis – all while branching off to smaller arteries for delivery of oxygenated blood to the entire body. Option E. The left ventricle receives blood from the left atrium – This option is incorrect because this is a true statement. This is a crucial step in the cardiac cycle as it bridges the pulmonary circulation with the systemic circulation. That is, the left atrium receives oxygenated blood from the pulmonary circulation and the left ventricle pumps it out to the body’s systemic circulation.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+18+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 19,
+    "question": {
+      "text": "Which of the following biomes are characterized by the highest amount of biodiversity and heavy rainfall?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Tropical rainforest",
+        "percentage_selected": "(98.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Taiga",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Tundra",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Savannas",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Temperate grasslands",
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Tropical rainforest",
+    "analytics": {
+      "percent_correct": "98.2%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "The tropical rainforest biome , as implied by the name, is characterized by significant rainfall, many tall trees, and temperatures that remain high. Tropical rainforests are located near the equator, which is the region of the earth receiving the most sunlight throughout the year. As such, photosynthesis is occurring at a much higher rate and there is an abundance of energy stored in plant vegetation. This abundance of nutrients combined with heavy rainfall has allowed rainforests to develop the highest amount of biodiversity than any other biome. That is, tropical rainforests have the greatest number of plant, animal, and microorganism species than any other biome. Therefore, Option A, Tropical rainforest , is the correct answer. Recall that primary producers such as plants and trees are at the lowest trophic level and provide the basis for biodiversity. Most animals live in trees because of the abundance of food, while also making it easier to avoid large terrestrial predators. The graph below illustrates the characteristic precipitation and temperatures of the various biomes. CC BY 4.0",
+      "poe_text": "Option B. Taiga – This option is incorrect because the taiga biome (aka boreal forest) has cold winters and little precipitation, which falls in the form of snow. This biome consists of coniferous forests (trees with needles, as opposed to leaves). This is the largest terrestrial biome and hosts animals such as bears, beavers, rabbits, and owls. Option C. Tundra – This option is incorrect because this biome has very low temperatures with little precipitation. There is very little vegetation as deeper soil is permafrost. Consequently, trees are not common in the tundra – the vegetation mostly consists of grasses, mosses, lichens, and shrubs. A few of the animals that live in the tundra are polar bears, wolves, rodents, and caribou. Option D. Savannas – This option is incorrect . Savannas (aka tropical grasslands) are characterized by high temperatures and less precipitation compared to tropical rainforests (but more than deserts). This biome consists of grasslands with scattered trees that serve as a vital food source for ungulate animals such as elephants, giraffes, and hippos. Option E. Temperate grasslands – This option is incorrect because this biome (also commonly known as prairies) receives little precipitation. As the name suggests, this biome is temperate in climate and does not see drastic fluctuations in temperature or precipitation. The North American prairie is a great example of a temperate grassland. Some of the animals found in this biome are prairie dogs, birds, reptiles, and large grazing mammals such as bison. As the name of this biome implies, grass is by far the most common organism in the prairie biome.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+19+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 20,
+    "question": {
+      "text": "A cancer researcher wants to track a p53 protein related to tumor suppressor functions. Which technique could be used to locate this p53 protein within a cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "ELISA",
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Polymerase Chain Reaction",
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Immunofluorescence staining",
+        "percentage_selected": "(55.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Microarrays",
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Western blotting",
+        "percentage_selected": "(31.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Immunofluorescence staining",
+    "analytics": {
+      "percent_correct": "55.1%",
+      "time_spent": "0 min, 51 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Immunofluorescence staining is a genetic technology where a protein is tagged with a fluorescent molecule to visualize target proteins. Different techniques and tags can allow researchers to selectively locate and visualize specific proteins using a fluorescence microscope, as shown in the image below. Note that immunofluorescence staining is especially useful when locating proteins inside a cell, without destroying the cell itself. A common mistake for this question is to pick Western Blotting. Indeed, Western Blotting is a technique used to measure protein quantities in a sample, however, it is important to remember that this technique requires the cell to be lysed and the contents run through gel electrophoresis before protein quantities can be measured. Therefore, Option C , Immunofluorescence staining , is the correct answer as it can be used to locate the p53 protein within a cell . CC By 4.0",
+      "poe_text": "Option A. ELISA – This option is incorrect because ELISA cannot help researchers visually locate a protein. ELISA stands for Enzyme-Linked ImmunoSorbent Assay, and it is a technique used to determine if a specific antigen is present in a sample. This makes it useful as a diagnostic tool when diagnosing certain diseases like HIV and Lyme disease. ELISA works by separating the antibodies from the blood of a person and placing them in a microtiter plate containing antigens for a disease of interest. If the antibodies bind to the antigen, the sample will change color, indicating a positive result and the person is a carrier of the disease. If the person were not a carrier, their blood would not contain antibodies matching the antigen of interest. Option B. Polymerase Chain Reaction – This option is incorrect because PCR cannot be used in the detection of proteins. PCR stands for Polymerase Chain Reaction and is used to create millions of copies of DNA for analysis. PCR heavily relies on the Taq polymerase protein to function, however, PCR itself is not used for the detection of proteins within a cell. The three steps of DNA replication using PCR are denaturation, primer annealing, and elongation. Denaturation uses heat to separate the DNA into single-stranded DNA (ssDNA). Annealing uses short DNA molecules known as primers to stick to the area of interest on the ssDNA. Finally, during elongation, the enzyme Taq polymerase uses the ssDNA as a template and adds the complementary nucleotides in the 5’ to 3’ direction. Option D. Microarrays – This option is incorrect because DNA microarrays are not used to locate proteins. Instead, DNA microarrays are a powerful tool to study gene expression. While it gives cues on gene expression and therefore proteins that are present in a cell, they do not help locate a specific protein inside of a cell. Microarrays are used to convert mRNA to complementary DNA or cDNA. The collection of cDNA is washed over the array with many wells containing DNA probes of interest in known positions. When the cDNA hybridizes with these probes, the array can then be examined with fluorescence to identify which cDNA sequences were present and thus which genes were being expressed by that cell. Option E. Western blotting – This option is incorrect because western blotting is done in vitro (i.e., takes place outside of a cell). Western blotting is indeed used to quantify proteins in a sample, however, remember that the question is asking for a technique to locate proteins within a cell – not measure how much of it is present. Western blotting aims to detect specific proteins by denaturing them, attaching a negative charge, and then performing a specific kind of electrophoresis known as SDS PAGE. The desired protein, if present in the sample, will move a known distance due to having a known length. Antibody tags are then used to visualize exactly where the protein has moved to in the gel to determine if it is present.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+20+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 21,
+    "question": {
+      "text": "An E. Coli cell culture is radioactively labeled with sulfur and the cells are then lysed. Where would the radioactive label most likely be found?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Fats",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Proteins",
+        "percentage_selected": "(63.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Carbohydrates",
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Nucleic acids",
+        "percentage_selected": "(27.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Phospholipids",
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Proteins",
+    "analytics": {
+      "percent_correct": "63.6%",
+      "time_spent": "1 min, 24 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Sulfur is most likely to be found in proteins, as shown in the image below. To be exact, the amino acids cysteine and methionine contain sulfur. The disulfide bridges formed between sulfurs on two cysteines on a polypeptide contribute to a protein’s tertiary structure. By cross-linking distant parts of the polypeptide, disulfide bonds contribute to the overall stability and help maintain the three-dimensional shape of the protein. Sulfur is distinctly not found in other biological macromolecules such as nucleotides, lipids, or carbohydrates. Therefore, Option B , Proteins , is the correct answer. This is also a good opportunity to recall that methionine is the amino acid associated with the AUG start codon. CC BY 4.0",
+      "poe_text": "Option A. Fats – This option is incorrect because common fat molecules such as triglycerides and phospholipids do not contain any sulfur atoms. Fats fall under the larger category of lipids, primarily composed of hydrocarbons. One common example of lipids is triglycerides, which consist of glycerol and three fatty acid chains. Glycerol is an organic molecule made up of three carbons and three hydroxyl groups. Fatty acids are made up of long hydrocarbon chains attached to a carboxylic acid. None of the structures in fats contain sulfur atoms, thus this option is incorrect. Option C. Carbohydrates – This option is incorrect because common carbohydrate molecules such as glucose, glycogen, lactose, etc. do not contain any sulfur atoms. Carbohydrates are made up of carbon, hydrogen, and oxygen. As a result, within carbohydrate molecules, there is roughly one water molecule for every carbon molecule. Hence the name carbo - hydrate, meaning carbon water. The monomer of carbohydrates is a monosaccharide, and the polymer is a polysaccharide. Option D. Nucleic acids – This option is incorrect because nucleic acids such as DNA and RNA do not contain any sulfur atoms. Nucleic acids are responsible for the storage of genetic information and protein synthesis. The monomer of nucleic acids (the nucleotide) is composed of a phosphate group, a five-carbon sugar, and a nitrogenous base. Nucleotides on the same strand hold onto each other via phosphodiester bonds to form the sugar-phosphate backbone of the nucleic acid strand. DNA is double-stranded with the strands running anti-parallel, whereas RNA is usually single-stranded. DNA and RNA further differ in their five-carbon sugar (deoxyribose vs ribose, respectively) in addition to some of their nitrogenous bases. None of the structures in nucleic acids contain sulfur atoms, thus this option is incorrect. Option E. Phospholipids – This option is incorrect because phospholipids do not contain sulfur. Phospholipids are comprised of one phosphate group and two fatty acids (hence the suffix lipids) attached to a glycerol backbone, none of which contain sulfur in their structure. Phospholipids are a classic example of an amphipathic molecule, meaning that the molecule has both hydrophilic and hydrophobic parts (phosphate head and fatty acid chains, respectively). Phospholipids spontaneously form a phospholipid bilayer when suspended in liquid. The hydrophilic phosphate heads on the outer layer face the fluid of the aqueous environment outside the cell, and the inner layer phospholipids face the intracellular fluid. This allows the hydrophobic fatty acid chains of both layers to face each other internally, minimizing their exposure to water.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+21+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 22,
+    "question": {
+      "text": "Which of the following is TRUE regarding the ovarian cycle?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "There is a surge of progesterone in the follicular phase, causing menstruation to cease",
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The thickness of the uterine wall is at its peak during ovulation",
+        "percentage_selected": "(12%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "If fertilization does not occur, the corpus luteum disintegrates into a polar body",
+        "percentage_selected": "(12.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Follicular development is hormone-independent",
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Ovulation occurs due to a peak in LH levels",
+        "percentage_selected": "(69.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Ovulation occurs due to a peak in LH levels",
+    "analytics": {
+      "percent_correct": "69.6%",
+      "time_spent": "1 min, 8 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "It is important to have a good grasp of the diagram below for the test. The ovarian cycle lasts 28 days and can be divided into three general stages: the follicular stage, ovulation, and the luteal stage. The follicular stage lasts approximately 14 days and begins on the first day of menstruation (day 1 of the cycle). During the follicular stage, luteinizing hormone (LH) and follicle-stimulating hormone (FSH) are released by the anterior pituitary gland, which leads to follicle development in the ovaries and stimulates the ovaries to release estrogen. A surge of estrogen near day 12-13 causes a surge of LH, which then triggers ovulation. Ovulation occurs on day 14 of the cycle and involves the rupture of the maturing follicle and the release of a secondary oocyte. Ovulation is caused by a sudden surge of LH . The released oocyte now travels down the fallopian tube (aka oviduct) toward the uterus to be implanted if fertilized by a sperm cell. Fertilization typically takes place in the fallopian tube. The luteal phase begins immediately after ovulation and lasts approximately 14 days. The erupted follicle carrying the immature oocyte is now empty and called the corpus luteum (meaning yellow body). During the luteal phase, estrogen and progesterone are secreted by the corpus luteum, which causes the thickening of the uterine wall. This occurs as the body prepares for the possible implantation of a fertilized egg. Estrogen and progesterone have inhibitory roles on the pituitary gland and prevent it from releasing FSH and LH. This ensures that no other follicle will begin developing during the luteal phase. When a fertilized egg implants into the uterine wall, it will release the human chorionic gonadotropin (hCG), which in turn will maintain the corpus luteum and thus maintain the levels of progesterone being released, all to maintain the thickness of the uterine wall. If there is no fertilization, the corpus luteum degenerates, estrogen and progesterone levels decrease, and the uterine wall starts shedding, marking the initiation of menstruation. The image below provides a visualization to further help understand the concepts of the ovarian cycle. CC BY 4.0",
+      "poe_text": "Option A. There is a surge of progesterone in the follicular phase, causing menstruation to cease – This option is incorrect because the progesterone surge occurs during the luteal phase to prepare the uterine wall for potential implantation following ovulation. Remember that progesterone has an inhibitory effect on FSH and LH. As such, whenever there is a surge in progesterone, there will also be an inhibition of FSH and LH. However, FSH and LH have very important roles in the follicular phase (before ovulation) and should only be inhibited during the luteal phase (after ovulation). Option B. The thickness of the uterine wall is at its peak during ovulation – This option is incorrect because the uterine wall reaches its thickest point toward the end of the ovarian cycle in conjunction with a progesterone surge, which is after ovulation. The thickening of the uterine wall serves to supply nutrient-rich blood to the fertilized egg that may attach to the uterine wall toward the end of each ovarian cycle. Consider that after being fertilized in the fallopian tube, an egg needs roughly 7 days to travel to the uterus. To maximize the chances of successful implantation by a fertilized egg, the uterine wall should be at its peak thickness around the time the fertilized egg is expected to arrive at the uterus. It would NOT be preferable for the uterus to be at its thickest during ovulation because that is long before the expected arrival of the fertilized egg at the uterus. Option C. If fertilization does not occur, the corpus luteum disintegrates into a polar body – This option is incorrect . While it is true that the corpus luteum disintegrates if no fertilization occurs, it does not turn into a polar body. Recall that females are born with a set number of primary oocytes arrested in prophase 1. Years later, after reaching puberty and having sexually matured, one oocyte a month is selected to go through meiosis and develop into a follicle. A polar body forms once a month due to this meiotic phase of oogenesis. It is a small, non-functional cell created because of an uneven divide of cell components as part of the last steps of meiosis. Option D. Follicular development is hormone-independent – This option is incorrect because follicular development is hormone-dependent and is stimulated by the follicle-stimulating hormone (FSH) which is released by the anterior pituitary gland. In females, FSH stimulates the maturation of ovarian follicles to secrete estrogen. In males, FSH stimulates spermatogenesis (sperm cell production) and maturation of the seminiferous tubules. FSH is a peptide hormone, meaning it is composed of a short chain of amino acids. Peptide hormones cannot diffuse through the cell membrane. Instead, they bind to cell membrane receptors located on the surface of the target cell, which then triggers a signaling pathway inside the cell via secondary messengers.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+22+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 23,
+    "question": {
+      "text": "Cellulose and glycogen are both examples of what type of molecule?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Carbohydrates",
+        "percentage_selected": "(93%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Proteins",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Nucleic Acids",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Centrosomes",
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Lipids",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Carbohydrates",
+    "analytics": {
+      "percent_correct": "93%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "There are four major biological macromolecules : carbohydrates, proteins, nucleic acids, and lipids. Each of the four macromolecules is made up of monomers that covalently bond to form larger polymers. Carbohydrate monomers are called monosaccharides, and they bond together via glycosidic bonds to form their polymer, polysaccharides. Protein monomers are known as amino acids and bond together via peptide bonds to form the protein polymer, a polypeptide. Nucleic Acid polymers are made up of nucleotide monomers bonded via phosphodiester bonds. Lastly, lipid polymers are made up of fatty acid and glycerol monomers that bond together via ester bonds. This question mentions cellulose and glycogen, which are types of polysaccharides. Recall that a polysaccharide is the polymer of carbohydrates. Therefore, Option A , Carbohydrates , is the correct option. Cellulose is a crucial component of plant cell walls, and in fact, cellulose is the most abundant organic molecule on earth. As shown in the image below, cellulose is a polysaccharide made up of repeating units of beta-glucose. These repeating units are linked together in a linear (i.e., unbranched) way to form cellulose chains. Moreover, these chains neatly stack in parallel and are held in place by the formation of hydrogen bonds between adjacent chains. This gives cellulose a strong and rigid structure and is the reason cellulose is the major component of plant cell walls. Glycogen is made up of alpha-glucose monomers and serves as the primary energy storage molecule in the body. Unlike cellulose (which is unbranched), glycogen has a highly branched structure and, therefore, is more soluble in water. This makes it especially useful as an energy-storage molecule in animals. In the body, glycogen is primarily stored in the liver and the muscles. CC BY 4.0",
+      "poe_text": "Option B. Proteins – This option is incorrect because cellulose and glycogen are not proteins. Proteins are one of the four major macromolecules. Every protein polymer is made up of hundreds of monomers called amino acids. There are 20 distinct amino acids, each one with a unique side chain, and each amino acid is bonded to the next via a peptide bond. This high degree of variability gives each protein its unique structure and function. Hormones, enzymes, antibodies, and transport proteins are just a few examples of the types of proteins that carry out a wide array of functions within an organism. Cellulose and glycogen are carbohydrate polymers - not centrosomes. Option C. Nucleic Acids – This option is incorrect because cellulose and glycogen are not nucleic acids. Nucleic acids are molecules that store and transmit genetic information and they are made up of monomers called nucleotides. Nucleotides include a five-carbon sugar in their structure (recall that sugars are carbohydrates), however, every nucleotide also includes one phosphate group and one nitrogenous base in its structure (neither of which is a carbohydrate). No nucleotide would function properly without all three of these components in its structure. To summarize, nucleic acids do include carbohydrates in their structure, but they also include other non-carbohydrate parts; therefore, nucleic acids as a whole cannot be characterized as carbohydrates. Furthermore, cellulose and glycogen do not contain nucleotides in their structure. Option D. Centrosomes – This option is incorrect because centrosomes are not carbohydrates. Instead, centrosomes are organelles that play a vital role in cell division. A centrosome is composed of two centrioles, oriented perpendicular to each other. Anchored to each centriole, several microtubules branch off toward the center of the cell to form the mitotic spindle for cell division. As such, centrosomes are considered microtubule-organizing centers (MTOCs). Cellulose and glycogen are carbohydrate polymers – not centrosomes. Option E. Lipids – This option is incorrect because lipids are not carbohydrates. Lipids are distinct from carbohydrates despite both being essential macromolecules. While carbohydrates are hydrophilic and built from linked sugar monomers, lipids are hydrophobic and more diverse in structure. Some lipids contain fatty acid chains and a glycerol group. Other lipids, like phospholipids, include a phosphate group. Other types of lipids, like steroids, bear none of the structures mentioned above, yet, are considered lipids because they are hydrophobic and water-insoluble. In contrast, cellulose and glycogen are not lipids – they are carbohydrate polymers.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+23+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 24,
+    "question": {
+      "text": "Which process directly causes an excitatory response in skeletal vertebrate muscle?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Less potassium outside the cell",
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Increase of acetylcholine in the cytosol",
+        "percentage_selected": "(29.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Influx of calcium in the cytosol",
+        "percentage_selected": "(56.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Rise of sodium in the synaptic cleft",
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Testosterone secretion from the pituitary gland",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Influx of calcium in the cytosol",
+    "analytics": {
+      "percent_correct": "56.8%",
+      "time_spent": "1 min, 22 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Skeletal muscle is a type of striated muscle tissue responsible for voluntary movement, as opposed to smooth and cardiac muscle, which contract involuntarily. To voluntarily contract a muscle, the nervous system needs to induce a chain of events that shorten the sarcomere (basic contractile unit of muscle fiber). The term “excitatory response,” mentioned in this question, refers to this chain of events that lead to muscle contraction . To shorten the sarcomere, the nervous system initiates an action potential that travels down motor neurons and reaches the neuromuscular junction of the desired muscle, that is, the space between the presynaptic motor neuron and postsynaptic muscle fiber. When the action potential reaches the axon terminal (the very end of a neuron), it releases the neurotransmitter acetylcholine (ACh) into the neuromuscular junction. ACh then binds to Ach receptors located on the muscle cell membrane, which in turn causes ligand-gated ion channels located on the muscle cell membrane to open and allow sodium ions (Na + ) to influx into the muscle cell. As a result, the muscle cell depolarizes (membrane potential changes from negative to positive) and creates a new action potential along the T-tubules. This new action potential reaches the sarcoplasmic reticulum and triggers the release of calcium ions (Ca 2+ ) into the cytosol of the muscle cell. During a muscle’s relaxed state, the thick and thin filaments cannot bind because tropomyosin blocks the active binding between the two filaments. The calcium ions bind to troponin proteins located on the actin (thin) filaments of the sarcomere. This binding causes tropomyosin to undergo a conformational change and exposes the actin-myosin binding site, which allows for the two filaments to bind, and therefore, muscle contraction is achieved. The influx of calcium ions in the cytosol of the muscle cell is what induces the sarcomere's thick and thin filaments to slide (which is the basis of muscle contraction). Therefore, Option C , Influx of calcium in the cytosol , is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Less potassium outside the cell – This option is incorrect . Indeed, potassium is involved in the excitation of muscle, however, for excitation to occur, potassium levels outside the cell need to be higher than inside the cell, not lower . Recall that as sodium ions pass through the ion channels toward the inside of the muscle cell, potassium ions subsequently exit the muscle cell toward the neuromuscular junction as part of the action potential. If enough ions participate in this exchange (i.e., Na + in and K + out), depolarization will occur, and a second action potential will begin along the T-tubules. Option B. Increase of acetylcholine in the cytosol – This option is incorrect because acetylcholine (ACh) never crosses the cell membrane into the cytosol of the muscle cell. Instead, ACh binds to the acetylcholine receptors on the surface of the muscle cell. This opens the ion channels and allows for depolarization to occur and the excitation process to continue. The acetylcholine bound to the cell surface receptor is eventually broken down and recycled in the synapse. Option D. Rise of sodium in the synaptic cleft – This option is incorrect because the mere rise of sodium ions in the synaptic cleft is not enough to trigger an excitatory response. No matter how high the sodium concentration in the synaptic cleft, there must first be an influx of acetylcholine in the synaptic cleft for the ion channels to open and allow for depolarization. Remember that sodium ions need to rush into the cell – not the synapse between cells – for there to be depolarization. Option E. Testosterone secretion from the pituitary gland – This option is incorrect for multiple reasons. Although testosterone may indirectly influence some attributes of muscle such as overall muscle mass, testosterone itself does not trigger an “excitatory response” in muscles – it plays no role in muscle contraction itself. Moreover, this answer option claims that testosterone is secreted by the pituitary gland, which is untrue. Testosterone is a steroid hormone primarily responsible for sexual development in males and muscle and bone growth in both sexes. It is not secreted by the pituitary gland, but instead, by the testes and the adrenal gland.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+24+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 25,
+    "question": {
+      "text": "Lobe-finned fish with lungs directly preceded which category of organisms?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Amphibians",
+        "percentage_selected": "(57.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Reptiles",
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Lampreys",
+        "percentage_selected": "(16.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Humans",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Sharks",
+        "percentage_selected": "(16.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Amphibians",
+    "analytics": {
+      "percent_correct": "57.8%",
+      "time_spent": "0 min, 38 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "This question tests your knowledge of the phylogenetic tree of deuterostomes (shown in the figure below). It is important to memorize this tree and be able to a) recall the order of taxonomic groups and b) recall identifying features of each taxonomic group, such as a notochord, jaw, lungs, amniotic egg, etc. Let us first discuss a few things that will aid your understanding of phylogenetic trees and help you tackle questions like this one. Now, let us tackle the question at hand. Lobe-finned fish are characterized by their paired, fleshy pectoral, and pelvic fins, each articulated via a single bone. When reviewing the phylogenetic tree below, it is observed that lobe-finned fish exhibit lungs because they appeared after the corresponding node. Note that the description “with lungs,” written in the question, is technically correct, however, it is not necessary. Do not let this description shift your focus to the lungfish group. Further analysis of the tree reveals that lobe-finned fish with lungs directly precede amphibians. Therefore, Option A . A mphibians is correct. CC By 4.0",
+      "poe_text": "Option B. Reptiles – This option is incorrect because reptiles are preceded by amphibians, not lobe-finned fish with lungs. As seen in the figure above, reptiles possess an amniotic egg . Without this morphological feature, reptiles would not have been able to become fully terrestrial because of the need to keep embryos from drying out in terrestrial environments. Another conclusion drawn using the figure above is that lobe-finned fish are more closely related to amphibians than they are to reptiles. While lobe-finned fish with lungs appeared earlier compared to reptiles, they do not directly precede reptiles. Option C. Lampreys – This option is incorrect because lampreys are preceded by hagfishes, not lobe-finned fish with lungs. Moreover, lampreys originate earlier in the phylogenetic tree when compared to lobe-finned fish with lungs. Lobe-finned fish with lungs cannot precede lampreys since lampreys do not possess a jaw or lungs – two features notable present in lobe-finned fish with lungs. Lampreys appeared before lobe-finned fish – not after . Option D. Humans – This option is incorrect. As mammals, humans are preceded by reptiles and birds, not lobe-finned fish with lungs. By referencing the phylogenetic tree above, it is evident that mammals and reptiles are separated by only one node. As such, mammals and reptiles are much more closely related to each other than either of them is to lobe-finned fish. The main distinguishing feature between mammals and reptiles is that reptiles lack mammary glands. In contrast, lobe-finned fish not only lack mammary glands, but they also lack four legs and an amniotic egg. Therefore, humans (fall under mammals) are preceded by reptiles, not lobe-finned fish with lungs. Option E. Sharks – This option is incorrect because sharks are preceded by lampreys, not lobe-finned fish with lungs. Sharks fall under the taxonomic group cartilaginous fishes because their skeleton is made up mostly of cartilage, not bone. This allows for a lighter body and more agile movements. Cartilaginous fish appeared before lobe-finned fish – not after .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+25+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 26,
+    "question": {
+      "text": "Twins can differ in their level of genetic similarity depending on the method of fertilization. Which of the following would lead to dizygotic twins being born?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Separation of blastomeres in a single zygote",
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Separation of an egg fertilized by two sperm",
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Fertilization of two eggs by two different sperm",
+        "percentage_selected": "(79.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Fertilization of two eggs by one sperm",
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Fertilization of two eggs by two different sperm",
+    "analytics": {
+      "percent_correct": "79.7%",
+      "time_spent": "0 min, 59 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "Twins are two offspring resulting from a single pregnancy. The two main types are monozygotic and dizygotic. Recall that a zygote is formed by the fusion of strictly one ovum and one sperm cell (no more, no less). When tackling questions regarding twins, it may be useful to break each word into its parts and recognize that monozygotic means one zygote , and dizygotic means two zygotes . Put differently, monozygotic twins arise from only one egg and one sperm cell, whereas dizygotic twins arise from two eggs and two sperm. Therefore, Option C . Fertilization of two eggs by two different sperm is the correct answer. This concept is shown in the figure below. To further elaborate on the differences: CC By 4.0",
+      "poe_text": "Option A. Separation of blastomeres in a single zygote – This option is incorrect . Recall that the term blastomere refers to any cell being created during the cleavage stage of embryogenesis. If a blastomere were separated from a zygote, as this answer option suggests, it would result in monozygotic twins. Option B. Separation of an egg fertilized by two sperm – This option is incorrect because an egg can be fertilized by only one sperm cell. Although millions of sperm cells are competing to fertilize the egg, it is not possible for multiple sperm to fuse with the same egg. The fast block and slow block are mechanisms put in place to prevent polyspermy. Immediately after the egg’s cell membrane has fused with that of the sperm, the fast block takes place. This involves the quick depolarization of the egg from a negative to a positive charge, which prevents the fusion of additional sperm cells. This depolarization then triggers the slow block: the exocytosis of numerous cortical granules that create a fertilization envelope and make polyspermy permanently impossible. If polyspermy were to occur, the embryo would not be viable. Option D. Fertilization of two eggs by one sperm – This option is incorrect because one sperm can fertilize only one egg. It is not possible for a single sperm to fertilize two different eggs. Remember that all gametes are haploid. Once a haploid sperm fuses with a haploid egg, a diploid zygote is formed. Not only would it be functionally impossible for one sperm cell to fertilize two eggs – because fertilization involves the fusion of cell membranes of the gametes – but it would also be genetically impossible because a haploid sperm cell only contains enough chromosomes to give rise to one fully-functional diploid organism.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+26+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 27,
+    "question": {
+      "text": "The plasma membrane is predominantly composed of which macromolecules?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Proteins and glycolipids",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Phospholipids and DNA",
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Phospholipids and proteins",
+        "percentage_selected": "(84%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Cholesterol and triglycerides",
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cholesterol and glycoproteins",
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Phospholipids and proteins",
+    "analytics": {
+      "percent_correct": "84%",
+      "time_spent": "1 min, 5 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Phospholipids and proteins are the two most common macromolecules in the plasma membrane. Therefore, Option C . Phospholipids and proteins is the correct answer. Phospholipids make up the bilayer of the cell membrane. The hydrophilic phosphate heads of the outer membrane face the extracellular liquid and the hydrophilic phosphate heads of the inner layer face the cytosol. This leaves the hydrophobic fatty acids of both layers to face each other and minimizes exposure to water. Proteins are present in the membrane to give additional functionality such as cell recognition, cell signaling, enzymatic activity, and structural integrity. In addition, cholesterol molecules embedded within the plasma membrane help regulate the fluidity and permeability of the membrane. Less frequently, carbohydrates may also be attached to lipids (forming glycolipids) and proteins (forming glycoproteins) resulting in additional functionality ranging from signaling to structure (e.g., attachment of collagen). The plasma membrane is also referred to as the “ fluid mosaic model ” because of the numerous different components embedded in the phospholipid bilayer (e.g. proteins, cholesterol, and carbohydrates) resembling a mosaic, and because of its fluid structure - none of the phospholipids are rigidly bound to each other, so phospholipids are constantly sliding laterally within the layer and are free to move around – hence the term “fluid.” The fluid mosaic model plays a crucial role in the membrane’s selective permeability, flexibility, enzymatic activity, and cell signaling. CC BY 3.0",
+      "poe_text": "Option A. Proteins and glycolipids – This option is incorrect because glycolipids do not make up the majority of the cell membrane. The molecules that predominately make up the plasma membrane are phospholipids, which form the bilayer, and proteins as they contribute to cell recognition and signaling. Although glycolipids are found in the plasma membrane, they are not as common as phospholipids and proteins. Glycoproteins are made up of proteins and carbohydrates and serve numerous functions for the cell membrane such as cell recognition for immune responses, cell adhesion, signal transduction for secondary messengers, Option B. Phospholipids and DNA – This option is incorrect because DNA does not make up the majority of the cell membrane. The molecules that predominately make up the plasma membrane are phospholipids, which form the bilayer, and proteins as they contribute to cell recognition and signaling. No DNA is found in the plasma membrane. DNA is the instruction manual of an entire organism, and it is protected with a very high degree of priority. Otherwise, mutations will occur much more frequently, and an entire cascade of negative consequences such as disease will follow. In eukaryotic cells, DNA is found only within the nucleus, protected by the nuclear membrane. It is important to understand that DNA does not serve as a structural molecule but, instead, stores genetic information. Option D. Cholesterol and triglycerides – This option is incorrect because triglycerides are not a component of the plasma membrane. Triglycerides do not contain any hydrophilic components. An entirely hydrophobic molecule will find it very hard to remain stable in the plasma membrane. Moreover, triglycerides are relatively large molecules (compared to phospholipids), which would make it even harder to remain stable within the plasma membrane. The molecules that predominately make up the plasma membrane are phospholipids, which form the bilayer, and proteins as they contribute to cell recognition and signaling. Option E. Cholesterol and glycoproteins – This option is incorrect . Although both of these molecules are found in the plasma membrane, neither makes up the majority of the plasma membrane. The molecules that predominately make up the plasma membrane are phospholipids, which form the bilayer, and proteins as they contribute to cell recognition and signaling. Nevertheless, cholesterol plays a crucial role in the plasma membrane. Cholesterol regulates membrane fluidity and facilitates cell signaling.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+27+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 28,
+    "question": {
+      "text": "All of the following have mitochondria EXCEPT for one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Muscle cells",
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Nerve cells",
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Brown fat cells",
+        "percentage_selected": "(10.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Red blood cells",
+        "percentage_selected": "(75.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Lymphocytes",
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Red blood cells",
+    "analytics": {
+      "percent_correct": "75.2%",
+      "time_spent": "0 min, 32 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Often referred to as “the powerhouse of the cell” mitochondria are organelles found in most eukaryotic cells and serve to convert food into adenosine triphosphate (ATP), a usable form of energy for the body. As such, any cell or tissue that requires energy to perform its function is likely to have mitochondria (hint: this ends up being most, but not all, of the cells in our body). One notable example of a cell lacking mitochondria is red blood cells (erythrocytes). The main function of red blood cells is to carry oxygen to all the tissues of the body. To achieve this, hundreds of millions of hemoglobin molecules are tightly packed into each red blood cell. The lack of not just mitochondria, but all organelles, conserves valuable inner-cell volume and allows red blood cells to have such a large quantity of oxygen-carrying hemoglobin molecules in their structure. Therefore, Option D , Red blood cells , is the correct answer.",
+      "poe_text": "Option A. Muscle cells – This option is incorrect. Muscle cells are very energy intensive. Think about how much work you are putting your muscles through every day just to exist and move around. This requires tremendous amounts of energy in the form of ATP. Recall that the sarcomere – the functional unit of muscle fiber – heavily relies on ATP to function. ATP is used for the actual contraction of the sarcomere and then again one ATP molecule is used per myosin head to reset the sarcomere back to its relaxed state. Therefore, mitochondria are a crucial component of each muscle cell. Option B. Nerve cells – This option is incorrect . When it comes to energy consumption, no other organ comes close to the brain. Indeed, the brain is the highest energy-consuming organ in the body. This is because significant amounts of ATP are required to maintain the ion gradients that contribute to the creation of action potentials and transmission of nerve signals. Thus, nerve cells would be rendered useless without the presence of their mitochondria. Option C. Brown fat cells – This option is incorrect because brown fat cells are packed with lots of mitochondria. Unlike white fat, which mainly serves as energy storage, brown fat specializes in heat production using thermogenesis. In other words, brown fat keeps your body warm when you get cold. To support this energy-demanding process, lots of mitochondria are needed inside of brown fat cells. Option E. Lymphocytes – This option is incorrect because the functions performed by lymphocytes are very energy-intensive. Antigen presentation, cytokine production, and cell signaling are just a few of the many energy-intensive functions performed by activated lymphocytes.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 29,
+    "question": {
+      "text": "A cross is performed between true breeding spiked plants and true breeding smooth plants, resulting in all spiked F1 offspring. If the F1 generation is crossed with itself to produce the F2 generation, then the F2 generation has a ratio of 3:1 spiked to smooth. If the F1 generation is crossed with a smooth plant, what would be the ratio of spiked to smooth in their offspring?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1:3",
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2:1",
+        "percentage_selected": "(11.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1:1",
+        "percentage_selected": "(72.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "3:1",
+        "percentage_selected": "(7.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4:0",
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1:1",
+    "analytics": {
+      "percent_correct": "72.2%",
+      "time_spent": "2 min, 8 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "A \" true breeding ” organism, otherwise known as “ purebred ,” is homozygous for a particular trait, meaning it has two identical alleles for that gene (e.g., ff or JJ). At this point we do not know which of the two presented alleles – spiked vs smooth – is the dominant one. Crossing two true breeding organisms is an excellent method for determining dominance between two genes. Once the cross is performed, it is observed that all the offspring carry the spiked phenotype . Therefore, the allele for spiked is determined to be the dominant one. Let us suppose that the “G” allele refers to the dominant allele for the spiked surface while the “g” allele refers to the recessive allele for the smooth surface. Examining the genotypes of the purebreds, we see that the purebred spiked plant is GG while the purebred smooth plant is gg. As seen in the Punnett Square below, the F1 generation, GG x gg , will all have the Gg genotype. Because the spiked surface (“G” allele) is dominant to the smooth surface, the F1 generation will express only the spiked trait. Knowing the genotypes of the F1 generation, we can then consider the cross between the F1 generation with the purebred smooth plant: Gg x gg . The Punnett square below shows the resulting genotypes. Now, we can examine the phenotypes resulting from this cross. Gg will have the spiked trait and gg will have the smooth trait. These phenotypes each appear twice in the Punnett square, making the ratio of spiked to smooth offspring 2:2, which simplifies to 1:1. Therefore, Option C. 1:1, is the correct answer.",
+      "poe_text": "Option A. 1:3 – This option is incorrect because the F1 generation is comprised of heterozygote plants since both parents were pure breeds (homozygous) for their traits. Since all F1 plants are spiked, this means that spiked is the dominant allele. This means that when we cross a heterozygote plant with a smooth plant (homozygous recessive using a Punnett square, we get 50% heterozygotes (spiked phenotype) and 50% homozygous recessive (smooth phenotype). Therefore, for the ratio of spiked(dominant) to smooth(recessive), we get a 2:2 ratio. Option B. 2:1 – This option is incorrect because when we cross a heterozygote plant with a smooth plant (homozygous recessive using a Punnett square, we get 50% heterozygotes (spiked phenotype) and 50% homozygous recessive (smooth phenotype). Therefore, for the ratio of spiked(dominant): smooth(recessive), we get a 2:2 ratio. Option D. 3:1 – This option is incorrect because the F1 generation is comprised of heterozygote plants since both parents were pure breeds (homozygous) for their traits. Since all F1 plants are spiked, this means that spiked is the dominant allele. This means that when we cross a heterozygote plant with a smooth plant (homozygous recessive using a Punnett square, we get 50% heterozygotes (spiked phenotype) and 50% homozygous recessive (smooth phenotype). Therefore, for the ratio of spiked(dominant) to smooth(recessive), we get a 2:2 ratio. Option E. 4:0 – This option is incorrect . A Punnett square would result in a ratio of 4:0 only if all offspring express the same trait (i.e., either all dominant or all recessive). The first Punnett square shown above (GG x gg) is an example of a 4:0 ratio.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+29+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+29+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 30,
+    "question": {
+      "text": "Which of the following correctly identifies a difference between the anterior and posterior pituitary gland?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The posterior pituitary is connected to the hypothalamus via a neuron while the anterior pituitary is not",
+        "percentage_selected": "(57.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Only the posterior pituitary gland is stimulated by hormones from the hypothalamus",
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The anterior pituitary releases peptide hormones while the posterior pituitary releases steroid hormones",
+        "percentage_selected": "(14.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "A greater variety of hormones are secreted by the posterior pituitary than the anterior pituitary",
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The posterior pituitary releases only tropic hormones while the anterior pituitary releases only non-tropic hormones",
+        "percentage_selected": "(14.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The posterior pituitary is connected to the hypothalamus via a neuron while the anterior pituitary is not",
+    "analytics": {
+      "percent_correct": "57.3%",
+      "time_spent": "1 min, 1 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The pituitary gland (aka hypophysis) is at the base of the brain, just under the hypothalamus, and is divided into the anterior and posterior lobes. Each lobe regulates numerous important hormones in the body whenever it is instructed to do so by the hypothalamus. However, there are several differences between the two lobes. While both lobes release hormones to the entire body, only the anterior lobe produces said hormones by itself; the posterior lobe can only store and release hormones that have already been produced by the hypothalamus. Another difference is that while both lobes receive instructions from the hypothalamus, the anterior lobe receives these instructions via other hormones carried through blood vessels, whereas the posterior lobe receives instructions via a neuron. Therefore, Option A is the correct answer. Fun fact: this is why the posterior pituitary gland is also known as the neuro hypophysis. The posterior pituitary gland releases two hormones : ADH (antidiuretic hormone, aka vasopressin), and oxytocin. The anterior pituitary gland releases six hormones . Use the mnemonic FLAT PiG to remember them: i 6. G rowth hormone CC BY 4.0",
+      "poe_text": "Option B. Only the posterior pituitary gland is stimulated by hormones from the hypothalamus – This option is incorrect because only the anterior pituitary gland is stimulated by hormones from the hypothalamus. In contrast, the posterior lobe is stimulated by electrical signals from the hypothalamus. Remember that hormones cannot travel through nerves. Because the posterior lobe is connected to the hypothalamus only via nerve tissue, it is much more efficient for the hypothalamus to use electrical impulses as opposed to hormones to instruct the posterior lobe. The opposite is true regarding the anterior lobe. Since it connects to the hypothalamus via blood vessels, hormones are the preferred means of communication. For example, the hypothalamus uses thyrotropin-releasing hormone (TRH) to stimulate the anterior lobe to release TSH. Gonadotropin-releasing hormone (GnRH) is used for the release of FSH and LH, and Growth hormone-releasing hormone (GHRH) is used for the release of growth hormone. Option C. The anterior pituitary releases peptide hormones while the posterior pituitary releases steroid hormones – This option is incorrect because all the hormones released by the pituitary gland (both lobes) are peptide hormones. Peptide hormones are composed of amino acids. Because they are hydrophilic and large in size, peptide hormones cannot cross the cell membrane. Instead, they function by binding to receptors on the surface of cells, which then triggers a cell signaling pathway via secondary messengers. In contrast, steroid hormones are much smaller and hydrophobic, which allows them to easily diffuse through the plasma membrane and bind to receptors within the cytoplasm or in the nucleus. Option D. A greater variety of hormones are secreted by the posterior pituitary than the anterior pituitary – This option is incorrect because the anterior pituitary releases six hormones, whereas the posterior releases two. The six hormones released by the anterior lobe are follicle-stimulating hormone (FSH), luteinizing hormone (LH), adrenocorticotropic hormone (ACTH), thyroid-stimulating hormone (TSH), prolactin, and human growth hormone (HGH). On the other hand, the two hormones released by the posterior lobe are oxytocin and antidiuretic hormone (aka vasopressin). Option E . The posterior pituitary releases only tropic hormones while the anterior pituitary releases only non-tropic hormones – A tropic hormone does not stimulate its target cell directly. Instead, a tropic hormone instructs other endocrine glands to release their own hormone. In contrast, a non-tropic hormone directly stimulates its target cell. This answer option is incorrect for two reasons. First, the hormones released by the posterior pituitary (ADH & oxytocin) are non-tropic. Additionally, the anterior pituitary releases both tropic (ACTH, TSH, LH, FSH) as well as non-tropic (growth & prolactin) hormones.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+30+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 31,
+    "question": {
+      "text": "A long-distance runner has been running for several days through a desert without any food. After the muscles in her legs are depleted of all ATP, which of the following would best describe the state of her muscular filaments?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Myosin head is detached from actin but not in the position for the next contraction",
+        "percentage_selected": "(18.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Myosin head is attached to actin and ready for a power stroke",
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Myosin head is attached to actin immediately after a power stroke",
+        "percentage_selected": "(43.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Myosin head is detached from actin and ready to form another cross bridge",
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Myosin head is detached from actin as tropomyosin is blocking attachment site on actin",
+        "percentage_selected": "(21.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Myosin head is attached to actin immediately after a power stroke",
+    "analytics": {
+      "percent_correct": "43.6%",
+      "time_spent": "0 min, 55 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Muscle tissues require the presence of ATP to function. Specifically, ATP is necessary for the proper function of the sarcomere , which is the basic functional unit of muscle tissue. The sliding filament theory states that sarcomere shortening occurs when thick and thin filaments – myosin and actin, respectively – slide toward each other (remember that acTIN = THIN). This sliding is based on temporary attachments (termed cross-bridges) between the two filaments. As we will discuss shortly, this temporary attachment between the two filaments cannot be broken without ATP. A sarcomere is said to be in a relaxed state (i.e., non-shortened) when the two filaments are not attached. Their attachment is prevented by tropomyosin, which blocks the myosin binding site and prevents myosin from creating a cross-bridge. The sliding of the two filaments is triggered by calcium ions. Once released from the sarcoplasmic reticulum, calcium ions bind to troponin proteins located on the actin filament and trigger tropomyosin to move and reveal the binding sites, thus allowing myosin heads to attach. Shortly after the formation of a cross-bridge, myosin hydrolyzes an ATP molecule and performs a “power stroke” to pull the actin filament toward the center of the sarcomere. The sarcomere has now been shortened and muscle contraction has occurred. However, another ATP molecule will be required to detach the two filaments – otherwise, the cross-bridge will not detach. As seen in step (d) in the diagram below, a new ATP molecule causes the detaching of the myosin head from actin filaments, allowing the myosin head to return to its original position ready for the next power stroke. In conditions where there is no ATP available, the myosin head cannot detach from actin following a power stroke, leaving the muscle in a rigid and contracted state. Recall that, after death, the body can eventually reach a stage known as rigor mortis (meaning stiffness of death). During this state, actin and myosin cannot detach from each other because ATP production has stopped, and the body’s muscles cannot return to a non-contracted state. As a result, muscles become stiff and locked in place. CC BY 4.0",
+      "poe_text": "Option A. Myosin head is detached from actin but not in the position for the next contraction – This option is incorrect because detachment of the myosin head from actin requires ATP, and the question stem mentions there is no ATP available. After a myosin head attaches to actin, the release of phosphate and ADP (adenosine diphosphate) triggers the shortening of the sarcomere (aka power stroke). Remember that the two filaments remain bound together; it is only when a new ATP molecule attaches to myosin that the two filaments detach. Each new ATP molecule that attaches to a myosin head provides enough energy to drive the breaking of the cross-bridge, the formation of a new cross-bridge, and a new power stroke. In the absence of new ATP, the sarcomere would not stop after the breaking of the cross-bridge, as this option suggests; instead, the sarcomere would stop functioning after the power stroke. Option B. Myosin head is attached to actin and ready for a power stroke – This option is incorrect because, once the cross-bridge cycle begins, the power stroke is not affected by the absence of external ATP and can go to completion. This is because the formation of a new cross-bridge and the power stroke are driven by the same ATP molecule that broke the previous cross-bridge. Therefore, the absence of available ATP would not be “felt” by a sarcomere until it needs a new ATP molecule, which occurs after the power stroke has occurred. Therefore, in the absence of new ATP, the sarcomere would not stop before the power stroke, as this option suggests; instead, the sarcomere would stop functioning after the power stroke. This option corresponds to steps a) and b) in the above diagram, where previously hydrolyzed ATP is still attached to the myosin head. Option D. Myosin head is detached from actin and ready to form another crossbridge – This option is incorrect . Like Option A, if all ATP were depleted, no cross-bridge cycle would stop after the breakage of the cross-bridge, as this option suggests. Instead, the same ATP molecule that triggered the separation of the two filaments would drive the sarcomere to form a new cross bridge and also perform the power stroke. The absence of external ATP would only be “felt” by the sarcomere after the power stroke is performed (because it is at this stage that a new ATP would be needed). Detachment requires ATP and due to lack of ATP, muscle tissue would not have the chance to reach this step, let alone rest in this position permanently. This option corresponds to step e) in the diagram above. Option E. Myosin head is detached from actin as tropomyosin is blocking attachment site on actin – This option is incorrect because tropomyosin blockage can only be relieved with the presence of calcium; this option is not relevant to the presence or absence of ATP.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+31+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 32,
+    "question": {
+      "text": "Which of the following signaling molecules is released by virally infected cells?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Immunoglobulin",
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Interferon",
+        "percentage_selected": "(72.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Fibrin",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Perforin",
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Interleukin",
+        "percentage_selected": "(15.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Interferon",
+    "analytics": {
+      "percent_correct": "72.1%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Given the vast number of tissues and organs working together to reach homeostasis, our body parts need an effective way of communicating any problems, needs, and any event that demands attention. One important example is the case of a virally infected cell. Without an effective means of communication, the virus may quickly spread to the entire organism. If a cell is virally infected , it will produce interferons to warn nearby cells of the virus. Interferons are proteins that bind to non-infected cells and trigger a signaling cascade to produce antiviral proteins specific to the virus that induced the cascade. To further reduce the spread of the virus, interferons may also induce non-infected cells to destroy RNA and cease protein synthesis (excluding antiviral proteins). Interferons can also induce apoptosis in nearby infected cells. Because interferons are signaling molecules released by virally infected cells, Option B is the correct answer. Interferons target nearby cells; therefore, they are said to be paracrine messengers (para = nearby). In contrast, autocrine messengers bind to receptors on the same cell that released the messenger (auto = self), endocrine messengers are secreted into the bloodstream (endo = inside), and lastly, exocrine messengers are secreted into ducts such as the gallbladder or salivary glands (exo = outside). CC By 4.0",
+      "poe_text": "Option A. Immunoglobulin – This option is incorrect because immunoglobulins are not released by virally infected cells. Instead, immunoglobulins are another term for antibodies that are produced by plasma B cells. These antibodies are used to tag or inactivate a pathogen. They have a Y-shaped structure that consists of a light chain and a heavy chain, held together via disulfide bonds. Antibodies have two main regions, the constant and variable regions. The constant region of an antibody determines its class (IgA, IgM, IgD, IgE, and IgG), while the variable regions are the tips of the “Y” and give each immunoglobulin its uniqueness. While immunoglobulins have important roles in immune response, they are not released by virally infected cells, as this option suggests. Option C. Fibrin – This option is incorrect because fibrin is not a signaling molecule and it is not released by virally infected cells. Fibrin is a protein that plays a crucial role in the formation of blood clots for blood vessel repair and blood loss prevention. Upon injury, thrombocytes convert the precursor protein fibrinogen (found in blood plasma) into fibrin. Fibrin monomers then form long insoluble strands to form the blood clot. While fibrin is crucial in the body’s defense against pathogens and injury, it is NOT a signaling molecule released by virally infected cells. Option D. Perforin – This option is incorrect because perforin is not released by virally infected cells. The perforin protein is produced by cytotoxic T cells and acts by perforating the cell membrane of virally infected cells. Granzymes then enter the cell via these pores to trigger apoptosis. While perforin has roles in immune response (and specifically in virally infected cells), perforin itself is not released by virally infected cells, as this option suggests – instead, perforin is released by cytotoxic T cells. Option E. Interleukin – This option is incorrect because interleukins are cytokines (signaling proteins) that are released by various leukocytes (white blood cells) and enhance communication between immune cells. As such, interleukins serve a diverse set of roles in the body. For example, macrophages release interleukins to recruit help, dendritic cells release interleukins to communicate with T cells, and lastly, helper T cells use interleukins to activate, amplify, and regulate other cells. While both interleukins and interferons are signaling molecules, they serve different purposes. Interleukins are a means of communication between various immune cells (T cells, B cells, macrophages, etc.), whereas interferons interact directly with viral replication within infected cells.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+32+Solution+2.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 33,
+    "question": {
+      "text": "A farm next to a lake begins to spray a new type of nutrient mix on its plants. When it rains, the nutrient mix washes away into a nearby pond. Which of the following would you expect to see in the pond over time?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Primary succession",
+        "percentage_selected": "(7.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Outbreeding",
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Artificial selection",
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Habituation",
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Algal bloom",
+        "percentage_selected": "(81.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Algal bloom",
+    "analytics": {
+      "percent_correct": "81.4%",
+      "time_spent": "1 min, 1 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "A type of pollution that can occur in large bodies of water – such as lakes, ponds, rivers, and streams – is eutrophication. Eutrophication occurs when a large body of water becomes overly enriched with certain nutrients that induce a serious imbalance in the environment. Oftentimes, phosphorus-based pesticides from nearby farms can be washed down by rainfall and contaminate a pond or lake. This in turn can cause the increased growth of bacteria such as algae and cyanobacteria known as algal bloom . These overgrown patches of algae and cyanobacteria respire and deplete oxygen which leads to many organisms below the surface of water dying of oxygen starvation. Therefore, Option E, Algal bloom , is the correct answer. Note: Although eutrophication can occur naturally, human activity has accelerated it significantly. CC BY 4.0",
+      "poe_text": "Option A. Primary succession – This option is incorrect because primary succession is the process by which life forms in an environment that has never supported life previously (e.g., a glacier, rocky terrain, newly cooled down lava). During primary succession, a pioneer species (e.g., bacteria, lichen, and fungi) is the first colonizer and serves as the foundation for larger and more complex organisms to eventually join. Remember that primary succession does not require the creation of new species. Most of the species that eventually colonize the new environment have existed before a given primary succession event. Primary succession does not occur through the introduction of chemicals in an environment – remember that in this question the introduction of chemicals is accelerating the growth of existing organisms, therefore, this option is incorrect. Option B. Outbreeding – This option is incorrect because outbreeding would not be the result of nutrient mix washing into a pond. Instead, outbreeding occurs when unrelated partners breed and produce offspring with new allele combinations. In contrast, inbreeding is the opposite. Inbreeding involves the breeding of two relatives, resulting in an increased expression of harmful recessive traits. This concept is completely unrelated to the process of eutrophication in the question. Option C. Artificial selection – This option is incorrect because artificial selection does not occur through the introduction of chemicals in a pond. Artificial selection is a process usually carried out intentionally by humans to increase certain favorable traits within a population. One common example of artificial selection is the breeding of a new dog breed. This is done through selective breeding – not the introduction of chemicals in a pond. Option D. Habituation – This option is incorrect because habituation is a learned behavior that allows an animal to disregard inconsequential and repetitive stimuli. The scenario provided by the question does involve a certain stimulus (introduction of nutrient mix), however, the stimulus is NOT repetitive. More importantly, the stimulus is NOT inconsequential, given that it is toxic to most animals experiencing the stimulus. One example of habituation is when anemones do not react to being repeatedly poked with a stick. Usually, anemones will react when they contact something because it may be food, but after being repeatedly poked, the anemone learns that the stick is not food. This concept is related to animal behavior and is completely separate from the ecological topic of eutrophication.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+33+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 34,
+    "question": {
+      "text": "Given that two parents both have the DdEe genotype, what are the chances that an offspring will be recessive for both traits?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1/2",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1/4",
+        "percentage_selected": "(12.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1/8",
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1/16",
+        "percentage_selected": "(77.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "1/32",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1/16",
+    "analytics": {
+      "percent_correct": "77.8%",
+      "time_spent": "0 min, 45 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "This question is testing your ability to analyze a dihybrid scenario. In other words, two genes are being analyzed simultaneously. There are two methods to solve this problem. One method is the dihybrid Punnett square which is essentially a 4x4 Punnett square. However, it is labor and time-intensive to prepare this square. For all intents and purposes of this test, you should always avoid drawing out a dihybrid Punnet square (4x4 square). Instead, a simpler and faster way of tackling dihybrid questions like this is to examine the odds of each allele combination independently . That is, build one monohybrid square (2x2) for alleles “D” and “d” and then another monohybrid square (2x2) for alleles “E” and “e”. The question mentions that both parents have the DdEe genotype. Instead of writing out the dihybrid cross DdEe x DdEe, let us split this into two monohybrid crosses: Dd x Dd and Ee x Ee. Let us start with the first gene for D and d. STEP 1: We first determine the probability of having offspring with the recessive genotype dd given a Dd x Dd cross by drawing a monohybrid Punnet square. Out of the four possible outcomes, only one is “dd,” therefore the first monohybrid cross has a 1/4 or 25% chance of being our genotype of interest, “dd”. But be careful, your work is not yet done because you have another monohybrid cross to draw. Do not fall for the trap answer ¼ (Option B). STEP 2: Next, we can examine the probability of having offspring with the recessive genotype ee given the cross Ee x Ee. Drawing out the monohybrid cross, we can see that only one out of four possible outcomes is “ee.” Therefore, the second monohybrid cross has a 1/4 or 25% chance of being our genotype of interest, “ee”. STEP 3: Finally, we must determine the probability of both cases occurring to result in offspring with the “ddee” genotype (recessive for both traits). From the laws of probability, the probability of offspring having “ddee” is the combined probability of “dd” and “ee” occurring. This probability is the product of ¼ and ¼ and results in a chance of 1/16 . Therefore, Option D . 1/16 , is the correct answer.",
+      "poe_text": "Option A. 1/2 – This option is incorrect because if both parents have the DdEe, there is a 1/4 chance that the offspring will inherit dd (1/4DD, 1/2Dd, and 1/4dd) and a 1/4 chance that the offspring will inherit ee (same logic as dd). Therefore, we multiply the probabilities to get the total probability of producing a ddee offspring. (1/4)(1/4) = 1/16 Option B. 1/4 – This option is incorrect . You might have been tempted to pick this answer after each monohybrid cross because they both resulted in a probability of 1/4. However, make sure you remember that the probability of the offspring being fully recessive (ddee) is the product of the two probabilities: (1/4)(1/4) = 1/16 Option C. 1/8 – This option is incorrect because if both parents have the DdEe, there is a 1/4 chance that the offspring will inherit dd (1/4DD, 1/2Dd, and 1/4dd) and a 1/4 chance that the offspring will inherit ee (same logic as dd). Therefore, we multiply the probabilities to get the total probability of producing a ddee offspring. (1/4)(1/4) = 1/16 Option E. 1/32 – This option is incorrect because if both parents have the DdEe, there is a 1/4 chance that the offspring will inherit dd (1/4DD, 1/2Dd, and 1/4dd) and a 1/4 chance that the offspring will inherit ee (same logic as dd). Therefore, we multiply the probabilities to get the total probability of producing a ddee offspring. (1/4)(1/4) = 1/16",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+34+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+34+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 35,
+    "question": {
+      "text": "Which of the following plant hormones promote fruit ripening?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Gibberellins",
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Ethylene",
+        "percentage_selected": "(69.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Abscisic Acid",
+        "percentage_selected": "(11.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Auxin",
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cytokinin",
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ethylene",
+    "analytics": {
+      "percent_correct": "69.9%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "Ethylene is a gaseous hormone that promotes fruit ripening and flower production. This makes Option B , the correct answer. You might know that a ripe apple or banana will induce its surrounding fruits to also go ripe. This is due to the release of ethylene and constitutes a positive feedback loop because as the degree of ripening increases, so does the amount of ethylene being released, which causes more ripening, and so on. Ripening and flower production are important checkpoints in the life cycle of angiosperms. Ripening gives fruit a sweeter taste, stronger scent, and more vibrant colors, all of which contribute to the ultimate goal of fruit production: seed dispersal by animals. Flowers facilitate seed production by attracting pollinators , such as birds and bees, who carry out cross-pollination of plants. Ethylene also regulates plant leaves by inducing senescence (aging) and abscission (shedding) – two crucial steps in the relocation of nutrients from older parts of the plant to newer ones. Without abscission, fruit would have a very hard time dropping even when ripe, leading to decreased seed dispersal. Canadian DAT Pro Tip : Ethylene is produced naturally by plants, however, the artificial release of ethylene by humans has proven very useful for agricultural purposes.",
+      "poe_text": "Option A. Gibberellins – This option is incorrect because gibberellins do not induce fruit ripening. Instead, gibberellins induce seed germination and cell division (flower and stem elongation). Moreover, gibberellins are involved in the inhibition of aging in leaves – essentially serving as an antagonist to ethylene’s senescence effect. Option C. Abscisic Acid – This option is incorrect because abscisic acid does not induce fruit ripening. Instead, abscisic acid inhibits growth and induces seed dormancy. This dormancy can later be disrupted by an increase in gibberellins or by mechanistic responses to environmental cues such as temperature and light. Option D. Auxin – This option is incorrect because auxin does not induce fruit ripening. Instead, auxin stimulates the growth of plants through elongation. This is achieved by loosening cellulose fibers and increasing cell wall plasticity, which then allows for turgor pressure to expand cells to grow. Auxin is the hormone responsible for phototropism and geotropism – a plant’s ability to adjust its growth depending on light and gravity conditions, respectively. In practice, this results in the stem growing toward the light source and opposite to gravity. Option E. Cytokinin – This option is incorrect because cytokinin does not induce fruit ripening. Instead, cytokinin stimulates cell division and organ development. Additionally, cytokinin delays the aging of leaves (i.e., it inhibits senescence). Therefore, cytokinin serves as an antagonist to ethylene.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 36,
+    "question": {
+      "text": "A random group of 200 black bears dissociate from a bigger population and settle in a region 100 km away. It is observed that the smaller group, along with their future generations, have a different fur type than the original population. What best describes this phenomenon?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Gene flow",
+        "percentage_selected": "(12.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Hybrid vigor",
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Bottleneck Effect",
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Outbreeding",
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Founder’s effect",
+        "percentage_selected": "(75.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Founder’s effect",
+    "analytics": {
+      "percent_correct": "75.1%",
+      "time_spent": "0 min, 35 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "The question stem poses a scenario in which a subpopulation with different genetic material undergoes a change in allele frequency. This points to either gene flow or genetic drift as these are causes of change in allele frequency within a population. The key difference between gene flow and genetic drift is the group of individuals being affected. To elaborate, gene flow is the transfer of genes between two separate populations. On the other hand, genetic drift is the change of allele frequency within one small population. because they both induce a change in allele frequency within one small population. However, the bottleneck effect describes allele frequency change due to drastic or catastrophic events, which is not mentioned in the question stem. This makes Option E. Founder’s effect , a type of genetic drift, the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Gene flow – This option is incorrect because gene flow is the flow of alleles caused by individuals migrating and mating between separate populations. This question does not mention two separate populations mating with each other. Instead, this question mentions one small population being isolated (which suggests genetic drift). Gene flow increases genetic diversity, whereas the example in the question decreases genetic diversity (because a population was isolated). In summary, remember that genetic flow involves the change of allele frequencies between two populations, whereas genetic is a process that happens to one population. Option B. Hybrid vigor – This option is incorrect because hybrid vigor describes a situation where the offspring of two inbred strains experience more advantages than either parent. This superiority is caused by the reduction in harmful homozygous recessive alleles and the increase in beneficial heterozygous advantage. An example of hybrid vigor is the crossing of two inbred corn lines. Because each of the two parent lines is inbred and likely homozygous recessive for diseases or defective alleles, the crossing of the two different lines will result in offspring with a more diverse set of alleles and therefore, improved yield, size, and growth rate. The question does not provide enough information to determine whether heterosis would occur within the isolated population of the bears (e.g., fitness of a hybrid offspring within the isolated population). Option C. Bottleneck Effect – This option is incorrect because the bottleneck effect is a random change in allele frequencies that happens after the occurrence of catastrophic events. While bottleneck and founder’s effect are both examples of genetic drift, there is a distinct difference between them; in a bottleneck scenario, the change in allele frequency is caused by a drastic or catastrophic reduction in population (such as earthquakes, floods, overhunting, deforestation, etc.) In this question, the change in allele frequency was caused by a migratory event – not a catastrophic event. Therefore, the result could not have been the bottleneck effect. Option D. Outbreeding – This option is incorrect because outbreeding describes the mating of unrelated individuals. Specifically, outbreeding involves the transfer of different genes between individuals and, therefore, the creation of new allele combinations. Since the 200 individuals within the isolated group are genetically similar (same fur type), this exchange of different genes could not have occurred.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+36+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 37,
+    "question": {
+      "text": "The first intermediate formed by the process of glycolysis is __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Acetyl-CoA",
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Pyruvate",
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Oxaloacetate",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Glucose-6-phosphate",
+        "percentage_selected": "(88.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Glyceraldehyde-3-phosphate",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Glucose-6-phosphate",
+    "analytics": {
+      "percent_correct": "88.1%",
+      "time_spent": "0 min, 20 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "For the test, you do not need to memorize every single intermediate and enzyme involved in cellular respiration, but you should know the major steps. Let us briefly review the key steps below. Things will be more intuitive if we understand why they happen in a certain way. Focus on the overall process and the three main goals of glycolysis: 1) Breakdown of glucose to two pyruvates to be used in cellular respiration, 2) production of two ATP through substrate-level phosphorylation, and 3) generation of NADH (electron acceptors) to be used later in the electron transport chain. In both prokaryotic and eukaryotic cells, Glycolysis takes place in the cytoplasm of the cell – NOT inside mitochondria. consists of two important phases: energy investment and energy payoff phase. As seen in the figure below, the energy investment phase consumes ATP to phosphorylate glucose, trapping it in the cell as glucose-6-phosphate . After this intermediate is isomerized to fructose, it is phosphorylated again to form fructose-1,6-bisphosphate. This is important as this step commits itself to glycolysis because the 6-carbon molecule is at its highest energy. The remaining steps are part of the energy payoff phase as G3P is converted to pyruvate. Based on this information, Option D , Glucose-6-phosphate is the correct answer. Canadian DAT Pro Tip : The intermediate substrates will also phosphorylate ADP to ATP hence this ATP production is known as substrate-level phosphorylation . Our net result is 2 ATP, 2 pyruvates, and 2 NADH. CC By 4.0",
+      "poe_text": "Option A. Acetyl-CoA – This option is incorrect because acetyl-CoA is NOT an intermediate formed during glycolysis. Acetyl-CoA is the product of pyruvate oxidation – a process that occurs after glycolysis. Once formed, acetyl-CoA enters the citric acid cycle (aka Krebs cycle) and combines with oxaloacetate to form a six-carbon molecule that further carries the cycle. Option B. Pyruvate – This option is incorrect because pyruvate is NOT the first intermediate that is formed during glycolysis. Instead, pyruvate is the end product of glycolysis. Under aerobic conditions (oxygen is present), the pyruvate molecule will be transported into the mitochondria, where it will undergo pyruvate oxidation to be converted into acetyl-CoA. In contrast, if oxygen is not present (anaerobic conditions) pyruvate will undergo fermentation (reduction of pyruvate to lactic acid) to regenerate NAD+, a crucial electron acceptor for the next round of glycolysis. Option C. Oxaloacetate – This option is incorrect because oxaloacetate is NOT formed during glycolysis. Oxaloacetate is an intermediate formed during the citric acid cycle (aka Krebs cycle), which occurs after glycolysis. During the citric acid cycle, oxaloacetate (a four-carbon molecule) reacts with acetyl-CoA to form citrate (a six-carbon molecule). After a series of reactions, the citric acid cycle regenerates an oxaloacetate molecule, and the cycle starts all over again. Option E. Glyceraldehyde-3-phosphate – This option is incorrect because glyceraldehyde-3-phosphate is an intermediate formed immediately after fructose-1,6-bisphosphate is formed. Since we are looking for the first intermediate in glycolysis, we must choose an option produced directly from molecules of glucose.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+37+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 38,
+    "question": {
+      "text": "Which of the following is a competitive inhibitor of the enzyme RuBisCo?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Carbon Dioxide",
+        "percentage_selected": "(23%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Oxygen",
+        "percentage_selected": "(62.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Glucose",
+        "percentage_selected": "(10.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Water",
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Magnesium",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Oxygen",
+    "analytics": {
+      "percent_correct": "62.6%",
+      "time_spent": "0 min, 17 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "The Calvin cycle , also known as the light-independent reaction of photosynthesis, takes place in the stroma of plant cell chloroplasts and is a series of chemical reactions that convert carbon dioxide (captured from the atmosphere) into glucose to be used for energy by plants. The Calvin cycle is split into three main steps: 1) Carbon fixation 2) Reduction, and 3) Regeneration. Ribulose-1,5-bisphosphate carboxylase/oxygenase, more commonly known as RuBisCo , is the enzyme that drives carbon fixation. It is so vital to life on Earth that it is the most abundant protein on the planet. Despite its significant importance to life on Earth, RuBisCo has a flaw: under high oxygen concentrations, RuBisCo can fix oxygen instead of carbon, an inefficient process known as photorespiration . When plant cells close their stomata to conserve water, oxygen becomes much more available as a substrate to RuBisCo and acts as a competitive inhibitor to carbon dioxide, resulting in photorespiration. This process consumes energy and releases carbon dioxide, effectively undoing some of the work of photosynthesis. In addition, the binding of oxygen to RuBisCo yields a product that is of no use to the plant cell since it cannot contribute to the Calvin cycle. Therefore, Option B , Oxygen , is the correct answer.",
+      "poe_text": "Option A. Carbon Dioxide – This option is incorrect . Not only is carbon dioxide NOT a competitive inhibitor to RuBisCo, but in fact, carbon dioxide is the only substrate that allows the Calvin cycle to continue normally. RuBisCo uses carbon dioxide to carboxylate ribulose-1,5-bisphosphate (RuBP) into a six-carbon compound and allows carbon fixation to proceed. Option C. Glucose – This option is incorrect because glucose is not a competitive inhibitor of RuBisCo. Moreover, glucose does not even directly interact with RuBisCo. Instead, glucose is one of the byproducts of a normal Calvin cycle (i.e., carbon fixation occurs instead of oxygen fixation). Glucose is generated after RuBisCo participates in the cycle. Option D. Water – This option is incorrect because water is not a competitive inhibitor to RuBisCo. Water is essential for photosynthesis as it is an essential part of the light-dependent reaction to split water molecules into oxygen (O 2 ) and hydrogen ions (H + ) which are then used during photosynthesis. Option E. Magnesium – This option is incorrect . While magnesium ions (Mg 2+ ) are involved in the activity of RuBisCo they do not serve as competitive inhibitors to RuBisCo. Instead, magnesium ions serve as a cofactor in the activation of RuBisCo. Recall that a cofactor is a non-protein molecule that assists an enzyme carry out its function. Not only is magnesium not a competitive inhibitor to RuBisCo, but as a cofactor, it enhances RuBisCo’s intended purpose: carbon fixation. Magnesium is also the central atom within the chlorophyll molecule. Therefore, not only is magnesium not a competitive inhibitor to RuBisCo, but it serves as a vital part in the successful capture of light energy for photosynthesis.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 39,
+    "question": {
+      "text": "How does the DNA of daughter cells compare to that of the parent cell following mitosis?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Identical and half the amount of DNA",
+        "percentage_selected": "(14.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Not identical and half the amount of DNA",
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Identical and the same amount of DNA",
+        "percentage_selected": "(78%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Not identical and the same amount of DNA",
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Identical and four times the amount of DNA",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Identical and the same amount of DNA",
+    "analytics": {
+      "percent_correct": "78%",
+      "time_spent": "1 min, 23 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "There are multiple reasons why cell division is crucial to life on Earth. In unicellular organisms, cell division is the primary method of reproduction. In multicellular organisms, one fertilized egg (zygote) undergoes millions upon millions of cell divisions to grow into an organism composed of trillions of cells. For an organism to fully develop, two types of cell divisions are needed: meiosis and mitosis. Meiosis exclusively creates haploid sperm and egg cells (gametes), whereas mitosis creates diploid cells for cell growth and development and is used by all somatic cells (any cell other than a gamete, such as muscle, neuron, liver, and stomach cells). Meiosis is only used to create the gametes that fuse to form a zygote, however, once the zygote is formed, mitosis takes over and serves as the sole driver of cell growth and development. When it comes to handling genetic information, mitosis and meiosis serve different roles. Mitosis creates genetically identical daughter cells and discards cells that fail to exactly replicate the parent cell’s DNA, whereas meiosis intentionally increases genetic diversity with every new cell division. Because of crossing over , each of the millions of cells created by meiosis is genetically unique (contains a unique set of alleles compared to the parent cell or other daughter cells). Moreover, meiosis is a reduction division because every daughter cell contains half the amount of genetic information (haploid) compared to the parent cell. On the other hand, mitosis creates an exact copy of the parent cell’s entire DNA (diploid). During the S phase of interphase (before mitosis occurs), each chromosome undergoes replication resulting in two identical copies called sister chromatids, which are linked together at a region called the centromere. During the metaphase stage of mitosis, these pairs of identical sister chromatids line up at the center of the cell, and during anaphase, the identical sister chromatids are pulled apart and separated from each other. Therefore, the two daughter cells share the exact same DNA as the parent cell and in the same quantity. This question mentions that mitosis is taking place, which allows us to deduce that the daughter cells must be somatic cells (non-gamete), diploid, and contain the exact same copy of the organism’s entire genome. As such, Option C , Identical and the same amount of DNA, is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Identical and half the amount of DNA – This option is incorrect because two daughter cells resulting from mitosis will have the same amount of DNA. Recall that during mitosis, the total number of chromosomes in the parent cell doubles from 46 to 92 (in the case of humans). After cytokinesis occurs (separation into two cells), the 92 chromosomes are equally shared between the two daughter cells. Therefore, at the end of mitosis, each daughter cell has 46 chromosomes. Only meiosis reduces the amount of DNA during cell division. Option B. Not identical and half the amount of DNA – This option is incorrect because mitosis creates daughter cells resulting with the same amount of DNA while also sharing identical DNA. Recall that only meiosis—not mitosis—results in non-identical daughter cells because it is the only process that involves chromosomal crossing over. Moreover, meiosis carries out reductional cell division because a diploid parent cell gives rise to haploid daughter cells — in other words, half the amount of DNA. However, this question is asking about mitosis, which will always give rise to two genetically identical cells (i.e., identical in both amount and sequence of genes). Therefore, this option is incorrect. Option D. Not identical and the same amount of DNA – This option is incorrect because two daughter cells resulting from mitosis will have identical DNA. Recall that during the S phase of interphase, each chromosome undergoes replication and consists of two identical copies called sister chromatids, which are linked together at a region called the centromere. During metaphase, these pairs of identical sister chromatids line up at the center of the cell, and during anaphase, the identical sister chromatids are pulled apart and separated from each other. Therefore, the two daughter cells share the exact same DNA. Only meiosis alters the DNA of the daughter cells compared to the parent cells. Option E. Identical and four times the amount of DNA – This option is incorrect because two daughter cells resulting from mitosis will have the same amount of DNA – NOT four times. For mitosis to produce a four-fold difference in the amount of DNA between daughter cells, an error would have to occur during cell division. Even if such a rare mistake were to occur, it would likely be flagged by one of the checkpoints of cell division. Therefore, such a discrepancy in the amount of DNA between two daughter cells is highly unlikely to occur.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+39+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 7,
+    "question_number": 40,
+    "question": {
+      "text": "A scientist accidentally mixes together bacterial, fungal, and plant cells in a petri dish. He will be able to correctly identify each of these cells by closely examining the composition of their __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Nucleus",
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Cell wall",
+        "percentage_selected": "(88%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Ribosomes",
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Glucose",
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Mitochondria",
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cell wall",
+    "analytics": {
+      "percent_correct": "88%",
+      "time_spent": "0 min, 18 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "This question tests your knowledge of the various types of cell walls and the molecules that compose them. Recall that plants are not the only organisms with cell wall structures in their cells; cell walls are also found in bacteria, fungi, and archaea. In prokaryotes, bacterial cell walls are made up of peptidoglycan , whereas archaea cell walls are made up of polysaccharides . Within the eukaryotes, plant cell walls are made up of cellulose , whereas fungal cell walls are made up of chitin . This question is essentially asking for a cell component found in bacteria, fungi, and plants, but with enough differences in that component to distinguish the three from each other. The cell wall is the only cell component that matches these criteria. Therefore, Option B , Cell wall , is the correct answer. CC By 4.0",
+      "poe_text": "Option A. Nucleus – This option is incorrect . Bacteria notably lack a nuclear membrane, and therefore, lack a true nucleus. Instead, bacterial cells hold their genetic information as one circular DNA molecule in an irregularly shaped region called the nucleoid. Because there is no nuclear membrane, bacterial transcription and translation occur simultaneously in the cytosol. Fungal and plant cells both contain a nucleus, therefore, the scientist could not correctly distinguish the two by examining the nucleus alone. Option C. Ribosomes – This option is incorrect because the presence of ribosomes cannot distinguish between all three cell types mentioned above. Ribosomes are the polypeptide-producing machinery found in archaea, prokaryotes, and eukaryotes. As the primary site of protein synthesis, ribosomes play a crucial role in the proper function of most of life on earth, including bacteria, fungi, and plants. Bacterial ribosomes can be distinguished from eukaryotic ribosomes because of the difference in size (70S vs 80S, respectively). However, fungi and plant cells are both eukaryotic, therefore, ribosomes cannot be used to distinguish between the two (since they both have 80S ribosomes), making this answer choice incorrect. Option D. Glucose – This option is incorrect . Plants produce glucose via photosynthesis, whereas bacteria and fungi break down glucose via glycolysis. While all three cell types use glucose for crucial cell functions, glucose is NOT a structural component in any of them. Glucose is too universal of a molecule to life, rendering it a bad identifying factor when comparing bacteria, fungi, and plant cells. Option E. Mitochondria – This option is incorrect because bacteria do NOT have mitochondria in their structure. Remember that bacteria are prokaryotic, which means they lack membrane-bound organelles such as mitochondria. Instead, bacteria rely primarily on glycolysis or produce their ATP through an electron transport chain embedded within the cell’s own cell membrane (as opposed to the inner membrane of mitochondria). Fungi and animal cells are both eukaryotic and have mitochondria; the scientist would not be able to distinguish between the two solely based on the presence of mitochondria, thus making this option incorrect.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+7/Question+40+Solution+1.png"
+      ]
+    }
+  }
+]

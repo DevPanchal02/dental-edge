@@ -1,0 +1,2123 @@
+[
+  {
+    "test_number": 8,
+    "question_number": 1,
+    "question": {
+      "text": "In what plant structure of an angiosperm does meiosis take place to produce eggs?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Pedicel - Filament",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Pistil - Ovary",
+        "percentage_selected": "(91.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Stamen - Anther",
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Perianth - Sepal",
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Stamen - Microsporangium",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Pistil - Ovary",
+    "analytics": {
+      "percent_correct": "91.4%",
+      "time_spent": "0 min, 22 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "Angiosperms , also known as anthophyta, are flowering plants which include fruits, maple, oaks, grass, etc., and are the dominant land plant form. The flower is the reproductive structure of an angiosperm. The pistil, specifically, is the female reproductive structure, consisting of three parts: ovary, style, and stigma. The ovary encloses one or more ovules with an egg nucleus. The ovule inside the ovary consists of a megaspore mother cell that undergoes meiosis to form four haploid megaspores. Since meiosis takes place inside the female reproductive structure (pistil), specifically the ovary, Option B is correct. Angiosperms begin the process of fertilization when pollen lands on the sticky stigma. The pollen tube, a structure designed to deliver sperm cells to the female gametophyte, contains two sperm cells and a vegetative nucleus that can grow down the style toward the ovule. The ovule inside the ovary consists of a megaspore mother cell that undergoes meiosis to form four haploid megaspores. One of these megaspores survives to undergo mitosis three times to create eight nuclei. Six of the nuclei form an embryo sac which contains the egg. Once the pollen tube (two sperm cells) reach the embryo sac, one sperm cell fertilizes the egg and forms a diploid zygote. The other sperm cell fuses with polar nuclei to create a triploid nucleus and endosperm for nutrient supply. This unique process of fertilization is called double fertilization. Double fertilization is the fertilization of the egg and polar nuclei each by a separate sperm cell. Aside from the pistil, the major parts of a flower also include the stamen and petals. The stamen is the male reproductive structure, consisting of three parts: pollen-bearing anther, stalk, and filament. The petals function to attract pollinators and also protect the flower bud. CC BY 4.0",
+      "poe_text": "Option A. Pedicel – Filament – This option is incorrect because the filament is part of the male reproductive structure of the plant and eggs are the sex cells of the female reproductive structure of the plant. The filament functions to support the anther, the pollen-producing structure of the plant. The pedicel is a structure that attaches a single flower to its stem. Option C. Stamen – Anther – This option is incorrect because the stamen is the male reproductive structure of the plant and eggs are the sex cells of the female reproductive structure of the plant. The anther is a chamber where the pollen develops. Option D. Perianth – Sepal – This option is incorrect because the perianth and sepal are the part of the plant that hide and enclose the pistil. Hence, the perianth and sepal belong to the non-reproductive part of the plant. As the non-reproductive part of the plant, these structures do not serve a purpose in the production of egg cells. Option E. Stamen – Microsporangium – This option is incorrect because the stamen is the male reproductive structure of the plant and eggs are the sex cells of the female reproductive structure of the plant. The microsporangium is a structure in the plant’s male reproductive organ where the development of pollen takes place.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 2,
+    "question": {
+      "text": "Which of the following components of the lipid bilayer is hydrophobic?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Polar head",
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Phosphate group",
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "R group",
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Fatty acid tail",
+        "percentage_selected": "(95.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Extracellular matrix",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Fatty acid tail",
+    "analytics": {
+      "percent_correct": "95.9%",
+      "time_spent": "0 min, 9 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Cell membranes consist of a continuous double layer of lipid molecules. Such biological membranes are mainly composed of phospholipids and proteins along with some cholesterol. Phospholipids , specifically, consist of a glycerol backbone, one phosphate group, and two fatty acid tails. The glycerol backbone and phosphate group are a part of the hydrophilic (water-loving; tendency to get absorbed or dissolved by water) head, whereas the two fatty acid tails are a part of the hydrophobic (water-fearing; tendency to not mix with water) tail. When a molecule has both polar and nonpolar parts, we call them amphipathic. The amphipathic nature of phospholipids has allowed them to form a lipid bilayer in which the hydrophilic heads are in contact with the extracellular/intracellular environment (which is aqueous) while the hydrophobic tails are hidden on the inside and therefore not exposed to water. While the hydrophilic part of the lipid bilayer comprises the glycerol backbone and phosphate group, the hydrophobic part of the lipid bilayer comprises the two fatty acid tails. Therefore, Option D is correct. CC BY 4.0",
+      "poe_text": "Option A. Polar head – This option is incorrect because polar molecules are hydrophilic, since polar molecules dissolve easily in water. Polar molecules dissolve easily in water because water is also a polar molecule and “like dissolves like”. Therefore, Option A is referring to the hydrophilic head of the lipid bilayer that consists of the glycerol backbone and phosphate group. Since the question is asking to identify the hydrophobic component of the lipid bilayer, this option is incorrect. Option B. Phosphate group – This option is incorrect because the phosphate group belongs to the hydrophilic head of the lipid bilayer, along with the glycerol backbone. Since the question is asking to identify the hydrophobic component of the lipid bilayer, this option is incorrect. Option C. R group – This option is incorrect because although the R group is located by the hydrophilic head, R groups can either be hydrophilic, hydrophobic, or neutral depending on its chemical structure. The R group of a phospholipid refers to a variable group of atoms/molecules that provides each phospholipid its unique chemical and physical properties. The R group of a phospholipid is attached to its phosphate group. Option E. Extracellular matrix – This option is incorrect because the extracellular matrix is not a component of the lipid bilayer and instead lies above it. The extracellular matrix, consisting of fibrous structural proteins, adhesion proteins, and polysaccharides secreted by cells, is found in animals between adjacent cells. It functions to provide mechanical support and bind adjacent cells.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+2+Solution+1.jpg "
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 3,
+    "question": {
+      "text": "All of the following could be found in a prokaryote EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Nucleus",
+        "percentage_selected": "(90.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Ribosomes",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Cell wall",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cell membrane",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Flagella",
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Nucleus",
+    "analytics": {
+      "percent_correct": "90.5%",
+      "time_spent": "0 min, 25 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Prokaryotes are unicellular, while eukaryotes are often (but not always) multi-celled organisms. Eukaryotic cells have membrane-bound organelles while prokaryotic cells do not. Membrane-bound organelles include the endoplasmic reticulum (ER), Golgi apparatus, nucleus, mitochondria, chloroplasts, lysosomes, and peroxisomes. An example of a membrane-bound organelle found exclusively in eukaryotes is the nucleus. The nucleus serves to store genetic information. The nucleus contains chromatin, a general packaging structure of DNA around proteins. The nucleus, specifically the nucleolus inside the nucleus, also serves as the site of ribosome synthesis. Since prokaryotic cells do not have a nucleus, they store their genetic material in an irregular shaped region called the nucleoid. Prokaryotic DNA exists in a single, circular, naked, double-stranded state without chromatin level organization. Therefore, Option A is correct. CC BY 4.0.",
+      "poe_text": "Option B. Ribosomes – This option is incorrect because ribosomes are found in prokaryotes. Ribosomes are organelles that function to make proteins. Eukaryotic ribosomes are heavier than prokaryotic ribosomes. Although ribosomes vary in size, it is a structure that is found in both prokaryotes and eukaryotes. Option C. Cell wall – This option is incorrect because prokaryotic cells do contain a cell wall. The cell wall functions to provide support in plants, fungi, protists, and bacteria. Plant cell walls are made of cellulose, fungi cell walls are made of chitin, and bacteria cell walls are made of peptidoglycan. Option D. Cell membrane – This option is incorrect because the cell membrane is found in prokaryotes. Cell membranes consist of a continuous double layer of lipid molecules. Such biological membranes are mainly composed of phospholipids and proteins along with some cholesterol. Both prokaryotic and eukaryotic cells have a cell membrane that separates the cell interior from the outside environment. Option E. Flagella - This option is incorrect because flagella are found in prokaryotes. Flagella are microscopic structures involved in the locomotion of the cell. Flagella initiates cell movement by undulating like snakes. Prokaryotic flagella are constructed from flagellin while eukaryotic flagella are constructed from microtubules. Although the components of the flagella vary between prokaryotes and eukaryotes, flagella is a structure found in both prokaryotes and eukaryotes.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+3+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 4,
+    "question": {
+      "text": "Which feature of the mitochondria supports the endosymbiotic theory?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Circular DNA",
+        "percentage_selected": "(92.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Single membrane",
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Production of ATP",
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Same genome as host",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Division by mitosis",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Circular DNA",
+    "analytics": {
+      "percent_correct": "92.3%",
+      "time_spent": "0 min, 36 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The endosymbiotic theory is the leading evolutionary theory about the origin of early eukaryotic cells from prokaryotic cells. The endosymbiotic theory suggests that at some point in history, an aerobic or photosynthetic bacterium was engulfed by another cell to form mitochondria and chloroplasts respectively. The aerobic or photosynthetic bacterium was engulfed through phagocytosis (cell eating) then remained undigested as it provided new functionality to the engulfing cell. For example, the aerobic bacterium allowed cellular respiration within the engulfing cell that previously lacked such functionality. Similarly, the photosynthetic bacterium provided photosynthetic ability to the engulfing cell that previously lacked such functionality. CC BY 4.0 Evidence for the endosymbiotic theory includes similar key features between mitochondria and chloroplasts. 1) Mitochondria and chloroplasts both have their own naked and circular DNA, similar to prokaryotic DNA structure. 2) Mitochondria and chloroplasts both have a double membrane. 3) Mitochondria and chloroplasts both have 70S ribosomes consisting of the 50S and 30S subunits, similar to prokaryotic ribosomes. 4) Mitochondria and chloroplasts can both reproduce independently of the host cell through a fission-like process, similar to how prokaryotes replicate oneself. 5) Mitochondria and chloroplasts are both susceptible to antibiotics, indicating that the organelles may have bacterial origins. The presence of the naked and circular DNA within mitochondria and chloroplasts provides support to the endosymbiotic theory. Therefore, Option A is correct.",
+      "poe_text": "Option B. Single membrane – This option is incorrect because mitochondria actually have double membranes, not a single membrane. The double membrane supports the endosymbiotic theory because it suggests that as the original free bacteria were internalized, it obtained a part of the host cell membrane in addition to its own membrane, leading to two separate phospholipid bilayers. Chloroplasts also have a double membrane which similarly adds support to the endosymbiotic theory. Option C. Production of ATP – This option is incorrect because while mitochondria do produce ATP through cellular respiration, the production of ATP is not a part of the evidence for the endosymbiotic theory. Option D. Same genome as host – This option is incorrect because mitochondria have its own naked and circular DNA, separate from the DNA of its host. The human nuclear genome is significantly larger, whereas the human mitochondrial genome is comparatively tiny and with different genes. The fact that mitochondria and chloroplasts have their own unique DNA and, therefore, have a different genome from its host provides support to the endosymbiotic theory. Option E. Division by mitosis – This option is incorrect because like bacteria, mitochondria actually divide by binary fission, not mitosis. Mitochondria and chloroplasts can both reproduce independently of the host cell through binary fission. Binary fission is a simple form of asexual reproduction in which an organism is directly separated into two organisms. On the other hand, mitosis is a more complex eukaryotic cell division mechanism of dividing and separating chromosomes that occurs in somatic cells. In prokaryotic cells, mitosis and meiosis do not occur.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 5,
+    "question": {
+      "text": "What is the main purpose of ATP?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Harnesses energy from exergonic reactions to power endergonic reactions",
+        "percentage_selected": "(91.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Brings the reactants closer together",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Generates glucose molecules",
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Lowers the activation energy",
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Converts chemical energy to sunlight",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Harnesses energy from exergonic reactions to power endergonic reactions",
+    "analytics": {
+      "percent_correct": "91.7%",
+      "time_spent": "0 min, 17 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "ATP (adenosine triphosphate) is a common source of chemical energy. ATP stores potential energy in the form of chemical energy. New ATP is formed in the mitochondria via phosphorylation in which ADP (adenosine diphosphate) and phosphate come together using energy from the exergonic reactions such as the breakdown of glucose. ATP, however, is an unstable molecule because the three phosphates in ATP are negatively charged and repel each other. Hence, when one phosphate group is removed via hydrolysis, a more stable ADP molecule results. The change from a less stable molecule to a more stable molecule always releases energy; therefore, ATP hydrolysis releases energy. CC BY 4.0 Gibbs Free Energy (ΔG) informs us whether a given chemical reaction can occur spontaneously. If ΔG is negative, then the reaction can occur spontaneously. On the other hand, if ΔG is positive, the reaction occurs non-spontaneously. Spontaneous chemical reactions are generally more favorable than non-spontaneous chemical reactions. In the context of biology, chemical reactions can be coupled together if they share intermediates. Hence, an unfavorable reaction with a positive ΔG value can be driven by a second, highly favorable reaction with a negative ΔG value. In other words, an unfavorable endergonic reaction can be driven by a favorable exergonic reaction. This is how ATP drives chemical work. When the chemical bonds within ATP are broken, energy is released and that energy can be harnessed for cellular work that may be endergonic. Therefore, Option A is correct.",
+      "poe_text": "Option B. Brings the reactants closer together – This option is incorrect because ATP does NOT bring reactants closer together and instead serves as an energy source for important biological functions. Enzymes bind to reactant molecules and bring them closer together such that chemical bond-breaking and bond-forming processes can take place more readily. By doing so, enzymes are able to speed up chemical reactions. Option C. Generates glucose molecules – This option is incorrect because ATP does not produce glucose molecules. The main purpose of ATP is serving as an energy source for important biological functions by harnessing energy from exergonic reactions to power endergonic reactions. In fact, the reverse occurs in cellular respiration: glucose is broken down to create ATP. Option D. Lowers the activation energy – This option is incorrect because enzymes are globular proteins that act as catalysts. Catalysts lower the activation energy of a reaction in order to accelerate the rate of the overall reaction. Since ATP is not an enzyme and does NOT lower activation energy, and instead serves as an energy source for important biological functions, this option is incorrect. Option E. Converts chemical energy to sunlight – This option is incorrect because the conversion of chemical energy to sunlight is not only NOT a function of ATP, but it is simply an impossible process that does not exist. During photosynthesis, sunlight is converted to chemical energy through a series of chemical reactions.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 6,
+    "question": {
+      "text": "Which trophic level is greatest in both biomass and energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Apex predators",
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Secondary consumers",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Primary consumers",
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Primary producers",
+        "percentage_selected": "(86.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Decomposers",
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Primary producers",
+    "analytics": {
+      "percent_correct": "86.4%",
+      "time_spent": "0 min, 16 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Ecosystems have trophic levels that categorize plants and animals based on their main energy source. Each trophic level is a step in the food chain. Apex predators eat tertiary consumers, which eat secondary consumers , which eat primary consumers , which eat primary producers . Primary producers are autotrophs that convert sunlight into chemical energy. Primary producers include plants, photosynthetic protists, and cyanobacteria. An energy pyramid illustrates the amount of energy that is transferred at each trophic level. On average, only 10% of energy is transferred up trophic levels due to thermodynamic losses. 90% of the energy is lost to metabolism and to decomposers when they die. Hence, energy is greatest at the primary producer level and lowest at the tertiary consumer level. In living organisms, energy is stored in organic material which contributes to biomass. Thus, the trophic level with the greatest energy has the greatest biomass. In other words, the primary producers that directly receive energy from the sun have the greatest amount of biomass. Also, the number of organisms in a trophic level is directly proportional to the amount of biomass. Since there are more primary producers than any other type of organism on the energy pyramid, primary producers have the greatest biomass.  Therefore, Option D is correct. CC BY 4.0",
+      "poe_text": "Option A. Apex predator – This option is incorrect because the apex predators are at the highest trophic level where biomass and energy are lowest compared to other trophic levels. The amount of energy that is transferred at each trophic level decreases as you move up the energy pyramid. The bottom trophic level is, in fact, greatest in both biomass and energy. Option B. Secondary consumers – This option is incorrect because the secondary consumers are near the top of the energy pyramid. The amount of energy that is transferred at each trophic level decreases as you move up the energy pyramid. The bottom trophic level is, in fact, greatest in both biomass and energy. Option C. Primary consumers – This option is incorrect because the primary consumers can be found above the primary producers on the energy pyramid. The amount of energy that is transferred at each trophic level decreases as you move up the energy pyramid. The bottom trophic level is, in fact, greatest in both biomass and energy. Option E. Decomposers – This option is incorrect because decomposers do not have the greatest biomass and/or energy, as they always rely on other trophic levels for energy. Decomposers, also known as detritivores, are not assigned a particular trophic level because they consume nonliving organic material from all trophic levels.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 7,
+    "question": {
+      "text": "A father has hemophilia, an X-linked trait. The mother is a carrier but does not have hemophilia. What are the chances that their son will have hemophilia?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0%",
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "25%",
+        "percentage_selected": "(15.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "50%",
+        "percentage_selected": "(72.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "75%",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "100%",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "50%",
+    "analytics": {
+      "percent_correct": "72.3%",
+      "time_spent": "0 min, 47 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "First, consider the sex chromosomes that the son must have: X and Y. (Females have XX genotypes and males have XY genotypes.) We know that each parent must contribute one of these chromosomes. Let’s look at their genotypes: Now, let’s examine what the son will inherit from each parent. The son is male and we know that the Y chromosome can only come from the father. This means the X chromosome will be inherited from the mother. Because the son has a 50% chance of inheriting either X chromosome from the mother, there is a 50% chance he will be XY (normal) and a 50% chance he will be X h Y (hemophiliac). Remember that even if a condition is X-linked recessive, it will be expressed in males because there is no second copy of the chromosome to mask the condition. Therefore, option X is correct. Remember that in this question, you are already being told the couple is having a son. The probability you calculate should be limited to outcomes with XY chromosomes, since the question is not asking the probability of having a son and the probability of that son having hemophilia, but already assumes that the child is a son. CC BY 4.0",
+      "poe_text": "Option A. 0% – This option is incorrect because the father will pass on the Y chromosome to his son and the mother will either pass down the X chromosome with the defective gene OR the X chromosome with the normal (wild-type) copy of the gene. Therefore, there is a 50% chance that the couple’s son will have hemophilia. In order for there to be a 0% chance that the couple’s son will have hemophilia, the mother must have two copies of the normal (wild-type) gene. Option B. 25% – This option is incorrect because the father will pass on the Y chromosome to his son and the mother will either pass down the X chromosome with the defective gene OR the X chromosome with the normal (wild-type) copy of the gene. Therefore, there is a 50% chance that the couple’s son will have hemophilia. Option D. 75% – This option is incorrect because the father will pass on the Y chromosome to his son and the mother will either pass down the X chromosome with the defective gene OR the X chromosome with the normal (wild-type) copy of the gene. Therefore, there is a 50% chance that the couple’s son will have hemophilia. Option E. 100% – This option is incorrect because the father will pass on the Y chromosome to his son and the mother will either pass down the X chromosome with the defective gene OR the X chromosome with the normal (wild-type) copy of the gene. Therefore, there is a 50% chance that the couple’s son will have hemophilia. In order for there to be a 100% chance that the couple’s son will have hemophilia, the mother must have two copies of the defective gene.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+7+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 8,
+    "question": {
+      "text": "A geneticist is investigating several genes of interest. At the end of the experiment, she concludes that two of the genes are linked. Gene linkage refers to the inheritance of __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The same genes on different chromosomes",
+        "percentage_selected": "(17.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Different genes on different chromosomes",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The same genes on different gametes",
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Different genes on the same chromosomes",
+        "percentage_selected": "(78.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Identical genes on the same gamete",
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Different genes on the same chromosomes",
+    "analytics": {
+      "percent_correct": "78.5%",
+      "time_spent": "0 min, 30 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Gene linkage refers to the proximity of genes to each other on chromosomes. The closer the genes are to each other on chromosomes, the more likely they are to be inherited together from parents to offspring. If two genes are linked, they are less likely to be separated during crossing over of homologous chromosomes during meiosis due to physical proximity. On the other hand, if two genes are unlinked (physically far apart), they are more likely to be separated during crossing over of homologous chromosomes. If these unlinked genes are inherited together, it is purely by chance and does not have anything to do with proximity. Since linked genes are different genes that are found close together on the same chromosome, gene linkage refers to the inheritance of different genes on the same chromosome. Therefore, Option D is correct.",
+      "poe_text": "Option A. The same genes on different chromosomes – This option is incorrect because linked genes are different genes that are found close together on the same chromosome. If genes are located on different chromosomes, they are unlinked because they assort independently. Also, genes cannot be linked if they are the same gene. Option B. Different genes on different chromosomes – This option is incorrect because linked genes are different genes that are found close together on the same chromosome. If genes are located on different chromosomes, they are unlinked because they assort independently and cannot cross over together. Option C. The same genes on different gametes – This option is incorrect because linked genes are different genes that are found close together on the same chromosome. Gametes are reproductive cells of an animal or plant. By the time we form gametes, crossing over has already happened; hence, gene linkage is irrelevant at this point. Also, genes cannot be linked if they are the same gene. Option E. Identical genes on the same gamete – This option is incorrect because linked genes are different genes that are found close together on the same chromosome. Gametes are reproductive cells of an animal or plant. By the time we form gametes, crossing over has already happened; hence, gene linkage is irrelevant at this point. Also, genes cannot be linked if they are identical genes.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 9,
+    "question": {
+      "text": "All of the following are characteristics of epigenetics EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Modifies nucleotide sequence",
+        "percentage_selected": "(59.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Heritable",
+        "percentage_selected": "(19.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Contributes to phenotypic variability",
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Influences gene expression",
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "May result from external or environmental factors",
+        "percentage_selected": "(14.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Modifies nucleotide sequence",
+    "analytics": {
+      "percent_correct": "59.7%",
+      "time_spent": "0 min, 17 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Epigenetics involves heritable phenotypes that result from changes to the expression of the genome without modifying the nucleotide sequence. Epigenetics regulates when certain genes are expressed. In other words, it allows specific genes to turn “on” or “off”. Since epigenetics do not alter the nucleotide sequence, epigenetic changes explain why genetically identical organisms can still have noticeable physical differences. Epigenetic changes take place by altering the chromatin structure. Chromatin is a condensed structure of DNA that is wrapped around proteins like histones to reduce their size. It is important to understand that the more tightly DNA is wrapped around histones, the less accessible it is for transcription and the lower the gene expression. On the other hand, the more loosely DNA is wrapped around histones, the more accessible it is for transcription and the higher the gene expression. Epigenetic regulation methods take advantage of the concept of “tight = silenced, loose = expressed”. Epigenetic changes include these two major modifications: Since epigenetics refers to heritable changes in the expression of genes due to modifications that do NOT alter the nucleotide sequence, it is incorrect that epigenetics modifies nucleotide sequence. Therefore, Option A is correct. CC BY 4.0",
+      "poe_text": "Option B. Heritable – This option is incorrect because epigenetic modifications are indeed heritable due to the semi-conservative nature of DNA replication. This means that the modifications made to the DNA (not the nucleotide sequences) can be passed on from parent to daughter cell, or from parents to offspring. Option C. Contributes to phenotypic variability – This option is incorrect because epigenetic modifications influence gene expression by either inducing the expression or inducing the suppression of specific genes and thus do contribute to phenotypic variability. In other words, epigenetic changes explain why genetically identical organisms can still have noticeable physical differences. Option D. Influences gene expression – This option is incorrect because epigenetic changes do influence gene expression by affecting the accessibility of DNA and the ability of histones to wind DNA around itself. Specific genes are turned “on” or “off” under the influence of epigenetic changes. Option E. May result from external or environmental factors – This option is incorrect because epigenetic changes can be triggered by changes in the environment such as temperature, diet, exposure to chemicals and UV, as well as biological changes such as aging. These environmental factors can cause genetically identical twins to have noticeable physical differences. For example, if one twin maintained a nutritious diet while the other twin did not, the genetically identical twins may display a difference in size due to diet affecting growth.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+9+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 10,
+    "question": {
+      "text": "The survival of some bacteria even in harsh and extreme environmental conditions is facilitated by which structure?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Gram-positive membrane",
+        "percentage_selected": "(11.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Gram-negative membrane",
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Endospore",
+        "percentage_selected": "(62.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Glycocalyx",
+        "percentage_selected": "(13.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Endotoxin",
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Endospore",
+    "analytics": {
+      "percent_correct": "62.2%",
+      "time_spent": "0 min, 16 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "Some bacteria may form a structure called an endospore during harsh conditions. Endospores allow the survival of the genetic material during extreme conditions including extreme temperatures, radiation, chemicals, and desiccation. Endospores consist of a small amount of cytoplasm, DNA, and ribosomes surrounded by a durable wall. Endospore formation is usually triggered by a lack of nutrients or other unfavorable conditions. When conditions become favorable again, the bacteria are capable of returning to a normal state and reproducing itself. CC BY 4.0",
+      "poe_text": "Option A. Gram-positive membrane – This option is incorrect because the gram-positive membrane does NOT facilitate the survival of bacteria in harsh environmental conditions. While gram-positive bacteria lack an outer membrane, they have a thick peptidoglycan cell wall. Although gram-positive bacteria have a thicker peptidoglycan cell wall than gram-negative bacteria, the peptidoglycan layer does not help the bacteria survive in harsh and extreme environmental conditions. Option B. Gram-negative membrane – This option is incorrect because the gram-negative membrane does NOT facilitate the survival of bacteria in harsh environmental conditions. Gram-negative bacteria are surrounded by a thin peptidoglycan cell wall with an outer membrane around it. The outer membrane contains lipopolysaccharides (LPS). Neither peptidoglycan cell wall nor the outer membrane helps the bacteria survive harsh and extreme environmental conditions. Option D. Glycocalyx – This option is incorrect because the glycocalyx is a dense, gel-like carbohydrate coat that surrounds some bacteria. It functions to help the bacteria adhere to other cells, and protect against infection by viruses by serving as a physical barrier, and in cell-to-cell recognition. However, it does not help the bacteria survive in harsh and extreme environmental conditions. Option E. Endotoxin – This option is incorrect because endotoxins do NOT help the bacteria survive in harsh environmental conditions. Endotoxins are lipopolysaccharides (LPS) contained in the cell wall of gram-negative bacteria. When a bacteria is broken down, the lipopolysaccharides are released and can initiate a host inflammatory response.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+10+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 11,
+    "question": {
+      "text": "Which of the following is NOT included in Hardy-Weinberg equilibrium?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "No mutations",
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "No large population",
+        "percentage_selected": "(79.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "No natural selection",
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "No gene flow",
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Random mating",
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "No large population",
+    "analytics": {
+      "percent_correct": "79.5%",
+      "time_spent": "0 min, 22 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Hardy-Weinberg equilibrium states that the genetic variation in a population will remain constant from one generation to the next in the absence of evolutionary influences. In other words, if allele frequencies remain constant from generation to generation, then there is no evolution. These are the requirements to be in Hardy-Weinberg equilibrium: Large populations are necessary for decreasing the effects of genetic drift. Genetic drift is the random increase and decrease of an allele by chance. It has a larger effect on smaller populations because the chances of an allele being lost or fixed in the population become much higher. Since evolutionary influences like genetic drift must be eliminated in Hardy-Weinberg equilibrium, Option B is correct.",
+      "poe_text": "Option A. No mutations – This option is incorrect because the absence of mutations is a requirement of Hardy-Weinberg equilibrium. Mutations are random changes in DNA sequence that introduce new alleles to a population. The random introduction of new alleles to a population disturbs Hardy-Weinberg equilibrium. Option C. No natural selection – This option is incorrect because the absence of natural selection is a requirement of Hardy-Weinberg equilibrium. Natural selection is the increase and decrease of allele frequencies due to adaptations to the environment. The environment should not impact allele frequencies under Hardy-Weinberg equilibrium; hence, the absence of natural selection is a requirement of Hardy-Weinberg equilibrium. Option D. No gene flow – This option is incorrect because the absence of gene flow is a requirement of Hardy-Weinberg equilibrium. Gene flow is the introduction and removal of alleles from a population when individuals leave (emigrate) or enter the population. However, migration does not happen under Hardy-Weinberg equilibrium. Under Hardy-Weinberg equilibrium, we assume that the population is isolated and isolated populations cannot have gene flow. Option E. Random mating – This option is incorrect because random mating is a requirement of Hardy-Weinberg equilibrium. Random mating is a mating system in which individuals of a population choose mates randomly. Hence, random mating decreases the chances of any allele from changing in frequency. If the population took on a non-random mating system, then individuals would choose mates based upon particular traits, increasing the frequency of the alleles encoding those traits.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 12,
+    "question": {
+      "text": "What accurately describes T-lymphocytes?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Releases antibodies for antibody-mediated immunity",
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Can bind to free-floating antigens",
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Produce interferons to stimulate lymphocyte proliferation",
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Participate in the opsonization of pathogens",
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Are necessary for cell-mediated immunity",
+        "percentage_selected": "(75%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Are necessary for cell-mediated immunity",
+    "analytics": {
+      "percent_correct": "75%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Cell-mediated immunity is controlled by T lymphocytes that act directly against infected cells. T lymphocytes originate in the bone marrow, but mature in the thymus. They have antigen receptors, but do not make antibodies. Hence, T lymphocytes work by searching for antigens displayed by antigen-presenting cells instead of directly attacking antigens on a pathogen. All nucleated cells display MHC I (major histocompatibility complex I) on its plasma membrane. If a cell is infected by a virus, viral protein fragments are displayed on MHC I, indicating to a T lymphocyte that the cell is infected. The T cell then differentiates into a CD8 (cytotoxic) T cell that recognizes and destroys non-self cells by releasing perforin, a protein that can puncture cells. Perforin can attack many cells at once because they do not phagocytize infected cells. MHC II (major histocompatibility complex II) is displayed primarily by antigen-presenting cells that can take up and display free-floating fragments of pathogenic protein products. A T cell binding to MHC II differentiates into a CD4 (helper) T cell. This helper T cell stimulates the activation of B lymphocytes and other T lymphocytes. This is analogous to a security guard detecting signs of a break-in and sounding an alarm.",
+      "poe_text": "Option A. Releases antibodies for antibody-mediated immunity – This option is incorrect because T-lymphocytes do not release antibodies for antibody-mediated immunity. B-lymphocytes, instead, produce antibodies in response to antigens. Antibodies are proteins that are specific to each antigen. The plasma membrane of B cells contains antigen-receptor antibodies that can be dissolved into antibodies. Option B. Can bind to free-floating antigens – This option is incorrect because T-lymphocytes can only bind to antigens presented by antigen-presenting cells. They cannot bind to free-floating antigens because they are unable to recognize antigens that are not on the surface of antigen-presenting cells. Option C. Produce interferons to stimulate lymphocyte proliferation – This option is incorrect because helper T cells produce interleukins, not interferons, to help promote an immune response. Interleukins are cytokines that trigger the proliferation of T cells, B cells, and macrophages. Interferons are signaling proteins secreted by cells invaded by viruses to stimulate neighboring cells to produce proteins to defend against the virus. Option D. Participates in the opsonization of pathogens – This option is incorrect because opsonization is performed only by antibodies, the complement system, and a few other proteins. Opsonization refers to the process of marking an antigen for phagocytosis via macrophage, neutrophil, or natural killer cell. T-lymphocytes do not directly opsonize pathogens; instead, opsonization is performed primarily by B-lymphocytes.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 13,
+    "question": {
+      "text": "Which of the following develops into macrophages?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Neutrophils",
+        "percentage_selected": "(9.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Mast cells",
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Eosinophils",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Monocytes",
+        "percentage_selected": "(78.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Dendritic cells",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Monocytes",
+    "analytics": {
+      "percent_correct": "78.3%",
+      "time_spent": "0 min, 7 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Leukocytes (white blood cells) protect the body against microorganisms and also remove debris. There are five types of leukocytes: neutrophils, lymphocytes, macrophages, eosinophils, and basophils. Among these, macrophages are professional antigen-presenting cells that phagocytize cell debris and pathogens. Monocytes circulate in blood until they move into tissues via diapedesis, where they thin out and move through the endothelial cells of capillaries. As shown in the image below, monocytes then develop into macrophages . Therefore, Option D is correct. CC BY 4.0",
+      "poe_text": "Option A. Neutrophils – This option is incorrect because neutrophils develop from the myeloblast and do not differentiate any further. Neutrophils are drawn to infected areas via chemotaxis and function in destructing pathogens in infected tissues. Option B. Mast cells – This option is incorrect because mast cells develop from the common myeloid progenitor and do not differentiate any further. Mast cells function in allergic response and inflammatory response regarding histamine release. Histamine, a compound secreted by mast cells, stimulates vasodilation. The increased blood supply then stimulates white blood cells that can kill pathogens. Option C. Eosinophils – This option is incorrect because eosinophils develop from the myeloblast and do not differentiate any further. Eosinophils work collectively to surround and destroy multicellular parasites; however, they are not phagocytes. Option E. Dendritic cells – This option is incorrect because dendritic cells develop from monocytes and do not differentiate any further. Dendritic cells are responsible for the ingestion of pathogens and stimulation of acquired immunity. They function as an antigen-presenting cell that activates T-lymphocytes.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+13+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 14,
+    "question": {
+      "text": "Which of the following is a function of the lymphatic system?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Transport fats towards the digestive system",
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Return fluids that have escaped from blood vessels",
+        "percentage_selected": "(80.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Transport of nutrients towards target cells",
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Synthesis of erythrocytes",
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Take up particles except larger proteins",
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Return fluids that have escaped from blood vessels",
+    "analytics": {
+      "percent_correct": "80.1%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The lymphatic system is the open, secondary circulatory system that transports excess interstitial fluid (lymph) through lymphatic vessels, the movement of which is aided by adjacent muscle contractions, and returns it to the primary circulatory system via the thoracic duct and right lymphatic duct. The lymphatic system has valves to prevent backflow when fluid gets sent to the blood circulatory system. The image below illustrates the essential components of the human lymphatic system along with its function of draining fluid away from tissues. Since the main function of the lymphatic system is returning escaped fluids back to the primary circulatory system, Option B is correct. The lymphatic system also plays a role in transporting absorbed fats from the small intestine to the blood. In addition to absorbed fats, proteins and large particles that can’t be taken up by the capillaries are removed to the lymph. The lymphatic system also contains lymph nodes that have phagocytic leukocytes that filter the lymph and serve as immune response centers. CC BY 4.0",
+      "poe_text": "Option A. Transport fats towards the digestive system – This option is incorrect because the lymphatic system transports fats AWAY from the small intestine of the digestive system. The absorbed fats are transported from the small intestine to the blood. Option C. Transport of nutrients towards target cells – This option is incorrect because the transport of nutrients towards target cells is carried out by the circulatory system and the capillaries interacting with the target cells, not the lymphatic system. The circulatory system is responsible for transporting nutrients, oxygen, carbon dioxide, hormones, and red blood cells throughout the body. Option D. Synthesis of erythrocytes – This option is incorrect because erythrocytes (red blood cells) are produced in the red bone marrow, not in the lymphatic system. Hematopoietic stem cells of the red bone marrow give rise to mature erythrocytes. Option E. Take up particles except larger proteins – This option is incorrect because the lymphatic system can recover proteins and large particles that cannot be directly taken back into the capillaries due to the limited gaps between capillary epithelial cells. These proteins and large particles are removed from the lymph, and eventually brought back into the circulatory system.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+14+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 15,
+    "question": {
+      "text": "Which of the following prevents acetylcholine from remaining for too long in the synapse?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Choline acetyltransferase",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Passive diffusion into pre-synaptic cell",
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Acetylcholinesterase",
+        "percentage_selected": "(72.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Degradation by post-synaptic cell surface receptors",
+        "percentage_selected": "(10.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Uptake by post-synaptic cell",
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Acetylcholinesterase",
+    "analytics": {
+      "percent_correct": "72.7%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Acetylcholine is a neurotransmitter secreted at the neuromuscular junction, between neurons in the sympathetic and parasympathetic nervous system.  Acetylcholine primarily functions to excite skeletal muscles. Acetylcholine receptors are known as cholinergic receptors . Acetylcholine binds to these receptors on post-synaptic membranes for nerve transmission, instead of directly entering the skeletal muscle cell. Acetylcholine is then broken down into acetic acid and choline in order for it to be recycled back to the pre-synaptic cell. The detection of acetylcholine by acetylcholine receptors triggers the opening of gated ion channels. As gated ion channels open up, positively charged sodium ions rush into the muscle fiber, causing it to depolarize. The depolarization leads to an action potential that is fired along the entire membrane to initiate contraction. Degradation of the acetylcholine signal in the synaptic cleft may occur in various mechanisms Since acetylcholinesterase performs hydrolysis to break down acetylcholine and terminate a signal, acetylcholinesterase prevents acetylcholine from remaining for too long in the synapse. Therefore, Option C is correct.",
+      "poe_text": "Option A. Choline acetyltransferase – This option is incorrect because as its name suggests, choline acetyltransferase transfers an acetyl group onto choline to produce acetylcholine and thus is not involved in clearing acetylcholine from the synaptic cleft. (Note: Choline acetyltransferase goes beyond the scope of the exam.) Option B. Passive diffusion into pre-synaptic cell – This option is incorrect because acetylcholine does not passively diffuse back into the pre-synaptic cell. Instead, after acetylcholine binds to the receptors on muscle cells, it is broken down by acetylcholinesterase in the synaptic cleft. Once acetylcholine is broken down into acetic acid and choline, its components are actively taken up by the pre-synaptic cell for recycling. Option D. Degradation by post-synaptic cell surface receptors – This option is incorrect because the post-synaptic cell surface receptor plays no role in breaking down acetylcholine. A receptor is a structure that receives and transmits a signal between extracellular and intracellular environments. The post-synaptic cell surface receptor, specifically, allows acetylcholine to bind to it and consequently opens up to allow the flow of ions. Acetylcholine is degraded by an enzyme called acetylcholinesterase in the synaptic cleft. Option E. Uptake by post-synaptic cell – This option is incorrect because acetylcholine never enters the post-synaptic cell; it only binds to the receptors located at the surface of the post-synaptic cell. The acetylcholine is then broken down by acetylcholinesterase in the synapse.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 16,
+    "question": {
+      "text": "Four different nerve fibers are tested to determine which transmits signal the fastest. Which nerve fiber would be expected to have the fastest conduction impulse?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Thick and myelinated",
+        "percentage_selected": "(81.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Thin and myelinated",
+        "percentage_selected": "(14.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Thick and unmyelinated",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Thin and unmyelinated",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Thick and myelinated",
+    "analytics": {
+      "percent_correct": "81.8%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "An action potential propagates down a neuron’s axon due to a cascade of ions. A stimulus causes gated ion channels to open, allowing an influx of Na + ions into the axon, depolarizing the neuron. If the threshold level is reached, an action potential is caused, resulting in the opening of voltage-gated Na + channels down the entire length of the neuron. The propagation of an action potential is also called a conduction impulse. The speed of an action potential is influenced by the size and myelination of an axon . An axon with a larger diameter allows an impulse to propagate faster because it has less resistance against the flow of ions. Thus, a thicker axon allows for a faster propagation of an action potential. The other factor affecting the speed of an action potential is myelination . The propagation of an action potential involves the opening of ion channels that let in Na + . In myelinated axons, when Na + flows into the axon at a Node of Ranvier, these ions rapidly diffuse down the axon within the myelinated segments to the next Node of Ranvier. In this manner, the action potential “jumps” from node to node. The “jumping” from node to node is called saltatory conduction. In unmyelinated axons, the action potential propagates slower because it has to propagate along the entire length of the membrane. On the other hand, in myelinated axons, the action potential propagates faster because it only has to jump from node to node. Furthermore, heavily myelinated axons allow impulses to propagate faster, since Na + ions are unable to leak out at myelinated sections that don’t have ion channels. Ion channels are positioned only on non-myelinated sections of the axon. Therefore, saltatory conduction occurs much faster in axons with heavy myelination. To sum up, the axons with the fastest conduction impulse will have a combination of a thick diameter and myelination. CC BY 4.0",
+      "poe_text": "Option B. Thin and myelinated – This option is incorrect because thin neurons whose axons have smaller diameters have an increased resistance to ion flow which can slow down the velocity of the action potential. Option C. Thick and unmyelinated – This option is incorrect because the action potential has to propagate along the entire length of the membrane in unmyelinated axons, causing a slower conduction impulse. Furthermore, unmyelinated neurons lack the necessary myelin insulation that prevents charge leakage out of the neuron from the neuron membrane. This charge leakage causes the neuron’s signal to dissipate at a faster rate which means that the signal will not travel as far or as fast. Option D. Thin and unmyelinated – This option is incorrect because the action potential has to propagate along the entire length of the membrane in unmyelinated axons, causing a slower conduction impulse. Furthermore, unmyelinated neurons lack the necessary myelin insulation that prevents charge leakage out of the neuron from the neuron membrane. This charge leakage causes the neuron’s signal to dissipate at a faster rate which means that the signal will not travel as far or as fast. Also, thin neurons whose axons have smaller diameters have an increased resistance to ion flow which can slow down the velocity of the action potential. Thin and unmyelinated axons would have the slowest nerve conduction speed.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+16+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 17,
+    "question": {
+      "text": "What is the earliest stage seen during embryonic development?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Morula",
+        "percentage_selected": "(11%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Zygote",
+        "percentage_selected": "(80.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Blastocyst",
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Blastomere",
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Trophoblast",
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Zygote",
+    "analytics": {
+      "percent_correct": "80.8%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "The stages of embryonic development are as follows. When the egg (female gamete) is fertilized by a sperm (male gamete), a diploid zygote forms. The zygote then undergoes cleavage. The cleavage stage involves the rapid cell division of the zygote without cell growth and produces cells called blastomeres. Blastomeres have less cytoplasm than the original zygote. Successive cleavage results in a solid ball of ~8 cells called the morula. Cell division continues and liquid fills the morula, pushing cells outward to form a circular cavity surrounded by a single layer of cells. This hollow, 128-cell structure is called the blastula. The fluid-filled cavity is called the blastocoel.  In humans, the blastula is called the blastocyst when it implants into the endometrium. The blastocyst consists of an outermost trophoblast that forms the extraembryonic membranes and the inner cell mass that develops into the embryo. Hence, the zygote is the earliest stage seen during embryonic development because the zygote is formed once sperm and ovum nuclei fuse. The zygote stage is followed by a series of cleavage to form the next stages of the developing embryo. Therefore, Option B is correct. CC BY 4.0",
+      "poe_text": "Option A. Morula – This option is incorrect because the morula is a clump of ~8 cells and therefore occurs after the first few divisions of the zygote. Since the morula occurs after the zygote (earliest stage seen during embryonic development), the morula stage cannot be the earliest stage. Option C. Blastocyst – This option is incorrect because the blastocyst stage comes after the morula stage. In humans, the blastula is called the blastocyst when it implants into the endometrium. The blastocyst contains an outermost trophoblast as well as inner cell mass. Option D. Blastomere – This option is incorrect because blastomeres are not an embryonic stage. Blastomeres are cells formed by the rapid cell division of the zygote (earliest stage seen during embryonic development). Option E. Trophoblast – This option is incorrect because the trophoblast is a thin layer of cells forming the outer layer of a blastocyst. The trophoblast produces human chorionic gonadotropin (hCG) to maintain estrogen and progesterone production from the corpus luteum. The estrogen and progesterone production maintains the endometrium during pregnancy. Since the trophoblast doesn’t arise until after the morula stage, and is not an embryonic stage of development, this option cannot be correct.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+17+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 18,
+    "question": {
+      "text": "A chicken embryo goes through 8 rounds of division, but no G-phase is occurring during its cell cycle. After 8 rounds of cell division have occurred, how many cells will the embryo consist of and what will the embryonic cell size be?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Cell size gets smaller, cell number will increase to 2 8",
+        "percentage_selected": "(70.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Cell size gets larger, cell number will increase to 2 8",
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Cell size stays the same, cell number will increase to 12",
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cell size stays the same, cell number will increase to 2",
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The embryo will consist of one large cell with 8 nuclei.",
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cell size gets smaller, cell number will increase to 2 8",
+    "analytics": {
+      "percent_correct": "70.2%",
+      "time_spent": "1 min, 54 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "A zygote is a single cell formed when the egg (female gamete) is fertilized by a sperm (male gamete). A single division would double the number of cells in the single-celled zygote to 2 cells. A subsequent division would again double the number of cells to 4 cells and so on. Therefore, the number of cells is equal to 2 n where 2 is the original number of cells prior to cleavage and n is the number of replication or division cycles. Since the chicken embryo went through 8 rounds of division, n equals 8 and the number of cells will be 2 8 . In a normal cell cycle involving the G-phase in which the cell grows in preparation for cell division, the size of the daughter cells is the same as the size of the parent cell. However, in this question, no G-phase occurred during the cell cycle of the chicken embryo. In other words, the chicken embryo did not grow in preparation for cell division. Hence, the daughter cells would have a smaller size than the chicken embryo as each parent cell divides into two daughter cells. Therefore, Option A is correct.",
+      "poe_text": "Option B. Cell size gets larger, cell number will increase to 2 8 – This option is incorrect because the daughter cells will be smaller than the initial chicken embryo, since the chicken embryo did not grow in preparation for cell division due to the lack of G-phase during the cell cycle. Option C. Cell size stays the same, cell number will increase to 12 – This option is incorrect because the daughter cells will be smaller than the initial chicken embryo, since the chicken embryo did not grow in preparation for cell division due to the lack of G-phase during the cell cycle. Furthermore, the number of cells will increase to 2 8 instead of 12. The number of cells is equal to 2 n where 2 is the original number of cells prior to cleavage and n is the number of replication or division cycles. Since the chicken embryo went through 8 rounds of division, n equals 8 and the number of cells will be 28. Option D. Cell size stays the same, cell number will increase to 2 – This option is incorrect because the daughter cells will be smaller than the initial chicken embryo, since the chicken embryo did not grow in preparation for cell division due to the lack of G-phase during the cell cycle. Furthermore, the number of cells will increase to 28 instead of 2. The number of cells is equal to 2n where 2 is the original number of cells prior to cleavage and n is the number of replication or division cycles. Since the chicken embryo went through 8 rounds of division, n equals 8 and the number of cells will be 2 8 . Option E. The embryo will consist of one large cell with 8 nuclei. – This option is incorrect because the chicken embryo will divide into 2 8 separate embryonic cells instead of remaining as one large cell with multiple nuclei. Cell division involves both nuclear and cytoplasmic division.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 19,
+    "question": {
+      "text": "Where do viruses store their genetic information?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Nucleoid",
+        "percentage_selected": "(21.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Capsid",
+        "percentage_selected": "(73.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Nucleolus",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Vesicles",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Capsid",
+    "analytics": {
+      "percent_correct": "73.7%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Viruses are non-living infectious particles capable of infecting other cells, replicating inside of them, and continuing to infect more cells. Viruses cannot reproduce or undergo any other metabolic activities. The viral genome exists as a double- or single-stranded RNA or DNA. The nucleic acid of a virus is enclosed from its environment by a protein coat called the capsid . The capsid protects viral nucleic acids until it is inserted into the host cell. Some viruses surround their capsid with a membrane envelope. The viral envelope is composed of host cell membranes, other membrane proteins, and viral glycoproteins. A viral genome integrated into a bacterial genome is called prophage . A viral genome integrated into an eukaryotic genome is called provirus . Since the viral genome—in other words, genetic information of the virus—is contained within the capsid, Option B is correct.",
+      "poe_text": "Option A. Nucleoid – This option is incorrect because the nucleoid can only be found in prokaryotic cells and therefore cannot be found in viruses. The nucleoid is an irregular shaped region within prokaryotic cells that contains all or most of the cell’s genetic material. Option C. Nucleolus – This option is incorrect because the nucleolus can only be found in eukaryotic cells and therefore cannot be found in viruses. The nucleolus is inside of the nucleus and serves as the site of ribosome synthesis. Ribosomes are synthesized using rRNA and ribosomal proteins imported from the cytoplasm. Once ribosomal subunits form in the nucleolus, they are exported to the cytoplasm for final assembly into a complete ribosome. Option D. Vesicles – This option is incorrect because vesicles can only be found in eukaryotic cells and therefore cannot be found in viruses. Vesicles are small, enclosed sacs used to transport and store substances within cells. Furthermore, vesicles do not store genetic information.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 20,
+    "question": {
+      "text": "Which of the following correctly describes a macromolecule formed from the polymerization of its corresponding monomer?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Phospholipid bilayer from monosaccharides",
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Cellular enzyme from amino acids",
+        "percentage_selected": "(79.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Glycogen from nucleic acids",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Peptide from fatty acids",
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "RNA from cholesterols",
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cellular enzyme from amino acids",
+    "analytics": {
+      "percent_correct": "79.4%",
+      "time_spent": "0 min, 29 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Polymers are macromolecules that are composed of many repeating subunits known as monomers . Polymers are made by dehydration synthesis. Dehydration synthesis refers to the chemical reaction in which there is a release of water when two smaller molecules are joined to form a larger molecule. Polymers are broken down by hydrolysis. Hydrolysis refers to the chemical reaction in which water is used to break down the chemical bonds within a particular substance. CC BY 4.0 As shown in the table below, proteins are composed of amino acid monomers. Since enzymes are proteins that act upon substrate molecules, cellular enzymes are formed by the polymerization of amino acid monomers. Therefore, Option B is correct. Canadian DAT Pro Tip: It is important to know the monomers that form the 4 main biological macromolecules (also known as polymers). CC BY 4.0",
+      "poe_text": "Option A. Phospholipid bilayer from monosaccharides – This option is incorrect because phospholipids are formed from glycerol, two fatty acids, and a phosphate group. Monosaccharides are not the monomer for phospholipid bilayer, but are rather the monomer for polysaccharides (carbohydrates) such as glycogen, amylopectin, and cellulose. Furthermore, phospholipids are not polymers because while they are composed of monomers, they don’t consist of a series of repeating monomers. Option C. Glycogen from nucleic acids – This option is incorrect because glycogen is formed from monosaccharide monomers (in this case, glucose). Nucleic acids are not the monomer for glycogen, but are rather the polymer for nucleotides. Option D. Peptide from fatty acids – This option is incorrect because peptides are not formed from fatty acids. Peptides are formed from amino acid monomers. Fatty acids are not the monomer of peptides, but are rather the monomer that makes up lipid macromolecules such as phospholipids and triglycerides. Phospholipids consist of two fatty acids while triglycerides consist of three fatty acids. Option E. RNA from cholesterols – This option is incorrect because RNA is not formed from cholesterol. Nucleic acids, DNA and RNA, are formed from nucleotide monomers. Cholesterol is not the monomer for RNA, but is rather a precursor for many types of hormones such as glucocorticoids, mineralocorticoids, progestins, androgens, and estrogens. Cholesterols are steroids composed of three 6-membered rings and one 5-membered ring.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+20+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+20+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 21,
+    "question": {
+      "text": "What is true of B lymphocytes and their role in immunity?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "A component of the innate immune system",
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "A component of cell-mediated immunity",
+        "percentage_selected": "(11.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Consists of cytotoxic B cells and Helper B cells",
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Surrounds pathogens to tag for phagocytosis",
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Can retain the memory of previously encountered antigens",
+        "percentage_selected": "(68.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Can retain the memory of previously encountered antigens",
+    "analytics": {
+      "percent_correct": "68.6%",
+      "time_spent": "0 min, 26 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The immune system consists of an innate and adaptive component. While the innate immune system provides generalized protection, the adaptive immune system develops a specific response to a specific antigen. Though it does not play a major role in protecting the body during a primary immune response, it does protect the body from future infections in a secondary immune response. The B lymphocytes are a part of the adaptive immune system and control antibody-mediated or humoral immunity, as shown in the image below. With the help of helper T cells, B cells differentiate into plasma and memory B cells. The plasma cells produce antibodies that are released into the blood to attack bacteria. These antibodies may tag a pathogen for digestion via opsonization, neutralize said antigen, or lead to the activation of the complement system. Instead of releasing antibodies, the memory B cells retain information for receptors of antigens. This is essential in providing a significantly faster antibody response to subsequent infections by the same detected antigen in a secondary immune response. Since the memory B cells of B lymphocytes are able to retain the memory of previously encountered antigens, Option E is correct. Under the clonal selection theory, a wide variety of antigens are present on pre-existing B cells even before the body has needed to respond to some pathogen. This wide variety of B cell receptors allows the body to potentially recognize a pathogenic antigen. When this occurs, this particular B cell will then undergo clonal expansion to multiply and produce memory B cells and plasma cells in preparation for a future infection by that same pathogen. CC BY 4.0",
+      "poe_text": "Option A. A component of the innate immune system – This option is incorrect because B lymphocytes are a component of the adaptive immune system. The adaptive immune system involves an immune response geared toward recognizing a specific antigen. It is called adaptive because it develops after the primary response when the body learns to recognize a particular antigen. Recognition of the antigen is retained in memory B cells. On the other hand, the innate immune system involves nonspecific immunity in which the body provides generalized cellular protection against pathogens as the first line of defense. Option B. A component of cell-mediated immunity – This option is incorrect because B lymphocytes control antibody-mediated immunity instead of cell-mediated immunity. Antibody-mediated immunity involves the response to antigens or pathogens that circulate in lymph or blood. During an antibody-mediated response, macrophage and helper T cells stimulate B cell production. The B cells then produce plasma cells and memory cells. On the other hand, cell-mediated immunity is controlled by T lymphocytes that respond to non-self cells. The cell-mediated response is a response to cells invaded internally by pathogens. Option C. Consists of cytotoxic B cells and Helper B cells – This option is incorrect because the classes of B lymphocytes are the antibody-producing plasma cells and memory B cells. The perforin-producing cytotoxic T cells and immunity-boosting helper T cells are classes of T lymphocytes. Option D. Surrounds pathogens to tag for phagocytosis – This option is incorrect because the antibodies produced by plasma B cells participate directly in opsonization. Opsonization is the process of tagging a pathogen with antibodies to signal them for phagocytosis. The plasma B cells themselves play an indirect role by producing these antibodies, but do not directly surround the pathogens themselves.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+21+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 22,
+    "question": {
+      "text": "The earliest autotrophic cells to appear on Earth could be described as __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Aerobic prokaryotes",
+        "percentage_selected": "(19.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Anaerobic eukaryotes",
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Heterotrophs",
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Anaerobic photosynthesizers",
+        "percentage_selected": "(67.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Neutrophils",
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Anaerobic photosynthesizers",
+    "analytics": {
+      "percent_correct": "67.8%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "The Earth 's early atmosphere initially formed through early volcanic outgassing. Primordial seas were then formed as the Earth cooled and gases condensed. Complex organic molecules were then synthesized from inorganic compounds. As polymers formed from the organic compounds and self-replicated, organic molecules became protobionts. Protobionts were the precursors of cells that were metabolically active but unable to reproduce. From these protobionts, primitive heterotrophic prokaryotes were formed. Once the primitive heterotrophic prokaryotes evolved and gained the ability to produce their own food, primitive autotrophic prokaryotes were formed. Cyanobacteria is an example of an autotrophic prokaryote. The photosynthetic ability of such autotrophs produced large amounts of oxygen, contributing to the formation of the ozone layer. The ozone layer caused the termination of primitive cells and abiotic evolution, leading to the formation of eukaryotes. The endosymbiotic theory explains that eukaryotic cells originated among prokaryotes. The earliest autotrophic cells to appear on Earth were the primitive autotrophic prokaryotes (the cyanobacteria). The atmosphere did not yet contain significant amounts of oxygen, and these autotrophic cells did not rely on oxygen to survive. They were capable of performing photosynthesis and produced oxygen as a result. Therefore, Option D is correct.",
+      "poe_text": "Option A. Aerobic prokaryotes – This option is incorrect because there was little to no oxygen in the atmosphere of early Earth. Aerobic organisms can survive and grow in an oxygenated environment; therefore, aerobic prokaryotes could not have existed in an environment lacking oxygen. Option B. Anaerobic eukaryotes – This option is incorrect because eukaryotes were introduced after heterotrophic prokaryotes and autotrophic prokaryotes were formed. The endosymbiotic theory explains that eukaryotic cells originated among prokaryotes. Therefore, anaerobic eukaryotes cannot be the earliest autotrophic cells to appear on Earth. Option C. Heterotrophs – This option is incorrect because the question is asking for the earliest autotrophic cells to appear on Earth. Autotrophs are organisms that can produce their own food, whereas heterotrophs are organisms that cannot produce their own food and instead take nutrition from other sources. Autotrophs and heterotrophs are mutually exclusive categories: by definition, it is impossible for an autotroph to be a heterotroph, and vice versa. Option E. Neutrophils – This option is incorrect because neutrophils are not autothophic cells. Neutrophils are a type of white blood cell that destroy pathogens through phagocytosis - the engulfment of foreign particles, bacteria, and dead or dying cells. Instead of producing their own food, neutrophils obtain nutrients such as glucose from external sources.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 23,
+    "question": {
+      "text": "A point mutation in the shell of a turtle results from a nucleotide change due to radiation. Which of the following best describes the likelihood of the turtle's progeny inheriting the mutation?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0%",
+        "percentage_selected": "(73.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "12.5%",
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "25%",
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "50%",
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "100%",
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0%",
+    "analytics": {
+      "percent_correct": "73.1%",
+      "time_spent": "1 min, 35 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Sexual reproduction is the main form of reproduction in multicellular eukaryotes including animals, plants, and fungi. This form of reproduction involves the fusion of male and female gametes that combine into a diploid cell. Gametogenesis involves the meiotic cell divisions that produce eggs and sperm. Gametogenesis can only occur in the germ cells (also referred to as gametocytes) found in the gonads or reproductive organs. Only these germ cells (and by extension, the gametes they produce) contain genetic information that is provided to the offspring. In a multicellular organism, every cell other than germ cells are known as somatic cells . Aside from the germ cells in the testes and ovaries, every other cell in the multicellular organism is a somatic cell, including the cells in a turtle’s shell. The genetic information in somatic cells is not passed on to offspring, as these cells are uninvolved in the reproductive process. Regardless of how mutated somatic cell DNA becomes, such DNA is never heritable. Therefore, Option A is the correct answer as a point mutation in somatic cells could not be inherited.",
+      "poe_text": "Option B. 12.5% – This option is incorrect because this mutation takes place in the somatic cells of the turtle. This means that the mutation is not in the gametes and therefore cannot be passed on to the progeny of the turtle. Option C. 25% – This option is incorrect because this mutation takes place in the somatic cells of the turtle. This means that the mutation is not in the gametes and therefore cannot be passed on to the progeny of the turtle. Option D. 50% – This option is incorrect because this mutation takes place in the somatic cells of the turtle. This means that the mutation is not in the gametes and therefore cannot be passed on to the progeny of the turtle. Option E. 100% – This option is incorrect because this mutation takes place in the somatic cells of the turtle. This means that the mutation is not in the gametes and therefore cannot be passed on to the progeny of the turtle.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 24,
+    "question": {
+      "text": "Which of the following is an example of imprinting?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "A female mammal cares for her offspring",
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "A male stickleback fish defends against any red underside object",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "A duck follows the moving object it first saw after birth",
+        "percentage_selected": "(96.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "A person pulls their hand back in response to a hot stove",
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "A dog salivates in response to a bell",
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "A duck follows the moving object it first saw after birth",
+    "analytics": {
+      "percent_correct": "96.1%",
+      "time_spent": "0 min, 27 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Imprinting is a form of innate animal behavior in which a certain behavior is performed only if an appropriate stimulus is experienced during a critical/sensitive period . Once acquired, the imprinting is irreversible. In the case of certain bird species such as graylag goose, the hatchling accepts any moving object as their mother during its first day of life. The hatchling will then follow this object rather than its birth mother despite training attempts. Therefore, Option C is the correct answer. Another example of imprinting is salmon that return to their birthplace to breed based on imprinted odors associated with the birthplace. CC BY 4.0",
+      "poe_text": "Option A. A female mammal cares for her offspring – This option is incorrect because this is an example of instinctual behavior. Instincts are innate and inherited, unlike imprinting in which the imprinted behavior is not inherited. Option B. A male stickleback fish defends against any red underside object – This option is incorrect because this is an example of a fixed action pattern in which an animal follows a fixed and regular behavior in response to a specific stimulus called a sign stimuli. In many fixed action patterns, the action will be completed even if the original sign stimuli is removed. Hence, a male stickleback fish reacting to anything with a red underbelly is an example of a fixed action pattern. This is not an example of imprinting. Option D. A person pulls their hand back in response to a hot stove – This option is incorrect because this is an example of a neural reflex that rapidly initiates in response to a neural stimuli such as pain. This is not an example of imprinting. Option E. A dog salivates in response to a bell – This option is incorrect because this is an example of classical conditioning in which a dog is trained to associate a conditioned stimulus, the sound of a bell, with a conditioned response, salivation. By ringing a bell when food is presented, the dog associates the sound of the bell with the food stimulus. Hence, after training over time, the dog salivates just at the sound of the bell without needing the food stimulus.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+24+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 25,
+    "question": {
+      "text": "The presence or absence of each of the organelles listed below could be used to distinguish a prokaryote from a eukaryote EXCEPT for one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Mitochondria",
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Golgi apparatus",
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Nucleolus",
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Ribosomes",
+        "percentage_selected": "(78.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Nucleus",
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ribosomes",
+    "analytics": {
+      "percent_correct": "78.7%",
+      "time_spent": "0 min, 33 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The key to this question is remembering that prokaryotes lack membrane-bound organelles, but do have ribosomes. As shown in the diagram below, ribosomes are one of the only organelles that are present in both prokaryotes and eukaryotes. While prokaryotic and eukaryotic ribosomes differ in size, ribosomes are still a common feature of both prokaryotes and eukaryotes. Therefore, Option D. Ribosomes, is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Mitochondria – This option is incorrect because mitochondria are the double membrane-bound organelles responsible for energy production in eukaryotes via an electron transport chain. Prokaryotes do not have membrane-bound organelles, including the mitochondria. Therefore, the presence/absence of mitochondria can be used to distinguish a prokaryote from a eukaryote. Option B. Golgi apparatus – This option is incorrect because the Golgi apparatus is a series of membranous sacs found in eukaryotes and is responsible for the folding and modification of polypeptides into mature proteins. The Golgi apparatus cannot be found in prokaryotes. Therefore, the presence/absence of the Golgi apparatus can be used to distinguish a prokaryote from a eukaryote. Option C. Nucleolus – This option is incorrect because the nucleolus is a denser region of DNA in a eukaryotic nucleus where ribosomes are produced. The nucleolus cannot be found in prokaryotes. It should not be confused with the nucleoid region of prokaryotes which is simply a non-membrane-bound region where DNA is packed. Therefore, the presence/absence of the nucleolus can be used to distinguish a prokaryote from a eukaryote. Option E. Nucleus – This option is incorrect because prokaryotes do not have a nucleus, whereas eukaryotes have a nucleus. Prokaryotic DNA is circular and located in a region of the prokaryotic cell known as the nucleoid. Therefore, the presence/absence of the nucleus can be used to distinguish a prokaryote from a eukaryote.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+25+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 26,
+    "question": {
+      "text": "Which of the following best explains why eukaryotic DNA is generally longer than bacterial DNA?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Introns",
+        "percentage_selected": "(87%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Codons",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Promoter sequences",
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Uracil",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Exons",
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Introns",
+    "analytics": {
+      "percent_correct": "87%",
+      "time_spent": "0 min, 8 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The bacterial genome is significantly smaller than the eukaryotic genome. Bacteria, in particular, lack characteristics found in eukaryotic DNA, such as histones and introns. Introns are intervening regions of DNA that are removed from the pre-mRNA following transcription to form the mature mRNA. Exons are the regions that are expressed and thus not removed. Alternative splicing is the production of different combinations of introns and exons to allow a particular gene to express different variations of a particular protein product, as shown in the image below. Bacteria, in their simplicity, do not require this alternative splicing because they do not have introns – their entire genome is used to code for proteins. The prokaryotic genome lacks ‘junk’ DNA sequences that do not perform any function Eukaryotes, on the other hand, are more complex and have much larger chromosomes. The eukaryotic genome is filled with ‘junk’ DNA that does not code for any protein product, or serve any function. One example of DNA sequences contained in eukaryotes that lacks a true function is the introns. Therefore, Option A. Introns , is the correct answer. These introns are intervening sequences that allow a particular gene to form different variations of a protein product but also contribute to the increased length of a typical eukaryotic genome compared to a bacterial genome. CC BY 4.0",
+      "poe_text": "Option B. Codons – This option is incorrect because codons are triplets of adjacent nucleotides associated with a particular amino acid. They are a feature of the universal genetic code and exist in all forms of life (prokaryotic and eukaryotic life). Option C. Promoter sequences – This option is incorrect because promoter sequences are a segment of DNA where RNA polymerase binds in order to initiate transcription. They are present in different forms in eukaryotes and prokaryotes. While eukaryotic promoters are more complex and longer than prokaryotic promoters, they do not contribute significantly to the overall size of eukaryotic genomes as introns and exons. Option D. Uracil – This option is incorrect because uracil is a nucleotide not present in DNA at all. Uracil is a nucleotide specifically found in RNA. Option E. Exons – This option is incorrect because exons are coding regions of the DNA that are eventually translated into the functional protein. Since both prokaryotic and eukaryotic DNA have these exons that are eventually translated into proteins, Option E is incorrect.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+26+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 27,
+    "question": {
+      "text": "Which of these is involved in the polyspermy blocks?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Hyperpolarization",
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Intracellular acetylcholine release",
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Extracellular calcium influx",
+        "percentage_selected": "(14.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Release of cortical granules",
+        "percentage_selected": "(60.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Synthesis of ZP3",
+        "percentage_selected": "(11.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Release of cortical granules",
+    "analytics": {
+      "percent_correct": "60.7%",
+      "time_spent": "0 min, 35 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "The fast and slow blocks of polyspermy are necessary to prevent polyploidy. These blocks work to make the fertilized egg impenetrable against additional sperm. First, let us review the process of fertilization . After sperm is activated by capacitation, the flagella become hyperactive and the acrosome is more permeable. When the sperm penetrates the outer corona radiata (dense layer of cells surrounding the oocyte) to bind to the ZP3 protein of the zona pellucida, mutual recognition occurs. This binding to ZP3 allows the acrosomal reaction to occur. The digestive enzymes in the acrosome degrade the zona pellucida to allow the sperm’s membrane to merge with that of the egg, depositing the sperm’s nucleus in the egg. The integration of the sperm’s nucleus with the egg’s nucleus now results in a diploid cell known as a zygote. This process of exocytosis of cortical granule contents may be familiar to you. Recall that in a neuron, the influx of Na + in the action potential’s wave of depolarization eventually leads to the opening of Ca 2+ channels that increase intracellular Ca 2+ levels. This leads to the exocytosis of neurotransmitters. The difference between this process and the slow block is the source of the Ca 2+ but in both cases, the increase in cytoplasmic Ca 2+ leads to exocytosis. CC BY 4.0",
+      "poe_text": "Option A. Hyperpolarization – This option is incorrect because membrane depolarization occurs due to the influx of Na + in the fast block of polyspermy. Hyperpolarization does not contribute to the formation of the polyspermy block. Option B. Intracellular acetylcholine release – This option is incorrect because acetylcholine is not involved in the polyspermy blocks. Furthermore, acetylcholine is not released intracellularly; it is released extracellularly into the neuromuscular junction. Option C. Extracellular calcium influx – This option is incorrect because it is actually intracellular, not extracellular, Ca 2+ that is released from intracellular stores to increase cytoplasmic Ca 2+ levels which will eventually lead to the exocytosis of cortical granules. Option E. Synthesis of ZP3 – This option is incorrect because synthesizing ZP3 proteins would not block polyspermy, as ZP3 proteins are necessary for the sperm to bind to the egg. The ZP3 proteins bind to proteins expressed in the head of the sperm and trigger the acrosomal reaction. This process is known as fertilization and thus cannot occur without the ZP3 protein.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+27+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 28,
+    "question": {
+      "text": "A couple has had 12 children, and all of them are males. The couple's chances of having a female child after their next pregnancy are __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1/1",
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1/2",
+        "percentage_selected": "(89.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "1/4",
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1/64",
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1/128",
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1/2",
+    "analytics": {
+      "percent_correct": "89.9%",
+      "time_spent": "0 min, 25 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "To solve this question, we must consider that a female offspring must have X and X sex chromosomes. We must also consider that each parent must contribute one of these chromosomes in order to determine the probability of attaining the XX combination. We also note that the particular pair of gametes that form the fertilized egg is entirely independent of the previous offspring. That is, the particular combination of sex chromosomes in the previous offspring has no bearing on the combination of the next offspring. Since the mother only has two X chromosomes, the female gamete is guaranteed to have an X chromosome. The father has an X and Y chromosome, so the male gamete has a ½ chance of having an X chromosome and a ½ chance of having a Y chromosome. Lastly, we must compute the probability of the offspring having two X chromosomes. To do this, we multiply the probabilities of each parent passing on the X chromosome: 1 x ½ = ½. Therefore, Option B is the correct answer.",
+      "poe_text": "Option A. 1/1 – This option is incorrect because regarding the sex of a child, there are 2 options: male or female. Therefore, the correct probability of having a female child after their next pregnancy is 1/2. It is important to note that the sex of the previous children does not affect the sex of the future children as each child is considered to be an independent event. Option C. 1/4 – This option is incorrect because regarding the sex of a child, there are 2 options: male or female. Therefore, the correct probability of having a female child after their next pregnancy is 1/2. It is important to note that the sex of the previous children does not affect the sex of the future children as each child is considered to be an independent event. Option D. 1/64 – This option is incorrect because regarding the sex of a child, there are 2 options: male or female. Therefore, the correct probability of having a female child after their next pregnancy is 1/2. It is important to note that the sex of the previous children does not affect the sex of the future children as each child is considered to be an independent event. Option E. 1/128 – This option is incorrect because regarding the sex of a child, there are 2 options: male or female. Therefore, the correct probability of having a female child after their next pregnancy is 1/2. It is important to note that the sex of the previous children does not affect the sex of the future children as each child is considered to be an independent event.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+28+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 29,
+    "question": {
+      "text": "To reliably insert a DNA segment into a plasmid vector, a restriction enzyme must first be used on a palindromic sequence called a recognition site. Which of the following sequences would be ideal for this purpose?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "percentage_selected": "(15.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "percentage_selected": "(50.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "percentage_selected": "(16.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "percentage_selected": "(13.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "50.6%",
+      "time_spent": "0 min, 41 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "A palindromic sequence is one in which the nucleic acid sequence of a given strand and its complementary strand is the same when both are read in the same direction, (5’-3’). An example is given below. 3’-GGATCC-5’ 5’-CCTAGG-3’ When the given strand (first strand) is read in the 5’-3’ direction, its sequence is “CCTAGG”. When its complementary strand (second strand) is read in the 5’-3’ direction, its sequence is “CCTAGG”. Since the strands have the same 5’-3’ sequence, we can conclude that this is a palindromic sequence. The following is NOT an example of a palindromic sequence. 3’-CATAC-5’ 5’-GTATG-3’ When the given strand (first strand) is read in the 5’-3’ direction, its sequence is “CATAC”. When its complementary strand (second strand) is read in the 5’-3’ direction, its sequence is “GTATG”. Since the strands do not have the same 5’-3’ sequence, we can conclude that this is not a palindromic sequence. Restriction enzymes are enzymes that cut DNA at specific sites (recognition sites) that contain a palindromic sequence. There is only one palindromic sequence in the answer choices. Therefore, Option C is the correct answer. Quick Tip : We can quickly eliminate Option B because it includes the nucleic acid uracil (U) which is present only in RNA, while restriction enzymes only cut DNA.",
+      "poe_text": "Option A. 3’-CAACTTG-5’; 5’-GTTGAAC-3’ – This option is incorrect because the sequence is not palindromic. When the first strand is read in the 5’-3’ direction, its sequence is “GTTCAAC”. When the second strand is read in the 5’-3’ direction, its sequence is “CAAGTTG”. Since the strands do not have the same 5’-3’ sequence, we can conclude that this is NOT a palindromic sequence. Option B. 3’-AUGAUGAUG-5’; 5’-UACUACUAC-3’ – This option is incorrect because the sequence is not palindromic. When the first strand is read in the 5’-3’ direction, its sequence is “GUAGUAGUA”. When the second strand is read in the 5’-3’ direction, its sequence is “UACUACUAC”. Since the strands do not have the same 5’-3’ sequence, we can conclude that this is NOT a palindromic sequence. Furthermore, this option includes the nucleic acid uracil (U) which is present only in RNA, while restriction enzymes only cut DNA. Option D. 3’-GCTAATCG-5’; 5’-CGATTAGC-3’ – This option is incorrect because the sequence is not palindromic. When the first strand is read in the 5’-3’ direction, its sequence is “GCTAATCG”. When the second strand is read in the 5’-3’ direction, its sequence is “CGATTAGC”. Since the strands do not have the same 5’-3’ sequence, we can conclude that this is NOT a palindromic sequence. Option E. 3’-TTTAAAGGG-5’; 5’-AAATTTCCC -3’ – This option is incorrect because the sequence is not palindromic. When the first strand is read in the 5’-3’ direction, its sequence is “GGGAAATTT”. When the second strand is read in the 5’-3’ direction, its sequence is “AAATTTCCC”. Since the strands do not have the same 5’-3’ sequence, we can conclude that this is NOT a palindromic sequence.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 30,
+    "question": {
+      "text": "For a gene in equilibrium, a researcher determined that the dominant allele had a frequency of 0.40 while the recessive allele had a frequency of 0.60. What is the frequency of heterozygotes for this gene?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.12",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.20",
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.24",
+        "percentage_selected": "(13.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.48",
+        "percentage_selected": "(74.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "0.50",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.48",
+    "analytics": {
+      "percent_correct": "74.2%",
+      "time_spent": "1 min, 4 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "For genes in Hardy-Weinberg equilibrium, the Hardy-Weinberg model enables us to relate the allele frequencies to the allele combination frequencies. We can determine the frequency of homozygous and heterozygous individuals for the gene in question. The Hardy-Weinberg model is as follows: p + q = 1 p 2 + 2pq + q 2 = 1 Here, p is the frequency of the dominant allele and q is the frequency of the recessive allele. The first part of this model describes how the only alleles present are the dominant and recessive alleles so the sum of their individual allele frequencies must be 1. The second part of this model describes how the probability of being homozygous for the dominant allele, heterozygous, and homozygous for the recessive allele must add to 1. In other words, all members of the population are either homozygous dominant (p 2 ), heterozygous (2pq), or homozygous recessive (q 2 ) for this particular gene. First, we examine the allele frequencies of the dominant and recessive alleles and verify that they sum up to 1. This indicates to us that these are the only alleles present for the gene in question. Here, we have 0.40 for the dominant allele and 0.60 for the recessive allele which indeed sums up to 1. Next, we calculate the frequency of the heterozygous individual. In the Hardy-Weinberg equilibrium, heterozygotes are represented by 2pq. In our case, this is equal to 2×0.4×0.6=0.48. Therefore, Option D is the correct answer.",
+      "poe_text": "Option A. 0.12 – This option is incorrect because by using the equation p 2 + 2pq + q 2 , we know that the term, 2pq, represents the frequency of heterozygous individuals. Therefore, we can plug in the values of p = 0.4 and q = 0.6 into the 2pq term to get 2(0.4)(0.6) = 0.48. Option B. 0.20 – This option is incorrect because by using the equation p 2 + 2pq + q 2 , we know that the term, 2pq, represents the frequency of heterozygous individuals. Therefore, we can plug in the values of p = 0.4 and q = 0.6 into the 2pq term to get 2(0.4)(0.6) = 0.48. Option C. 0.24 – This option is incorrect because by using the equation p 2 + 2pq + q 2 , we know that the term, 2pq, represents the frequency of heterozygous individuals. Therefore, we can plug in the values of p = 0.4 and q = 0.6 into the 2pq term to get 2(0.4)(0.6) = 0.48. Option E. 0.50 – This option is incorrect because by using the equation p 2 + 2pq + q 2 , we know that the term, 2pq, represents the frequency of heterozygous individuals. Therefore, we can plug in the values of p = 0.4 and q = 0.6 into the 2pq term to get 2(0.4)(0.6) = 0.48.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 31,
+    "question": {
+      "text": "Which of the following is the product of spermatogenesis?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Primary spermatocytes",
+        "percentage_selected": "(14.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Spermatogonia",
+        "percentage_selected": "(12.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Secondary spermatocytes",
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Spermatids",
+        "percentage_selected": "(20.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Spermatozoa",
+        "percentage_selected": "(48.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Spermatozoa",
+    "analytics": {
+      "percent_correct": "48.8%",
+      "time_spent": "0 min, 16 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "Spermatogenesis describes the meiotic cell divisions that produce sperm. The process that begins at puberty in males and occurs within the seminiferous tubules in the testes. Spermatogonia cells, proliferative cells in the testes that are the precursor cells for mature sperm, undergo mitosis to form primary spermatocytes. These primary spermatocytes then undergo meiosis. Meiosis I produces two secondary spermatocytes and meiosis II produces four spermatids. Spermatids are then nourished by Sertoli cells in the seminiferous tubules and they develop into spermatozoa , also known as mature sperm. This process is called spermiogenesis and is a part of spermatogenesis. The mature sperm cells are then released from the supporting Sertoli cells into the lumen of the seminiferous tubules, which is called spermiation. The sperm cells are then stored in the epididymis where they complete maturation and gain motility. Since spermatogenesis produces spermatozoa (mature sperm), Option E is correct. The image below provides illustrations of spermatogenesis in addition to a cross-section of a seminiferous tubule where these processes take place. CC BY 4.0",
+      "poe_text": "Option A. Primary spermatocytes – This option is incorrect because primary spermatocytes are produced during an intermediary step of spermatogenesis. They are produced when the diploid spermatogonium cells undergo mitosis. The primary spermatocytes will then proceed to enter the process of meiosis. Option B. Spermatogonia – This option is incorrect because spermatogonia are the starting diploid cells of spermatogenesis. Spermatogonia are an example of germ cells that give rise to gametes. Option C. Secondary spermatocytes – This option is incorrect because secondary spermatocytes are produced during an intermediary step of spermatogenesis. They are produced when the diploid primary spermatocytes undergo meiosis I. Once this occurs, there are now two haploid secondary spermatocytes. These secondary spermatocytes will then proceed to enter the process of meiosis II where they become four spermatids. Option D. Spermatids – This option is incorrect because spermatids are present prior to spermiogenesis, the final step of spermatogenesis. Spermatids, produced from secondary spermatocytes via meiosis II, are nourished by Sertoli cells to differentiate into spermatozoa, also known as mature sperm.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+31+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 32,
+    "question": {
+      "text": "Non-stem cells have a limit to the number of rounds of cell division they can go through due to which of the following?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Wobble effect",
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Genetic drift",
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Genetic equilibrium",
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Telomere shortening",
+        "percentage_selected": "(89.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Theory of inheritance of acquired characteristics",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Telomere shortening",
+    "analytics": {
+      "percent_correct": "89.4%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "The Hayflick limit pertains to the limited number of times a cell can undergo division until it has to stop and undergo apoptosis. This arises from the concept of telomere shortening , which is the shortening of DNA with each round of replication. Telomeres are DNA sequences found at the ends of chromosomes that are added to prevent the loss of important genomic information when chromosome ends get shorter. This is due to the way that the lagging strand works. DNA polymerase needs 3’-OH to start replicating, and after all RNA primers are removed, there is always an un-replicated region at the end of the strand. This is genetic information that is lost and provides a reason why telomeres shorten with each round of replication. CC BY 4.0",
+      "poe_text": "Option A. Wobble Effect – This option is incorrect the Wobble Effect explains flexibility in the identity of the third nucleotide in a codon. The Wobble Effect describes how one amino acid can be coded for by several different codons. Hence, it minimizes the damage that can be caused by a misreading of a codon. For example, if the codon CUU, coding for the amino acid leucine, was misread as CUC, CUA, or CUG during transcription, the codon will still be translated as leucine. Option B. Genetic drift – This option is incorrect because genetic drift describes the change in allele frequency that occurs due to the random movement of members of a population. Genetic drift is particularly susceptible to occurring in small populations that already have a low number of members. Genetic drift is a way to describe gene changes in populations whereas the question asks about a phenomenon that occurs in an individual, particularly related to its cell division and replication. Option C. Genetic equilibrium – This option is incorrect because genetic equilibrium is a state where allele frequencies do not change with time and thus no evolution is occurring. Genetic equilibrium is also known as the Hardy-Weinberg equilibrium. Since genetic equilibrium is used to describe populations, this answer choice cannot be correct as the question asks about a phenomenon that occurs in an individual, particularly related to its cell division and replication. Option E. Theory of inheritance of acquired characteristics – This option is incorrect because this answer choice is describing Lamarck’s theory which states that body features acquired during one‘s lifetime can be passed down to their offspring. For example, a giraffe that developed a long neck to reach and eat from tall trees can pass that acquired characteristic to their offspring. However, it is important to note that this is a discredited theory of evolution and that this answer choice is further incorrect because evolution applies to populations and not specific individuals.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+32+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 33,
+    "question": {
+      "text": "tRNA is necessary to link together __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Monosaccharides",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Amino acids",
+        "percentage_selected": "(77.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Ribonucleic acids",
+        "percentage_selected": "(17.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Deoxyribonucleic acids",
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Genes",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Amino acids",
+    "analytics": {
+      "percent_correct": "77.2%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Gene expression is the process of converting a gene into a protein product through the steps: transcription and translation. DNA is converted to RNA through transcription and RNA is converted to proteins through translation. During translation, amino acids are added to a growing chain to form a functional protein. Translation , specifically, involves using mRNA as a template to produce a polypeptide that may fold into a protein. The ribosome holds the mRNA. The particular sequence of three nucleic acids, or codon, is “read” by the ribosome and tRNA (transfer RNA) with the corresponding amino acid for that codon delivers the amino acid to the ribosome for polymerization. This process is known as translation because genetic information is translated from the language of nucleic acids to the language of amino acids and proteins. The process of translation is illustrated below. Based on codon readings, tRNA delivers corresponding amino acids to ribosomes for amino acid polymerization. Therefore, Option B is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Monosaccharides – This option is incorrect because the linking of monosaccharides is done by dehydration/condensation reactions that remove water molecules and thus form glycosidic bonds between monosaccharides. tRNA is not involved in the process of polymerizing monosaccharides. Option C. Ribonucleic acids – This option is incorrect because the linking of ribonucleic acids (RNA) is done by an enzyme called RNA polymerase during RNA synthesis as part of transcription. RNA polymerase synthesizes RNA molecules from a template of DNA. tRNA is not involved in the process of polymerizing ribonucleic acids. Option D. Deoxyribonucleic acids – This option is incorrect because the linking of deoxyribonucleic acids (DNA) is done by an enzyme called DNA polymerase. DNA polymerase synthesizes DNA molecules from nucleotides. tRNA is not involved in the process of polymerizing deoxyribonucleic acids. Option E. Genes – This option is incorrect because genes are arranged on DNA chromosomes with each gene having its unique position called a locus. Genes are not “linked” together by a process and exist along a chromosome in a specific order. (Note that the concept of “linked genes” is different from the process of “linking” described in the question. The process of “linking” described in the question refers to two separate molecules connecting with one another by forming a bond.)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+33+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 34,
+    "question": {
+      "text": "Which of the following scientists proposed the theory of trait inheritance through use and disuse?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Lamarck",
+        "percentage_selected": "(83.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Darwin",
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Cuvier",
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Mendel",
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Wallace",
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Lamarck",
+    "analytics": {
+      "percent_correct": "83.3%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Lamarck proposed that traits are inherited by offspring based on the use or disuse of these traits. Traits that are used would be strengthened and readily passed on to offspring while traits that were in disuse would weaken and be less prominent in offspring if present at all. However, this theory was disproved because evolution applies to populations and not specific individuals. For example, the offspring of athletes are not necessarily any fitter than the offspring of non-athletes If Lamarck‘s theory were to be correct, then the offspring of athletes should be fitter than the offspring of non-athletes because athletes with good physique would be able to pass on strong physical traits to their offspring. Physical characteristics themselves cannot be passed onto offspring; only genes can be passed on. Therefore, Option A is best associated with the theory of use and disuse. CC BY 4.0",
+      "poe_text": "Option B. Darwin – This option is incorrect because Darwin proposed the theory of natural selection, also known as “survival of the fittest”, to explain evolution. This theory proposed that due to competition for limited resources, traits that enabled a species to produce more viable offspring were passed down. In other words, alleles that provide a reproductive advantage will be selected for and become more common from one generation to the next. Alleles that are disadvantageous will be selected against and become less common. Over time, populations become more adapted to their environment. Option C. Cuvier – This option is incorrect because Cuvier proposed the theory of catastrophism where major natural disasters shaped the structure and types of life on Earth. In other words, the alleles that managed to survive extinction would reproduce and be passed on to offspring. Therefore, the particular traits depend on what traits are randomly driven to extinction and what traits are spared by the catastrophe. While catastrophes can play a role in driving evolution, they fail to explain the gradual evolutionary changes shown in fossil records to the same extent as other theories, such as Darwin's Theory of Natural Selection. Option D. Mendel – This option is incorrect because Mendel experimented with pea plants to explore the nature of inheritance. From this research, he put forth the laws of inheritance that described how alleles were inherited. Mendel proposed that heritable factors (genes) come in pairs (alleles) that are independently inherited, one allele from each parent. Option E. Wallace – This option is incorrect because Wallace co-authored research with Darwin regarding evolution and natural selection. He independently proposed the theory of natural selection as well, then built the theory up with Darwin’s work which led to the more comprehensive theory of natural selection as we understand it today.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+34+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 35,
+    "question": {
+      "text": "A certain species of remora can attach itself to a shark and consume fecal matter from the shark for nutrients. If the remora neither harms nor benefits the shark, what best describes the relationship between the two?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Amensalism",
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Parasitism",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Mutualism",
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Commensalism",
+        "percentage_selected": "(89.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Commensalism",
+    "analytics": {
+      "percent_correct": "89.2%",
+      "time_spent": "0 min, 17 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Symbiosis is a close relationship formed between two species for an extended period of time. Examples of symbiosis are shown in the image below. Commensalism is one such relationship where one species benefits from the relationship but does not affect the other species whether positively or negatively. The remora obtains nutrients from the shark’s fecal matter, but the shark is neither positively nor negatively affected by the remora. Since one species benefits from the relationship while the relationship is neutral to the other species, this is an example of commensalism. Therefore, Option D is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Amensalism – This option is incorrect because amensalism is NOT a form of symbiosis. Amensalism is an interaction between two species in which one species is harmed or killed by the other, but the other species is unaffected. Neither species is harmed in the relationship described in the question. The interaction between Penicillium and Staphylococcus is an example of amensalism. While Penicillium secretes penicillin that kills bacteria including Staphylococcus, Penicillium is unaffected by the interaction. Option B. Parasitism – This option is incorrect because parasitism is a form of symbiosis in which one species benefits itself at the expense of another species. The remora as described above does not benefit at the expense of the shark. Tapeworms, leeches, lice, and fleas all demonstrate parasitism. These organisms live inside another organism and thrives at the cost of their host, who is damaged by the interaction. Option C. Mutualism – This option is incorrect because mutualism is a form of symbiosis in which both species benefit from their interactions. There is no mutual benefit in the relationship between the remora and the shark as described above. While the remora benefits from the relationship, the shark is neither positively nor negatively affected by the relationship. The interaction between ants and aphids are an example of mutualism. While ants gain nutrients by feeding on the honeydew of aphids, in return aphids are protected from predators and parasites by the ants on them.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+35+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 36,
+    "question": {
+      "text": "The process of photosynthesis can be summarized as follows: 6CO 2 + 6H 2 O → C 6 H 12 O 6 + 6O 2 Which process is ultimately responsible for the production of oxygen?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Breakdown of glucose",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Splitting of H 2 O",
+        "percentage_selected": "(78.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Splitting of CO 2",
+        "percentage_selected": "(17.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Breakdown of mesophylls",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Aerobic respiration",
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Splitting of H 2 O",
+    "analytics": {
+      "percent_correct": "78.2%",
+      "time_spent": "0 min, 56 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The light-dependent reactions in the chloroplast of plants involve a light-driven electron transport chain. As electrons flow through the photosystems, they must be replenished at the start of the chain. Water is the source of these electrons. As two electrons are lost when passed to a primary electron accepter from photosystem II, water is split into two H + ions, one O 2 molecule, and two electrons to replenish the lost electrons. The two electrons enter the electron transport chain of the light-dependent reactions. In the absence of water, there is no continued source of electrons and the light-dependent reactions cannot proceed. This process of water splitting is called photolysis . Since the splitting of water produces oxygen during the process of photosynthesis, Option B is the correct answer. The flow of electrons starting from water in the light-dependent reactions is shown in the image below. CC BY 4.0",
+      "poe_text": "Option A. Breakdown of glucose – This option is incorrect because glucose does not break down in the process of photosynthesis. Glucose, instead, is a product of photosynthesis during the dark reaction. Photosynthesis is a process that ultimately harnesses light energy to synthesize glucose that can be used by plants for energy. Option C. Splitting of CO 2 – This option is incorrect because CO 2 does not split during the processes of photosynthesis, but rather joins with ribulose bisphosphate (RuBP) in order to “fix” CO 2 during the Calvin Cycle. The Calvin Cycle is the dark reaction that fixes 6 CO 2 molecules through a cycle that repeats 6 times to synthesize glucose. Oxygen is not a product of the Calvin Cycle. Option D. Breakdown of mesophylls – This option is incorrect because the mesophyll layer of the leaves does not break down during photosynthesis, and it also does not produce oxygen as a by-product. Mesophyll cells of plant leaves are the location of carbon fixation during C3 photosynthesis. Option E. Aerobic respiration – This option is incorrect because aerobic respiration is the opposite of photosynthesis where glucose and oxygen are used up in order to generate energy in the form of ATP, a process that also produces CO 2 and H 2 O.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+36+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 37,
+    "question": {
+      "text": "Honeybees and ants secrete a trail of a chemical factor after locating a source of food, allowing them to communicate the location of the food to others. This form of communication is accomplished using which type of compound?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Pheromone",
+        "percentage_selected": "(93.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Hormone",
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Neurotransmitter",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Primary messenger",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Secondary messenger",
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Pheromone",
+    "analytics": {
+      "percent_correct": "93.1%",
+      "time_spent": "0 min, 30 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "One of the modes of communication utilized by animals is chemical communication via pheromones . Unlike hormones, pheromones, are chemicals released into the environment for communication with other animals. Hence, pheromones can act as alarm symbols, territory/nest/food markers, sex attractants, etc. Since the question describes honeybees and ants secreting a chemical to communicate the location of food with others, Option A is the correct answer. Pheromones can be detected through various means including smelling and ingestion. Depending on the chemical, they may result in a variety of different effects. Releaser pheromones trigger a reversible, short-term response. For example, ants use formic acid, a releaser pheromone, to mark a trail to food. Primer pheromones trigger long-term physiological and behavioral changes in development. For example, a queen bee can release a chemical to prevent the development of reproductive capabilities. Other pheromones include trail pheromones that mark a path to a nest or food source and territorial pheromones such as those in dog urine that mark territory.",
+      "poe_text": "Option B. Hormone – This option is incorrect because hormones are signaling molecules produced for communication among the various organs of a multicellular organism. Hormones are released within the bloodstream of a single organism, and are not released externally to communicate with other organisms. Pheromones are NOT hormones because pheromones refer to chemicals used for communication between organisms. Option C. Neurotransmitter – This option is incorrect because neurotransmitters are signaling molecules released by neurons to act on other neurons or target tissue. While neurotransmitters function within an organism, pheromones function between different organisms. Option D. Primary messenger – This option is incorrect because primary messengers are extracellular signaling molecules including hormones that bind to membrane receptors to trigger some intracellular response. They do not function outside of an organism. Option E. Secondary messenger – This option is incorrect because secondary messengers are intracellular signaling molecules activated in response to a primary messenger. They act within a cell to propagate an extracellular signal to the inside of the cell. They do not function outside a multicellular organism or even outside an individual cell. Examples of secondary messengers include cAMP, IP 3 , DAG, and Calcium.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 38,
+    "question": {
+      "text": "A researcher introduces a chemical into a tumor cell that has begun to replicate out of control. After introducing the chemical, the formation of microtubules is stabilized and they are no longer able to shorten. What phase of the cell cycle has been disrupted?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "G 0 Phase",
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "G 1 Phase",
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "G 2 Phase",
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "S Phase",
+        "percentage_selected": "(14.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "M Phase",
+        "percentage_selected": "(72.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "M Phase",
+    "analytics": {
+      "percent_correct": "72.1%",
+      "time_spent": "0 min, 28 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Cell division , the process by which a parent cell divides into two daughter cells, is split into two distinct parts: interphase and mitosis. During interphase, the cell prepares for division during three phases: G 1 , S, and G 2 . During the G-phases the cell grows in size in preparation for division, and during S phase the cell replicates its DNA. When the cell is truly ready for division, it enters mitosis. Mitosis describes cell division in all somatic cells and involves the processes of prophase, metaphase, anaphase, telophase, and cytokinesis. Mitosis is most affected by microtubule-inhibiting chemicals because the mitotic spindle (made of microtubules) is key in cell division. The mitotic spindle is directly involved in moving chromosomes around the eukaryotic cell. During anaphase, the microtubules shorten and pull the chromosomes towards opposite ends of the cell. Since the chemical discussed in the question stabilizes the formation of microtubules and prevents them from shortening, the cell will not be able to proceed with anaphase and complete cell division. Therefore, Option E is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. G 0 Phase – This option is incorrect because this is a stasis phase where the cell no longer undergoes division. Since the chemical interrupts microtubule shortening which is necessary to split the centromere and move the sister chromatids to opposite poles of the cells during anaphase of mitosis, the G 0 phase is not affected by the chemical as no microtubules are involved in G 0 . Option B. G 1 Phase – This option is incorrect because this is a phase where the cell undergoes its main period of growth. Since the chemical interrupts microtubule shortening which is necessary to split the centromere and move the sister chromatids to opposite poles of the cells during anaphase of mitosis, the G 1 phase is not affected by the chemical as no microtubules are involved in G 1 . Option C. G 2 Phase – This option is incorrect because this is a phase where the cell begins to prepare for mitosis by replicating its organelles. Since the chemical interrupts microtubule shortening which is necessary to split the centromere and move the sister chromatids to opposite poles of the cells during anaphase of mitosis, the G 2 phase is not affected by the chemical as no microtubules are involved in G 2 . Option D. S Phase – This option is incorrect because this is a phase where the cell undergoes the replication of its DNA in preparation for mitosis. Since the chemical interrupts microtubule shortening which is necessary to split the centromere and move the sister chromatids to opposite poles of the cells during the anaphase of mitosis, the S phase is not affected by the chemical as no microtubules are involved in the S phase.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+38+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 39,
+    "question": {
+      "text": "Which of the following best describes the actions of ADH?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Acts on collecting duct by increasing reabsorption of water",
+        "percentage_selected": "(79.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Acts on distal convoluted tubule by increasing excretion of sodium",
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Acts on collecting duct by decreasing permeability to water",
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Acts on Loop of Henle to increase water reabsorption",
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Acts on proximal convoluted tubule by decreasing permeability to water",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Acts on collecting duct by increasing reabsorption of water",
+    "analytics": {
+      "percent_correct": "79.8%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "ADH , or antidiuretic hormone , is a hormone that controls the amount of water in the body. It is produced by the hypothalamus of the brain and is then stored and secreted from the posterior pituitary. It is released in response to low blood volume. The kidney is made up of many nephrons, as seen in the image below, which filters blood and produces a filtrate that goes through collecting ducts to be excreted as urine. ADH acts on these collecting ducts to increase the number of aquaporin channels which allow more water to leave the urine and become reabsorbed by the cells of the collecting duct. Hence, ADH makes the urine more concentrated by facilitating the transport of water out of urine and into the cells of the collecting duct. That water is eventually brought back to the bloodstream, raising the blood volume. ADH also acts on the distal convoluted tubule of the nephron, though its effect is greatest on the collecting duct. Since ADH acts on the collecting duct to increase its reabsorption of water, Option A is correct. CC BY 4.0",
+      "poe_text": "Option B. Acts on distal convoluted tubule by increasing excretion of sodium – This option is incorrect because ADH does not act to increase the excretion of sodium. Although ADH can act on the distal convoluted tubule, it does so by promoting the reabsorption of water. Option C. Acts on collecting duct by decreasing permeability to water – This option is incorrect because ADH does not act to decrease the collecting duct’s permeability to water, but rather increases its permeability. ADH causes an increase in aquaporins which allows more water to leave from the urine and enter the cells in the collecting duct. Option D. Acts on Loop of Henle to increase water reabsorption – This option is incorrect because even though ADH does act to increase water reabsorption, ADH does not act on the Loop of Henle; it acts on the collecting duct. The Loop of Henle, making up a majority of the nephron, consists of the descending and ascending loops. The descending loop is permeable to water; hence, water leaves and the solute concentration in the tube increases. The descending loop of Henle allows organisms to reabsorb water; the longer the loop of Henle, the more water an organism can reclaim. The ascending loop then pumps out NaCl, causing the solute concentration in the tube to decrease. Option E. Acts on proximal convoluted tubule by decreasing permeability to water – This option is incorrect because ADH does not act to decrease water permeability, but rather increases water permeability. Furthermore, ADH does not act on the proximal convoluted tubule and, in fact, acts primarily on the collecting duct.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+39+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 40,
+    "question": {
+      "text": "Which part of the digestive system functions to absorb water, electrolytes, and bacteria-produced Vitamin K?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Stomach",
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Ileum",
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Large intestine",
+        "percentage_selected": "(74.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Duodenum",
+        "percentage_selected": "(10.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Jejunum",
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Large intestine",
+    "analytics": {
+      "percent_correct": "74.5%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The main functions of the large intestine are the absorption of water, electrolytes, and vitamins. The absorption of water in the colon of the large intestine concentrates the indigestible material, producing feces that are stored in the rectum. The large intestine also absorbs electrolytes through its ion channels. Furthermore, symbiotic bacteria in the large intestine produce vitamin K and B12 that can be absorbed in the intestines. Therefore, Option C is the correct answer. The roles of the different segments of the digestive system are summarized below. CC BY 4.0",
+      "poe_text": "Option A. Stomach – This option is incorrect because the stomach does not carry out the absorption of water or nutrients. The stomach is the site of mechanical and chemical digestion of food (particularly proteins). The muscles in the stomach are activated to break down food. The stomach also secretes gastric juice, containing digestive enzymes and HCl, to break down food that enters the stomach. Option B. Ileum – This option is incorrect because while the jejunum and the ileum that follows are the primary sites of nutrient absorption and some water absorption occurs as well, mineral absorption does not occur in these sites. Aside from the absorption of nutrients, the ileum also contains Peyer’s patches which are large aggregates of lymphoid tissue. Furthermore, the ileum is a part of the small intestine. Since there is no bacteria-produced vitamin K in the small intestine, this option is incorrect. Option D. Duodenum – This option is incorrect because the duodenum is the site of continuing digestion by pancreatic digestive enzymes and bile from the liver. The duodenum breaks down starch and proteins as well as other food types such as fats and nucleotides. Hence, very little if any absorption occurs in the duodenum. Furthermore, the duodenum is a part of the small intestine. Since there is no bacteria-produced vitamin K in the small intestine, this option is incorrect. Option E. Jejunum – This option is incorrect because while the jejunum and the ileum that follows are the primary sites of nutrient absorption and some water absorption occurs as well, mineral absorption does not occur in these sites. Furthermore, the jejunum is a part of the small intestine. Since there is no bacteria-produced vitamin K in the small intestine, this option is incorrect.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+8/Question+40+Solution+1.png"
+      ]
+    }
+  }
+]

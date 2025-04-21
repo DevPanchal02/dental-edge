@@ -1,0 +1,572 @@
+[
+  {
+    "question_number": 1,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "What is the empirical formula of a compound that is 48% carbon, 10% hydrogen, and 32% oxygen? (The rest of the sample is impurities)",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 5 O",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 2 H 4 O",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 2 H 5 O",
+        "images": [],
+        "percentage_selected": "(86%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "C 4 H 10 O",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 4 H 10 O 2",
+        "images": [],
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "C 2 H 5 O",
+    "analytics": {
+      "percent_correct": "86%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving percent compositions , we first assume that we have 100 g of the compound, which allows us to find the number of grams of each element, which will then be used to determine the number of moles of each element, and finally, the empirical formula. STEP 1: First, we assume that we have 100 g of the compound. Using the given percent composition, we can find the number of grams of each element: 48% × 100 g = 48 g of carbon 10% × 100 g = 10 g of hydrogen 32% × 100 g = 32 g of oxygen STEP 2: Next, we divide these masses by each element’s atomic mass to find the moles: 48 g ÷ 12 g•mol -1 = 4 mol of carbon 10 g ÷ 1 g•mol -1 = 10 mol of hydrogen 32 g ÷ 16 g•mol -1 = 2 mol of oxygen STEP 3: Next, we select the smallest number of the moles and divide each number by this number (which is 2 in this case): 4 ÷ 2 = 2 mol of carbon 10 ÷ 2 = 5 mol of hydrogen 2 ÷ 2 = 1 mol of oxygen STEP 4: Finally, we use these mole ratios to determine that the empirical formula is C 2 H 5 O . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "A scientist analyzes a pure sample and discovers that it contains 10% hydrogen, 42% nitrogen, and 48% carbon. What is the empirical formula of this compound?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 5 N",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 2 H 5 N",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 3 H 10 N 3",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 4 H 5 N 3",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 4 H 10 N 3",
+        "images": [],
+        "percentage_selected": "(92.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "C 4 H 10 N 3",
+    "analytics": {
+      "percent_correct": "92.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving percent compositions , we first assume that we have 100 g of the compound, which allows us to find the number of grams of each element, which will then be used to determine the number of moles of each element, and finally, the empirical formula. STEP 1: First, we assume that we have 100 g of the compound. Using the given percent composition, we can find the number of grams of each element: 10% × 100 g = 10 g of hydrogen 42% × 100 g = 42 g of nitrogen 48% × 100 g = 48 g of carbon STEP 2: Next, we divide these masses by each element’s atomic mass to find the moles: 10 g ÷ 1 g•mol -1 = 10 mol of hydrogen 42 g ÷ 14 g•mol -1 = 3 mol of nitrogen 48 g ÷ 12 g•mol -1 = 4 mol of carbon STEP 3: Finally, we use these mole ratios to determine that the empirical formula is C 4 H 10 N 3 . Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "What is the empirical weight of a compound composed of 48% carbon, 4% hydrogen, and 48% oxygen?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "50 g",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "60 g",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "100 g",
+        "images": [],
+        "percentage_selected": "(94.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "175 g",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "200 g",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "100 g",
+    "analytics": {
+      "percent_correct": "94.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving percent compositions , we first assume that we have 100 g of the compound, which allows us to find the number of grams of each element, which will then be used to determine the number of moles of each element, and finally, the empirical formula. STEP 1: First, we assume that we have 100 g of the compound. Using the given percent composition, we can find the number of grams of each element: 48% × 100 g = 48 g of carbon 4% × 100 g = 4 g of hydrogen 48% × 100 g = 48 g of oxygen STEP 2: Next, we divide these masses by each element’s atomic mass to find the moles: 48 g ÷ 12 g•mol -1 = 4 mol of carbon 4 g ÷ 1 g•mol -1 = 4 mol of hydrogen 48 g ÷ 16 g•mol -1 = 3 mol of oxygen STEP 3: Next, we use these mole ratios to determine that the empirical formula is C 4 H 4 O 3 . STEP 4: Finally, we can calculate the empirical weight of C 4 H 4 O 3 (C = 12, H = 4, O = 16 g•mol -1 ): (4 × 12) + (4 × 1) + (3 × 16) = 48 + 4 + 48 = 100 g Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "What is the empirical formula of a compound that is 21% Li, 36% C, and 42% N by mass?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "LiCN",
+        "images": [],
+        "percentage_selected": "(96.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "LiC 4 N",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Li 2 C 2 N 2",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Li 2 C 5 N 3",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Li 3 C 2 N",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "LiCN",
+    "analytics": {
+      "percent_correct": "96.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving percent compositions , we first assume that we have 100 g of the compound, which allows us to find the number of grams of each element, which will then be used to determine the number of moles of each element, and finally, the empirical formula. STEP 1: First, we assume that we have 100 g of the compound. Using the given percent composition, we can find the number of grams of each element: 21% × 100 g = 21 g of Li 36% × 100 g = 36 g of C 42% × 100 g = 42 g of N STEP 2: Next, we divide these masses by each element’s atomic mass to find the moles: 21 g ÷ 7 g•mol -1 = 3 mol of Li 36 g ÷ 12 g•mol -1 = 3 mol of C 42 g ÷ 14 g•mol -1 = 3 mol of N STEP 3: Next, we select the smallest number of the moles and divide each number by this number (which is 3 in this case): 3 ÷ 3 = 1 mol of Li 3 ÷ 3 = 1 mol of C 3 ÷ 3 = 1 mol of N STEP 4: Next, we use these mole ratios to determine that the empirical formula is LiCN . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "Given a compound with a molecular weight of 64 g•mol -1 containing 88% nitrogen and 12% hydrogen by mass, what is the molecular formula of the compound?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NH",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "NH 2",
+        "images": [],
+        "percentage_selected": "(13.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N 2 H 2",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N 3 H 6",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "N 4 H 8",
+        "images": [],
+        "percentage_selected": "(73%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N 4 H 8",
+    "analytics": {
+      "percent_correct": "73%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving percent compositions , we first assume that we have 100 g of the compound, which allows us to find the number of grams of each element, which will then be used to determine the number of moles of each element, and finally, the empirical formula. Then, we can use the molecular weight to find the molecular formula. STEP 1: First, we assume that we have 100 g of the compound. Using the given percent composition, we can find the number of grams of each element: 88% × 100 g = 88 g of nitrogen 12% × 100 g = 12 g of hydrogen STEP 2: Next, we divide these masses by each element’s atomic mass to find the moles: 88 g ÷ 14 g•mol -1 = 6 mol of nitrogen 12 g ÷ 1 g•mol -1 = 12 mol of hydrogen STEP 3: Next, we select the smallest number of the moles and divide each number by this number (which is 6 in this case): 6 ÷ 6 = 1 mol of nitrogen 12 ÷ 6 = 2 mol of hydrogen STEP 4: Next, we use these mole ratios to determine that the empirical formula is NH 2 . STEP 5: The empirical weight of NH 2 is 14 + 1 + 1 = 16 g•mol -1 . Since the problem tells us that the molecular weight of our compound is 64 g•mol -1 , we take 64 ÷ 16 = 4 to see that our molecular formula is 4 times that of the empirical formula. Our molecular formula is: N (4 × 1) H (4 × 2) = N 4 H 8 Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "The mass spectrometry of a compound determined the percent composition as 71% Cl, 24% C, and 4% H. If the molecular weight of the compound is 99 g•mol -1 , what is the molecular formula of the compound?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 3 Cl",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CHCl 3",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 2 H 2 Cl 2",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 2 H 4 Cl 2",
+        "images": [],
+        "percentage_selected": "(95.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "C 3 H 6 Cl 3",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "C 2 H 4 Cl 2",
+    "analytics": {
+      "percent_correct": "95.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving percent compositions , we first assume that we have 100 g of the compound, which allows us to find the number of grams of each element, which will then be used to determine the number of moles of each element, and finally, the empirical formula. Then, we can use the molecular weight to find the molecular formula. STEP 1: First, we assume that we have 100 g of the compound. Using the given percent composition, we can find the number of grams of each element: 71% × 100 g = 71 g of Cl 24% × 100 g = 24 g of C 4% × 100 g = 4 g of H STEP 2: Next, we divide these masses by each element’s atomic mass to find the moles: 71 g ÷ 35.5 g•mol -1 = 2 mol of Cl 24 g ÷ 12 g•mol -1 = 2 mol of C 4 g ÷ 1 g•mol -1 = 4 mol of H STEP 3: Next, we select the smallest number of the moles and divide each number by this number (which is 2 in this case): 2 ÷ 2 = 1 mol of Cl 2 ÷ 2 = 1 mol of C 4 ÷ 2 = 2 mol of H STEP 4: Next, we use these mole ratios to determine that the empirical formula is CH 2 Cl . STEP 5: The empirical weight of CH 2 Cl is 12 + 1 + 1 + 35.5 = 49.5 g•mol -1 . Since the problem tells us that the molecular weight of our compound is 99 g•mol -1 , we take 99 ÷ 49.5 = 2 to see that our molecular formula is 2 times that of the empirical formula. Our molecular formula is: C (2 × 1) H (2 × 2) Cl (2 × 1) = C 2 H 4 Cl 2 Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "Baking soda is a household cooking and cleaning chemical with the formula NaHCO 3 . What is the percent by mass of oxygen in baking soda?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "31%",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "44%",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "50%",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "57%",
+        "images": [],
+        "percentage_selected": "(83.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "73%",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "57%",
+    "analytics": {
+      "percent_correct": "83.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving percent compositions , all we need to do is to divide the molecular mass of oxygen in NaHCO 3 by the molecular mass of the entire compound. STEP 1: First, we calculate the molecular mass of oxygen in NaHCO 3 , keeping in mind that there are three oxygen atoms in NaHCO 3 (O = 16 g•mol -1 ): 3 × 16 = 48 g•mol -1 STEP 2: Next, we find the molecular mass of NaHCO 3 (Na = 23, H = 1, C = 12, O = 16 g•mol -1 ): 23 + 1 + 12 + (3 × 16) = 84 g•mol -1 STEP 3: Finally, we calculate 48 ÷  84 to find the percent by mass of oxygen in NaHCO 3 . Without doing any calculations, we can tell that the result is a number that is slightly greater than one-half. As we can see, the only answer choice that fits this requirement is 57% . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "What is the percent composition of sodium in sodium cyanide, NaCN?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "47%",
+        "images": [],
+        "percentage_selected": "(91.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "50%",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "52%",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "58%",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "61%",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "47%",
+    "analytics": {
+      "percent_correct": "91.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving percent compositions , all we need to do is to divide the molecular mass of sodium in NaCN by the molecular mass of the entire compound. STEP 1: First, we calculate the molecular mass of sodium (Na = 23 g•mol -1 ): 1 × 23 g•mol -1 STEP 2: Next, we find the molecular mass of NaCN (Na = 23, C = 12, N = 14 g•mol -1 ): 23 + 12 + 14 = 49 g•mol -1 STEP 3: Finally, we calculate 23 ÷  49 to find the percent by mass of sodium in NaCN. Without doing any calculations, we can tell that the result is a number that is slightly less than one-half. As we can see, the only answer choice that fits this requirement is 47% . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "How many moles of hydrogen can be found in 75 g of acetaminophen, C 8 H 9 NO 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4.5",
+        "images": [],
+        "percentage_selected": "(81.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "7.5",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4.5",
+    "analytics": {
+      "percent_correct": "81.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molecular compositions , we need to first determine the number of moles of C 8 H 9 NO 2 in a 75 g sample, and then determine the moles of hydrogen. STEP 1: First, we find the molecular mass of C 8 H 9 NO 2 (C = 12, H = 9, N = 14, O = 16 g•mol -1 ): (8 × 12) + (9 × 1) + 14 + (2 × 16) = 96 + 9 + 14 + 32 = 151 g•mol -1 STEP 2: Next, we calculate the number of moles in 75 g of C 8 H 9 NO 2 (151 g•mol -1 ): moles = 75 g ÷ 151 g•mol -1 = 0.5 mol of C 8 H 9 NO 2 STEP 3: Finally, we calculate the number of moles of hydrogen found in 0.5 mol of C 8 H 9 NO 2 . Since there are 9 moles of hydrogen for every mole of C 8 H 9 NO 2 , 0.5 moles of C 8 H 9 NO 2 has: 0.5 × 9 = 4.5 moles of hydrogen Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions",
+    "question": {
+      "text": "One of the most common pain reliever medications, aspirin, has a molecular formula of C 9 H 8 O 4 . How many molecules are taken if an individual swallows a 0.500 g aspirin tablet?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Empirical+Formula+%26+Molecular+Formula%3A+Empirical+and+Molecular+Compositions/Question+10+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(16.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Empirical+Formula+%26+Molecular+Formula%3A+Empirical+and+Molecular+Compositions/Question+10+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(18%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Empirical+Formula+%26+Molecular+Formula%3A+Empirical+and+Molecular+Compositions/Question+10+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Empirical+Formula+%26+Molecular+Formula%3A+Empirical+and+Molecular+Compositions/Question+10+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Empirical+Formula+%26+Molecular+Formula%3A+Empirical+and+Molecular+Compositions/Question+10+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(51.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "51.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molecular compositions , we need to first determine the number of moles of C 9 H 8 O 4 in a 0.500 g tablet, and then determine the number of molecules. STEP 1: First, we find the molecular mass of C 9 H 8 O 4 (C = 12, H = 1, O = 16 g•mol -1 ): STEP 2 : Next, we calculate the number of moles in 0.500 g of C 9 H 8 O 4 (180 g•mol-1): STEP 3 : Finally, we calculate the number of molecules in 1/360 mol of C 9 H 8 O 4 : Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Empirical+Formula+%26+Molecular+Formula%3A+Empirical+and+Molecular+Compositions/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Empirical+Formula+%26+Molecular+Formula%3A+Empirical+and+Molecular+Compositions/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Empirical+Formula+%26+Molecular+Formula%3A+Empirical+and+Molecular+Compositions/Question+10+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000104cb6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104caf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001047f68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010483d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010487e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104831a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104c7bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104c7ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104c5ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104c7f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104c4cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104c9f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104c9fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104caecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Empirical and Molecular Compositions"
+  }
+]

@@ -1,0 +1,644 @@
+[
+  {
+    "question_number": 1,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "Osmosis is the net movement of",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "water from an area of lower to higher solute concentration.",
+        "images": [],
+        "percentage_selected": "(84%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "water from an area of higher to lower solute concentration.",
+        "images": [],
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "solute from an area of lower to higher solute concentration.",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "solute from an area of higher to lower solute concentration.",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "pressure from an area of lower to higher solute concentration.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "water from an area of lower to higher solute concentration.",
+    "analytics": {
+      "percent_correct": "84%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know that osmosis is the net movement of water across a semipermeable membrane from an area of lower solute concentration to a region of higher solute concentration. Solutes are unable to cross the membrane, but water can. In this case, osmosis is the net movement of water from an area of lower to higher solute concentration. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "A student can increase the osmotic pressure of a solution by",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "decreasing the solute’s van’t Hoff factor.",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "increasing the molarity of the solution.",
+        "images": [],
+        "percentage_selected": "(88.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "increasing the pressure of the solute.",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "decreasing the energy of the solution.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "increasing the volume of the solvent.",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "increasing the molarity of the solution.",
+    "analytics": {
+      "percent_correct": "88.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: As we can see, the osmotic pressure is proportional to the solute’s van’t Hoff factor, the molarity of the solution, and the temperature in Kelvin. In this case, a student can increase the osmotic pressure of a solution by increasing the molarity of the solution. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "Which of the following aqueous solutions has the lowest osmotic pressure, assuming the temperatures of the solutions are the same?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.1 M Al(NO 3 ) 3",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.2 M NaCl",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.3 M C 6 H 12 O 6",
+        "images": [],
+        "percentage_selected": "(84.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "0.4 M H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "0.5 M C 6 H 12 O 6",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.3 M C 6 H 12 O 6",
+    "analytics": {
+      "percent_correct": "84.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: For this question, since we know that the solutions share the same temperature, we just need to calculate for the product of the solute’s van’t Hoff factor and the molarity of each solution to determine which aqueous solutions has the lowest osmotic pressure. Option A. 0.1 M Al(NO 3 ) 3 Incorrect. Since Al(NO 3 ) 3 dissociates into 1 Al 3+ and 3 NO 3 - , the van’t Hoff factor of Al(NO 3 ) 3 is 1 + 3 = 4. The product of the van’t Hoff factor and the molarity is 4 × 0.1 = 0.4. Option B. 0.2 M NaCl Incorrect. Since NaCl dissociates into 1 Na + and 1 Cl - , the van’t Hoff factor of NaCl is 1 + 1 = 2. The product of the van’t Hoff factor and the molarity is 2 × 0.2 = 0.4. Option C. 0.3 M C 6 H 12 O 6 Correct. Since C 6 H 12 O 6 does not dissociate and stays as 1 molecule, the van’t Hoff factor of C 6 H 12 O 6 is 1. The product of the van’t Hoff factor and the molarity is 1 × 0.3 = 0.3, which is the lowest out of all given options. Option D. 0.4 M H 2 SO 4 Incorrect. Since H 2 SO 4 dissociates into 2 H + and 1 SO 4 2- , the van’t Hoff factor of H 2 SO 4 is 2 + 1 = 3. The product of the van’t Hoff factor and the molarity is 3 × 0.4 = 1.2. Option E. 0.5 M C 6 H 12 O 6 Incorrect. Since C 6 H 12 O 6 does not dissociate and stays as 1 molecule, the van’t Hoff factor of C 6 H 12 O 6 is 1. The product of the van’t Hoff factor and the molarity is 1 × 0.5 = 0.5. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "Which of the following aqueous solutions has the greatest osmotic pressure, assuming the temperatures of the solutions are the same?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.1 M H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.2 M NaCl",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.3 M MgCl 2",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.4 M H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(81.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "0.5 M CH 3 OH",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.4 M H 2 SO 4",
+    "analytics": {
+      "percent_correct": "81.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: Π = osmotic pressure (atm) For this question, since we know that the solutions share the same temperature, we just need to calculate for the product of the solute’s van’t Hoff factor and the molarity of each solution to determine which aqueous solutions has the greatest osmotic pressure. Option A. 0.1 M H 2 SO 4 Incorrect. Since H 2 SO 4 dissociates into 2 H + and 1 SO 4 2- , the van’t Hoff factor of H 2 SO 4 is 2 + 1 = 3. The product of the van’t Hoff factor and the molarity is 3 × 0.1 = 0.3. Option B. 0.2 M NaCl Incorrect. Since NaCl dissociates into 1 Na + and 1 Cl - , the van’t Hoff factor of NaCl is 1 + 1 = 2. The product of the van’t Hoff factor and the molarity is 2 × 0.2 = 0.4. Option C. 0.3 M MgCl 2 Incorrect. Since MgCl 2 dissociates into 1 Mg 2+ and 2 Cl - , the van’t Hoff factor of MgCl 2 is 1 + 2 = 3. The product of the van’t Hoff factor and the molarity is 3 × 0.3 = 0.9. Option D. 0.4 M H 2 SO 4 Correct. Since H 2 SO 4 dissociates into 2 H + and 1 SO 4 2- , the van’t Hoff factor of H 2 SO 4 is 2 + 1 = 3. The product of the van’t Hoff factor and the molarity is 3 × 0.4 = 1.2, which is the greatest out of all given options. Option E. 0.5 M CH 3 OH Incorrect. Since CH 3 OH does not dissociate and stays as 1 molecule, the van’t Hoff factor of CH 3 OH is 1. The product of the van’t Hoff factor and the molarity for 0.5 M CH 3 OH is 1 × 0.5 = 0.5. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "By what factor was the temperature of a solution changed if the van’t Hoff factor was also decreased by a factor of 4 and the molarity was increased by a factor of 3, resulting in the osmotic pressure increasing by a factor of 9?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "7",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "9",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(83.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "12",
+    "analytics": {
+      "percent_correct": "83.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: STEP 1: First, we need to know that the osmotic pressure formula tells us that the osmotic pressure is proportional to the solute’s van’t Hoff factor, the molarity of the solution, and the temperature in Kelvin: STEP 2: Next, we can rearrange the osmotic pressure formula: STEP 3: Next, we can calculate for the factor of change in the temperature of the solution if decreasing the van’t Hoff factor by a factor of 4 and increasing the molarity by a factor of 3 results in the osmotic pressure to be increased by a factor of 9: T is changed by the factor of 12. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+5+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+5+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "What is the osmotic pressure (atm) of 800 mL solution with 2 moles of MgCl 2 dissolved in water at 20°C?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+6+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(85.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+6+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+6+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+6+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+6+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "85.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: STEP 1: First, the temperature unit needs to be converted from °C to Kelvin: STEP 2: Next, we need to calculate for the molarity of the solution, given that 2 moles of MgCl 2 is dissolved in 800 mL = 0.8 L of solution: STEP 3: Then, we need to calculate for the osmotic pressure, knowing that the van’t Hoff factor is 3 ( i = 1 + 2 = 3 because MgCl 2 dissociates into 1 Mg 2+ and 2 Cl - ), the molarity of the solution is (2/0.8) M ( M = 2/0.8), the universal gas constant is 0.0821 L•atm•K -1 •mol -1 ( R = 0.0821), and the temperature of the solution is 293 K ( T = 293): Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+6+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "What is the volume of a solution in litres with 2 moles of NaCl if the resulting osmotic pressure is 1200 atm at 27 °C?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(81.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(17.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "81.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: STEP 1 : First, the temperature unit needs to be converted from °C to Kelvin: STEP 2: Next, we need to rearrange the osmotic pressure formula so that we can calculate for the molarity of the solution: STEP 3: Then, we need to calculate for the molarity of the solution, knowing that the osmotic pressure is 1,200 atm ( Π = 1,200), the solute’s van’t Hoff factor is 2 ( i = 1 + 1 = 2 because NaCl dissociates into 1 Na + and 1 Cl - ), the universal gas constant is 0.0821 L•atm•K -1 •mol -1 ( R = 0.0821), and the temperature of the solution is 300 K ( T = 300): STEP 4: Then, we can calculate for the volume of the solution, using the calculated molarity of the solution and 2 moles of NaCl : STEP 5: Now, we can combine the molarity that is calculated in STEP 3 and the molarity equation found in STEP 4 to calculate for the volume of the solution: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+6.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "How many moles of CH 3 OH is used to make 900 mL of solution with an osmotic pressure of 30 atm at 27 °C?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(89.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "89.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: STEP 1 : First, the temperature unit needs to be converted from °C to Kelvin: STEP 2: Next, we need to rearrange the osmotic pressure formula so that we can calculate for the molarity of the solution: STEP 3: Then, we need to calculate for the molarity of the solution, knowing that the osmotic pressure is 30 atm ( Π = 30), the solute’s van’t Hoff factor is 1 ( i = 1 because CH 3 OH does not dissociate and stays as 1 molecule), the universal gas constant is 0.0821 L•atm•K -1 •mol -1 ( R = 0.0821), and the temperature of the solution is 300 K ( T = 300): STEP 4: Then, we need to calculate for the number of moles of CH­ 3 OH, using the calculated molarity and 900 mL = 0.9 L of solution: STEP 5: Now, we can combine the molarity calculated in STEP 3 and the molarity equation in STEP 4 to calculate for the number of moles of CH 3 OH: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+8+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "Which of the following molecules is dissolved in water if the resulting osmotic pressure of a solution is 8.21 atm and molarity of the solution is 1/3 M at 100 K?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NaCl",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "MgCl 2",
+        "images": [],
+        "percentage_selected": "(83.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "C 6 H 12 O 6",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CH 3 OH",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Al(NO 3 ) 3",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "MgCl 2",
+    "analytics": {
+      "percent_correct": "83.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: STEP 1: First, we need to rearrange the osmotic pressure formula: STEP 2: Then, we can calculate for the solute’s van’t Hoff factor, knowing that the osmotic pressure is 8.21 atm ( Π = 8.21), the molarity of the solution is 1/3 M ( M = 1/3), the universal gas constant is 0 .0821 L•atm•K -1 •mol -1 ( R = 0.0821), and the temperature is 100 K ( T = 100): STEP 3: Now that we have the solute’s van’t Hoff factor, we can determine which molecule has been dissolved in the solution: Since MgCl 2 has a van’t Hoff factor of 3, the molecule dissolved in water is MgCl 2 . Therefore, the answer is B.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure",
+    "question": {
+      "text": "What mass of NaCl (g) in a 4 L solution will become isotonic with blood if the average osmotic pressure of blood is 8 atm at 25 °C? The molar mass of NaCl is 58 g • mol -1 .",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(13%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(82.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "82.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving osmotic pressure , we need to know the formula for calculating osmotic pressure is: STEP 1 : First, the temperature unit needs to be converted from °C to Kelvin: STEP 2: Next, we need to rearrange the osmotic pressure formula so that we can calculate for the molarity of the solution: STEP 3: Then, we need to calculate for the molarity of the solution, knowing that the osmotic pressure is 8 atm ( Π = 8), the solute’s van’t Hoff factor is 2 ( i = 1 + 1 = 2 because NaCl dissociates into 1 Na + and 1 Cl - ), the universal gas constant is 0.0821 L•atm•K -1 •mol -1 ( R = 0.0821), and the temperature of the solution is 298 K ( T = 298): STEP 4: Then, we can calculate for the number of moles of NaCl, using the calculated molarity of the solution and 4 L of solution: STEP 4: Then, we can calculate for the number of moles of NaCl, using the calculated molarity of the solution and 4 L of solution: STEP 6: Now, we can calculate for the mass of NaCl used, knowing that the molar mass of NaCl is 58 g: Therefore, the answer is D.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Osmotic+Pressure/Question+10+Solution+4.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001053eee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001053e70ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104f2e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104f756a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104fb67b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104f69a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x00000001053b3c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x00000001053b6f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000105393a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x00000001053b77e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000105384b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001053d79c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001053d7b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001053e6cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Osmotic Pressure"
+  }
+]

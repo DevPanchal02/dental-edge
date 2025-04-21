@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which of the following correctly arranges the intermolecular forces in decreasing order of strength, from strongest to weakest?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Dipole-dipole > ion-dipole > London dispersion",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Dipole-dipole > London dispersion > ion-dipole",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Ion-dipole > dipole-dipole > London dispersion",
+        "images": [],
+        "percentage_selected": "(92.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Ion-dipole > London dispersion > dipole-dipole",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "London dispersion > dipole-dipole > ion-dipole",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ion-dipole > dipole-dipole > London dispersion",
+    "analytics": {
+      "percent_correct": "92.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , let’s first define each force: When comparing ion-dipole and dipole-dipole forces, ion-dipole forces are stronger in magnitude. This is because ion-dipole forces are formed between an ion and a polar molecule, while dipole-dipole forces between two polar molecules with permanent dipoles. Since London dispersion forces are transiently (temporarily) formed between adjacent molecules, they are the weakest intermolecular force. Therefore, the correct arrangement of intermolecular forces in decreasing strength is: Ion-dipole > dipole-dipole > London dispersion Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Each of the following directly affects the strength of London dispersion forces EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Molecular weight",
+        "images": [],
+        "percentage_selected": "(20.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Number of atoms in the molecule",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Electron distribution",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Permanent dipoles",
+        "images": [],
+        "percentage_selected": "(55.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Molecular shape",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Permanent dipoles",
+    "analytics": {
+      "percent_correct": "55.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind that we need to find the factor that does not directly affect the strength of LDFs. Option A. Molecular weight Incorrect. An increase in molecular weight results in an increase in the electron cloud of a molecule. The larger the electron cloud, the larger the instantaneous dipole in London dispersion forces. Option B. Number of atoms in the molecule Incorrect. An increase in the number of atoms in the molecule results an increase in the electron cloud of a molecule. The larger the electron cloud, the larger the instantaneous dipole in London dispersion forces. Option C. Electron distribution Incorrect. The instantaneous uneven distribution of electrons in a molecule is the source of intermolecular attraction in London dispersion forces. Option D. Permanent dipole Correct. Permanent dipoles are not involved in London dispersion forces  - they are involved in the stronger dipole-dipole and hydrogen bonding forces. Option E. Molecular shape Incorrect. Molecular shape plays an important role in the strength of London dispersion forces. Long, simple molecules, for example, can more easily form dipoles on one side of the molecule, as opposed to complicated, branched molecules which cannot. This makes the London dispersion forces between long, simple molecules stronger in comparison. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which of the following molecules can form dipole-dipole interactions but not hydrogen bonds?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HCl",
+        "images": [],
+        "percentage_selected": "(65.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "NH 3",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "HF",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cl 2",
+        "images": [],
+        "percentage_selected": "(28.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 2 H 5 OH",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "HCl",
+    "analytics": {
+      "percent_correct": "65.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind we need to find the molecule capable of forming dipole-dipole interactions but not hydrogen bonds. Option A. HCl Correct. HCl is a polar molecule that is capable of forming dipole-dipole interactions due to its permanent dipole (partial positive charge on the H and partial negative charge on the chlorine). However, because the H is not directly bonded to N, O, or F, it cannot participate in hydrogen bonding. Option B. NH 3 Incorrect. NH 3 can participate in hydrogen bonding because its structure includes 3 H that are covalently bonded to N. The hydrogen acquires a partial positive charge due to its covalent bond with the electronegative N and can hydrogen bond with another electronegative atom. Option C. HF Incorrect. HF can participate in hydrogen bonding because its structure includes an H that is bonded to F. Option D. Cl 2 Incorrect. Cl 2 is a non-polar molecule because the electrons are equally distributed between the 2 Cl atoms. Therefore, it neither participates in dipole-dipole interactions nor hydrogen bonds. Option E. C 2 H 5 OH Incorrect. C 2 H 5 OH can participate in hydrogen bonding because its structure includes an H that is covalently bonded to O. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which of the following interactions is responsible for the observation that CH 3 OH has a relatively high boiling point?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "London dispersion forces",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Dipole-dipole attractions",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Ion-dipole attractions",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Ion-ion attractions",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Hydrogen bonding",
+        "images": [],
+        "percentage_selected": "(90.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Hydrogen bonding",
+    "analytics": {
+      "percent_correct": "90.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving hydrogen bonding , we first review that hydrogen bonding is a strong dipole-dipole attraction that occurs between a hydrogen atom, covalently bound to either nitrogen, oxygen or fluorine, and another electronegative atom. Due to the strength of these strong hydrogen bonds, molecules that participate in hydrogen bonding tend to have a relatively high boiling point. This is because breaking these bonds requires a great deal of energy. In this case, we can say that the interaction responsible for the observation that CH 3 OH has a relatively high boiling point is hydrogen bonding . In fact, this exact reasoning is why water’s boiling point is so high. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which of the following compounds will experience only London dispersion interactions with NH 3 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 3 OH",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CH 3 Cl",
+        "images": [],
+        "percentage_selected": "(10.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(82.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "NaOH",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 4",
+    "analytics": {
+      "percent_correct": "82.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. CH 3 OH Incorrect. In addition to London dispersion interactions, NH 3 will form hydrogen bonds with the OH component in CH 3 OH. Option B. H 2 O Incorrect. In addition to London dispersion interactions, NH 3 will form hydrogen bonds with the OH component in H 2 O. Option C. CH 3 Cl Incorrect. In addition to London dispersion interactions, NH 3 will form dipole-dipole interactions with the polar CH 3 Cl. Option D. CH 4 Correct. Since CH 4 is completely non-polar, the only interactions that can be formed between NH 3 and CH 4 are London dispersion forces. Option E. NaOH Incorrect. In addition to London dispersion interactions, NH 3 will form hydrogen bonds with the OH component of NaOH. Therefore, the answer is D.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "A sample of which of the following compounds will exhibit the lowest boiling point?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HF",
+        "images": [],
+        "percentage_selected": "(7.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2 S",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CH 3 OH",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "SiH 4",
+        "images": [],
+        "percentage_selected": "(70.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "PH 3",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "SiH 4",
+    "analytics": {
+      "percent_correct": "70.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we need to keep in mind that the compound with the lowest boiling point is the compound with the weakest intermolecular interactions. This is because as the strength of the intermolecular interactions decrease, less energy is needed to break the intermolecular bonds. Option A. HF Incorrect. HF is a linear polar molecule that exhibits dispersion forces, dipole-dipole interactions, and hydrogen bonding. Option B. H 2 S Incorrect. H 2 S is a bent polar molecule that exhibits dispersion forces and dipole-dipole interactions. Option C. CH 3 OH Incorrect. CH 3 OH is a tetrahedral polar molecule that exhibits dispersion forces, dipole-dipole interactions, and hydrogen bonding. Option D. SiH 4 Correct. SiH 4 is a tetrahedral non-polar molecule that only exhibits dispersion forces. Because it is the only option that participates in only dispersion forces, it has the weakest intermolecular forces and consequently, the lowest boiling point. The other molecules participate in stronger intermolecular forces, such as dipole-dipole interactions and hydrogen bonding. Option E. PH 3 Incorrect. PH 3 is a trigonal pyramidal polar molecule that exhibits dispersion forces and dipole-dipole interactions. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Liquid [A] is observed to have stronger intermolecular forces than liquid [B]. Which of the following would be a valid observation that a scientist might record in laboratory notes regarding the comparative properties of the liquids?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Liquid [B] likely has a higher surface tension",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Liquid [B] likely has more extensive hydrogen bonding",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Liquid [B] is likely a more polar molecule",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Liquid [B] likely has have a higher viscosity",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Liquid [B] likely has a higher vapor pressure",
+        "images": [],
+        "percentage_selected": "(76.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Liquid [B] likely has a higher vapor pressure",
+    "analytics": {
+      "percent_correct": "76.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. Liquid [B] likely has a higher surface tension Incorrect. Since liquid [B] has weaker intermolecular forces, the interactions holding together molecules on the surface of the liquid should decrease, so surface of the liquid will be easier to disrupt, resulting in lower surface tension. Option B. Liquid [B] likely has more extensive hydrogen bonding Incorrect. Since liquid [B] has weaker intermolecular forces, we know that it does not have more extensive hydrogen bonding. Extensive hydrogen bonding would increase the strength of intermolecular forces. Option C. Liquid [B] is likely a more polar molecule Incorrect. Since liquid [B] has weaker intermolecular forces, we know that the polarity of the molecules should be lower compared to liquid [A] Option D. Liquid [B] likely has have a higher viscosity Incorrect. Since liquid [B] has weaker intermolecular forces, the forces holding together liquid molecules will be lower , so liquid [B] is more flowable, resulting in a lower viscosity. Option E. Liquid [B] likely has a higher vapor pressure Correct. Since liquid [B] has weaker intermolecular forces, the forces holding together liquid molecules that usually prevent vaporization are lower , which means that the molecules more readily vaporize, resulting in an increase in vapor pressure. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "If liquid [A]’s molecules undergo dipole-dipole interactions, while liquid [B]’s molecules primarily form in hydrogen bonds, liquid [A ]will have a",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "higher melting point.",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "higher viscosity.",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "lower vapor pressure.",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "lower density.",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "lower boiling point.",
+        "images": [],
+        "percentage_selected": "(87.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "lower boiling point.",
+    "analytics": {
+      "percent_correct": "87.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we need to remember that hydrogen bonding is a stronger intermolecular force than dipole-dipole interactions. This implies that liquid [A] (primarily dipole-dipole interactions) will have weaker intermolecular forces compared to liquid [B] (primarily hydrogen bonding). Option A. higher melting point. Incorrect. Since liquid [A] has weaker intermolecular forces, we can expect that intermolecular interactions between molecules in liquid A will be easier to break apart, so it will have a lower melting point. Option B. higher viscosity. Incorrect. Since liquid [A] has weaker intermolecular forces, we can expect that molecules in liquid A will flow past one another more easily, so it will have lower viscosity. Option C. lower vapor pressure. Incorrect. Since liquid [A] has weaker intermolecular forces, we can expect that molecules in liquid A more readily vaporize, resulting in higher vapor pressure. Option D . lower density. Incorrect. There is little to no correlation between density and the strength of intermolecular forces. Option E. lower boiling point. Correct. Since liquid [A] has weaker intermolecular forces, we can expect that liquid [A] will be easier to vaporize. This is because the intermolecular interactions between liquid [A] are easier to break apart, which means that they require less energy, thereby liquid [A] will have a lower boiling point. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Two liquids, [A] and [B] are contained within separate equal volumetric containers. Which of the following is true if the vapor pressure of [A] is greater than that of [B] at the same temperature?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "[A] has a higher heat of vaporization",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "[A] boils at a lower temperature",
+        "images": [],
+        "percentage_selected": "(83.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "[A] forms stronger intermolecular bonds",
+        "images": [],
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "[A] has a lower atmospheric pressure",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "[A] has a larger volume",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "[A] boils at a lower temperature",
+    "analytics": {
+      "percent_correct": "83.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we need to remember that if the vapor pressure of [A] is greater than [B], it is implied that [A] has weaker intermolecular forces, because its molecules more readily break intermolecular bonds and vaporize from liquid to gas state. Option A. [A] has a higher heat of vaporization Incorrect. Since [A] has weaker intermolecular bonds, the heat required for vaporization will be lower, so [A] will have a lower heat of vaporization. Option B. [A] boils at a lower temperature Correct. Since [A] has weaker intermolecular bonds, [A] will vaporize more easily at lower temperatures, which means the vapor pressure of [A] will more easily reach atmospheric pressure and boil. Therefore, [A] will, indeed, boil at a lower temperature. Option C. [A] forms stronger intermolecular bonds Incorrect. Since [A] has weaker intermolecular forces, it will form weaker bonds. Option D. [A] has a lower atmospheric pressure Incorrect. There is no correlation between vapor pressure and atmospheric pressure. Vapor pressure descries the vapor pressure of a specific liquid, while atmospheric pressure is just the pressure associated with gases in the atmosphere. Option E. [A] has a larger volume Incorrect. There is no correlation between the volume of a liquid and its vapor pressure or the strength of its intermolecular forces. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "The bond length of N 2 is 1.40 Å. The distance separating two adjacent hydrogen nuclei is 0.80 Å. Based on these data, what is the length of the N-H bond in the compound NH 3 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.70 Å",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1.10 Å",
+        "images": [],
+        "percentage_selected": "(80.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "1.50 Å",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1.60 Å",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2.20 Å",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1.10 Å",
+    "analytics": {
+      "percent_correct": "80.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic radius , we need to recall that the atomic radius is half the distance between the nuclei of two identical atoms bonded together. STEP 1: First, we determine the atomic radius of N, knowing the bond length of N 2 is 1.40 Å: radius N = 0.5 x 1.40 = 0.70 Å STEP 2: Next, we determine the atomic radius of H, knowing the bond length of H 2 is 0.80 Å: radius H = 0.5 x 0.80 = 0.40 Å STEP 3: Finally, we add the radius of N and H together to find the estimated bond length of N-H: radius N + radius H = 0.70 + 0.40 = 1.10 Å Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000100b7ee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100b770ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001006be8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001007056a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007467b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001006f9a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100b43c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100b46f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b23a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100b477e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b14b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100b679c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100b67b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100b76cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Intermolecular Forces"
+  }
+]

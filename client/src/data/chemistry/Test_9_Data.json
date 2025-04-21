@@ -1,0 +1,1790 @@
+[
+  {
+    "test_number": 9,
+    "question_number": 1,
+    "question": {
+      "text": "Consider the phase diagram for water. Why is the slope of the line for the melting/freezing curve negatively sloped? CC BY 4.0",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+1+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The solid phase is denser than the liquid phase",
+        "images": [],
+        "percentage_selected": "(17.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The liquid phase is denser than the solid phase",
+        "images": [],
+        "percentage_selected": "(76.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Both solid and liquid phases are equally dense",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The solid phase melts at below room temperature",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The solid phase sublimes at below room temperature",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The liquid phase is denser than the solid phase",
+    "analytics": {
+      "percent_correct": "76.2%",
+      "time_spent": "0 min, 39 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "In most circumstances, the melting/freezing curve between the solid and liquid phases is positively sloped to reflect the fact that the solid phase is denser than the liquid phase. However, for water, the curve is negatively sloped because the liquid phase is denser than the solid phase. This is caused by the crystal lattice structure of the solid phase, causing the water molecules to be positioned further apart from each other than in the liquid phase, where hydrogen bonding causes water molecules to be more tightly packed. Therefore, the correct answer is Option B .",
+      "poe_text": "Option A. The solid phase is denser than the liquid phase - If this were true, then the line would be positively sloped. Therefore, this choice is incorrect . Option C. Both solid and liquid phases are equally dense - If this were true, then the line would be completely vertical. Therefore, this choice is incorrect . Option D. The solid phase melts at below room temperature - Although this is true at a pressure range between 0.006 atm and 218 atm, it does not explain why the solid-liquid line is negatively sloped. For instance, the line could be positively sloped at a temperature range between 273 K and 273.2 K. Therefore, this choice is incorrect . Option E. The solid phase sublimes at below room temperature - Although this is true at a pressure range between 0 atm and 0.006 atm, it does not explain why the solid-liquid line is negatively sloped. Sublimation does not involve the liquid phase, but the gas phase instead. Therefore, this choice is incorrect .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 2,
+    "question": {
+      "text": "Which physical property is described when the vapor pressure of a liquid equals the atmospheric pressure?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Melting point",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Triple point",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Critical point",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Boiling point",
+        "images": [],
+        "percentage_selected": "(88.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Equivalence point",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Boiling point",
+    "analytics": {
+      "percent_correct": "88.1%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "The process of boiling (liquid to gas) occurs when the vapor pressure of a liquid equals the atmospheric pressure. The vapor pressure is defined as the pressure exerted by the vapor in equilibrium with its condensed phases (i.e., solid or liquid) in a closed system, at a given temperature. The atmospheric pressure is defined as the pressure exerted by the weight of air in the atmosphere. The vapor pressure is inversely correlated with the strength of intermolecular forces . With stronger intermolecular forces, the molecules are more likely to stick together in the liquid form and fewer of them participate in the liquid-vapor equilibrium. Thus, the molecule would boil at a higher temperature. Therefore, the correct answer is Option D .",
+      "poe_text": "Option A. Melting point - The melting point is defined as the temperature at which the solid phase and liquid phase exist in equilibrium. Therefore, this choice is incorrect . Option B. Triple point - The triple point is defined as the temperature and pressure at which all three phases exist in equilibrium. Therefore, this choice is incorrect . Option C. Critical point - The critical point is defined as the temperature and pressure at which liquid phase and gas phase are indistinguishable. Therefore, this choice is incorrect . Option E. Equivalence point - The equivalence point is defined as the reaching checkpoint during a titration when the moles of titrant are equal to the moles of titrate. Therefore, this choice is incorrect .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 3,
+    "question": {
+      "text": "Which of the following is a diatomic molecule that is solid at room temperature?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "F 2",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N 2",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Br 2",
+        "images": [],
+        "percentage_selected": "(22.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "He",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "I 2",
+        "images": [],
+        "percentage_selected": "(67.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "I 2",
+    "analytics": {
+      "percent_correct": "67.8%",
+      "time_spent": "1 min, 7 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "There are seven diatomic elements students should know for the Canadian DAT: H 2 , N 2 , O 2 , F 2 , Cl 2 , Br 2 , and I 2 . All diatomic elements are gas at room temperature EXCEPT for two: Br 2 is a liquid and I 2 is a solid. Therefore, the correct answer is Option E . CC BY 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 4,
+    "question": {
+      "text": "Which of the following molecules has the lowest dipole moment?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NH 3",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CCl 4",
+        "images": [],
+        "percentage_selected": "(88.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "HCl",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "CH 2 O",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CCl 4",
+    "analytics": {
+      "percent_correct": "88.4%",
+      "time_spent": "1 min, 4 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 5,
+    "question": {
+      "text": "Compared to benzene, when naphthalene is placed under UV light using a prism block, the resulting mixture appears more opaque. Which physical property has changed to account for the difference in opacity between benzene and naphthalene?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Molar absorptivity",
+        "images": [],
+        "percentage_selected": "(73.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Path length",
+        "images": [],
+        "percentage_selected": "(9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Species concentration",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Solvent mass",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Light speed",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Molar absorptivity",
+    "analytics": {
+      "percent_correct": "73.3%",
+      "time_spent": "1 min, 5 secs",
+      "category": "Solutions"
+    },
+    "category": "Solutions",
+    "explanation": {
+      "concept_text": "The Beer-Lambert law relates three variables that determines the absorbance ( A ) or transmittance of a material when it undergoes spectroscopic (light) measurements: A = εlc Where ε represents the molar absorptivity ( coefficient of extinction ), l represents the path length of the medium, and c represents the molar concentration of species . According to Beer’s law, all three variables are directly proportional to the absorbance of the material. However, the key distinct variable in the equation is the molar absorptivity, because this coefficient measures how strongly the chemical species absorbs light at a given wavelength. Assuming both path length of prism block and concentration of chemical species are the same, the molar absorptivity defines the identity of each molecule. Therefore, the correct answer is Option A .",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 6,
+    "question": {
+      "text": "Consider a solution that consists of a weak acid [HA] and its conjugate base [A – ]. If a small amount of strong base is added to the buffer, how will the pH change and why?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The pH will decrease because the ratio of [A – ]/[HA] is decreased",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The pH will decrease because the ratio of [A – ]/[HA] is increased",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The pH will increase because the ratio of [A – ]/[HA] is decreased",
+        "images": [],
+        "percentage_selected": "(21.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The pH will increase because the ratio of [A – ]/[HA] is increased",
+        "images": [],
+        "percentage_selected": "(63.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "The pH will remain constant because the ratio of [A – ]/[HA] is constant",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The pH will increase because the ratio of [A – ]/[HA] is increased",
+    "analytics": {
+      "percent_correct": "63.3%",
+      "time_spent": "1 min, 15 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "This is an example of a buffer , in which a mixture of a weak acid or weak base is combined with its conjugate pair. A buffer solution strongly resists changes in pH when a strong acid or strong base is added, and this can be explained by the Henderson-Hasselbalch equation . In solution of weak acid, the following equilibrium will occur. When strong base is added to the solution, the following reaction will occur. As a result, there will be a decrease in [HA] and an increase [A – ], leading to an increase in the ratio of [A – ]/[HA], and thus lead to an increase in pH. Therefore, the correct answer is Option D .",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+6+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+6+Solution+3.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 7,
+    "question": {
+      "text": "Which of the following molecules has the highest pK a ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HF (K a = 6.6 x 10 –4 )",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "HCO 2 H (K a = 1.8 x 10 –4 )",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "HNO 2 (K a = 7.2 x 10 –4 )",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CH 3 COOH (K a = 1.8 x 10 –5 )",
+        "images": [],
+        "percentage_selected": "(62.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "C 6 H 5 COOH (K a = 6.3 x 10 –5 )",
+        "images": [],
+        "percentage_selected": "(24%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 3 COOH (K a = 1.8 x 10 –5 )",
+    "analytics": {
+      "percent_correct": "62.7%",
+      "time_spent": "0 min, 52 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "The relation between K a and pK a (K anything and pK anything ) can be defined by the following: pK a = -log⁡K a → K a = 10 -pK a This means that the higher the K a , the lower the pK a (inverse logarithmic relationship). So the molecule with the highest pK a is the weakest acid of all, which would have the lowest K a value, and that would be Option D. Therefore, the correct answer is Option D .",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 8,
+    "question": {
+      "text": "A 50 mL solution of 6 M HCl is diluted to 1.95 L. What is the molarity of the resulting solution?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.05 M",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.25 M",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.10 M",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.15 M",
+        "images": [],
+        "percentage_selected": "(80.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "0.20 M",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.15 M",
+    "analytics": {
+      "percent_correct": "80.8%",
+      "time_spent": "2 min, 49 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+8+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 9,
+    "question": {
+      "text": "Which of the following molecules is amphoteric?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H +",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "O 2 –",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(87.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "H 3 O +",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "OH –",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H 2 O",
+    "analytics": {
+      "percent_correct": "87.6%",
+      "time_spent": "1 min, 15 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "An amphoteric compound is a molecule that can act both as an acid (donate a proton) and as a base (accept a proton). Of all the molecules, water is the only amphoteric substance that can act as an acid to form hydroxide or as a base to form hydronium. 2 H 2 O (l) → H 3 O + (aq) + OH - (aq) Therefore, the correct answer is Option C .",
+      "poe_text": "Option A. H + - This is a proton, which can only act as an acid. Therefore, this choice is incorrect . Option B. O 2– - This is an oxide, which can only act as a base. Therefore, this choice is incorrect . Option D. H 3 O + - This is a hydronium, which can only act as an acid. Therefore, this choice is incorrect . Option E. OH – - This is a hydroxide, which can only act as a base. Therefore, this choice is incorrect .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 10,
+    "question": {
+      "text": "How many grams of nitrogen are needed to fully react with 12 L of hydrogen to produce ammonia at STP? N 2 ( g ) + 3 H 2 ( g ) → 2 NH 3 ( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+10+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+10+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+10+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(56.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+10+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(23.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+10+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "56.2%",
+      "time_spent": "2 min, 30 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+10+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 11,
+    "question": {
+      "text": "What volume of 0.200 M Ca(OH) 2(aq) solution is needed to titrate 75.0 mL of 0.100 M HCl (aq) solution?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "12.50 mL",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "16.75 mL",
+        "images": [],
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "18.75 mL",
+        "images": [],
+        "percentage_selected": "(69.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "20.50 mL",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "25.75 mL",
+        "images": [],
+        "percentage_selected": "(10.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "18.75 mL",
+    "analytics": {
+      "percent_correct": "69.1%",
+      "time_spent": "5 min, 47 secs",
+      "category": "Chemical Equilibrium"
+    },
+    "category": "Chemical Equilibrium",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+11+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 12,
+    "question": {
+      "text": "What direction does the following chemical reaction favor if pressure is increased? C 3 H 8( g ) + 5 O 2( g ) → 3 CO 2( g ) + 4 H 2 O ( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Shift right to the side with more moles",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Shift left to the side with less moles",
+        "images": [],
+        "percentage_selected": "(88.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "No shift because both sides have equal amounts of moles",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Shift right to the side more oxidized",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Shift left to the side more reduced",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Shift left to the side with less moles",
+    "analytics": {
+      "percent_correct": "88.1%",
+      "time_spent": "0 min, 44 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "This is an example of Le Chatelier’s principle , which states that the system will drive itself back towards equilibrium to counterbalance the change. There are four types of possible changes students should be familiar with on Canadian DAT. If the pressure is increased, the reaction would favor the side with less amount of moles of gases, because the volume is decreased. The reactant side contains 1 + 5 = 6 moles of gases. The product side contains 3 + 4 = 7 moles of gases. Therefore, the correct answer is Option B .",
+      "poe_text": "Option A. Shift right, to the side with more moles - When pressure is increased, the volume is decreased, so it should shift to the side with less moles. Therefore, this choice is incorrect . Option C. No shift, because both sides have equals amounts of moles - This is not true as the reactant side has 6 moles and the product side has 7 moles. Therefore, this choice is incorrect . Option D. Shift right, to the side more oxidized - Redox has no effect on the equilibrium of a reaction. Therefore, this choice is incorrect . Option E. Shift left, to the side more reduced - Redox has no effect on the equilibrium of a reaction. Therefore, this choice is incorrect .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 13,
+    "question": {
+      "text": "Which of the following changes shifts the equilibrium to the right? 2 H 2 O ( g ) + heat ⇌ 2 H 2( g ) + O 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Decreasing temperature",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Adding catalyst",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Adding H 2( g )",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Removing H 2 O ( g )",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Decreasing pressure",
+        "images": [],
+        "percentage_selected": "(78.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Decreasing pressure",
+    "analytics": {
+      "percent_correct": "78.1%",
+      "time_spent": "1 min, 9 secs",
+      "category": "Chemical Equilibrium"
+    },
+    "category": "Chemical Equilibrium",
+    "explanation": {
+      "concept_text": "This is an example of Le Chatelier’s principle , which states that the system will drive itself back towards equilibrium to counterbalance the change. There are four types of possible changes students should be familiar with on Canadian DAT. This reaction is endothermic. It has 2 moles of gas on reactant side and 3 moles of gas on product side. Therefore, the only ways to shift right would be to: (1) increase concentration of reactants or decrease concentration of products, (2) increase the temperature, or (3) decrease the pressure or increase the volume. Therefore, the correct answer is Option E .",
+      "poe_text": "Option A. Decreasing temperature - This would cause shift to left because heat is a reactant and this is an endothermic reaction. Therefore, this choice is incorrect . Option B. Adding catalyst - This would cause no shift because kinetics is not a measurement of equilibrium. Therefore, this choice is incorrect . Option C. Adding H 2(g) - This would cause shift to left because there is an increase in the concentration of products. Therefore, this choice is incorrect . Option D. Removing H 2 O (g) - This would cause shift to left because there is a decrease in concentration of reactants. Therefore, this choice is incorrect .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 14,
+    "question": {
+      "text": "Which of the following best characterizes a reaction’s behavior when it fails to overcome the activation energy barrier?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The reaction proceeds more slowly",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The reaction is at equilibrium",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The reaction does not proceed",
+        "images": [],
+        "percentage_selected": "(93.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "The reaction favors the products",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The reaction proceeds partially",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The reaction does not proceed",
+    "analytics": {
+      "percent_correct": "93.6%",
+      "time_spent": "0 min, 28 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+14+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 15,
+    "question": {
+      "text": "Which of the following is true with regards to signs of thermodynamic parameters if a pure substance in the solid phase sublimes spontaneously?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "ΔH o > 0, ΔS o > 0, ΔG o > 0",
+        "images": [],
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "ΔH o < 0, ΔS o < 0, ΔG o < 0",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "ΔH o < 0, ΔS o > 0, ΔG o < 0",
+        "images": [],
+        "percentage_selected": "(29.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "ΔH o > 0, ΔS o > 0, ΔG o < 0",
+        "images": [],
+        "percentage_selected": "(55.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "ΔH o < 0, ΔS o < 0, ΔG o > 0",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "ΔH o > 0, ΔS o > 0, ΔG o < 0",
+    "analytics": {
+      "percent_correct": "55.2%",
+      "time_spent": "2 min, 30 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "ΔH° > 0: Enthalpy is positive because moving from more ordered state to less ordered state (in this case: solid to gas) requires heat to be added to the system. ΔS° > 0: Entropy is positive because the pure substance becomes less ordered. ΔG° < 0: Because the process occurs spontaneously as stated in the problem, free energy is negative. Therefore, the correct answer is Option D .",
+      "poe_text": "Option A. ΔH° > 0, ΔS° > 0, ΔG° > 0 - A spontaneous reaction must have a negative Gibbs free energy. Therefore, this choice is incorrect . Option B. ΔH° < 0, ΔS° < 0, ΔG° < 0 - Sublimation requires heat input, which means enthalpy must be positive. Sublimation means going from solid to gas, which means entropy must be positive. Therefore, this choice is incorrect . Option C. ΔH° < 0, ΔS° > 0, ΔG° < 0 - Sublimation means going from solid to gas, which means entropy must be positive. Therefore, this choice is incorrect . Option E. ΔH° < 0, ΔS° < 0, ΔG° > 0 - A spontaneous reaction must have a negative Gibbs free energy. Sublimation requires heat input, which means enthalpy must be positive. Sublimation means going from solid to gas, which means entropy must be positive. Therefore, this choice is incorrect .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 16,
+    "question": {
+      "text": "Which of the following must be true for a chemical reaction that has the same activation energy for the forward and reverse directions?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "T = 0",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "ΔS° = 0",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "ΔG° = 0",
+        "images": [],
+        "percentage_selected": "(79.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "q = 0",
+        "images": [],
+        "percentage_selected": "(8.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "w = 0",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "ΔG° = 0",
+    "analytics": {
+      "percent_correct": "79.3%",
+      "time_spent": "1 min, 23 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "For a chemical reaction that occurs in both ways forward and reverse equally favorably, it would mean that the free energy must be zero as it is not spontaneous in either direction. In other words, the reaction has reached complete equilibrium (K = 1). This concept can be shown in the image below. Therefore, the correct answer is Option C . CC BY 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+16+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 17,
+    "question": {
+      "text": "Consider the reaction below with equilibrium concentrations of A at 3 M and B at 2 M. What is the value of the equilibrium constant? A ⇌ 2 B",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.2",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1.3",
+        "images": [],
+        "percentage_selected": "(86.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4.5",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "36",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1.3",
+    "analytics": {
+      "percent_correct": "86.5%",
+      "time_spent": "1 min, 3 secs",
+      "category": "Chemical Equilibrium"
+    },
+    "category": "Chemical Equilibrium",
+    "explanation": {
+      "concept_text": "The equilibrium constant is equal to the product of the reaction product concentrations divided by the product of the reaction reactant concentrations with each raised to the power equal to their constant in the balanced equation. Consider the generic equation below. The equilibrium constant of this equation would be as follows. As one can see, the rate constant will vary depending on the concentration of products and reactants at equilibrium. When compared to another value, the reaction quotient, the equilibrium constant gains utility. The reaction quotient can be computed at any phase of the reaction and is computed as follows. When the rate quotient is equal to the equilibrium constant, the reaction has achieved equilibrium. However, when the rate constant is greater than the equilibrium constant that must mean that the concentrations of the product are in excess causing a greater reaction constant value. Thus, the reaction must proceed in such a direction to favor forming more reactants. On the other hand, if the reaction quotient is less than the equilibrium constant, it means that the concentration of reactants is in excess and the reaction will form more products.",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+17+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+17+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+17+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+17+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+17+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 18,
+    "question": {
+      "text": "Given a first-order reaction, what would be the ratio of the final concentration to its initial concentration after two half-lives?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.125",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.25",
+        "images": [],
+        "percentage_selected": "(87.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "0.5",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.75",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "0.875",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.25",
+    "analytics": {
+      "percent_correct": "87.2%",
+      "time_spent": "0 min, 55 secs",
+      "category": "Chemical Kinetics"
+    },
+    "category": "Chemical Kinetics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+18+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+18+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 19,
+    "question": {
+      "text": "How many atoms of oxygen are in a 68 g sample of H 2 O 2 ? (Avogadro’s number is 6.0 x 10 23 )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3.0 x 10 23",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6.0 x 10 23",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1.2 x 10 24",
+        "images": [],
+        "percentage_selected": "(30.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1.8 x 10 24",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2.4 x 10 24",
+        "images": [],
+        "percentage_selected": "(57.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "2.4 x 10 24",
+    "analytics": {
+      "percent_correct": "57.6%",
+      "time_spent": "1 min, 20 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+19+Solution+2.png",
+        "https://cd7388a827.nxcli.io/wp-content/uploads/2020/10/Screen-Shot-2020-10-20-at-20.49.30-1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+19+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+19+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+19+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+19+Solution+6.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 20,
+    "question": {
+      "text": "A single gram of a compound has 0.5 moles. What is the molar mass of the compound when there is only 1 mole?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.5 g•mol -1",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1 g•mol -1",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2 g•mol -1",
+        "images": [],
+        "percentage_selected": "(83.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "4 g•mol -1",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "8 g•mol -1",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2 g•mol -1",
+    "analytics": {
+      "percent_correct": "83.5%",
+      "time_spent": "0 min, 31 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+20+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+20+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 21,
+    "question": {
+      "text": "A cube with side lengths of 2 cm was filled with 5 moles of oxygen gas. Which of the following would be the resulting density?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.1 g•mL -1",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.5 g•mL -1",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10 g•mL -1",
+        "images": [],
+        "percentage_selected": "(24%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "20 g•mL -1",
+        "images": [],
+        "percentage_selected": "(61.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "40 g•mL -1",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "20 g•mL -1",
+    "analytics": {
+      "percent_correct": "61.3%",
+      "time_spent": "2 min, 13 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+21+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+21+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+21+Solution+3.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 22,
+    "question": {
+      "text": "A sealed container has 2 moles of O 2(g) , 3 moles of N 2(g) , 4 moles of He (g) , and 1 mole of H 2(g) . What is the partial pressure of O 2 if the total pressure within the container is 2000 torr?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "200 torr",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "400 torr",
+        "images": [],
+        "percentage_selected": "(89.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "600 torr",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "800 torr",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2000 torr",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "400 torr",
+    "analytics": {
+      "percent_correct": "89.9%",
+      "time_spent": "0 min, 38 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+22+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+22+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 23,
+    "question": {
+      "text": "The temperature of an ideal gas in a sealed container was increased from 63 o C to 84 o C while at constant pressure. Which of the following is the new volume of the container?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(84.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "84.4%",
+      "time_spent": "2 min, 24 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+23+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 24,
+    "question": {
+      "text": "All of the following techniques can be used to separate two liquids EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Chromatography",
+        "images": [],
+        "percentage_selected": "(18%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Distillation",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Extraction",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Filtration",
+        "images": [],
+        "percentage_selected": "(63.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Centrifuge",
+        "images": [],
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Filtration",
+    "analytics": {
+      "percent_correct": "63.4%",
+      "time_spent": "0 min, 9 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "Filtration is a method of separation used to separate solids from liquids. There are a plethora of variations to this technique (e.g. vacuum filtration, centrifugal filtration, and gravity filtration), but the premise is largely similar in that some porous layer (filter) allows liquid to pass through but the holes are too small to allow the passage of any solids. This allows the liquid and solid phases to be collected separately in a lab setting. The image below illustrates simple filtration, in which oversize particles in the feed cannot pass through the filter, thus separating solid and liquid: CC BY 4.0",
+      "poe_text": "Option A. Chromatography - This option is incorrect because it is commonly used to separate liquids of different polarities. In this technique, different liquids (mobile phases) move at different rates through a solid phase based on how much they are attracted to it. Liquids that are attracted least to the solid phase will move fastest through as they will not be as intensely drawn to it. Option B. Distillation - This option is incorrect because this technique separates different liquids based on their boiling points. If multiple liquids are heated, the ones with the lowest boiling point will evaporate quickest, and the vapors are subsequently captured, condensed, and carried into a separate chamber. Option C. Extraction - This option is incorrect because in this method, a separatory funnel is shaken and allows for immiscible liquids (e.g. polar and nonpolar) to be separated into distinct layers. After settling, the densest liquids will move to the bottom where they may be slowly released through a stopcock in order to separate each layer. Option E. Centrifuge - This option is incorrect because centrifuges spin incredibly fast which allows for the densest elements in a mixture to move to the bottom of a vessel. Therefore, if two liquids have different densities, they may be separated into layers by a centrifuge.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+24+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 25,
+    "question": {
+      "text": "All of the following are safe lab practices EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Weighing calcium outside the fume hood",
+        "images": [],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Washing an Erlenmeyer flask in the sink",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Adding water to concentrated acid",
+        "images": [],
+        "percentage_selected": "(79%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Lubricating glass joints of a vacuum filtration setup",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Pouring sodium bicarbonate on an acid spill",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Adding water to concentrated acid",
+    "analytics": {
+      "percent_correct": "79%",
+      "time_spent": "0 min, 25 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "Option C. Adding water to the concentrated acid is not a safe lab practice because when water is added to acid, an extremely exothermic reaction occurs that may result in spewing, splattering, and boiling acid. This process can lead to harmful splashing of acid on the skin or in the eyes. Therefore, acid should be added to the water as this leads to a dilute concentration of the new solution. A common rhyme to remember is: “Do what you oughta, add the acid to the water!”",
+      "poe_text": "Option A. Weighing calcium outside the fume hood - This option is incorrect because calcium is a non-toxic metal that is solid at room temperature. As a result of its high boiling point, it has a low volatility and does not need to be massed in a fume hood as it will not easily be inhaled. Option B. Washing an Erlenmeyer flask in the sink - This option is incorrect because simple glassware is able to be washed in a sink, although any substances within the glassware must be appropriately cleaned before pouring contents down the drain. Option D. Lubricating glass joints of a vacuum filtration setup - This option is incorrect because without lubrication, vacuums create a seal between glassware that is tight enough to break the glassware when pulling it apart. Lubrication also helps prevent leaks in the experiment. Option E. Pouring sodium bicarbonate on an acid spill - This option is incorrect because the addition of this base helps neutralize the acid before cleaning. This prevents strong acids from being disposed of improperly and protects the skin of the person cleaning as well.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 26,
+    "question": {
+      "text": "Which of the following correctly indicates the volume contained in this burette at the indicated point? CC BY 4.0",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+26+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2.2 mL",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2.3 mL",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2.25 mL",
+        "images": [],
+        "percentage_selected": "(17.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "47.7 mL",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "47.75 mL",
+        "images": [],
+        "percentage_selected": "(66.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "47.75 mL",
+    "analytics": {
+      "percent_correct": "66.1%",
+      "time_spent": "1 min, 10 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "Option A. 2.2 mL - This option is incorrect for multiple reasons. It does not include the correct number of significant figures as one decimal must always be estimated beyond any given markings (in this case hundredths must be estimated). Additionally, these volumes are the amount of liquid missing from the burette, not the amount remaining from the 50.00 mL total volume. Option B. 2.3 mL - This option is incorrect for multiple reasons. The hundredths place is missing from this measurement, and the volume indicated is the fluid that has been dispensed from the vessel, not the amount remaining from the 50.00 mL total volume. Option C. 2.25 mL - This option is incorrect because this is the amount of volume missing from the 50.00 mL pipette rather than the amount of fluid remaining within it. Option D. 47.7 mL - This option is incorrect because this answer option does not contain the appropriate number of significant figures as the hundredths of a mL place must be estimated from the marked values of the tenths place.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+26+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 27,
+    "question": {
+      "text": "Which of the following describes why a proton and neutron weigh more separately than when they are bound together?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Mass increases when force of attraction decreases",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Mass is converted into nuclear binding energy",
+        "images": [],
+        "percentage_selected": "(84.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "The mass held within bonds is transferred into the nucleons",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Gamma rays released from the split are absorbed by the nucleons",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Gravity acts upon the larger volume of the separated nucleons",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Mass is converted into nuclear binding energy",
+    "analytics": {
+      "percent_correct": "84.3%",
+      "time_spent": "0 min, 11 secs",
+      "category": "Nuclear Reactions"
+    },
+    "category": "Nuclear Reactions",
+    "explanation": {
+      "concept_text": "This question requires knowledge of the concept of nuclear binding energy , which is the energy input required to separate the individual nucleons within the nucleus. Einstein’s equation, E = mC 2 indicates that energy (E) can be converted into mass (m). Therefore, when energy is inputted into the nucleus to cause separation of the nucleons, some of the energy is converted into mass which leads to a higher individual mass for free protons and neutrons. Conversely, this mass is lost again to create the energy needed to reform these bonds when nucleons come back together. Therefore, the correct answer is Option B .",
+      "poe_text": "Option A. Mass increases when force of attraction decreases - This option is incorrect because mass does not depend on force. Mass is simply the amount of matter in an object, and this value does not change if the object is being pulled in any given direction. Option C. The mass held within bonds is transferred into the nucleons - This option is incorrect because bonds themselves never have mass. Bonds are simply forces of attraction, and mass increase instead comes from the energy input needed to separate nucleons. Option D. Gamma rays released from the split are absorbed by the nucleons - This option is incorrect because gamma rays are strictly energy and therefore, they do not increase the mass of objects when absorbed. Option E. Gravity acts upon the larger volume of the separated nucleons - This option is incorrect because gravity only acts upon mass, regardless of volume.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 28,
+    "question": {
+      "text": "Why is fluorine-18 unstable?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Its N is too large",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Its Z is too small",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Its N/Z ratio is too small",
+        "images": [],
+        "percentage_selected": "(55.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Its N/Z ratio is too large",
+        "images": [],
+        "percentage_selected": "(30%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Its N/Z ratio is too small",
+    "analytics": {
+      "percent_correct": "55.4%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Nuclear Reactions"
+    },
+    "category": "Nuclear Reactions",
+    "explanation": {
+      "concept_text": "The band of stability in the chart below (shown in a dark brown) indicates the elements that have stable isotopes. This band of stability exists until element 83 after which higher atomic number elements have no stable isotopes. Isotopes with N/Z ratios (neutron/proton) greater than isotopes on the band of stability lie above the band and demonstrate β- or beta decay . Isotopes with N/Z ratios (neutron/proton) lower than isotopes on the band of stability lie below the band and demonstrate β+ or positron decay . Most elements greater than element 83 tend to exhibit α or alpha decay . CC BY 4.0 The elements displayed on the periodic table display the atomic weight which is the weighted average of atomic masses based on abundance of its isotopes. The more stable isotopes will be more abundant so the atomic weight will be closest to the atomic mass of the most stable isotope.",
+      "poe_text": "Option A. Its N is too large – This option is incorrect because F-18 has one less neutron than the stable F-19 isotope. Option B. Its Z is too small – This option is incorrect because all isotopes of the same element must have the same atomic number. Option D. Its N/Z ratio is too large – This option is incorrect because F-18 has a N/Z ratio of 9/9 which is less than the 10/9 ratio of the stable F-19 isotope.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+28+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 29,
+    "question": {
+      "text": "Which of the following is the maximum number of electrons that can be held in the 4p subshell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(89.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "14",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "6",
+    "analytics": {
+      "percent_correct": "89.4%",
+      "time_spent": "0 min, 9 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "There are 6 electrons that may be held in the 4p subshell. This answer must be derived from basic knowledge of orbitals: These subshells increase in size from the s orbital to the p orbital. The s orbital has two electrons that orbit around one electron in a spherical shape. The p subshell is found outside of the s and has three orbits, each with two electrons, that orbit in dumbbell shapes. The d and f subshells have complicated orbital shapes. CC BY 4.0",
+      "poe_text": "Option A. 2 - This option is incorrect because this is the number of electrons found in a completed s subshell which only contains one orbital with two electrons. Option C. 8 - This option is incorrect because this number of electrons is needed to possess an octet, or complete s and p subshells in the first two periods. Option D. 10 - This option is incorrect because this is the number of electrons found in a completed d subshell which contains five orbitals, each with two electrons. Option E. 14 - This option is incorrect because this is the number of electrons found in a completed f subshell which contains seven orbitals, each with two electrons.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+29+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+29+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 9,
+    "question_number": 30,
+    "question": {
+      "text": "Which of the following is the correct number of non-bonding valence electrons in HCCl 3 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "9",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "18",
+        "images": [],
+        "percentage_selected": "(75.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "26",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "18",
+    "analytics": {
+      "percent_correct": "75.1%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "STEP 1: In order to determine the non-bonding valence electrons of trichloromethane, the correct Lewis structure must be created. First, the total number of valence electrons must be found by looking at the periodic table: Therefore, the total number of valence electrons is 26 . STEP 2: Now, the correct structure must be built with carbon at the center. In this way, no molecule has to break its octet. With single bonds from the carbon, the following structure may be created by satisfying the octet rule. After placing electrons to fill out the various octets (excluding hydrogen’s doublet rule) and counting each bond as two electrons, the following structure can be reached which has 9 pairs of non-bonding valence electrons which translates to 18 non-bonding valence electrons: CC BY 4.0",
+      "poe_text": "Option A. 0 - This option is incorrect because this answer indicates that all electrons are bonded which is not true. In this molecule, there are only four bonds (eight electrons) while the other eighteen are free. Option B. 6 - This option is incorrect because this answer only accounts for the three pairs of electrons on one chlorine atom. There are three chlorine atoms in total, resulting in nine pairs (eighteen total) of free electrons. Option C. 9 - This option is incorrect because it accounts for the pairs of non-bonding valence electrons, not the total number of non-bonding valence electrons. Option E. 26 - This option is incorrect because this answer indicates that all valence electrons are non-bonding. This is not true because electrons must be able to form bonds to the central carbon (four bonds, eight total) which leaves only eighteen electrons free.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+30+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+9/Question+30+Solution+1.png"
+      ]
+    }
+  }
+]

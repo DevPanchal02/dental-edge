@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Given the pK a of HF is 3.2 and the pK a of HCl is -7, what is the pK a of HBr?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-9",
+        "images": [],
+        "percentage_selected": "(89.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-6",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-9",
+    "analytics": {
+      "percent_correct": "89.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the strengths of acids , we need to know that when comparing acids, the factor that determines the relative acidity is the stability of its conjugate base. To judge the stability of conjugate bases, we can consider their size. A larger conjugate base can disperse negative charge more effectively, making it more stable. In this case, we are given the pK a values of HF and HCl. Since Br is lower than both F and Cl in the periodic table, Br is larger in size, which means that Br - can disperse a negative charge more effectively, making it more stable. Therefore, HBr is considered a stronger acid in comparison to HF and HCl. Recall that a lower pK a indicates a stronger acid. Therefore, the pK a value of HBr must be lower than both HF (pK a = 3.2) and HCl (pK a = -7). Therefore, the only possible pK a value for HBr is -9. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Which of the following accurately arranges the following oxoacids from the strongest to the weakest?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HClO 4 > HIO 4 > HBrO 4",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "HIO 4 > HBrO 4 > HClO 4",
+        "images": [],
+        "percentage_selected": "(31%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "HIO 4 > HClO 4 > HBrO 4",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "HClO 4 > HBrO 4 > HIO 4",
+        "images": [],
+        "percentage_selected": "(63.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "HBrO 4 > HClO 4 = HIO 4",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "HClO 4 > HBrO 4 > HIO 4",
+    "analytics": {
+      "percent_correct": "63.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the strengths of acids , we need to know that when comparing acids, the factor that determines the relative acidity is the stability of its conjugate base. For oxoacids that contain the same number of oxygen atoms (4 in this case), the strength of the acid will increase with the electronegativity of the central atom. This is because a more electronegative central atom is better at stabilizing a negative charge. In this case, we know that the central atoms are chlorine (Cl), bromine (Br), and iodine (I), and their electronegativities follow the trend Cl > Br > I. Therefore, the order of acid strength is consistent with this trend, making HClO 4 the strongest, followed by HBrO 4 , and then HIO 4 . Therefore, HClO 4 > HBrO 4 > HIO 4 . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Given the pK a value of H 2 SO 4 is -3, what is the pK a value of H 2 SO 3 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-17",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-15",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-12",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "-4",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(89.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "2",
+    "analytics": {
+      "percent_correct": "89.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the strengths of acids , we need to know that when comparing acids, the factor that determines the relative acidity is the stability of its conjugate base. In this case, we have oxoacids with different numbers of oxygen atoms. The strength of acid will increase with the stability of the conjugate base. Therefore, H 2 SO 4 is more acidic than H 2 SO 3 because H 2 SO 4 has an extra oxygen, which allows for greater resonance stabilization that can stabilize the negative charge when the acid loses a proton. Recall that a higher pK a indicates a weaker acid. Therefore, the pK a value of H 2 SO 3 must be higher than the pK a of H 2 SO 4 (pK a = -3). Consequently, the pK a value of H 2 SO 3 is 2. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Which of the following best explains why HF is a weaker acid than HCl, HBr, and HI?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Fluorine has a larger radius than chlorine, bromine, or iodine",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Fluoride ions are more stable than chloride, bromide, or iodide ions",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Fluorine has greater ionization energy than chlorine, bromine, or iodine",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Fluorine is more electronegative than chlorine, bromine, or iodine",
+        "images": [],
+        "percentage_selected": "(22.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Fluorine has the fewest number of electron shells",
+        "images": [],
+        "percentage_selected": "(60.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Fluorine has the fewest number of electron shells",
+    "analytics": {
+      "percent_correct": "60.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Incorrect. As we move down the group, the atomic radius generally increases. Fluorine has a smaller radius than chlorine, bromine, or iodine. Option B. Fluoride ions are more stable than chloride, bromide, or iodide ions Incorrect. Due to the size of the fluoride ion, it is not able to distribute negative charge as well as the other halides, thus making it less stable. Although F is more electronegative than Cl, Br, or I, the size of the ions takes precedent and is our primary consideration. This is because a larger conjugate base can disperse negative charge more effectively, making it more stable. Option C. Fluorine has greater ionization energy than chlorine, bromine, or iodine Incorrect. Ionization energy is not the primary factor in determining acidity. Option D. Fluorine is more electronegative than chlorine, bromine, or iodine Incorrect. Although the statement is true, it does not fully explain why HF is a weaker acid than HCl, HBr, and HI. In this case, the size of a conjugate base is a primary factor that determines acidity. A larger conjugate base can disperse negative charge more effectively, making it more stable. On the other hand, when comparing the conjugate bases of oxoacids, the electronegativity of the central atom determines the stability. Option E. Fluorine has the fewest number of electron shells Correct. Acid strength is based on the ability of their conjugate bases to remain stable in solution. This is mainly based on how well the conjugate base ion can distribute its negative charge across itself. Usually, larger ions have better charge distribution capabilities, and since fluoride ions are smaller than other halide ions (fewer valence shells), they are less stable in solution, thus making their conjugate acids weak. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Which of the following accurately arranges the following haloacids from the strongest to the weakest?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HCl = HBr > HF > Hl",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "HF > HCl > HBr > HI",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "HI > HBr > HCl > HF",
+        "images": [],
+        "percentage_selected": "(91.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "HBr > HI > HCl > HF",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "HF > HCl > HI > HBr",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "HI > HBr > HCl > HF",
+    "analytics": {
+      "percent_correct": "91.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the strengths of acids , we need to know that when comparing acids, the factor that determines the relative acidity is the stability of its conjugate base. To judge the stability of conjugate bases, we can consider their size. A larger conjugate base can disperse negative charge more effectively, making it more stable. In this case, we can see that each element of the given acids belongs to the same group. As we go down the group/column, the size of the halogen increases, so the conjugate base stability increases, which means that acid strength increases. Therefore, the accurate arrangement of the haloacids from the strongest to the weakest is HI > HBr > HCl > HF. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Which of the following is the strongest acid?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HI",
+        "images": [],
+        "percentage_selected": "(90.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "HBr",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "NaOH",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "HCl",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "HF",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "HI",
+    "analytics": {
+      "percent_correct": "90.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the strengths of acids , we need to know that when comparing acids, the factor that determines the relative acidity is the stability of its conjugate base. To judge the stability of conjugate bases, we can consider their size. A larger conjugate base can disperse negative charge more effectively, making it more stable. In this case, we can see that each element of the given acids belongs to the same group (NaOH is a base, so we can eliminate this option). As we go down the group/column, the conjugate base size and stability increases, therefore acid strength also increases. Therefore, the strongest acid is HI. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Which of the following best explains why H 2 SO 4 is more acidic than H­ 2 SO 3 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "SO 4 2- has a greater resonance stabilization than SO 3 2-",
+        "images": [],
+        "percentage_selected": "(71%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "H 2 SO 4 has higher pKa than H 2 SO 3",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "SO 4 2- is overall more electronegative than SO 3 2-",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H 2 SO 4 has an extra oxygen atom, which makes it more negative",
+        "images": [],
+        "percentage_selected": "(22.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "SO 3 2- distributes the negative charge better than SO 4 2-",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "SO 4 2- has a greater resonance stabilization than SO 3 2-",
+    "analytics": {
+      "percent_correct": "71%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the strengths of acids , we need to know that when comparing oxoacids with different numbers of oxygens, the factor that determines the relative acidity is the stability of its conjugate base. In this case, H 2 SO 4 is more acidic than H 2 SO 3 because H 2 SO 4 has an extra oxygen, which allows for greater resonance stabilization that can stabilize the negative charge when the acid loses a proton. Since the strength of an acid increases as the stability of its conjugate base increases, H 2 SO 4 is more acidic. In this case, the option that best explains why H 2 SO 4 is more acidic than H­ 2 SO 3 is that SO 4 2- has a greater resonance stabilization than SO 3 2- . Option A. SO 4 2- has a greater resonance stabilization than SO 3 2- Correct. SO 4 2- has an extra oxygen, which allows for greater resonance stabilization that can stabilize the negative charge when the acid loses a proton. Therefore, SO 4 2- has a greater resonance stabilization than SO 3 2- , which explains why H 2 SO 4 is more acidic than H 2 SO 3 . Option B. H 2 SO 4 has higher pK a than H 2 SO 3 Incorrect. A low pK a value indicates a stronger acid. In this case, H 2 SO 4 has lower pK a than H 2 SO 3 because H 2 SO 4 is more acidic than H 2 SO 3 . Option C. SO 4 2- is overall more electronegative than SO 3 2- Incorrect. Electronegativity is associated with individual atoms, not ions. Also, electronegativity is not a primary factor that makes H 2 SO 4 more acidic than H 2 SO 3 . Option D. H 2 SO 4 has an extra oxygen atom, which makes it more negative Incorrect. The acidity of an acid is more related to the stability of its conjugate base and how easily its proton can be donated. The extra oxygen atom doesn't necessarily make the molecule more negative in a way that affects its acidity. Option E. SO 3 2- distributes the negative charge better than SO 4 2- Incorrect. SO 4 2- has an extra oxygen compared to SO 4 2- , which allows for greater resonance stabilization that can stabilize the negative charge when the acid loses a proton. Therefore, SO 4 2- distributes the negative charge better than SO 3 2- . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Which of the following accurately describes the strengths of acids?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H 2 SO 4 has a conjugate base that is less stable than H 2 SO 3",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2 SO 4 is less acidic than H 2 SO 3",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "H 2 ClO 4 is less acidic than H 2 BrO 4",
+        "images": [],
+        "percentage_selected": "(19.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H 2 ClO 4 has a lower pK a value than H 2 IO 4",
+        "images": [],
+        "percentage_selected": "(67.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "H 2 SO 3 has a higher K a value than H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H 2 ClO 4 has a lower pK a value than H 2 IO 4",
+    "analytics": {
+      "percent_correct": "67.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. H 2 SO 4 has a conjugate base that is less stable than H 2 SO 3 Incorrect. H 2 SO 4 has a conjugate base that is more stable than H 2 SO 3 because SO 4 2- has an extra oxygen, which allows for greater resonance stabilization that can stabilize the negative charge when the acid loses protons. Option B. H 2 SO 4 is less acidic than H 2 SO 3 Incorrect. H 2 SO 4 is more acidic than H 2 SO 3 because H 2 SO 4 has a conjugate base that is more stable than H 2 SO 3 . Option C. H 2 ClO 4 is less acidic than H 2 BrO 4 Incorrect. For oxoacids with the same number of oxygen atoms, acid strength increases with the electronegativity of the central atom. A central atom with higher electronegativity will exhibit greater stability in retaining the negative charge after the acid releases a proton. Therefore, H 2 ClO 4 is more acidic than H 2 BrO 4 because Cl is more electronegative than Br. Option D. H 2 ClO 4 has a lower pK a value than H 2 IO 4 Correct. For oxoacids with the same number of oxygen atoms, acid strength increases with the electronegativity of the central atom. A central atom with higher electronegativity will exhibit greater stability in retaining the negative charge after the acid releases a proton. H 2 ClO 4 has lower pK a value than H 2 IO 4 because Cl is more electronegative than I. Option E. H 2 SO 3 has a higher K a value than H 2 SO 4 Incorrect. A high K a value indicates a stronger acid. In this case, H 2 SO 4 has a higher K a value than H 2 SO 3 because H 2 SO 4 is more acidic than H 2 SO 3 . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Which of the following accurately describes about the strengths of bases?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Weak bases dissociate completely in water",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Strong bases have a low K b value",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Weak bases have a high pK b value",
+        "images": [],
+        "percentage_selected": "(84.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Strong bases partially dissociate in water",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Ca(OH) 2 is a weak acid",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Weak bases have a high pK b value",
+    "analytics": {
+      "percent_correct": "84.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. Weak bases dissociate completely in water Incorrect. Weak bases do not dissociate completely in water; they only partially dissociate. Option B. Strong bases have a low K b value Incorrect. Strong bases have a high K b value because they dissociate almost completely in water, leading to a high concentration of hydroxide ions. Recall that a high K b value corresponds to a low pK b value. Option C. Weak bases have a high pK b value Correct. Weak bases have a high pK b value because they dissociate partially in water. Option D. Strong bases partially dissociate in water Incorrect. Strong bases dissociate almost completely in water. Option E. Ca(OH) 2 is a weak acid Incorrect. Ca(OH) 2 is a strong base because it dissociates completely in water, releasing a high concentration of hydroxide ions. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases",
+    "question": {
+      "text": "Each of the following compounds is correctly matched with their respective behaviour in aqueous solutions EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HF – weak acid",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "LiCl – neutral salt",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "NH 3 – weak base",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "HClO 3 – strong acid",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Ca(OH) 2 – weak base",
+        "images": [],
+        "percentage_selected": "(81.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Ca(OH) 2 – weak base",
+    "analytics": {
+      "percent_correct": "81.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind that we are looking for the compound incorrectly matched with their behavior. Option A. HF – weak acid Incorrect. HF is a weak acid because it partially dissociates in water, releasing a relatively small concentration of hydrogen ions. Option B. LiCl – neutral salt Incorrect. To check if LiCl is a neutral salt, we can first break down the molecule into its respective ions (LiCl à Li + + Cl - ). Then we will add H to the negative ion (Add H to Cl - à HCl), and we will add OH to the positive ion (Add OH to Li + à LiOH). Also, a neutral salt is made from neutralizing a strong acid and a strong base. Given that HCl is a strong acid and LiOH is a strong base, LiCl is confirmed as a neutral salt. Option C. NH 3 – weak base Incorrect. NH 3 is a weak base because it undergoes partial ionization in water, releasing a limited concentration of hydroxide ions through NH 3 + H 2 O ⇌ NH 4 + + OH - . Option D. HClO 3 – strong acid Incorrect. HClO 3 is a strong acid because it undergoes complete dissociation in water, producing a high concentration of hydrogen ions through HClO 3 à H + + ClO 3 - . Option E. Ca(OH) 2 – weak base Correct. Ca(OH) 2 is a strong base because Ca(OH) 2 dissociates completely in water through Ca(OH) 2 à Ca 2+ + 2 OH - . Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000102942e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x000000010293b0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001024828d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001024c96a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010250a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001024bda80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000102907c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010290af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x00000001028e7a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010290b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x00000001028d8b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010292b9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010292bb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x000000010293acf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Acid-Bases",
+    "question_bank": "Strength of Acids and Bases"
+  }
+]

@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "Each of the following has a heat of formation equal to zero at standard conditions EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "F 2 (g)",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Cl 2 (g)",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 2 (g)",
+        "images": [],
+        "percentage_selected": "(86.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Br 2 (l)",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "I 2 (s)",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "C 2 (g)",
+    "analytics": {
+      "percent_correct": "86.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving enthalpy , we need to know which elements exist as diatomic molecules in their standard states. For the elements in their standard states, like diatomic elements (H 2( g ) , N 2( g ) , F 2( g ) , O 2( g ) , I 2( s ) , Cl 2( g ) , and Br 2( l ) ), the heat of formation is zero. This is because elements in their standard states are defined to have zero enthalpy of formation and are already in their most stable form. In this case, C 2( g ) does not have a heat of formation equal to zero because it does not exist as a diatomic gas in its standard state. Instead, it exists as a singular solid atom, C ( s ) , sometimes referred to as graphite. The rest of the options have a heat of formation equal to zero at standard conditions. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "What is the value of the missing heat of reaction? A + B à C ΔH rxn = 300 kJ 2 C à 2 A + 2 B ΔH rxn = ? kJ",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-600",
+        "images": [],
+        "percentage_selected": "(88.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-300",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "300",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "600",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-600",
+    "analytics": {
+      "percent_correct": "88.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Hess’s Law , we need to recall that Hess’s law tells us that the total enthalpy change for a chemical reaction is the same, regardless of whether the reaction occurs in one or multiple steps. Here are some examples of useful conversions that can be used when applying Hess's Law: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ 2 A + 2 B à 2 C ΔH rxn = 2 × 300 = 600 kJ 1/2 A + 1/2 B à 1/2 C ΔH rxn = 1/2 × 300 = 150 kJ STEP 1: First, we need to reverse the original reaction A + B à C, which requires us to multiply the initial enthalpy change by -1 to find the enthalpy change of the reversed reaction: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ STEP 2 : Then, we multiply the reaction C à A + B and its enthalpy change by a coefficient of 2: C à A + B ΔH rxn = -300 kJ 2 C à 2 A + 2 B ΔH rxn = 2(-300) = -600 kJ Therefore, the value of the missing heat of reaction is -600 kJ. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "Based on the information given below, what is the mole coefficient ( x ) of the reaction below? A + B à C ΔH rxn = 300 kJ x C à x A + x B ΔH rxn = -100 kJ",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1/3",
+        "images": [],
+        "percentage_selected": "(94.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "1/2",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1/3",
+    "analytics": {
+      "percent_correct": "94.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Hess’s Law , we need to recall that Hess’s law tells us that the total enthalpy change for a chemical reaction is the same, regardless of whether the reaction occurs in one or multiple steps. Here are some examples of useful conversions that can be used when applying Hess's Law: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ 2 A + 2 B à 2 C ΔH rxn = 2 × 300 = 600 kJ 1/2 A + 1/2 B à 1/2 C ΔH rxn = 1/2 × 300 = 150 kJ STEP 1: First, we need to reverse the original reaction A + B à C, which requires us to multiply the initial enthalpy change by -1 to find the enthalpy change of the reversed reaction: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ STEP 2: As we can see, the enthalpy change of the second equation is a third of the enthalpy change of the reversed first equation, so the coefficient of the second equation must be a third of the reversed first equation: (1) C à A + B ΔH rxn = -300 kJ (2) x C à x A + x B ΔH rxn = -100 kJ x = 1/3 In this case, the mole coefficient ( x ) of the reaction is 1/3. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "Based on the information given below, what is the enthalpy change for the following reaction? CH 4( g ) + 2 O 2( g ) à CO 2( g ) + 2 H 2 O ( l ) Given: C ( s ) + 2 H 2( g ) à CH 4( g ) ΔH 1 = x C ( s ) + O 2( g ) à CO 2( g ) ΔH 2 = y H 2( g ) + 1/2 O 2( g ) à H 2 O ( l ) ΔH 3 = z",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "x + y + z",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "x + y – z",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "z + y – 2 x",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2 z + y – x",
+        "images": [],
+        "percentage_selected": "(92%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "2 z + y – 2 x",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2 z + y – x",
+    "analytics": {
+      "percent_correct": "92%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Hess’s Law , we need to recall that Hess’s law tells us that the total enthalpy change for a chemical reaction is the same, regardless of whether the reaction occurs in one or multiple steps. Here are some examples of useful conversions that can be used when applying Hess's Law: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ 2 A + 2 B à 2 C ΔH rxn = 2 × 300 = 600 kJ 1/2 A + 1/2 B à 1/2 C ΔH rxn = 1/2 × 300 = 150 kJ STEP 1: First, we need to reverse the first reaction (C ( s ) + 2 H 2( g ) à CH 4( g ) ) because CH 4 is given as a reactant in the reaction of interest (CH 4( g ) + 2 O 2( g ) à CO 2( g ) + 2 H 2 O ( l ) ): C ( s ) + 2 H 2( g ) à CH 4( g ) ΔH 1 = x CH 4( g ) à C ( s ) + 2 H 2( g ) ΔH 1 = - x STEP 2: Next, we need to multiply the third reaction (H 2( g ) + 1/2 O 2( g ) à H 2 O ( l ) ) by a factor of 2 because H 2 O has a coefficient of 2 in the reaction of interest (CH 4( g ) + 2 O 2( g ) à CO 2( g ) + 2 H 2 O ( l ) ): H 2( g ) + 1/2 O 2( g ) à H 2 O ( l ) ΔH 3 = z 2 H 2( g ) + O 2( g ) à 2 H 2 O ( l ) ΔH 3 = 2 z STEP 3: Finally, with the reactions correctly rearranged, we can now combine the reactions together to get our final reaction (CH 4( g ) + 2 O 2( g ) à CO 2( g ) + 2 H 2 O ( l ) ), as well as our final enthalpy change: CH 4( g ) à C ( s ) + 2 H 2( g ) ΔH 1 = - x C ( s ) + O 2( g ) à CO 2( g ) ΔH 2 = y 2 H 2( g ) + O 2( g ) à 2 H 2 O ( l ) ΔH 3 = 2 z Which gives us the following reaction when added together: CH 4( g ) + C ( s ) + 2 H 2( g ) + 2 O 2( g ) à C ( s ) + 2 H 2( g ) + CO 2( g ) + 2 H 2 O ( l ) Which allows us to cancel 2 H 2( g ) and C ( s ) on both sides to reach the reaction of interest: CH 4( g ) + 2 O 2( g ) à CO 2( g ) + 2 H 2 O ( l ) ΔH rxn = 2 z + y – x Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "Based on the information below, what is the enthalpy change in kJ•mol -1 for the following reaction? S ( s ) + O 2( g ) à SO 2( g ) Given: 2 S ( s ) + 3 O 2( g ) à 2 SO 3( g ) ΔH° 1 = 800 kJ•mol -1 2 SO 3( g ) à 2 SO 2( g ) + O 2( g ) ΔH° 2 = -200 kJ•mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "300",
+        "images": [],
+        "percentage_selected": "(70.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "500",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "600",
+        "images": [],
+        "percentage_selected": "(15.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1000",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1200",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "300",
+    "analytics": {
+      "percent_correct": "70.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Hess’s Law , we need to recall that Hess’s law tells us that the total enthalpy change for a chemical reaction is the same, regardless of whether the reaction occurs in one or multiple steps. Here are some examples of useful conversions that can be used when applying Hess's Law: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ 2 A + 2 B à 2 C ΔH rxn = 2 × 300 = 600 kJ 1/2 A + 1/2 B à 1/2 C ΔH rxn = 1/2 × 300 = 150 kJ STEP 1: First, we need to divide the first reaction ( 2 S ( s ) + 3 O 2( g ) à 2 SO 3( g ) ) by a factor of 2 because S ( s ) has a coefficient of 1 in reaction of interest ( S ( s ) + O 2( g ) à SO 2( g ) ): 2 S ( s ) + 3 O 2( g ) à 2 SO 3( g ) ΔH° 1 = 800 kJ•mol -1 2/2 S ( s ) + 3/2 O 2( g ) à 2/2 SO 3( g ) ΔH° 1 = 800/2 kJ•mol -1 S ( s ) + 3/2 O 2( g ) à SO 3( g ) ΔH° 1 = 400 kJ•mol -1 STEP 2: Then, we need to divide the second reaction (2 SO 3( g ) à 2 SO 2( g ) + O 2( g ) ) by a factor of 2 because SO 2( g ) has a coefficient of 1 in the reaction of interest (S ( s ) + O 2( g ) à SO 2( g ) ): 2 SO 3( g ) à 2 SO 2( g ) + O 2( g ) ΔH° 2 = -200 kJ•mol -1 2/2 SO 3( g ) à 2/2 SO 2( g ) + 1/2 O 2( g ) ΔH° 2 = -200/2 kJ•mol -1 SO 3( g ) à SO 2( g ) + 1/2 O 2( g ) ΔH° 2 = -100 kJ•mol -1 STEP 3: Finally, with the reactions correctly arranged, we can now combine the reactions together to get our final reaction (S ( s ) + O 2( g ) à SO 2( g ) ), as well as our final enthalpy change: S ( s ) + 3/2 O 2( g ) à SO 3( g ) ΔH° 1 = 400 kJ•mol -1 SO 3( g ) à SO 2( g ) + 1/2 O 2( g ) ΔH° 2 = -100 kJ•mol -1 Which gives us the following reaction when added together: S ( s ) + 3/2 O 2( g ) + SO 3( g ) à SO 3( g ) + SO 2( g ) + 1/2 O 2( g ) Which allows us to cancel SO 3( g ) and simplify O 2( g ) on both sides to reach the reaction of interest: S ( s ) + O 2( g ) à SO 2( g ) ΔH° rxn = 400 – 100 = 300 kJ•mol -1 In this case, the enthalpy change in kJ•mol -1 for the reaction S ( s ) + O 2( g ) à SO 2( g ) is 300 . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "Calculate ΔH rxn in kJ for the following reaction: 4 FeO ( s ) + O 2( g ) à 2 Fe 2 O 3( s ) Given: 2 Fe ( s ) + O 2( g ) à 2 FeO ( s ) ΔH 1 = -542 kJ 4 Fe ( s ) + 3 O 2( g ) à 2 Fe 2 O 3( s ) ΔH 2 = -1,640 kJ",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-2,182",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-1,098",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-556",
+        "images": [],
+        "percentage_selected": "(85.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "556",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1,098",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-556",
+    "analytics": {
+      "percent_correct": "85.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Hess’s Law , we need to recall that Hess’s law tells us that the total enthalpy change for a chemical reaction is the same, regardless of whether the reaction occurs in one or multiple steps. Here are some examples of useful conversions that can be used when applying Hess's Law: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ 2 A + 2 B à 2 C ΔH rxn = 2 × 300 = 600 kJ 1/2 A + 1/2 B à 1/2 C ΔH rxn = 1/2 × 300 = 150 kJ STEP 1: First, we need to reverse the first reaction ( 2 Fe ( s ) + O 2( g ) à 2 FeO ( s ) ) because FeO ( s ) is given as a reactant in the reaction of interest (2 FeO ( s ) + O 2( g ) à 2 Fe 2 O 3( s ) ): 2 Fe ( s ) + O 2( g ) à 2 FeO ( s ) ΔH 1 = -542 kJ 2 FeO ( s ) à 2 Fe ( s ) + O 2( g ) ΔH 1 = 542 kJ STEP 2: Then, we need to multiply the mole coefficients of the reversed first reaction ( 2 FeO ( s ) à 2 Fe ( s ) + O 2( g ) ) by a factor of 2 because FeO ( s ) has a coefficient of 4 in the reaction of interest (4 FeO ( s ) + O 2( g ) à 2 Fe 2 O 3( s ) ): 2 FeO ( s ) à 2 Fe ( s ) + O 2( g ) ΔH 1 = 542 kJ 4 FeO ( s ) à 4 Fe ( s ) + 2 O 2( g ) ΔH 1 = 2(542) = 1,084 kJ STEP 3: Finally, with the reactions correctly rearranged, we can now combine the reactions together to get our final reaction (4 FeO ( s ) + O 2( g ) à 2 Fe 2 O 3( s ) ), as well as our final enthalpy change: 4 FeO ( s ) à 4 Fe ( s ) + 2 O 2( g ) ΔH 1 = 2(542) = 1,084 kJ 4 Fe ( s ) + 3 O 2( g ) à 2 Fe 2 O 3( s ) ΔH 2 = -1,640 kJ Which gives us the following reaction when added together: 4 FeO ( s ) + 4 Fe ( s ) + 3 O 2( g ) à 4 Fe ( s ) + 2 O 2( g ) + 2 Fe 2 O 3( s ) Which allow us to cancel 4 Fe ( s ) and simplify O 2( g ) on both sides to reach the reaction of interest: 4 FeO ( s ) + O 2( g ) à 2 Fe 2 O 3( s ) ΔH rxn = 1,084 + (-1,640) = -556 kJ Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "Based on the information given below, what is the enthalpy change in kJ for the following reaction? C 2 H­ 2( g ) + 5/2 O 2( g ) à 2 CO 2( g ) + H 2 O ( l ) Given: C ( s ) + O 2( g ) à CO 2( g ) ΔH 1 = -390 kJ H 2( g ) + 1/2 O 2( g ) à H 2 O ( l ) ΔH 2 = -290 kJ 2 C ( s ) + H 2( g ) à C 2 H 2( g ) ΔH 3 = 230 kJ",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-680",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-840",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-780",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "-1,070",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "-1,300",
+        "images": [],
+        "percentage_selected": "(85.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "-1,300",
+    "analytics": {
+      "percent_correct": "85.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Hess’s Law , we need to recall that Hess’s law tells us that the total enthalpy change for a chemical reaction is the same, regardless of whether the reaction occurs in one or multiple steps. Here are some examples of useful conversions that can be used when applying Hess's Law: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ 2 A + 2 B à 2 C ΔH rxn = 2 × 300 = 600 kJ 1/2 A + 1/2 B à 1/2 C ΔH rxn = 1/2 × 300 = 150 kJ STEP 1: First, we need to reverse the third reaction ( 2 C ( s ) + H 2( g ) à C 2 H 2( g ) ) because C 2 H 2( g ) is given as a reactant in the reaction of interest ( C 2 H­ 2( g ) + 5/2 O 2( g ) à 2 CO 2( g ) + H 2 O ( l ) ): 2 C ( s ) + H 2( g ) à C 2 H 2( g ) ΔH 3 = 230 kJ C 2 H 2( g ) à 2 C ( s ) + H 2( g ) ΔH 3 = -230 kJ STEP 2: Next, we need to multiply the first reaction ( C ( s ) + O 2( g ) à CO 2( g ) ) by a factor of 2 because CO 2( g ) has a coefficient of 2 in the reaction of interest (C 2 H­ 2( g ) + 5/2 O 2( g ) à 2 CO 2( g ) + H 2 O ( l ) ): C ( s ) + O 2( g ) à CO 2( g ) ΔH 1 = -390 kJ 2 C ( s ) + 2 O 2( g ) à 2 CO 2( g ) ΔH 1 = 2(-390) = -780 kJ STEP 3: Finally, with the reactions correctly arranged, we can now combine the reaction together to get our final reaction (C 2 H­ 2( g ) + 5/2 O 2( g ) à 2 CO 2( g ) + H 2 O ( l ) ): 2 C ( s ) + 2 O 2( g ) à 2 CO 2( g ) ΔH 1 = 2(-390) = -780 kJ H 2( g ) + 1/2 O 2( g ) à H 2 O ( l ) ΔH 2 = -290 kJ C 2 H 2( g ) à 2 C ( s ) + H 2( g ) ΔH 3 = -230 kJ Which gives us the following reaction when added together: C 2 H 2( g ) + 2 C ( s ) + 2 O 2( g ) + H 2( g ) + 1/2 O 2( g ) à 2 CO 2( g ) + H 2 O ( l ) + 2 C ( s ) + H 2( g ) Which allows us to cancel 2 C ( s ) and H 2( g ) on both sides to reach the reaction of interest: C 2 H­ 2( g ) + 5/2 O 2( g ) à 2 CO 2( g ) + H 2 O ( l ) ΔH rxn = -780 + (-290) + (-230) = -1,300 kJ Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "Based on the information given below, what is the enthalpy change in kJ for the following reaction? 4 NH 3( g ) + 5 O 2( g ) à 4 NO ( g ) + 6 H 2 O ( g ) Given: N 2( g ) + O 2( g ) à 2 NO ( g ) ΔH 1 = -181 kJ N 2( g ) + 3 H­ 2( g ) à 2 NH 3( g ) ΔH 2 = -92 kJ 2 H 2( g ) + O 2( g ) à 2 H 2 O ( g ) ΔH 3 = -484 kJ",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2(-181) + 2(92) + 3(-484)",
+        "images": [],
+        "percentage_selected": "(91.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "2(-181) – 2(92) – 3(-484)",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "181 + 2(92) + 3(-484)",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2(-181) + 92 + 3(484)",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2(-181) + 2(92) + 2(-484)",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2(-181) + 2(92) + 3(-484)",
+    "analytics": {
+      "percent_correct": "91.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Hess’s Law , we need to recall that Hess’s law tells us that the total enthalpy change for a chemical reaction is the same, regardless of whether the reaction occurs in one or multiple steps. Here are some examples of useful conversions that can be used when applying Hess's Law: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ 2 A + 2 B à 2 C ΔH rxn = 2 × 300 = 600 kJ 1/2 A + 1/2 B à 1/2 C ΔH rxn = 1/2 × 300 = 150 kJ STEP 1: First, we need to reverse the second reaction (N 2( g ) + 3 H­ 2( g ) à 2 NH 3( g ) ) because NH 3( g ) is given as a reactant in the reaction of interest (4 NH 3( g ) + 5 O 2( g ) à 4 NO ( g ) + 6 H 2 O ( g ) ): N 2( g ) + 3 H­ 2( g ) à 2 NH 3( g ) ΔH 2 = -92 kJ 2 NH 3( g ) à N 2( g ) + 3 H­ 2( g ) ΔH 2 = 92 kJ STEP 2: Then, we need to multiply the reversed second reaction (2 NH 3( g ) à N 2( g ) + 3 H­ 2( g ) ) by a factor of 2 because NH 3( g ) has a coefficient of 4 in the reaction of interest (4 NH 3( g ) + 5 O 2( g ) à 4 NO ( g ) + 6 H 2 O ( g ) ): 2 NH 3( g ) à N 2( g ) + 3 H­ 2( g ) ΔH 2 = 92 kJ 4 NH 3( g ) à 2 N 2( g ) + 6 H­ 2( g ) ΔH 2 = 2(92) kJ STEP 3: Next, we need to multiply the first reaction ( N 2( g ) + O 2( g ) à 2 NO ( g ) ) by a factor of 2 because NO ( g ) has a coefficient of 4 in the reaction of interest (4 NH 3( g ) + 5 O 2( g ) à 4 NO ( g ) + 6 H 2 O ( g ) ): N 2( g ) + O 2( g ) à 2 NO ( g ) ΔH 1 = -181 kJ 2 N 2( g ) + 2 O 2( g ) à 4 NO ( g ) ΔH 1 = 2(-181) kJ STEP 4: Then, we need to multiply the third reaction ( 2 H 2( g ) + O 2( g ) à 2 H 2 O ( g ) ) by a factor of 3 because H 2 O ( g ) has a coefficient of 6 in the reaction of interest (4 NH 3( g ) + 5 O 2( g ) à 4 NO ( g ) + 6 H 2 O ( g ) ): 2 H 2( g ) + O 2( g ) à 2 H 2 O ( g ) ΔH 3 = -484 kJ 6 H 2( g ) + 3 O 2( g ) à 6 H 2 O ( g ) ΔH 3 = 3(-484) kJ STEP 5: Finally, with the reactions correctly rearranged, we can now combine the reactions together to get our final reaction ( 4 NH 3( g ) + 5 O 2( g ) à 4 NO ( g ) + 6 H 2 O ( g ) ), as well as our final enthalpy change: 2 N 2( g ) + 2 O 2( g ) à 4 NO ( g ) ΔH 1 = 2(-181) kJ 4 NH 3( g ) à 2 N 2( g ) + 6 H­ 2( g ) ΔH 2 = 2(92) kJ 6 H 2( g ) + 3 O 2( g ) à 6 H 2 O ( g ) ΔH 3 = 3(-484) kJ Which gives us the following reaction when added together: 2 N 2( g ) + 2 O 2( g ) + 4 NH 3( g ) + 6 H 2( g ) + 3 O 2( g ) à 4 NO ( g ) + 2 N 2( g ) + 6 H­ 2( g ) + 6 H 2 O ( g ) Which allows us to cancel 2 N 2( g ) and 6 H 2( g ) on both sides to reach the reaction of interest: 4 NH 3( g ) + 5 O 2( g ) à 4 NO ( g ) + 6 H 2 O ( g ) ΔH rxn = 2(-181) + 2(92) + 3(-484) kJ Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "What would be the heat of formation, ΔH rxn , for NO 2( g ) gas given the following reactions? 1/2 N 2( g ) + 1/2 O 2( g ) à NO ( g ) ΔH 1 = 21.6 kcal NO 2( g ) à NO ( g ) + 1/2 O 2( g ) ΔH 2 = 13.5 kcal",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-28.7 kcal",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-8.1 kcal",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "8.1 kcal",
+        "images": [],
+        "percentage_selected": "(76.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "28.7 kcal",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "35.7 kcal",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "8.1 kcal",
+    "analytics": {
+      "percent_correct": "76.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Hess’s Law , we need to recall that Hess’s law tells us that the total enthalpy change for a chemical reaction is the same, regardless of whether the reaction occurs in one or multiple steps. Here are some examples of useful conversions that can be used when applying Hess's Law: A + B à C ΔH rxn = 300 kJ C à A + B ΔH rxn = -300 kJ 2 A + 2 B à 2 C ΔH rxn = 2 × 300 = 600 kJ 1/2 A + 1/2 B à 1/2 C ΔH rxn = 1/2 × 300 = 150 kJ STEP 1: First, we need to reverse the second reaction ( NO 2( g ) à NO ( g ) + 1/2 O 2( g ) ) because the final reaction needs to have NO 2( g ) as a product: NO 2( g ) à NO ( g ) + 1/2 O 2( g ) ΔH 2 = 13.5 kcal NO ( g ) + 1/2 O 2( g ) à NO 2( g ) ΔH 2 = -13.5 kcal STEP 2: Finally, with the reactions correctly arranged, we can now combine the reactions to get our final reaction, as well as our final enthalpy change: 1/2 N 2( g ) + 1/2 O 2( g ) à NO ( g ) ΔH 1 = 21.6 kcal NO ( g ) + 1/2 O 2( g ) à NO 2( g ) ΔH 2 = -13.5 kcal Which gives us the following reaction when added together: 1/2 N 2( g ) + 1/2 O 2( g ) + NO ( g ) + 1/2 O 2( g ) à NO ( g ) + NO 2( g ) Which allows us to cancel NO ( g ) on both sides to reach the reaction of interest: 1/2 N 2( g ) + O 2( g ) à NO 2( g ) ΔH rxn = 21.6 + (-13.5) = 8.1 kcal Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law",
+    "question": {
+      "text": "Which of the following correctly describes a process where heat does not enter or leave the system?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Isobaric",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Isochoric",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Adiabatic",
+        "images": [],
+        "percentage_selected": "(40.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Isothermal",
+        "images": [],
+        "percentage_selected": "(50.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Endothermic",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Adiabatic",
+    "analytics": {
+      "percent_correct": "40.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. Isobaric Incorrect. An isobaric process is a type of thermodynamic process in which pressure remains constant. In this process, heat can enter or leave the system. Option B. Isochoric Incorrect. An isochoric process is a type of thermodynamic process that occurs at constant volume. In this process, heat can enter or leave the system. Option C. Adiabatic Correct. An adiabatic process is a type of thermodynamic process in which there is no heat exchange between the system and its surroundings. Option D. Isothermal Incorrect. An isothermal process is a type of thermodynamic process in which temperature remains constant. In this process, heat can enter or leave the system. Option E. Endothermic Incorrect. An endothermic process is a type of thermodynamic process in which the system absorbs heat from their surroundings, causing a decrease in temperature. This involves a transfer of heat into the system. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100be6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100bdf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001007268d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010076d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007ae7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100761a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100babc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100baef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b8ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100baf7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b7cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100bcf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100bcfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100bdecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Hess's Law"
+  }
+]

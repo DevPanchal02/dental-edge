@@ -1,0 +1,216 @@
+[
+  {
+    "test_number": 1,
+    "question_number": 1,
+    "question": {
+      "text": "Which of the following will occur when a red blood cell is placed in a dish of pure water that has been distilled of all solutes?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Plasmolysis",
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Burst",
+        "percentage_selected": "(76%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Shrivel",
+        "percentage_selected": "(14.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Formation of an endospore",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Remain the same",
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Burst",
+    "analytics": {
+      "percent_correct": "76%",
+      "time_spent": "0 min, 25 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "This question is asking about the commonly tested concept of tonicity. Tonicity is defined as the relative concentration of two solutions that are separated by a semipermeable membrane. For the test, the two solutions being compared are often the cytoplasm within a cell and the extracellular environment. There are three terms used to categorize tonicity: hypertonic , isotonic , and hypotonic . When explaining tonicity, this solution will describe the extracellular environment's tonicity as it relates to the cell. A hypertonic solution is a solution that contains a higher concentration of solutes than the relative opposing solution. Let’s say a cell was placed in a hypertonic solution. In this case, the solution that the cell is being placed in contains a greater concentration of solutes than the cell’s cytoplasm. As a result, water will exit the cell via osmosis to equalize the relative concentration of solutes on both sides of the semipermeable cell membrane. Water will always flow from either low to high solute concentration OR high to low water concentration. Cells that are placed in hypertonic solutions will shrivel due to water leaving the cell. If the cell has a cell wall (plant cells), the cell wall will dissociate from the cell membrane through a process known as plasmolysis. Keep in mind that tonicity is relative. If the extracellular environment is hypertonic relative to the cell, it can also be said that the cell is hypotonic relative to the extracellular environment. An isotonic solution is one where the relative concentration of solutes of both solutions on either side of the semipermeable membrane is the same. In this case, there is no net movement of water across the semipermeable membrane because there is no difference in solute concentration that must be equalized. Because there is no net movement of water across the membrane, the morphology of the cell does not change. Animal cells prefer isotonic environments. A hypotonic solution is a solution that contains a lower concentration of solutes than the relative opposing solution. If a cell is placed in a hypotonic solution (such as distilled water), the extracellular solution contains a lower concentration of solutes than the cell’s cytoplasm. This will lead to water from the extracellular environment diffusing into the cell via osmosis to equalize the relative concentration of solutes on either side of the semipermeable membrane. As a result, the cell will swell due to an increase in water within the cell. If too much water enters the cell, the cell will burst (lyse) through a process known as cytolysis . Concerning the question, when the red blood cell is placed in distilled water, the distilled water is hypotonic relative to the cell. This means that the distilled water has a lower solute concentration than the cytoplasm within the cell. As a result, water will diffuse into the cell to equalize the solute concentration on both sides of the plasma membrane which will cause the cell to swell and eventually lyse. Therefore, Option B . Burst is the correct answer. Here is an illustration to help visualize this concept: CC BY 4.0",
+      "poe_text": "Option A . Plasmolysis – This option is incorrect because plasmolysis is the detachment of a cell wall due to the cell being placed in a hypertonic solution. This process can only occur in cells with a cell wall (such as fungi or plant cells). Because red blood cells don’t have a cell wall, they cannot undergo plasmolysis. Therefore, this option is incorrect. Option C . Shrivel – This option is incorrect because when a cell is placed in a hypotonic solution, water will diffuse into the cell resulting in the swelling or bursting of the cell (cytolysis), which is the opposite effect of shriveling. Remember that when a cell is placed in a hypotonic solution, the concentration of solutes inside the cell is greater than the concentration of solutes in the extracellular environment. As a result, water will diffuse into the cell via osmosis to equalize the concentration gradient. A cell would shrivel if it were placed in a hypertonic solution. Option D . Formation of an endospore – This option is incorrect . Recall that an endospore is a dormant and highly resistant structure that bacteria form under times of stress. Endospores protect the genetic material of the cell in the presence of extreme temperatures, lack of nutrients, and harmful chemicals. Endospores are primarily formed from gram-positive bacteria but can also be produced by some gram-negative bacteria. This question does not specifically state that the cell in question is a bacterium. A hypotonic solution would also not lead to the formation of an endospore; therefore, this option is incorrect. Option E . Remain the same – This option is incorrect . A red blood cell would remain the same size and morphology in an isotonic solution, not a hypotonic solution. In an isotonic solution, the concentration of solutes is equal on both sides of the semipermeable membrane, therefore, there would be no net movement of water into or out of the cell. The question specifically asks what would happen when a red blood cell is placed in a hypotonic solution, not an isotonic solution. In a hypotonic solution, water would enter the cell via osmosis and cause the cell to swell and burst (cytolysis).",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+1/Question+1+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "error": "Timeout waiting for Q2 content update"
+  },
+  {
+    "test_number": 1,
+    "error": "Timeout waiting for Q2 content update"
+  },
+  {
+    "test_number": 1,
+    "error": "TimeoutException finding/interacting with Q3 link"
+  },
+  {
+    "test_number": 1,
+    "error": "TimeoutException finding/interacting with Q4 link"
+  },
+  {
+    "test_number": 1,
+    "error": "TimeoutException finding/interacting with Q5 link"
+  },
+  {
+    "test_number": 1,
+    "error": "TimeoutException finding/interacting with Q6 link"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q7: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q8: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632ead0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q9: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632ff00>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q10: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106535370>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q11: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065367a0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q12: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632f020>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q13: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632d8c0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q14: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106534e20>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q15: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106537240>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q16: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065706b0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q17: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106536e00>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q18: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106535260>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q19: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632df20>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q20: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632f460>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q21: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106571150>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q22: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632f680>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q23: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632e140>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q24: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065706b0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q25: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106572e00>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q26: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106510270>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q27: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106573bd0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q28: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065727a0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q29: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106570050>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q30: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632e250>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q31: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632f570>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q32: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106510050>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q33: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632ee00>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q34: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632d9d0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q35: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106572140>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q36: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106573570>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q37: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x1065118c0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q38: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106573240>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q39: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x106571e10>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  },
+  {
+    "test_number": 1,
+    "error": "Unexpected error processing Q40: HTTPConnectionPool(host='localhost', port=56765): Max retries exceeded with url: /session/e0c663a6b1091e826b0ff64b78f56776/element (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x10632d6a0>: Failed to establish a new connection: [Errno 61] Connection refused'))"
+  }
+]

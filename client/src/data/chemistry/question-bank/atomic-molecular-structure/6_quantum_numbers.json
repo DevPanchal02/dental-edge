@@ -1,0 +1,578 @@
+[
+  {
+    "question_number": 1,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "Which of the following sets of quantum numbers is invalid?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1, 0, 0, -1/2",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1, 0, 1, +1/2",
+        "images": [],
+        "percentage_selected": "(73.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "2, 1, -1, +1/2",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2, 1, 1, +1/2",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2, 0, 0, -1/2",
+        "images": [],
+        "percentage_selected": "(13.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1, 0, 1, +1/2",
+    "analytics": {
+      "percent_correct": "73.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review the values that each quantum number can take on: Keep in mind that we need to find the set of quantum numbers that is invalid . Option A. 1, 0, 0, -1/2 Incorrect. This set of quantum numbers is valid since when n = 1, l can only equal 0, m l can only equal 0, and m s can be either +1/2 or -1/2. Option B. 1, 0, 1, +1/2 Correct. This set of quantum numbers is invalid. When n = 1, l can only equal 0. This means that m l can only take on 0 as a value. An m l value of 1 in this case is impossible, because the value of m l can only range from - l to + l (so in this case, 0). Option C. 2, 1, -1, +1/2 Incorrect. This set of quantum numbers is valid since when n = 2, l can equal 0 or 1, m l can equal -1, 0, or 1, and m s can be either +1/2 or -1/2. Option D. 2, 1, 1, +1/2 Incorrect. This set of quantum numbers is valid since when n = 2, l can equal 0 or 1, m l can equal -1, 0, or 1, and m s can be either +1/2 or -1/2. Option E. 2, 0, 0, -1/2 Incorrect. This set of quantum numbers is valid since when n = 2, l can equal 0 or 1. In this case, since l = 0, m l can only equal 0. m s can be either +1/2 or -1/2. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "What is the maximum number of orbitals in the 3 d -subshell of an atom?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(15.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(71.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "7",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "9",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "5",
+    "analytics": {
+      "percent_correct": "71.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we need to review how the quantum number relate to each other and what they describe. In this case, a 3 d orbital corre sponds to a principal quantu m number (n = 3) and azimuthal quantum number ( l = 2). The magnetic quantum number (m l ) describes the orientations of the orbitals in space and can take on values from - l to l , resulting in m l = -2, -1, 0, 1, or 2. The fact that there are 5 possible m l values implies that the maximum number of orbitals in th e 3 d subshell of an atom is 5 . Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "What are the possible magnetic quantum numbers (m l ) for the electrons in nitrogen (N)?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Integers from -1 to 1",
+        "images": [],
+        "percentage_selected": "(85.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Integers from -2 to 2",
+        "images": [],
+        "percentage_selected": "(9.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Integers from 0 to 1",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Integers from 0 to 2",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Integers from -1 to 0",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Integers from -1 to 1",
+    "analytics": {
+      "percent_correct": "85.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review which values the magnetic quantum number (m l ) can take, and its relation to the principal quantum number (n). In this case, nitrogen (N) is located on the second period of the periodic table. This means that the electrons have the highest principal quantum number (n) at (n = 2). However, it is also possible for the electrons to be located at a lower shell, (n = 1) since the electrons fill lower energy shells before higher ones according to the Aufbau principle. Since we know that the azimuthal quantum number ( l ) can take on integer values from 0 to (n – 1), this means that it can be 0 or 1. Finally, to determine the possible magnetic quantum numbers (m l ), we know that it can take on integer values from - l to l , so it can range from -1 to 1 . Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "Each of the following are valid sets of quantum numbers for the electrons in phosphorus (P) EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1, 0, 0, +1/2",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1, 0, 0, -1/2",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2, 1, 0, -1/2",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2, 1, -1, +1/2",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "3, 2, 2, +1/2",
+        "images": [],
+        "percentage_selected": "(79.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "3, 2, 2, +1/2",
+    "analytics": {
+      "percent_correct": "79.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review the values that each quantum number can take on: Keep in mind that we need to find the set of quantum numbers that is invalid . Option A. 1, 0, 0, +1/2 Incorrect. This set of quantum numbers is valid since when n = 1, l can only equal 0, m l can only equal 0, and m s can be either +1/2 or -1/2. Option B. 1, 0, 0, -1/2 Incorrect. This set of quantum numbers is valid since when n = 1, l can only equal 0, m l can only equal 0, and m s can be either +1/2 or -1/2. Option C. 2, 1, 0, -1/2 Incorrect. This set of quantum numbers is valid since when n = 2, l can equal 0, or 1, m l can equal -1, 0, or 1, and m s can be either +1/2 or -1/2. Option D. 2, 1, -1, +1/2 Incorrect. This set of quantum numbers is valid since when n = 2, l can equal 0 or 1, m l can equal -1, 0, or 1, and m s can be either +1/2 or -1/2. Option E. 3, 2, 2, +1/2 Correct. This set of quantum numbers is invalid since when n = 3, l can equal 0, 1, or 2. However, since phosphorus has its valence electrons in the p -subshell, it corresponds to l = 1. In our given set of quantum numbers our l = 2, which corresponds to the d -subshell, where phosphorus does not have electrons in. Therefore, this set of quantum numbers is not possible for phosphorus. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "What are the possible set of quantum numbers for an electron in the s orbital at the highest energy level of argon (Ar)?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3, 0, 1, +1/2",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3, 0, 0, -1/2",
+        "images": [],
+        "percentage_selected": "(67.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "3, 1, 1, +1/2",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3, 1, -1, -1/2",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "3, 2, 2, +1/2",
+        "images": [],
+        "percentage_selected": "(13.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3, 0, 0, -1/2",
+    "analytics": {
+      "percent_correct": "67.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review the relationships between the quantum numbers: In this case, the highest energy level of argon corresponds to its period on the periodic table, which is (n = 3). We also need to remember that the s orbital corresponds to the azimuthal quantum number ( l ) being 0. Option A. 3, 0, 1, +1/2 Incorrect. This set of quantum numbers is invalid. We know that ( l = 0) corresponds to an s orbital. However, an m l value of 1 in this case is impossible, because the value of m l can only range from - l to + l (so in this case, 0). Option B. 3, 0, 0, -1/2 Correct. The highest energy level of argon is (n = 3). An electron in the s orbital corresponds to ( l = 0), and when ( l = 0), the m l value can only be 0 since it takes on values from - l to + l . Finally, the spin quantum number (m s ) can be +1/2 or -1/2. Option C. 3, 1, 1, +1/2 Incorrect. An electron in the s orbital corresponds to ( l = 0), however, the l value in this case is 1, which corresponds to an electron in the p -subshell . Option D. 3, 1, -1, -1/2 Incorrect. An electron in the s orbital corresponds to ( l = 0), however, the l value in this case is 1, which corresponds to an electron in the p -subshell . Option E. 3, 2, 2, +1/2 Incorrect. An electron in the s orbital corresponds to ( l = 0), however, the l value in this case is 2, which corresponds to an electron in the d -subshell . Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "Which of the following is a valid azimuthal quantum number ( l ) for the electrons in fluorine (F)?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-2",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-1/2",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(91.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "1/2",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0",
+    "analytics": {
+      "percent_correct": "91.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review the azimuthal quantum number ( l) : In this case, fluorine (F) is located on the second period of the periodic table. This means that the electrons have the highest principal quantum number (n) at (n = 2). However, it is also possible for the electrons to be located at a lower shell, (n = 1) since the electrons fill lower energy shells before higher ones according to the Aufbau principle. We know from the above table that the azimuthal quantum number ( l ) can take on values from 0 to (n – 1). Since our n = 0, this means that its values can only be 0 or 1. Only Option C (0) matches these possible values. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "Which of the following correctly pairs the principal quantum number (n) with all its possible magnetic quantum numbers (m l )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "n = 1, m l = 0, 1",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "n = 1, m l = -1, 1",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "n = 1, m l = -1, 0, 1",
+        "images": [],
+        "percentage_selected": "(13.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "n = 2, m l = -1, 1",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "n = 2, m l = -1, 0, 1",
+        "images": [],
+        "percentage_selected": "(79.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "n = 2, m l = -1, 0, 1",
+    "analytics": {
+      "percent_correct": "79.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review the principal quantum number (n) and its relationship with the magnetic quantum number (m l ). In this case, when n = 1, l can only equal 0 since its values can only range from 0 to (n – 1). If l = 0, m l can only be 0 since its values can only range from - l to l . When n = 2, l = 0 or 1, and m l = -1, 0, or 1. Option E is the only choice that identifies all the possible m l values (-1, 0, and 1). Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "What are all the possible azimuthal quantum numbers ( l ) for the electrons in krypton (Kr)?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0 to 3",
+        "images": [],
+        "percentage_selected": "(67.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-3 to 0",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-1 to 1",
+        "images": [],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "-2 to 2",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "-3 to 3",
+        "images": [],
+        "percentage_selected": "(14.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0 to 3",
+    "analytics": {
+      "percent_correct": "67.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review values the azimuthal quantum number ( l ) can take: In this case, since krypton is in the 4th period of the periodic table, the highest principal quantum number (n) for krypton (Kr) is (n = 4). Since l can take on integer values from 0 to (n – 1), when n = 4, l = 0, 1, 2, or 3 . Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "Which of the following pairs of elements have outermost valence electrons that have the same possible sets of quantum numbers?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Li and Na",
+        "images": [],
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N and O",
+        "images": [],
+        "percentage_selected": "(77.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "S and Se",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cl and Br",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Mg and Al",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N and O",
+    "analytics": {
+      "percent_correct": "77.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review the values that each quantum number can take on based on the element: In this case, we will also need to consider which orbital ( s, p, d, f ) the outermost valence electrons are located in. Option A. Li and Na Incorrect. Li has a principal quantum number of 2, whereas Na has a principal quantum number of 3. When (n = 2), ( l = 0 to 1), (m l = -1 to 1), and (m s = -1/2 or +1/2). In comparison, when (n = 3), ( l = 0 to 2), (m l = -2 to 2), and (m s = -1/2 or +1/2). Option B. N and O Correct. N and O both have a principal quantum number of 2, so when (n = 2), ( l = 0 or 1), (m l = -1, to 1), and (m s = -1/2 or +1/2). In addition, their outermost valence electrons are both located in the 2 p orbital, so it is possible for N and O to have the same sets of quantum numbers. Option C. S and Se Incorrect. S has a principal quantum number of 3, whereas Se has a principal quantum number of 4.  When (n = 3), ( l = 0 to 2), (m l = -2 to 2), and (m s = -1/2 or +1/2). In comparison, when (n = 4), ( l = 0 to 3), (m l = -3 to 3), and (m s = -1/2 or +1/2). Option D. Cl and Br Incorrect. Cl has a principal quantum number of 3, whereas Br has a principal quantum number of 4. When (n = 3), ( l = 0 to 3), (m l = -2 to 2), and (m s = -1/2 or +1/2). In comparison, when (n = 4), ( l = 0 to 3), (m l = -3 to 3), and (m s = -1/2 or +1/2). Option E. Mg and Al Incorrect. Mg and Al both have a principal quantum number of 3, so when (n = 3), ( l = 0 to 2), (m l = -2 to 2), and (m s = -1/2 or +1/2). However, the valence electrons in Mg are in the 3 s orbital , resulting in ( l = 0), whereas the valence electrons in Al are located in the 3 p orbital , resulting in ( l = 1). This means that Al will have a larger possible set of quantum numbers compared to Mg. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers",
+    "question": {
+      "text": "What is the set of quantum numbers for an outermost valence electron in calcium (Ca) in ground state?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3, 4, 2, +1/2",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4, 0, 1, +1/2",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4, 2, 2, 1",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4, 2, 1, +1/2",
+        "images": [],
+        "percentage_selected": "(10.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4, 0, 0, +1/2",
+        "images": [],
+        "percentage_selected": "(82.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "4, 0, 0, +1/2",
+    "analytics": {
+      "percent_correct": "82.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving quantum numbers , we will need to review the values the quantum numbers can take on: We also need to know that the outermost electron is located at the highest energy level, and the orbital it is in depends on how many electrons the atom has. STEP 1: We know that calcium has a principal quantum number (n) of 4, so the highest energy level an electron can be in calcium is at n = 4. STEP 2: We can also see based on the periodic table that calcium only has 2 valence electrons, so they would occupy the s orbital. We know that the s orbital corresponds to an azimuthal quantum number ( l ) of 0. STEP 3: When l = 0, the m l = 0. The m s can be -either 1/2 or +1/2. Only Option E (4, 0, 0, +1/2) matches these quantum numbers. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Quantum+Theory%3A+Quantum+Numbers/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x000000010502ee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001050270ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104b6e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104bb56a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104bf67b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104ba9a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104ff3c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104ff6f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104fd3a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104ff77e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104fc4b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001050179c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000105017b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000105026cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Quantum Numbers"
+  }
+]

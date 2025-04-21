@@ -1,0 +1,575 @@
+[
+  {
+    "question_number": 1,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "Which of the following best describes effective nuclear charge?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The amount of positive charge experienced by an electron",
+        "images": [],
+        "percentage_selected": "(75.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "The amount of negative charge experienced by a neutron",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The amount of positive charge experienced by a neutron",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The amount of negative charge experienced by a proton",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The amount of positive charge experienced by a proton",
+        "images": [],
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The amount of positive charge experienced by an electron",
+    "analytics": {
+      "percent_correct": "75.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge , let’s begin by defining effective nuclear charge as the positive charge experienced by an electron in the outermost orbital. The greater the effective nuclear charge, the more strongly the electrons are attracted to the nucleus. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "Which of the following statements is responsible for the observation that sulfur has a greater effective nuclear charge than sodium?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Sulfur has more neutrons than sodium",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Sulfur is a non-metal while sodium is a metal",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Sulfur has a more stable electron configuration",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Sulfur has more protons than sodium",
+        "images": [],
+        "percentage_selected": "(75.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Sulfur has more valence electrons than sodium",
+        "images": [],
+        "percentage_selected": "(16.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Sulfur has more protons than sodium",
+    "analytics": {
+      "percent_correct": "75.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge (the positive charge experienced by an electron in the outermost orbital), let’s begin by discussing the general periodic trends: In this case, both sodium and sulfur are period 3 elements. Moving from left to right in period 3, we first encounter sodium and then sulfur. According to the effective nuclear charge trends, sulfur has a greater effective nuclear charge than sodium because sulfur has more protons than sodium . Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "How many shielding electrons does silicon have?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(22.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(63.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "14",
+        "images": [],
+        "percentage_selected": "(8.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "18",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "10",
+    "analytics": {
+      "percent_correct": "63.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge , let’s begin by defining two terms: On the periodic table, silicon has an atomic number of 14, which means that a neutral atom of silicon has 14 electrons and 14 protons. By drawing the Bohr model of a silicon atom, we can determine that silicon has 4 valence electrons and 10 shielding electrons. Therefore, the answer is B . Note : if you are having trouble drawing with electron configuration and Bohr models, don’t worry! We will review this topic in Chapter 3.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "What is the effective nuclear charge of a chlorine atom?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "+1",
+        "images": [],
+        "percentage_selected": "(12.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "+2",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "+5",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "+7",
+        "images": [],
+        "percentage_selected": "(77.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "+9",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "+7",
+    "analytics": {
+      "percent_correct": "77.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "T o solve this problem involving effective nuclear charge , let’s begin by discussing the formula for effective nuclear charge: Z eff = Z – S In this case, looking at our periodic table, we can determine that chlorine has 17 protons (since the atomic number of Chlorine is 17) and 10 shielding electrons. Plugging those values into the equation, we can calculate the effective nuclear charge: Z eff = 17 – 10 Z eff = +7 Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "A chemist observes an element with an effective nuclear charge of +3. Which of the following elements was observed?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Na",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Mg",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Al",
+        "images": [],
+        "percentage_selected": "(95.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Si",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "P",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Al",
+    "analytics": {
+      "percent_correct": "95.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge , let’s begin by discussing the formula for effective nuclear charge: Z eff = Z – S Option A. Na Incorrect . Na has 11 protons and 10 shielding electrons. Z eff = Z – S = 11 – 10 = +1 Option B. Mg Incorrect . Mg has 12 protons and 10 shielding electrons. Z eff = Z – S = 12 – 10 = +2 Option C. Al Correct . Al has 13 protons and 10 shielding electrons. Z eff = Z – S = 13 – 10 = +3. Option D. Si Incorrect . Si has 14 protons and 10 shielding electrons. Z eff = Z – S = 14 – 10 = +4. Option E. P Incorrect . P has 15 protons and 10 shielding electrons. Z eff = Z – S = 15 – 10 = +5. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "Which of the following is the effective nuclear charge of a sodium cation (Na + )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(15.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "+1",
+        "images": [],
+        "percentage_selected": "(30.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "+2",
+        "images": [],
+        "percentage_selected": "(13.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "+8",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "+9",
+        "images": [],
+        "percentage_selected": "(36.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "+9",
+    "analytics": {
+      "percent_correct": "36.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge , let’s begin by discussing the formula for effective nuclear charge: Z eff = Z – S In this case, a sodium cation is formed when a sodium atom loses its single valence electron. Although the number of protons remains constant between the sodium atom and sodium cation, the number of shielding electrons differs. As seen in the diagram, a sodium atom has 2 inner orbitals occupied by 10 shielding electrons, while the sodium cation has 1 inner orbital occupied by 2 shielding electrons. Plugging those values into the equation, we can calculate the effective nuclear charge of the sodium cation as +9 . Z eff = 11 – 2 Z eff = +9 Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "Which of the following is the effective nuclear charge of a fluorine anion (F - )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-1",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "+1",
+        "images": [],
+        "percentage_selected": "(12.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "+5",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "+7",
+        "images": [],
+        "percentage_selected": "(68.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "+7",
+    "analytics": {
+      "percent_correct": "68.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge , let’s begin by discussing the formula for effective nuclear charge: Z eff = Z – S In this case, a fluorine atom that has gained an additional electron forms a fluorine anion. However, recall that the number of valence electrons has no effect on the effective nuclear charge formula. As seen in the diagram, both the fluorine atom and fluorine anion have 9 protons and 2 shielding electrons. Plugging those values into the equation, we can calculate the effective nuclear charge of the fluorine anion is +7 . Z eff = 9 – 2 Z eff = +7 Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+7+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "Which of the following is responsible for the observation that K + has a greater effective nuclear charge than K?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "K + has fewer neutrons",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "K + has fewer shielding electrons",
+        "images": [],
+        "percentage_selected": "(67.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "K + has fewer electrons",
+        "images": [],
+        "percentage_selected": "(16.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "K + has fewer valence electrons",
+        "images": [],
+        "percentage_selected": "(11.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "K + has fewer protons",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "K + has fewer shielding electrons",
+    "analytics": {
+      "percent_correct": "67.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge , let’s begin by discussing the formula for effective nuclear charge: Z eff = Z – S In this case, K + is a K atom that has lost its valence electron. The number of protons remains constant between the potassium atom and the potassium cation; however, the number of shielding electrons differs. K + has 2 core orbitals occupied by 10 shielding electrons. Since potassium has 19 protons, Z eff = Z – S = 19 – 10 = +9. K has 3 core orbitals occupied by 18 shielding electrons. Since potassium has 19 protons, Z eff = Z – S = 19 – 18 = +1. As we can see, K + has a greater effective nuclear charge than K, because K + has fewer shielding electrons . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "Which of the following rankings correctly arranges the elements from the greatest to least effective nuclear charge?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Al > Cl > Mg > Na > P",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Cl > P > Al > Mg > Na",
+        "images": [],
+        "percentage_selected": "(93.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Al > Cl > Na > Mg > P",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cl > Al > P > Mg > Na",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Al > Cl > P > Na > Mg",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cl > P > Al > Mg > Na",
+    "analytics": {
+      "percent_correct": "93.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge (the positive charge experienced by an electron in the outermost orbital), let’s begin by discussing the general periodic trends: In this case, notice that all the elements are found in period 3 . Recall that effective nuclear charge increases moving right across a period. Accordingly, to arrange the elements by decreasing effective nuclear charge , we order the elements by moving left across period 3: Cl > P > Al > Mg > Na Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge",
+    "question": {
+      "text": "All of the following elements are assigned the correct effective nuclear charge EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Z eff of Al is +3",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Z eff of P is +5",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Z eff of Li is +1",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Z eff of Cl is +9",
+        "images": [],
+        "percentage_selected": "(92.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Z eff of Mg is +2",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Z eff of Cl is +9",
+    "analytics": {
+      "percent_correct": "92.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving effective nuclear charge , let’s begin by discussing the formula for effective nuclear charge: Z eff = Z – S Keep in mind that we need to find the element with the incorrectly matched effective nuclear charge. Option A. Z eff of Al is +3 Incorrect . Aluminum has 13 protons and 10 shielding electrons. Z eff = Z – S = 13 – 10 = +3 Option B . Z eff of P is +5 Incorrect . Phosphorus has 15 protons and 10 shielding electrons. Z eff = Z – S = 15 – 10 = +5 Option C . Z eff of Li is +1 Incorrect . Lithium has 3 protons and 2 shielding electrons. Z eff = Z – S = 3 – 2 = +1 Option D . Z eff of Cl is +9 Correct . Chlorine has 17 protons and 10 shielding electrons. Z eff = Z – S = 17 – 10 = +7. Option E . Z eff of Mg is +2 Incorrect . Magnesium has 12 protons and 10 shielding electrons. Z eff = Z – S = 12 – 10 = +2 Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Effective+Nuclear+Charge/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001011a2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x000000010119b0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000100ce28d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000100d296a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000100d6a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100d1da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000101167c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010116af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000101147a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010116b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000101138b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010118b9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010118bb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x000000010119acf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Effective Nuclear Charge"
+  }
+]

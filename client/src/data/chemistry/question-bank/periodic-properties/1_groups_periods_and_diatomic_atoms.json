@@ -1,0 +1,569 @@
+[
+  {
+    "question_number": 1,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "Which of the following sets of elements belong to the same group?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "O, S, Se, Te",
+        "images": [],
+        "percentage_selected": "(88.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "B, C, N, O",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Li, Be, Na, Mg",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "B, Si, As, Sb",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "O, F, Cl, Br",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "O, S, Se, Te",
+    "analytics": {
+      "percent_correct": "88.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the periodic table , let’s first define two keywords: Option A. O, S, Se, Te Correct. O, S, Se, and Te belong to Group 16, so we can say that they belong to the same group . Option B. B, C, N, O Incorrect. B, C, N, and O belong to the same period, not the same group. Option C. Li, Be, Na, Mg Incorrect. Li, Be, Na, and Mg do not belong to either the same group or period. Option D. B, Si, As, Sb Incorrect. B, Si, As, and Sb are all metalloids, but because they are not in the same column, they do not belong to the same group. Option E. O, F, Cl, Br Incorrect. O, F, Cl, and Br are in the same region of the periodic table, but because they are not in the same column, they do not belong to the same group. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "Elements in the same period on the periodic table have the same number of",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "electrons.",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "protons.",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "neutrons.",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "electron shells.",
+        "images": [],
+        "percentage_selected": "(86.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "atoms.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "electron shells.",
+    "analytics": {
+      "percent_correct": "86.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving periodic table , let’s first define two keywords: We can say that elements in the same period have the same number of electron shells . Option A. electrons. Incorrect. As we move from left to right across the period, the number of electrons increases, so elements in the same period do not have the same number of electrons. Option B. protons. Incorrect. As we move from left to right across the period, the number of protons increases, so elements in the same period do not have the same number of protons. Option C. neutrons. Incorrect. As we move from left to right across the period, the number of neutrons does not remain constant. Instead, the number of neutrons is determined by an element’s isotopes . Therefore, elements in the same period do not have the same number of neutrons. Option D. electron shells. Correct. Elements in the same period have the same number of electron shells (and energy levels). Option E. atoms. Incorrect. An atom is a complete unit consisting of protons, neutrons, and electrons. Meanwhile, an element refers to a substance composed of atoms with the same number of protons. Therefore, elements in the same period do not have the same number of atoms. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "The elements Na, Mg, and Al are in",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the same group but different periods.",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "the same period but different groups.",
+        "images": [],
+        "percentage_selected": "(95.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "the same group and the same period.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "different groups and different periods.",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "the same period but different groups.",
+    "analytics": {
+      "percent_correct": "95.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving groups and periods , let’s first define two keywords: In this case, Na, Mg, and Al are found in the same row (Period 3) but different columns of the periodic table, so we can say that they are in the same period but different groups . Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "Nitrogen has an atomic number of 7. This implies that Nitrogen has 7",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "protons",
+        "images": [],
+        "percentage_selected": "(86.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "neutrons",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "electrons",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "protons and neutrons",
+        "images": [],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "electrons and neutrons",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "protons",
+    "analytics": {
+      "percent_correct": "86.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic numbers , we begin by defining the atomic number as the number of protons in an atom. In this case, nitrogen has an atomic number of 7. This implies that nitrogen has 7 protons . Therefore, the answer is A . Note: The mass number is the total number of protons and neutrons in a nucleus.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "Which of the following elements has an atomic number of 30?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "P",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Zn",
+        "images": [],
+        "percentage_selected": "(97.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Br",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Rb",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Xe",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Zn",
+    "analytics": {
+      "percent_correct": "97.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic numbers , we begin by defining the atomic number as the number of protons in an atom. Since Zn has 30 protons, it has an atomic number of 30. Option A. P Incorrect. Although phosphorus has a mass number close to 30, the number of protons in phosphorus is only 15. Option B. Zn Correct. Zinc has 30 protons, and therefore has an atomic number of 30 . Option C. Br Incorrect. Bromine has an atomic number of 35. Option D. Rb Incorrect. Rubidium has an atomic number of 37. Option E. Xe Incorrect. Xenon has an atomic number of 54. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "Which of the following elements is classified as an alkaline earth metal?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Be",
+        "images": [],
+        "percentage_selected": "(91.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Al",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Na",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Sc",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Fe",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Be",
+    "analytics": {
+      "percent_correct": "91.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving group names , we begin by reviewing the groups: In this case, the only group 2 alkaline earth metal is Be . Option A. Be Correct. Beryllium is in Group 2, which makes it an alkaline earth metal. Option B. Al Incorrect. Aluminum is classified as a post-transition metal, not a metalloid. Option C. Na Incorrect. Sodium is in Group 1 and is therefore an alkali metal. Option D. Sc Incorrect. Scandium is in Group 3 and is therefore a transition metal. Option E. Fe Incorrect. Iron is in Group 8 and is therefore a transition metal. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "The element with an atomic number of 32 is",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "an alkali metal.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "a metalloid.",
+        "images": [],
+        "percentage_selected": "(89%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "a halogen.",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "a transition metal.",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "a lanthanide.",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "a metalloid.",
+    "analytics": {
+      "percent_correct": "89%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving group names , we will need to review the names of different groups on the periodic table. In this case, the element with an atomic number of 32 is Germanium (Ge), which is one of the Group 13-16 elements that is a metalloid . Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "Each of the following elements is an alkali metal EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H",
+        "images": [],
+        "percentage_selected": "(96.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Li",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Na",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "K",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Rb",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H",
+    "analytics": {
+      "percent_correct": "96.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving group names , we begin by defining alkali metals as all Group 1 elements (Li, Na, K, Rb, Cs, Fr) EXCEPT for hydrogen. This question requires us to remember this special exception. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "Each of the following is an example of a diatomic element EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "He",
+        "images": [],
+        "percentage_selected": "(93.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "O",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cl",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "I",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "He",
+    "analytics": {
+      "percent_correct": "93.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving diatomic atoms , we first review our diatomic atoms mnemonic: “ H ave (hydrogen) N o (nitrogen) F ear (fluorine) O f (oxygen) I ce (iodine) C old (chlorine) B eer (bromine)” Diatomic atoms are atoms that exist in pairs in the environment due to their unstable nature. Since helium (He) is the only answer choice not included in the mnemonic, it is NOT a diatomic atom. Instead, helium is a noble gas that belongs in Group 18 of the periodic table, which means that it has a full valence electron shell and is therefore stable and unreactive. Because of its stable form, it does not readily form bonds with other atoms to form diatomic molecules. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+Periodic+Table%3A+Groups%2C+Periods%2C+and+Diatomic+Atoms/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms",
+    "question": {
+      "text": "Why do some atoms form diatomic molecules?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "To increase atomic size",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "To increase reactivity",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "To increase stability",
+        "images": [],
+        "percentage_selected": "(95.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "To decrease boiling point",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "To decrease density",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "To increase stability",
+    "analytics": {
+      "percent_correct": "95.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving diatomic atoms , we begin by defining diatomic atoms as atoms that exist in pairs in the environment due to their unstable nature. They form covalent bonds to allow both atoms to achieve greater stability and a more favorable electron configuration. There are 7 diatomic atoms, and we use the following mnemonic to remember them: “ H ave (hydrogen) N o (nitrogen) F ear (fluorine) O f (oxygen) I ce (iodine) C old (chlorine) B eer (bromine)” Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001011a2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x000000010119b0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000100ce28d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000100d296a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000100d6a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100d1da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000101167c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010116af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000101147a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010116b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000101138b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010118b9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010118bb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x000000010119acf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Groups, Periods, and Diatomic Atoms"
+  }
+]

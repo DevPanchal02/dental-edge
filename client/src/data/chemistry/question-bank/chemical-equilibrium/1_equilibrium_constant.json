@@ -1,0 +1,666 @@
+[
+  {
+    "question_number": 1,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "Each of the following statements is true of dynamic equilibriums EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The rate of the forward and reverse reactions are equal",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The reaction continues to occur",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "There are no net changes in the concentrations of reactants or products",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The concentrations of the reactants and products are equal",
+        "images": [],
+        "percentage_selected": "(85.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Gases are included in the equilibrium constant expression",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The concentrations of the reactants and products are equal",
+    "analytics": {
+      "percent_correct": "85.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving dynamic equilibrium , we will need to go over the definition of dynamic equilibrium , which is defined as the state in which the rate of the forward reaction equals the rate of the reverse reaction. Although the reaction does not stop , because the two rates are equal, there is no net change in the concentrations of the reactants and products when a system is at dynamic equilibrium. In this case, it is important to recognize that it is not the concentrations of the reactants and products that are equal , but the rate of the forward and reverse reaction that is equal in dynamic equilibrium. The concentrations of reactants or products can be equal in certain cases (K eq = 1), but they are not always equal to each other (K eq > 1 or K eq < 1) in dynamic equilibrium. Keep in mind we need to find the statement that is not true of dynamic equilibrium. Option A. The rate of the forward and reverse reaction is equal Incorrect. A system is said to be in dynamic equilibrium when the rate of the forward and reverse reaction is equal. Option B. The reaction continues to occur Incorrect. When a system reaches dynamic equilibrium, the reaction does not stop but continuously occurs with the rate of reactants formed equal to the rate of products formed. Option C. There are no net changes in the concentrations of reactants or products Incorrect. When a system reaches dynamic equilibrium, the forward and reverse reaction rates are equal. This means that the rate at which the reactants are formed equals the rate at which the products are formed, resulting in no net change in the concentrations of the reactants and products. Option D. The concentrations of the reactants and products are equal Correct. The concentrations of reactants or products are not always equal in dynamic equilibrium. Concentrations of reactants or products can be equal in certain cases (K eq = 1), but they are not always equal to each other (K eq > 1 or K eq < 1). Option E. Gases are included in the equilibrium constant expression Incorrect. Gases ( g ) and aqueous solutions ( aq ) are included, but pure liquids ( l ) and pure solids ( s ) are excluded in the equilibrium constant expression. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "What is the correct K eq for the following reaction? NaOH (s) + HCl ( aq ) ⇌ NaCl ( aq ) + H 2 O ( l )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(88.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "88.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). In this case, when writing the equilibrium constant, we can exclude NaOH ( s ) and H 2 O ( l ) since they are pure solids and liquids which are not included in the equilibrium constant expression. Therefore, the equilibrium constant expression only including HCl ( aq ) and NaCl ( aq ) would be: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Option+Choice+E.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "What is the correct equilibrium constant for the reaction below? X 2( g ) + 3 Y ( l ) ⇌ 2 Z ( aq )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+3+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+3+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+3+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+3+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+3+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(87.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "87.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). STEP 1: First, let’s write out the “bare bones” of the K eq expression. We would need to exclude Y ( l ) since it is a pure liquid which is not included in the equilibrium constant expression. The equilibrium constant expression only includes aqueous solutions and gases, which in this case are X 2( g ) and Z ( aq ) . STEP 2: Next, let’s go ahead and take the coefficients of each substance concentration and convert them into respective exponents. So, with 2 Z ( aq ) , we can convert the coefficient of 2 into an exponent of 2: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+3+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+3+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "What is the equilibrium constant expression K eq for the gaseous equilibrium? O 2( g ) + 4 HCl ( g ) ⇌ 2 H 2 O ( g ) + 2 Cl 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+4+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(98.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+4+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+4+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+4+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+4+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "98.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). STEP 1 : First, let’s write out the “bare bones” of the K eq expression. Note that we included all substances as all substances are in their gaseous state: STEP 2 : Next, let’s go ahead and take the coefficients of each substance concentration and convert them into respective exponents: O 2( g ) + 4 HCl ( g ) ⇌ 2 H 2 O ( g ) + 2 Cl 2( g ) Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+4+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+4+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "What is the value of the equilibrium constant for the decomposition of ammonia if a reaction vessel contains [NH 3 ] = 0.1 M, [N 2 ] = 0.2 M, and [H 2 ] = 0.3 M?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+5+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+5+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+5+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(80.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+5+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+5+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "80.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). STEP 1: First, let’s write the equilibrium reaction of the decomposition of ammonia: NH 3( g ) ⇌ N 2( g ) + H 2( g ) STEP 2: Next, let’s balance the reaction to account for converting the coefficients to exponents in the later step: NH 3( g ) ⇌ N 2( g ) + H 2( g ) 2 NH 3( g ) ⇌ N 2( g ) + 3 H 2( g ) STEP 3: Then, let’s write out the “bare bones” of the K eq expression. Note that we included all substances as all substances are in their gaseous state. STEP 4: Next, let’s go ahead and take the coefficients of each substance concentration and convert them into respective exponents: STEP 5: Finally, let’s plug in the concentration of each substance into the equation: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+5+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+5+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "What is true about the equilibrium constant K eq for the reaction below that contains [N 2 ] = 1 M, [O 2 ] = 1 M, [NO] = 3 M found at equilibrium? N 2( g ) + O 2( g ) ⇌ 2 NO ( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "K eq < 1, formation of reactants is favored",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "K eq < 1, formation of products is favored",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "K eq > 1, formation of reactants is favored",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "K eq > 1, formation of products is favored",
+        "images": [],
+        "percentage_selected": "(81.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "K eq = 1, both reactants and products are equally favored",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "K eq > 1, formation of products is favored",
+    "analytics": {
+      "percent_correct": "81.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). Let’s also review the three important rules for equilibrium constant (K eq ): STEP 1: First, let’s write out the “bare bones” of the K eq expression. Note that we included all substances as all substances are in their gaseous state. STEP 2: Next, let’s go ahead and take the coefficients of each substance concentration and convert them into respective exponents: N 2( g ) + O 2( g ) ⇌ 2 NO ( g ) STEP 3: Then, let’s plug in concentration of each substance into the equation and calculate the K eq value: STEP 4: Here, we can see that the K eq value of 9 is greater than 1, which means that there is a greater concentration of products than reactants at equilibrium. Thus, with K eq > 1, formation of products is favored at equilibrium . Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+6+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "When K eq < 1,",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the rate of the forward and reverse reaction is not equal.",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "the formation of reactants is favored.",
+        "images": [],
+        "percentage_selected": "(90.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "the concentration of products is greater than reactants.",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "the concentration of reactants and products are equal.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "the reaction stops since equilibrium has been reached.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "the formation of reactants is favored.",
+    "analytics": {
+      "percent_correct": "90.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). Let’s also review the three important rules for equilibrium constant (K eq ): Option A. the rate of the forward and reverse reaction is not equal. Incorrect. It is important to recognize that at equilibrium, the rate of the forward and reverse reaction is always equal. K eq < 1 means that the rate of the forward and reverse reaction is equal, but there is a greater concentration of reactants than products at equilibrium. Option B. the formation of reactants is favored. Correct. When K eq < 1, there is greater concentration of reactants than products at equilibrium, meaning the formation of reactants is favored. You can picture this from the equilibrium constant formula – when the denominator (reactants) is greater than the numerator (products), the K eq is less than 1. Option C. the concentration of products is greater than reactants. Incorrect. When K eq < 1, the concentration of reactants is greater than products at equilibrium. When the concentration of products (numerator) is greater than reactants (denominator) at equilibrium, the K eq is greater than 1. Option D. the concentration of reactants and products are equal. Incorrect. When K eq < 1, the concentration of reactants is greater than products at equilibrium. When the concentration of products (numerator) and reactants (denominator) are equal at equilibrium, the K eq equals to 1. Option E. the reaction stops since equilibrium has been reached. Incorrect. When a system reaches equilibrium, the reaction does not stop but continuously occurs with the rate of reactants formed equal to the rate of products formed. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "When ammonia and oxygen gases are mixed together, they produce nitric oxide and water gases. Which is the correct equilibrium expression for this reaction?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+8+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(89.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+8+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+8+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+8+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+8+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "89.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). STEP 1: First, let’s write the equilibrium reaction of combining ammonia and oxygen gases: NH 3( g ) + O 2( g ) ⇌ NO ( g ) + H 2 O ( g ) STEP 2: Next, let’s balance the reaction to account for converting the coefficients to exponents in the later step: NH 3( g ) + O 2( g ) ⇌ NO ( g ) + H 2 O ( g ) 4 NH 3( g ) + 5 O 2( g ) ⇌ 4 NO ( g ) + 6 H 2 O ( g ) STEP 3: Then, let’s write out the “bare bones” of the K eq expression. Note that we included all substances as all substances are in their gaseous state. STEP 4: Next, let’s go ahead and take the coefficients of each substance concentration and convert them into respective exponents: 4 NH 3( g ) + 5 O 2( g ) ⇌ 4 NO ( g ) + 6 H 2 O ( g ) Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+8+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "Consider the following equilibrium reaction: 2 NO ( g ) + O 2( g ) ⇌ 2 NO 2( g ) K eq = 3 at 25°C Which of the following is the correct value of K eq for the following reaction at 25°C? 4 NO 2( g ) ⇌ 4 NO ( g ) + 2 O 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-6",
+        "images": [],
+        "percentage_selected": "(17.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1/9",
+        "images": [],
+        "percentage_selected": "(44.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "1/6",
+        "images": [],
+        "percentage_selected": "(16.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1/3",
+        "images": [],
+        "percentage_selected": "(16.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "9",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1/9",
+    "analytics": {
+      "percent_correct": "44.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). STEP 1: First, let’s write out the K eq expression for the given reaction. Note that we included all substances as all substances are in their gaseous state. 2 NO ( g ) + O 2( g ) ⇌ 2 NO 2( g ) STEP 2: Next, let’s go ahead and reverse the reaction (2 NO ( g ) + O 2( g ) ⇌ 2 NO 2( g ) ) because NO 2( g ) is given as a reactant in the reaction of interest (4 NO 2( g ) ⇌ 4 NO ( g ) + 2 O 2( g ) ). This also means that we need to find the reciprocal of the current K eq of 3: 2 NO 2( g ) ⇌ 2 NO ( g ) + O 2( g ) STEP 3: Next, let’s go ahead and multiply our reaction of interest (2 NO 2( g ) ⇌ 2 NO ( g ) + O 2( g ) ) by 2 to match our reaction of interest (4 NO 2( g ) ⇌ 4 NO ( g ) + 2 O 2( g ) ). This also means that we need to take our current K eq of 1/3 to the power of 2: 4 NO 2( g ) ⇌ 4 NO ( g ) + 2 O 2( g ) Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+9+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+9+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant",
+    "question": {
+      "text": "Consider the equilibrium reaction: 2 SO 2( g ) + O 2( g ) ⇌ 2 SO 3( g ) K eq = 2 Which of the following is the correct value of Keq for the reaction? SO 3( g ) ⇌ SO 2( g ) + 1/2 O 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+10+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+10+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+10+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(78.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+10+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+10+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "78.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the equilibrium constant , let’s define the equilibrium constant (K eq ) as a ratio that expresses the relationship between products and reactants of a reaction at equilibrium: It is important to recognize that the equilibrium constant expression only includes aqueous solutions ( aq ) and gases ( g ) but excludes pure liquids ( l ) and pure solids ( s ). STEP 1 : First, let’s write out the K eq expression for the given reaction. Note that we included all substances as all substances are in their gaseous state. 2 SO 2( g ) + O 2( g ) ⇌ 2 SO 3( g ) STEP 2 : Next, let’s go ahead and reverse the reaction (2 SO 2( g ) + O 2( g ) ⇌ 2 SO 3( g ) ) because SO 3( g ) is given as a reactant in the reaction of interest (SO 3( g ) ⇌ SO 2( g ) + 1/2 O 2( g ) ). This would mean we need to find the reciprocal of the K eq value of 2: 2 SO 3( g ) ⇌ 2 SO 2( g ) + O 2( g ) STEP 3 : Finally, let’s go ahead and multiply the reaction (2 SO 3( g ) ⇌ 2 SO 2( g ) + O 2( g ) ) by 1/2 to match our reaction of interest (SO 3( g ) ⇌ SO 2( g ) + 1/2 O 2( g ) ). This also means that we need to bring the K eq of our reaction to the power of 1/2: SO 3( g ) ⇌ SO 2( g ) + 1/2 O 2( g ) Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+2+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Equilibrium+and+Equilibrium+Constants%3A+Equilibrium+Constant/Question+10+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000104caae10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104ca30ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001047ea8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001048316a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001048727b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104825a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104c6fc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104c72f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104c4fa20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104c737e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104c40b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104c939c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104c93b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104ca2cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Equilibrium Constant"
+  }
+]

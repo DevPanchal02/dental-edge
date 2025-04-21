@@ -1,0 +1,2117 @@
+[
+  {
+    "test_number": 2,
+    "question_number": 1,
+    "question": {
+      "text": "What is pinocytosis?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Post-translational modification of proteins",
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Removal of introns after transcription",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Clathrin-facilitated intake of solids",
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Shriveling of cells in hypertonic solutions",
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cellular intake of dissolved solutes",
+        "percentage_selected": "(83.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Cellular intake of dissolved solutes",
+    "analytics": {
+      "percent_correct": "83.7%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Endocytosis is a process by which cells absorb extracellular material by engulfing it within the cell membrane. Endocytosis encompasses three different types of active transport: phagocytosis, pinocytosis, and receptor-mediated endocytosis. Phagocytosis is the process by which an undissolved material in solid form enters the cell. The cell engulfs the material by wrapping its plasma membrane outward around the substance, creating a vesicle. Phagocytosis is used by certain immune cells (phagocytes) to bring in pathogens. Once the phagocytes take up pathogens via phagocytosis, they use the digestive enzymes from lysosomes to destroy the ingested material. Pinocytosis is the process by which the plasma membrane invaginates around a dissolved material in liquid form. During pinocytosis, the membrane pinches inwards to non-selectively incorporate extracellular fluid and substances dissolved in the liquid. Receptor-mediated endocytosis is a form of endocytosis that is triggered by extracellular molecules binding to receptors on the cell membrane. Receptor-mediated endocytosis is often facilitated by clathrin. Once extracellular molecules bind to membrane receptors, they signal clathrin proteins to attach to the membrane and pull inward, eventually allowing the cell to form a clathrin-coated vesicle. These three types of endocytosis are illustrated in the image below. Since pinocytosis can be described as the cellular intake of dissolved solutes, Option E. Cellular intake of dissolved solutes is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Post-translational modification of proteins – This option is incorrect because pinocytosis is the cellular intake of dissolved solutes, and the process does not involve any kind of protein modification. The post-translational modification of proteins is a process of changing proteins after they have been synthesized by ribosomes. Post-translational modifications include the addition of sugars, lipids, and phosphate groups to amino acids. The rough endoplasmic reticulum (rough ER) and the Golgi apparatus are organelles responsible for the post-translational modifications of proteins. Option B. Removal of introns after transcription – This option is incorrect because pinocytosis is the cellular intake of dissolved solutes, and the process does not involve the removal of introns. The removal of introns after transcription is called RNA splicing. During the process of RNA splicing, spliceosomes delete introns and connect exons. Introns are non-coding sections of a RNA transcript, whereas exons are sections of RNA that code for proteins. Since prokaryotes lack introns, RNA splicing only occurs in eukaryotes. Option C. Clathrin-facilitated intake of solids – This option is incorrect because pinocytosis does not engulf extracellular material that are in solid form; it instead engulfs extracellular material that are in liquid form (dissolved solutes). Pinocytosis is also not facilitated by clathrin. Clathrin are proteins that coat intracellular vesicles used to transport cargo within the cell. Clathrin-dependent endocytosis relies on clathrin for selective endocytosis of extracellular material. Once extracellular molecules bind to membrane receptors, they signal clathrin molecules to attach to the membrane and pull inward. This folding of the membrane allows the formation of clathrin-coated intracellular vesicles. Hence, clathrin-dependent endocytosis is a type of receptor-mediated endocytosis. Option D. Shriveling of cells in hypertonic solutions – This option is incorrect because pinocytosis is the cellular intake of dissolved solutes, and it does not involve the shriveling of cells (or any other change in cell turgidity). The shriveling of cells occurs in hypertonic solutions and is a result of osmosis. Osmosis is the movement of water across a semipermeable membrane from a region of low solute concentration to a region of high solute concentration. When a cell is placed in a hypertonic solution (higher solute concentration outside the cell), water leaves the cell, causing the cell to shrivel. On the other hand, when a cell is placed in a hypotonic solution (lower solute concentration outside the cell), water enters the cell, causing the cell to swell.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+1+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 2,
+    "question": {
+      "text": "Which germ layer forms most of the peripheral nervous system?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ectoderm",
+        "percentage_selected": "(56.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Endoderm",
+        "percentage_selected": "(18.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Mesoderm",
+        "percentage_selected": "(20.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Zygote",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Epidermis",
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ectoderm",
+    "analytics": {
+      "percent_correct": "56.6%",
+      "time_spent": "0 min, 49 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "Gastrulation is a critical phase in early embryonic development during which the single-layered blastula is reorganized into a multilayered structure known as the gastrula. This process begins with the formation of the primitive streak , a narrow groove on the surface of the early embryo. The cells of the epiblast, which is the upper layer of the blastula, move toward the primitive streak, migrate inward and downward, and differentiate into the three primary germ layers. These three germ layers are listed from superficial to deep as follows: ectoderm, mesoderm, and endoderm. Once these three germ layers are formed, the embryo is officially considered a gastrula . Each of the three germ layers will differentiate and develop into various structures and systems of the body. The ectoderm will differentiate to form the nervous system (brain and spinal cord), integument (epidermis, hair, epithelium of the nose, mouth, and anal canal), sensory structures of the eyes, ears, and nose, as well as the adrenal medulla. Neural crest cells of the ectoderm will also form the teeth, jaws, bones, muscles of the skull, pigment cells in the skin, and nerve tissue. The mesoderm will give rise to the musculoskeletal system, the circulatory system, the excretory system, the gonads, portions of the digestive and respiratory system, the notochord, the kidney, the dermis of the skin, and the adrenal cortex. The endoderm will give rise to the epithelial lining of the digestive and respiratory tract, portions of the liver, the pancreas, the gallbladder, the thyroid and parathyroid, the thymus, and the lining of the urinary bladder. Since both the central and peripheral nervous systems are formed by the ectoderm, Option A is the correct answer. CC BY 4.0",
+      "poe_text": "Option B. Endoderm – This option is incorrect because the endoderm gives rise to epithelial linings of the gastrointestinal and respiratory tracts, the urinary bladder and urethra, the liver, the pancreas, the thyroid and parathyroid, and the thymus. The ectoderm gives rise to the central and peripheral nervous system, not the endoderm. Option C. Mesoderm – This option is incorrect because the mesoderm gives rise to the musculoskeletal system, the circulatory system, the excretory system, the gonads, connective tissue, portions of the digestive and respiratory system, the notochord, the kidney, the dermis of the skin, and the adrenal cortex. The ectoderm gives rise to the central and peripheral nervous system, not the mesoderm. Option D. Zygote – This option is incorrect because the zygote is not an embryonic germ layer. The zygote is a diploid, fertilized egg cell that results from the fusion of the sperm and ovum nuclei. The zygote undergoes cleavage (rapid cell divisions) to form the morula. The morula, a solid ball of cells, undergoes more cleavage to form the blastula. The blastula, a hollow sphere of cells, then undergoes gastrulation to form the gastrula. The gastrula is a multicellular embryo that consists of three embryonic germ layers: ectoderm, mesoderm, and endoderm. These germ layers later give rise to their subsequent tissues. Option E. Epidermis – This option is incorrect because the epidermis is not an embryonic germ layer. The epidermis is the most superficial, avascular layer of skin that relies on the dermis for oxygen and nutrients. The cells of the epidermis help waterproof the skin, function in touch sensation, and contain skin pigment called melanin. The epidermis is divided into five layers: stratum corneum, stratum lucidum, stratum granulosum, stratum spinous, and stratum basale. The epidermis is formed from the ectoderm. The ectoderm also gives rise to the central and peripheral nervous system. While the epidermis shares a common embryonic layer of origin with the peripheral nervous system, it is a completely separate structure.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 3,
+    "question": {
+      "text": "The movement of water from areas of low solute concentration to high solute concentration across a semipermeable membrane is defined as __________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Active transport",
+        "percentage_selected": "(15.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Facilitated diffusion",
+        "percentage_selected": "(9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Nondisjunction",
+        "percentage_selected": "(0%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Osmosis",
+        "percentage_selected": "(75.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Phagocytosis",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Osmosis",
+    "analytics": {
+      "percent_correct": "75.2%",
+      "time_spent": "0 min, 20 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Osmosis is the movement of water across a semipermeable membrane from a region of low solute concentration to a region of high solute concentration. Osmosis is responsible for “balancing out” solute concentrations on either side of the membrane. By moving water out of the region of low solute concentration, the region becomes more concentrated, resulting in an increased solute concentration. Similarly, by moving water into the region of high solute concentration, the region becomes more dilute, resulting in a decreased solute concentration. Osmosis is an example of passive transport as it does not require ATP. Hypertonic solutions have a higher solute concentration than the cells placed inside them. When a cell is placed in a hypertonic solution, water leaves the cell because water moves from a region of lower solute concentration (the cell) to a region of higher solute concentration (the hypertonic solution). When an animal cell is placed in a hypertonic solution and water leaves the cell, the cell sh rivel s . When a plant cell is placed in a hypertonic solution and water leaves the cell, pl asmolysis occurs. Plasmolysis refers to the shrinkage of the cytoplasm of a plant cell, away from its cell wall. On the other hand, hypotonic solutions have a lower solute concentration than the cells placed inside them. When a cell is placed in a hypotonic solution, water enters the cell because water again moves from a region of lower concentration (the hypotonic solution) to a region of higher solute concentration (the cell). When an animal cell is placed in a hypotonic solution and water enters the cell, the cell swells up and can eventually lyse (burst). When a plant cell is placed in a hypotonic solution, it becomes turgid . A turgid plant cell is a plant cell that has swollen up due to the increased amount of water. Plant cells, however, do not undergo lysis because they have a rigid cell wall that prevents them from bursting. Isotonic solutions have the same solute concentration as the cells placed inside them; hence, there is no net movement of water. The images below illustrate osmosis in animal and plant cells under varying conditions. Since osmosis is the movement of water from areas of low concentration to high concentration, Option D. Osmosis is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Active transport – This option is incorrect because while active transport refers to the movement of molecules against their concentration gradient, the question is asking for a process that involves the movement of water. Furthermore, active transport requires energy, while the movement of water (osmosis) does not. Active transport uses energy (ATP) to move solutes like small ions, amino acids, and monosaccharides across the cell membrane against their concentration gradient. Option B. Facilitated diffusion – This option is incorrect because while facilitated diffusion refers to the movement of molecules through protein channels, the question is asking for the movement of water across a semipermeable membrane–a process that does not require the use of protein channels. Facilitated diffusion is a type of passive transport in which molecules cross the cell membrane with the help of specific integral proteins called transport proteins. Unlike active transport, facilitated diffusion (as well as other types of passive transport) do not require energy. Option C. Nondisjunction – This option is incorrect because nondisjunction does not involve the movement of water across a membrane; it instead refers to the process by which one or more chromosome pairs or chromatids fail to separate during anaphase. Depending on when nondisjunction occurs, different outcomes can occur. If nondisjunction occurs in meiosis I, homologous chromosomes fail to separate. If nondisjunction occurs in mitosis or meiosis II, sister chromatids fail to separate. Nondisjunction can lead to genetic disorders including Down syndrome (trisomy 21) and Turner syndrome (monosomy X). Option E. Phagocytosis – This option is incorrect because phagocytosis does not involve the movement of water across a membrane; it instead refers to the process by which undissolved material (solid) enters a cell via engulfment. An example of phagocytosis is the activity of white blood cells (leukocytes). White blood cells engulf pathogens by wrapping their plasma membrane around the pathogen.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+3+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 4,
+    "question": {
+      "text": "Identify the function of the structure indicated in the image below:",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+4+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Protein synthesis",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Lipid synthesis",
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Contraction",
+        "percentage_selected": "(73.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Regulation of osmosis",
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Bone resorption",
+        "percentage_selected": "(11.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Contraction",
+    "analytics": {
+      "percent_correct": "73.7%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The structure shown in the image is a sarcomere , the functional unit of a striated muscle fiber. The sarcomere is the structure responsible for muscle contraction. Sarcomeres are present in both skeletal and cardiac muscle because both of these muscle types are striated. Sarcomeres contain thick filaments ( myosin ) and thin filaments ( actin ) that slide past one another when the muscle contracts. This phenomenon is known as the sliding filament theory and is an important process to know for the test. It is crucial to remember that the individual myofilaments do not shorten in length, but rather, the sarcomere itself will shorten in length as the myofilaments increase in their overlap over one another. The sliding filament theory is relatively extensive. It is recommended that you refresh yourself on this topic if you don’t fully understand it. Below is an image that depicts the anatomy of a sarcomere. The Z-lines represent the borders of one individual sarcomere that anchors thin filaments. The M-line represents the middle of the sarcomere. The I-band is the region of the sarcomere that contains thin filaments (actin) only. The H-zone is the region of the sarcomere that contains thick filaments (myosin) only. The A-band is the area of the sarcomere where actin and myosin overlap. It is important to note that the H-zone and I-band reduce during contraction, while the A-band does not. Since the image in question shows a sarcomere and sarcomeres are the structural unit of striated muscle fibers that function in contraction, Option C is the correct answer. CC BY 4.0 CC BY 4.0",
+      "poe_text": "Option A. Protein synthesis – This option is incorrect because the image in question depicts a sarcomere, the functional unit of striated muscle fibers that function in muscular contraction. Ribosomes are organelles made of rRNA that function to synthesize proteins by linking together amino acids. Amino acids form peptide bonds with one another to form proteins. This would have been the correct answer choice if the image was of the rough ER rather than skeletal muscle fibers. Option B. Lipid production – This option is incorrect because the image in question depicts a sarcomere, the functional unit of striated muscle fibers that function in muscular contraction. The smooth endoplasmic reticulum is responsible for the production of lipids and steroid hormones for export. Option D. Regulation of osmosis – This option is incorrect because the image in question depicts a sarcomere, the functional unit of striated muscle fibers that function in muscular contraction. Recall that osmosis is the passive transport of water across a semipermeable membrane from regions of low solute concentration to regions of high solute concentration. Osmosis is a process that is commonly seen across the cell membrane. Sarcomeres do not regulate osmosis. Option E. Bone resorption – This option is incorrect because the image in question depicts a sarcomere, the functional unit of striated muscle fibers that function in muscular contraction. Osteoclasts are bone cells that are responsible for bone resorption. These cells resorb the bone matrix and release the minerals back to the blood. Hence, osteoclast activity increases blood calcium levels. Recall that the parathyroid hormone (PTH) is responsible for increasing circulating calcium (Ca 2+ ) levels by increasing the proliferation and activity of osteoclasts.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+4+Solution+2.jpg",
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 5,
+    "question": {
+      "text": "Which of the following layers covers the surface of cortical bone?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Spongy bone",
+        "percentage_selected": "(9.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Periosteum",
+        "percentage_selected": "(69.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Endosteum",
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Epiphyseal line",
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Compact bone",
+        "percentage_selected": "(11.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Periosteum",
+    "analytics": {
+      "percent_correct": "69.2%",
+      "time_spent": "0 min, 52 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "In order to answer this question, we must first differentiate cortical bone from cancellous bone. Cortical bone is much denser than cancellous bone and is characterized by its presence of osteons . Osteons are the functional unit of cortical bone, At the center of each osteon is a structure known as the Haversian canal . The Haversian canal contains nerves and blood vessels that supply bone cells with their required nutrients. Cancellous bone , also known as spongy bone, is much more flexible than cortical bone. Instead of osteons, cancellous bone contains trabeculae which contribute to strength and flexibility. Cancellous bone is also filled with red bone marrow which is the site of hemopoiesis (red blood cell development). It is also important to understand the various bone types of the skeletal system. These bone types include long bone, short bone, flat bone, sesamoid bone, and irregular bone. Each bone type contains a different relative abundance of cortical bone and cancellous bone. For example, short bones are primarily made of cancellous bones while long bones are primarily made of cortical bone. The image below helps us visualize a long bone. As we can see, cortical bone (compact bone) creates the outer layer of long bones with cancellous bone being housed within cortical bone at the metaphysis and epiphysis. Cortical bone is composed of two fibrous membranes: the periosteum and the endosteum. The periosteum is the outermost membrane that wraps itself around cortical bone. The endosteum is the innermost membrane of cortical bone and is the border between cancellous and cortical bone. Because the periosteum lines the outer surface of cortical bone, Option B. Periosteum is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Spongy bone – This option is incorrect because spongy bone does not cover the surface of cortical bone. Spongy bone, also known as cancellous bone, is a type of bone characterized by the presence of trabeculae. Spongy bone is typically encased in cortical bone and is much more flexible than cortical bone. Spongy bone contains red bone marrow which is the site of red blood cell development. Option C. Endosteum – This option is incorrect because the endosteum does not cover the surface of cortical bone. The endosteum is instead a fibrous membrane that lies between cortical and cancellous bone. The endosteum is the innermost layer of cortical bone. Option D. Epiphyseal line – This option is incorrect because the epiphyseal line does not cover the surface of cortical bone. Epiphyseal lines develop when the epiphyseal plate becomes ossified. Recall that long bone growth occurs when the hyaline cartilage of the epiphyseal plate, which is located between the epiphysis and metaphysis, grows in the direction of the metaphysis, lengthening the diaphysis. Once bone growth is complete, the epiphyseal plate will ossify and become the epiphyseal line. Option E. Compact bone – This option is incorrect because compact bone is another name for cortical bone. Since this question asks which layer covers the surface of cortical bone, we know this option cannot be correct.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+5+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 6,
+    "question": {
+      "text": "Which of the following organisms belongs to the kingdom Protista?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ferns",
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Fungi",
+        "percentage_selected": "(14.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Eukaryotic algae",
+        "percentage_selected": "(48.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Cyanobacteria",
+        "percentage_selected": "(31.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Mushroom",
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Eukaryotic algae",
+    "analytics": {
+      "percent_correct": "48.4%",
+      "time_spent": "0 min, 26 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "Protista , a kingdom of the domain Eukarya, is classified by means of locomotion and the ways in which an organism obtains energy. Plant-like protists , also known as algae-like protists, obtain energy through photosynthesis. These protists absorb light energy via photosynthetic pigments and store energy in the form of carbohydrates. Examples of plant-like protists include brown, red, and some green algae. Animal-like protists , also known as protozoa, are heterotrophs. These protists consume living cells or dead organic matter to obtain energy. Examples of animal-like protists include amoeba. Fungus-like protists resemble fungi by forming filaments and spore-bearing bodies. Examples of fungus-like protists include cellular and plasmodial slime molds. It is important to distinguish between eukaryotic algae and prokaryotic algae. Eukaryotic algae, such as brown, red and some green algae, are plant-like protists that fall under the domain Eukarya. On the other hand, prokaryotic algae are included in the domain Bacteria. Cyanobacteria is an example of prokaryotic algae. Cyanobacteria, known as blue-green algae, are photosynthetic bacteria that grow rapidly in aquatic environments. Since eukaryotic algae is an organism that belongs to the kingdom Protista, specifically the subgroup of plant-like protists, Option C. Eukaryotic algae is the correct answer.",
+      "poe_text": "Option A. Ferns – This option is incorrect because ferns belong to the kingdom Plantae, specifically the division of tracheophytes (seedless vascular plants) called pterophyta. While these plants lack seeds, they have true roots, leaves, and stems. Ferns produce clusters of sporangia (structures that produce spores). In ferns, the predominant plant form is the sporophyte. Option B. Fungi – This option is incorrect because fungi itself is its own kingdom (kingdom Fungi). Fungi are eukaryotic heterotrophs that secrete digestive enzymes onto organic matter and then absorb the products of digestion for energy. While most fungi are multicellular, there are unicellular fungi such as yeast. Fungi alternate their diploid/haploid stages, but the haploid stage generally predominates in the life cycle of most fungi. Option D. Cyanobacteria – This option is incorrect because cyanobacteria belong to the domain Bacteria, while the kingdom Protista belongs to the domain Eukarya. Cyanobacteria is a common group of bacteria that are photosynthetic. Some cyanobacteria produce nitrogen-fixing enzymes that convert nitrogen gas into ammonia (NH 3 ). Cyanobacteria are known as blue-green algae and are not related to the other eukaryotic algae groups. As primitive autotrophic prokaryotes, cyanobacteria are believed to be responsible for creating the Earth’s oxygen-rich atmosphere, as they continued to produce oxygen via the process of photosynthesis that was released into the atmosphere and gradually accumulated. Option E. Mushroom – This option is incorrect because mushrooms belong to the kingdom Fungi, specifically the fungus group called Basidiomycota. These fungi reproduce sexually by producing haploid spores. These spores undergo plasmogamy and mitosis to create a fruiting body called the basidiocarp, more commonly known as mushrooms.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 7,
+    "question": {
+      "text": "Where does cyclic photophosphorylation occur?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Stroma lamellae",
+        "percentage_selected": "(66.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Mitochondrial matrix",
+        "percentage_selected": "(16.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Outer chloroplast membrane",
+        "percentage_selected": "(16%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Xylem",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Nucleus",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Stroma lamellae",
+    "analytics": {
+      "percent_correct": "66.3%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Photosynthesis is the process that harnesses light energy to synthesize glucose. The light-dependent reaction of photosynthesis includes non-cyclic photophosphorylation and cyclic photophosphorylation. Non-cyclic photophosphorylation takes place in the thylakoid membrane . During non-cyclic photophosphorylation, light is incorporated into electrons, causing them to be excited and lose stability. These electrons re-emit the absorbed energy, which is then reabsorbed by electrons in nearby pigment molecules. As a result, ATP and NADPH are produced. Cyclic photophosphorylation takes place in the stroma lamellae , the tubules that connect the thylakoids to one another. Cyclic photophosphorylation functions to replenish ATP for the Calvin Cycle. The Calvin Cycle , also known as the “dark” reaction, takes place in the stroma of the chloroplast. During the Calvin Cycle, 6 CO 2 molecules are fixed to ultimately synthesize glucose. This glucose is used by the mitochondria of the plant as energy. Since cyclic photophosphorylation occurs in the stroma lamellae, Option A. Stroma lamellae is the correct answer.",
+      "poe_text": "Option B. Mitochondrial matrix – This option is incorrect because cyclic photophosphorylation occurs in the stroma lamellae of the chloroplast, instead of the mitochondrial matrix. In fact, none of the photosynthetic reactions take place in the mitochondrial matrix because photosynthesis does not happen in mitochondria. Chloroplasts, instead, are the organelles that are responsible for carrying out photosynthesis. Mitochondria are responsible for making ATP and also serve as the site of fatty acid catabolism during beta-oxidation. Option C. Outer chloroplast membrane – This option is incorrect because cyclic photophosphorylation occurs in the stroma lamellae, instead of the outer chloroplast membrane. It is important to note that the thylakoid membrane is responsible for absorbing light, rather than the outer or inner chloroplast membrane. None of the photosynthetic reactions take place in the outer chloroplast membrane. Option D. Xylem – This option is incorrect because cyclic photophosphorylation occurs in the stroma lamellae, instead of the xylem. The xylem is a transport tissue in vascular plants that functions to transport water and minerals throughout the plant. There are two kinds of xylem cells: tracheids and vessel elements. Option E. Nucleus – This option is incorrect because cyclic photophosphorylation occurs in the stroma lamellae of the chloroplast, instead of the nucleus. In fact, none of the photosynthetic reactions take place in the nucleus because photosynthesis does not happen in the nucleus. Chloroplasts, instead, are the organelles that are responsible for carrying out photosynthesis. The nucleus is responsible for storing the genetic material of the cell and is the site of DNA replication and transcription in eukaryotes.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 8,
+    "question": {
+      "text": "If an organism is missing a chromosome, which term is used to describe the abnormality?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Trisomy",
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Monosomy",
+        "percentage_selected": "(88.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Translocation",
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Oncogene",
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cleavage",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Monosomy",
+    "analytics": {
+      "percent_correct": "88.6%",
+      "time_spent": "0 min, 24 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Nondisjunction is the failure of one or more homologous chromosome pairs or sister chromatids to separate properly during cell division, specifically anaphase. Depending on when nondisjunction occurs, different outcomes can occur. If nondisjunction occurs in meiosis I, homologous chromosomes fail to separate. If nondisjunction occurs in mitosis or meiosis II, sister chromatids fail to separate. The image below shows the different outcomes of nondisjunction in meiosis I and II. Aneuploidy describes a genome with extra or missing chromosomes, often caused by nondisjunction. Trisomy describes the condition in which a genome of an organism contains an extra chromosome. An example of trisomy is Down syndrome (a genetic disorder caused by trisomy 21, an extra copy of chromosome 21). Monosomy describes the condition in which a genome of an organism is missing a chromosome. An example of monosomy is Turner’s syndrome. Turner’s syndrome is a genetic disorder in which an individual only has one sex chromosome (an X chromosome), and no second copy. Since monosomy is the term used to describe a missing chromosome, Option B. Monosomy is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Trisomy – This option is incorrect because trisomy is the term used to describe an extra chromosome, instead of a missing chromosome. Trisomy describes the condition in which a genome of an organism contains an extra chromosome due to nondisjunction. An example of trisomy is Down syndrome. Down syndrome is a genetic disorder caused by trisomy 21, an extra copy of chromosome 21. Option C. Translocation – This option is incorrect because translocation is the term used to describe the movement of one segment of a chromosome to another chromosome. There are two types of translocation. One type of translocation occurs when two non-homologous chromosomes swap segments (for example, chromosome #1 and chromosome #12 swapping a segment of each chromosome). Another type of translocation (often referred to as just a substitution) occurs when one chromosome from a homologous pair becomes attached to another chromosome from a different pair (for example, a segment of chromosome #2 being moved to chromosome #11). Option D. Oncogene – This option is incorrect because oncogenes are mutated proto-oncogenes that result in a higher risk of cancer. Proto-oncogenes are genes involved in regulating cell growth and division. These genes positively regulate the cell cycle by allowing cells to proceed from one stage of the cell cycle to the next. When proto-oncogenes undergo mutation and become oncogenes, gene expression is modified and cell division eventually becomes unregulated. For example, the Ras gene (example of a proto-oncogene) can be mutated to become an oncogene, causing accelerated and uncontrollable cell growth and proliferation. Option E. Cleavage – This option is incorrect because cleavage is the process in which the zygote undergoes rapid cell division without any cell growth. Each cell resulting from cleavage is called a blastomere. Successive cleavage results in a solid ball of ~8 cells called the morula. The morula continues to divide into the blastula and the gastrula.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+8+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 9,
+    "question": {
+      "text": "The secretion of which hormone would be expected to decrease following surgical removal of the posterior pituitary gland?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "FSH",
+        "percentage_selected": "(9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "LH",
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Vasopressin",
+        "percentage_selected": "(63.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "hGH",
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cortisol",
+        "percentage_selected": "(12.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Vasopressin",
+    "analytics": {
+      "percent_correct": "63.2%",
+      "time_spent": "0 min, 31 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The posterior pituitary is a gland made up of neuronal tissue that is continuous with the hypothalamus. The posterior pituitary does not produce its own hormones, but rather, stores and secretes certain hormones that are made from the hypothalamus. The primary hormones stored in the posterior pituitary are vasopressin, also known as the antidiuretic hormone (ADH), and oxytocin. Recall that vasopressin is an important hormone that decreases urination. This is important to counteract dehydration by increasing the reabsorption of water in the collecting duct and distal convoluted tubule of nephrons (recall that nephrons are the functional unit of the kidney). Reabsorption, in other words, is the body holding onto a substance rather than excreting it in urine – in this case, the body holds on to more water. This is done by increasing the number of aquaporins which are essentially water channels that accumulate on the collecting duct to allow for the movement of water back into the circulatory system. This will cause urine to become much more concentrated, the sole reason behind urine being yellow when we haven’t drunk enough water during the day. Oxytocin is the other hormone that is released from the posterior pituitary. Oxytocin is released during childbirth to increase the force of uterine contractions. Oxytocin also stimulates the contraction of breast tissue to assist in milk ejection during breastfeeding. In addition to its function in childbirth and breastfeeding, oxytocin is also known to enhance maternal behavior. As we can see from the information above, the surgical removal of the posterior pituitary would lead to a decrease in the levels of both hormones that it secretes: vasopressin (ADH) and oxytocin. Therefore, Option C. Vasopressin is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. FSH – This option is incorrect because follicle-stimulating hormone (FSH) is released from the anterior pituitary, not the posterior pituitary. All hormones released from the anterior pituitary, including FSH, are peptide hormones. In females, FSH stimulates the ovarian follicles, causing them to release estrogen. In males, FSH stimulates the testes to start spermatogenesis, the production of mature sperm. Option B. LH – This option is incorrect because luteinizing hormone (LH) is released from the anterior pituitary, not the posterior pituitary. All hormones released from the anterior pituitary, including LH, are peptide hormones. In females, a surge of LH is responsible for the commencement of ovulation during the menstrual cycle. Ovulation is the process in which an egg is released from the ovaries. LH also allows the formation of the corpus luteum in females. LH is also responsible for stimulating the testes in males to release testosterone. Option D. hGH – This option is incorrect because human growth hormone (hGH) is released from the anterior pituitary, not the posterior pituitary. All hormones released from the anterior pituitary, including hGH, are peptide hormones. Recall that hGH, also known as somatotropin, is responsible for the growth and development of muscles and bones. hGH stimulates growth by increasing mitosis, cell size, rate of protein synthesis, and the use of fatty acids for energy. Option E. Cortisol – This option is incorrect because cortisol is a glucocorticoid that is released from the adrenal cortex of the adrenal glands, not the posterior pituitary. All hormones released from the adrenal cortex, including cortisol, are steroid hormones. Cortisol stimulates gluconeogenesis in the liver to raise blood glucose levels. Gluconeogenesis is the production of glycogen and glucose from noncarbohydrate precursors. Cortisol also stimulates the breakdown of proteins and fats for energy. Since cortisol is a ”stress hormone” that accumulates during long-term stress, it is often used to suppress certain functions that are considered unnecessary in stressful situations. For example, cortisol can suppress the immune system, reproductive system, and body growth.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+9+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 10,
+    "question": {
+      "text": "A man and a woman have normal skin color but both have one parent with albinism, which is caused by an autosomal recessive allele. If the couple intends on having 2 children, which of the following is the probability that both children will have albinism?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1/2",
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1/4",
+        "percentage_selected": "(19.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1/8",
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1/16",
+        "percentage_selected": "(57.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "1/16",
+    "analytics": {
+      "percent_correct": "57.7%",
+      "time_spent": "1 min, 16 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Albinism is an autosomal recessive disease, which we can denote as (aa). Autosomal means that the disease is linked to one of the non-sex chromosomes. A recessive disease is one that requires the presence of two affected alleles to display the affected phenotype. In this case, the recessive allele is denoted as a lowercase ‘a’. In order for an individual to be affected by an autosomal recessive disease, that individual would need to inherit a recessive allele of a given gene from both their mother and father, resulting in an ‘aa’ genotype. We know both the man and the woman have normal skin, which means their genotype can be either homozygous dominant (AA) or heterozygous (Aa). However, since each of them has a parent with albinism (aa), they must have an (Aa) genotype as each of them would have inherited one recessive (a) allele from the parent that has albinism. From here, we can perform a monohybrid cross (Aa x Aa) to determine the probability that one child would have albinism (aa): CC BY 4.0 Therefore, there is a ¼ chance a child of this couple will have albinism (aa). Furthermore, the question states that the couple intends on having 2 children and asks for the probability of both children having albinism. Each child is an independent event, and so, we multiply the probability of the first child having albinism (¼) by the probability of the second child having albinism (¼). Since ¼ x ¼ = 1/16 is the probability that both children will have albinism, Option E is the correct answer.",
+      "poe_text": "Option A. 0 – This option is incorrect because we know both the man and the woman have normal skin, which means their genotype can be either homozygous dominant (AA) or heterozygous (Aa). However, since each of them has a parent with albinism (aa), they must have an (Aa) genotype as each of them would have inherited one recessive (a) allele from the parent that has albinism. From here, we can perform a monohybrid cross (Aa x Aa) to determine the probability that one child would have albinism (aa) which is equal to 1/4.  In order to determine the probability that two children will have albinism; we multiply 1/4 with 1/4 which is equal to 1/16. Option B. 1/2 – This option is incorrect because we know both the man and the woman have normal skin, which means their genotype can be either homozygous dominant (AA) or heterozygous (Aa). However, since each of them has a parent with albinism (aa), they must have an (Aa) genotype as each of them would have inherited one recessive (a) allele from the parent that has albinism. From here, we can perform a monohybrid cross (Aa x Aa) to determine the probability that one child would have albinism (aa) which is equal to 1/4. In order to determine the probability that two children will have albinism; we multiply 1/4 with 1/4 which is equal to 1/16. Option C. 1/4 – This option is incorrect because we know both the man and the woman have normal skin, which means their genotype can be either homozygous dominant (AA) or heterozygous (Aa). However, since each of them has a parent with albinism (aa), they must have an (Aa) genotype as each of them would have inherited one recessive (a) allele from the parent that has albinism. From here, we can perform a monohybrid cross (Aa x Aa) to determine the probability that one child would have albinism (aa) which is equal to 1/4. In order to determine the probability that two children will have albinism; we multiply 1/4 with 1/4 which is equal to 1/16. Option D. 1/8 – This option is incorrect because we know both the man and the woman have normal skin, which means their genotype can be either homozygous dominant (AA) or heterozygous (Aa). However, since each of them has a parent with albinism (aa), they must have an (Aa) genotype as each of them would have inherited one recessive (a) allele from the parent that has albinism. From here, we can perform a monohybrid cross (Aa x Aa) to determine the probability that one child would have albinism (aa) which is equal to 1/4. In order to determine the probability that two children will have albinism; we multiply 1/4 with 1/4 which is equal to 1/16.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+10+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 11,
+    "question": {
+      "text": "Down syndrome is a condition caused when nondisjunction occurs in meiosis I. Which of the following gametes would be produced from this condition?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "One gamete will lack chromosome #21 and two would have an extra copy",
+        "percentage_selected": "(14.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Two gametes will lack chromosome #21 and two would have an extra copy",
+        "percentage_selected": "(60.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Three gametes will lack chromosome #21 and two would have an extra copy",
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Two gametes will lack chromosome #21 and one would have an extra copy",
+        "percentage_selected": "(16.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Three gametes will lack chromosome #21 and one would have an extra copy",
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Two gametes will lack chromosome #21 and two would have an extra copy",
+    "analytics": {
+      "percent_correct": "60.1%",
+      "time_spent": "2 min, 31 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "Nondisjunction is the failure of one or more pairs of homologous chromosomes or sister chromatids to separate normally during nuclear division. It can occur either during meiosis I (anaphase I) or meiosis II (anaphase II). Recall that meiosis is the process by which a diploid parent cell will divide into four haploid daughter cells called gametes. Since anaphase happens twice in meiosis, a nondisjunction event could take place in either meiosis I or meiosis II. The result of a nondisjunction event occurring in either meiosis I or meiosis II will be different. Let’s take a look and see why. As we can see from the image below, if a nondisjunction event takes place during meiosis I, one of the daughter cells is left with one less chromosome while the other daughter cell is left with one extra chromosome (for the sake of explanation, let’s assume nondisjunction only took place on one chromosome, not multiple). Keep in mind, these chromosomes are made up of two sister chromatids that will separate during meiosis II. Once the daughter cells proceed through meiosis II, two of the daughter cells will have one extra copy of a particular chromosome (trisomy) while the other two daughter cells will have one less copy of a particular chromosome (monosomy). Since we know Down syndrome is the result of a nondisjunction event occurring during meiosis I, we can conclude that two gametes will lack a copy of chromosome 21 (0 total copies) while the other two gametes will have an extra copy of chromosome 21 (2 total copies). If one of the gametes containing two copies of chromosome 21 gets fertilized, the resulting zygote will possess three copies of chromosome 21 (the complementary gamete will contribute one of its copies of chromosome 21, 2 + 1 = 3), resulting in Down syndrome (trisomy 21). Since two daughter cells will lack chromosome 21 and two daughter cells will have an extra copy of chromosome 21, Option B is the correct answer. A nondisjunction event that takes place during meiosis II is slightly less detrimental. The result of a nondisjunction event occurring in meiosis II will be two normal daughter cells, one daughter cell with one extra copy of a particular chromosome, and one daughter cell with one less copy of a particular chromosome. CC BY 4.0",
+      "poe_text": "Option A. One gamete will lack chromosome #21 and two would have an extra copy – This option is incorrect because meiosis results in the production of four haploid gametes from one diploid cell. However, in this option choice, only three gametes are produced. A nondisjunction event occurring during meiosis I would result in two gametes lacking a copy of a particular chromosome and two gametes having an extra copy of a particular chromosome. Option C. Three gametes will lack chromosome #21 and two would have an extra copy – This option is incorrect because meiosis results in the production of four haploid gametes from one diploid cell. However, in this option choice, a total of five gametes are produced. A nondisjunction event occurring during meiosis I would result in two gametes lacking a copy of a particular chromosome and two gametes having an extra copy of a particular chromosome. Option D. Two gametes will lack chromosome #21 and one would have an extra copy – This option is incorrect because meiosis results in the production of four haploid gametes from one diploid cell. However, in this option choice, only three gametes are produced. A nondisjunction event occurring during meiosis I would result in two gametes lacking a copy of a particular chromosome and two gametes having an extra copy of a particular chromosome. Option E. Three gametes will lack chromosome #21 and one would have an extra copy – This option is incorrect because Down syndrome is the result of a nondisjunction event occurring on chromosome 21 during meiosis I. This will result in two gametes lacking a copy of chromosome 21 and two gametes having an extra copy of chromosome 21. Since this answer choice states that three gametes will lack chromosome 21 and one will have an extra copy, this option is incorrect.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+11+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 12,
+    "question": {
+      "text": "What is the effect of the hormone released by the parathyroid gland?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increases blood calcium levels",
+        "percentage_selected": "(56.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Decreases blood calcium levels",
+        "percentage_selected": "(14%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Inhibits gastric motility",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Increases the metabolic rate",
+        "percentage_selected": "(20.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Stimulates release of cortisol",
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Increases blood calcium levels",
+    "analytics": {
+      "percent_correct": "56.1%",
+      "time_spent": "1 min, 9 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The parathyroid gland , four pea-shaped structures attached to the back of the thyroid, releases the parathyroid hormone . The parathyroid hormone raises calcium concentrations in the blood by triggering calcium release from the bones and stimulating osteoclast proliferation. Osteoclasts are bone cells that resorb the bone matrix and release minerals back to the blood. In addition to increasing blood calcium levels, the parathyroid hormone increases renal calcium reabsorption and renal phosphate excretion. The parathyroid hormone also increases calcium phosphate uptake from the gut by increasing the renal production of vitamin D-derived steroids. The secretion of the parathyroid hormone is regulated by calcium levels in the blood, and parathyroid glands grow or shrink accordingly. Understand for the test that the overall effect of this hormone is to raise blood calcium levels. Since the question is asking for the effect of the hormone released by the parathyroid gland and the parathyroid hormone is the only hormone produced by the parathyroid gland, Option A. Increases blood calcium levels is the correct answer.",
+      "poe_text": "Option B. Decreases blood calcium levels – This option is incorrect because the parathyroid hormone increases blood calcium levels. The parathyroid hormone raises calcium concentrations in the blood by triggering calcium release from the bones and stimulating osteoclast proliferation. Calcitonin, instead, is a hormone that decreases blood calcium levels. Calcitonin is produced by the thyroid gland. It stimulates osteoblast activity which builds bone by using up the calcium in the blood. Calcitonin also decreases osteoclast activity and number. Option C. Inhibits gastric motility – This option is incorrect because the parathyroid hormone does not affect gastric motility. The parathyroid hormone instead acts on the bone matrix by stimulating osteoclasts: bone cells that break down bone and release minerals back to the blood. Gastric motility is instead affected by gastrointestinal hormones such as cholecystokinin. Cholecystokinin is a hormone secreted by the small intestine in response to the presence of fat. Cholecystokinin not only stimulates the gallbladder to release its digestive enzymes, but also decreases the motility of the stomach. This inhibition of gastric motility allows more time for the duodenum to digest fat. Option D. Increases the metabolic rate – This option is incorrect because the parathyroid hormone does not affect metabolic rate. The parathyroid hormone instead acts on the bone matrix by stimulating osteoclasts: bone cells that break down bone and release minerals back to the blood. T4 (thyroxine) and T3 (triiodothyronine) are hormones that increase metabolic rate. These hormones are released from the thyroid gland. Both T4 and T3 are derived from the amino acid tyrosine and require iodine in the process of assembly. Since these hormones are lipid-soluble, they can freely pass through the membrane. An increase in T4 and T3 will result in an increased body metabolism (more calories being burnt) and an increased heart rate. Option E. Stimulates release of cortisol – This option is incorrect because the parathyroid hormone is not a tropic hormone, meaning that it does not target other endocrine glands. Further, the parathyroid hormone does not stimulate the release of cortisol from the adrenal cortex. The parathyroid hormone instead acts on the bone matrix by stimulating osteoclasts: bone cells that break down bone and release minerals back to the blood. Adrenocorticotropic hormone (ACTH), instead, stimulates the release of cortisol. Once ACTH is released from the anterior pituitary, it stimulates the adrenal cortex to release cortisol. Cortisol, as well as other glucocorticoids, stimulates gluconeogenesis in the liver to raise blood glucose levels. Cortisol also stimulates the breakdown of proteins and fats for energy.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 13,
+    "question": {
+      "text": "Based on the image below, what would be expected in the resulting gametes?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+13+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "One gamete will have an extra copy of the purple chromosome and one gamete will have no copy of the purple chromosome",
+        "percentage_selected": "(95%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "One gamete will have an extra copy of the green chromosome and one gamete will have no copy of the green chromosome",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Both gametes will have extra copies of the purple chromosomes",
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Neither gamete will have a copy of the green chromosome",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Both gametes will have the normal amount of chromosomes",
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "One gamete will have an extra copy of the purple chromosome and one gamete will have no copy of the purple chromosome",
+    "analytics": {
+      "percent_correct": "95%",
+      "time_spent": "0 min, 31 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Nondisjunction is a genetic error that results when one or more chromosomes, or sister chromatids, fail to separate during anaphase of meiosis or mitosis. Since the question mentions that the cell in the image will result in gametes, we can know that the image in the question depicts a nondisjunction event occurring during meiosis II . Notice that this image only depicts one of the haploid daughter cells. We can safely assume that there is another daughter cell not imaged that is proceeding through meiosis II as usual. If nondisjunction occurs during meiosis II, such as in the question above, one of the gametes will possess two copies of a particular chromosome, the purple chromosome, and the other gamete will lack the chromosome (again, the purple chromosome). We can assume that the other haploid daughter cell proceeded through anaphase II normally, resulting in two gametes with the expected number of chromosomes. In total, from one mother cell, there will be the production of four gametes, two of which are normal and two of which are abnormal as a result of the nondisjunction event depicted in the image above. The figure below shows nondisjunction occurring in meiosis I and II. Note the similarities between the image in the question and nondisjunction in meiosis II in the figure below. CC BY 4.0",
+      "poe_text": "Option B. One gamete will have an extra copy of the green chromosome and one gamete will have no copy of the green chromosome – This option is incorrect because the green chromosome successfully separated, while the purple chromosome did not, indicating nondisjunction of the purple chromosome. Therefore, the gametes will each have one copy of the green chromosome. Option C. Both gametes will have extra copies of the purple chromosome – This option is incorrect because if nondisjunction prevents the chromatids of the purple chromosome from successfully separating, we can conclude that one of the gametes resulting from this cell will keep both copies of the purple chromosome, while the other gamete will not possess any copies of the purple chromosome. Option D. Neither gamete will have a copy of the green chromosome – This option is incorrect because based on the image, the nondisjunction event is occurring on the purple chromosome, not the green chromosome. The sister chromatids of the green chromosome successfully separated, meaning that both gametes resulting from this cell will have one copy of the green chromosome. Option E. Both gametes will have the normal amount of chromosomes – This option is incorrect because whenever a nondisjunction event occurs during meiosis or mitosis, the daughter cells will have an abnormal number of chromosome copies. In this case, because a nondisjunction event is occurring on the purple chromosome, one of the resulting gametes will have an extra copy of the purple chromosome and the other gamete will have no copies of the purple chromosome. Therefore, while the gametes will have normal amounts of the green chromosome, they will not have normal amounts of the purple chromosome.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+13+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 14,
+    "question": {
+      "text": "What molecule is completely removed from the filtrate and sent back to the blood?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Glucose",
+        "percentage_selected": "(67.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Calcium",
+        "percentage_selected": "(9.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Sodium",
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Urea",
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Large proteins",
+        "percentage_selected": "(9.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Glucose",
+    "analytics": {
+      "percent_correct": "67.8%",
+      "time_spent": "0 min, 18 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The process of urine formation occurs in the nephron. The nephron is the functional unit of the kidney that functions to reabsorb nutrients, salts, and water. Filtration occurs in the renal corpuscle of the nephron. The fluid that goes through the glomerulus to the rest of the nephron is called the filtrate . The filtrate is then pushed into the Bowman's capsule to enter the nephron itself. Particles that are too large to filter through the glomerulus, such as blood cells or immunoglobulins, remain in the circulatory system. This process of filtration is driven by the hydrostatic pressure of blood. The filtrate then moves through the proximal convoluted tubule for reabsorption . Reabsorption is the process in which a substance is pulled out of the nephron and brought back into the blood. Most reabsorption occurs in the proximal convoluted tubule. In the proximal convoluted tubule, glucose, salts, and amino acids can be reabsorbed from the filtrate and returned to the blood. More reabsorption occurs in the distal convoluted tubule. In the distal convoluted tubule, more glucose, ions, and water can be reabsorbed from the filtrate. It is important to note that glucose is the only substance that is completely reabsorbed during this process. In other words, despite the fact that glucose makes it through the filtration process, absolutely no glucose remains in the nephron for excretion. Hence, healthy individuals should not have any glucose present in their urine, since the entirety of glucose gets reabsorbed prior to excretion. Secretion is the process in which a substance is removed from the blood and sent back into the nephron. Like reabsorption, most secretion occurs in the proximal convoluted tubule. During secretion, substances such as acids, bases, ammonia, drugs, and ions can be secreted by both passive and active transport. Since glucose is the only molecule that is completely reabsorbed (removed from the filtrate and brought back into the blood), Option A. Glucose is the correct answer.",
+      "poe_text": "Option B. Calcium – This option is incorrect because while calcium is filtered at the glomerulus and reabsorbed in the proximal convoluted tubule, it does not undergo complete reabsorption. In other words, the proximal convoluted tubule only brings a portion of the filtered calcium back into the blood and the rest remains in the filtrate until it is excreted through urine. Option C. Sodium – This option is incorrect because while sodium is actively reabsorbed in the proximal convoluted tubule, loop of Henle, and distal convoluted tubule, not all sodium is reabsorbed, and it can also be transported from the blood into the nephron. Sodium can be consistently moved both out and into the nephron, and a portion of sodium is always present in the filtrate and excreted through urine. Option D. Urea – This option is incorrect because while urea is reabsorbed in the proximal convoluted tubule and collecting duct, it is also transported into the nephron in the proximal convoluted tubule. Urea can also re-enter the tubule at the loop of Henle as a part of a process known as urea recycling. Therefore, urea remains in the filtrate until it is excreted through urine. Option E. Large proteins – This option is incorrect because most proteins are too large to pass through the glomerulus and reach the rest of the nephron. Since large proteins cannot make it through the filtration process, they are not present in the filtrate to begin with and therefore cannot be reabsorbed into the blood. Some examples of these large proteins include immunoglobulins.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 15,
+    "question": {
+      "text": "Which is TRUE of the Hardy-Weinberg principle?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Equilibrium is best maintained in a small population",
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Can only occur when gene flow is present",
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Genetic equilibrium requires a lack of evolution",
+        "percentage_selected": "(59.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Natural selection is required",
+        "percentage_selected": "(14.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Increased rate of mutations accelerates the equilibrium",
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Genetic equilibrium requires a lack of evolution",
+    "analytics": {
+      "percent_correct": "59.7%",
+      "time_spent": "0 min, 41 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "The Hardy-Weinberg principle states that populations are in genetic equilibrium if their allele frequencies do not change from generation to generation. The Hardy-Weinberg principle is used to determine allele frequencies within a population that is in genetic equilibrium. Allele frequencies can be determined via the following equations: p + q =1 p 2 + 2pq + q 2 = 1 p = frequency of the dominant allele q = frequency of the recessive allele p 2 = frequency of homozygous dominant individuals 2pq = frequency of heterozygous individuals q 2 = frequency of homozygous recessive individuals In order for a population to be in Hardy-Weinberg equilibrium, the following conditions must be met: Since there needs to be a lack of evolutionary change to a population for there to be Hardy-Weinberg equilibrium, Option C is the correct answer.",
+      "poe_text": "Option A. Equilibrium is best maintained in a small population – This option is incorrect because one of the conditions required to meet Hardy-Weinberg equilibrium is a large population to decrease the effect of genetic drift. Recall that genetic drift is the random increase or decrease in allele frequency by chance. Genetic drift has a larger effect on small populations. Option B. Can only occur when gene flow is present – This option is incorrect because one of the conditions required to meet Hardy-Weinberg equilibrium is no gene flow. Gene flow is the introduction or removal of alleles from a population due to the migration of individuals within that population. Gene flow affects the allele frequency of the population and therefore should be eliminated to achieve Hardy-Weinberg equilibrium. Option D. Natural selection is required – This option is incorrect because one of the conditions required to meet Hardy-Weinberg equilibrium is no natural selection. Recall that natural selection is the increase and decrease of allele frequencies in order to adapt/evolve to the environment. The best alleles are selected for while the worst alleles are selected against. Since natural selection is the foundation of evolution and evolution requires a change in allele frequencies, natural selection must be eliminated to achieve Hardy-Weinberg equilibrium. Option E. Increased rate of mutations accelerates the equilibrium – This option is incorrect because one of the conditions required to meet Hardy-Weinberg equilibrium is no mutations. Mutations are changes to a DNA sequence, resulting in new and heritable alleles. Mutations introduce new alleles into a population and would therefore disrupt, not accelerate, Hardy-Weinberg equilibrium.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 16,
+    "question": {
+      "text": "The immune system is used to help the body fight off infections from foreign invaders. What cells are the most abundant and the first to attack foreign infectious agents?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Macrophages",
+        "percentage_selected": "(18.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Neutrophils",
+        "percentage_selected": "(68%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Helper T cells",
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Plasma cells",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Memory cells",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Neutrophils",
+    "analytics": {
+      "percent_correct": "68%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The first line of defense of the human immune system is innate immunity . Innate immunity is also known as nonspecific immunity because it provides generalized protection against foreign invaders. Neutrophils are phagocytic cells that are part of the innate immune response . These cells are the most abundant type of white blood cell and are generally the first to enter the infected tissues/organs to elicit an immune response. They are followed by lymphocytes (specifically, natural killer cells), and then monocytes/macrophages. Neutrophils destruct pathogens via phagocytosis. Phagocytosis is the process in which a cell (in this case, a neutrophil) engulfs foreign particles (in this case, a pathogen). While neutrophils “eat” pathogens, they don’t present antigens for recognition by T cells because they are not involved in the adaptive immune response. Since neutrophils are the first responders to foreign invaders as well as the most abundant type of white blood cell, Option B is the correct answer. Aside from the innate immune response performed by cells like neutrophils, the body also develops an adaptive immune response when attacked by pathogens. Adaptive immunity is a specific line of defense that targets specific antigens. The responses of the adaptive immune system can be categorized into the cell-mediated response and the antibody-mediated (humoral) response. The cell-mediated response uses T cells (cytotoxic T cells and helper T cells) and is effective against infected non-self cells. The antibody-mediated response uses B cells (plasma B cells and memory B cells) and the antibodies they produce to respond to antigens or pathogens that circulate in the lymph or blood. Here is a visualization of the immune cells of the immune system: CC BY 4.0",
+      "poe_text": "Option A. Macrophages – This option is incorrect because while macrophages are phagocytic cells that are involved in innate immunity, they are not the most abundant immune cells. Neutrophils, instead, are the most abundant immune cells that are the first to respond to a pathogen. Macrophages develop from monocytes. Monocytes are the immature form of macrophages that circulate in blood until they move into tissues via diapedesis (passage of blood cells through the walls of capillaries). Option C. Helper T cells – This option is incorrect because T cells are a part of adaptive immunity. T cells originate in the bone marrow, but mature in the thymus. While these cells have antigen receptors, they do not produce antibodies themselves. Instead, these cells check molecules displayed by non-self cells and directly act on cells to protect the body from infection. Helper T cells (also known as CD4 T cells), specifically, are a derivative of T cells. When an antigen is presented on major histocompatibility complex II (MHC II), naïve T cells will become activated and proliferate into helper T cells. Helper T cells play a role in both the innate and adaptive immune response. In innate immunity, helper T cells bind macrophages that can engulf pathogens. In adaptive immunity, helper T cells produce interleukins to activate T cells, B cells, and macrophages. While helper T cells play a role in the innate immune system, they are not the first to attack foreign invaders. Neutrophils, instead, are the first cells to attack foreign invaders. Option D. Plasma cells – This option is incorrect because plasma cells are a derivative of B cells that release antibodies to fight infection. B cells originate and mature in the bone marrow, and are activated in response to antigens. Plasma cells, specifically, are B cells that circulate in blood and release specific, free antibodies that destroy antigens. Plasma cells are part of the adaptive immune response, making their response much slower than that of the innate immune system. Neutrophils, instead, are the first cells to attack foreign invaders. Option E. Memory cells – This option is incorrect because memory cells are derivatives of B cells that are used for “remembering” the antigen of a particular pathogen. B cells originate and mature in the bone marrow, and are activated in response to antigens. Memory cells, specifically, circulate the body and function to eliminate subsequent invasion by the same antigen. If a pathogen were to return, memory cells would recognize the antigen and mount a stronger and quicker immune response. Memory cells are part of the adaptive immune system, making their response much slower than that of the innate immune system. Neutrophils, instead, are the first cells to attack foreign invaders, and are by far the most abundant.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+16+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 17,
+    "question": {
+      "text": "Which of the following organisms is most abundant in a prairie biome?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Grass",
+        "percentage_selected": "(82.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Foxes",
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Birds",
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Gazelles",
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Vines",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Grass",
+    "analytics": {
+      "percent_correct": "82.2%",
+      "time_spent": "0 min, 18 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Biomes are regions with common environmental characteristics. In order to answer this question, we must first understand that a prairie biome is simply another name for a temperate grassland . An example of a temperate grassland is the North American prairie. Temperate grasslands can be characterized by their fertile soil, uneven seasonal rainfall, and seasonal droughts and fires. Since the most abundant organism that can be found in the prairie biome is grass, Option A is the correct answer. Another strategy to arrive at the correct answer for this question is understanding that grass is a primary producer . Primary producers are autotrophs that convert the sun's energy into chemical energy. Recall that primary producers are located at the lowest trophic level of the ecological pyramid and therefore belong to the trophic level that contains the most biomass within the whole ecological pyramid. (Biomass is the total mass of all living organisms.) So long as we are confident that grass is an organism that exists in the prairie biome, we can safely assume that grass is the most abundant organism of the answer choices listed, since it is the only answer choice that is a primary producer. CC BY 4.0",
+      "poe_text": "Option B. Foxes – This option is incorrect because while foxes do exist in the prairie biome, they are not the most abundant organism. Grass, instead, is the most abundant organism of the prairie biome which supplies energy to many of the other organisms that are found in the prairie biome. Option C. Birds – This option is incorrect because while birds do exist in the prairie biome, they are not the most abundant organism. Grass, instead, is the most abundant organism of the prairie biome which supplies energy to many of the other organisms that are found in the prairie biome. Option D. Gazelles – This option is incorrect because while gazelles do exist in the prairie biome, they are not the most abundant organism. Grass, instead, is the most abundant organism of the prairie biome which supplies energy to many of the other organisms that are found in the prairie biome. Option E. Vines – This option is incorrect because while vines are primary producers that occupy the lowest trophic level of the ecological pyramid with the most amount of biomass, vines are not found in prairie biomes. Vines, instead, are abundant in tropical rainforests. Tropical rainforests are a type of land biome that has a high but stable temperature and humidity, as well as heavy rainfall. Tropical rainforests are the most diverse biome. Epiphytes, plants that grow commensally on other plants, can be found in this biome. Since vines are epiphytes, they can be found in the tropical rainforest biome.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+17+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 18,
+    "question": {
+      "text": "Which of the following cells is the most differentiated?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Zygote",
+        "percentage_selected": "(12%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Neoblast",
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Lymphocyte",
+        "percentage_selected": "(52.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Blastocyst",
+        "percentage_selected": "(18.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Embryonic stem cell",
+        "percentage_selected": "(14%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Lymphocyte",
+    "analytics": {
+      "percent_correct": "52.9%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "Cell differentiation is a process by which cells become specialized in structure and function. Hence, early embryonic cells tend to be less differentiated, while cells that have continued through differentiation via embryonic development tend to be more differentiated. Once a sperm and ovum nuclei fuse, a diploid zygote forms. The zygote is the least differentiated embryonic cell. This zygote undergoes rapid cell division, also known as cleavage, to form a morula. A morula is a solid ball of ~8 cells. As cleavage continues, liquid fills the morula and pushes its cells outward to form a circular cavity surrounded by a single layer of cells. The single layer of cells is called a blastula and the circular cavity is called a blastocoel. A blastula has ~128 cells. As these cells undergo more cell division, the gastrula is formed. The gastrula contains three germ layers: ectoderm, mesoderm, and endoderm. These germ layers later give rise to their subsequent tissues. Cells continue to divide after gastrulation and differentiate into specific tissues and organs through a process called organogenesis. These specialized tissues are the most differentiated form of cells. Lymphocytes are primary agents of the immune response. These cells are leukocytes that originate in the bone marrow and concentrate in lymphatic tissues such as lymph nodes, thymus gland, and spleen. Unlike the other answer choices mentioned which are at early embryonic or undifferentiated states, lymphocytes are a highly differentiated cell. Since lymphocytes are specialized cells of the immune system that are most differentiated out of all the options, Option C. Lymphocyte is the correct answer.",
+      "poe_text": "Option A. Zygote – This option is incorrect because a zygote is a single diploid cell, resulting from the fusion of a sperm and an egg, that does not have a specialized function. Since a zygote requires more cell division to differentiate into cells with specialized structures and functions, it is not the most differentiated cell out of all the options. In fact, the zygote is one of the least differentiated types of cells, as it has yet to undergo any meaningful cellular differentiation. Option B. Neoblast – This option is incorrect because neoblasts are undifferentiated, pluripotent stem cells found in planarians. Planarians, also known as flatworms, belong to the domain Eukarya and kingdom Animalia. Due to their neoblasts, planarians have a remarkable capacity to regenerate. For example, when a planarian is cut in half, both halves will regenerate a fully functional organism. Since neoblasts are undifferentiated stem cells that have yet to develop into cells with specialized structures and functions, they are not the most differentiated cells out of all the options. Option D. Blastocyst – This option is incorrect because blastocysts are blastulas that are implanted into the endometrium. Cells of the blastocyst are pluripotent. Pluripotent stem cells can give rise to all tissue types, but not an entire organism. Since blastocysts consist of stem cells that have yet to develop into cells with specialized structures and functions, they are not the most differentiated cells out of all the options. Option E. Embryonic stem cell — This option is incorrect because embryonic stem cells are pluripotent cells that come from the inner cell mass of a blastocyst. Pluripotent stem cells can give rise to all tissue types, but not an entire organism. Since embryonic stem cells have the potential to develop into any type of cell in the body, they are not the most differentiated cells out of all the options.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 19,
+    "question": {
+      "text": "What is the best measure of fitness?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Length of time an organism’s offspring survives",
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Amount of care an organism provides its offspring",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Number of offspring that reach adulthood",
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Length of time an organism can survive",
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Number of fertile offspring that reach reproductive age",
+        "percentage_selected": "(78%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Number of fertile offspring that reach reproductive age",
+    "analytics": {
+      "percent_correct": "78%",
+      "time_spent": "0 min, 33 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Fitness is the quantitative representation of natural and sexual selection in evolutionary biology. It is important to note that the term “fitness” has a very different meaning in the context of evolution than in day-to-day life. In the context of evolution, the fitness of an organism is measured by the number of fertile offspring an organism can produce that can reach reproductive age. Always remember when asked about fitness, both conditions must be analyzed: the ability to produce fertile (viable) offspring and the ability of those offspring to survive and reach reproductive age. For example, if an organism produces a lot of offspring, but those offspring die during the early stages of life, the organism cannot be considered “fit”. Since the number of fertile offspring that reach reproductive age is the best description of the measure of fitness, Option E is the correct answer.",
+      "poe_text": "Option A. Length of time an organism’s offspring survives – This option is incorrect because while the length of time an organism’s offspring survives is one of the conditions that determine fitness of an organism, it is not the only condition that defines fitness. The number of fertile offspring and the ability of those offspring to survive and reach reproductive age are the best measures of fitness, and must be evaluated together to determine the overall fitness of an organism. This answer choice makes no mention as to whether the offspring are fertile (or how many offspring there are); hence, it is an insufficient measure of fitness. Option B. Amount of care an organism provides its offspring – This option is incorrect because when analyzing an organism’s fitness, it is important to take note of two conditions only: the number of fertile offspring that an organism produces and the ability of those offspring to survive and reach reproductive age. The amount of care an organism provides to its offspring is species-dependent and doesn’t always necessarily increase fitness. While the amount of parental care cannot be used as a measure of fitness, it can help us determine the parental strategy of a species (K-selected vs. R-selected). K-selected populations demonstrate strong parental care (but tend to produce fewer offspring), whereas R-selected populations demonstrate little to no parental care (but produce a higher quantity of those offspring). Option C. Number of offspring that reach adulthood – This option is incorrect because when measuring fitness, two conditions need to be analyzed: the ability of offspring to survive and reach sexual maturity and the number of offspring that are fertile. This option only describes the ability of the offspring to survive, but not the fertility of the offspring; hence, it is an insufficient measure of fitness. Option D. Length of time an organism can survive – This option is incorrect because while increasing the length of time an organism survives may increase fitness, if the organism doesn’t reach sexual maturity, there will be no effect because the organism will not be able to produce any offspring. An organism must be able to survive long enough to reach reproductive age (which was not directly stated in this answer choice) as well as produce a large number of fertile offspring in order to be considered fit. Fitness is a measurement based on those two conditions and since both of these conditions were not analyzed, this option is incorrect.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 20,
+    "question": {
+      "text": "In organisms such as birds and reptiles, the yolk sac contains nourishing yolk. However, in humans, the yolk sac serves a different purpose. Which of the following is its purpose in humans?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Uric acid storage",
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "First site of red blood cell synthesis",
+        "percentage_selected": "(56.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Site to excrete wastes",
+        "percentage_selected": "(16.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Site for white blood cell synthesis",
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Oxygen transport",
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "First site of red blood cell synthesis",
+    "analytics": {
+      "percent_correct": "56.9%",
+      "time_spent": "0 min, 18 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "The yolk sac is a membranous sac attached to an embryo formed by cells of the hypoblast next to the embryonic disk. The yolk sac is not a structure of the embryo itself, but rather, it is an extraembryonic structure used to support the embryo during development. Whether or not the embryo is a placental animal (mammals) or an egg-laying animal (birds and reptiles) will determine the function of the yolk sac. In egg-laying animals such as birds and reptiles, the embryos aren’t afforded a placenta for nourishment. For this reason, the yolk sac will provide the embryo with nutrients until the animal hatches out of the egg. The yolk sac first digests enclosed yolk (the nutrient-bearing portion of an egg), then transfers its nutrients to the embryo through blood vessels. In contrast to egg-laying animals, in placental animals, the yolk sac provides little nourishment to the embryo. This is because the placenta, instead, is the structure that provides nutrients to the embryo. The yolk sac in placental animals helps develop red blood cells. Since humans are placental animals and the yolk sac of placental animals functions as the first site of red blood cell synthesis, Option B is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Uric acid storage – This option is incorrect because uric acid storage is a function that is not performed by the yolk sac. It is instead performed by the allantois in egg-laying animals only. The allantois is a sac that buds off from the archenteron and eventually encircles the embryo, forming below the chorion. In egg-laying animals, the allantois initially stores waste products as uric acid, and later fuses with the chorion to form a membrane used for gas exchange. Option C. Site to excrete wastes – This option is incorrect because providing a site for waste excretion is a function that is not performed by the yolk sac. It is instead performed by the allantois in placental animals only. In placental animals, the allantois will transport waste from the fetus to the placenta for the mother to excrete. The allantois will also eventually become the umbilical cord, a structure that connects the embryo and the placenta. The umbilical cord helps transport gases, nutrients, and wastes. In adults, the allantois becomes the urinary bladder. Option D. Site for white blood cell synthesis – This option is incorrect because providing a site for white blood cell synthesis is a function that is not performed by the yolk sac. White blood cells are synthesized in the lymph nodes, spleen, and thymus gland. In placental animals, the yolk sac is the first site for red blood cell synthesis. Do not confuse this with white blood cell synthesis. Option E. Oxygen transport – This option is incorrect because the yolk sac does not function to transport oxygen. Oxygen gets transported across the placenta to the fetus through the umbilical cord. The umbilical cord, a structure that connects the embryo and the placenta, helps transport gases, nutrients, and wastes. The yolk sac is not responsible for any type of gas exchange.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+20+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 21,
+    "question": {
+      "text": "Which part of the sarcomere contains myosin only?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Z-Line",
+        "percentage_selected": "(9.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Thin filaments",
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "I-band",
+        "percentage_selected": "(14.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H-zone",
+        "percentage_selected": "(54.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "A-band",
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H-zone",
+    "analytics": {
+      "percent_correct": "54.5%",
+      "time_spent": "1 min, 28 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Sarcomeres are the functional units of striated muscle fibers (skeletal and cardiac muscles). These repeating units are what give striated muscles their striated appearance (long, thin strips). Sarcomeres are made up of filament proteins that slide past one another during contraction. For the purposes of the test, the two most important filament proteins are thin filaments (made up of actin polymers) and thick filaments (made up of myosin ). When the muscle contracts, these filaments slide past one another, a process known as the sliding filament theory. It is important to note that during contraction, the sarcomeres will shorten but the filaments remain the same length. It is simply the filaments sliding past one another that results in the shortening of a sarcomere. The image below illustrates a sarcomere. The Z-lines are the boundaries of a single sarcomere that anchors thin actin filaments. The M-line is the center of the sarcomere. The I-bands are the regions containing thin actin filaments only. The H-zone is the region containing thick myosin filaments only. The A-band is the length of a single thick myosin filament. It is important to note that the H-zone and I-band reduce during muscle contraction, while the A-band does not. Since the H-zone is the part of the sarcomere that contains myosin only, Option D . H-zone is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Z-line – This option is incorrect because the Z-line represents the border of an individual sarcomere that does not contain any myosin. The Z-line instead anchors the thin actin filaments. As the myofilaments slide over one another during muscle contraction, the Z-lines approach each other, leading to the shortening of the sarcomere. Option B. Thin filaments – This option is incorrect because thin filaments of sarcomeres are made up of actin polymers and do not contain any myosin. These actin polymers are anchored to the Z line(s), which is/are the border of the sarcomere. Thick filaments, instead, are made up of myosin polymers. Option C. I-band – This option is incorrect because the I-band is a region containing thin actin filaments only and therefore does not contain any myosin. It is important to note that the I-bands reduce during muscle contraction, because overlap between the myosin and actin filaments increases. Option E. A-band – This option is incorrect because the A-band contains both myosin and actin. The A-band is the length of a single thick myosin filament within a sarcomere – however, this length also overlaps with actin. It is important to note that when a muscle contracts, the A-band does not change in length, as the myosin filament itself does not shorten. Only the H-zone and I-band will decrease in length due to the increased overlap between myosin and actin filaments.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+21+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 22,
+    "question": {
+      "text": "What structure does the telencephalon develop into?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Cerebellum",
+        "percentage_selected": "(20.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Thalamus",
+        "percentage_selected": "(13.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Cerebrum",
+        "percentage_selected": "(40.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Pons",
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Brainstem",
+        "percentage_selected": "(17.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cerebrum",
+    "analytics": {
+      "percent_correct": "40.1%",
+      "time_spent": "0 min, 26 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The vertebrate brain consists of the forebrain, midbrain, and hindbrain. Each of these regions develops from a specific subdivision of the embryonic brain. The forebrain is the largest and most important brain region. The forebrain develops from the telencephalon and the diencephalon . The telencephalon gives rise to the cerebrum. The cerebrum functions to coordinate movement and regulate body temperature. The diencephalon gives rise to the hypothalamus, thalamus, and pineal gland. The hypothalamus is responsible for functions including water balance, blood pressure regulation, body temperature regulation, and many more. The thalamus relays sensory information between the spinal cord and the cerebral cortex. The pineal gland secretes melatonin to maintain circadian rhythms: a natural cycle of the body that repeats roughly every 24 hours. The midbrain functions as a relay center for visual and auditory impulses, as well as motor control. The midbrain develops from the mesencephalon . The hindbrain is the posterior region of the brain. The hindbrain develops from the metencephalon and the myelencephalon . The metencephalon gives rise to the pons and cerebellum. The pons is a relay center that allows communication between the cerebral cortex and the cerebellum. The cerebellum maintains balance, hand-eye coordination, timing of rapid movements, and motor skills. The myelencephalon gives rise to the medulla oblongata. The medulla oblongata regulates breathing, heart rate, and gastrointestinal activity. Since the telencephalon develops into the cerebrum, Option C. Cerebrum is the correct answer.",
+      "poe_text": "Option A. Cerebellum – This option is incorrect because the metencephalon develops into the cerebellum. The cerebellum is a part of the hindbrain that maintains balance, hand-eye coordination, timing of rapid movements, and motor skills. Option B. Thalamus – This option is incorrect because the diencephalon develops into the thalamus. The thalamus is a part of the forebrain that relays sensory information between the spinal cord and the cerebral cortex. Option D. Pons – This option is incorrect because the metencephalon develops into the pons. The pons is a part of the hindbrain that functions as a relay center for communication between the cerebral cortex and the cerebellum. Option E. Brainstem – This option is incorrect because the brainstem develops from multiple different parts of the embryonic brain. The brainstem includes the midbrain, pons, and medulla oblongata. The mesencephalon gives rise to the midbrain. The midbrain functions as a relay center for visual and auditory impulses, as well as motor control. The metencephalon gives rise to the pons. The pons is a part of the hindbrain that functions as a relay center for communication between the cerebral cortex and the cerebellum. The myelencephalon gives rise to the medulla oblongata. The medulla oblongata is a part of the hindbrain that regulates breathing, heart rate, and gastrointestinal activity.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+22+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 23,
+    "question": {
+      "text": "A defect in which structure of a plant would prevent an ovule from being produced?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Stigma",
+        "percentage_selected": "(17%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Pistil",
+        "percentage_selected": "(53.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Stamen",
+        "percentage_selected": "(20.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Sepal",
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Petal",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Pistil",
+    "analytics": {
+      "percent_correct": "53.4%",
+      "time_spent": "0 min, 33 secs",
+      "category": "Diversity of Life"
+    },
+    "category": "Diversity of Life",
+    "explanation": {
+      "concept_text": "Angiosperms are flower-bearing plants that are the dominant land plant form. Examples of angiosperms include fruits, maple, oaks, grass, etc. The flower is the reproductive structure of an angiosperm and the major structures of the flower include the pistil , stamen , and the petals . The pistil is the female reproductive structure, and it is composed of three parts: the ovary , the style , and the stigma . The stigma is a sticky landing site for pollen. The style is the tube that leads from the stigma down to the ovary. The ovary lies at the base of the style and is the site where ovules are produced. Hence, the ovary is also referred to as the “egg-bearing” structure of an angiosperm. Recall that ovules contain the female gamete of the plant which are fertilized by pollen to develop into a seed! Since the ovary produces ovules and the ovary is a component of the pistil, a defect in the pistil would prevent an ovule from being produced; therefore, Option B. Pistil is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Stigma – This option is incorrect because while the stigma is a part of the pistil, it is not responsible for the production of ovules. The stigma, instead, is a sticky landing site for pollen. Once pollen lands on the stigma, it travels through the style to reach the ovary. The pollen then fertilizes the ovules, causing the development of a seed. Option C. Stamen – This option is incorrect because the stamen is the male reproductive structure of angiosperms. Stamens are composed of the anther and filament. The anther is the chamber where pollen develops. Hence, the anther is also referred to as the ”pollen-bearing” structure of an angiosperm. The filament is a long stalk that supports the anther. Since the stamen is a male reproductive structure, it cannot be responsible for producing an ovule. Option D. Sepal – This option is incorrect because the sepal is part of the calyx of a flower that encases and protects the flower bud. The sepal may also function to attract pollinators. Since the sepal is not a part of the female reproductive structure, it cannot be responsible for producing an ovule. Option E. Petal – This option is incorrect because petals are a component of the flower that is not a part of any reproductive structure. Hence, petals cannot be responsible for producing an ovule. The primary function of petals is to attract pollinators.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+23+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 24,
+    "question": {
+      "text": "Where are embryonic stem cells derived from?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Blastocyst",
+        "percentage_selected": "(47.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Bone marrow",
+        "percentage_selected": "(19.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Zygote",
+        "percentage_selected": "(13.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Ovaries",
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Placenta",
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Blastocyst",
+    "analytics": {
+      "percent_correct": "47.1%",
+      "time_spent": "0 min, 25 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Once a sperm fertilizes an egg to form a zygote , the zygote undergoes cleavage. Cleavage is the rapid cell division of the zygote without cell growth. The zygote then becomes a morula . The morula is a solid ball of ~8 cells. As cell division continues, liquid fills the morula and pushes its cells outward to form a circular cavity surrounded by a single layer of cells. The fluid-filled cavity is called a blastocoel, and the layer of cells is called a blastula . The blastula has ~128 cells. In humans, the blastula is called the blastocyst when it implants into the endometrium. Stem cells are undifferentiated or partially differentiated cells that can develop into a variety of cell types. There are four types of stem cells. Totipotent stem cells can give rise to any and all human cells, and even form an entire functional organism. The cells of the morula are totipotent. Pluripotent stem cells can give rise to all tissue types, but not an entire organism. The cells of the blastocyst are pluripotent. Multipotent stem cells can give rise to a limited range of cells within a tissue type. Unipotent stem cells can only give rise to a single cell type. Embryonic stem cells specifically refer to those derived from the inner cell mass of the blastocyst. These cells are pluripotent; hence, they are capable of regenerating. It is important to note that pluripotent cells are advantageous over totipotent stem cells from a research perspective. While totipotent stem cells can give rise to any and all human cells, they can also give rise to extra embryonic tissues that are less useful. Since embryonic stem cells are pluripotent cells isolated from the blastocyst, Option A. Blastocyst is the correct answer.",
+      "poe_text": "Option B. Bone marrow – This option is incorrect because the bone marrow does not contain pluripotent embryonic stem cells. There are two types of bone marrow: yellow and red. The yellow bone marrow contains adipose cells for fat storage. The red bone marrow contains blood stem cells for hemopoiesis, also known as red blood cell development. While the red bone marrow does contain stem cells, these stem cells are multipotent because they can only develop into blood cells. Hence, blood stem cells of the red bone marrow are not embryonic stem cells. Option C. Zygote – This option is incorrect because embryonic stem cells are not isolated from the zygote. In fact, embryonic stem cells are extracted from the inner cell mass of the blastocyst. The zygote is a diploid cell that results from the fusion of a sperm and an egg. Hence, the zygote consists of a single cell that is difficult to isolate due to its location. In order to isolate embryonic stem cells, the zygote must undergo cleavage to become a morula, then a blastocyst. Furthermore, since a zygote is totipotent, it is not an embryonic stem cell by definition (embryonic stem cells refer to the inner cell mass of the blastocyst, a later embryonic stage than the zygote). Option D. Ovaries – This option is incorrect because ovaries are a structure of the female reproductive system that produce eggs. Since eggs are haploid cells that must be fused with sperm to form a diploid zygote, it does not contain any embryonic stem cells that can be isolated. Option E . Placenta – Thi s option is incorrect because the placenta is a blend of maternal and embryonic tissue that functions to exchange gases, nutrients, and wastes. The placenta produces hormones for maintaining pregnancy. If implantation occurs, the placenta secretes chorionic gonadotropin (hCG) in order to maintain the corpus luteum. By the end of the first trimester, the placenta reaches full development and secretes its own estrogen and progesterone, lowering hCG levels. The placenta also serves as a barrier to protect the fetus against harmful substances, but simultaneously allows beneficial substances to pass through. For example, maternal antibodies such as IgG are able to cross the placenta and enter the fetus.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 25,
+    "question": {
+      "text": "An inability to produce lymphocytes would cause what type of disease?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Autoimmune disease",
+        "percentage_selected": "(21.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Hypothermia",
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Immunodeficiency",
+        "percentage_selected": "(73.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Down Syndrome",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Hemophilia",
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Immunodeficiency",
+    "analytics": {
+      "percent_correct": "73.2%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Lymphocytes are leukocytes (white blood cells) that function as primary agents of the immune response. These cells originate in the bone marrow and concentrate in lymphatic tissue such as the lymph nodes, thymus gland, and spleen. There are three main types of lymphocytes: B cells, T cells, and natural killer (NK) cells. B cells are antibody-producing lymphocytes that are activated in response to antigens. These cells originate and mature in the bone marrow. The plasma membrane of B cells contain antigen-receptor antibodies. When antigens bind to these receptors, B cells proliferate and produce daughter B cells. There are two main types of B cells: plasma cells and memory cells. Plasma cells are B cells that circulate in the blood and release specific, free antibodies in response to antigens. Memory cells are long-lived B cells that do not release antibodies in response to immediate antigen invasion. These cells, instead, circulate the body and proliferate until there is a subsequent invasion by the same antigen. T cells are lymphocytes that check molecules displayed by self cells presenting non-self antigens. These cells originate in the bone marrow, but mature in the thymus. When T cells are exposed to non-self cells, it can divide to produce four kinds of cells: cytotoxic T cells, helper T cells, suppressor T cells, and memory T cells. Cytotoxic T cells are killer cells that recognize and destroy by releasing perforin: a protein that can puncture cells. Helper T cells stimulate the activation of B cells, cytotoxic T cells, and suppressor T cells. Suppressor T cells carry out negative feedback in the immune system and memory T cells are similar in function to memory B cells. NK cells are lymphocytes that attack virus-infected cells or tumors. Unlike B cells and T cells, these cells are a part of innate immunity; hence, they are not involved in specific attacks against antigens. If a patient is unable to produce lymphocytes (or lack other types of immune cells), their immune system will fail to recognize and fight off infections. Since immunodeficiency describes a state in which an immune system is unable to defend the body from infectious diseases, Option C. Immunodeficiency is the correct answer.",
+      "poe_text": "Option A. Autoimmune disease – This option is incorrect because an autoimmune disease is not caused by an absence or lack of lymphocytes. Autoimmune diseases, instead, occur when the immune system is unable to distinguish between healthy self-cells and infected non-self cells. Hence, the immune system attacks the body’s own uninfected, healthy tissue. Some examples of autoimmune diseases include lupus, rheumatoid arthritis, and type 1 diabetes. Option B. Hypothermia – This option is incorrect because hypothermia is not caused by an absence or lack of lymphocytes. Hypothermia is a condition that occurs when core body temperature drops below 95°F (35°C) due to exposure to cold conditions. While hypothermia does impair the immune system and inhibits inflammation, the condition itself is not caused by a problem in the immune system. Option D. Down syndrome – This option is incorrect because Down syndrome is not caused by an absence or lack of lymphocytes. Down syndrome is instead caused by nondisjunction. Nondisjunction is the failure of one or more chromosome pairs or chromatids to separate normally during cell division. Down syndrome, specifically, is caused by a nondisjunction in chromosome 21. As a result, individuals with Down syndrome have a third copy of chromosome 21 in their genome. Hence, Down syndrome is also referred to as trisomy 21. Option E. Hemophilia – This option is incorrect because hemophilia is not caused by an absence or lack of lymphocytes. Hemophilia is a X-linked recessive condition that is caused by mutation to the genes associated with blood clotting. Individuals with hemophilia are unable to form blood clots because they lack blood-clotting proteins, also known as clotting factors.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 26,
+    "question": {
+      "text": "Who was responsible for the ecological theory of catastrophism?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Hooke",
+        "percentage_selected": "(15.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Darwin",
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Cuvier",
+        "percentage_selected": "(68.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Mendel",
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Hardy-Weinberg",
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cuvier",
+    "analytics": {
+      "percent_correct": "68.8%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Catastrophism is a theory that states that Earth‘s geography and life were shaped by catastrophic events such as natural disasters. Georges Cuvier , a French naturalist that established the theory of catastrophism, believed that populations were shaped by mass extinctions caused by catastrophes. He believed that populations were made up of random organisms that survived catastrophes and populated the area. This theory was at odds with the theory of gradualism. The theory of gradualism suggests that evolution occurs by the gradual accumulation of small changes, rather than rapid, large-scale changes. Since catastrophism is an ecological theory developed by Cuvier, Option C is the correct answer.",
+      "poe_text": "Option A. Hooke – This option is incorrect because Robert Hooke contributed to the development of the cell theory, not the theory of catastrophism. While observing cork under a microscope, Hooke discovered box-like cavities and described them as ”cells”. Hooke’s discovery later led to the development of the cell theory: the theory that every living organism is made up of cells and cells are the smallest structural unit of life. Option B. Darwin – This option is incorrect because Charles Darwin developed the theory of natural selection, not the theory of catastrophism. Natural selection, also called the ”survival of the fittest”, suggests that allele frequencies increase or decrease in order to adapt to the environment. In other words , organisms that are more suited to the given environment will survive and pass down their genes to future generations. Darwin also developed the theory of descent with modification. Descent with modification occurs via natural selection. Darwin thought that over time and generations, traits providing reproductive advantage become more common within a population. Option D. Mendel – This option is incorrect because Gregor Mendel discovered the basic principles of heredity, not the theory of catastrophism. Through extensive experiments with pea plants, Mendel provided the foundations to modern genetics. For example, he discovered that individuals inherit one allele from the male parent and another allele from the female parent, and randomly pass down these alleles to the next generation. Option E. Hardy-Weinberg – This option is incorrect because Hardy and Weinberg developed the basic principles of population genetics, not the theory of catastrophism. The Hardy-Weinberg equilibrium describes a state in which allele frequencies remain constant within a population. In order for a population to be in Hardy-Weinberg equilibrium, the population cannot undergo mutations, natural selection, and gene flow. Furthermore, the population must be large in order to decrease the effects of genetic drift, and demonstrate random mating to decrease the chances of any allele from changing in frequency.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 27,
+    "question": {
+      "text": "All of the following processes involve negative feedback EXCEPT for one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Testosterone production following injection of extra testosterone",
+        "percentage_selected": "(31.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Control of blood calcium levels",
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Population levels of a predator and prey species",
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Temperature regulation of the human body",
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Density independent population control",
+        "percentage_selected": "(48.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Density independent population control",
+    "analytics": {
+      "percent_correct": "48.2%",
+      "time_spent": "0 min, 31 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Negative feedback describes the biological response that brings conditions back to their normal or homeostatic state. On the other hand, positive feedback describes an action that intensifies a condition so that it is driven beyond its normal limits. Density-dependent population control is the state in which a population-limiting event becomes more intense as population density increases. Examples include competition for resources, spread of disease, parasites, predation, and toxic effects of waste products. These controls are subject to negative feedback. When a population attains a high density, density-dependent factors cause a decrease in population size, bringing the population density back to “normal”. Density-independent population control is the state in which a population-limiting event occurs independently of the density of the population. Examples include natural disasters or big temperature changes. These events affect populations equally, regardless of the initial size of the populations. In other words, a natural disaster or a drastic temperature change will impact a big population the same way it will impact a smaller population. Since density-independent population control does not involve negative feedback measures that function to bring a population back to its “normal” state – as they are not subject to increased intensity as population size increases, and do not provide a negative feedback to a more stable state but instead affect populations indiscriminately - Option E is the correct answer.",
+      "poe_text": "Option A. Testosterone production following injection of extra testosterone – This option is incorrect because testosterone production following injection of extra testosterone is an example of negative feedback. The extra testosterone functions to inhibit GnRH production of the hypothalamus, restricting the production of FSH and LH by the anterior pituitary. Since LH is a hormone that stimulates the testes to produce testosterone, the lack of LH will lead to a decrease in testosterone production. Option B. Control of blood calcium levels – This option is incorrect because the control of blood calcium levels is an example of negative feedback. When blood calcium levels decline, the parathyroid gland releases the parathyroid hormone. The parathyroid hormone raises blood calcium levels by stimulating osteoclasts to resorb the bone matrix, causing calcium to be released from the bones. On the other hand, when blood calcium levels increase, the thyroid gland releases calcitonin. Calcitonin decreases blood calcium levels by stimulating osteoblasts to build bone by using up the calcium in the blood. Option C. Population levels of a predator and prey species – This option is incorrect because population levels of a predator and prey species demonstrate negative feedback. Predator and prey populations cycle through time. When predator population increases, they hunt out their prey too effectively and subsequently have no food left. As the predators begin to die off, their prey now have a chance to thrive again, causing an increase in prey population. When prey population becomes too high, the predators have access to an abundant food source and can easily hunt their prey, causing an increase in predator population. Option D. Temperature regulation of the human body – This option is incorrect because the temperature regulation of the human body is an example of negative feedback. The human body uses negative feedback loops to maintain its temperature at a constant level. When body temperature falls, the body tries to retain heat through measures such as shivering and constricting blood vessels. These measures help bring the body temperature back up to normal. When body temperature rises, the body tries to lose its heat to the environment through measures such as sweating and dilating blood vessels. These measures help bring the body temperature back down to normal.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 28,
+    "question": {
+      "text": "Which of the following is true regarding the modern cell theory?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "All cells derive from pre-existing cells created using genetic information stored in the nucleus",
+        "percentage_selected": "(18.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The cell is the basic unit of structure, function, and organization in all organisms",
+        "percentage_selected": "(74.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "All cells require water for survival",
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "All living things are composed of only cells",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Multicellular organisms are composed of unicellular organisms",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The cell is the basic unit of structure, function, and organization in all organisms",
+    "analytics": {
+      "percent_correct": "74.3%",
+      "time_spent": "0 min, 33 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "There are three fundamental theories of biology that you need to understand for your test: the Modern Cell Theory, the RNA World Hypothesis, and the Central Dogma of Genetics. Here are several components of the Modern Cell Theory : Since the Modern Cell Theory states that the cell is the basic unit of structure, function, and organization in all organisms, Option B is the correct answer.",
+      "poe_text": "Option A. All cells derive from pre-existing cells created using genetic information stored in the nucleus – This option is incorrect because while it is true that all cells derive from pre-existing cells that contain hereditary information, not all cells have a nucleus. In fact, prokaryotic cells lack membrane-bound organelles and therefore, do not have a nucleus. Prokaryotic cells, instead, store genetic information in the nucleoid. The nucleoid is an irregular-shaped region within prokaryotic cells that contain all or most of the cell’s genetic material. Option C. All cells require water for survival – This option is incorrect because while water is essential for the survival of the majority of cells, it is not one of the tenants of the modern cell theory. Option D. All living things are composed of only cells – This option is incorrect because while all living organisms are composed of one or more cells, many organisms are also composed of non-living essential components. For example, the adult human body is made up of up to 60% water. Option E. Multicellular organisms are composed of unicellular organisms – This option is incorrect because multicellular organisms are composed of multiple cells, not unicellular organisms. The vast majority, if not all of the cells in a multicellular organism are not unicellular organisms. For example, while the red blood cell is composed of one cell, the red blood cell is not a unicellular organism. Red blood cells exist to assist the metabolic function of the host organism, but the red blood cell itself does not have the characteristics of a fully functional organism. Examples of unicellular organisms include bacteria, protozoa, and some types of algae.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 29,
+    "question": {
+      "text": "Failure to produce bile would result in an inability to properly process which of the following substances?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Protein",
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Trypsin",
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Glucagon",
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Fat",
+        "percentage_selected": "(76.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Carbohydrates",
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Fat",
+    "analytics": {
+      "percent_correct": "76.5%",
+      "time_spent": "0 min, 18 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Bile is a dark green to yellowish brown fluid produced by the liver of most vertebrates, that aids in the digestion of lipids in the small intestine. Bile contains a yellow pigment called bilirubin, formed by the breakdown of erythrocytes in the liver. In humans, bile is produced continuously by the liver and is stored in the gall bladder. From here, bile can be sent to the duodenum of the small intestine via the common bile duct. Bile is secreted from the gall bladder in response to a hormone known as cholecystokinin (CCK). CCK is secreted by the small intestine in response to fat digestates. CCK stimulates the gall bladder to release bile and the pancreas to release its digestive enzymes. CCK also decreases the motility of the stomach in order to allow more time for fat digestion. The main purpose of bile is to emulsify the fatty food that is entering the small intestine as chyme. By doing so, the surface area of these fatty foods increases, which effectively enhances the breakdown/hydrolysis of fats via pancreatic lipase within the small intestine. These hydrolyzed fats can then be absorbed and transported wherever it is needed. Furthermore, since bile increases the absorption of fats, it plays an important role in absorbing fat-soluble substances such as vitamins A, D, E, and K. Since the failure to produce bile will lead to a difficulty in breaking down and absorbing fats that enter the digestive system, Option D. Fat is the correct answer.",
+      "poe_text": "Option A. Protein – This option is incorrect because bile is responsible for the emulsification of fat, not the digestion of protein. Enzymes such as pepsin, trypsin, and chymotrypsin are responsible for the digestion of proteins. Pepsin is secreted by the chief cells of the stomach, initially in the form of pepsinogen. Pepsinogen gets converted into pepsin by the low pH of the stomach. Trypsin and chymotrypsin are secreted by the pancreas into the duodenum of the small intestine, initially in the form of trypsinogen and chymotrypsinogen. These zymogens become activated by an enzyme called enteropeptidase, leading to the digestion of protein. Option B. Trypsin – This option is incorrect because bile is responsible for the emulsification of fat, not the digestion of trypsin. In fact, bile does not have an effect on trypsin. Trypsin is a digestive enzyme that is released by the pancreas as trypsinogen, which gets converted into trypsin by a separate enzyme known as enteropeptidase. Trypsin is responsible for the digestion of proteins. Option C. Glucagon – This option is incorrect because bile is responsible for the emulsification of fat, not the digestion of glucagon. In fact, bile does not have an effect on glucagon. Glucagon is a hormone that is responsible for the maintenance of blood sugar levels. Glucagon is produced by alpha cells of the pancreas and is secreted to increase blood sugar levels by stimulating the liver to convert glycogen into glucose. Glucagon also stimulates gluconeogenesis, the synthesis of glucose, in the liver. Option E. Carbohydrates – This option is incorrect because bile is responsible for the emulsification of fat, not the digestion of carbohydrates. Carbohydrates are broken down by salivary and pancreatic amylase. When food enters the mouth, salivary amylase breaks down starch into maltose by hydrolyzing its glycosidic bonds. The pancreas later secretes pancreatic amylase into the duodenum of the small intestine, which also functions to break down starch into maltose.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 30,
+    "question": {
+      "text": "Which of the following involves DNA being used to synthesize RNA?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Transcription",
+        "percentage_selected": "(84.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Translation",
+        "percentage_selected": "(11.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "DNA replication",
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Photosynthesis",
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Meiosis",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Transcription",
+    "analytics": {
+      "percent_correct": "84.9%",
+      "time_spent": "0 min, 24 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "Transcription serves to create RNA molecules from a DNA template in the nucleus. The process of transcription can be divided into three steps: initiation, elongation, and termination. Initiation is the process in which RNA polymerase attaches to the promoter region of the DNA and unzips the DNA into two strands. A promoter region for transcription often contains a repeating sequence of A (adenine) and T (thymine) nucleotides called the TATA box. Initiation is followed by elongation . Once the DNA is separated into two strands, RNA polymerase continues to unzip DNA and assembles RNA nucleotides using one strand of DNA as a template. Hence, only one strand is transcribed, while the other strand functions to protect against degradation. Lastly, termination occurs when RNA polymerase reaches a special sequence, often a repeated sequence of A (adenine) nucleotides in eukaryotes. Since transcription is the process in which DNA is used to synthesize RNA, Option A is the correct answer.",
+      "poe_text": "Option B. Translation – This option is incorrect because translation is the process in which RNA is used to synthesize polypeptides. Translation begins when a ribosomal subunit attaches to the 5’ end of mRNA, and a tRNA attaches to the start sequence of mRNA (AUG). Once translation is initiated, tRNAs continue to bind to the mRNA sequence, creating a chain of peptide bonds. When the ribosome encounters the stop codon (UAG, UAA, or UGA), the polypeptide and ribosome secrete a release factor that breaks the bond between the tRNA and the final amino acid of the polypeptide. Option C. DNA replication – This option is incorrect because DNA replication is the process in which DNA is copied to produce two identical DNA molecules. DNA is replicated via semiconservative replication. In other words, one of the two strands of DNA is always old (comes from the parent DNA), while the other strand is always new (newly formed during DNA replication). In order to initiate DNA replication, an enzyme called helicase unwinds the double helix. Once the double-stranded DNA is unzipped, an enzyme called DNA polymerase synthesizes the new strand of DNA. Option D. Photosynthesis – This option is incorrect because the process of photosynthesis does not involve DNA nor RNA. Photosynthesis, a process carried out by the chloroplast of plant cells, harnesses light energy in order to synthesize glucose. During the light-dependent reactions of photosynthesis, the chlorophyll of chloroplasts absorbs light energy, allowing electrons to be excited and passed onto higher energy levels. This movement of electrons generate ATP and NADPH. During the “dark” reactions of photosynthesis, also known as the Calvin Cycle, the products of the light reaction are utilized and carbon dioxide is fixed to ultimately synthesize glucose. Option E. Meiosis – This option is incorrect because meiosis is a type of cell division that occurs exclusively in gametes. Gametes are haploid male or female germ cells that combine to form a diploid zygote. Meiosis occurs in two steps: meiosis I and meiosis II. Meiosis I involves the separation of homologous chromosomes, whereas meiosis II involves the separation of sister chromatids. While meiosis I produces 2 diploid daughter cells, meiosis II produces 4 haploid daughter cells.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 31,
+    "question": {
+      "text": "Which of the following is a feature of a neuron?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Medulla",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Sphincter",
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Duodenum",
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Sarcoplasm",
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Dendrite",
+        "percentage_selected": "(94.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Dendrite",
+    "analytics": {
+      "percent_correct": "94.4%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The neuron is a highly-specialized, functional unit of the nervous system. Neurons usually consist of several dendrites, a single-branched axon, and a cell body. Dendrites are branched projections at one end of the neuron. They function to receive information from other neurons and transfer it to the cell body. The cell body , also known as the soma, contains the nucleus of the neuron. The cell body is connected to the axon at the axon hillock, where action potentials are generated. The axon transfers impulses away from the cell body, towards the terminal end of the neuron. Aside from these structures, the neuron contains low stores of glycogen and oxygen, and rely on the blood supply for these nutrients. Since dendrites are an essential feature of the neuron that receives information from surrounding neurons, Option E is the correct answer.",
+      "poe_text": "Option A. Medulla – This option is incorrect because the medulla is not a feature of the neuron. The medulla oblongata (commonly abbreviated as just ‘medulla) is a structure at the base of the brain that is responsible for the regulation of breathing, heart rate, and gastrointestinal activity. The term ”medulla” also appears in the excretory system in the context of the adrenal glands. The adrenal medulla is the inner portion of the adrenal gland, located on top of each kidney. The adrenal medulla releases epinephrine and norepinephrine as a part of the ”fight or flight” response. These hormones stimulate the conversion of glycogen to glucose, and increase blood flow to the brain as well as other metabolic activities. Option B. Sphincter – This option is incorrect because sphincters are not a feature of the neuron. Sphincters are ring-shaped muscles that contracts or relaxes to close or open a passage of the body. For example, sphincters are commonly found in the digestive system in order to control the movement of food. After food passes through the mouth and the esophagus, it enters the stomach through the lower esophageal/cardiac sphincter. Once the food gets converted to an acidic mixture called chyme, the chyme enters the small intestine via the pyloric sphincter. Option C. Duodenum – This option is incorrect because the duodenum is not a feature of the neuron. The duodenum is the first portion of the small intestine, responsible for the breakdown of starches and proteins as well as other remaining food types. The majority of digestion occurs in the duodenum. Option D. Sarcoplasm – This option is incorrect because the sarcoplasm is not a feature of the neuron. The sarcoplasm refers to the cytoplasm of striated muscle cells. Similar to the regular cytoplasm, the sarcoplasm contains organelles, ATP, enzymes, and other essential components for metabolic activity.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 32,
+    "question": {
+      "text": "Which of the following would be classified as a labile cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Neurons of the brain",
+        "percentage_selected": "(14.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Skeletal muscles",
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Epithelium of the skin",
+        "percentage_selected": "(52.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Sinoatrial node of the heart",
+        "percentage_selected": "(12.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Osteocytes of the bone",
+        "percentage_selected": "(13.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Epithelium of the skin",
+    "analytics": {
+      "percent_correct": "52.6%",
+      "time_spent": "0 min, 22 secs",
+      "category": "Genetics"
+    },
+    "category": "Genetics",
+    "explanation": {
+      "concept_text": "Labile cells are cells that continuously multiply and divide throughout life. Unlike labile cells, there are inactive cells that rest in the G 0 phase of the cell cycle. It is important to note that these cells are still functional; they are simply not dividing. There are two types of inactive cells: quiescent and senescent. Quiescent cells are cells that temporarily rest in the G 0 phase until they are reactivated to divide again. Senescent cells are cells that are permanently in the G 0 phase because they are either too old or too damaged/degraded to divide. The skin is made up of three layers: epidermis, dermis, and hypodermis. The epidermis is the outermost layer of the skin. This layer consists of superficial epithelial tissue that relies on the dermis for oxygen and nutrients. The epidermis is also divided into five layers: stratum corneum, stratum lucidum, stratum granulosum, stratum spinous, and stratum basale. Stratum basale, specifically, is the deepest layer of the skin that contains stem cells that divide to produce epidermal skin cells called keratinocytes. As these keratinocytes rise to the top layer, they accumulate keratin and die by losing their cytoplasm, nucleus, and/or other organelles. Once they reach the outermost layer of the body, they slough off. Since epithelial skin cells constantly die and slough off, it is essential that stem cells of the stratum basale continuously multiply and divide to maintain a sufficient number of epithelial skin cells. Since cells in the epithelium of the skin can be classified as labile cells that undergo steady cell division, Option C is the correct answer.",
+      "poe_text": "Option A. Neurons of the brain – This option is incorrect because neurons of the brain do not continuously multiply and divide throughout life. Once an organism is born, its neurons do not divide and instead live the entire lifespan of the organism. Option B. Skeletal muscles – This option is incorrect because skeletal muscle cells do not continuously multiply and divide throughout life. Skeletal muscle cells divide only until an organism reaches adulthood. Once an organism reaches adulthood, these cells exit the G 1 phase to enter the G 0 phase. The G 0 phase is the “resting“ stage of the cell cycle where the cell is neither dividing nor preparing for cell division. Hence, during adulthood, while skeletal muscle cells can grow in size (hypertrophy), they are unable to grow in number through cell division. Option D. Sinoatrial node of the heart – This option is incorrect because cardiac cells do not continuously multiply and divide throughout life. Cardiac cells divide only until an organism reaches adulthood. Once an organism reaches adulthood, these cells exit the G 1 phase to enter the G 0 phase. The G 0 phase is the “resting“ stage of the cell cycle where the cell is neither dividing nor preparing for cell division. Hence, during adulthood, cardiac cells stop growing in number through cell division. Despite this, cardiac muscles can still grow in size like skeletal muscle cells. Option E. Osteocytes of the bone – This option is incorrect because osteocytes of the bone do not continuously multiply and divide throughout life. They originate from osteoblasts, but eventually become embedded within the bone and lose their ability to go through cell division.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 33,
+    "question": {
+      "text": "What would a plant do to counteract excess loss of water?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Less photosynthesis",
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Close stomata",
+        "percentage_selected": "(88.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Increase transpiration",
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Inhibit ethylene release",
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Decrease root growth",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Close stomata",
+    "analytics": {
+      "percent_correct": "88.4%",
+      "time_spent": "0 min, 29 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "Stomata are small pores on the epidermis of plant leaves. These pores are controlled by surrounding guard cells . When potassium ions diffuse into guard cells, water moves inwards, causing the cells to expand. Due to the irregular thickness and radial shape of the guard cell, the expansion of these cells causes stomata to open. On the other hand, when potassium ions diffuse out of guard cells, water moves outwards, causing the cells to shrink. Once guard cells shrink, they are no longer able to maintain their shape, causing stomata to close. The opening and closing of stomata affect gas exchange, transpiration, photosynthesis, and many other processes. When stomata are closed, carbon dioxide is not available and the plant cannot photosynthesize. However, when stomata are open, carbon dioxide can enter the leaf for photosynthesis, but the plant risks desiccation from transpiration . Transpiration refers to water loss through evaporation. Hence, in order to prevent an excess loss of water, the opening and closing of stomata are highly controlled. For instance, high temperatures will cause stomata to close, since water evaporates more rapidly under warmer conditions. Since a plant closes its stomata to counteract the excess loss of water through transpiration, Option B. Close stomata is the correct answer.",
+      "poe_text": "Option A. Less photosynthesis – This option is incorrect because reduced photosynthesis does not counteract the excess loss of water. Photosynthesis is the process in which plants take light energy from the sun to synthesize glucose. While water is used during photosynthesis, a plant only uses a small fraction of its water to carry out the process; the rest is lost through transpiration. Hence, in order to conserve water, it is much more effective to control transpiration, rather than photosynthesis. Furthermore, reduced photosynthesis will eventually cause the plant to perish because plants rely on photosynthesis to produce glucose for energy. Option C. Increase transpiration – This option is incorrect because increased transpiration will lead to the excess loss of water, rather than counteracting it. Transpiration is water loss through evaporation. Hence, if a plant increases its rate of transpiration, an excessive amount of water will leave the plant through its stomata, causing the plant to eventually desiccate. Option D. Inhibit ethylene release – This option is incorrect because ethylene does not have an effect on water loss. Ethylene is a hormone that promotes the ripening of fruit, production of flowers, and leaf abscission/apoptosis. Hence, if ethylene is not produced, the fruit of the plant will take longer to ripen, the flowers will take longer to bloom, and the leaves will take longer to deteriorate and drop. These changes will neither increase nor decrease water loss of the plant. Option E. Decrease root growth – This option is incorrect because while an underdeveloped root will hinder the plant from absorbing a sufficient amount of water from the soil, it will not have an effect on water loss. Plants do not lose water through their roots; they instead lose water through the stomata on their leaves. Hence, changes in root growth will neither increase nor decrease water loss of the plant.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 34,
+    "question": {
+      "text": "The weight of newborns in a population was observed over time. Initially, the majority of babies were either very heavy or very light. Over time, the mean of the newborn weight did not change but less heavy and light babies were born. Which form of natural selection took place?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Disruptive",
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Bottleneck",
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Directional",
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Balancing",
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Stabilizing",
+        "percentage_selected": "(75.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Stabilizing",
+    "analytics": {
+      "percent_correct": "75.9%",
+      "time_spent": "0 min, 36 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Natural selection is an evolutionary theory that was proposed by Charles Darwin. Natural selection refers to the heritable changes in allele frequency in response to the environment. In essence, favorable alleles are ones that increase the rate of survival and will be selected for within a population. On the other hand, unfavorable alleles are ones that decrease the rate of survival and will be selected against within a population. Individuals with the most “fit” alleles will be able to survive and pass their genes on to their offspring. There are three general types of natural selection: stabilizing selection, directional selection, and disruptive selection. Stabilizing selection is the favoring of intermediate traits. The bell curve favors the intermediate and traits that are at the extremes are selected against. Directional selection is the favoring of traits at one extreme of the range. Traits at the opposite end of the extreme are selected against. Disruptive selection is the favoring of extreme traits, while common or intermediate traits are selected against. A graph of each type of selection is displayed below, with the red curve representing the population distribution before, and the blue curve representing the distribution after the type of selection has taken place. In the scenario in question, the original population consisted of newborns that were very heavy or very light. This represents both ends of the extreme. Over time, we can see that the mean weight of newborns did not change, but less heavy and light babies were being born. In other words, an intermediate weight was becoming more common within the population. Since the intermediate weight is being favored in this scenario and stabilizing selection is the favoring of the intermediate trait, Option E. Stabilizing is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Disruptive – This option is incorrect because disruptive selection occurs when the environment favors extreme or unusual traits, while selecting against common traits. In the scenario in question, the population is favoring intermediate traits (intermediate weight) and selecting against extreme traits (very light or very heavy weights). Option B. Bottleneck – This option is incorrect because the bottleneck effect is not one of the three types of natural selection. A bottleneck effect occurs when there is a drastic decrease in a population, leading to a decrease in the gene pool of that population. The bottleneck effect can occur as a result of a natural disaster, aggressive hunting practices, or the destruction of a population’s habitat. Option C. Directional – This option is incorrect because directional selection occurs when the environment favors traits at one end of the extreme, selecting against intermediate traits or traits at the other end of the extreme. In the scenario in question, the population is favoring intermediate traits (intermediate weight) and selecting against extreme traits (very light or very heavy weights). Option D. Balancing – This option is incorrect because balancing selection refers to the maintenance of alleles within a population which leads to the maintenance of genetic diversity. In the scenario in question, we can see that traits at both ends of the extreme are being selected against, while intermediate traits are being favored. Since the favoring of the intermediate trait is causing a decline in genetic diversity within the population, this scenario does not demonstrate balancing selection.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+34+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 35,
+    "question": {
+      "text": "Which type of genetic material is made in the nucleolus?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "tRNA",
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "mRNA",
+        "percentage_selected": "(21.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "rRNA",
+        "percentage_selected": "(70.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "cDNA",
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "rRNA",
+    "analytics": {
+      "percent_correct": "70.1%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Cell & Molecular Biology"
+    },
+    "category": "Cell & Molecular Biology",
+    "explanation": {
+      "concept_text": "The nucleolus is a dense region contained within the nucleus of eukaryotic cells. The nucleolus plays a crucial role in ribosome biogenesis. Recall that ribosomes are organelles that are responsible for protein translation, which is the conversion of messenger RNA (mRNA) into a protein. Ribosomes are composed of two ribosomal subunits. These subunits are made from ribosomal RNA (rRNA) and proteins. The ribosomal RNA is produced within the nucleus, and the proteins enter the nucleus via nuclear pores. Once the ribosomal RNA and proteins are in the nucleoplasm, they assemble into their respective ribosomal subunit. Once the subunits are assembled, they exit the nucleus and assemble into functional ribosomes within the cytosol. Since rRNA is produced in the nucleolus, Option C is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. tRNA – This option is incorrect because while transfer RNA (tRNA) is manufactured in the nucleus, it is not synthesized within the nucleolus. tRNA is a type of RNA molecule that is involved in protein translation. tRNA is responsible for bringing amino acids, the monomeric subunit of proteins, to the ribosome so the ribosome can link the amino acids together to make a polypeptide chain. Option B. mRNA – This option is incorrect because while messenger RNA (mRNA) is manufactured in the nucleus, it is not synthesized within the nucleolus. mRNA is synthesized via DNA transcription. DNA transcription is the conversion of DNA into mRNA that is later translated into proteins. Option D. cDNA – This option is incorrect because complementary DNA (cDNA) is not synthesized within the nucleolus. In fact, cDNA can only be produced by certain viruses or by scientists in a molecular biology lab for study. cDNA is made using reverse transcriptase, an enzyme that creates a complementary DNA sequence from a single-stranded RNA template.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+35+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 36,
+    "question": {
+      "text": "During embryonic development, what develops directly above the notochord?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Archenteron",
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Mesoderm",
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Blastocoel",
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Endoderm",
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Neural tube",
+        "percentage_selected": "(75.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Neural tube",
+    "analytics": {
+      "percent_correct": "75.2%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Developmental Biology"
+    },
+    "category": "Developmental Biology",
+    "explanation": {
+      "concept_text": "Neurulation is the embryonic developmental process by which the notochord induces the development of the neural tube from the cells of the ectoderm. Recall that the notochord is derived from the mesoderm, but the neural tube is derived from the ectoderm. The notochord is formed by the cells along the dorsal surface of the mesoderm. While the notochord itself provides support in lower chordates, the vertebrae of higher chordates are formed from nearby cells of the mesoderm. During neurulation, the notochord stimulates cells of the ectoderm to thicken, resulting in the formation of the neural plate . As a part of the ectoderm layer, the neural plate lays directly above the notochord of the mesoderm layer. After the neural plate is developed, this plate will fold and become the neural fold . This fold will continue to fold until it becomes a tube. This tube is known as the neural tube . The neural tube will end up developing into the central nervous system (brain and spinal cord). Since the neural tube develops directly above the notochord, Option E is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Archenteron – This option is incorrect because the archenteron is a structure of the gastrula. The archenteron results from the invagination of the primitive streak during gastrulation. The archenteron is the center cavity of the gastrula that is completely surrounded by endoderm cells, and will eventually develop into the gut tube. Option B. Mesoderm – This option is incorrect because the mesoderm is one of the three embryonic germ layers of the gastrula. The mesoderm is the middle layer of the three. Recall that the notochord is derived from cells of the mesoderm. The notochord induces the development of the spinal cord from cells of the ectoderm which lie directly above the mesoderm. Aside from the notochord, the mesoderm gives rise to the musculoskeletal system, circulatory system, lymphatic system, dermis, and other structures. Option C. Blastocoel – This option is incorrect because the blastocoel is a hollow cavity located inside of the blastula. The blastula is an early embryonic structure consisting of ~128 cells called blastomeres. A blastula has not yet developed into the three embryonic germ layers. Option D. Endoderm – This option is incorrect because the endoderm is the deepest of the three germ layers of the gastrula. The endoderm lies just deep to the mesoderm, the layer that the notochord is derived from. The endoderm gives rise to the epithelial lining of the digestive, respiratory, and urinary tracts; parts of the liver, pancreas, gall bladder, thyroid and parathyroid glands, and thymus.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+33+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 37,
+    "question": {
+      "text": "Volcanoes are an important part of certain ecosystems. What type of archaea would be found here?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Halophile",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Thermophile",
+        "percentage_selected": "(95%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Aquatic",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Methanogen",
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Thermophile",
+    "analytics": {
+      "percent_correct": "95%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "Extremophiles are a group of archaea that live in extreme environments. Thermophiles , specifically, are sulfur-based chemoautotrophs that live in extremely hot places. These organisms are capable of surviving in hot environments due to their membrane composition. Unlike bacteria, archaea can have branched and saturated hydrocarbons that have ether linkages to glycerol groups. This unique membrane composition provides these organisms with thermal stability, but also prevents them from adapting to fluctuating temperatures. Hence, thermophiles may be able to live in hot environments like volcanoes, but would not be able to survive if the surroundings cooled down significantly. Since thermophiles are archaea that are capable of living in extremely hot environments such as volcanoes, Option B is the correct answer.",
+      "poe_text": "Option A. Halophile – This option is incorrect because volcanoes are not inhabited by halophiles. Halophiles are extremophiles that live in environments with high salt concentration. Most halophiles are aerobic and heterotrophic, while others are anaerobic and photosynthetic. Halophiles can be found in environments such as salt lakes and saline soils. For example, halophiles can be found in the Dead Sea, a lake with extremely high salinity. Option C. Aquatic – This option is incorrect because aquatic organisms refer to organisms that live in water for all or most of their lifetime. While there are aquatic extremophiles, volcanoes are not aquatic environments and therefore cannot be inhabited by aquatic extremophiles. Option D. Methanogen – This option is incorrect because volcanoes are not inhabited by methanogens. Methanogens are a group of archaea that produce methane (CH 4 ) as a byproduct of obtaining energy from H 2 to fix CO 2 . These organisms are obligate anaerobes. Methanogens typically live in swamps and marshes, but can also be found in dead and decaying matter.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 38,
+    "question": {
+      "text": "Which of the following structures is the pacemaker of the heart?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Interventricular septum",
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Purkinje fibers",
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Sympathetic vagus nerve",
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Sinoatrial node",
+        "percentage_selected": "(78.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Atrioventricular node",
+        "percentage_selected": "(12.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Sinoatrial node",
+    "analytics": {
+      "percent_correct": "78.2%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "The sinoatrial (SA) node is the pacemaker of the heart. The sinoatrial node is located within the upper wall of the right atrium and regulates the rate at which the heart beats. The SA node is a group of specialized cardiac muscle cells that initiates by contracting both atria. The contraction of the atria sends blood into both ventricles. The electrical impulse originating from the SA node is transferred to the atrioventricular node (AV node) located on the floor of the right atrium. The AV node will add a delay before sending the impulse to the next structure, the bundle of His . The purpose of this brief delay is to ensure that the ventricles and the atria do not contract at the same time. It is important to allow all the blood from the atria to empty into the ventricles before ventricular contraction. Once the impulse has reached the bundle of His, which is located in the interventricular septum, the impulse will be directed to the Purkinje fibers, which are found in the walls of each ventricle. Once the impulse has reached the Purkinje fibers, the ventricles will contract. Since the sinoatrial node is the pacemaker of the heart and regulates the rate at which the heart beats, Option D is the correct answer. CC BY 4.0",
+      "poe_text": "Option A. Interventricular septum – This option is incorrect because the interventricular septum is simply a wall of tissue that separates the left and right ventricles which contain the oxygenated blood and deoxygenated blood respectively. The interventricular septum is not the pacemaker of the heart. Option B. Purkinje fibers – This option is incorrect because the Purkinje fibers transmit a nervous signal from the bundle of His, which is located in the interventricular septum, to the ventricles. This ensures a simultaneous, coordinated contraction of the left and right ventricles. The Purkinje fibers are not the pacemaker of the heart. Option C. Sympathetic nerves – This option is incorrect because sympathetic nerves are responsible for innervating the sinoatrial (SA) node when the sympathetic nervous system is activated. Recall that the sympathetic nervous system is responsible for the “fight or flight” response and will increase heart rate. The sympathetic nerves are not the pacemaker of the heart. Aside from increasing heart rate, sympathetic nerves also increase blood pressure and the generation of energy. Sympathetic nerves, on the other hand, inhibit digestion, urination, and salivary secretion. Option E. Atrioventricular node – This option is incorrect because the atrioventricular (AV) node is not the pacemaker of the heart. The AV node is located on the floor of the right atrium. After the sinoatrial node has initiated contraction of the atria, the electrical impulse is sent to the AV node. The AV node will add a brief delay before sending the impulse to the bundle of His. This brief delay is to ensure that the ventricles and the atria do not contract simultaneously.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+38+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 39,
+    "question": {
+      "text": "The following graph represents four species all occupying a similar ecosystem. Based on the graph, which of the following statements is true?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/Biology/Test+2/Question+39+Top+Figure+1.jpg"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Several of the species demonstrate a mutualistic relationship",
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "None of the species increased in population size overall",
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Two of the species occupy the same niche",
+        "percentage_selected": "(86.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Temperature was the limiting factor for growth",
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "All species share a common ancestor",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Two of the species occupy the same niche",
+    "analytics": {
+      "percent_correct": "86.6%",
+      "time_spent": "1 min, 39 secs",
+      "category": "Evolution, Ecology, & Behavior"
+    },
+    "category": "Evolution, Ecology, & Behavior",
+    "explanation": {
+      "concept_text": "In the given graph, we can observe that the rabbit population (expressed in red) declines as the deer population (expressed in blue) increases. Through this, we can deduce that rabbits and foxes exhibit a type of interspecific competition. Interspecific competition refers to the interactions between members of different species. Since the members are competing against each other for the same resources, interspecific competition becomes necessary if access to the resource is limited. In this case, we can predict that the deer population grew in size because it had better access to the shared resource. On the other hand, the rabbit population shrunk in size because the deer depleted them of the shared resource. This shared resource can also be described as a niche. A niche includes all the biotic and abiotic resources in the environment used by an organism. When an organism is said to “occupy” a niche, certain resources are consumed or certain qualities of the environment are changed by the presence of the organism. No two species can occupy the same niche indefinitely because all resources are finite. Since the deer and rabbits are most likely exhibiting interspecific competition by occupying the same niche, Option C is the correct answer.",
+      "poe_text": "Option A. Several of the species demonstrate a mutualistic relationship – This option is incorrect because none of the species exhibit a mutualistic relationship. Mutualism is a type of symbiosis in which the relationship is beneficial to both species. Since a mutualistic relationship benefits both species involved, the populations of both species must be increasing. However, there are no pairs of species on the given graph that are growing in population size together. Option B. None of the species increased in population size overall – This option is incorrect because the deer population (expressed in blue) is demonstrating a significant increase in overall population size. Option D. Temperature was the limiting factor for growth – This option is incorrect because while temperature could have been a limiting factor for growth, it is impossible to come to such conclusion based on the given graph. The graph does not indicate the temperature of the environment and whether the species were affected by it. We would need additional information about the species and their environment in order to come to a conclusion on the limiting factors of growth. Option E . All species share a common ancestor – This option is incorrect because while the species could share a common ancestor, it is impossible to come to such conclusion based on the given graph. The graph does not indicate ancestry of the species. We would need additional information about ancestry through a phylogenetic tree or cladogram.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 2,
+    "question_number": 40,
+    "question": {
+      "text": "The pancreas releases enzymes used in digestion. Which of the following pancreatic enzymes is used to cleave peptide chains?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Chymotrypsin",
+        "percentage_selected": "(42.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Nuclease",
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Amylase",
+        "percentage_selected": "(14.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Pepsin",
+        "percentage_selected": "(38.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Maltose",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Chymotrypsin",
+    "analytics": {
+      "percent_correct": "42.6%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Structure & Functions of Systems"
+    },
+    "category": "Structure & Functions of Systems",
+    "explanation": {
+      "concept_text": "Recall that peptide bonds are the bonds that link adjacent amino acids together to create long polypeptide chains (proteins). There are a couple of enzymes that the pancreas secretes to cleave these peptide bonds for digestion and absorption by the body. These two enzymes are known as chymotrypsin and trypsin. Chymotrypsin and trypsin are both secreted from the pancreas as zymogens. Zymogens are the inactive precursor of an enzyme. Chymotrypsin gets secreted as chymotrypsinogen and trypsin gets secreted as trypsinogen. As chyme (a mixture of food and acidic gastric juice) enters the small intestine, cells of the small intestine will secrete cholecystokinin, a hormone that, among other functions, will signal the pancreas to release its digestive enzymes. Chymotrypsinogen and trypsinogen are secreted from the pancreas and converted into chymotrypsin and trypsin via enteropeptidase , which is an enzyme released from glands of the small intestine in response to the entrance of chyme. Because chymotrypsin is the only answer choice that represents a pancreatic enzyme used to cleave peptide bonds, Option A is the correct answer.",
+      "poe_text": "Option B. Nuclease – This option is incorrect because nucleases are enzymes that cleave phosphodiester bonds that are found within DNA and RNA. While nucleases are released from the pancreas, they do not cleave peptide bonds found within proteins. Option C. Amylase – This option is incorrect because while amylases are enzymes released by both the salivary glands in the mouth and by the pancreas, amylases are responsible for the breakdown of carbohydrates. Pancreatic amylase does not cleave the peptide bonds found within proteins. Option D. Pepsin – This option is incorrect because pepsin is secreted from the chief cells of the stomach, not the pancreas. Pepsin is secreted as pepsinogen and converted into pepsin, when in the presence of stomach acid. While pepsin does cleave peptide bonds found within proteins, pepsin is not secreted from the pancreas. Option E. Maltose – This option is incorrect because maltose is not an enzyme. Maltose is a disaccharide which is formed from the joining of two glucose monomers via an alpha-1,4-glycosidic bond.",
+      "images": []
+    }
+  }
+]

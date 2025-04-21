@@ -1,0 +1,598 @@
+[
+  {
+    "question_number": 1,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "In a chemical reaction that releases heat and increases the work done by the gas on the surroundings, which of the following statements is true regarding the relationship between ΔE, q, and w ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "ΔE < 0, q = 0, w < 0",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "ΔE > 0, q < 0, w > 0",
+        "images": [],
+        "percentage_selected": "(14.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "ΔE > 0, q < 0, w < 0",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "ΔE < 0, q < 0, w < 0",
+        "images": [],
+        "percentage_selected": "(62.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "ΔE < 0, q < 0, w > 0",
+        "images": [],
+        "percentage_selected": "(13.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "ΔE < 0, q < 0, w < 0",
+    "analytics": {
+      "percent_correct": "62.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfer and work , we will need to know the formula for the change in internal energy and work: Δ E = change in internal energy, q = heat, w = work w = work, P = pressure (always positive), Δ V = change in volume ( V final – V initial ) In this case, since heat is released, we know that q is negative ( q < 0 ). We also know that when the work is done by the gas (system) on the surrounding, w is negative ( w < 0 ). This is because when work is being done by the gas on the surroundings, the volume of the gas expands. We know that the formula for work is w = - PΔV . During the expansion of a gas, ΔV is positive, which makes work ( w ) to be negative. Since both w and q are both negative, and Δ E = q + w , Δ E must be negative as well. Therefore, in a chemical reaction that releases heat and increases the work done by the gas on the surrounding, the resulting relationship is ΔE < 0, q < 0, w < 0. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "Which of the following statements correctly describe the change in internal energy, work, and heat?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "When there is no heat exchange, there is no change in internal energy",
+        "images": [],
+        "percentage_selected": "(13.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "When there is no change in volume, the internal energy cannot change",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "When there is no change in internal energy, work is always done on the system",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "When the gas inside a piston expands, the work done on the system is positive",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "When the change of volume is negative, work is done on the system",
+        "images": [],
+        "percentage_selected": "(68.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "When the change of volume is negative, work is done on the system",
+    "analytics": {
+      "percent_correct": "68.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfer and work , we will need to know the formula for the change in internal energy and work: Δ E = change in internal energy, q = heat, w = work w = work, P = pressure (always positive), Δ V = change in volume ( V final – V initial ) When work is done on the system by having external forces or pressure, ΔV is negative because the V final is lower than V initial . When ΔV is negative, then the work ( w ) is positive because w = - PΔV . Therefore, the correct option is when the change of volume is negative, work is done on the system. Option A. When there is no heat exchange, there is no change in internal energy Incorrect. The formula for the change in internal energy is ΔE = q + w . The formula implies that the internal energy (∆E ) of a system can change even if there is no heat exchange ( q = 0). It can change due to work done on or by the system. Option B. When there is no change in volume, the internal energy cannot change Incorrect. The formula for the change in internal energy is ΔE = q + w . If there is no change in volume ( ΔV = 0), it means no work is done by or on the system ( w = 0). Therefore, the equation simplifies to ΔE = q . In this case, the change in internal energy ( ∆E ) is equal to the heat transfer ( q ). Therefore, when there is no change in volume ( ΔV = 0), the internal energy can change by the heat transfer. Option C. When there is no change in internal energy, work is always done on the system Incorrect. The formula for the change in internal energy is ΔE = q + w . We can see that if there is no change in internal energy, change in work can be equal in value and opposite to heat exchanged. Therefore, we cannot say that work is always done on the system when there is no change in internal change because work can also be done by the system as well. Option D. When the gas inside a piston expands, the work done on the system is positive Incorrect. When the gas inside a piston expands, the work done on the system is negative. This is because the gas is doing work on the surrounding, and energy is leaving the system. Also, we know that the formula for work is w = - PΔV . During the expansion of a gas, ΔV is positive, which makes work ( w ) to be negative. During the compression of a gas, ΔV is negative, which makes work ( w ) to be positive. Option E. When the change of volume is negative, work is done on the system Correct. When work is done on the system by having external forces or pressure, ΔV is negative because the V final is lower than V initial . When ΔV is negative, then the work ( w ) is positive because w = - PΔV . This implies that work is being done on the system. Therefore, the answer is E.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "What is the constant pressure in atm applied to the system if a gas is compressed by 4 L and the work done on the gas is 5 L•atm?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-5/4",
+        "images": [],
+        "percentage_selected": "(27.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-4/5",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4/5",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5/4",
+        "images": [],
+        "percentage_selected": "(63.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "5/4",
+    "analytics": {
+      "percent_correct": "63.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfers and work , we need to use the formula for work: w = work, P = pressure (always positive), Δ V = change in volume ( V final – V initial ) First, we need to calculate for the constant pressure in atm, knowing that the change in volume is -4 L ( ΔV = -4), and the work done on the gas is 5 L•atm ( w = 5): I f a gas is compressed by 4 L and the work done on the gas is 5 L•atm, the constant pressure in atm applied to the system is 5/4. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+3+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+3+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "What is the work done on or by the gas in L•atm if the initial volume of a gas is 3.00 L, the final volume is 6.00 L, and the process occurs under a constant pressure of 1.50 atm?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-4.50",
+        "images": [],
+        "percentage_selected": "(91.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-3.00",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1.50",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3.00",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4.50",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-4.50",
+    "analytics": {
+      "percent_correct": "91.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfers and work , we need to use the formula for work: w = work, P = pressure (always positive), Δ V = change in volume ( V final – V initial ) STEP 1: First, we need to calculate for the change in volume, knowing that the initial volume of a gas is 3.00 L ( V initial = 3.00), and the final volume of a gas is 6.00 L ( V final = 6.00): STEP 2: Then, we need to calculate for the work done on or by the system, knowing that the change in volume is 3.00 L ( ΔV = 3.00), and the constant pressure applied to the system is 1.50 atm ( P = 1.50): I f the initial volume of a gas is 3.00 L, the final volume is 6.00 L, and the process occurs under a constant pressure of 1.50 atm, the work done by the gas is -4.50. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+4+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+4+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+4+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "What is the change in the system's internal energy if a piston releases 2,000 J of heat to the surroundings and performs 500 J of work on the surroundings?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-2,500",
+        "images": [],
+        "percentage_selected": "(69.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-2,000",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-1,500",
+        "images": [],
+        "percentage_selected": "(13.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1,500",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2,500",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-2,500",
+    "analytics": {
+      "percent_correct": "69.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfers and work , we need to use the formula for the change in internal energy: Δ E = change in internal energy, q = heat, w = work First, we need to calculate for the change in system’s internal energy , knowing that heat is -2,000 J ( q = -2,000), and work is -500 J ( w = -500) : If a piston releases 2,000 J of heat to the surroundings and performs 500 J of work on the surroundings, the change in the system's internal energy is -2,500 J. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "If 1,000 J of work was done by gas in a system, and the net change in internal energy of the system is 2,500 J, what is the amount of heat exchanged by the system?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3,500 J released by the system",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3,500 J absorbed by the system",
+        "images": [],
+        "percentage_selected": "(70%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "2,500 J released by the system",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1,500 J absorbed by the system",
+        "images": [],
+        "percentage_selected": "(17.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1,500 J released by the system",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3,500 J absorbed by the system",
+    "analytics": {
+      "percent_correct": "70%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfers and work , we need to use the formula for the change in internal energy: Δ E = change in internal energy, q = heat, w = work We need to calculate the amount of heat exchanged by the system, knowing that the change in internal energy is 2,500 J ( ΔE = 2,500), and work is -1,000 J ( w = -1,000) : If 1,000 J of work was done by gas in a system, and the net change in internal energy of the system is 2,500 J, the amount of heat exchanged by the system is 3,500 J. Since the sign of the heat is positive, we know that the heat is absorbed by the system. Therefore, the option that correctly describes the heat is 3,500 J absorbed by the system. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+6+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+6+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "If 1,000 J of heat is gained from the surrounding, and the change in internal energy of the system is 3,000 J, what is the amount of work exchanged by the system?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1,000 J of work is done on the system",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1,000 J of work is done by the system",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2,000 J of work is done on the system",
+        "images": [],
+        "percentage_selected": "(81.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "2,000 J of work is done by the system",
+        "images": [],
+        "percentage_selected": "(11.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4,000 J of work is done by the system",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2,000 J of work is done on the system",
+    "analytics": {
+      "percent_correct": "81.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfers and work , we need to use the formula for the change in internal energy: Δ E = change in internal energy, q = heat, w = work We need to calculate the amount of work exchanged by the system, knowing that the heat is 1,000 J ( q = 1,000 J), and the change in internal energy of the system is 3,000 J ( ΔE = 3,000): In this case, we need to know that the work is positive (2,000 J), which implies that the work is done on the system. Therefore, the option that correctly describes the work exchanged by the system is 2,000 J of work is done on the system. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+7+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "If the work produced by a piston is > 0 L•atm , the volume of gas",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "is not changed.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "is expanded.",
+        "images": [],
+        "percentage_selected": "(14.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "is compressed.",
+        "images": [],
+        "percentage_selected": "(82%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "cannot be determined.",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "fluctuates.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "is compressed.",
+    "analytics": {
+      "percent_correct": "82%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfers and work , we need to know the formula for work: w = work, P = pressure (always positive), Δ V = change in volume ( V final – V initial ) In this case, we need to know that the work formula is w = - PΔV . Since the work produced by a piston is larger than zero, the change in volume must be negative. Since ΔV = V final – V initial , this means V final is smaller than V initial . For the change in volume to be negative, the volume of gas is compressed. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "In a car engine system, a gas is contained in a cylinder and a piston is used to compress or expand the gas. If the piston applies a pressure of 2 atm and the resulting work is 8 L•atm, which of the following correctly describes the change in the cylinder’s volume?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Expanded by 4 L",
+        "images": [],
+        "percentage_selected": "(10.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Compressed by 4 L",
+        "images": [],
+        "percentage_selected": "(86.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "No change",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Expanded by 8 L",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Compressed by 8 L",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Compressed by 4 L",
+    "analytics": {
+      "percent_correct": "86.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfers and work , we need to use the formula for work: w = work, P = pressure (always positive), Δ V = change in volume ( V final – V initial ) We can calculate for the work done on or by the gas, knowing that the pressure used on the gas is 2 atm ( P = 2 atm), and the work is 8 L•atm ( w = 8): If the piston applies a pressure of 2 atm and the resulting work is 8 L•atm, the change in the cylinder’s volume is -4 L. This means the V ­­­­ final is smaller than V initial . Therefore, the cylinder’s volume is compressed by 4 L. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work",
+    "question": {
+      "text": "A gas is compressed by 3.00 L from a constant pressure of 1.50 atm. If 100 J of heat was released during this process, what was the internal energy change of the gas? (1 L•atm = 101.3 J)",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-100 + (1.50)(3)(101.3) J",
+        "images": [],
+        "percentage_selected": "(67.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-100 – (1.50)(3)(101.3) J",
+        "images": [],
+        "percentage_selected": "(16%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "100 – (1.50)(3)(101.3) J",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "100 – (1.50)(3) J",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "-100 + (1.50)(3) J",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-100 + (1.50)(3)(101.3) J",
+    "analytics": {
+      "percent_correct": "67.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heat transfers and work , we need to use the formula for the change in internal energy and work: Δ E = change in internal energy, q = heat, w = work w = work, P = pressure (always positive), Δ V = change in volume ( V final – V initial ) STEP 1: First, we can calculate for the work done on or by the system, knowing that the constant pressure of 1.50 atm is applied ( P = 1.50), and the gas is compressed by 3.00 L ( ΔV = - 3.00): STEP 2: Then, we can convert the unit of the work from L•atm to J, knowing that 1 L•atm = 101.3 J: Which can be simplified as: STEP 3: Then, we can calculate for the change in internal energy, knowing that the J of heat is released during the process ( q = -100), and the work done on the system is w = (1.50)(3.00)(101.3): In this case, the internal energy change of the gas is -100 + (1.50)(3)(101.3) J. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+10+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+1+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Heat+Transfers+and+Work%3A+Heat+Transfers+and+Work/Question+10+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100be6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100bdf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001007268d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010076d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007ae7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100761a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100babc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100baef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b8ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100baf7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b7cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100bcf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100bcfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100bdecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Heat Transfer and Work"
+  }
+]

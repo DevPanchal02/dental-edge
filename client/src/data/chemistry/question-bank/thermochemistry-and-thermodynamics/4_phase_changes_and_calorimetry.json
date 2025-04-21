@@ -1,0 +1,703 @@
+[
+  {
+    "question_number": 1,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "How much heat, in kJ, is needed to melt a 200.0 g ice cube at 0 o C given the heat of fusion for H 2 O is 330 kJ•kg -1 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "33 kJ",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "66 kJ",
+        "images": [],
+        "percentage_selected": "(82.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "99 kJ",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "330 kJ",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "660 kJ",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "66 kJ",
+    "analytics": {
+      "percent_correct": "82.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy during a phase change. The equation is: q = heat energy (J), m = mass (kg), ΔH = heat of fusion/vaporization (J•kg -1 ) STEP 1: First, we are given several pieces of information from the question: STEP 2: Next, since the heat of fusion (ΔH fus ) is in units of kJ•kg -1 , we must convert the mass of water from g to kg: STEP 3: Finally, we are looking for the amount of heat (q) required to melt the ice cube. Using the equation for calculating heat of fusion, we can solve for q: Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+4.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "How much heat, in kJ, is required to vaporize 5 moles of N 2( l ) (ΔH vap = 200,000 J•kg -1 )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2.8 kJ",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "5.6 kJ",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10 kJ",
+        "images": [],
+        "percentage_selected": "(9.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "28 kJ",
+        "images": [],
+        "percentage_selected": "(79.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "56 kJ",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "28 kJ",
+    "analytics": {
+      "percent_correct": "79.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy during a phase change. The equation is below: q = heat energy (J), m = mass (kg), ΔH = heat of fusion/vaporization (J•kg -1 ) STEP 1: First, we are given several pieces of information from the question: STEP 2: Next, since the heat of fusion (ΔH vap ) is in units of J•kg -1 , we must convert the moles of nitrogen (N 2 ) into its equivalent mass: STEP 3: Finally, we are looking for the amount of heat (q) required to vaporize liquid nitrogen (N 2 ). Using the equation for calculating heat of fusion, we can solve for q: STEP 4: Since all the answer options are provided in kJ, we can convert the change in enthalpy (ΔH vap ) from J to kJ: Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+9.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "Which of the following statements describes the change in heat energy when 100.0 g of water is heated to boiling temperature from 80 o C, given the specific heat capacity of water is 4.18 J•g -1 • o C -1 ? There is no phase change in this process.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "8.36 J of heat is released by the water",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4,180 J of heat is released by the water",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "8,360 J of heat is released by the water",
+        "images": [],
+        "percentage_selected": "(11.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4.18 kJ of heat is absorbed by the water",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "8.36 kJ of heat is absorbed by the water",
+        "images": [],
+        "percentage_selected": "(74%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "8.36 kJ of heat is absorbed by the water",
+    "analytics": {
+      "percent_correct": "74%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy. The equation is below: q = heat energy (J), m = mass (g), C = specific heat capacity (J•g -1 • o C -1 ), ΔT = change in temperature ( o C) STEP 1: First, we are given several pieces of information from the question: To calculate the change in temperature, we simply subtract the final boiling point for water of 100 o C by the initial temperature of 80 o C: STEP 2: Next, we are looking for the heat required for this process (q). Using the equation for heat capacity, we can solve for q: Since the q value is positive , this means that the heat energy is absorbed by the water. We can see that 8.36 kJ of heat is absorbed by the water (Option E). Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "20.0 g of glucose is combusted in a bomb calorimeter (C = 4.0 kJ• o C -1 ), resulting in a temperature increase from 30 o C to 50 o C. What is the heat of combustion in kilojoules per gram of glucose?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-4",
+        "images": [],
+        "percentage_selected": "(59%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-8",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-80",
+        "images": [],
+        "percentage_selected": "(27%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "-400",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "-800",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-4",
+    "analytics": {
+      "percent_correct": "59%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy of a sample in a bomb calorimeter. The equation is below: q = heat energy (kJ), C = heat capacity of the calorimeter (kJ• o C -1 ), ΔT = change in temperature ( o C) STEP 1: First, we are given several pieces of information from the question: To calculate the change in temperature, we simply subtract the final temperature of the calorimeter of 50 o C by the initial temperature of 30 o C: STEP 2: Next, we can determine the heat change that occurred in the calorimeter. Using the equation for calculating heat in a calorimeter, we can solve for q: STEP 3: We know that the heat released by the sample is equal to the amount of heat absorbed by the calorimeter. Therefore, we can use the equation below, where the negative sign indicates one side releases heat, and the other side absorbs heat: STEP 4: Finally, we are looking for the heat of combustion in kilojoules per gram of glucose, so we must divide the amount of heat energy by the mass of glucose, which is given in the question as 20.0 g: As we can see, -4 kJ of heat is released by each gram of glucose. The negative sign confirms that our calculations are correct, as it indicates that energy was released . Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+9.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "36.0 g of methane (CH 4 ) is combusted in a bomb calorimeter, resulting in a temperature increase from 53 o C to 85 o C. If the heat capacity of the bomb calorimeter is 3.2 kJ• o C -1 , what is the heat of combustion in kJ•mol -1 of methane?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(27.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(18%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(50.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "50.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy of a sample in a bomb calorimeter. The equation is below: q = heat energy (kJ), C = heat capacity of the calorimeter (kJ• o C -1 ), ΔT = change in temperature ( o C) STEP 1: First, we are given several pieces of information from the question: To calculate the change in temperature, we simply subtract the final temperature of the calorimeter of 85 o C by the initial temperature of 53 o C: STEP 2: Next, we can determine the heat change that occurred in the calorimeter. Using the equation for calculating heat in a calorimeter, we can solve for q: STEP 3: We know that the heat released by the sample is equal to the amount of heat absorbed by the calorimeter. Therefore, we can use the equation below to calculate the heat of the reaction: STEP 4: Since we are looking for the heat of combustion in kJ•mol -1 of methane, we first determine the number of moles of methane: STEP 5: Finally, we divide the amount of heat energy by the moles of methane to determine the heat of combustion in kJ•mol -1 of methane: Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+4+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+9.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+10.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+5+Solution+4.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "A solid piece of gold (C = 0.1 J•g -1 • o C -1 ) with a mass of 100 g is heated to 35 o C and is added to a 26 g sample of copper at 80 o C, resulting in both elements having a final temperature of 55 o C. What is the specific heat capacity in J•g -1 • o C -1 of the copper?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(77.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "77.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy. The equation is below: q = heat energy (J), m = mass (g), C = specific heat capacity (J•g -1 • o C -1 ), ΔT = change in temperature ( o C) STEP 1: First, we are given several pieces of information from the question about gold (Au) and copper (Cu): To calculate the change in temperature for each metal, we simply subtract the final temperature of the metal by the initial temperature of the metal: STEP 2: Next, we know that the amount of heat lost by one substance is the same amount of heat gained by the other substance. We can first solve for the heat (q) gained by the gold to determine the amount of heat lost by the copper: STEP 3: Finally, we can solve for the specific heat capacity (C) of the copper: Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+10.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+9.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "A sample of aluminum at 70 o C is added to a sample of iron with a mass of 95 g at 120 o C, resulting in a final temperature for both samples of 105 o C. Given the specific heat capacities below, what was the mass of aluminum in grams (g)? Element C (J•g -1 • o C -1 ) Aluminum (Al) 0.9 Iron (Fe) 0.5",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(89.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "89.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy. The equation is below: q = heat energy (J), m = mass (g), C = specific heat capacity (J•g -1 • o C -1 ), ΔT = change in temperature ( o C) STEP 1: First, we are given several pieces of information from the question about aluminum (Al) and iron (Fe): To calculate the change in temperature for each metal, we simply subtract the final temperature of the metal by the initial temperature of the metal: STEP 2: Next, we know that the amount of heat lost by one substance is the same amount of heat gained by the other substance. We can first solve for the heat (q) lost by the iron to determine the amount of heat gained by the aluminum: STEP 3: Finally, we can solve for the mass (m) of the aluminum: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+9.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+10.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+7+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "20 moles of unknown substance with molar mass of 25 g•mol -1 at 45 o C is cooled to 15 o C, at which point it converts from gaseous form into liquid form. If the specific heat capacity for the gaseous substance is 2.0 J•g -1 • o C -1 , and the heat of condensation is -200 J•kg -1 , what was the total heat energy released by the substance?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "30,000 J",
+        "images": [],
+        "percentage_selected": "(17.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "30,100 J",
+        "images": [],
+        "percentage_selected": "(62.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "34,000 J",
+        "images": [],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "34,500 J",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "35,000 J",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "30,100 J",
+    "analytics": {
+      "percent_correct": "62.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy. The equation is below: q = heat energy (J), m = mass (g), C = specific heat capacity (J•g -1 • o C -1 ), ΔT = change in temperature ( o C) As well as the formula to calculate the change in enthalpy during a phase change: q = heat energy (J), m = mass (kg), ΔH = change in enthalpy (J•kg -1 ) STEP 1: First, we are given several pieces of information from the question: To calculate the change in temperature for the substance, we simply subtract the final temperature of the substance of 15 o C by its initial temperature of 45 o C: STEP 2: Next, we can determine the change in heat energy of the substance. Keep in mind that since the equation contains units in grams (g), we must convert the moles of the substance into mass in g: STEP 3: Then, using the equation for calculating change in heat energy, we can solve for q: STEP 4: Next, for a phase change to occur, there must be an input of energy. Using the equation for calculating change in heat energy during a phase change, we can solve for q. Keep in mind that since the heat of condensation (ΔH condensation ) is in units of J•kg -1 , we must convert the mass into kg: STEP 5: Finally, we can determine the total change in heat energy by combining the change in heat of the substance, and the amount of heat change during the phase change: Since the q value is negative , it indicates that 30,100 J of heat is released by the substance. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+9.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+13.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+11.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+10.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+15.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+2+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+12.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+14.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+8+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "A 0.1 kg sample of Br 2( s ) (C = 5 J•g -1 • o C -1 ) is heated from -20 o C to -10 o C until it becomes liquid Br 2( l ) . How much heat energy was required for this process, given the melting point of Br 2( s ) is -10 o C and ΔH fus = 70,000 J•kg -1 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "5 kJ",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "12 kJ",
+        "images": [],
+        "percentage_selected": "(68.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "22 kJ",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "5700 J",
+        "images": [],
+        "percentage_selected": "(10.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "7050 J",
+        "images": [],
+        "percentage_selected": "(9.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "12 kJ",
+    "analytics": {
+      "percent_correct": "68.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy of a sample and the change in heat energy during a phase change. The equations are below: q = heat energy (J), m = mass (g), C = specific heat capacity (J•g -1 • o C -1 ), ΔT = change in temperature ( o C) As well as the formula to calculate the change in enthalpy during a phase change: q = heat energy (J), m = mass (kg), ΔH = change in enthalpy (J•kg -1 ) STEP 1: First, we can break down the reaction into several steps to calculate the total amount of heat energy required for the process: STEP 2: Next, we can solve for each step. Keep in mind the units for mass differ in the heating step (g) and in the phase change step (kg): Heating from -20 o C to -10 o C (units for mass must be in g): Phase change (melting) at -10 o C (units for mass must be in kg): STEP 3: Finally, we can determine the total change in heat energy by combining the change in heat of the substance, and the amount of heat change during the phase change: Since the q value is positive , this means that the heat energy is absorbed during the process. We can see that 12 kJ of heat is required by the fusion process. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+9.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+9+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry",
+    "question": {
+      "text": "Dry ice is formed from the deposition of gaseous CO 2( g ) directly into solid CO 2( s ) , which occurs at -80 o C. Given ΔH dep = -600,000 J•kg -1 and C = 2 J•g -1 • o C -1 , if a 1.1 kg sample of gaseous CO 2( g ) at 20 o C is cooled to and converted directly into solid CO 2( s ) at -80 o C, how much heat is released in the process?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "220 kJ",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "286 kJ",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "880 kJ",
+        "images": [],
+        "percentage_selected": "(79.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "220,660 J",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "660,000 J",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "880 kJ",
+    "analytics": {
+      "percent_correct": "79.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving phase changes and calorimetry , we will need to review how to calculate the change in heat energy of a sample and the change in heat energy during a phase change. The equations are below: q = heat energy (J), m = mass (g), C = specific heat capacity (J•g -1 • o C -1 ), ΔT = change in temperature ( o C) As well as the formula to calculate the change in enthalpy during a phase change: q = heat energy (J), m = mass (kg), ΔH = change in enthalpy (J•kg -1 ) STEP 1: First, we can break down the reaction into several steps to calculate the total amount of heat energy required for the process: STEP 2: Next, we can solve for each step. Keep in mind the units for mass differ in the heating step (g) and in the phase change step (kg). Cooling from 20 o C to -80 o C (units must be in g): Phase change (deposition) at -80 o C (units must be in kg): STEP 3: Finally, we can determine the total change in heat energy by combining the change in heat of the substance, and the amount of heat change during the phase change: Since the q value is negative , this means that the heat energy is released by the CO 2 . We can see that 880 kJ of heat is released by the deposition process. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+10+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+10+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+10+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+10+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Specific+Heat+Capacity+and+Calorimetry%3A+Phase+Changes+and+Calorimetry/Question+10+Solution+6.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100be6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100bdf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001007268d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010076d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007ae7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100761a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100babc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100baef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b8ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100baf7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b7cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100bcf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100bcfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100bdecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Phase Changes and Calorimetry"
+  }
+]

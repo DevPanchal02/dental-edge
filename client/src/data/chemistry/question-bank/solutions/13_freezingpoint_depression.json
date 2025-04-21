@@ -1,0 +1,598 @@
+[
+  {
+    "question_number": 1,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "What is the primary factor responsible for the phenomenon of freezing point depression?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increase in pressure",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Addition of a solute to a solvent",
+        "images": [],
+        "percentage_selected": "(79.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Decrease in temperature",
+        "images": [],
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Increase in the volume of a solvent",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Increase in the polarity of a solvent",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Addition of a solute to a solvent",
+    "analytics": {
+      "percent_correct": "79.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression, we need to know that the freezing point depression is a drop in the temperature at which a substance freezes, caused by the addition of a non-volatile solute. The formula for freezing point depression is: As we can see, the extent of freezing point depression is proportional to the molal concentration of the solution. When we add a solute to a solvent, the molal concentration increases. An increase in the molal concentration leads to an increase in the extent of freezing point depression. Therefore, the primary factor responsible for the phenomenon of freezing point depression is the addition of a solute to a solvent. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "On a snowy day, a student wants to prevent his water fountain from freezing. Which of the following methods is the best to achieve the student’s goal?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Adding salt to the water",
+        "images": [],
+        "percentage_selected": "(91.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Adding glucose to the water",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Decreasing the water’s temperature",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Decreasing the vapor pressure of water",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Adding more water to the fountain",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Adding salt to the water",
+    "analytics": {
+      "percent_correct": "91.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: Option A. Adding salt to the water Correct. Adding salt to the water not only increases the molal concentration of the solution, but because salts are composed of two or more ions that dissociate in water, the van’t Hoff factor will also be 2 or greater. This will result in the greatest freezing point depression, making it effective in preventing the fountain from freezing. Option B. Adding glucose to the water Incorrect. Adding glucose to the water increases the molal concentration of the solution. But because glucose does not dissociate, its van’t Hoff factor is 1, and will not be as effective as adding salts to the water. This makes glucose not as effective as salt in preventing the fountain from freezing. Option C. Decreasing the water’s temperature Incorrect. Decreasing the water’s temperature brings the water closer to its freezing point but will not prevent the water fountain from freezing. Option D. Decreasing the vapor pressure of water Incorrect. Decreasing the vapor pressure does not influence the water’s freezing point. Option E. Adding more water to the fountain Incorrect. Adding more water to the fountain will decrease the molal concentration of water, so it would decrease the extent of freezing point depression. Therefore, this is not an effective method of preventing his water fountain from freezing. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "The extent of freezing-point depression is directly proportional to",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the temperature of the solution.",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "the pressure of the solution.",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "the molal concentration of the solution.",
+        "images": [],
+        "percentage_selected": "(78.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "the polarity of the solution.",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "the solvent’s van’t Hoff factor.",
+        "images": [],
+        "percentage_selected": "(12.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "the molal concentration of the solution.",
+    "analytics": {
+      "percent_correct": "78.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: In this case, the formula tells us that the amount freezing point decreases is proportional to the solvent’s freezing point depression constant, the solute’s van’t Hoff factor, and the molal concentration of the solution. Therefore, the extent of freezing-point depression is directly proportional to the molal concentration of the solution. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "Which of the following aqueous solutions will have the lowest freezing point?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.5 m CaCl 2",
+        "images": [],
+        "percentage_selected": "(73.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "0.5 m CH 3 OH",
+        "images": [],
+        "percentage_selected": "(15.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.5 m NaNO 3",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.5 m KBr",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "0.5 m NaCl",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.5 m CaCl 2",
+    "analytics": {
+      "percent_correct": "73.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: For this question, since we know that the solutions share the same molal concentration and the same solvent, we just need to calculate for the solute’s van’t Hoff factor to determine which aqueous solution will have the lowest freezing point. Among the given options, ionic compounds that dissociate into more ions when dissolved will have a greater effect on lowering the freezing point. Therefore, the compound with the highest van't Hoff factor will result in the lowest freezing point. In this case, CaCl 2 dissociates into three ions, so the aqueous solution with the lowest freezing point is 0.5 m CaCl 2 . Option A. 0.5 m CaCl 2 Correct. 0.5 m CaCl 2 dissociates into 1 Ca + and 2 Cl - , which means CaCl 2 has a van’t Hoff factor of 1 + 2 = 3. Since CaCl 2 has the highest van’t Hoff factor out of all options, this solution has the lowest freezing point. Option B. 0.5 m CH 3 OH Incorrect. 0.5 m CH 3 OH does not dissociate and stays as 1 molecule, which means CH 3 OH has a van’t Hoff factor of 1. Option C. 0.5 m NaNO 3 Incorrect. 0.5 m NaNO 3 dissociates into 1 Na + and 1 NO 3 - , which means NaNO 3 has a van’t Hoff factor of 1 + 1 = 2. Option D. 0.5 m KBr Incorrect. 0.5 m KBr dissociates into 1 K + and 1 Br - , which means KBr has a van’t Hoff factor of 1 + 1 = 2. Option E. 0.5 m NaCl Incorrect. 0.5 m NaCl dissociates into 1 Na + and 1 Cl - , which means NaCl has a van’t Hoff factor of 1 + 1 = 2. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "Each of the following factors directly affects the extent of freezing point depression EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Identity of the solute",
+        "images": [],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Solubility of the solute",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Identity of the solvent",
+        "images": [],
+        "percentage_selected": "(11.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Molal concentration of the solution",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Molecular weight of the solute",
+        "images": [],
+        "percentage_selected": "(68.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Molecular weight of the solute",
+    "analytics": {
+      "percent_correct": "68.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: Option A. Identity of the solute Incorrect. The identity of the solute directly affects the extent of freezing point depression because the identity determines the solute’s van’t Hoff factor. Option B. Solubility of the solute Incorrect. The solubility of the solute directly affects the extent of freezing point depression because the solubility determines whether the solute dissociates into different number of ions or molecules. In fact, insoluble solutes won’t impact freezing point depression because it will not interact with the solvent molecules at all. Option C. Identity of the solvent Incorrect. The identity of the solvent directly affects the extent of freezing point depression because different solvents have different freezing point depression constants. The freezing point depression constant provides a measure of how much the freezing point of the solvent will decrease when a non-volatile solute is dissolved in it. Option D. Molal concentration of the solution Incorrect. The molal concentration of the solution directly affects the extent of freezing point depression. When more solute particles are dissolved in a solvent, the molal concentration increases, leading to a greater reduction in the solvent's freezing point. Option E. Molecular weight of the solute. Correct. The molecular weight of the solute does not directly affect the extent of freezing point depression because only the number of solute particles and mass of the solvent affects the molal concentration, which affects freezing point depression. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "By what factor is the freezing point depression of a solution changed if k f is decreased by a factor of 4, the van’t Hoff factor is increased by a factor of 5, and the molal concentration is increased by a factor of 3?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-4/15",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "15/4",
+        "images": [],
+        "percentage_selected": "(93.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "15",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "15/4",
+    "analytics": {
+      "percent_correct": "93.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: STEP 1: First, we need to know that the freezing point depression formula tells us that the extent of freezing point depression is proportional to the solvent’s freezing point depression constant, the solute’s van’t Hoff factor, and the molal concentration of the solution: STEP 2: Next, we can calculate for the factor of change in the freezing point depression of the solution if k f is decreased by a factor of 4 (divided by 4), the van’t Hoff factor is increased by a factor of 5, and the molal concentration is increased by a factor of 3: In this case, the freezing point depression of a solution is changed by 15/4. Therefore, the answer is C.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "By what factor is k f changed if decreasing the van’t Hoff factor by a factor of 2 and increasing the molal concentration by a factor of 4 results in the freezing point depression to be increased by a factor of 5?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2/5",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1/2",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "5/2",
+        "images": [],
+        "percentage_selected": "(81.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(11.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "5/2",
+    "analytics": {
+      "percent_correct": "81.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: STEP 1: First, we need to know that the freezing point depression of a solution is proportional to the solvent’s freezing point depression constant, the solute’s van’t Hoff factor, and molal concentration of the solution. STEP 2: Next, we need to rearrange the formula for freezing point depression: STEP 3: Then, we can calculate for the factor that k f is changed by if the van’t Hoff factor is decreased by a factor of 2 (divided by 2), the molal concentration is increased by a factor of 4, and the freezing point depression is increased by a factor of 5: k f is changed by a factor of 5/2. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+7+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "What is the molality of a KCl solution that exhibits a freezing point depression of -20 o C when compared to the freezing point of its pure solvent, given that its k f = 1.86 o C • m -1 and that KCl dissolves and dissociates in the solvent?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+8+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(17.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+8+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(81.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+8+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+8+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          " https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+8+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "81.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: STEP 1: First, we need to know that the freezing point depression is equal to -20 °C because we are only looking at the difference of temperature. Therefore, ΔT f = -20 STEP 2: Next, we need to calculate for the molality of a KCl by using the freezing point depression formula , knowing that the solvent’s freezing point depression constant is 1.86 °C • m -1 ( k f = 1.86), the solute’s van’t Hoff factor is 2 ( i = 2 because KCl dissociates into 1 K + and 1 Cl - , therefore 1 + 1 = 2), and the extent of freezing point depression is -20 °C ( ΔT f = -20): Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+8+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "If 1.5 moles of Al(NO 3 ) 3 was dissolved in 1,000 g of water ( k f = 1.86°C•m -1 ), what is the change in the freezing point of the water in °C?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "–(1.5)(4)(1.86) o C",
+        "images": [],
+        "percentage_selected": "(95.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "(1.5)(4)(1.86) o C",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "(1.5)(1)(1.86) o C",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "–(1.5/1.86) o C",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "–(1.5)(4)/1.86 o C",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "–(1.5)(4)(1.86) o C",
+    "analytics": {
+      "percent_correct": "95.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: STEP 1: First, we need to calculate the molal concentration of the solution, knowing that there are 1.5 moles of Al(NO 3 ) 3 and 1,000 g = 1 kg of water as a solvent: STEP 2: Next, we need to calculate the extent of freezing point depression by using the freezing point depression formula, knowing that the solute’s van’t Hoff factor is 4 ( i = 4 because Al(NO 3 ) 3 dissociates into 1 Al 3+ and 3 NO 3 - , therefore 1 + 3 = 4), the molal concentration of the solution is 1.5 m ( m = 1.5), and the solvent’s freezing point depression constant is 1.86 ( k f = 1.86°C•m -1 ): As a result, the change in the freezing point of the water is –(1.5)(4)(1.86). Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+9+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression",
+    "question": {
+      "text": "The freezing point of an aqueous solution is -7.44°C. 2 moles of an unknown solute are dissolved in 1,000 g of water ( k f = 1.86°C•m -1 ). Which of the following is the most probable solute that was used to make the solution?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "C 6 H 12 O 6",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "NaCl",
+        "images": [],
+        "percentage_selected": "(90.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "MgCl 2",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "CH 3 OH",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "NaCl",
+    "analytics": {
+      "percent_correct": "90.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving freezing point depression , we will need to understand the formula of freezing point depression: STEP 1: First, we need to calculate the molal concentration of the solution, knowing that there are 2.0 moles of an unknown solute and 1,000 g = 1 kg of water as a solvent: STEP 2: Next, we need to calculate for the unknown solute’s van’t Hoff factor using the formula of freezing point depression, knowing that the freezing point depression is - 7.44°C ( ΔT f = -7.44), the solvent’s freezing point depression constant is 1.86°C•m -1 ( k f = 1.86), and the molal concentration of the solution 2 m ( m = 2): STEP 3: Now that we have the solute’s van’t Hoff factor, we need to find which molecule has the solute’s van’t Hoff factor of 2: C 6 H 12 O 6 does not dissociate, therefore has a van’t Hoff factor of 1. NaCl dissociates into 1 Na + and 1 Cl - , therefore has a van’t Hoff factor of 1 + 1 = 2. H 2 SO 4 dissociates into 2 H + and 1 SO 4 2- , therefore has a van’t Hoff factor of 2 + 1 = 3. MgCl 2 dissociates into 1 Mg 2+ and 2 Cl - , therefore has a van’t Hoff factor of 1 + 2 = 3. CH 3 OH does not dissociate, therefore has a van’t Hoff factor of 1. In this case, NaCl’s van’t Hoff factor matches with the unknown solute’s van’t Hoff factor. Therefore, the unknown solute is NaCl. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Colligative+%26+Non-Colligative+Properties%3A+Freezing-Point+Depression/Question+10+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001053eee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001053e70ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104f2e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104f756a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104fb67b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104f69a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x00000001053b3c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x00000001053b6f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000105393a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x00000001053b77e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000105384b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001053d79c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001053d7b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001053e6cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Freezing-Point Depression"
+  }
+]

@@ -1,0 +1,589 @@
+[
+  {
+    "question_number": 1,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "Which of the following is a characteristic of the solid state of matter?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Solids are compressible",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Solids contain weak intermolecular forces",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Solids have a definite volume",
+        "images": [],
+        "percentage_selected": "(95.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Solids expand to fill the container",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Solids are always conductive",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Solids have a definite volume",
+    "analytics": {
+      "percent_correct": "95.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the properties of solids , let’s first review their general properties. Solids are incompressible with a definite shape and volume due to their strong intermolecular forces and close intermolecular distances. In this case, we can say that a characteristic of the solid state of matter is that solids have a definite volume . Option A. Solids are compressible Incorrect. Solids are incompressible because the particle distances inside the molecule are minimal in solids. Gases, conversely, can be compressed because they have large distances between particles. Option B. Solids contain weak intermolecular forces Incorrect. Solids have the highest intermolecular forces of attraction and smallest intermolecular spaces compared to liquids and gases. Option C. Solids have a definite volume Correct. Solids have a definite volume due to their strong intermolecular forces of attraction. This allows the particles in a solid to vibrate around the fixed locations. Option D. Solids expand to fill the container Incorrect. Solids are rigid and have a definite volume and shape because of their strong intermolecular forces of attraction. Thus, solids do not expand to fill the container. Option E. Solids are always conductive Incorrect. Although there are solids that are conductive, like metal and steel, there are also solids that are non-conductive, like paper and gla ss. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "Which of the following is a property of all covalent network solids?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Malleable",
+        "images": [],
+        "percentage_selected": "(12.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Poor conductor",
+        "images": [],
+        "percentage_selected": "(71.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Low melting point",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Amorphous",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Soluble in water",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Poor conductor",
+    "analytics": {
+      "percent_correct": "71.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the properties of covalent network solids , let’s first review the four types of solids: In this case, we can conclude that covalent network solids are hard, non-conductive, and have high melting points. The continuous networks or chains of molecules held together strongly by covalent bonds give rise to their hardness and high melting point. Covalent network solids are poor conductors because the electrons are tightly held between the atoms and lack free ions. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "Which of the following statements is true regarding the property of an amorphous solid and a crystalline solid?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Amorphous solids have a more defined pattern",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Amorphous solids form definite lattice structures",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Amorphous solids can be further defined by the unit cell",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Crystalline solids form a more orderly array of molecules",
+        "images": [],
+        "percentage_selected": "(88.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Crystalline solids are electrically non-conductive",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Crystalline solids form a more orderly array of molecules",
+    "analytics": {
+      "percent_correct": "88.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Concept To solve this problem involving amorphous and crystalline solids , we first have to know that solids can either be classified as amorphous or crystalline solids. Let’s review their properties: This classification tells us about the bonding patterns, which is a different classification from the four types of solids discussed in other chapters – ionic, metallic, covalent network, and molecular solids, which tells us how the solids are bonded together. A molecule, for example, can be a covalent network solid and a crystalline solid, like a diamond. In this case, we can say that crystalline solids form a more orderly array of molecules. Option A. Amorphous solids have a more defined pattern Incorrect. Amorphous solids do not have a defined pattern and lack an ordered structure. Instead, crystalline solids have a more defined pattern. Option B. Amorphous solids form definite lattice structures Incorrect. Amorphous solids lack definite lattice structures. Instead, crystalline solids form a definite lattice structure. Option C. Amorphous solids can be further defined by the unit cell Incorrect. Unit cells are the smallest individual repeating unit cells that crystalline solids represent, not amorphous solids. Option D. Crystalline solids form a more orderly array of molecules Correct. Crystalline solids consist of a crystal lattice and strongly ordered arrangement, which is defined by the unit cell. Unit cells are the smallest individual repeating units of the crystal lattice. Option E. Crystalline solids are electrically non-conductive Incorrect. Crystalline solids can be both conductive and non-conductive. For example, metallic crystals are good conductors, while diamonds are poor conductors of electricity. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "Which of the following is an example of an amorphous solid?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Salt",
+        "images": [],
+        "percentage_selected": "(10.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Diamond",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Glass",
+        "images": [],
+        "percentage_selected": "(71.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Quartz",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Graphite",
+        "images": [],
+        "percentage_selected": "(9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Glass",
+    "analytics": {
+      "percent_correct": "71.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving amorphous and crystalline solids , we first have to know that solids can either be classified as amorphous or crystalline solids. Let’s review their properties: This classification tells us about the bonding patterns, which is a different classification from the four types of solids discussed in other chapters – ionic, metallic, covalent network, and molecular solids, which tells us how the solids are bonded together. A molecule, for example, can be a covalent network solid and a crystalline solid, like a diamond. In this case, we can see that all choices are examples of crystalline solids except for glass , which is an amorphous solid. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "Each of the following is an amorphous solid EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Plastic",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Sugar",
+        "images": [],
+        "percentage_selected": "(90.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Gel",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Tar",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Rubber",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Sugar",
+    "analytics": {
+      "percent_correct": "90.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving amorphous and crystalline solids , we first have to know that solids can either be classified as amorphous or crystalline solids. Let’s review their properties: This classification tells us about the bonding patterns, which is a different classification from the four types of solids discussed in other chapters – ionic, metallic, covalent network, and molecular solids, which tells us how the solids are bonded together. A molecule, for example, can be a covalent network solid and a crystalline solid, like a diamond. In this case, we can see that all choices are examples of amorphous solids except for sugar , a crystalline solid. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "Which of the following statements best defines a unit cell?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "A unit cell is a group of chemically bonded atoms that form a basic compound",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "A unit cell is a region of space where electrons are likely to be found",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "A unit cell is a measure of the mass per unit volume of a crystal lattice",
+        "images": [],
+        "percentage_selected": "(11.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "A unit cell is used to determine the molar concentration of a crystal lattice",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "A unit cell is the smallest individual repeating unit in a crystal lattice",
+        "images": [],
+        "percentage_selected": "(79.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "A unit cell is the smallest individual repeating unit in a crystal lattice",
+    "analytics": {
+      "percent_correct": "79.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the unit cell , let’s review the two types of solids first: For crystalline solids, their crystal pattern is defined by the unit cell , which is the smallest individual repeating unit in a crystal lattice . There are three types of unit cells that we need to know for the Canadian DAT: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "What is the minimum number of atoms that are contained in the unit cell of an element with a body-centered cubic lattice?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(76.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2",
+    "analytics": {
+      "percent_correct": "76.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the types of unit cells , let’s first review what unit cells are. Unit cells are the smallest individual repeating units of the crystal that crystalline solids represent. Let’s then review the three types of unit cells: In this case, in a body-centered cubic lattice, each of the 8 atoms in the corners contribute 1/8 of an atom to give us a single atom, and the center atom gives us another atom which sums up to a total of two atoms. Thus, the minimum number of atoms that are contained in a body-centered cubic lattice is 2. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "Which of the following accurately describes the type of unit cell and the number of atoms in that unit cell?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+8+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Simple cubic containing 1 atom",
+        "images": [],
+        "percentage_selected": "(86.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Simple cubic containing 2 atoms",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Body-centered containing 2 atoms",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Body-centered containing 4 atoms",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Face-centered containing 4 atoms",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Simple cubic containing 1 atom",
+    "analytics": {
+      "percent_correct": "86.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the types of unit cells , let’s first review what unit cells are. Unit cells are the smallest individual repeating units of the crystal that crystalline solids represent. Let’s then review the three types of unit cells: In this case, we see that there are atoms in eight corners of the cube which each contribute 1/8 of an atom giving us 1 atom per unit cell. Thus, the diagram represents a simple cubic unit cell containing 1 atom. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "A scientist is conducting an experiment with an alloy containing silver and lead. What is the molecular composition of this unit cell?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+9+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "AgPb",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "AgPb 2",
+        "images": [],
+        "percentage_selected": "(11.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "AgPb 3",
+        "images": [],
+        "percentage_selected": "(73%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Ag 3 Pb 4",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Ag 4 Pb 3",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "AgPb 3",
+    "analytics": {
+      "percent_correct": "73%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the types of unit cells , let’s first review what unit cells are. Unit cells are the smallest individual repeating units of the crystal that crystalline solids represent. Let’s then review the three types of unit cells: STEP 1 : First, we see that silver (Ag) in the eight corners of the cube each contribute 1/8 of an atom giving us one atom of silver : STEP 2 : Next, we see that lead (Pb) in the six faces of the cube each contribute 1/2 an atom giving us three atoms of lead : STEP 3 : Finally, because for every atom of silver (Ag) there are three atoms of lead (Pb), the molecular composition of the unit cell would be AgPb 3 , with a total of 4 atoms per unit cell. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids",
+    "question": {
+      "text": "What is the molecular composition of a unit cell if the compound is a body-centered cubic cell with Cu atoms at each corner with a central Fe atom?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CuFe",
+        "images": [],
+        "percentage_selected": "(67.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Cu 2 Fe",
+        "images": [],
+        "percentage_selected": "(12.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CuFe 2",
+        "images": [],
+        "percentage_selected": "(12.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cu 2 Fe 3",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Cu 8 Fe",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CuFe",
+    "analytics": {
+      "percent_correct": "67.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the types of unit cells , let’s first review what unit cells are. Unit cells are the smallest individual repeating units of the crystal that crystalline solids represent. Let’s then review the three types of unit cells: In this case, in a body-centered cubic lattice , the eight corners of the cube each contribute 1/8 of an atom to give us a single atom, and the center atom gives us another atom. STEP 1: First, if the copper (Cu) atoms were to be at each corner of the cube, each corner will contribute to one-eight of the copper atom which would sum up to one copper atom: STEP 2: Next, if the iron (Fe) were to be at the center, one iron atom would take up the center. STEP 3: Thus, because there is 1 atom of iron (Fe) for 1 atom of copper (Cu), the molecular composition of the unit cell would be CuFe, with a total of 2 atoms per unit cell. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Properties+of+Liquids+and+Solids%3A+Properties+of+Solids/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100ad6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100acf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001006168d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010065d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010069e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100651a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100a9bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100a9ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100a7ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100a9f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100a6cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100abf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100abfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100acecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Liquids and Solids",
+    "question_bank": "Properties of Solids"
+  }
+]

@@ -1,0 +1,1769 @@
+[
+  {
+    "test_number": 1,
+    "question_number": 1,
+    "question": {
+      "text": "For the reaction below, which of the following sets of coefficients would balance the reaction? __HNO 3 + __S →  __H 2 SO 4 + __NO 2 + __H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4, 1, 1, 4, 4",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6, 1, 1, 6, 4",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4, 1, 1, 4, 2",
+        "images": [],
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "6, 1, 1, 6, 2",
+        "images": [],
+        "percentage_selected": "(75.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "4, 2, 2, 4, 6",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "6, 1, 1, 6, 2",
+    "analytics": {
+      "percent_correct": "75.8%",
+      "time_spent": "2 min, 20 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 2,
+    "question": {
+      "text": "Which of the following interactions is the strongest?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Hydrogen bonds",
+        "images": [],
+        "percentage_selected": "(18%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Dipole-Dipole forces",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Hydrophobic interactions",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Ionic bonds",
+        "images": [],
+        "percentage_selected": "(77.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "London Dispersion forces",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ionic bonds",
+    "analytics": {
+      "percent_correct": "77.4%",
+      "time_spent": "0 min, 28 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "Option A . Hydrogen bonds – This option is incorrect because even though hydrogen bonds are the strongest intermolecular force listed, ionic bonds are stronger than all intermolecular forces. Option B. Dipole-dipole forces – This option is incorrect because dipole-dipole interactions are weak forces involving partial positive and negative charges. Option C. Hydrophobic interactions – This option is incorrect because these are technically not bonds but are interactions where non-polar substances aggregate in an aqueous solution and exclude water molecules; they are thus very weak compared to other interactions. Option E. London dispersion forces – This option is incorrect because London dispersion forces are one of the weakest bonds.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+2+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 3,
+    "question": {
+      "text": "What is the maximum number of electrons that the d-subshell can hold?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(88.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "14",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "18",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "10",
+    "analytics": {
+      "percent_correct": "88.6%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "A subshell is a subdivision of electron shells separated by electron orbitals. Subshells are labelled s, p, d, and f in an electron configuration. The d subshell contains 5 degenerate orbitals, where each orbital can contain 2 electrons. Therefore, 2*5 = 10 electrons exist within the d subshell. Note : A quick way to see how many electrons fit in a subshell, count the number of orbitals in each sub shell (i.e S = 1, P = 3, D = 5, F = 7) and multiply it by two (i.e S = 2, P = 6, D = 10, F = 14). Therefore, s, p, d, and f-subshells can hold 2, 6, 10, 14 respectively, as shown below. CC By 4.0",
+      "poe_text": "Option A. 2 – This option is incorrect because 2 is the maximum number of electrons the s shell can hold. Option B. 6 – This option is incorrect because 6 is the maximum number of electrons the p shell can hold. Option D. 14 – This option is incorrect because 14 is the maximum number of electrons the f shell can hold. Option E. 18 – This option is incorrect because there are no subshells that can hold 18 electrons.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 4,
+    "question": {
+      "text": "Calcium chromate (CaCrO 4 ) is a yellow solid with a K sp of 7.1 x 10 -4 . Determine the ion product constant and whether a precipitate would form when an aqueous solution contains 26 mM of Ca 2+ and 29 mM of CrO 4 2- .",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "IP = 7.54 x 10 -4 ; no, precipitation will not occur",
+        "images": [],
+        "percentage_selected": "(14%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "IP = 7.54 x 10 -4 ; yes, precipitation will occur",
+        "images": [],
+        "percentage_selected": "(72.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "IP = 754 x 10 -4 ; no, precipitation will not occur",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "IP = 754 x 10 -4 ; yes, precipitation will occur",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "IP = 7.54 x 10 -4 ; yes, precipitation will occur",
+    "analytics": {
+      "percent_correct": "72.8%",
+      "time_spent": "3 min, 3 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "Option A. IP = 7.54 x 10 -4 ; no, precipitation will not occur – This option is incorrect because it contains the correct IP calculation, however, the wrong prediction on precipitation. Option C. IP = 754 x 10 -4 ; no, precipitation will not occur – This option is incorrect because this answer choice contains both the incorrect IP calculation and the incorrect prediction on precipitation. This answer option can be erroneously deduced when mM to M conversion is not performed during the calculation. Option D. IP = 754 x 10 -4 ; yes, precipitation will occur – This option is incorrect because it contains the incorrect IP calculation but the correct prediction on precipitation. This answer can be erroneously deduced when mM to M conversion is not performed during the calculation.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 5,
+    "question": {
+      "text": "A container holds 4.0L of gas at 3.5 atmospheres and a temperature of 27 o C. If the pressure is reduced to 0.8 atmospheres without a change in temperature, what would be the volume of the gas?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "11.0 L",
+        "images": [],
+        "percentage_selected": "(9.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "14.0 L",
+        "images": [],
+        "percentage_selected": "(12.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "15.0 L",
+        "images": [],
+        "percentage_selected": "(14%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "18.0 L",
+        "images": [],
+        "percentage_selected": "(62.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "19.0 L",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "18.0 L",
+    "analytics": {
+      "percent_correct": "62.1%",
+      "time_spent": "2 min, 20 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 6,
+    "question": {
+      "text": "A NaOH solution has a molarity of 2.00 M and is titrated with 75.0 mL of 0.500 M H 2 SO 4 . What volume of NaOH is needed to reach the second equivalence point?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.01875 L",
+        "images": [],
+        "percentage_selected": "(23.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.03750 L",
+        "images": [],
+        "percentage_selected": "(44.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "0.0500 L",
+        "images": [],
+        "percentage_selected": "(11.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.0750 L",
+        "images": [],
+        "percentage_selected": "(14.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "0.1500 L",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.03750 L",
+    "analytics": {
+      "percent_correct": "44.4%",
+      "time_spent": "3 min, 29 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "The equivalence point is the point in which the added titrant is chemically equivalent to the analyte in the sample. STEP 1: To determine the answer, we start by writing the chemical reaction and balancing it. H 2 SO 4 + 2NaOH → Na 2 SO 4 + 2H 2 O STEP 2: Now, we can determine the moles of H 2 SO 4 . moles of H 2 SO 4 = Molarity x Volume moles of H 2 SO 4 = (0.500 mol/L) (0.0750 L) = 0.0375 mol STEP 3: Next, we determine the number of moles of NaOH required to neutralize all of the H 2 SO 4 . Remember, two moles of NaOH is required to neutralize one mole of H 2 SO 4 . moles of NaOH = (0.0375 mol) (2) = 0.0750 mol STEP 4: Lastly, we can calculate the volume of NaOH required. (0.0750 mol) / (2.00 mol/L) = 0.03750 L Canadian DAT Pro-Tip: One way to solve this calculation easier is by keeping in mind that anything multiplied by 0.5 is like dividing by 2. Therefore, (0.0750L)(0.500 mol/L) is the same as (0.0750L)/(2).",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 7,
+    "question": {
+      "text": "What is the bond angle that exists within a molecule of SO 3 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "90",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "104.5",
+        "images": [],
+        "percentage_selected": "(9.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "107",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "109.5",
+        "images": [],
+        "percentage_selected": "(27.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "120",
+        "images": [],
+        "percentage_selected": "(56.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "120",
+    "analytics": {
+      "percent_correct": "56.3%",
+      "time_spent": "1 min, 18 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "To determine the bond angle of sulfur trioxide, we must first determine its lewis structure. By doing this, we learn that sulfur trioxide molecule has a sp 2 configuration as well as a trigonal planar VESPR geometry. It is important to note that trigonal planar molecules have bond angles of 120 degrees, as shown below. This is partially because sulfur can have an expanded octet (have more than 8 bonds) due to the 3d-orbital that it possesses. CC By 4.0 Canadian DAT Pro Tip : Below are some common shapes and bond angles to know for the Canadian DAT.",
+      "poe_text": "Option A. 90 – This option is incorrect because this angle is found in an octahedral molecule. Option B. 104.5 – This option is incorrect because this angle is found in most bent shape molecules like water, which has two lone pairs of electrons. Option C. 107 – This option is incorrect because this angle is found in special molecules like ammonia because of a lone electron pair. Option D. 109.5 – This option is incorrect because this angle is found in a tetrahedral molecule.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+7+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 8,
+    "question": {
+      "text": "An aqueous mixture contains CuF 2 and BaF 2 (K sp = 3.0×10 −6 ). What should be added to the solution in order to precipitate CuF 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NaF",
+        "images": [],
+        "percentage_selected": "(12.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Ba(NO 3 ) 2",
+        "images": [],
+        "percentage_selected": "(25.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cu(NO 3 ) 2",
+        "images": [],
+        "percentage_selected": "(50.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Cu(NO 3 ) 2",
+    "analytics": {
+      "percent_correct": "50.7%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Chemical Equilibrium"
+    },
+    "category": "Chemical Equilibrium",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "Option A. NaF - is incorrect because adding NaF would increase the fluoride ion concentration in the mixture. Because CuF 2 and BaF 2 both have fluoride anions, this would decrease the solubility of both compounds and cause some of both to precipitate together. Option B. H 2 O - is incorrect because adding more water to the mixture would not assist precipitation of either compound. This would have the opposite effect as more of the compounds can dissolve with an increased volume of water. Option C. Ba(NO 3 ) 2 - is incorrect because its addition would increase the Ba 2+ ion concentration in the mixture. The common ion effect would cause BaF 2 to precipitate rather than CuF 2 .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 9,
+    "question": {
+      "text": "According to the following reaction, how many grams of hydrogen gas is formed when 15g of aluminum reacts with excess acid? 2Al + 6HCl → 2AlCl 3 + 3H 2",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+9+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+9+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+9+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(44.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+9+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(36.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+9+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "36.7%",
+      "time_spent": "1 min, 18 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "STEP 1: To determine the answer to this question, we need to first find out the limiting reagent. Since HCl is in excess, Al will be the limiting reagent . Remember, the limiting reagent is what determines the extent to which the reaction would proceed. STEP 2: Now we can calculate the number of moles of Al below. moles of Al = (mass) / (molar mass) moles of Al = (15g) / (27g/mol) STEP 3: Next, we can determine how many moles of hydrogen is present relative to the number of aluminum moles. Keep in mind, there are 3 moles of hydrogen for every 2 moles of aluminum. moles of hydrogen = moles of Al x (mole ratio of H to Al) moles of hydrogen = (15/27) x (3 mol H 2 /2 mol Al) = (15)(3) / (27)(2) STEP 4: Lastly, we can calculate the grams of hydrogen below. grams of hydrogen = moles of hydrogen x molar mass grams of hydrogen = [(15)(3) / (27)(2)] x 2 = (15)(3) / (27) We can also solve this using an alternative method involving ratios, called dimensional analysis. The ratios should be arranged such that the unit present in the numerator of the first ratio is cancelled with the unit present in the denominator of the next ratio. Conversions continue until all units are cancelled out and only the desired unit remains. Therefore, the correct answer is D .",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+9+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 10,
+    "question": {
+      "text": "Which of the following elements exists as a diatomic gas in its standard state and contains a double covalent bond?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Krypton",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Oxygen",
+        "images": [],
+        "percentage_selected": "(82.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Nitrogen",
+        "images": [],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Bromine",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Chlorine",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Oxygen",
+    "analytics": {
+      "percent_correct": "82.9%",
+      "time_spent": "1 min, 24 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Diatomic molecules are molecules composed of only TWO atoms, of the same or different chemical elements. If a diatomic molecule consists of two atoms of the same element, such as hydrogen (H 2 ) or oxygen (O 2 ), then it is said to be homonuclear . If a diatomic molecule consists of two different atoms, such as carbon monoxide (CO), the molecule is said to be heteronuclear. Seven elements exist as diatomic molecules in their standard elemental state in the periodic table, as shown in the image below. These seven elements are: hydrogen, nitrogen, oxygen, fluorine, chlorine, bromine, and iodine. Atoms of these elements form covalently bonded pairs by sharing valence electrons and occur naturally as H 2 , N 2 , O 2 , F 2 , Cl 2 , Br 2 , and I 2 , respectively. Due to differences in orbitals and the number of valence electrons, H 2 , F 2 , Cl 2 , Br 2 , and I 2 can achieve a full valence shell by forming a pair with only a single covalent bond, but O 2 must form a double bond and N 2 must form a triple bond. An easy way to remember the 7 elements is through the following mnemonic: H 2 , N 2 , F 2, O 2 , I 2 , Cl 2 , Br 2 . \" H ave N o F ear O f I ce C old B eer\" CC By 4.0",
+      "poe_text": "Option A. Krypton - is incorrect because Krypton is an elemental gas in the fourth period. As a noble gas, it does not form a diatomic molecule. Option C. Nitrogen - is incorrect because Nitrogen is an elemental gas, but it forms a diatomic molecule with a triple covalent bond, not a double covalent bond. Option D. Bromine - is incorrect because Bromine exists as a liquid at room temperature. Option E. Chlorine - is incorrect because Chlorine is an elemental gas in the third period. Since chlorine forms a diatomic molecule with only a single covalent bond.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+10+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 11,
+    "question": {
+      "text": "Which of the following pairs are typically found in alkaline buffer solutions?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Weak base and its conjugate acid",
+        "images": [],
+        "percentage_selected": "(41.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Weak acid and its conjugate base",
+        "images": [],
+        "percentage_selected": "(19.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Strong base and its conjugate acid",
+        "images": [],
+        "percentage_selected": "(29.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Strong acid and its conjugate base",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Strong acid and its conjugate acid",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Weak base and its conjugate acid",
+    "analytics": {
+      "percent_correct": "41.1%",
+      "time_spent": "0 min, 21 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "Buffers are solutions that resist changes in pH when small amounts of acid or base are added. They consist of a mixture of either a weak acid and a salt of its conjugate base, or a weak base and a salt of its conjugate acid. The acidic component of a buffer can neutralize an added base while the basic component of a buffer can neutralize an added acid. This means that large changes in pH will be repressed. For example, CH 3 COOH is a weak acid, and its conjugate base is CH 3 COO − . As such, a buffer could be made by mixing equal concentrations of each into solution. Typically, weak bases and their conjugate are found in alkaline (pH > 7) solutions, while weak acids and their conjugates are found in acidic (pH < 7) solutions. This is because to be efficient buffers, they need to have pK values which is equal to or can be +/- 1 value different than the pH.",
+      "poe_text": "Option B. Weak acid and its conjugate base – This is incorrect because weak acids and their conjugates are found in acidic (pH < 7) solutions, NOT alkaline buffer solutions. Option C. Strong base and its conjugate acid – This is incorrect because strong bases and their conjugates do not make up buffer systems. Option D. Strong acid and its conjugate base – This is incorrect because strong acids and their conjugates do not make up buffer systems. Option E. Strong acid and its conjugate acid – This is incorrect because strong acids and their conjugates do not make up buffer systems.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 12,
+    "question": {
+      "text": "Which of the following is TRUE for a reaction occurring at 25°C that has a positive ΔH value?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The reaction will be spontaneous for any value of ΔH",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The reaction will be non-spontaneous for any value of ΔS",
+        "images": [],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The reaction will be spontaneous if ΔH < ΔS",
+        "images": [],
+        "percentage_selected": "(59.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "The reaction will be spontaneous only if ΔH > ΔS",
+        "images": [],
+        "percentage_selected": "(18.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The reaction will be non-spontaneous when ΔH>0 and ΔH = ΔS",
+        "images": [],
+        "percentage_selected": "(9.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The reaction will be spontaneous if ΔH < ΔS",
+    "analytics": {
+      "percent_correct": "59.3%",
+      "time_spent": "1 min, 27 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 13,
+    "question": {
+      "text": "A 200g sample of mercury at 25°C was heated to 75°C with the addition of 3kJ of energy. Calculate the specific heat of mercury in J/g°C.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+13+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+13+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+13+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(76.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+13+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+13+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "76.9%",
+      "time_spent": "0 min, 28 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 14,
+    "question": {
+      "text": "Which one of the following properties applies to alkaline earth metals?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Dull",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Form 2+ cations",
+        "images": [],
+        "percentage_selected": "(77.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "High density",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Low boiling point",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Low melting point",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Form 2+ cations",
+    "analytics": {
+      "percent_correct": "77.6%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Periodic Properties"
+    },
+    "category": "Periodic Properties",
+    "explanation": {
+      "concept_text": "The Alkaline Earth Metals are six elements in group 2 of the periodic table. They are beryllium (Be), magnesium (Mg), calcium (Ca), strontium (Sr), barium (Ba), and radium (Ra), as show in the image below. These elements have the following properties: CC By 4.0",
+      "poe_text": "Option A. Dull – This option is incorrect because alkaline earth metals are all shiny, as with any metal in the periodic table. Option C. High density – This option is incorrect because alkaline earth metals have relatively low densities. Option D. Low boiling point – This option is incorrect because metals have high boiling and melting points. Option E . Low melting point – This option is incorrect because metals have high boiling and melting points.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+14+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 15,
+    "question": {
+      "text": "Vaporization is which of the following types of processes?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Endothermic",
+        "images": [],
+        "percentage_selected": "(55.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Exothermic",
+        "images": [],
+        "percentage_selected": "(15.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Is a chemical change from solid to gas",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Is a chemical change from liquid to gas",
+        "images": [],
+        "percentage_selected": "(19.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Is a physical change from solid to gas",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Endothermic",
+    "analytics": {
+      "percent_correct": "55.9%",
+      "time_spent": "0 min, 25 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "Vaporization is a phase change in which a liquid becomes a gas. All phase changes are physical changes, not chemical changes! During vaporization, bonds are being broken as the molecules enter the less organized and higher entropy state. In order for bonds to be broken, energy is required. Therefore, all reactions that break bonds are endothermic . As a result, when we go from solid to liquid (melting/fusion), solid to gas (sublimation) or liquid to gas (vaporization), we are breaking bonds and thus require the input of heat (endothermic) to derive the reaction forward. Canadian DAT Pro Tip : It is useful to know that entropy is also increasing for these reactions as well. The opposite is held true for the reverse reactions of the aforementioned processes, where the reaction is exothermic and entropy decreases. CC By 4.0",
+      "poe_text": "Option B. Exothermic – This option is incorrect because bond formation is an exothermic process. In vaporization, bonds are broken, which is an endothermic process. Option C. Is a chemical change from solid to gas – This option is incorrect because all phases changes are physical changes. Option D . Is a chemical change from liquid to gas – This option is incorrect because all phases changes are physical changes. Option E. Is a physical change from solid to gas – This option is incorrect because this is known as sublimation, not vaporization.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+15+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 16,
+    "question": {
+      "text": "Which of the following is NOT an intermolecular force?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Van der waals forces",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Covalent bonds",
+        "images": [],
+        "percentage_selected": "(70.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Ion-dipole",
+        "images": [],
+        "percentage_selected": "(13.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "London dispersion forces",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Hydrogen bonds",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Covalent bonds",
+    "analytics": {
+      "percent_correct": "70.2%",
+      "time_spent": "0 min, 28 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "Intermolecular forces are interactive or repulsive forces that exist between molecules. Intermolecular forces are much weaker than the intramolecular forces of attraction but are important because they determine the physical properties of molecules like their boiling point, melting point, density, and enthalpies of fusion and vaporization. These forces include:",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 17,
+    "question": {
+      "text": "How many moles of oxygen are in a 13g solution of NaNO 3 solution? (molar mass of NaNO 3 = 85g/mol)",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+17+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(12%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+17+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+17+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(76.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+17+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+17+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "76.5%",
+      "time_spent": "1 min, 13 secs",
+      "category": "Solutions"
+    },
+    "category": "Solutions",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+17+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 18,
+    "question": {
+      "text": "Which of the following changes to the system would result in an equilibrium shift towards the reactants? MgO ( s ) + CO 2( g ) ↔ MgCO 3( s ) ∆H = +118 kJ • mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increasing the temperature of the system",
+        "images": [],
+        "percentage_selected": "(14.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Adding more MgCO 3( s ) to the equilibrium",
+        "images": [],
+        "percentage_selected": "(42%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Increasing the pressure of the system",
+        "images": [],
+        "percentage_selected": "(13.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Increasing the volume of the system",
+        "images": [],
+        "percentage_selected": "(29.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Increasing the volume of the system",
+    "analytics": {
+      "percent_correct": "29.7%",
+      "time_spent": "1 min, 18 secs",
+      "category": "Chemical Equilibrium"
+    },
+    "category": "Chemical Equilibrium",
+    "explanation": {
+      "concept_text": "Le Chatelier’s principle states that if a system that is in equilibrium is disturbed by changes in temperature, pressure, and concentration of components, the system will tend to shift its equilibrium position so as to counteract the effect of the disturbance. MgO ( s ) + CO 2( g ) ↔ MgCO 3( s ) ∆H = +118 kJ • mol -1 In this case, increasing the volume of the system would result in an equilibrium shift towards the reactants because this system involves gas molecules, and therefore an increase in the volume is accompanied by a decrease in pressure and concentration. To understand this concept, imagine the gas molecules are allowed to expand further and are less confined. According to Le Chatelier’s principle, the system will try to counteract this change by shifting the equilibrium to increase the number of gas molecules. This would mean that the shift would be aim towards the side of the reaction with more gas molecules. Therefore, the equilibrium will shift towards the reactant side in the reaction above, and this makes Option D. Increasing the volume of the system is the correct answer.",
+      "poe_text": "Option A. Increasing the temperature of the system – This option is incorrect because the enthalpy change for the reaction is positive, indicating that it is an endothermic process. When there is an increase in the temperature, more heat is available to the reactants to enable them to progress in the forward direction. This results in the equilibrium shift to the right towards producing more products. Therefore, this option is incorrect. Option B. Adding more MgCO 3 ( s ) to the equilibrium – This option is incorrect . According to Le Chatelier’s principle, the system will try to counteract the change by shifting the equilibrium to remove the change. When MgCO 3( s ) is added, it may seem intuitive that the system will shift to the left, given more MgCO 3 are present. However, MgCO 3( s ) is a solid and adding more solid does not change the density or concentration. Therefore, this addition does not affect the equilibrium. This makes this option incorrect. Option C. Increasing the pressure of the system – This option is incorrect because increasing the pressure of the system would increase the concentration of gas molecules. According to Le Chatelier’s principle, the system will try to counteract this change by shifting the equilibrium to decrease the number of gas molecules. This would shift the reaction towards reducing the number of gas molecules, which is to the right of the reaction. Thus, makes this option incorrect.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 19,
+    "question": {
+      "text": "How many electrons, protons, and neutrons respectively does mercury have?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "80, 120, 80",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "120, 80, 80",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "80, 80, 120",
+        "images": [],
+        "percentage_selected": "(83.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "80, 200, 80",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "80, 80, 200",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "80, 80, 120",
+    "analytics": {
+      "percent_correct": "83.3%",
+      "time_spent": "0 min, 41 secs",
+      "category": "Periodic Properties"
+    },
+    "category": "Periodic Properties",
+    "explanation": {
+      "concept_text": "Based on the periodic table, mercury has an atomic number of 80 and a mass of 200, as shown in the image below. Since atomic number is defined as the number of protons and the mass number is the sum of protons and neutrons, we can find the number of neutrons by subtracting the atomic number from the mass number. Furthermore, since the question never stated that we are dealing with mercury ions, we assume that it's a neutral element (i.e it will have equal numbers of protons and electrons). Thus, we can conclude that mercury has 80 protons, 80 electrons and 120 (200-80) neutrons. CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+19+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 20,
+    "question": {
+      "text": "If a mixture of oxygen and nitrogen contains 1 mol of N 2(g) and 2 mol of O 2(g) , and the total pressure is 180kPa. What is the partial pressure of N 2(g) ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "30kPa",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "50kPa",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "60kPa",
+        "images": [],
+        "percentage_selected": "(82%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "80kPa",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "120kPa",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "60kPa",
+    "analytics": {
+      "percent_correct": "82%",
+      "time_spent": "1 min, 0 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 21,
+    "question": {
+      "text": "If a chemist wants to measure 800μL of a solution for an experiment, which laboratory equipment would be the BEST to use?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Micropipette",
+        "images": [],
+        "percentage_selected": "(89.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Buret",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Graduated cylinder",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Beaker",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Micropipette",
+    "analytics": {
+      "percent_correct": "89.8%",
+      "time_spent": "0 min, 9 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "Micropipettes are pipettes used in most standardized biology laboratories. They are specifically used to measure volumes in the microliter range, such as 800μL. Therefore, Option A. Micropipette is the best answer. The following are common laboratory glassware used in a laboratory that you should be familiar with for the Canadian DAT: CC By 4.0",
+      "poe_text": "Option B. Burets - Burets are primarily used for acid and base titration experiments, and not for measuring out a given volume of liquid. Therefore this answer is incorrect . Options C. Erlenmeyer flasks - These are great for running reactions, heating/cooling solutions or containing samples in, but are not calibrated or precise in measurements. Therefore this answer is incorrect . Option D. Graduated cylinders - These are used for measuring volumes. However, this is used to roughly measure substances at the milliliter to liter level, but never microliters. Therefore this answer is incorrect . Options E. Beakers - These are great for running reactions, heating/cooling solutions or containing samples in, but are not calibrated or precise in measurements. Therefore this answer is incorrect .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+21+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 22,
+    "question": {
+      "text": "Which of the following BEST describes a Bronsted-Lowry base?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Dissociates to form hydroxide (OH-) ions",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Proton donor",
+        "images": [],
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Proton acceptor",
+        "images": [],
+        "percentage_selected": "(72.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Electron pair acceptor",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Electron pair donor",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Proton acceptor",
+    "analytics": {
+      "percent_correct": "72.8%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "There have been several different definitions for acids and bases over the course of time. The acid and base definitions below are the ones that we recommend being familiar with for the Canadian DAT:",
+      "poe_text": "Option A. Dissociates to form hydroxide (OH - ) ions – This option is incorrect because this is the definition of an Arrhenius base. Option B. Proton donor – This option is incorrect because this is the definition of a Bronsted-Lowry acid. Option D. Electron pair acceptor – This option is incorrect because this is the definition of a Lewis acid. Option E. Electron pair donor – This option is incorrect because this is the definition of a Lewis base.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 23,
+    "question": {
+      "text": "Given the data shown below, what is the rate law for the following chemical reaction? A + B → C Experiment [A] [B] Initial rate (M • s -1 ) 1 0.4M 0.4M 1.0 x 10 -5 2 1.6M 0.4M 1.6 x 10 -4 3 0.4M 0.8M 4.0 x 10 -5",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Rate = k[A][B]",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Rate = k[A][B] 2",
+        "images": [],
+        "percentage_selected": "(21.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Rate = k[A] 2 [B]",
+        "images": [],
+        "percentage_selected": "(20%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Rate = k[A] 2 [B] 2",
+        "images": [],
+        "percentage_selected": "(43.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Rate = k[A] 3 [B] 2",
+        "images": [],
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Rate = k[A] 2 [B] 2",
+    "analytics": {
+      "percent_correct": "43.9%",
+      "time_spent": "2 min, 17 secs",
+      "category": "Chemical Kinetics"
+    },
+    "category": "Chemical Kinetics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+23+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+23+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 24,
+    "question": {
+      "text": "Each of the following are examples of non-colligative properties of a liquid EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Surface tension",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Boiling Point Elevation",
+        "images": [],
+        "percentage_selected": "(45.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Viscosity",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Solubility",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Color",
+        "images": [],
+        "percentage_selected": "(40.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Boiling Point Elevation",
+    "analytics": {
+      "percent_correct": "45.9%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Solutions"
+    },
+    "category": "Solutions",
+    "explanation": {
+      "concept_text": "Colligative properties are properties of solutions that depend on the ratio of the number of solute particles to the number of solvent molecules in a solution, and not on the nature of the chemical species present. Colligative properties include vapor pressure depression, boiling point elevation, freezing point depression, and osmotic pressure. These are properties that relate to the number of solutes within a given solvent and do not depend on the solvent within solution. For this question, Option B. Boiling point elevation is the only colligative property listed. Therefore, it is the correct answer.",
+      "poe_text": "Option A. Surface tension – This option is incorrect because surface tension is the tension of the surface film of a liquid caused by the attraction of the particles in the surface layer; something that does not depend on solute particles and solvent molecules in a solution. Option C. Viscosity – This option is incorrect because this is the state of being thick, sticky, and semifluid in consistency, due to internal friction; something that does not depend on solute particles and solvent molecules in a solution. Option D. Solubility – This option is incorrect because solubility is the ability of the solute to dissolve in a solvent and hence does not depend on solute particles and solvent molecules in a solution. Option E. Color – This option is incorrect because the color of a solution does not depend on solute particles and solvent molecules in a solution.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 25,
+    "question": {
+      "text": "How many electrons are involved in the following basic redox reaction? 4Zn + NO 3 - + 7OH - + 6H 2 O → 4Zn(OH) 4 2- + NH 3",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(14.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(23.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(17.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(38.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "8",
+    "analytics": {
+      "percent_correct": "38.1%",
+      "time_spent": "0 min, 12 secs",
+      "category": "Electrochemistry"
+    },
+    "category": "Electrochemistry",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 26,
+    "question": {
+      "text": "All of the following are properties of an enzyme EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Provides an alternative route for the reaction with a lower activation energy",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Does not appear in the intermediate steps of a reaction mechanism",
+        "images": [],
+        "percentage_selected": "(17.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "It is neither a product or reactant",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Is selective for a specific reaction",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Decreases the rate constant of a reaction",
+        "images": [],
+        "percentage_selected": "(69%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Decreases the rate constant of a reaction",
+    "analytics": {
+      "percent_correct": "69%",
+      "time_spent": "1 min, 11 secs",
+      "category": "Chemical Kinetics"
+    },
+    "category": "Chemical Kinetics",
+    "explanation": {
+      "concept_text": "Enzymes are biological catalysts which accelerate chemical reactions by providing an alternative route for the reaction with a lower activation energy. The molecules upon which enzymes act are called substrates and the enzyme converts the substrates into different molecules known as products . A catalyst is specific for a specific reaction ( lock-and-key mechanism ) and is neither a product or reactant as it does not change in the reaction. These are important properties of enzymes/catalysts that you must know for the Canadian DAT. Firstly, catalysts change the rate constant of a reaction. Recall, the rate constant of a reaction is increased by the presence of an enzyme, not decreased. This can be inferred from the Arrhenius equation, where the rate is dependent on the activation energy. Since the activation energy is lowered by the enzyme, then the rate constant is subsequently increased.",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 27,
+    "question": {
+      "text": "Which one of the following molecules is polar?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CCl 4",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "PCl 5",
+        "images": [],
+        "percentage_selected": "(17.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CO 2",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H 2 S",
+        "images": [],
+        "percentage_selected": "(65.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H 2 S",
+    "analytics": {
+      "percent_correct": "65.9%",
+      "time_spent": "1 min, 34 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+27+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+27+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+27+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+27+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+27+Solution+2.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 28,
+    "question": {
+      "text": "A point where the maximum temperature and pressure that allows gas to remain at equilibrium between gaseous and liquid phase is known as the ________________.",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Half-equivalence point",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Equivalence point",
+        "images": [],
+        "percentage_selected": "(16.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Triple point",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Second equivalence point",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Critical point",
+        "images": [],
+        "percentage_selected": "(67.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Critical point",
+    "analytics": {
+      "percent_correct": "67.9%",
+      "time_spent": "0 min, 16 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "A phase diagram summarizes the effect of temperature and pressure on a substance in a closed container. Every point in this diagram represents a possible combination of temperature and pressure for the system. The diagram is divided into three areas: solid, liquid, and gaseous states of the substance, which can be seen in the image below. There are two points of equilibrium on a phase diagram that should be given special attention for the Canadian DAT: CC BY 4.0",
+      "poe_text": "Option A. Half-equivalence point – This option is incorrect because this occurs when equal numbers of acid and its conjugate base is present. Option B. Equivalence point – This option is incorrect because this occurs when equal moles of base and acid are present during a titration. Option C. Triple point – This option is incorrect because triple point occurs during phase diagrams, where at a single temperature and pressure, all three phases (liquid, solid and gas) of the element is present at the same time. Option D. Second equivalence point – This option is incorrect because this is a point in a titration where the both hydrogen ions from the initial amount of acid have been neutralized by the added base. This can occur only for polyprotic acids.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+28+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 29,
+    "question": {
+      "text": "How many equivalent resonance structures can be drawn for the carbonate ion, CO 3 2- ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(14%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(75.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3",
+    "analytics": {
+      "percent_correct": "75.4%",
+      "time_spent": "0 min, 6 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "To determine the equivalent resonance structures , we must first determine the number of valence electrons. By looking at the periodic table, we can see that carbon belongs to Group 4, while oxygen belongs to Group 6A. Since the group number represents the number of outermost electrons, we know that carbon has 4 valence electrons while oxygen has 6 valence electrons. Now that we know the number of valence electrons per element, we need to compute the total number of valence electrons: 4 + (3 x 6) = 22 electrons Note : Since the whole molecule has a -2 charge, we need to keep this into consideration as well. Therefore, the total number of valence electrons is: 22 + 2 = 24 electrons Now that we have the total valence electrons, we can draw out all the possible resonance structures of CO 3 2- without violating the octet rule. By doing this, we determine that there are THREE possible resonance structures can be drawn for carbonate ions, CO 3 2- as shown below: CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+29+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 1,
+    "question_number": 30,
+    "question": {
+      "text": "Which of the following best represents \"X\" in the decay process shown below?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+30+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(49.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+30+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(9.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+30+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+30+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(27.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+30+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "49.4%",
+      "time_spent": "0 min, 35 secs",
+      "category": "Nuclear Reactions"
+    },
+    "category": "Nuclear Reactions",
+    "explanation": {
+      "concept_text": "Radioactive decay is a process that occurs in unstable atomic nuclei. There are many different types radioactive decay that may occur depending on the size of the nuclei and whether the instability is due to an abundance of protons or neutrons. The various types of radioactive decay are summarized in the table below. In this question, we can see that Thorium (Th) undergoes Beta decay . In this process, a neutron is converted into a proton and a negative charge is expelled. As a result, the atomic number of the element increases by 1. Since the atomic number (or the number of protons) changes, so does the element. This leads to the formation of the element with an atomic number of 91, which is called Protactinium (Pa) - Option A. CC By 4.0 Note : For Beta decay, the mass number does NOT change because one component (neutron) is converted to another component with roughly the same mass (proton).",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+1/Question+30+Solution+1.png"
+      ]
+    }
+  }
+]

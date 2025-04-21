@@ -1,0 +1,32 @@
+
+#~~~~~~~~~~~~~~~~~ Necessary Ignores ~~~~~~~~~~~~~~~~~#
+
+# Node dependencies (inside client)
+client/node_modules/
+
+# Build output & cache (inside client)
+client/dist/
+client/.vite/
+
+# Environment variables (inside client)
+# Important: Uncomment if you use .env files! Keep secrets out of Git.
+# client/.env
+# client/.env.*
+# !client/.env.example
+
+# Log files (anywhere, including client)
+*.log
+client/npm-debug.log*
+client/yarn-debug.log*
+client/yarn-error.log*
+client/pnpm-debug.log*
+
+# IDE / Editor configuration
+.idea/
+.vscode/
+*.sw?
+
+# OS generated files
+.DS_Store
+Thumbs.db
+._*

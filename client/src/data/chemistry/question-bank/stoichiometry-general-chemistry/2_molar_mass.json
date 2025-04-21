@@ -1,0 +1,610 @@
+[
+  {
+    "question_number": 1,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "Which of the following statements is true regarding molar mass?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Molar mass is a unit of volume.",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Molar mass is equal in number to atomic mass.",
+        "images": [],
+        "percentage_selected": "(81.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Molar mass is a unit of concentration.",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Molar mass is equal to the number of molecules.",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Molar mass is a unit of temperature.",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Molar mass is equal in number to atomic mass.",
+    "analytics": {
+      "percent_correct": "81.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we need to know that the molar mass and atomic mass of a molecule are numerically equivalent. However, their units are different: For example, the total atomic mass in CO 2 is 44.01 amu and the molecular mass of CO 2 is 44.01 g•mol -1 . Therefore, we can say that molar mass is equal in number to atomic mass . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "Which of the following is a correct unit of molar mass?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "mol•L -1",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "g•mol -1",
+        "images": [],
+        "percentage_selected": "(96.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "g•L -1",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "mol•g -1",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "atm•mol -1",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "g•mol -1",
+    "analytics": {
+      "percent_correct": "96.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we need to know that the molar mass of a substance is the total mass, in grams, per one mole of the substance. When given a pure sample, it is calculated by taking the total mass, in grams, divided by the number of moles found in the sample. Its formula is: Therefore, the unit for molar mass is g•mol -1 . The answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "How many moles of SiO 2 are there in a 20 g sample of SiO 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(92.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "92.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we first need to find the molar mass of SiO 2 , and then use this to convert the 20 g sample of SiO 2 into moles. We also need the formula: STEP 1: First, we need to calculate the molar mass of SiO 2 (Si = 28, O = 16 g•mol -1 ): STEP 2: Next, we can calculate the number of moles of SiO 2 in a sample of 20g of SiO 2 : Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "What is the mass of 5 moles of sulfuric acid, H 2 SO 4 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.050 g",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "20 kg",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "490 g",
+        "images": [],
+        "percentage_selected": "(92.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "890 g",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "490 kg",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "490 g",
+    "analytics": {
+      "percent_correct": "92.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we first need to find the molar mass of H 2 SO 4 , and then use this to convert the 5 moles of H 2 SO 4 into its mass. We also need the formula: STEP 1: First, we need to calculate the molar mass of H 2 SO 4 (H = 1, S = 32, O = 16 g•mol -1 ): STEP 2: Next, we can calculate the mass of 5 moles of H 2 SO 4 , using re-arranged version of the formula above: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+4+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+4+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "How many grams of C are in 0.012 moles of C?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.001",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.01",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.1",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.144",
+        "images": [],
+        "percentage_selected": "(87%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "1.44",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.144",
+    "analytics": {
+      "percent_correct": "87%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we first need to find the molar mass of C, and then use this to convert the 0.012 moles of C into its mass. We also need the formula: STEP 1 : First, we need to know the molar mass of C: STEP 2: Next, we can calculate the mass of 0.012 moles of C, using re-arranged version of the formula above: Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+5+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+4+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "Which of the following substances has the fewest number of moles in a 20 g sample?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H 2 CO 3",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CH 2 COOH",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CaO",
+        "images": [],
+        "percentage_selected": "(17.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Al 2 O 3",
+        "images": [],
+        "percentage_selected": "(72.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "C 5 H 12",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Al 2 O 3",
+    "analytics": {
+      "percent_correct": "72.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving moles , we need to use the following formula: In this case, we are given five options of compounds of varying molar masses. Because we are told that each sample weighs 20 g, and moles is equal to mass divided by molar mass, the sample with the highest molar mass will have the fewest number of moles . Option A. H 2 CO 3 Incorrect. H 2 CO 3 has a molar mass of 62 g•mol -1 . Option B. CH 2 COOH Incorrect. CH 2 COOH has a molar mass of 59 g•mol -1 . Option C. CaO Incorrect. CaO has a molar mass of 56 g•mol -1 . Option D. Al 2 O 3 Correct. Al 2 O 3 has a molar mass of 101 g•mol -1 . Option E. C 5 H 12 Incorrect. C 5 H 12 has a molar mass of 72 g•mol -1 . Since Al 2 O 3 has the highest molar mass , a 20 g sample of it has the fewest number of moles. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "Which of the following molar mass rankings is correctly arranged from highest to lowest?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H 2 SO 4 > C 5 H 12 > CO 2 > C 2 H 4",
+        "images": [],
+        "percentage_selected": "(92.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "C 5 H 12 > H 2 SO 4 > CO 2 > C 2 H 4",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 5 H 12 > CO 2 > C 2 H 4 > H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H 2 SO 4 > C 5 H 12 > C 2 H 4 > CO 2",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "H 2 SO 4 > CO 2 > C 2 H 4 > C 5 H 12",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H 2 SO 4 > C 5 H 12 > CO 2 > C 2 H 4",
+    "analytics": {
+      "percent_correct": "92.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we need to find the molar mass of each compound. STEP 1: First, we need to calculate the molar mass of H 2 SO 4 (H = 1, S = 32, O = 16 g•mol -1 ): STEP 2: Next, we need to calculate the molar mass of C 5 H 12 (C = 12, H = 1 g•mol -1 ): STEP 3 : Next, we need to calculate the molar mass of CO 2 (C = 12, O = 16 g•mol- 1 ): STEP 4: Next, we need to calculate the molar mass of C 2 H 4 (C = 12, H = 1 g•mol -1 ): STEP 5: Finally, we place the compounds in order of molar mass from highest to lowest: H 2 SO 4 > C 5 H 12 > CO 2 > C 2 H 4 Therefore, the answer is A.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+7+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "How many molecules are found in 54 g of H 2 O?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+8+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+8+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+8+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+8+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+8+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(92.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "92.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we first need to find the molar mass of H 2 O, and then use this to convert the 54 g of H 2 O into moles. Then, we can use Avogadro’s number (6.022 × 10 23 ) to convert the number of moles into the number of molecules. STEP 1: First, we need to find the molar mass of H 2 O (H = 1, O = 16 g•mol -1 ): STEP 2: Next, we find the number of moles of H 2 O: STEP 3: Finally, we find the number of molecules of the moles of H 2 O using Avogadro’s number: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+8+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+8+Solution+3.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "A sample of 5 moles of HClO 3 (84.459 g•mol -1 ) contains",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.05 g of HClO 3",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "122 g of O",
+        "images": [],
+        "percentage_selected": "(8.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "177 g of Cl",
+        "images": [],
+        "percentage_selected": "(62.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "0.5 kg of H",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4.22 kg of HClO 3",
+        "images": [],
+        "percentage_selected": "(21.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "177 g of Cl",
+    "analytics": {
+      "percent_correct": "62.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we first need to find the molar mass of each substance, and then use this to convert the moles of the substance into mass (g). We also need the formula: Option A. 0.05 g of HClO 3 Incorrect. 5 moles of HClO 3 weigh 5 × 84.45 ≈ 422 g. Option B. 122 g of O Incorrect. 5 moles of HClO 3 contain 5 × 3 = 15 mol of O atoms. This implies that the mass of O atoms in 5 moles of HClO 3 is 15 × 16 = 240 g. Option C. 177 g of Cl Correct. 5 moles of HClO 3 contain 5 mol of Cl atoms. This implies that the mass of Cl atoms in 5 moles of HClO 3 is 5 × 35.45 ≈ 177 g. Option D. 0.5 kg of H Incorrect. 5 moles of HClO 3 contain 5 mol of H atoms. This implies that the mass of H atoms in 5 moles of HClO 3 is 5 × 1 = 5 g. Option E. 4.22 kg of HClO 3 Incorrect. 5 moles of HClO 3 weigh 5 × 84.45 ≈ 422 g ≈ 0.422 kg. Therefore, the answer is C.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+9+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass",
+    "question": {
+      "text": "A 31-gram sample of carbonic acid, H 2 CO 3 (62 g•mol -1 ) contains",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.5 molecules of H 2 CO 3",
+        "images": [],
+        "percentage_selected": "(16.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2 moles of O atoms.",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1 mole of H.",
+        "images": [],
+        "percentage_selected": "(66.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "2.0 grams of H.",
+        "images": [],
+        "percentage_selected": "(9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "200 grams of O.",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1 mole of H.",
+    "analytics": {
+      "percent_correct": "66.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving molar mass , we need the formula: Option A. 0.5 molecules of H 2 CO 3 . Incorrect. 31 g of H 2 CO 3 is equivalent to 0.5 moles of H 2 CO 3 . This implies that there are 0.5 × 6.022 × 10 23 = 3.0 × 10 23 molecules of H 2 CO 3 . Option B. 2 moles of O atoms. Incorrect. 31 g of H 2 CO 3 is equivalent to 0.5 moles of H 2 CO 3 . This implies that there are 0.5 × 3 = 1.5 moles of O atoms. Option C. 1 mole of H. Correct. 31 g of H 2 CO 3 is equivalent to 0.5 moles of H 2 CO 3 . This implies that there are 0.5 × 2 = 1.0 mole of H atoms. Option D. 2.0 grams of H. Incorrect. 31 g of H 2 CO 3 is equivalent to 0.5 moles of H 2 CO 3 . There are 0.5 × 2 = 1.0 mole of H atoms. This implies that there are 1 × 1 = 1 g of H. Option E. 200 grams of O. Incorrect. 31 g of H 2 CO 3 is equivalent to 0.5 moles of H 2 CO 3 . There are 0.5 × 3 = 1.5 moles of O atoms. This implies that there are 1.5 × 16 = 24 g of O. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Moles+%26+Molar+Mass%3A+Molar+Mass/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000104cb6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104caf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001047f68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010483d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010487e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104831a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104c7bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104c7ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104c5ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104c7f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104c4cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104c9f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104c9fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104caecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Molar Mass"
+  }
+]

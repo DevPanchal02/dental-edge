@@ -1,0 +1,597 @@
+[
+  {
+    "question_number": 1,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "Which of the following salts will create a basic solution when combined with water?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NaCl",
+        "images": [],
+        "percentage_selected": "(15.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "HCl",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CH 3 COONa",
+        "images": [],
+        "percentage_selected": "(71.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "KI",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 3 COONa",
+    "analytics": {
+      "percent_correct": "71.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. NaCl Incorrect. To determine if NaCl salt is acidic, basic, or neutral, we can first break down the molecule into its respective ions (NaCl à Na + + Cl - ). Then, we will add H + to the negative ion (add H + to Cl - à HCl), and we will add OH - to the positive ion (add OH - to Na + à NaOH). Given that HCl is a strong acid and NaOH is a strong base, and a strong acid and strong base form a neutral salt, NaCl is confirmed as a neutral salt. Therefore, NaCl will create a neutral solution. Option B. HCl Incorrect. HCl is not a salt but a strong acid. Option C. CH 3 COONa Correct. To determine if CH 3 COONa salt is acidic, basic, or neutral, we can first break down the molecule into its respective ions (CH 3 COONa à CH 3 COO - + Na + ). Then, we will add H + to the negative ion (add H + to CH 3 COO - à CH 3 COOH) and we will add OH - to the positive ion (add OH - to Na + à NaOH). Given that CH 3 COOH is a weak acid, and NaOH is a strong base, CH 3 COONa is a basic salt. Therefore, CH 3 COONa will create a basic solution. Option D. H 2 SO 4 Incorrect. H 2 SO 4 is not a salt but a strong acid. Option E. KI Incorrect. To determine if KI salt is acidic, basic, or neutral, we can first break down the molecule into its respective ions (KI à K + + I - ). Then, we will add H + to the negative ion (add H + to I - à HI), and we will add OH - to the positive ion (add OH - to K + à KOH). Given that HI is a strong acid and KOH is a strong base, KI is a neutral salt. Therefore, KI will create a neutral solution. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "Which of the following is a salt that will create an acidic solution when combined with water?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NaOH",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "KNO 3",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "NH 4 Cl",
+        "images": [],
+        "percentage_selected": "(84%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "SrBr 2",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "NH 4 Cl",
+    "analytics": {
+      "percent_correct": "84%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. NaOH Incorrect. NaOH is a strong base and is not a salt. Option B. KNO 3 Incorrect. To determine if KNO 3 salt is acidic, basic, or neutral, we can first break down the molecule into its respective ions (KNO 3 à K + + NO 3 - ). Then, we will add H + to the negative ion (add H + to NO 3 - à HNO 3 ) and we will add OH - to the positive ion (add OH - to K + à KOH). Given that HNO 3 is a strong acid and KOH is a strong base, KNO 3 is a neutral salt. Therefore, KNO 3 will create a neutral solution. Option C. NH 4 Cl Correct. To determine if NH 4 Cl salt is acidic, basic, or neutral, we can first break down the molecule into its respective ions (NH 4 Cl à NH 4 + + Cl - ). Then, we will add H + to the negative ion (add H + to Cl - à HCl) and we will add OH - to the positive ion (add OH - to NH 4 + à NH 4 OH). Given that HCl is a strong acid and NH 4 OH is a weak base, NH 4 Cl is an acidic salt. Therefore, NH 4 Cl will create an acidic solution. Option D. SrBr 2 Incorrect. To determine if SrBr 2 salt is acidic, basic, or neutral, we can first break down the molecule into its respective ions (SrBr 2 à Sr 2+ + 2 Br - ). Then, we will add H + to the negative ion (add H + to Br - à HBr) and we will add OH - to the positive ion (add OH - to Sr 2+ à Sr(OH) 2 ). Given that HBr is a strong acid and Sr(OH) 2 is a strong base, SrBr 2 is a neutral salt. Therefore, SrBr 2 will create a neutral solution. Option E. H 2 O Incorrect. H 2 O itself does not create an acidic solution because it is neutral. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "What salt is produced when Ca(OH) 2 is mixed with HCl?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CaCl",
+        "images": [],
+        "percentage_selected": "(12.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CaCl 2",
+        "images": [],
+        "percentage_selected": "(84.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CaH",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "HClO",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CaCl 2",
+    "analytics": {
+      "percent_correct": "84.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving neutralization reactions , we need to know that neutralization is a reaction when a strong acid reacts quantitatively with a strong base to form salt and water. In this case, when calcium hydroxide (Ca(OH) 2 ) is mixed with hydrochloric acid (HCl), a neutralization reaction occurs. The hydroxide ions (OH - ) from calcium hydroxide combine with the hydrogen ions (H + ) from hydrochloric acid to produce water (H 2 O). The chemical reaction between Ca(OH) 2 and HCl can be written as the following: Ca(OH) 2( s ) + 2 HCl ( aq ) à CaCl 2( aq ) + 2 H 2 O ( l ) Therefore, the salt produced when Ca(OH) 2 is mixed with HCl is CaCl 2 . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "Each of the following is an example of a neutralization reaction EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HCl + NaOH ⇢ NaCl + H 2 O",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2 SO 4 + 2 KOH ⇢ K 2 SO 4 + 2 H 2 O",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2 HNO 3 + Ba(OH) 2 ⇢ Ba(NO 3 ) 2 + 2 H 2 O",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CH 3 COOH + NH 3 ⇢ CH 3 COO - + NH 4 +",
+        "images": [],
+        "percentage_selected": "(91.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "2 HI + 2 LiOH ⇢ 2 LiI + 2 H 2 O",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 3 COOH + NH 3 ⇢ CH 3 COO - + NH 4 +",
+    "analytics": {
+      "percent_correct": "91.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. HCl + NaOH à NaCl + H 2 O Incorrect. This represents a neutralization reaction where the strong acid (HCl) reacts with the strong base (NaOH) to form the neutral salt NaCl and H 2 O. Option B. H 2 SO 4 + 2 KOH à K 2 SO 4 + 2 H 2 O Incorrect. This represents a neutralization reaction where the strong acid (H 2 SO 4 ) reacts with the strong base (KOH) to form the neutral salt K 2 SO 4 and H 2 O. Option C. 2 HNO 3 + Ba(OH) 2 à Ba(NO 3 ) 2 + 2 H 2 O Incorrect. This represents a neutralization reaction where the strong acid (HNO 3 ) reacts with the strong base (Ba(OH) 2 ) to form the neutral salt Ba(NO 3 ) 2 and H 2 O. Option D. CH 3 COOH + NH 3 ⇢ CH 3 COO - + NH 4 + Correct. This is not a neutralization reaction involving a strong acid and strong base. It is a reaction between a weak acid (CH 3 COOH) and a weak base (NH 3 ). Option E. 2 HI + 2 LiOH à 2 LiI + 2 H 2 O Incorrect. This represents a neutralization reaction where the strong acid (HI) reacts with the strong base (LiOH) to form the neutral salt LiI and H 2 O. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "A 50 mL solution of stock HCl is titrated with 0.20 M NaOH. At 40 mL of the NaOH solution, the equivalence point is reached. What is the concentration of the stock acid solution?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.09 M",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.16 M",
+        "images": [],
+        "percentage_selected": "(82.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "0.35 M",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.40 M",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "0.50 M",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.16 M",
+    "analytics": {
+      "percent_correct": "82.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving neutralization reaction, we need to know that the reaction in the given question is a neutralization reaction. In this case, we can use the following formula, which can only be used when there is a neutralization reaction between a strong acid and a strong base: M = molarity, V = volume, M 1 V 1 = moles of acid, M 2 V 2 = moles of base STEP 1: First, we can come up with a chemical reaction between HCl and NaOH: HCl ( aq ) + NaOH ( aq ) à NaCl ( aq ) + H 2 O ( l ) STEP 2: Then, we can use the formula above to calculate for the concentration of the stock acid solution, knowing that the volume of the stock acid HCl is 50 mL ( V 1 = 50), the volume of the NaOH solution is 40 mL ( V 2 = 40), and the concentration of the NaOH solution is 0.2 M ( M 2 = 0.2): Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+5+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+5+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "If 50 mL of NaOH requires 50 mL of 1.0 M H 2 SO 4 to be neutralized, what is the concentration of NaOH?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.33",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.50",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1.0",
+        "images": [],
+        "percentage_selected": "(35.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2.0",
+        "images": [],
+        "percentage_selected": "(58.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "4.0",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2.0",
+    "analytics": {
+      "percent_correct": "58.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving neutralization reaction, we need to know that the reaction in the given question is a neutralization reaction. In this case, we can use the following formula, which can only be used when there is a neutralization reaction between a strong acid and a strong base: M = molarity, V = volume, M 1 V 1 = moles of acid, M 2 V 2 = moles of base STEP 1: First, we can come up with a chemical reaction between H 2 SO 4 and NaOH: H 2 SO 4( aq ) + 2 NaOH ( aq ) à Na 2 SO 4( aq ) + 2 H 2 O ( l ) STEP 2: Then, we can use the formula above to calculate for the concentration of NaOH, knowing that the volume of the acid is 50 mL (V 1 = 50), the concentration of the acid is 1.0 M (M 1 = 1.0), and the volume of the base is 50 mL (V 2 = 50). Also, we should know that the acid H 2 SO 4 dissociates to produce 2 H + ions, so we must add a coefficient of 2 to the left side of the equation: Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+6+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "If 30 mL of 0.10 M Ca(OH) 2 is titrated with 0.20 M HNO 3 , what volume of HNO 3 is required to neutralize Ca(OH) 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "10 mL",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "15 mL",
+        "images": [],
+        "percentage_selected": "(18.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "20 mL",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "30 mL",
+        "images": [],
+        "percentage_selected": "(76.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "45 mL",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "30 mL",
+    "analytics": {
+      "percent_correct": "76.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving neutralization reaction, we need to know that the reaction in the given question is a neutralization reaction. In this case, we can use the following formula, which can only be used when there is a neutralization reaction between a strong acid and a strong base: M = molarity, V = volume, M 1 V 1 = moles of acid, M 2 V 2 = moles of base STEP 1: First, we can come up with a chemical reaction between Ca(OH) 2 and HNO 3 : Ca(OH) 2( aq ) + 2 HNO 3( aq ) à Ca(NO 3 ) 2( aq ) + 2 H 2 O ( l ) STEP 2: Then, we can use the formula above to calculate for the volume of HNO 3 , knowing that the volume of Ca(OH) 2 is 30 mL (V 2 = 30), the concentration of Ca(OH) 2 is 0.10 M (M 2 = 0.10), and the concentration of HNO 3 is 0.20 M (M 1 = 0.20). Also, we should know that the base Ca(OH) 2 dissociates to produce 2 OH - ions, so we have to add a coefficient of 2 to the right side of the equation: Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "How many molecules of HCl are needed to neutralize 20 mL of 2.0 M of Ca(OH) 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+8+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(8.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+8+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(12.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+8+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(16.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+8+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(59.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+8+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "59.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving neutralization reaction, we need to know that the reaction in the given question is a neutralization reaction. In this case, we can use the following formula, which can only be used when there is a neutralization reaction between a strong acid and a strong base: M = molarity, V = volume, M 1 V 1 = moles of acid, M 2 V 2 = moles of base STEP 1: First, we need to come up with a chemical reaction between HCl and Ca(OH) 2 : 2 HCl ( aq ) + Ca(OH) 2( aq ) à CaCl 2( aq ) + 2 H 2 O ( l ) STEP 2: Then, we can calculate for the moles of HCl needed to neutralize 20 mL of 2.0 M of Ca(OH) 2 , knowing that the volume of the base Ca(OH) 2 is 20 × 10 -3 L ( V 2 = 20 × 10 -3 ) and the concentration of the base Ca(OH) 2 is 2.0 M ( M 2 = 2.0). Also, we should know that the base Ca(OH) 2 dissociates to produce 2 OH - ions, so we have to add a coefficient of 2 to the right side of the equation: STEP 3: Then, we can calculate for the number of HCl molecules needed by using the Avogadro’s number: Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+8+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+8+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "What is the molarity of a nitric acid (HNO 3 ) solution if 25 mL of nitric acid is required to neutralize 0.50 g of calcium carbonate (CaCO 3 )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.20 M",
+        "images": [],
+        "percentage_selected": "(30.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.25 M",
+        "images": [],
+        "percentage_selected": "(17.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.40 M",
+        "images": [],
+        "percentage_selected": "(39.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "0.55 M",
+        "images": [],
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "0.70 M",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.40 M",
+    "analytics": {
+      "percent_correct": "39.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving neutralization reaction, we need to know that the reaction in the given question is a neutralization reaction. In this case, we can use the following formula, which can only be used when there is a neutralization reaction between a strong acid and a strong base: M = molarity, V = volume, M 1 V 1 = moles of acid, M 2 V 2 = moles of base STEP 1: First, we need to come up with a balanced chemical reaction between HNO 3 and CaCO 3 : CaCO 3( aq ) + 2 HNO 3( aq ) à Ca(NO 3 ) 2( aq ) + CO 2( g ) + H 2 O ( l ) STEP 2: Second, we need to calculate for the moles of calcium carbonate, knowing that the mass is 0.50 g and the molar mass is 100 g: STEP 3: From the balanced chemical reaction above, we can calculate for the moles of HNO 3 by using the mole ratio between CaCO 3 and HNO 3 : STEP 4: Now, we can calculate for the molarity of HNO 3 solution: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+9+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions",
+    "question": {
+      "text": "Which of the following acid must be used if 50 mL of 0.5 M of an acid completely neutralizes 50 mL of 1.0 M NaOH?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 3 COOH",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(77.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "KOH",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "HCl",
+        "images": [],
+        "percentage_selected": "(13.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "HNO 3",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H 2 SO 4",
+    "analytics": {
+      "percent_correct": "77.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Solution To solve this problem involving neutralization reaction, we need to know that the reaction in the given question is a neutralization reaction. In this case, we can use the following formula, which can only be used when there is a neutralization reaction between a strong acid and a strong base: M = molarity, V = volume, M 1 V 1 = moles of acid, M 2 V 2 = moles of base STEP 1: First, we need to calculate for the moles of base, knowing that the concentration of base is 1.0 M ( M 2 = 1.0), and the volume of base is 50 mL = 50 × 10 -3 L ( V 2 = 50 × 10 -3 ): STEP 2: Then, we can calculate for the moles of acid to see if the number of moles can completely neutralize the base, knowing that the concentration of acid is 0.5 M ( M 1 = 0.5), and the volume of acid is 50 mL = 50 × 10 -3 L ( V 1 = 50 × 10 -3 ): STEP 2: Then, we can calculate for the moles of acid to see if the number of moles can completely neutralize the base, knowing that the concentration of acid is 0.5 M ( M 1 = 0.5), and the volume of acid is 50 mL = 50 × 10 -3 L ( V 1 = 50 × 10 -3 ): This number tells us that each mole of our acid dissociates to produces 2 H + ions. In this case, the acid would be H 2 SO 4 because it is a strong acid that dissociates to produce 2 H + ions. The rest of the options are not correct because CH 3 COOH is a weak acid, KOH is a strong base, HCl dissociates to produce 1 H + ion, and HNO 3 dissociates to produce 1 H + ion. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+10+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+10+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Strength+of+Acids+and+Bases%3A+Neutralization+Reactions/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000102942e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x000000010293b0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001024828d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001024c96a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010250a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001024bda80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000102907c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010290af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x00000001028e7a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010290b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x00000001028d8b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010292b9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010292bb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x000000010293acf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Acid-Bases",
+    "question_bank": "Neutralization Reactions"
+  }
+]

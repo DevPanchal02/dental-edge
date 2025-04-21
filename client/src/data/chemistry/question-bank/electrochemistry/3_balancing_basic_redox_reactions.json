@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "How many iron atoms can be found on each side after balancing the following redox reaction in a basic solution? Fe 2+ ( aq ) + ClO 4 - ( aq ) → Fe 3+ ( aq ) + Cl - ( aq )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(85.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "18",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "8",
+    "analytics": {
+      "percent_correct": "85.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions , we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) Fe 2+ → Fe 3+ (2) ClO 4 - →  Cl - STEP 2: Next, we balance all the atoms in the equation other than O and H. We can skip this step since Fe and Cl are already balanced in both half-reactions. STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (2), we have 4 O on the left side, so we add 4 H 2 O on the right: (1) Fe 2+ →  Fe 3+ (2) ClO 4 - → Cl - + 4 H 2 O STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (2), we have 8 H on the right side, and none on the left, so we add 8 H + on the left: (1) Fe 2+ → Fe 3+ (2) ClO 4 - + 8 H + →  Cl - + 4 H 2 O STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. In (2), because we previously added 8 H + , we add 8 OH - on both sides: (1) Fe 2+ →  Fe 3+ (2) ClO 4 - + 8 H + + 8 OH - →  Cl - + 4 H 2 O + 8 OH - STEP 6: Next, we will combine the H + and OH - to create H 2 O (only possible on the left side): (1) Fe 2+ →  Fe 3+ (2) ClO 4 - + 8 H 2 O →  Cl - + 4 H 2 O + 8 OH - STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is a +2 charge on the left and +3 on the right, so we add 1 e - on the right side so both sides have a charge of +2. In (2), there is a -1 charge on the left and a -1 – 8 = -9 charge on the right, so we will add 8 e - on the left so both sides have a charge of -9: (1) Fe 2+ →  Fe 3+ + e - (2) ClO 4 - + 8 H 2 O + 8 e - →  Cl - + 4 H 2 O + 8 OH - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (2), there are 8 e - transferred, but in (1), there is only 1 e - transferred, so we multiply (1) by 8 so both sides involve the transfer of 8 e - : (1) 8 Fe 2+ → 8 Fe 3+ + 8 e - (2) ClO 4 - + 8 H 2 O + 8 e - →  Cl - + 4 H 2 O + 8 OH - STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: 8 Fe 2+ + ClO 4 - + 8 H 2 O + 8 e - →  8 Fe 3+ + 8 e - + Cl - + 4 H 2 O + 8 OH - 8 Fe 2+ + ClO 4 - + 4 H 2 O  →  8 Fe 3+ + Cl - + 8 OH - As we can see, 8 iron atoms can be found on each side after balancing our redox reaction in basic conditions. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "How many oxygen atoms can be found on each side after balancing the following redox reaction in a basic solution? Cu ( s ) + NO 3 - ( aq ) → Cu 2+ ( aq ) + NO ( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(20.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(11%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(64.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "10",
+    "analytics": {
+      "percent_correct": "64.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions , we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) Cu → Cu 2+ (2) NO 3 - → NO STEP 2: Next, we balance all the atoms in the equation other than O and H. We can skip this step since Cu and N are already balanced in both half-reactions. STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (2), we have 3 O on the left side, but only 1 O on the right side, so we add 2 H 2 O on the right: (1) Cu → Cu 2+ (2) NO 3 - → NO + 2 H 2 O STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (2), we have 4 H on the right side, and none on the left, so we add 4 H + on the left: (1) Cu → Cu 2+ (2) NO 3 - + 4 H + → NO + 2 H 2 O STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. Since we added 4 H + in (2) previously, we will add 4 OH - to both sides: (1) Cu → Cu 2+ (2) NO 3 - + 4 H + + 4 OH - → NO + 2 H 2 O + 4 OH - STEP 6: Next, we will combine the H + and OH - to create H 2 O (only possible on the left side): (1) Cu → Cu 2+ (2) NO 3 - + 4 H 2 O → NO + 2 H 2 O + 4 OH - STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is a +2 charge on the right, and no charge on the left, so we add 2 e - on the right side so both sides have a charge of 0. In (2), there is a -1 charge on the left, and a 4(-1) = -4 charge on the right, so we add 3 e - on the left side so both sides have a charge of -4: (1) Cu → Cu 2+ + 2 e - (2) NO 3 - + 4 H 2 O + 3 e - → NO + 2 H 2 O + 4 OH - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (1), there are 2 e - transferred, but in (2), there are 3 e - transferred. To make the e - balanced, we multiply (1) by 3 and (2) by 2 so both reactions involve the transfer of 6 ­e - : (1) 3 Cu → 3 Cu 2+ + 6 e - (2) 2 NO 3 - + 8 H 2 O + 6 e - → 2 NO + 4 H 2 O + 8 OH - STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: 3 Cu + 2 NO 3 - + 8 H 2 O + 6 e - → 3 Cu 2+ + 6 e - + 2 NO + 4 H 2 O + 8 OH - 3 Cu + 2 NO 3 - + 4 H 2 O → 3 Cu 2+ + 2 NO + 8 OH - As we can see, 10 oxygen atoms can be found on each side after balancing our redox reaction in basic conditions. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "What is the coefficient of H + after balancing the following redox reaction in a basic solution? Mg ( s ) + NO 3 - ( aq ) → Mg 2+ ( aq ) + NO 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(85%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "14",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0",
+    "analytics": {
+      "percent_correct": "85%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions , we will follow the steps below: STEP 1: F irst, we write down the half-reactions: (1) Mg → Mg 2+ (2) NO 3 - → NO 2 STEP 2: Next, we balance all the atoms in the equation other than O and H. We can skip this step since Mg and N are already balanced in both half-reactions. STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (2), we have 3 O on the left side, but only 2 O on the right side, so we add 1 H 2 O on the right: (1) Mg → Mg 2+ (2) NO 3 - →NO 2 + H 2 O STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (2), we have 2 H on the right side, so we add 2 H + on the left: (1) Mg → Mg 2+ (2) NO 3 - + 2 H + → NO 2 + H 2 O STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. In (2), since we previously added 2 H + , we will now add 2 OH - on both sides: (1) Mg → Mg 2+ (2) NO 3 - + 2 H + + 2 OH - → NO 2 + H 2 O + 2 OH - STEP 6: Next, we will combine the H + and OH - to create H 2 O (only possible on the left side): (1) Mg → Mg 2+ (2) NO 3 - + 2 H 2 O → NO 2 + H 2 O + 2 OH - STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is a +2 charge on the right, and no charge on the left, so we add 2 e - on the right side so both sides have a charge of 0. In (2), there is a -1 charge on the left, and a -2 charge on the right, so we add 1 e - on the left so both sides have a charge of -2: (1) Mg → Mg 2+ + 2 e - (2) NO 3 - + 2 H 2 O + e - → NO 2 + H 2 O + 2 OH - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (1), there are 2 e - transferred, but in (2), there is only 1 e - transferred. To make the e - balanced, we multiply (2) by 2 so both reactions involve the transfer of 2 e - : (1) Mg → Mg 2+ + 2 e - (2) 2 NO 3 - + 4 H 2 O + 2 e - → 2 NO 2 + 2 H 2 O + 4 OH - STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: Mg + 2 NO 3 - + 4 H 2 O + 2 e - → Mg 2+ + 2 e - + 2 NO 2 + 2 H 2 O + 4 OH - Mg + 2 NO 3 - + 2 H 2 O → Mg 2+ + 2 NO 2 + 4 OH - As we can see, the coefficient of H + is 0 after balancing our redox reaction in basic conditions. We actually didn’t need to go through all of these calculations to reach this answer – all of the H + is combined with OH - to form H 2 O in a basic solution. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "How many excess OH - ions remain after balancing the following redox reaction in a basic solution? Sn ( s ) + NO 3 - ( aq ) → Sn 2+ ( aq ) + NO ( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(83.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "8",
+    "analytics": {
+      "percent_correct": "83.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions , we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) Sn → Sn 2+ (2) NO 3 - → NO STEP 2: Next, we balance all the atoms in the equation other than O and H. We can skip this step since Sn and N are already balanced in both half-reactions. STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (2), we have 3 O on the left side, but only 1 O on the right side, so we add 2 H 2 O on the right: (1) Sn → Sn 2+ (2) NO 3 - → NO + 2 H 2 O STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (2), we have 4 H on the right side, and none on the left, so we add 4 H + on the left: (1) Sn → Sn 2+ (2) NO 3 - + 4 H + → NO + 2 H 2 O STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added: In (2), we previously added 4 H + , so now we must add 4 OH - on both sides: (1) Sn → Sn 2+ (2) NO 3 - + 4 H + + 4 OH - → NO + 2 H 2 O + 4 OH - STEP 6: Next, we will combine the H + and OH - to create H 2 O (only possible on the left side): (1) Sn → Sn 2+ (2) NO 3 - + 4 H 2 O → NO + 2 H 2 O + 4 OH - STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is a +2 charge on the right, and no charge on the left, so we add 2 e - on the right side so both sides have a charge of 0. In (2), there is a -1 charge on the left, and a -4 charge on the right, so we add 3 e - on the left so both sides have a charge of -4: (1) Sn → Sn 2+ + 2 e - (2) NO 3 - + 4 H 2 O + 3 e - → NO + 2 H 2 O + 4 OH - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (1), there are 2 e - transferred, and in (2), there are 3 e - transferred. To make the e_ balanced, we multiply (1) by 3 and (2) by 2 so both reactions involve the transfer of 6 e - : (1) 3 Sn → 3 Sn 2+ + 6 e - (2) 2 NO 3 - + 8 H 2 O + 6 e - → 2 NO + 4 H 2 O + 8 OH - STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: 3 Sn + 2 NO 3 - + 8 H 2 O + 6 e - → 3 Sn 2+ + 6 e - + 2 NO + 4 H 2 O + 8 OH - 3 Sn + 2 NO 3 - + 4 H 2 O → 3 Sn 2+ + 2 NO + 8 OH - As we can see, there are 8 excess OH - ions after balancing our redox reaction in basic conditions. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "How many electrons are transferred in the following redox reaction in a basic solution? MnO 4 - ( aq ) + H 2 O 2 ( aq ) → Mn 2+ ( aq ) + O 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(85.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "15",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "18",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "10",
+    "analytics": {
+      "percent_correct": "85.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions , we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) MnO 4 - → Mn 2+ (2) H 2 O 2 → O 2 STEP 2: Next, we balance all the atoms in the equation other than O and H. We can skip this step since Mn is already balanced in the first half-reaction. STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (1), we have 4 O on the left side, so we add 4 H 2 O on the right: (1)  MnO 4 - → Mn 2+ + 4 H 2 O (2) H 2 O 2 → O 2 STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (1), we have 8 H on the right, and none on the left, so we add 8 H + on the left. In (2), we have 2 H on the left, and none on the right, so we add 2 H + on the right: (1)  MnO 4 - + 8 H + → Mn 2+ + 4 H 2 O (2) H 2 O 2 → O 2 + 2 H + STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. In (1), we previously added 8 H + , so now we add 8 OH - on both sides. In (2), we previously added 2 H + , so now we add 2 OH - on both sides: (1)  MnO 4 - + 8 H + + 8 OH - → Mn 2+ + 4 H 2 O + 8 OH - (2) H 2 O 2 + 2 OH - → O 2 + 2 H + + 2 OH - STEP 6: Next, we will combine the H + and OH - to create H 2 O: (1)  MnO 4 - + 8 H 2 O → Mn 2+ + 4 H 2 O + 8 OH - (2) H 2 O 2 + 2 OH - → O 2 + 2 H 2 O STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is a -1 charge on the left, and a +2 – 8 = -6 charge on the right, so we add 5 e - on the left so both sides have a charge of -6: In (2), there is a 2(-1) = -2 charge on the left, and no charge on the right, so we add 2 e - on the right so that both sides have a charge of -2: (1)  MnO 4 - + 8 H 2 O + 5 e - → Mn 2+ + 4 H 2 O + 8 OH - (2) H 2 O 2 + 2 OH - → O 2 + 2 H 2 O + 2 e - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (1), there are 5 e - transferred, and in (2), there are 2 e - transferred. To make the e - balanced, we multiply (1) by 2 and (2) by 5 so both reactions involve the transfer of 10 e - : (1) 2  MnO 4 - + 16 H 2 O+ 10 e - → 2 Mn 2+ + 8 H 2 O + 16 OH - (2) 5 H 2 O 2 + 10 OH - → 5 O 2 + 10 H 2 O + 10 e - As we can see, 10 electrons are transferred in our redox reaction in basic conditions. At this point, we can select Option B. For demonstration purposes, we will finish balancing the redox reaction in basic conditions. STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: 2  MnO 4 - + 16 H 2 O + 10 e - + 5 H 2 O 2 + 10 OH - → 2 Mn 2+ + 8 H 2 O + 16 OH - + 5 O 2 + 10 H 2 O + 10 e - 2  MnO 4 - + 5 H 2 O 2 → 2 Mn 2+ + 2 H 2 O + 5 O 2 + 6 OH - Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "How many electrons are transferred in the following redox reaction in a basic solution? Cr(OH) 3( s ) + ClO 4 - ( aq ) → CrO 4 2- ( aq ) + Cl - ( aq )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "24",
+        "images": [],
+        "percentage_selected": "(83.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "24",
+    "analytics": {
+      "percent_correct": "83.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions , we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) Cr(OH) 3 → CrO 4 2- (2) ClO 4 - →Cl - STEP 2: Next, we balance all the atoms in the equation other than O and H. We can skip this step since both Cr and Cl are already balanced in both half-reactions. STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (1), we have 3 O on the left side, and 4 O on the right side, so we add 1 H 2 O on the left side. In (2), we have 4 O on the left side, and none on the right, so we add 4 H 2 O on the right: (1) Cr(OH) 3 + H 2 O → CrO 4 2- (2) ClO 4 - → Cl - + 4 H 2 O STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (1), we have 5 H on the left, and none on the right, so we add 5 H + on the right. In (2), we have 8 H on the right, and none on the left so we add 8 H + on the left: (1) Cr(OH) 3 + H 2 O → CrO 4 2- + 5 H + (2) ClO 4 - + 8 H + → Cl - + 4 H 2 O STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. In (1), we previously added 5 H + , so now we add 5 OH - on both sides. In (2), we previously added 8 H + , so now we add 8 OH - on both sides: (1) Cr(OH) 3 + H 2 O + 5 OH - → CrO 4 2- + 5 H + + 5 OH - (2) ClO 4 - + 8 H + + 8 OH - → Cl - + 4 H 2 O + 8 OH - STEP 6: Next, we will combine the H + and OH - to create H 2 O: (1) Cr(OH) 3 + H 2 O + 5 OH - → CrO 4 2- + 5 H 2 O (2) ClO 4 - + 8 H 2 O → Cl - + 4 H 2 O + 8 OH - STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. N (1), there is a -5 charge on the left, and a -2 charge on the right, so we add 3 e - on the right so that both sides have a charge of -5: In (2), there is a -1 charge on the left, and a -1 – 8 = -9 charge on the right, so we add 8 e - on the left so that both sides have a charge of -9: (1) Cr(OH) 3 + H 2 O + 5 OH - → CrO 4 2- + 5 H 2 O + 3 e - (2) ClO 4 - + 8 H 2 O + 8 e - → Cl - + 4 H 2 O + 8 OH - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (1), there are 3 e - transferred, and in (2), there are 8 e - transferred. To make the e - balanced, we multiply (1) by 8 and (2) by 3 so both reactions involve the transfer of 24 e - : (1) 8 Cr(OH) 3 + 8 H 2 O + 40 OH - → 8 CrO 4 2- + 40 H 2 O + 24 e - (2) 3 ClO 4 - + 24 H 2 O + 24 e - → 3 Cl - + 12 H 2 O + 24 OH - As we can see, 24 electrons are transferred in our redox reaction in basic conditions. At this point, we can select Option E. For demonstration purposes, we will finish balancing the redox reaction in basic conditions. STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: 8 Cr(OH) 3 + 8 H 2 O + 40 OH - + 3 ClO 4 - + 24 H 2 O + 24 e - → 8 CrO 4 2- + 40 H 2 O + 24 e - + 3 Cl - + 12 H 2 O + 24 OH - 8 Cr(OH) 3 + 3 ClO 4 - + 16 OH - → 8 CrO 4 2- + 3 Cl - + 20 H 2 O Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "What is the coefficient of H 2 O after balancing the following redox reaction in a basic solution? Fe ( s ) + ClO 4 - ( aq ) → Fe 3+ ( aq ) + Cl - ( aq )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(91.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "14",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "12",
+    "analytics": {
+      "percent_correct": "91.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions, we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) Fe → Fe 3+ (2) ClO 4 - → Cl - STEP 2: Next, we balance all the atoms in the equation other than O and H. We can skip this step since both Fe and Cl are already balanced in both half-reactions. STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (2), we have 4 O on the left side, and none on the right, so we add 4 H 2 O on the right: (1) Fe → Fe 3+ (2) ClO 4 - → Cl - + 4 H 2 O STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (2), we have 8 H on the right, so we add 8 H + on the left: (1) Fe → Fe 3+ (2) ClO 4 - + 8 H + → Cl - + 4 H 2 O STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. In (2), we added 8 H + previously, so we add 8 OH - on both sides: (1) Fe → Fe 3+ (2) ClO 4 - + 8 H + + 8 OH - → Cl - + 4 H 2 O + 8 OH­ - STEP 6: Next, we will combine the H + and OH - to create H 2 O (only possible on the left side): (1) Fe → Fe 3+ (2) ClO 4 - + 8 H 2 O → Cl - + 4 H 2 O + 8 OH­ - STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is no charge on the left, and a +3 charge on the right, so we add 3 e - to the right so that both sides have a charge of 0. In (2), there is a -1 charge on the left, and -1 – 8 = -9 on the right, so we add 8 e- on the left to balance the charges so that both sides have a charge of -9: (1) Fe → Fe 3+ + 3 e - (2) ClO 4 - + 8 H 2 O + 8 e - → Cl - + 4 H 2 O + 8 OH - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (1), there are 3 e - transferred, and in (2), there are 8 e - transferred. To make the e - balanced, we multiply (1) by 8 and (2) by 3 so both reactions involve the transfer of 24 e - : (1) 8 Fe → 8 Fe 3+ + 24 e - (2) 3 ClO 4 - + 24 H 2 O + 24 e - → 3 Cl - + 12 H 2 O + 24 OH - STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: 8 Fe + 3 ClO 4 - + 24 H 2 O + 24 e - → 8 Fe 3+ + 24 e - + 3 Cl - + 12 H 2 O + 24 OH - 8 Fe + 3 ClO 4 - + 12 H 2 O → 8 Fe 3+ + 3 Cl - + 24 OH - As we can see, the coefficient of H 2 O is 12 after balancing our redox reaction in basic conditions. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "How many excess H 2 O remains after balancing the following redox reaction in a basic solution? CH 3 OH ( l ) + Cl 2( g ) → CO 2( g ) + HCl ( aq )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(69.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1",
+    "analytics": {
+      "percent_correct": "69.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions, we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) CH 3 OH → CO 2 (2) Cl 2 → HCl STEP 2: Next, we balance all the atoms in the equation other than O and H. Since there are 2 Cl on the left but only 1 Cl on the right, we multiply HCl by 2: (1) CH 3 OH → CO 2 (2) Cl 2 → 2 HCl STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (1), we have 1 O on the left side, and 2 O on the right, so we add 1 H 2 O on the left: (1) CH 3 OH + H 2 O → CO 2 (2) Cl 2 → 2 HCl STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (1), we have 6 H on the left, and none on the right, so we add 6 H + on the right. In (2), we have no H on the left, and 2 H on the right, so we add 2 H + on the left: (1) CH 3 OH + H 2 O → CO 2 + 6 H + (2) Cl 2 + 2 H + → 2 HCl STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. In (1), since we added 6 H + previously, we will add 6 OH - on both sides. In (2), since we added 2 H + previously, we will add 2 OH - on both sides: (1) CH 3 OH + H 2 O + 6 OH - → CO 2 + 6 H + + 6 OH - (2) Cl 2 + 2 H + + 2 OH - → 2 HCl + 2 OH ‑ STEP 6: Next, we will combine the H + and OH - to create H 2 O: (1) CH 3 OH + H 2 O + 6 OH - → CO 2 + 6 H 2 O (2) Cl 2 + 2 H 2 O → 2 HCl + 2 OH ‑ STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is a -6 charge on the left and no charge on the right, so we add 6 e - to the right so both sides have a charge of -6. In (2), there is no charge on the left, and a 2(-1) = -2 charge on the right, so we add 2 e - to the left so both sides have a charge of -2: (1) CH 3 OH + H 2 O + 6 OH - → CO 2 + 6 H 2 O + 6 e - (2) Cl 2 + 2 H 2 O + 2 e - → 2 HCl + 2 OH‑ STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (1), there are 6 e - transferred, but in (2), there are only 2 e - transferred. To make the e - balanced, we multiply (2) by 3 so both reactions involve the transfer of 6 e - : (1) CH 3 OH + H 2 O + 6 OH - → CO 2 + 6 H 2 O + 6 e - (2) 3 Cl 2 + 6 H 2 O + 6 e - → 6 HCl + 6 OH ‑ STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: CH 3 OH + H 2 O + 6 OH - + 3 Cl 2 + 6 H 2 O + 6 e - → CO 2 + 6 H 2 O + 6 e - + 6 HCl + 6 OH - CH 3 OH + H 2 O + 3 Cl 2 → CO 2 + 6 HCl As we can see, 1 H 2 O remains in our reactants after balancing our redox reaction in basic conditions. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "What is the sum of all coefficients after balancing the following redox reaction in a basic solution? Sn 2+ ( aq ) + I 2( aq ) → Sn 4+ ( aq ) + I - ( aq )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(83.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "11",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "17",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "5",
+    "analytics": {
+      "percent_correct": "83.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions , we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) Sn 2+ → Sn 4+ (2) I 2 → I - STEP 2: Next, we balance all the atoms in the equation other than O and H. Since there are 2 I on the left but only 1 I on the right, we multiply I - by 2: (1) Sn 2+ → Sn 4+ (2) I 2 → 2 I - STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. Since there are no oxygen atoms, we can skip this step. STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. Since we have no hydrogen atoms, we can skip this step. STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. Since we have no added H + ions, we can skip this step. STEP 6: Next, we will combine the H + and OH - to create H 2 O. Since we have not added any H + nor OH - , we can skip this step. STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is a +2 charge on the left, and a +4 charge on the right, so we add 2 e - on the right so that both sides have a charge of +2. In (2), there is no charge on the left, and a -2 charge on the right, so we add 2 e - to the left so that both sides have a charge of -2: (1) Sn 2+ → Sn 4+ + 2 e - (2) I 2 + 2 e - → 2 I - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. Since we have the same number of e - on both half-reactions, we can skip this step. STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: Sn 2+ + I 2 + 2 e - → Sn 4+ + 2 e - + 2 I - Sn 2+ + I 2 → Sn 4+ + 2 I - As we can see, the sum of all the coefficients is 1 + 1 + 1 + 2 = 5 after balancing our redox reaction in basic conditions. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions",
+    "question": {
+      "text": "What is the sum of all coefficients after balancing the following redox reaction in a basic solution? Fe 2+ ( aq ) + Cr 2 O 7 2- ( aq ) → Fe 3+ ( aq ) + Cr 3+ ( aq )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "36",
+        "images": [],
+        "percentage_selected": "(89.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "72",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "36",
+    "analytics": {
+      "percent_correct": "89.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing basic redox reactions, we will follow the steps below: STEP 1: First, we write down the half-reactions: (1) Fe 2+ → Fe 3+ (2) Cr 2 O 7 2- → Cr 3+ STEP 2: Next, we balance all the atoms in the equation other than O and H. Since there are 2 Cr on the left but only 1 Cr on the right, we multiply Cr 3+ by 2: (1) Fe 2+ → Fe 3+ (2) Cr 2 O 7 2- → 2 Cr 3+ STEP 3: Next, we balance the oxygen atoms by adding the same number of H 2 O molecules to the opposite side of the reaction. In (2), we have 7 O on the left side, and none on the right, so we add 7 H 2 O on the left: (1) Fe 2+ → Fe 3+ (2) Cr 2 O 7 2- → 2 Cr 3+ + 7 H 2 O STEP 4: Next, we balance the hydrogen atoms by adding H + ions to the opposite side of the reaction. In (2), we have no H on the left, and 14 on the right, so we add 14 H + on the left: (1) Fe 2+ → Fe 3+ (2) Cr 2 O 7 2- + 14 H + → 2 Cr 3+ + 7 H 2 O STEP 5: Next, because this is a basic solution, we will add an OH - on both sides of the equation for each H + added. In (2), since we previously added 14 H + , we must add 14 OH - on both sides: (1) Fe 2+ → Fe 3+ (2) Cr 2 O 7 2- + 14 H + + 14 OH - → 2 Cr 3+ + 7 H 2 O + 14 OH - STEP 6: Next, we will combine the H + and OH - to create H 2 O (only possible on the left): (1) Fe 2+ → Fe 3+ (2) Cr 2 O 7 2- + 14 H 2 O → 2 Cr 3+ + 7 H 2 O + 14 OH - STEP 7: Next, we determine if the charges on both sides are the same. If not, we add e - to the more positive side to balance the charges on both sides. In (1), there is a +2 charge on the left, and a +3 charge on the right, so we add 1 e - on the right so that there is a charge of +2 on both sides. In (2), there is a -2 charge on the left, and a 2(+3) – 14 = -8 charge on the right, so we add 6 e - on the left so that both sides have a charge of -8: (1) Fe 2+ → Fe 3+ + e - (2) Cr 2 O 7 2- + 14 H 2 O + 6 e - → 2 Cr 3+ + 7 H 2 O + 14 OH - STEP 8: Next, we must ensure that the number of e - in both half reactions must be the same. If not, we multiply the whole equation by appropriate integers. In (2), there are 6 e - transferred, but in (1), there is only 1 e - transferred. To make the e - balanced, we multiply (1) by 6 so both reactions involve the transfer of 6 e - : (1) 6 Fe 2+ → 6 Fe 3+ + 6 e - (2) Cr 2 O 7 2- + 14 H 2 O + 6 e - → 2 Cr 3+ + 7 H 2 O + 14 OH - STEP 9: Finally, the half reactions are added together. Electrons and common terms should be cancelled out to form the balanced equation: 6 Fe 2+ + Cr 2 O 7 2- + 14 H 2 O + 6 e - → 6 Fe 3+ + 6 e - + 2 Cr 3+ + 7 H 2 O + 14 OH - 6 Fe 2+ + Cr 2 O 7 2- + 7 H 2 O → 6 Fe 3+ + 2 Cr 3+ + 14 OH - As we can see, the sum of all the coefficients is 6 + 1 + 7 + 6 + 2 + 14 = 36 after balancing our redox reaction in basic conditions. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x00000001033c2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001033bb0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000102f028d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000102f496a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000102f8a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000102f3da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000103387c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010338af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000103367a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010338b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000103358b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001033ab9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001033abb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001033bacf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Electrochemistry",
+    "question_bank": "Balancing Basic Redox Reactions"
+  }
+]

@@ -1,0 +1,570 @@
+[
+  {
+    "question_number": 1,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "If 1 mole of CO is allowed to react with excess H 2 according to the equation CO + 2 H 2 à CH 3 OH, what is the maximum number of moles of CH 3 OH that can be produced?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1/3",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1/2",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(90%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "3/2",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1",
+    "analytics": {
+      "percent_correct": "90%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculations from balanced equations , we will need to determine the number of moles of CH 3 OH that can be produced from 1 mole of CO. STEP 1: First, we identify CO + 2 H 2 à CH 3 OH is balanced, so no coefficient changes are needed. STEP 2: Since H 2 is in excess, based on the reaction, we can tell that 1 mole of CO produces a maximum of 1 mole of CH 3 OH. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "According to the balanced equation below, how many moles of O 2 are needed for the complete combustion of 6 moles of ethane, C 2 H 6 ? 2 C 2 H 6 + 7 O 2 à 4 CO 2 + 6 H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "21",
+        "images": [],
+        "percentage_selected": "(91.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "24",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "21",
+    "analytics": {
+      "percent_correct": "91.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculations from balanced equations , we need to first determine the mole ratio between C 2 H 6 and O 2 to determine the moles of O 2 needed. 2 C 2 H 6 + 7 O 2 à 4 CO 2 + 6 H 2 O Since we are interested in the complete combustion of 6 moles of C 2 H 6 , and the coefficient of C 2 H 6 is currently 2, we multiply the entire combustion equation by 3: 6 C 2 H 6 + 21 O 2 à 12 CO 2 + 18 H 2 O As we can see, for the complete combustion of every 6 moles of C 2 H 6 , 21 moles of O 2 are needed. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "1 mole of O 2 is reacted with excess Al to form the only product Al 2 O 3 . What is the maximum number of moles of Al 2 O 3 that can be produced?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1/4",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2/3",
+        "images": [],
+        "percentage_selected": "(79.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(11.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3/2",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2/3",
+    "analytics": {
+      "percent_correct": "79.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculations from balanced equations , we need to first find the balanced equation, and then calculate the number of moles of Al 2 O 3 that can be produced. STEP 1: First, we need to balance the reaction between Al and O 2 to form Al 2 O 3 : Al + O 2 → Al 2 O 3 STEP 2: We have 2 O on the left-hand side but 3 O on the right-hand side. To balance this element, we add the coefficient of 3 on O 2 and 2 on Al 2 O 3 so there are 6 O on each side: Al + 3 O 2 → 2 Al 2 O 3 STEP 3: Next, we add the coefficient of 4 on Al so there are 4 Al on each side: 4 Al + 3 O 2 → 2 Al 2 O 3 STEP 4: Since we are interested in the reaction of 1 mole of O 2 , and O 2 currently has a coefficient of 3 in the equation, we can divide each coefficient in the equation by 3: 4/3 Al + O 2 → 2/3 Al 2 O 3 To see that 1 mole of O 2 produces 2/3 Al 2 O 3 . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "According to the following reaction, how many grams of NO (30 g•mol -1 ) are formed when 102 g of NH 3 (17 g•mol -1 ) are reacted with excess O 2 ? 4 NH 3 + 5 O 2 à 4 NO + 6 H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "45",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "72",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "90",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "162",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "180",
+        "images": [],
+        "percentage_selected": "(82.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "180",
+    "analytics": {
+      "percent_correct": "82.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculations from balanced equations , we need to first determine the moles of NH 3 reacted, and then use the mole ratios to determine the mass of NO formed. 4 NH 3 + 5 O 2 à 4 NO + 6 H 2 O STEP 1: First, we determine the moles of 102 g of NH 3 , given a molar mass of 17 g•mol -1 : STEP 2: Next, we use the mole ratio between NH 3 and NO to determine the moles of NO produced: STEP 3: Finally, we use the molar mass of 30 g•mol -1 for NO to determine the mass of 6 moles of NO: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+4+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+4+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "How many grams of product is formed when 20 g of calcium (40 g•mol -1 ) reacts with 35.5 g of Cl 2 (71 g•mol -1 )? Ca + Cl 2 à CaCl 2",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "(0.5)(75.5)",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "(0.5)(111)",
+        "images": [],
+        "percentage_selected": "(81%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "(0.5)(2)(111)",
+        "images": [],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "(2)(75.5)",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "(2)(111)",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "(0.5)(111)",
+    "analytics": {
+      "percent_correct": "81%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculations from balanced equations , we will need to first find the number of moles of calcium and chlorine to determine the mass of CaCl 2 produced. STEP 1: First, we calculate the moles of 20 g of calcium given its molar mass of 40.0 g•mol -1 : STEP 2: Next, we calculate the moles of 35.5 of Cl 2 given its molar mass of 71 g•mol -1 : STEP 3: As we can see, there are 0.5 moles of both Ca and Cl 2 . Since Ca, Cl 2 , and CaCl 2 are all in a 1:1:1 mole ratio, we can determine that 0.5 moles of CaCl 2 are also produced. STEP 4: Next, we calculate the molar mass of CaCl 2 , which is simply the addition of the molar masses of Ca and Cl 2 : 40 + 71 = 111 g•mol -1 . STEP 5: Finally, we can calculate the mass of 0.5 moles of CaCl 2 using its molar mass of 111 g•mol -1 : Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+5+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+5+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+5+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "According to the following reaction, how many grams of Al 2 (SO 4 ) 3 (342 g•mol -1 ) are formed when 54 g of Al (27.0 g•mol -1 ) reacts with excess H 2 SO 4 to form Al 2 (SO 4 ) 3 and H 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "27",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "54",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "123",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "171",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "342",
+        "images": [],
+        "percentage_selected": "(87.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "342",
+    "analytics": {
+      "percent_correct": "87.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculations from balanced equations , we will need to first find the balanced equation for the reaction of Al and H 2 SO 4 and then find the grams of Al 2 (SO 4 ) 3 formed. STEP 1: First, we balance the combustion reaction between Al and H 2 SO 4 to form Al 2 (SO 4 ) 3 : Al + H 2 SO 4 à Al 2 (SO 4 ) 3 + H 2 STEP 2: We have 1 SO 4 on the left-hand side but 3 SO 4 on the right-hand side. To balance the SO 4 , we add the coefficient of 3 on the H 2 SO 4 in the left-hand side: Al + 3 H 2 SO 4 à Al 2 (SO 4 ) 3 + H 2 STEP 3: Next, we have 1 Al on the left-hand side but 2 Al on the right-hand side. To balance the Al, we add the coefficient of 2 on the Al in the left-hand side: 2 Al + 3 H 2 SO 4 à Al 2 (SO 4 ) 3 + H 2 STEP 4: Next, we have 6 H on the left-hand side but 2 H on the right-hand side. To balance the H, we add the coefficient of 3 on the H 2 in the right-hand side so there are 6 H on each side: 2 Al + 3 H 2 SO 4 à Al 2 (SO 4 ) 3 + 3 H 2 Our equation is now balanced. STEP 5: Since we have 54 g of Al, which has a molar mass of 27.0 g•mol -1 , we have 2 mol of Al to begin with. If 2 mol of Al reacts with excess H 2 SO 4 ¸ based on the 2:1 mole ratio between Al and Al 2 (SO 4 ) 3 from the balanced equation, 1 mole of Al 2 (SO 4 ) 3 is formed. STEP 6: Since Al 2 (SO 4 ) 3 has a molar mass of 342 g•mol -1 , 1 mole of Al 2 (SO 4 ) 3 has a mass of 342 g. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "If the molar mass of Fe and Cl 2 is 56 and 71 g•mol -1 , respectively, assuming the other reagent is in excess, which starting reagent would result in the greatest quantity of FeCl 3 produced? Fe + Cl 2 à FeCl 3",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "28 g Fe",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "56 g Fe",
+        "images": [],
+        "percentage_selected": "(17.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "35 g Cl 2",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "70 g Cl 2",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "142 g Cl 2",
+        "images": [],
+        "percentage_selected": "(70.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "142 g Cl 2",
+    "analytics": {
+      "percent_correct": "70.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "Before we approach this problem, we must balance the given reaction: 2 Fe + 3 Cl 2 à 2 FeCl 3 To solve this problem involving calculations from balanced equations , we need to identify the quantity of FeCl 3 produced by the reaction of each reactant. STEP 1: First, we eliminate answer choice A (28 g Fe), because answer choice B (56 g Fe) is greater in quantity and will produce more FeCl 3 . STEP 2: Next, we eliminate answer choice C (35 g Cl 2 ) and D (70 g Cl 2 ), because answer choice E (142 g Cl 2 ) is greater in quantity and will produce more FeCl 3 . STEP 3: 56 g of Fe (56 g•mol -1 ) is 1 mole of Fe. Since the balanced equation tells us that 1 mole of Fe produces 1 mole of FeCl 3 , we know that 56 g of Fe produces 1 mole of FeCl 3 . STEP 4: 142 g of Cl 2 (71 g•mol -1 ) is 2 moles of Cl 2 . Since the balanced equation tells us that 3 moles of Cl 2 produces 2 moles of FeCl 3 , we know that 142 g of Cl 2 produces 1.33 moles of FeCl 3 . STEP 5: Finally, we can compare the quantities derived in Steps 3 and 4 to determine that to produce the greatest quantity of FeCl 3 , we need 142 g Cl 2 . Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "Assuming all other reactants are in excess, each of the following starting reagents and quantities is correctly matched with its resulting amount of product EXCEPT one. Which one is the EXCEPTION? C 2 H 5 OH + 3 O 2 à 2 CO 2 + 3 H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "46 g C 2 H 5 OH, 88 g CO 2",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "46 g C 2 H 5 OH, 54 g H 2 O",
+        "images": [],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "96 g O 2 , 88 g CO 2",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "32 g O 2 , 18 g H 2 O",
+        "images": [],
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "64 g O 2 , 40 g H 2 O",
+        "images": [],
+        "percentage_selected": "(66.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "64 g O 2 , 40 g H 2 O",
+    "analytics": {
+      "percent_correct": "66.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind we need to find the incorrect pairing between reagent and product quantities. Option A. 46 g C 2 H 5 OH, 88 g CO 2 Incorrect. 46 g of C 2 H 5 OH is 1 mole of C 2 H 5 OH, which produces 2 moles of CO 2 , which has a mass of 2 × 44 = 88 g. Option B. 46 g C 2 H 5 OH, 54 g H 2 O Incorrect. 46 g of C 2 H 5 OH is 1 mole of C 2 H 5 OH, which produces 3 moles of H 2 O, which has a mass of 3 × 18 = 54 g. Option C. 96 g O 2 , 88 g CO 2 Incorrect. 96 g of O 2 is 3 moles of O 2 , which produces 2 moles of CO 2 , which has a mass of 2 × 44 = 88 g. Option D. 32 O 2 , 18 g H 2 O Incorrect. 32 g of O 2 is 1 mole of O 2 , which produces 1 mole of H 2 O, which has a mass of 18 g. Option E. 64 g O 2 , 40 g H 2 O Correct. 64 g of O 2 is 2 moles of O 2 , which produces 2 moles of H 2 O, which has a mass of 2 × 18 = 36 g, not 40 g H 2 O. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "The density of Fe at a certain temperature is 5.6 g•cm -3 . At this temperature, what is the mass of FeCl 2 (127 g•mol -1 ) produced by the reaction of 100 cm 3 of Fe (56 g•mol -1 ) with excess HCl? Fe + 2 HCl à FeCl 2 + H 2",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "64 g",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "127 g",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "254 g",
+        "images": [],
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "635 g",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1,270 g",
+        "images": [],
+        "percentage_selected": "(72.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "1,270 g",
+    "analytics": {
+      "percent_correct": "72.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculations from balanced equations , we will need to first calculate the initial grams of Fe, and then the moles of Fe, in order to find the mass of FeCl 2 . Fe + 2 HCl à FeCl 2 + H 2 STEP 1: First, we calculate the mass of 100 cm 3 of Fe using the density of 5.6 g•cm -3 : STEP 2: Next, we find the number of moles of 560 g of Fe using its molar mass of 56 g•mol -1 : STEP 3: According to the balanced equation, 1 mole of Fe produces 1 mole of FeCl 2 . This implies that 10 moles of Fe will produce 10 moles of FeCl 2 . STEP 4: Finally, we calculate the mass of 10 moles of FeCl 2 using its molar mass of 127 g•mol -1 : Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Calculations+from+Balanced+Equations%3A+Calculations+from+Balanced+Equations/Question+9+Solution+3.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations",
+    "question": {
+      "text": "How many grams of I 2 O 5 (334 g•mol -1 ) are required to produce 22 g of CO 2 (44 g•mol -1 )? I 2 O 5 + CO à CO 2 + I 2",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "33.4",
+        "images": [],
+        "percentage_selected": "(65.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "167",
+        "images": [],
+        "percentage_selected": "(19.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "256",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "334",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "668",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "33.4",
+    "analytics": {
+      "percent_correct": "65.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculations from balanced equations , we will need to first balance our given equation, then calculate the moles of CO 2 produced, and then determine the moles and mass of I 2 O 5 required. STEP 1: First, we need to balance our given equation: I 2 O 5 + CO à CO 2 + I 2 To balance the equation to have the same number of O on both sides, we multiply the coefficients of CO and CO 2 by 5: I 2 O 5 + 5 CO à 5 CO 2 + I 2 We now have 2 I, 10 O, and 5 C on both sides of the equation, making it balanced. STEP 2: Given a molar mass of 44 g•mol -1 , 22 g of CO 2 represents 0.5 moles of CO 2 . STEP 3: Based on the newly balanced equation, producing 5 moles of CO 2 requires 1 mole of I 2 O 5 . Therefore, producing 0.5 moles of CO 2 requires 0.1 moles of I 2 O 5 . STEP 4: Given a molar mass of 334 g•mol -1 , 0.1 moles of I 2 O 5 represents 33.4 g . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000104cb6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104caf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001047f68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010483d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010487e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104831a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104c7bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104c7ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104c5ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104c7f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104c4cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104c9f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104c9fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104caecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Calculations from Balanced Equations"
+  }
+]

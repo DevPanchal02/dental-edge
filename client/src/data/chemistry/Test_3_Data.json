@@ -1,0 +1,1715 @@
+[
+  {
+    "test_number": 3,
+    "question_number": 1,
+    "question": {
+      "text": "Which of the following best describes an isotope?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Same number of protons, but different number of electrons",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Same number of protons, but different number of neutrons",
+        "images": [],
+        "percentage_selected": "(86.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Same number of neutrons, but different number of electrons",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Same number of neutrons, but different number of protons",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Same number of neutrons, but different number of photons",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Same number of protons, but different number of neutrons",
+    "analytics": {
+      "percent_correct": "86.7%",
+      "time_spent": "0 min, 10 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Isotopes are forms of the same atom that differ in their number of neutrons in the nucleus. Examples of isotopes include Carbon-12 (C 12 6 ) and Carbon-14 (C 14 6 ). As we can see, both have the same number of protons = 6, but different number of neutrons: Carbon-12 has 12 - 6 = 6 neutrons Carbon-14 has 14 - 6 = 8 neutrons Remember that X A Z , Z = atomic number (number of protons) and A = mass number (number of protons + neutrons). It is important to know this for the Canadian DAT as questions about isotopes can show up on the actual exam.",
+      "poe_text": "Option A. Same number of protons, but different number of electrons - This describes ions, where an atom gains a charge after losing or gaining an electron. Therefore, this option is incorrect. Option C. Same number of neutrons, but different number of electrons - As mentioned above, changing the number of electrons describes ions. Therefore, this option is incorrect. Option D. Same number of neutrons, but different number of protons - Changing the number of protons changes the atomic number (Z), and thus it becomes a different element. This does not describe isotopes, which are different forms of the same atom. Therefore, this option is incorrect. Option E. Same number of neutrons, but different number of photons - Photons are electromagnetic radiation, best known to describe light. A photon is not involved in the make up atoms. Therefore, this option is incorrect.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 2,
+    "question": {
+      "text": "Each of the following is a condition that allows gases to behave ideally EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Absence of intermolecular forces",
+        "images": [],
+        "percentage_selected": "(15%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Negligible volume of particles",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "High pressure",
+        "images": [],
+        "percentage_selected": "(63.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "High temperature",
+        "images": [],
+        "percentage_selected": "(10.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "High pressure",
+    "analytics": {
+      "percent_correct": "63.8%",
+      "time_spent": "0 min, 23 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "There are a few assumptions that one needs to know regarding ideal gases and the ideal gas law : At HIGH pressures, gas molecules become more compressed and are closer together, therefore the amount of empty space between them is reduced. The volume of the molecules themselves at this point cannot be considered as insignificant compared to the volume of the container which they occupy. In addition, the proximity of gas molecules increase and intermolecular attractive and repulsive forces become significant, Therefore, the ideal assumptions 3 and 4 no longer hold, and the gas will behave non-ideally. Similarly, at LOW temperatures, gas molecules will start moving at slower speeds and therefore allow for attractive forces to come into play. This again contradicts the ideal assumptions and the gas will have a non-ideal behavior. This is why gases are said to exhibit ideal behavior only at HIGH temperatures and LOW pressures.",
+      "poe_text": "Option A. Absence of intermolecular forces - This is one of the important assumptions for ideal gas behavior and ideal gas law. Therefore, this option is incorrect. Option B. Having negligible volumes - This is one of the important assumptions for ideal gas behavior. Therefore, this option is incorrect . Option D. High temperature - At high temperatures, the molecules will be moving rapidly that the intermolecular forces between them become negligible, which is necessary for ideal behavior. Therefore, this option is incorrect.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 3,
+    "question": {
+      "text": "Which of the following is an isoelectronic series?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Na + , K + , Rb + , Cs +",
+        "images": [],
+        "percentage_selected": "(16.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "K + , Ca 2+ , Ar, S 2-",
+        "images": [],
+        "percentage_selected": "(67.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Li, Be, B, C",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Na + , Mg 2+ , S 2- , Cl -",
+        "images": [],
+        "percentage_selected": "(12.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "K + , Ca 2+ , Ar, S 2-",
+    "analytics": {
+      "percent_correct": "67.3%",
+      "time_spent": "0 min, 42 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "An isoelectric series is a group of atoms (elements, ions, or molecules) that have the same number of electrons . Keep in mind that in an atom, the atomic number is equal to the number protons. Additionally, in a neutral atom, the number of protons is equal to the number of electrons. If an atom is an ion, we would have to add or subtract accordingly based on its charge. For example, we can look at K + and S 2- while referring to the periodic table in the image below: For K + , the atomic number is 19 and thus number of protons it has is 19. However, it has a +1 charge , which means it has 1 less electron than protons. Therefore, we have to subtract 1 to the number of protons, as shown below: # electrons in K + = # protons – 1 # electrons in K + = 19 – 1 = 18 For S 2- , the atomic number is 16 and thus number of protons it has is 16. However, it has a -2 charge , which means it has 2 more electrons than protons. Therefore, we have to add 2 to the number of protons, as shown below: # electrons in S 2- = # protons + 2 # electrons in S 2- = 16 + 2 = 18 Based on this, only the atoms listed in Option B. K + , Ca 2+ , Ar, S 2- have the same number of electrons (18). Therefore, this is the correct answer. CC By 4.0",
+      "poe_text": "Option A. Na + , K + , Rb + , CS + — Na + has 10 electrons, K + has 18 electrons, Rb + has 36 electrons, and Cs + has 54 electrons. Since they do not all have the same number of electrons, this option is incorrect . Option C. Li, Be, B, C — Li has 3 electrons, Be has 4 electrons, B has 5 electrons, and C has 6 electrons. Since they do not all have the same number of electrons, this option is incorrect . Option D. Na + , Mg 2+ , S 2- , Cl - — Na + has 10 electrons, Mg 2+ has 10 electrons, S 2- has 18 electrons, and Cl - has 18 electrons. Since they do not all have the same number of electrons, this option is incorrect .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+3+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 4,
+    "question": {
+      "text": "Assuming no heat is lost to surroundings, what is the final temperature when 100.0 mL of water at 90.0°C is added to 200.0 mL of water at 10.0°C?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "25°C",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "30°C",
+        "images": [],
+        "percentage_selected": "(16.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "35°C",
+        "images": [],
+        "percentage_selected": "(48.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "40°C",
+        "images": [],
+        "percentage_selected": "(20.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "45°C",
+        "images": [],
+        "percentage_selected": "(9.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "35°C",
+    "analytics": {
+      "percent_correct": "48.4%",
+      "time_spent": "3 min, 3 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "This question is a bit tricky, so let's solve this question step-by-step. STEP 1: Since there is no heat lost to the surrounding, the heat loss by the warm water is equal to the heat gain by the cold water. Therefore: H loss by warm water = H gained by cold water M 1 (T 1 – T f )C p1 = M 2 (T f – T 2 )C p2 Where, M 1 = mass of hot water (90°C), M 2 = mass of cold water (10°C) C p1 = heat capacity of hot water (90°C), C p2 = heat capacity of cold water (10°C) T 1 = initial temperature of the hot water (90°C), T 2 = initial temperature of the cold water (10°C) T f = final temperature of the mixture of the hot and cold water combined Since C p1 = C p2 , they are eliminated from the equation. Thus, the equation becomes: M 1 (T 1 – T f ) = M 2 (T f – T 2 ) STEP 2: So now that we have this equation, we need to solve for T f . To do this, we need to make sure we have all the given values: T 1 = 90 ° C, T 2 = 10 ° C M 1 = ? M 2 = ? To solve for M 1 and M 2 , we need to use the density of water: 1.0 g • /mL -1 . Hence: M 1 = (density of water) × (volume) = (1.0 g • mL -1 ) × (100 mL) = 100 g M 2 = (density of water) × (volume) = (1.0 g • mL -1 ) × (200 mL) = 200 g Therefore, the equation becomes: 100(90 – T f ) = 200(T f – 10) STEP 3: Now, we can solve the equation: Therefore, the final temperature is 36.67 which is about ~35 ° C. Canadian DAT Pro-Tip: Always select the option choice closest to the calculated number.",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 5,
+    "question": {
+      "text": "Which pairing will result in a buffer system?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 M HCl and 0.5 M NaCH 3 COO",
+        "images": [],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.5 M HCl and 1 M NaCH 3 COO",
+        "images": [],
+        "percentage_selected": "(60.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "1 M HCl and 1 M NaOH",
+        "images": [],
+        "percentage_selected": "(24.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1 M NaOH and 1 M KOH",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.5 M HCl and 1 M NaCH 3 COO",
+    "analytics": {
+      "percent_correct": "60.3%",
+      "time_spent": "0 min, 35 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "An effective buffer system is between a weak acid/base and its conjugate. In fact, a buffer system is most effective when pH = pK a . Using the Henderson-Hasselbalch equation, we can see that pH = pK a occurs when we have equal concentrations of an acid and it's conjugate base. pH = pK a + log [Conjugate Base]/[Acid] Returning to this question, Option B. 0.5 M HCl and 1 M NaCH 3 COO is correct because 0.5 M HCl reacts with 1 M NaCH 3 COO, resulting in 0.5 M NaCH 3 COO and 0.5 M of it's conjugate, CH 3 COOH. Canadian DAT Pro Tip : When a strong acid reacts with a weak base, the reaction goes forward until the limiting reagent is used up. Thus, in certain conditions, if we have half the effective concentration of strong acid relative to weak base, then we can make a 1:1 preparation. The buffer is effective when the pK a is ±1. Thus, we can make a buffer solution by mixing a strong acid and weak base or a strong base and weak acid in a 1:2 ratio of strong acid/base to weak acid/base.",
+      "poe_text": "Option A. 1 M HCl and 0.5 M NaCH 3 COO - This option is incorrect because the titration is between 1 M of HCl and 0.5 M NaCH 3 COO. The 0.5 M NaCH 3 COO acts as the limiting base which leaves us with no conjugate base when the reaction proceeds and thus is not an effective buffer system. Option C. 1 M HCl and 1 M NaOH - This option is incorrect because the titration is between a strong acid and a strong base. This will lead to a neutralization reaction and not an effective buffer system. Option D. 1 M NaOH and 1 M KOH - This option is incorrect because both NaOH and KOH are bases. Therefore, since the reaction is between two bases, it cannot form a buffer system.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 6,
+    "question": {
+      "text": "An 84 g sample of a compound is found to contain 36 g of carbon, 3 g of hydrogen, 21 g of nitrogen, and 24 g of oxygen. If the compound has a molecular weight of 112 g • mol -1 , what is its molecular formula?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "C 2 H 2 NO 2",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 2 H 2 NO",
+        "images": [],
+        "percentage_selected": "(19.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 5 H 2 NO",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 4 H 3 NO",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 4 H 4 N 2 O 2",
+        "images": [],
+        "percentage_selected": "(60.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "C 4 H 4 N 2 O 2",
+    "analytics": {
+      "percent_correct": "60.5%",
+      "time_spent": "6 min, 33 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "The composition of chemical compounds can be described in several ways, including the empirical formula, molecular formula, and structural formula. The empirical formula describes only the ratios of each unique atom in a compound, whereas the molecular formula describes the actual number of each type of atom. The structural formula describes how the atoms are bonded to one another. STEP 1 : The first step to calculate the empirical formula is to determine the number of moles of each type of atom in a compound sample using their individual masses. Dividing each individual mass given in the question by the atomic mass of the atom yields the number of moles: Carbon : 36 g/ (12 g • mol -1 ) = 3 mol Hydrogen : 3 g/ (1 g • mol -1 ) = 3 mol Nitrogen : 21 g/ (14 g • mol -1 ) = 1.5 mol Oxygen : 24 g/ (16 g • mol -1 ) = 1.5 mol STEP 2 : Next, by dividing each molar amount by the smallest molar amount (1.5 mol) yields the relative ratios of each type of atom: C:H:N:O = 2:2:1:1. Therefore, the empirical formula of the compound is: C 2 H 2 NO STEP 3 : Lastly, from the question we know that the compound has a molecular weight of 112 g • mol -1 . A compound with a molecular formula of C 2 H 2 NO would only have a molecular weight of 56 g • mol -1 . Therefore, doubling the number of each atom yields the correct molecular formula that is consistent with the compound: C 4 H 4 N 2 O 2",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 7,
+    "question": {
+      "text": "Which of the following compounds has the greatest solubility in water?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CH 3 COOH",
+        "images": [],
+        "percentage_selected": "(85.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "CO 2",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CCl 4",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 3 COOH",
+    "analytics": {
+      "percent_correct": "85.9%",
+      "time_spent": "0 min, 53 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "To determine the answer, we have to keep in mind that \" like-dissolves-like \". Therefore, polar solvents will dissolve polar or ionic solutes, while a non-polar dissolve non-polar solvents. This means, a polar solvent will NOT dissolve a non-polar compound Returning to the question, water is a polar molecule because oxygen is much more electronegative than hydrogen, resulting in an overall negative charge near the oxygen atom. As such, only solutes that are polar or ionic will dissolve in water. Taking a look at CH 3 COOH (also known as acetic acid), we know this is a polar molecule because of it's molecular structure: The Van der Waals forces are weaker compared to the dipole-dipole forces and hydrogen bonding forces. Therefore, Option B. CH 3 COOH is the correct answer because it is the only compound that is polar.",
+      "poe_text": "Option A. CH 4 - This compound has a tetrahedral arrangement of the same atoms around a central carbon atom. Since there is no dipole moment for this molecule, it is non-polar, and this option is incorrect . Option C. CO 2 - This compound is a linear, symmetrical structure in which the carbon atom is attached to 2 oxygen atoms of equal electronegativity in either direction, resulting in the dipoles canceling out. Since there is no dipole moment for this molecule, it is non-polar, and this option is incorrect . Option D. CCl 4 - This compound has a tetrahedral arrangement of the same atoms around a central carbon atom. Since there is no dipole moment for this molecule, it is non-polar, and this option is incorrect .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+7+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 8,
+    "question": {
+      "text": "According to the following reaction, how many grams of N 2 are formed when 25 g of ammonia reacts with excess nitrous monoxide? 4 NH 3 +  6 NO  →  5 N 2 +  6 H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(87.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "87.4%",
+      "time_spent": "1 min, 19 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "STEP 1: To answer this question, we must first determine the number of moles of ammonia: STEP 2: Next we must determine the moles of N 2 : STEP 3: Lastly, once we have the number of moles of N 2 , we can determine the grams of N 2 : We can also solve this using an alternative method involving ratios, called dimensional analysis. The ratios should be arranged such that the unit present in the numerator of the first ratio is cancelled with the unit present in the denominator of the next ratio. Conversions continue until all units are cancelled out and only the desired unit remains. Therefore, the answer is A .",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+8+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 9,
+    "question": {
+      "text": "Each of the following are properties of transitional metals EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Have low melting points",
+        "images": [],
+        "percentage_selected": "(75.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Multiple oxidation states",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Form colored-compounds",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Are paramagnetic",
+        "images": [],
+        "percentage_selected": "(12.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Have partially filled d subshells",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Have low melting points",
+    "analytics": {
+      "percent_correct": "75.1%",
+      "time_spent": "0 min, 47 secs",
+      "category": "Periodic Properties"
+    },
+    "category": "Periodic Properties",
+    "explanation": {
+      "concept_text": "Transition metals are the elements belonging to groups 3 - 12 of the periodic table, as shown in the image below. Common properties of transition elements include: CC By 4.0",
+      "poe_text": "Option B. Several oxidation states - This is a property of transition metals. They can exhibit several oxidation states due to having valence electrons available in more than one subshell. Therefore, this option is incorrect. Option C. Form colored compounds - This is a property of transition metals. Therefore, this option is incorrect. Option D. Paramagnetic - This is a property of transition metals. They form compounds that are often paramagnetic. Therefore, this option is incorrect. Option E. Partially filled d-subshells - This is a property of transition metals as described above. Therefore, this option is incorrect.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+9+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 10,
+    "question": {
+      "text": "What row represents elements with increasing atomic radii?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Na , Li, Be, B",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Be, Li, Na, Mg",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Na, Mg, Al, Si",
+        "images": [],
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "B, Be, Li, Na",
+        "images": [],
+        "percentage_selected": "(81.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "C, B, Na, Mg",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "B, Be, Li, Na",
+    "analytics": {
+      "percent_correct": "81.7%",
+      "time_spent": "0 min, 33 secs",
+      "category": "Periodic Properties"
+    },
+    "category": "Periodic Properties",
+    "explanation": {
+      "concept_text": "The atomic radius is one-half the distance between the nuclei of two atoms measured in picometers, as shown below. CC By 4.0 As shown in the image below, atomic size gradually decreases from LEFT to RIGHT across the periodic table as electrons are added to the same shell. However, at the same time, protons are being added to the nucleus, making it more positively charged. Since the effect of increasing proton number is greater than that of the increasing electron number; there is a greater nuclear attraction causing this trend as the valence electrons are held closer towards the nucleus of the atom. Furthermore, the atomic radii decreases from BOTTOM to TOP. CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+10+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 11,
+    "question": {
+      "text": "How many electrons, protons, and neutrons, respectively, does silver have?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "47, 61, 47",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "61, 47, 47",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "47, 47, 61",
+        "images": [],
+        "percentage_selected": "(89.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "47, 47, 47",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "47, 61, 61",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "47, 47, 61",
+    "analytics": {
+      "percent_correct": "89.6%",
+      "time_spent": "0 min, 40 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Based on the periodic table, silver has an atomic number of 47 and a mass of 108, as shown in the image below. Since atomic number is defined as the number of protons and the mass number is the sum of protons and neutrons, we can find the number of neutrons by subtracting the atomic number from the mass number. Furthermore, since the question never stated that we are dealing with silver ions, we assume that it's a neutral element (i.e it will have equal numbers of protons and electrons). Thus, we can conclude that silver has 47 protons, 47 electrons and 6 (108-47) neutrons. CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+11+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 12,
+    "question": {
+      "text": "A reaction with a certain rate law produced the graph below. What is the order of the reaction with respect to HCl?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+12+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Zeroth-order",
+        "images": [],
+        "percentage_selected": "(84.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "First-order",
+        "images": [],
+        "percentage_selected": "(12.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Second-order",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Third-order",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Zeroth-order",
+    "analytics": {
+      "percent_correct": "84.2%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Chemical Kinetics"
+    },
+    "category": "Chemical Kinetics",
+    "explanation": {
+      "concept_text": "By analyzing the graph, we can see that the rate of reaction does NOT change with different concentrations of HCl. This indicates that the reaction rate is zeroth-order with respect to HCl; in other words, [HCl] is not a term in the rate law. If the reaction is first-order with respect to HCl, the rate would be directly proportional to the concentration as shown below: CC By 4.0 If the reaction is second-order with respect to HCl, the rate would be proportional to the concentration squared as shown below: CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+12+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+12+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 13,
+    "question": {
+      "text": "What quantity of a 1.0 M NaOH solution is required to neutralize 15 mL of a 0.5 M HCl solution?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "5.0 mL",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "7.5 mL",
+        "images": [],
+        "percentage_selected": "(93%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "10 mL",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "12.5 mL",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "15 mL",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "7.5 mL",
+    "analytics": {
+      "percent_correct": "93%",
+      "time_spent": "2 min, 11 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 14,
+    "question": {
+      "text": "Each of the following are single-replacement reactions that occur EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2 HBr ( aq ) + Cl 2( g ) → 2 HCl ( aq ) + Br 2( ℓ )",
+        "images": [],
+        "percentage_selected": "(11.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2 NaCl ( aq ) + F 2( g ) → 2 NaF ( s ) + Cl 2( g )",
+        "images": [],
+        "percentage_selected": "(14.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CaI 2( s ) + Cl 2( g ) → CaCl 2( s ) + I 2( s )",
+        "images": [],
+        "percentage_selected": "(23%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CaF 2( s ) + Br 2( ℓ ) → CaBr 2( s ) + F 2( g )",
+        "images": [],
+        "percentage_selected": "(40.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "2 HI ( aq ) + F 2( g ) → 2 HF ( aq ) + I 2( s )",
+        "images": [],
+        "percentage_selected": "(11.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CaF 2( s ) + Br 2( ℓ ) → CaBr 2( s ) + F 2( g )",
+    "analytics": {
+      "percent_correct": "40.3%",
+      "time_spent": "1 min, 21 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "A single replacement reaction is a chemical reaction in which one element is substituted for another element in a compound, generating a new element and a compound as products. Not all proposed single-replacement reactions will occur between two given reactants. Whether or not the reaction occurs depends on the reactivity of the reactants, and this is most commonly seen in halogens (ie. Fluorine, Chlorine, Bromine, Iodine). Halogens that are higher up on the periodic table are more reactive. This means that the reactivity in order from highest to lowest is: fluorine > chlorine > bromine > iodine Based on this reactivity order, fluorine is more reactive than bromine, so the following reaction from Option D will not occur : CaF 2( s ) + Br 2( ℓ ) → CaBr 2( s ) + F 2( g ) Therefore, the answer is D .",
+      "poe_text": "Option A. 2 HBr ( aq ) + Cl 2( g ) → 2 HCl ( aq ) + Br 2( ℓ ) – This option is incorrect because this single-replacement reaction will occur. Since chlorine (Cl) is above bromine (Br) in the periodic table, Cl will replace Br in HBr to form HCl. Option B. 2 NaCl ( aq ) + F 2( g ) → 2 NaF ( s ) + Cl 2( g ) – This option is incorrect because this single-replacement reaction will occur. Since fluorine (F) is above chlorine (Cl) in the periodic table, F will replace Cl in NaCl to form NaF. Option C. CaI 2( s ) + Cl 2( g ) → CaCl 2( s ) + I 2( s ) – This option is incorrect because this single-replacement reaction will occur. Since chlorine (Cl) is above iodine (I) in the periodic table, Cl will replace I in CaI 2 to form CaCl 2 . Option E. 2 HI ( aq ) + F 2( g ) → 2 HF ( aq ) + I 2( s ) – This option is incorrect because this single-replacement reaction will occur. Since fluorine (F) is above iodine (I) in the periodic table, F will replace I in HI to form HF instead. Canadian DAT Pro-Tip: Keep in mind that we need to find the single-replacement reaction that will not occur .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 15,
+    "question": {
+      "text": "If a mixture contains 1 mol of F 2( g ) and 3 mol of Br 2( g ) , and the total pressure is 200 kPa. What is the partial pressure of F 2( g ) ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "30 kPa",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "50 kPa",
+        "images": [],
+        "percentage_selected": "(87.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "60 kPa",
+        "images": [],
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "90 kPa",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "120 kPa",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "50 kPa",
+    "analytics": {
+      "percent_correct": "87.4%",
+      "time_spent": "0 min, 31 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+15+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+15+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+15+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 16,
+    "question": {
+      "text": "Which of the following is true of accuracy and precision?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "For a true value of 21.0, the measurements 18.0, 18.5, and 18.1 are both accurate and precise.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "In accuracy, the average value of measurements clusters around the expected value.",
+        "images": [],
+        "percentage_selected": "(89.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Accuracy and precision are the same and there is no difference.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The measurements 66.2, 66.3, and 66.2 mL are considered to be accurate.",
+        "images": [],
+        "percentage_selected": "(8.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "In accuracy, the average value of measurements clusters around the expected value.",
+    "analytics": {
+      "percent_correct": "89.7%",
+      "time_spent": "0 min, 25 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "To solve this problem involving accuracy vs. precision , let’s first define the two properties: CC By 4.0 Accuracy describes the overall closeness of experimental values to the true literature value. If a set of data is accurate, that means the experimental values are grouped around the true value. Precision describes the overall consistency of experimental values. If a set of data is precise, that means the experimental values are grouped closely to each other, but not necessarily around the true value. Accuracy and precision are independent of one another. In this case, we can say that in accuracy, the average value of measurements clusters around the expected value . So Option B is correct . Therefore, the answer is B .",
+      "poe_text": "Option A. For a true value of 21.0, the measurements 18.0, 18.5, and 18.1 are both accurate and precise. – This option is incorrect because the measurements are not close to the true value, so the measurements are not accurate. However, the measurements are close to each other, so they are precise. Option C: Accuracy and precision are the same and there is no difference. – This option is incorrect because the definitions of accuracy and precision are different. Option D: The measurements 66.2, 66.3, and 66.2 mL are considered to be accurate. – This option is incorrect because we are not told the true value, so we cannot make any conclusions as to whether or not 66.2, 66.3, and 66.2 mL are accurate. However, the values are close together and are therefore precise.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+16+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 17,
+    "question": {
+      "text": "Which type of glassware sits below the burette in an acid-base titration?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Buchner funnel",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(86.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Beaker",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Volumetric flask",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Graduated cylinder",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Erlenmeyer flask",
+    "analytics": {
+      "percent_correct": "86.1%",
+      "time_spent": "0 min, 29 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "An Erlenmeyer flask is a flat bottom, conical flask with a short cylindrical neck that is used to hold liquids. An Erlenmeyer flask is often used in titrations to hold the solution of unknown concentration. An Erlenmeyer flask is used instead of a beaker because the solution can be swirled safely, without the risk of the reagents spilling or sloshing out. As shown in the image below, an Erlenmeyer flask sits below the burette in a setup for titration: CC By 4.0 The following are common laboratory glassware used in a laboratory that you should be familiar with for the Canadian DAT: CC By 4.0",
+      "poe_text": "Option A. Buchner funnel - Is a porcelain funnel that has a perforated plate. Buchner funnels are used for filtration, usually with filtration paper. Therefore, this option choice is incorrect . Option C. Beaker - Is a glassware that exists in a variety of different volumes for different purposes. Beakers are generally used for holding chemicals and mixtures and are not used to make precise measurements. Therefore, this option choice is incorrect . Option D. Volumetric flask - Is a flat bottom flask with a long cylindrical neck that can be used to make very precise measurements of volume. Each volumetric flask is made to measure one specific volume as there is only one graduation marking. Therefore, this option choice is incorrect . Option E. Graduated cylinder - Is a tall cylindrical glassware that has many graduation markings for making precise volumetric measurements. Therefore, this option choice is incorrect .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+17+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+17+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 18,
+    "question": {
+      "text": "Two different compounds of identical weight and initial temperature absorb the same amount of energy and undergo temperature changes. Which one of the following statements is true regarding the change that occurs?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The compound with the lower specific heat will have a lower temperature",
+        "images": [],
+        "percentage_selected": "(15.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The compound with the lower specific heat will have a higher temperature",
+        "images": [],
+        "percentage_selected": "(77.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Both compounds will have the same temperature change",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Neither compounds will have any temperature change",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The compound with the lower specific heat will have a higher temperature",
+    "analytics": {
+      "percent_correct": "77.7%",
+      "time_spent": "0 min, 27 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "Specific heat is the amount of heat per unit mass required to raise the temperature by one degree Celsius. Therefore, the higher the specific heat, the more energy is required to increase the temperature to the same extent as an element with lower specific heat. As a result, if both elements absorbed the same amount of energy, then the one with a lower specific heat will increase in temperature to a greater extent and will be hotter.",
+      "poe_text": "Option A. The compound with the lower specific heat will have a lower temperature - A lower specific heat means that less energy is required to raise the temperature of a compound as opposed to one with a higher specific heat. Since both compounds absorbed the same amount of energy, the one with a higher specific heat will have a lower temperature compared to the one with a lower specific heat. Therefore, this option is incorrect. Option C. Both compounds will have the same temperature change - This could be true if the two compounds had the same specific heat value. However, this is not often the case, with different compounds typically having different specific heat capacities. Therefore, this option is unlikely and is incorrect. Option D. Neither compounds will undergo any temperature change - This is not true since the compounds are absorbing energy, which usually causes the temperature to rise. Therefore, this option is incorrect.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 19,
+    "question": {
+      "text": "What is the pH of a 0.001 M solution of a monoprotic acid with a K a value of 9 × 10 -7 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-log[3 × 10 -5 ]",
+        "images": [],
+        "percentage_selected": "(32.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-log[3 × 10 -6 ]",
+        "images": [],
+        "percentage_selected": "(9.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-log[3 × 10 -4 ]",
+        "images": [],
+        "percentage_selected": "(38.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "-log[3 × 10 -7 ]",
+        "images": [],
+        "percentage_selected": "(19.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-log[3 × 10 -5 ]",
+    "analytics": {
+      "percent_correct": "32.6%",
+      "time_spent": "2 min, 1 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+19+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+19+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+19+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+19+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 20,
+    "question": {
+      "text": "The high boiling point of water can be best attributed to",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "van der waals forces.",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "covalent bonds.",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "London dispersion forces.",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "dipole-dipole forces.",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "extensive hydrogen bonds.",
+        "images": [],
+        "percentage_selected": "(89.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "extensive hydrogen bonds.",
+    "analytics": {
+      "percent_correct": "89.4%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Boiling point is the temperature at which the bonds holding the molecules in a liquid form start to break and release the molecules as gas. The stronger these bonds are and the greater the forces of attraction between the molecules, the more energy it will require to break them and the higher the boiling point will be. An important feature of water is that its molecules can form hydrogen bonds with each other, as shown in the image below. These are intermolecular dipole-dipole forces that occur between an H-atom of one molecule and an electronegative O, N, or F atom of another molecule. Hydrogen bonds are one of the strongest intermolecular forces and breaking these interactions requires a large amount of energy, which gives water its high boiling point relative to its small size. CC BY 3.0",
+      "poe_text": "Option A. Van der waals forces - Even though van der waals forces between water molecules are indeed being broken as we raise the water's temperature, these forces are relatively weak and are not what causes the high boiling point observed for water. Therefore, this option is incorrect. Option B. Covalent bonds - These are intramolecular forces, not intermolecular ones. They occur between the atoms of the molecules. These are not the forces that are being broken when transitioning from liquid to gas. It is the intermolecular forces, the ones between molecules, that are into play. Therefore, this option is incorrect. Option C. London dispersion forces - These are the weakest intermolecular forces, and thus do not require a lot of energy to break. They do not account for the high boiling point of water. Therefore, this option is incorrect. Option D. Dipole-dipole forces - These occur between the positive dipole of one polar molecule and the negative dipole of another. Hydrogen bonds are indeed dipole-dipole interactions and the strongest form of such forces. This option is in one way true, however, with the list of options given, option E is the more correct and more specific answer. Therefore, this option is incorrect.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+20+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 21,
+    "question": {
+      "text": "Which of the following is the strongest acid?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.5 M HF",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1.0 M HF",
+        "images": [],
+        "percentage_selected": "(17.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.01 M HCl",
+        "images": [],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1.0 M NH 4 +",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "0.5 M HI",
+        "images": [],
+        "percentage_selected": "(62.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "0.5 M HI",
+    "analytics": {
+      "percent_correct": "62.9%",
+      "time_spent": "0 min, 11 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "When comparing acid strengths, the strength of an acid depends on the dissociation constant, not the concentration. The dissociation constant describes the tendency of the acid to dissociate into ions, releasing a hydrogen. Therefore, the larger the dissociation constant, the stronger the acid is. For example, HI is a stronger acid than HCl because iodine has a larger atomic radius than chloride. This causes the bond length in HI to be longer than the bond length in HCl as shown in the image below; therefore, it is more likely for H + to dissociate from HI. The I - ion can also delocalize the negative charge more than the Cl - ion can because of its larger size. CC By 4.0 The chart below summarizes relative acid strength for different acids important for the Canadian DAT: CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+21+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+21+Solution+2.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 22,
+    "question": {
+      "text": "What is the number of parts per million (ppm) of NaCl in a 0.50% saline solution?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "50",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "500",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "5,000",
+        "images": [],
+        "percentage_selected": "(50.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "50,000",
+        "images": [],
+        "percentage_selected": "(15.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "500,000",
+        "images": [],
+        "percentage_selected": "(20.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "5,000",
+    "analytics": {
+      "percent_correct": "50.1%",
+      "time_spent": "1 min, 0 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "Option A. 50 - This is incorrect because a value of 50 is the equivalent concentration in parts per ten thousand, not parts per million. Option B. 500 - This is incorrect because a value of 500 is the equivalent concentration in parts per one hundred thousand, not parts per million. Option D. 50,000 - This is incorrect because a value of 50,000 is the equivalent concentration in parts per ten million, not parts per million. Option E. 500,000 - This is incorrect because a value of 500,000 is the equivalent concentration in parts per one hundred million, not parts per million.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+22+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 23,
+    "question": {
+      "text": "How many moles of the elemental oxygen atom (O) are in a 90 g solution of K 2 SO 4 solution?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1.6",
+        "images": [],
+        "percentage_selected": "(8.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1.8",
+        "images": [],
+        "percentage_selected": "(14.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2.0",
+        "images": [],
+        "percentage_selected": "(52.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "2.2",
+        "images": [],
+        "percentage_selected": "(18.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2.6",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2.0",
+    "analytics": {
+      "percent_correct": "52.6%",
+      "time_spent": "1 min, 25 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+23+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 24,
+    "question": {
+      "text": "Each of the following is an example of a colligative property of a liquid EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Boiling point elevation",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Freezing point depression",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Heating point",
+        "images": [],
+        "percentage_selected": "(71.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Osmotic pressure",
+        "images": [],
+        "percentage_selected": "(17.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Vapor pressure depression",
+        "images": [],
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Heating point",
+    "analytics": {
+      "percent_correct": "71.1%",
+      "time_spent": "0 min, 11 secs",
+      "category": "Solutions"
+    },
+    "category": "Solutions",
+    "explanation": {
+      "concept_text": "Colligative properties are properties that can only be applied to solutions and they depend on the amount or concentration of the solute in a solution. The type of solute itself does not affect colligative properties. All of the option choices ( Boiling point, Freezing point, Osmotic pressure, and Vapor pressure ) are colligative properties. Therefore, Option C. Heating point is the only non-colligative property listed, and thus it is the correct answer.",
+      "poe_text": "Option A. Boiling point elevation - Boiling point elevation is a colligative property. Adding solutes typically raises the boiling point regardless of the type of solute used. If you add sugar or salt to water, both solutions will have a higher boiling point than just water, with the solution with more dissolved particles having the highest boiling point. Therefore, this option is incorrect. Option B. Freezing point depression - Freezing point depression is a colligative property. Adding solutes typically depresses the freezing point depending on the number of dissolved particles regardless of the type of solute. Therefore, this option is incorrect. Option D. Osmotic pressure - Osmotic pressure is proportional to the concentration of solute particle, hence it is a colligative property. Therefore, this option is incorrect. Option E. Vapor pressure depression - vapor pressure depression is also dependent on the concentration of solute. Adding solute usually lowers the vapor pressure of the solution. It is a colligative property. Therefore, this option is incorrect.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 25,
+    "question": {
+      "text": "Given the following redox reaction, which of the following is the oxidizing agent? Cd + NiO 2 + 2 H 2 O → Cd(OH) 2 + Ni(OH) 2",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Cd",
+        "images": [],
+        "percentage_selected": "(16.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "NiO 2",
+        "images": [],
+        "percentage_selected": "(55.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(18.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cd(OH) 2",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Ni(OH) 2",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "NiO 2",
+    "analytics": {
+      "percent_correct": "55.2%",
+      "time_spent": "1 min, 10 secs",
+      "category": "Electrochemistry"
+    },
+    "category": "Electrochemistry",
+    "explanation": {
+      "concept_text": "The oxidizing agent is a substance that has the ability to oxidize other substances — in other words it gains electrons and is reduced in a chemical reaction. In contrast, a reducing agent is a substance that loses an electron to an electron recipient in a redox chemical reaction — in other words it loses electrons and is oxidized in a chemical reaction. Going back to the question, we must begin by assigning oxidation numbers. Remember, hydrogen is +1 when bound to a non-metal, oxygen is usually -2 (unless in a peroxide), an element in elemental form (i.e. Cd) is 0, and any remaining oxidation numbers must be such that the total sum of the numbers equal the charge on the molecule: Cd + NiO 2 + 2 H 2 O Cd(OH) 2 + Ni(OH) 2 0    +4 -2     +1  -2         +2 -2 +1      +2 -2 +1 In the above schematic, we can see that the oxidation numbers for Cadmium and Nickel undergo a change. Between Cd and Cd(OH) 2 , the oxidation number on Cd increases from 0 to +2 which represents a loss of electrons (oxidation). Between NiO 2 and Ni(OH) 2 , the oxidation number is reduced from +4 to +2 which represents a gain of electrons (reduction). Since NiO 2 contains the atom that was reduced in the reaction, NiO 2 is the oxidizing agent.",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/U%2B2192.svg/25px-U%2B2192.svg.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 26,
+    "question": {
+      "text": "How many hydrogen atoms are in 3 moles of CH 4 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1.2 × 10 23",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1.2 × 10 24",
+        "images": [],
+        "percentage_selected": "(13%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1.8 × 10 24",
+        "images": [],
+        "percentage_selected": "(16.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2.4 × 10 23",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "7.2 × 10 24",
+        "images": [],
+        "percentage_selected": "(56.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "7.2 × 10 24",
+    "analytics": {
+      "percent_correct": "56.2%",
+      "time_spent": "0 min, 54 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "STEP 1: To determine the number of hydrogen atoms in 3 moles of CH 4 , we must first understand that one mole of a substance contains 6.02 × 10 23 units (can be rounded to 6 × 10 23 ), which is known as Avogadro’s number. Therefore, regardless of the molar mass of the element or the compound, one mole of the compound must contain 6.02 × 10 23 molecules. Returning back to this question, one molecule of CH 4 contains one carbon atom and four hydrogen atoms. The between CH 4 and H is 1:4 since there are 4 hydrogen atoms for every molecule of CH 4 . Therefore, 3 moles of CH 4 will contain 3 × 4 = 12 moles of H. STEP 2: Based on this, the number of molecules in 12 moles of H can now be calculated: # of hydrogen atoms = 12 moles × 6 x 10 23 # of hydrogen atoms = 72 moles × 10 23 atoms # of hydrogen atoms = 7.2 moles × 10 24 atoms Therefore, there are 7.2 moles × 10 24 hydrogen atoms in 3 moles of CH 4 . We can also solve this using an alternative method involving ratios, called dimensional analysis. The ratios should be arranged such that the unit present in the numerator of the first ratio is cancelled with the unit present in the denominator of the next ratio. Conversions continue until all units are cancelled out and only the desired unit remains. Therefore, the answer is E .",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+26+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 27,
+    "question": {
+      "text": "Which of the following best describes nuclear binding energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The energy needed to hold electrons and protons together",
+        "images": [],
+        "percentage_selected": "(20.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The energy required to disassemble the nucleus of an atom into its components",
+        "images": [],
+        "percentage_selected": "(55.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "The energy needed to remove an electron from an atom",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The energy needed to raise the temperature of a compound",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The energy released due to nuclear fusion",
+        "images": [],
+        "percentage_selected": "(13%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The energy required to disassemble the nucleus of an atom into its components",
+    "analytics": {
+      "percent_correct": "55.2%",
+      "time_spent": "0 min, 14 secs",
+      "category": "Nuclear Reactions"
+    },
+    "category": "Nuclear Reactions",
+    "explanation": {
+      "concept_text": "Nuclear binding energy is the energy required to split a nucleus of an atom into its component parts: protons and neutrons, or, collectively, the nucleons. It is mainly used to determine whether fission or fusion will be a favorable process. Canadian DAT Pro Tip : The binding energy of nuclei is always a positive number, since all nuclei require net energy to separate them into individual protons and neutrons.",
+      "poe_text": "Option A. The energy needed to hold electrons and protons together - The protons and electrons are not technically held together. In the simple atomic model, protons occupy the nucleus while electrons occupy the orbitals around the nucleus. The positive charge of the nucleus due to the protons (neutrons do not have a charge and therefore do not contribute to the charge of the nucleus) interacts with the negative charge of the electrons, and this is helps stabilize and keep the atom together. This is electrostatic force, NOT nuclear binding energy. Therefore, this option is incorrect. Option C. The energy needed to remove an electron from an atom - This is known as ionization energy, NOT nuclear binding energy. Therefore, this option is incorrect. Option D. The energy needed to raise the temperature of a compound - This is known as specific heat capacity, NOT nuclear binding energy. Therefore, this option is incorrect. Option E. The energy released due to nuclear fusion - Nuclear fusion is when two atomic nuclei fuse together to form a new nucleus. This process can either release or absorb energy depending on the new nucleus that is formed. However, neither energy released nor absorbed is called nuclear binding energy. Therefore, this option is incorrect.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 28,
+    "question": {
+      "text": "If you halve the pressure of a gas at constant temperature, what happens to the volume?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Volume will be halved",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Volume will be reduced to a third",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Volume will be tripled",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Volume will double",
+        "images": [],
+        "percentage_selected": "(83.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Volume does not change",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Volume will double",
+    "analytics": {
+      "percent_correct": "83.9%",
+      "time_spent": "0 min, 21 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+28+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+28+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+28+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 29,
+    "question": {
+      "text": "Given the following half-cell reactions: Cl 2( g ) + 2e - → 2Cl – ( aq ) E° = +1.52 v Cu 2+ ( aq ) + 2e - → Cu ( s ) E °=+0.46 v What is the value of E° for the following reaction? Cu 2+ ( aq ) + 2Cl – ( aq ) → Cu ( s ) + Cl 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "–2.12 v",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "–1.98 v",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "+1.98 v",
+        "images": [],
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "-1.06 v",
+        "images": [],
+        "percentage_selected": "(66.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "+1.06 v",
+        "images": [],
+        "percentage_selected": "(18.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-1.06 v",
+    "analytics": {
+      "percent_correct": "66.7%",
+      "time_spent": "0 min, 54 secs",
+      "category": "Electrochemistry"
+    },
+    "category": "Electrochemistry",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 3,
+    "question_number": 30,
+    "question": {
+      "text": "Under what conditions can a supercritical fluid be changed back into a liquid or gas?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Decrease temperature only",
+        "images": [],
+        "percentage_selected": "(59.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Increase temperature only",
+        "images": [],
+        "percentage_selected": "(12.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Increase both temperature and pressure",
+        "images": [],
+        "percentage_selected": "(21.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Increase pressure only",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Decrease temperature only",
+    "analytics": {
+      "percent_correct": "59.2%",
+      "time_spent": "0 min, 19 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "A \" supercritical fluid \" is a substance existing in a phase that is beyond the \" critical point \". The critical point marks the end of the boundary between the liquid and gas phase as shown in the image below; therefore, a supercritical fluid is dense like a liquid but has low viscosity like a gas. To bring the supercritical fluid back into a liquid phase, the temperature must be decreased below the critical temperature. To bring the supercritical fluid back into a gaseous phase, the pressure must be decreased below the critical pressure. CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+3/Question+30+Solution+1.png"
+      ]
+    }
+  }
+]

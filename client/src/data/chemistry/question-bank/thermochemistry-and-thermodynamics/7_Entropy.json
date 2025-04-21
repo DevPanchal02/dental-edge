@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "Which of the following best defines entropy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Entropy is a measure of the total energy content",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Entropy is a measure of randomness",
+        "images": [],
+        "percentage_selected": "(96.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Entropy is a measure of the temperature",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Entropy is a measure of the pressure",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Entropy is a measure of the volume",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Entropy is a measure of randomness",
+    "analytics": {
+      "percent_correct": "96.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we can recall that entropy (S) refers to the degree of disorder or randomness in the system. Therefore, we can say that in the context of thermodynamics, entropy is a measure of randomness . Not to be confused, enthalpy is a measure of the total energy content. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "Each of the following processes is accompanied by an increase in entropy EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Sublimation of carbon dioxide",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Dissolving sugar in water",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Heating a balloon filled with a gas",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Freezing of water",
+        "images": [],
+        "percentage_selected": "(95.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Evaporation of water",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Freezing of water",
+    "analytics": {
+      "percent_correct": "95.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind that we need to find the process that is not accompanied by an increase in entropy, which refers to the degree of randomness in a system. Option A. Sublimation of carbon dioxide Incorrect. The sublimation of carbon dioxide (CO 2( s ) ­ → CO 2( g ) ) involves the change of ordered, solid carbon dioxide into a less ordered and freely moving gaseous carbon dioxide, which increases entropy. Option B. Dissolving sugar in water Incorrect. The dissolution of sugar in water involves the breakdown of ordered, solid sugar particles into a less ordered aqueous solution of sugar water, which increases entropy. Option C. Heating a balloon filled with a gas Incorrect. Heating a balloon filled with gas raises the temperature of the gas particles, increasing velocity and randomness of the gas, which increases entropy. Option D. Freezing of water Correct. Freezing water (H 2 O ( l ) → H 2 O ( s ) ) involves the change of freely flowing water into ordered, solid ice, which decreases entropy. Option E. Evaporation of water Incorrect. Evaporating water (H 2 O ( l ) → H 2 O ( g ) ) involves the change of liquid water into a more freely moving water vapor, which increases entropy. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "Which of the following processes is a direct observation of the 2nd Law of Thermodynamics?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The internal energy of an isolated system is always constant",
+        "images": [],
+        "percentage_selected": "(10.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Heat always flows from regions of high to low temperatures",
+        "images": [],
+        "percentage_selected": "(65%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Energy cannot be created or destroyed, but is converted",
+        "images": [],
+        "percentage_selected": "(9.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "A substance at 0 K has no motion or kinetic energy",
+        "images": [],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Gas molecules condense when pressure is increased",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Heat always flows from regions of high to low temperatures",
+    "analytics": {
+      "percent_correct": "65%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we need to recall that the 2nd Law of Thermodynamics tells us that the entropy of the universe is always increasing. This is why heat always flows from regions of high to low temperatures – heat spreads because it allows thermal energy to become more spread out amongst the particles, which allows for an increase in the overall entropy of the particles. If heat were to flow spontaneously from a cold to hot object, it would lead to an overall decrease in entropy, which violates the second law of thermodynamics. For Option C, the fact that energy cannot be created or destroyed, but is converted, is defined by the first law of thermodynamics (law of conservation of energy). Meanwhile, for Option D, a substance at 0 K has no motion of kinetic energy is an observation of the third law of thermodynamics . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "Which of the following correctly pairs a physical change and an entropy change?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H 2 O ( g ) ⇢ H 2 O ( l ) (ΔS > 0)",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CO 2( s ) ⇢ CO 2( g ) (ΔS < 0)",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N 2( s ) ⇢ N 2( l ) (ΔS < 0)",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "O 2( l ) ⇢ O 2( g ) (ΔS > 0)",
+        "images": [],
+        "percentage_selected": "(91%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "2 H 2 O ( l ) ⇢ 2 H 2 O ( g ) (ΔS < 0)",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "O 2( l ) ⇢ O 2( g ) (ΔS > 0)",
+    "analytics": {
+      "percent_correct": "91%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. H 2 O (g) → H 2 O (l) (ΔS > 0) Incorrect. This is the condensation of water, which refers to the phase change of H 2 O from freely moving gas to an ordered liquid structure. This results in a decrease in entropy (ΔS < 0). Option B. CO 2(s) → CO 2(g) (ΔS < 0) Incorrect. This is the sublimation of dry ice, which refers to the phase change of CO 2 from an ordered solid structure to freely moving gas. This results in an increase in entropy (ΔS > 0) . Option C. N 2(s) → N 2(l) (ΔS < 0) Incorrect. This is the fusion of N 2 , which refers to the phase change of N 2 from an ordered solid structure to a less ordered liquid N 2 . This results in an increase in entropy (ΔS > 0) . Option D. O 2(l) → O 2(g) (ΔS > 0) Correct. This is the evaporation of O 2 , which refers to the phase change of O 2 from a more ordered liquid to a freely moving gas. This results in an increase in entropy (ΔS > 0). Option E. 2 H 2 O (l) → 2 H 2 O (g) (ΔS < 0) Incorrect. This is the evaporation of H 2 O, which refers to the phase change of liquid water to a more freely moving gas. This results in an increase in entropy (ΔS > 0) . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "Which of the following statements is correct regarding the reaction below? Ca 2+ ( aq ) + 2 OH - ( aq ) ↔ Ca(OH) 2( s )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The reaction tends to the left to increase entropy",
+        "images": [],
+        "percentage_selected": "(72.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "The reaction tends to the right to increase stability",
+        "images": [],
+        "percentage_selected": "(16.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The reaction tends to the left to release energy",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The reaction tends to the right because Ca(OH) 2 is insoluble",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The reaction tends to the right because the molecule is larger",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The reaction tends to the left to increase entropy",
+    "analytics": {
+      "percent_correct": "72.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Ca 2+ ( aq ) + 2 OH - ( aq ) ↔ Ca(OH) 2( s ) Option A. The reaction tends to the left to increase entropy Correct. There are three aqueous molecules on the left, but only one solid molecule on the right. This implies that the reaction moving to the left increases the number of molecules, which increases entropy. Option B. The reaction tends to the right to increase stability Incorrect. Dissociating the molecule increases the number of intermolecular bonds between the water and the molecular components of Ca(OH) 2 , which implies that moving the reaction to the left increases stability. In addition, molecular stability is not usually a consideration when it comes to solubility – it is usually thermodynamics and the increase in entropy that play a role. Option C. The reaction tends to the left to release energy Incorrect. For the reaction to move towards the left, energy is absorbed to break bonds in Ca(OH) 2 . Although the reaction does tend towards the left, this is not the correct reasoning. Option D. The reaction tends to the right because Ca(OH) 2 is insoluble Incorrect. According to the solubility rules, OH - is usually insoluble, but when paired with Ca 2+ is soluble. Therefore, Ca(OH) 2 is soluble. Option E. The reaction tends to the right because the molecule is larger Incorrect. The size of the molecule will play an insignificant role to decide which direction the reaction tends towards – instead, factors such as the stoichiometric coefficients, temperature, volume, pressure, and thermodynamics are more important. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "In a sample of gas, an increase in temperature",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "increases molecular velocity, which increases entropy.",
+        "images": [],
+        "percentage_selected": "(83.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "increases molecular vibrations, which decreases entropy.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "decreases the freedom of molecules, which decreases entropy.",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "decreases the stability of molecules, which increases entropy.",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "decreases the molecular order, which increases entropy.",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "increases molecular velocity, which increases entropy.",
+    "analytics": {
+      "percent_correct": "83.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we need to recall that when the temperature is increased, the molecular velocity (and molecular vibrations) are increased. This has an effect of increasing the entropy of the system, because the molecules have more energy to increase the randomness or disorder in the system. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "In a complex chemical reaction involving multiple reactants and products, which factor has the greatest influence on the entropy of a reaction?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The concentration of the solutions",
+        "images": [],
+        "percentage_selected": "(16.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The stoichiometric coefficients of the reaction",
+        "images": [],
+        "percentage_selected": "(71.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "The mass of the reactants and products",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The electronegativity of the elements",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The color changes observed in the reaction",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The stoichiometric coefficients of the reaction",
+    "analytics": {
+      "percent_correct": "71.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we need to recall that the stoichiometric coefficients of a reaction have a great influence on the entropy of a reaction. This is because an increase in stoichiometric coefficients correlates to an increase in the number of particles in a system, which results in an increase in entropy. This is why many reactions tend towards the dissolution, or breakdown, of particles – the increase of entropy drives the reaction forward. In conclusion, stoichiometric coefficients play a large role in reactions. The other options do not provide significant changes to the entropy in a reaction. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "Which of the following can be used to predict the change in entropy of a system after a series of reactions?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The color changes observed during the reaction",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The speed at which the reactions take place",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The number of gas molecules before and after the reaction",
+        "images": [],
+        "percentage_selected": "(84.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "The mass of the solids formed during the reaction",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The amount of heat released from the system",
+        "images": [],
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The number of gas molecules before and after the reaction",
+    "analytics": {
+      "percent_correct": "84.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. The color changes observed during the reaction Incorrect. The color changes observed during a reaction has little to no bearing on the change in entropy of a system. Option B. The speed at which the reactions take place Incorrect. The speed at which a reaction takes place is a reflection of the kinetics of a reaction, not the thermodynamics or entropy of a reaction. Option C. The number of gas molecules before and after the reaction Correct. An increase in the number of gas molecules results in an increase in the disorder or randomness of the molecules in a system. This gives us clues about which direction a reaction tends towards, because reactions tend to increase the entropy of the system and universe. Option D. The mass of the solids formed during the reaction Incorrect. The mass of the solids formed during a reaction has little to no bearing on the change in the entropy of a system. Option E. The amount of heat released from the system Incorrect. The amount of heat released from the system is a reflection of the internal energy of a reaction (or enthalpy), not the entropy of a reaction. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "According to the 3rd law of thermodynamics, the entropy of a pure crystalline substance is zero at what temperature?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-273 K",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0 K",
+        "images": [],
+        "percentage_selected": "(79.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "0 o C",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0 o F",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "273 o C",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0 K",
+    "analytics": {
+      "percent_correct": "79.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we need to recall that the third law of thermodynamics tells us that the entropy of a pure crystalline substance at absolute zero temperature (0 Kelvin) is zero. At this temperature, there will be no motion of kinetic energy of the substance, which implies that it will also have no entropy. Note that 0 K is equivalent to -273 o C. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy",
+    "question": {
+      "text": "Which of the following is an example of a decrease in entropy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Perfume diffusing across a room",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Burning a log in a fireplace",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The decay of organic matter",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Digestion of food",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Condensation of steam",
+        "images": [],
+        "percentage_selected": "(95.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Condensation of steam",
+    "analytics": {
+      "percent_correct": "95.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we need to look for an example that decreases the entropy of a system, which implies that the system is becoming more organized. As we can see, the only system that is becoming more organized is the condensation of steam, in which freely moving, gaseous H 2 O becomes liquid H 2 O. The other options result in an increase in randomness, or entropy. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100be6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100bdf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001007268d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010076d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007ae7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100761a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100babc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100baef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b8ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100baf7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b7cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100bcf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100bcfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100bdecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Entropy"
+  }
+]

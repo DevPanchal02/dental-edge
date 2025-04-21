@@ -1,0 +1,863 @@
+[
+  {
+    "question_number": 1,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure A, how many cubes have one of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/7.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(88.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "6 cubes",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2 cubes",
+    "analytics": {
+      "percent_correct": "88.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 10 3 (Yellow) 4 4 (Green) 2 5 (Red) 3 Total Cubes: 22",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure A, how many cubes have two of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/7.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "8 cubes",
+        "images": [],
+        "percentage_selected": "(10.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "9 cubes",
+        "images": [],
+        "percentage_selected": "(16.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10 cubes",
+        "images": [],
+        "percentage_selected": "(68.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "11 cubes",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "12 cubes",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "10 cubes",
+    "analytics": {
+      "percent_correct": "68.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 10 3 (Yellow) 4 4 (Green) 2 5 (Red) 3 Total Cubes: 22",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure A, how many cubes have three of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/7.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(84.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "6 cubes",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "7 cubes",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4 cubes",
+    "analytics": {
+      "percent_correct": "84.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 10 3 (Yellow) 4 4 (Green) 2 5 (Red) 3 Total Cubes: 22",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure A, how many cubes have four of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/7.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 cube",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(83.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2 cubes",
+    "analytics": {
+      "percent_correct": "83.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 10 3 (Yellow) 4 4 (Green) 2 5 (Red) 3 Total Cubes: 22",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure A, how many cubes have five of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/7.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0 cubes",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1 cube",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(91.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3 cubes",
+    "analytics": {
+      "percent_correct": "91.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 10 3 (Yellow) 4 4 (Green) 2 5 (Red) 3 Total Cubes: 22",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure B, how many cubes have one of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/8.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0 cubes",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1 cube",
+        "images": [],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(89.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2 cubes",
+    "analytics": {
+      "percent_correct": "89.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 6 3 (Yellow) 3 4 (Green) 6 5 (Red) 3 Total Cubes: 21",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure B, how many cubes have two of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/8.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "6 cubes",
+        "images": [],
+        "percentage_selected": "(86.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "7 cubes",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "6 cubes",
+    "analytics": {
+      "percent_correct": "86.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 6 3 (Yellow) 3 4 (Green) 6 5 (Red) 3 Total Cubes: 21",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure B, how many cubes have three of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/8.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(86.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "6 cubes",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3 cubes",
+    "analytics": {
+      "percent_correct": "86.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 6 3 (Yellow) 3 4 (Green) 6 5 (Red) 3 Total Cubes: 21",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure B, how many cubes have four of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/8.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(11.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "6 cubes",
+        "images": [],
+        "percentage_selected": "(86.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "6 cubes",
+    "analytics": {
+      "percent_correct": "86.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 6 3 (Yellow) 3 4 (Green) 6 5 (Red) 3 Total Cubes: 21",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure B, how many cubes have five of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/8.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(98.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "6 cubes",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "7 cubes",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3 cubes",
+    "analytics": {
+      "percent_correct": "98.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 2 2 (Blue) 6 3 (Yellow) 3 4 (Green) 6 5 (Red) 3 Total Cubes: 21",
+      "images": []
+    }
+  },
+  {
+    "question_number": 11,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure C, how many cubes have one of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/9.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 cube",
+        "images": [],
+        "percentage_selected": "(55.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(36.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1 cube",
+    "analytics": {
+      "percent_correct": "55.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 1 2 (Blue) 5 3 (Yellow) 4 4 (Green) 4 5 (Red) 4 Total Cubes: 18",
+      "images": []
+    }
+  },
+  {
+    "question_number": 12,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure C, how many cubes have two of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/9.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 cube",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(13.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(26.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(53.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "5 cubes",
+    "analytics": {
+      "percent_correct": "53.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 1 2 (Blue) 5 3 (Yellow) 4 4 (Green) 4 5 (Red) 4 Total Cubes: 18",
+      "images": []
+    }
+  },
+  {
+    "question_number": 13,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure C, how many cubes have three of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/9.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(12%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(80.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "6 cubes",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4 cubes",
+    "analytics": {
+      "percent_correct": "80.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 1 2 (Blue) 5 3 (Yellow) 4 4 (Green) 4 5 (Red) 4 Total Cubes: 18",
+      "images": []
+    }
+  },
+  {
+    "question_number": 14,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure C, how many cubes have four of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/9.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(77.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(13.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "6 cubes",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4 cubes",
+    "analytics": {
+      "percent_correct": "77.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 1 2 (Blue) 5 3 (Yellow) 4 4 (Green) 4 5 (Red) 4 Total Cubes: 18",
+      "images": []
+    }
+  },
+  {
+    "question_number": 15,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3",
+    "question": {
+      "text": "In Figure C, how many cubes have five of their exposed sides painted?",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/Cubecounting/Floating/9.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 cube",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2 cubes",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "3 cubes",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4 cubes",
+        "images": [],
+        "percentage_selected": "(90.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "5 cubes",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4 cubes",
+    "analytics": {
+      "percent_correct": "90.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "# of Sides Painted # of Cubes 1 (Purple) 1 2 (Blue) 5 3 (Yellow) 4 4 (Green) 4 5 (Red) 4 Total Cubes: 18",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q15: Message: \nStacktrace:\n0   chromedriver                        0x00000001014a6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x000000010149f0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000100fe68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010102d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010106e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000101021a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x000000010146bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010146ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x000000010144ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010146f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x000000010143cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010148f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010148fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x000000010149ecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 15,
+    "category": "Cube Counting",
+    "question_bank": "Floating Cube Practice #3"
+  }
+]

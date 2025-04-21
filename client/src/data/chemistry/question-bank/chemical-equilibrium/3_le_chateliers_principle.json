@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "At equilibrium, which of the following changes would cause a shift towards the left? A + B ⇌ C + D",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increasing the concentration of B",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Adding a catalyst to the reaction",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Decreasing the concentration of D",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Increasing the concentration of A",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Increasing the concentration of C",
+        "images": [],
+        "percentage_selected": "(95.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Increasing the concentration of C",
+    "analytics": {
+      "percent_correct": "95.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, i ncreasing the concentration of C (Option E) is the only answer that causes a shift towards the left (reactants), since increases in product concentration favors the reverse reaction. A + B ⇌ C + D Option A. Increasing the concentration of B Incorrect. When the concentration of B is increased , the concentration of reactants is increased. To shift the reaction back to equilibrium, the reaction shifts towards the right . Option B. Adding a catalyst to the reaction Incorrect. A catalyst increases the rate of a chemical reaction, but it does not shift the reaction out of equilibrium. Option C. Decreasing the concentration of D Incorrect. When the concentration of D is decreased , the concentration of products is decreased. To shift the reaction back to equilibrium, the reaction shifts towards the right . Option D. Increasing the concentration of A Incorrect. When the concentration of A is increased , the concentration of reactants is increased. To shift the reaction back to equilibrium, the reaction shifts towards the right . Option E. I ncreasing the concentration of C Correct. When the concentration of C is increased , the concentration of products is increased. To shift the reaction back to equilibrium, the reaction shifts towards the left . Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "Starting from equilibrium, which of the following changes results in a shift of the reaction below towards the products? C ( s ) + 2 H 2( g ) ⇌ CH 4( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increasing the concentration of CH 4( g )",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Increasing the pressure",
+        "images": [],
+        "percentage_selected": "(88.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Increasing the volume",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Decreasing the concentration of H 2( g )",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Decreasing the concentration of C ( s )",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Increasing the pressure",
+    "analytics": {
+      "percent_correct": "88.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, there are 2 moles of gas on the reactant side and 1 mole of gas on the product side. Increasing the pressure (Option B) is the only answer option that causes a shift of the reaction towards the products, since it favors the side with fewer moles of gas. C ( s ) + 2 H 2( g ) ⇌ CH 4( g ) Option A. Increasing the concentration of CH 4(g) Incorrect. When the concentration of CH 4( g ) is increased, the concentration of the products is increased. To shift the reaction back to equilibrium, the reaction shifts towards the reactants . Option B. Increasing the pressure Correct. When the pressure is increased , there is a compression of gases. In the reaction above, there are 2 moles of gas on the reactant side and 1 mole of gas on the product side. To shift the reaction back to equilibrium, the reaction favors the side with fewer moles of gas, which is towards the products. Option C. Increasing the volume Incorrect. When the volume is increased , there is an expansion of gases. In the reaction above, there are 2 moles of gas on the reactant side and 1 mole of gas on the product side. To shift the reaction back to equilibrium, the reaction favors the side with more moles of gas, which is towards the reactants. Option D. Decreasing the concentration of H 2(g) Incorrect. When the concentration of H 2( g ) is decreased , the concentration of the reactants is decreased. To shift the reaction back to equilibrium, the reaction shifts towards the reactants . Option E. Decreasing the concentration of C(s) Incorrect. Le Chatelier’s Principle does not apply to pure solid and liquid state molecules, because they do not affect equilibrium. As a result, decreasing the concentration of C(s) does not affect the equilibrium. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "Which of the following changes shifts the endothermic reaction below from equilibrium towards the left? CH 4( g ) + 2 O 2( g ) + heat ⇌ CO 2( g ) + 2 H 2 O ( l )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Adding additional H 2 O ( l )",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Increasing the temperature",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Decreasing the volume",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Adding an inert gas",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Adding additional CO 2( g )",
+        "images": [],
+        "percentage_selected": "(83.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Adding additional CO 2( g )",
+    "analytics": {
+      "percent_correct": "83.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, adding additional CO 2( g ) (Option E) is the only answer option that causes a shift towards the left (reactants), since an increase in concentration of products favors the reverse reaction. CH 4( g ) + 2 O 2( g ) + heat ⇌ CO 2( g ) + 2 H 2 O ( l ) Option A. Adding additional H 2 O (l) Incorrect. Since H 2 O is a pure liquid, its addition does not affect equilibrium. Option B. Increasing the temperature Incorrect. In an endothermic reaction, heat is required for the reaction and is considered a reactant. When the temperature is increased , it has the same effect as increasing the concentration of the reactants. To shift the reaction back to equilibrium, the reaction shifts towards the right (towards the products). Option C. Decreasing the volume Incorrect. When the volume is decreased , there is a compression of gases. In the reaction above, there are 3 moles of gas on the reactant side and 1 mole of gas on the product side. To shift the reaction back to equilibrium, the reaction favors the side with fewer moles of gas, which is towards the right (towards the products). Option D. Adding an inert gas Incorrect. Inert gases are the noble gases such as He, Ne and Ar. They are unreactive and as a result do not change the position of equilibrium in the reaction. Option E. Adding additional CO 2(g) Correct. When the concentration of CO 2( g ) is increased , the concentration of the products is increased. To shift the reaction back to equilibrium, the reaction shifts towards the left (towards the reactants). Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "Which of the following changes favors the completion of the following reaction? 4 NH 3( g ) + 3 O 2( g ) ⇌ 2 N 2( g ) + 6 H 2 O ( l ) + heat",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increasing the temperature",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Adding a catalyst to the reaction",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Removing some NH 3( g )",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Decreasing the volume",
+        "images": [],
+        "percentage_selected": "(76.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Adding additional N 2( g )",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Decreasing the volume",
+    "analytics": {
+      "percent_correct": "76.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, there are 7 moles of gas on the reactant side and 2 moles of gas on the product side. Decreasing the volume (Option D) is the only answer option that favors completion of the reaction, since it favors the side with fewer moles of gas. 4 NH 3( g ) + 3 O 2( g ) ⇌ 2 N 2( g ) + 6 H 2 O ( l ) + heat Option A. Increasing the temperature Incorrect. In an exothermic reaction, heat is released from the reaction and is considered a product. When the temperature is increased , it has the same effect as increasing the concentration of the products. To shift the reaction back to equilibrium, the reaction shifts towards the left and does not favor completion of the reaction. Option B. Adding a catalyst to the reaction Incorrect. A catalyst increases the rate of a chemical reaction, but it does not shift the reaction out of equilibrium. Option C. Removing some NH 3(g) Incorrect. When the concentration of NH 3( g ) is decreased , the concentration of the reactants is decreased. To shift the reaction back to equilibrium, the reaction shifts towards the left and does not favor completion of the reaction. Option D. Decreasing the volume Correct. When the volume is decreased , there is a compression of gases. In the reaction above, there are 7 moles of gas on the reactant side and 2 moles of gas on the product side. To shift the reaction back to equilibrium, the reaction favors the side with fewer moles of gas, which is towards the right and therefore favors completion of the reaction. Option E. Adding additional N 2(g) Incorrect. When the concentration of N 2( g ) is increased , the concentration of the products is increased. To shift the reaction back to equilibrium, the reaction shifts towards the left and does not favor completion of the reaction. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "The following exothermic reaction is at equilibrium. Which of the following shifts the reaction towards the reactants? 2 NO ( g ) ⇌ N 2( g ) + O 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Decreasing the volume",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Removing some O 2( g )",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Increasing the temperature",
+        "images": [],
+        "percentage_selected": "(83.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Adding additional NO ( g )",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Adding helium gas",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Increasing the temperature",
+    "analytics": {
+      "percent_correct": "83.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, in an exothermic reaction, heat is released in the reaction and is considered a product. An increase in temperature has the same effect as increasing the concentration of the reactants, which results in the reaction shifting towards the reactants to restore equilibrium. Therefore, increasing the temperature (Option C) is the only answer option that shifts the reaction towards the reactants. This effectively decreases the amount of heat in the system, until it reaches its equilibrium state. 2 NO ( g ) ⇌ N 2( g ) + O 2( g ) Option A. Decreasing the volume Incorrect. When the volume is decreased , there is a compression of gases. In the reaction above, there are 2 moles of gas on either side of the reaction. Since the number of moles of gas are equal , the reaction remains in equilibrium, and changes in volume is unlikely to shift the reaction in a certain direction. Option B. Removing some O 2(g) Incorrect. When the concentration of O 2( g ) is decreased , the concentration of the products is decreased. To shift the reaction back to equilibrium, the reaction shifts towards the products . Option C. Increasing the temperature Correct. In an exothermic reaction, heat is released from the reaction and is considered a product. When the temperature is increased , it has the same effect as increasing the concentration of the products. To shift the reaction back to equilibrium, the reaction shifts towards the reactants . This is done to decrease the amount of heat in the system. Option D. Adding additional NO (g) Incorrect. When the concentration of NO ( g ) is increased , the concentration of the reactants is increased. To shift the reaction back to equilibrium, the reaction shifts towards the products . Option E. Adding helium gas Incorrect. Inert gases are the noble gases such as He, Ne and Ar. They are unreactive and as a result do not change the position of equilibrium in the reaction. Therefore, the answer is C.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "Which of the following statements is correct about the reaction quotient (Q) and the equilibrium constant (K eq )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "When Q > K eq the reaction shifts towards the forward reaction",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "When the concentration of reactants is decreased, Q < K eq",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "When Q = K eq the concentration of products and reactants are equal",
+        "images": [],
+        "percentage_selected": "(9.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "When the products are removed, the forward reaction is favored",
+        "images": [],
+        "percentage_selected": "(73.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "When the concentration of products is increased, Q < K eq",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "When the products are removed, the forward reaction is favored",
+    "analytics": {
+      "percent_correct": "73.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to review what the reaction quotient (Q) and the equilibrium constant (K eq ) describe. We can compare Q to K eq to determine if a reaction is at equilibrium, and if it is not, the direction the reaction shifts towards to reach equilibrium: In this case, when the concentration of products is decreased , Q < K eq , or the concentration of products is less than the reactants. As a result, the reaction shifts towards the products. Therefore, when the products are removed, the forward reaction is favored (Option D). Option A. When Q > K eq , the reaction shifts towards the forward reaction Incorrect. When Q > K eq , the concentration of the products is greater than the reactants compared to equilibrium, so the reaction shifts towards the reverse reaction to restore equilibrium. Option B. When the concentration of reactants is decreased, Q < K eq Incorrect. When the concentration of reactants is decreased , the concentration of the reactants is less than the products compared to equilibrium, which means Q > K eq . To restore equilibrium, the reaction shifts towards the reactants. Option C. When Q = K eq , the concentration of products and reactants are equal Incorrect. When Q = K eq , the reaction is at equilibrium. At equilibrium, the rate of the forward reaction is equal to the rate of the reverse reaction, but the concentration of products and reactants aren’t necessarily equal. Option D. When the products are removed, the forward reaction is favored Correct. When the concentration of products is decreased , Q < K eq , or the concentration of the products is less than the reactants compared to equilibrium. As a result, the reaction shifts towards the products to restore equilibrium, favoring the forward reaction. Option E. When the concentration of products is increased, Q < K eq Incorrect. When the concentration of the products is increased , it has a greater concentration than the reactants compared to equilibrium, or Q > K eq . As a result, the reaction shifts towards the reactants to restore equilibrium. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "Which of the following shifts the aqueous equilibrium towards the right? HNO 2 + H 2 O ⇌ H + + H 2 O + NO 2 -",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Adding HNO 3",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Removing NO 2 -",
+        "images": [],
+        "percentage_selected": "(77.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Removing some HNO 2",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Adding NaNO 2",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Decreasing the pH",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Removing NO 2 -",
+    "analytics": {
+      "percent_correct": "77.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, removing NO 2 - (Option B) is the only answer choice that causes a shift towards the right, since a decrease in concentration of products shifts the reaction towards the right. HNO 2 + H 2 O ⇌ H + + H 2 O + NO 2 - Option A. Adding HNO 3 Incorrect. HNO 3 can dissociate into H + and NO 3 - . We can see that H + is present on the product side, so adding HNO 3 will result in an increase in concentration of H + . This increase in concentration of products shifts the equilibrium towards the left . Option B. Removing NO 2 - Correct. Removing NO 2 - is equivalent to removing products from the reaction, which shifts the equilibrium towards the right . Option C. Removing some HNO 2 Incorrect. When the concentration of HNO 2 is decreased , the concentration of the reactants is decreased. To shift the reaction back to equilibrium, the reaction shifts towards reactants, or towards the left . Option D. A dding NaNO 2 Incorrect. NaNO 2 can dissociate into Na + and NO 2 - . We can see that NO 2 - is present on the product side, so adding NaNO 2 will result in an increase in concentration of NO 2 - . This increase in concentration of products shifts the equilibrium towards the left . Option E. Decreasing the pH Incorrect. pH is a measure of the concentration of H + , where a lower pH indicates higher concentration of H + . This results in an increase in the concentration of the products which shifts the equilibrium towards the left . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "The reaction below is at equilibrium. Which of the following favors more production of CO 2( g ) ? C 2 H 6( g ) + 7/2 O 2( g ) ⇌ heat + 2 CO 2( g ) + 3 H 2 O ( l )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increasing the temperature",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Adding more H 2 O ( l )",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Increasing the pressure",
+        "images": [],
+        "percentage_selected": "(86.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Removing some O 2( g )",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Adding Ar ( g ) to the reaction",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Increasing the pressure",
+    "analytics": {
+      "percent_correct": "86.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, there is a total of 9/2, or 4 and 1/2 moles of gas on the reactant side, and 2 moles of gas on the product side. Increasing the pressure (Option C) is the only answer option that favors more production of CO 2( g ) , which is on the product side, since it favors the side with fewer moles of gas. C 2 H 6( g ) + 7/2 O 2( g ) ⇌ heat + 2 CO 2( g ) + 3 H 2 O ( l ) Option A. Increasing the temperature Incorrect. In an exothermic reaction, heat is released from the reaction and is considered a product. When the temperature is increased , it has the same effect as increasing the concentration of the products. To shift the reaction back to equilibrium, the reaction shifts towards the reactants , which does not favor more production of CO 2( g ) since CO 2( g ) is a product. Option B. Adding more H 2 O (l) Incorrect. Le Chatelier’s Principle does not apply to pure solid and liquid state molecules, because they do not affect equilibrium. As a result, adding more H 2 O ( l ) does not affect the equilibrium. Option C. Increasing the pressure Correct. When the pressure is increased , there is a compression of gases. In the reaction above, there are 9/2, or 4 and 1/2 moles of gas on the reactant side, and 2 moles of gas on the product side. To shift the reaction back to equilibrium, the reaction favors the side with fewer moles of gas, which is towards the products, and therefore favors more production of CO 2( g ) Option D. Removing some O 2(g) Incorrect. When the concentration of O 2( g ) is decreased , the concentration of the reactants is decreased. To shift the reaction back to equilibrium, the reaction shifts towards the reactants , which does not favor more production of CO 2( g ) since it is a product. Option E. Adding Ar (g) to the reaction Incorrect. Inert gases are the noble gases such as He, Ne and Ar. They are unreactive and as a result do not change the position of equilibrium in the reaction. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "Which of the following causes more precipitate to form in the reaction below? Ag+ ( aq ) + Cl- ( aq ) ⇌ AgCl ( s ) ΔH o rxn = +200 kJ•mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Adding KOH",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Cooling the solution",
+        "images": [],
+        "percentage_selected": "(15.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Adding AgCl ( s )",
+        "images": [],
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Increasing the pH",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Adding AgNO 3",
+        "images": [],
+        "percentage_selected": "(68%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Adding AgNO 3",
+    "analytics": {
+      "percent_correct": "68%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, AgNO 3 can dissociate into Ag + and NO 3 - . We can see that Ag + is present on the reactant side, so adding AgNO 3 (Option E) will result in an increase in concentration of Ag + . This increase in concentration of reactants shifts the equilibrium towards the right , which causes more AgCl ( s ) precipitate to form. Ag+ ( aq ) + Cl- ( aq ) ⇌ AgCl ( s ) ΔH o rxn = +200 kJ•mol -1 Option A. Adding KOH Incorrect. KOH can dissociate into K + and OH - . We can see that neither K + or OH - are reactants or products in the reaction. As a result, adding KOH does not affect the equilibrium. Option B. Cooling the solution Incorrect. The above reaction is endothermic because the ΔH o rxn value is positive. In an endothermic reaction, heat is required for the reaction and is considered a reactant. When the temperature is decreased , it has the same effect as decreasing the concentration of the reactants. To shift the reaction back to equilibrium, the reaction shifts towards the reverse reaction, which does not cause more AgCl ( s ) precipitate to form. Option C. Adding AgCl (s) Incorrect. Le Chatelier’s Principle does not apply to pure solid and liquid state molecules, because they do not affect equilibrium. As a result, adding more AgCl ( s ) does not affect the equilibrium. Option D. Increasing the pH Incorrect. pH is a measure of the concentration of H + , where a higher pH indicates lower concentration of H + and vice versa. We can see that H + is not a reactant or product in the reaction. As a result, increasing the pH does not affect the equilibrium. Option E. Adding AgNO 3 Correct. AgNO 3 can dissociate into Ag + and NO 3 - . We can see that Ag + is present on the reactant side, so adding AgNO 3 will result in an increase in concentration of Ag + . This increase in concentration of reactants shifts the equilibrium towards the right, which causes more AgCl ( s ) precipitate to form. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle",
+    "question": {
+      "text": "Each of the following shifts the reaction below towards the reverse reaction EXCEPT one. Which one is the EXCEPTION? C 6 H 12 O 6( s ) + 6 O 2( g ) ⇌ 6 CO 2( g ) + 6 H 2 O ( l ) ΔH o rxn = -2810 kJ•mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increasing the CO 2( g ) concentration",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Decreasing the total volume",
+        "images": [],
+        "percentage_selected": "(77.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Adding heat into the system",
+        "images": [],
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Increasing the temperature",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Decreasing the O 2( g ) concentration",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Decreasing the total volume",
+    "analytics": {
+      "percent_correct": "77.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Le Chatelier’s Principle , we will need to recall that this principle states that if a dynamic equilibrium is disturbed, the system shifts to restore the equilibrium. There are several changes that can disturb equilibrium: Concentration Changes: Pressure Changes: Temperature Changes: In this case, there are 6 moles of gas on both the reactant side and the product side. Decreasing the volume (Option B) is the only answer option that does not shift the reaction towards the reverse reaction. Since because the number of moles of gas on either side are equal , the reaction remains in equilibrium. C 6 H 12 O 6( s ) + 6 O 2( g ) ⇌ 6 CO 2( g ) + 6 H 2 O ( l ) ΔH o rxn = -2810 kJ•mol -1 Keep in mind we are looking for the option that does not shift the reaction towards the reverse reaction. Option A. Increasing the CO 2(g) concentration Incorrect. When the concentration of CO 2( g ) is increased , the concentration of the products is increased. To shift the reaction back to equilibrium, the reaction shifts towards the reverse reaction. Option B. Decreasing the total volume Correct. When the volume is decreased , there is a compression of gases. In the reaction above, there are 6 moles of gas on either side of the reaction. Since the number of moles of gas are equal , the reaction remains in equilibrium, and does not shift the reaction towards the forward or reverse reaction. Option C. Adding heat into the system Incorrect. The reaction is exothermic because the ΔH o rxn value is negative. In an exothermic reaction, heat is released from the reaction and is considered a product. When heat is added, the equilibrium will shift towards the reverse reaction to consume the heat and lower it. Option D. Increasing the temperature Incorrect. The reaction is exothermic because the ΔH o rxn value is negative. In an exothermic reaction, heat is released from the reaction and is considered a product. When the temperature is increased , it has the same effect as increasing the concentration of the products. To shift the reaction back to equilibrium, the reaction shifts towards the reverse reaction. Option E. Decreasing the O 2(g) concentration Incorrect. When the concentration of O 2( g ) is decreased , the concentration of the reactants is decreased. To shift the reaction back to equilibrium, the reaction shifts towards the reverse reaction. Therefore, the answer is B . Video Solution",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000104caae10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104ca30ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001047ea8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001048316a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001048727b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104825a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104c6fc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104c72f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104c4fa20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104c737e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104c40b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104c939c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104c93b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104ca2cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Chemical Equilibrium",
+    "question_bank": "Le Chatelier's Principle"
+  }
+]

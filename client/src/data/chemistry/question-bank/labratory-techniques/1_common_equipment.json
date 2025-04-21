@@ -1,0 +1,571 @@
+[
+  {
+    "question_number": 1,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "If a chemist needed to measure and transfer 2.85 mL of solution, the best piece of laboratory equipment to use would be a",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "beaker.",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "test tube.",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "dropper.",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "burette.",
+        "images": [],
+        "percentage_selected": "(13.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "pipette.",
+        "images": [],
+        "percentage_selected": "(81.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "pipette.",
+    "analytics": {
+      "percent_correct": "81.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: Option A. beaker. Incorrect. Beakers are not accurate measurements of volumes. Option B. test tube. Incorrect. Test tubes are not used for measuring volumes. Option C. dropper. Incorrect. Droppers are used deliver liquids in a drop-wise fashion, so they are not accurate measurements of volumes. Option D. burette. Incorrect. Burettes are used to dispense highly accurate volumes of a liquid, but are not as precise as pipettes. In addition, they are useful for dispensing, not transferring . Option E. pipette. Correct. Pipettes are the most precise way of measuring and transferring specific volumes of liquids. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "Which of the following pieces of laboratory equipment is best for mixing, heating, and stirring solutions?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(92.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Graduated cylinder",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Burette",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Pipette",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Test Tube",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Erlenmeyer flask",
+    "analytics": {
+      "percent_correct": "92.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: Option A. Erlenmeyer flask Correct. Erlenmeyer flasks are used to mix, heat, and stir solutions. Option B. Graduated cylinder Incorrect. Graduated cylinders are used to measure general volumes of liquids, and are not used for mixing, heating, nor stirring solutions. Option C. Burette Incorrect. Burettes are used to dispense liquids (in titrations), and are not used for mixing, heating, nor stirring solutions. Option D. Pipette Incorrect. Pipettes are used to measure and transfer liquids, and are not used for mixing, heating, nor stirring solutions. Option E. Test Tube Incorrect. Test tubes are used to mix, compare, and store small volumes of liquids, and are not generally used for heating or stirring solutions (due to the small size). Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "What is the correct order from most to least precise when using laboratory equipment to measure volumes?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Burette, pipette, graduated cylinder, beaker",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Burette, graduated cylinder, pipette, beaker",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Burette, graduated cylinder, beaker, pipette",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Pipette, burette, graduated cylinder, beaker",
+        "images": [],
+        "percentage_selected": "(87.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Pipette, graduated cylinder, burette, beaker",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Pipette, burette, graduated cylinder, beaker",
+    "analytics": {
+      "percent_correct": "87.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipmen t, we first define each piece of equipment: Of the four pieces of equipment presented to us (beaker, burette, graduated cylinder, pipette), we know that burettes and pipettes are more precise than beakers and graduated cylinders (which only measure general volumes). Between burettes and pipettes, pipettes are more precise. Meanwhile, between beakers and graduated cylinders, graduated cylinders are more precise. We can conclude that the following order from most to least precise is correct: pipette, burette, graduated cylinder, beaker Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "An experiment involves titrating a 0.20 M NaOH solution into an Erlenmeyer flask with HCl of unknown concentration. What piece of laboratory equipment should be used to add the NaOH?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Graduated cylinder",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Boiling flask",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Dropper",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Burette",
+        "images": [],
+        "percentage_selected": "(87%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Pipette",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Burette",
+    "analytics": {
+      "percent_correct": "87%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: In this case, we have a titration experiment where NaOH is added into the Erlenmeyer flask with HCl. The laboratory equipment that is used to store and dispense a solution during titration is called a burette . Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "Which of the following pairings of laboratory equipment and function is correct?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Using a dropper to measure and transfer 100 μL of liquid",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Using a burette to heat 20 mL of liquid",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Using a test tube to measure 50 μL of liquid",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Using a volumetric flask to heat 30 μL of liquid",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Using a graduated cylinder to measure 10 mL of liquid",
+        "images": [],
+        "percentage_selected": "(85.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Using a graduated cylinder to measure 10 mL of liquid",
+    "analytics": {
+      "percent_correct": "85.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: Option A. Using a dropper to measure and transfer 100 μL of liquid Incorrect. Droppers are used to deliver liquids in a drop-wise fashion, but are not precise. This makes it unsuitable to transfer such a small volume of liquid. Option B. Using a burette to heat 20 mL of liquid Incorrect. Burettes are used to dispense liquids, not to heat liquids. Option C. Using a test tube to measure 50 μL of liquid Incorrect. Test tubes are used to mix, compare, and store small volumes of liquids, but are not used for measuring volumes. Option D. Using a volumetric flask to heat 30 μL of liquid Incorrect. Volumetric flasks are used to create dilute solutions or to shake mixtures, not to heat small volumes of liquids. Option E. Using a graduated cylinder to measure 10 mL of liquid Correct. Graduated cylinders are used to measure general volumes of a liquid. Measuring 10 mL of liquid using a graduated cylinder is reasonable. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "To precisely measure 10 mL of a solution, which is then heated, which two pieces of laboratory equipment should be used, respectively?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Pipette, Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(81.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Pipette, graduated cylinder",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Volumetric flask, Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(10.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Volumetric flask, graduated cylinder",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Burette, graduated cylinder",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Pipette, Erlenmeyer flask",
+    "analytics": {
+      "percent_correct": "81.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: I n this case, the first piece of equipment should precisely measure 10 mL of solution, and the second piece of equipment should heat the 10 mL of solution. Option A. Pipette, Erlenmeyer flask Correct. Pipettes can precisely measure 10 mL of solution, and Erlenmeyer flasks are suitable to heat 10 mL of solution. Option B. Pipette, graduated cylinder Incorrect. Pipettes can precisely measure 10 mL of solution, but graduated cylinders are not used to heat solutions. Option C. Volumetric flask, Erlenmeyer flask Incorrect. Volumetric flasks are not usually designed to measure such small volumes, and often cannot do so with precision. Option D. Volumetric flask, graduated cylinder Incorrect. Volumetric flasks are not usually designed to measure such small volumes, and often cannot do so with precision. Option E. Burette, graduated cylinder Incorrect. Burettes can precisely measure 10 mL of solution,  but graduated cylinders are not used to heat solutions. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "Each of the following pieces of equipment is suitable for measuring volumes EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Graduated cylinder",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Burette",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Pipette",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Test tube",
+        "images": [],
+        "percentage_selected": "(97.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Test tube",
+    "analytics": {
+      "percent_correct": "97.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: Keep in mind that we need to find the piece of equipment not suitable for measuring volumes. Option A. Graduated cylinder Incorrect. Graduated cylinders are designed to measure general volumes of a liquid. Option B. Burette Incorrect. Burettes are designed to measure and dispense highly accurate volumes of a liquid. Option C. Pipette Incorrect. Pipettes are designed to precisely measure and transfer volumes of a liquid. Option D. Test tube Correct. Test tubes are not designed to measure volumes, because there are no volumetric markings on most test tubes. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "Which of the following pieces of laboratory equipment is most suitable for precisely measuring 500 μL of liquid?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Pipette",
+        "images": [],
+        "percentage_selected": "(92.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Burette",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Graduated cylinder",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Test tube",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Beaker",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Pipette",
+    "analytics": {
+      "percent_correct": "92.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: Option A. Pipette Correct. Pipettes are the most precise way of measuring specific volumes of liquids, which makes it suitable to measure small volumes like 500 μL. Option B. Burette Incorrect. Burettes are designed to dispense highly accurate volumes of a liquid, but are not as precise as pipettes. Option C. Graduated cylinder Incorrect. Graduated cylinders are used to measure general volumes of a liquid, which makes it less precise than pipettes. Option D. Test tube Incorrect. Test tubes are not designed to measure volumes, because there are no volumetric markings on most test tubes. Option E. Beaker Incorrect. Beakers are used to measure general volumes of a liquid, and are much less precise than pipettes. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "Which pair of equipment is used in acid-base titration?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Pipette and Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Pipette and volumetric flask",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Burette and Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(82.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Burette and volumetric flask",
+        "images": [],
+        "percentage_selected": "(10.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Burette and beaker",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Burette and Erlenmeyer flask",
+    "analytics": {
+      "percent_correct": "82.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: In acid-base titration, burettes and Erlenmeyer flasks are used. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment",
+    "question": {
+      "text": "Which of the following pieces of laboratory equipment is designed to dispense fluids slowly and consistently?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Beaker",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Graduated cylinder",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Burette",
+        "images": [],
+        "percentage_selected": "(97.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Test tube",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Burette",
+    "analytics": {
+      "percent_correct": "97.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving laboratory equipment , we first define each piece of equipment: Option A. Beaker Incorrect. Although beakers have a spout that facilitates pouring, they are not designed to dispense fluids slowly and consistently. Option B. Erlenmeyer flask Incorrect. Although some Erlenmeyer flasks have a spout that facilitates pouring, they are not designed to dispense fluids slowly and consistently. Option C. Graduated cylinder Incorrect. Although graduated cylinders have a spout that facilitates pouring, they are not designed to dispense fluids slowly and consistently. Option D. Burette Correct. Burettes are designed with a valve that controls the flow of liquid, allowing the user to dispense fluids slowly and consistently during titrations. Option E. Test tube Incorrect. Test tubes are not designed to dispense fluids slowly and consistently. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Laboratory+%26+Techniques%3A+Common+Equipment/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000100a76e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100a6f0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001005b68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001005fd6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010063e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001005f1a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100a3bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100a3ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100a1ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100a3f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100a0cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100a5f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100a5fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100a6ecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Laboratory Techniques",
+    "question_bank": "Common Equipment"
+  }
+]

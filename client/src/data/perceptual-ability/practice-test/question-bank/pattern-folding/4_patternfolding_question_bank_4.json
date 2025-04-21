@@ -1,0 +1,2608 @@
+[
+  {
+    "question_number": 1,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/151B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(64%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(22.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "64%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/151B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/152A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(90.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "90.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/152A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/153D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(96.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "96.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/153D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/154C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(15.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(62.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "62.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/154C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/155C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(33.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(63.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "63.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/155C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/156A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(63.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(29.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "63.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/156A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/157C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(16.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(80.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "80.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/157C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/158C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/158C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/159A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/159A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/160B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(84.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "84.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/160B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 11,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/161B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(94.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "94.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/161B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 12,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/162D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/162D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 13,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/163D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(33.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(65.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "65.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/163D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 14,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/164B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(89.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "89.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/164B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 15,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/165C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(91.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "91.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/165C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 16,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/166A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(82.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "82.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/166A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 17,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/167C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/167C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 18,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/168A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/168A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 19,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/169D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(89.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "89.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/169D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 20,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/170B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(90.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "90.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/170B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 21,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/171D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(69.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "69.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/171D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 22,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/172B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(82%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "82%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/172B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 23,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/173A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(86.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "86.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/173A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 24,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/174C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(79.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "79.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/174C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 25,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/175A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(71.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "71.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/175A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 26,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/176D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(90.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "90.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/176D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 27,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/177C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(87.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "87.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/177C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 28,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/178A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(76.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "76.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/178A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 29,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/179D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(80.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "80.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/179D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 30,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/180B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(83.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "83.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/180B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 31,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/181B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/181B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 32,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/182D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(86%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "86%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/182D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 33,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/183B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(80.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "80.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/183B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 34,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/184C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(20.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(65.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "65.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/184C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 35,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/185A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(91.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "91.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/185A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 36,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/186C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(20.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(63.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "63.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/186C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 37,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/187B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/187B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 38,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/188D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(15.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(21.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(56.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "56.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/188D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 39,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/189C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(93.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "93.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/189C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 40,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/190D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(76.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "76.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/190D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 41,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/191C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(72.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "72.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/191C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 42,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/192D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(75.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "75.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/192D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 43,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/193D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(91.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "91.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/193D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 44,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/194D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/194D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 45,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/195A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(88.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "88.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/195A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 46,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/196B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(14.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(76.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "76.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/196B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 47,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/197D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(33.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(59.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "59.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/197D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 48,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/198A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(58.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(17.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(21.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "58.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/198A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 49,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/199D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(15.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(75.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "75.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/199D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 50,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/200C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(14.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(71.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "71.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/PatternFolding/QBank/200C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q50: Message: \nStacktrace:\n0   chromedriver                        0x0000000104e76e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104e6f0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001049b68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001049fd6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104a3e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001049f1a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104e3bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104e3ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104e1ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104e3f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104e0cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104e5f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104e5fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104e6ecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 50,
+    "category": "Pattern-Folding",
+    "question_bank": "Pattern-Folding Question Bank #4"
+  }
+]

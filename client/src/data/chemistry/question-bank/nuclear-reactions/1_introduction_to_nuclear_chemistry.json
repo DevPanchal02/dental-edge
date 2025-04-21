@@ -1,0 +1,598 @@
+[
+  {
+    "question_number": 1,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "What is the isotope notation for selenium-78?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+1+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+1+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+1+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+1+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+1+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(88.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "88.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , we will first review the isotope notation: In this case, we are asked to identify the isotope notation for selenium-78. Since the “78” refers to the mass number, we know A = 78. In addition, selenium’s chemical symbol is Se, so we can identify that selenium has a proton number of Z = 34 using the periodic table provided in your exam. Therefore, its isotope notation is: Recall that isotopes of the same element will have the same number of protons but different number of neutrons. Although all six selenium isotopes have 34 protons, they differ in mass number. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+1+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "What is the correct isotope notation for an element with 17 protons and 20 neutrons?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+2+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+2+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+2+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+2+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(92.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+2+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "92.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , we will first review the isotope notation: In this case, we are given that the element has 17 protons, so we know that Z = 17. In addition, this element has 20 neutrons, so the total mass number is A = 17 + 20 = 37. Our last step is to identify the element, X, using the periodic table. The only element with 17 protons is Chlorine, which has a chemical symbol of Cl. Therefore, its isotope notation is: Recall that isotopes of the same element will have the same number of protons but a different number of neutrons. Although all isotopes of chlorine have 17 protons, they differ in mass number. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "What is the mass defect in a nuclear reaction primarily indicative of?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The change in the number of electrons",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The conversion of mass into energy",
+        "images": [],
+        "percentage_selected": "(84.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "The alteration in atomic number",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The variation in chemical properties",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The shift in electron configuration",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The conversion of mass into energy",
+    "analytics": {
+      "percent_correct": "84.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , we need to recall that in nuclear reactions, the mass defect represents the loss in mass when a nucleus forms from its component protons and neutrons. When its component protons and neutrons form a nucleus, this loss in mass is converted and released as nuclear binding energy . The larger the mass defect, the greater the nuclear binding energy, which means that more energy is released in the reaction. In this case, we can say that the mass defect in a nuclear reaction is primarily indicative of, and can be explained by, the conversion of mass into energy . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "During nuclear fusion, two single nuclei merge to form a single heavier nucleus. The release of energy during this process is primarily attributed to",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "mass defect.",
+        "images": [],
+        "percentage_selected": "(91.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "electron configuration.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "nuclear charge.",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "the number of protons.",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "atomic mass.",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "mass defect.",
+    "analytics": {
+      "percent_correct": "91.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , recall that the mass defect refers to a phenomenon in which the mass of a nucleus is less than the mass of its constituent protons and neutrons weighed separately. The mass defect occurs because a small amount of mass is converted into energy when the protons and neutrons are bound together into a nucleus. The energy equivalent to the mass defect is the nuclear binding energy , which is the energy released when the nucleons come together to form the nucleus (or alternatively, the energy required to break apart the nucleus into its constituent nucleons). Remember that the larger the mass defect, the greater the nuclear energy. In this case, we can say that during nuclear fusion, the release of energy is primarily attributed to mass defect . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "Which of the following statements best describes nuclear binding energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Energy is released when electrons move to a higher energy level.",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Energy is absorbed when covalent bonds are broken.",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Energy is released when nucleons come together to form a nucleus.",
+        "images": [],
+        "percentage_selected": "(86.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Energy is required to overcome electrostatic repulsions in a nucleus.",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Energy is absorbed during a chemical reaction.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Energy is released when nucleons come together to form a nucleus.",
+    "analytics": {
+      "percent_correct": "86.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , recall that the mass defect refers to a phenomenon in which the mass of a nucleus is less than the mass of its constituent protons and neutrons weighed separately. The mass defect occurs because a small amount of mass is converted into energy when the protons and neutrons are bound together into a nucleus. The energy equivalent to the mass defect is the nuclear binding energy , which is the energy released when the nucleons come together to form the nucleus (or alternatively, the energy required to break apart the nucleus into its constituent nucleons). Remember that the larger the mass defect, the greater the nuclear energy. In this case, we can say that nuclear binding energy is the energy released when nucleons come together to form a nucleus . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "If energy is added to break apart the nucleus of an atom into its constituent protons and neutrons, we can expect that the total weight of its constituent protons and neutrons is",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "lighter than the initial weight of the nucleus.",
+        "images": [],
+        "percentage_selected": "(16%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "the same as the initial weight of the nucleus.",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "heavier than the initial weight of the nucleus.",
+        "images": [],
+        "percentage_selected": "(73.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "unpredictable in weight.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "unstable in weight.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "heavier than the initial weight of the nucleus.",
+    "analytics": {
+      "percent_correct": "73.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , recall that the mass defect refers to a phenomenon in which the mass of a nucleus is i than the mass of its constituent protons and neutrons weighed separately. The mass defect occurs because a small amount of mass is converted into energy when the protons and neutrons are bound together into a nucleus. The energy equivalent to the mass defect is the nuclear binding energy , which is the energy released when the nucleons come together to form the nucleus (or alternatively, the energy required to break apart the nucleus into its constituent nucleons). Remember that the larger the mass defect, the greater the nuclear energy. Nuclear binding energy is the energy needed to break apart the nucleus of an atom into its constituent protons and neutrons. Since there is an addition of energy, there is an addition of mass and the total final weight of the constituent protons and neutrons is heavier than the initial weight . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "If the initial mass of all individual nucleons is 50 u, what is the mass of the nucleus comprised of the combined nucleons, given that the mass defect is 2 u?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "25 u",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "48 u",
+        "images": [],
+        "percentage_selected": "(79.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "50 u",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "52 u",
+        "images": [],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "100 u",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "48 u",
+    "analytics": {
+      "percent_correct": "79.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , recall that the mass defect refers to a phenomenon in which the mass of a nucleus is less than the mass of its constituent protons and neutrons weighed separately. The mass defect occurs because a small amount of mass is converted into energy when the protons and neutrons are bound together into a nucleus. The energy equivalent to the mass defect is the nuclear binding energy , which is the energy released when the nucleons come together to form the nucleus (or alternatively, the energy required to break apart the nucleus into its constituent nucleons). Remember that the larger the mass defect, the greater the nuclear energy. The mass of a nucleus is always less than the combined mass of the nucleons forming it because a small portion of the mass is released as energy. Since the mass defect is 2 u, we can calculate that the final mass of the nucleus is 50 u – 2 u = 48 u . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "Which of the following is the famous formula that relates the mass defect (Δm) to binding energy (E)?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "E = Δmc",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "E = Δmc 2",
+        "images": [],
+        "percentage_selected": "(98.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "E = Δmc 3",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "E = Δm 2 c 2",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "E = Δm 2 c 3",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "E = Δmc 2",
+    "analytics": {
+      "percent_correct": "98.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , recall that the mass defect refers to a phenomenon in which the mass of a nucleus is less than the mass of its constituent protons and neutrons weighed separately. The mass defect occurs because a small amount of mass is converted into energy when the protons and neutrons are bound together into a nucleus. The energy equivalent to the mass defect is the nuclear binding energy , which is the energy released when the nucleons come together to form the nucleus (or alternatively, the energy required to break apart the nucleus into its constituent nucleons). Remember that the larger the mass defect, the greater the nuclear energy. Mass defect and nuclear binding energy are related by Albert Einstein’s mass-energy equivalence principle, expressed as his famous equation: E = Δmc 2 E = binding energy, Δm = mass defect, c = speed of light Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "Binding energy can be increased by",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "a decrease in mass defect.",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "an increase in mass defect.",
+        "images": [],
+        "percentage_selected": "(90.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "a decrease in the speed of light.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "an increase in the speed of light.",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "a decrease in valence electrons.",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "an increase in mass defect.",
+    "analytics": {
+      "percent_correct": "90.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , recall that the mass defect refers to a phenomenon in which the mass of a nucleus is less than the mass of its constituent protons and neutrons weighed separately. The mass defect occurs because a small amount of mass is converted into energy when the protons and neutrons are bound together into a nucleus. The energy equivalent to the mass defect is the nuclear binding energy , which is the energy released when the nucleons come together to form the nucleus (or alternatively, the energy required to break apart the nucleus into its constituent nucleons). Remember that the larger the mass defect, the greater the nuclear energy. Mass defect and nuclear binding energy are related by Albert Einstein’s mass-energy equivalence principle, expressed as his famous equation: E = Δmc 2 E = binding energy, Δm = mass defect, c = speed of light As we can see, the binding energy can be increased by an increase in mass defect . Since the speed of light is constant (3.00 × 10 8 m•s -1 ), it cannot be changed, Options C and D are not possible ways to increase binding energy. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry",
+    "question": {
+      "text": "In a nuclear reaction, the mass defect (Δm) is related to binding energy (E) through the equation E = Δmc 2 , where c is the speed of light (3 × 10 8 m•s -1 ). If the binding energy is 180 MeV, using the conversion factor 1 MeV = 1.6 × 10 -13 J, what is the mass defect in J•s 2 •m -2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+10+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+10+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(89%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+10+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+10+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+10+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "89%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving nuclear chemistry , recall that the mass defect refers to a phenomenon in which the mass of a nucleus is less than the mass of its constituent protons and neutrons weighed separately. The mass defect occurs because a small amount of mass is converted into energy when the protons and neutrons are bound together into a nucleus. The energy equivalent to the mass defect is the nuclear binding energy , which is the energy released when the nucleons come together to form the nucleus (or alternatively, the energy required to break apart the nucleus into its constituent nucleons). Remember that the larger the mass defect, the greater the nuclear energy. Mass defect and nuclear binding energy are related by Albert Einstein’s mass-energy equivalence principle, expressed as his famous equation: E = Δmc 2 E = binding energy, Δm = mass defect, c = speed of light STEP 1 : First, we know that the binding energy E = 180 MeV can be converted to Joules using the provided conversion factor 1 MeV = 1.6 × 10 -13 J: STEP 2 : Next, we can identify that the speed of light is c = 3 × 10 8 m•s -1 . Then, we can plug these values into the re-arranged equation: Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Introduction+to+Nuclear+Chemistry%3A+Introduction+to+Nuclear+Chemistry/Question+10+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000104a76e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104a6f0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001045b68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001045fd6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010463e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001045f1a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104a3bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104a3ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104a1ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104a3f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104a0cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104a5f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104a5fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104a6ecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Nuclear Reactions",
+    "question_bank": "Introduction to Nuclear Chemistry"
+  }
+]

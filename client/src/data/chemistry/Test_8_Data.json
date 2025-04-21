@@ -1,0 +1,1754 @@
+[
+  {
+    "test_number": 8,
+    "question_number": 1,
+    "question": {
+      "text": "Molality is best defined by",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Grams of solute ÷ kilograms of solvent",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Grams of solute ÷ liters of solution",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Moles of solute ÷ kilograms of solvent",
+        "images": [],
+        "percentage_selected": "(88.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Moles of solute ÷ liters of solution",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Moles of solute ÷ moles of solvent",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Moles of solute ÷ kilograms of solvent",
+    "analytics": {
+      "percent_correct": "88.2%",
+      "time_spent": "0 min, 15 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "There are three concentration definitions students should know for Canadian DAT. Therefore, the correct answer is Option C .",
+      "poe_text": "Option A. Grams of solute ÷ kilograms of solvent – This is defined as part per thousand (ppt). Therefore, this choice is incorrect . Option B. Grams of solute ÷ liters of solution. - This is not defined by any type of concentration calculation. Therefore, this choice is incorrect . Option D. Moles of solute ÷ liters of solution. - This is defined as molarity (M). Therefore, this choice is incorrect . Option E. Moles of solute ÷ moles of solvent. - This is not defined by any type of concentration calculation. Therefore, this choice is incorrect .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 2,
+    "question": {
+      "text": "Which of the following molecules is the strongest acid?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HCN (K a = 6.2 x 10 –10 )",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "HNO 2 (K a = 7.2 x 10 –4 )",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "HNO 3 (K a = 2.4 x 10 1 )",
+        "images": [],
+        "percentage_selected": "(23.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H 3 PO 4 (K a1 = 7.1 x 10 –3 ; K a2 = 6.3 x 10 –8 ; K a3 = 4.2 x 10 –13 )",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "H 2 SO 4 (K a1 = 1.0 x 10 3 ; K a2 = 1.2 x 10 –2 )",
+        "images": [],
+        "percentage_selected": "(64.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "H 2 SO 4 (K a1 = 1.0 x 10 3 ; K a2 = 1.2 x 10 –2 )",
+    "analytics": {
+      "percent_correct": "64.7%",
+      "time_spent": "0 min, 20 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "All of the molecules in this list are considered weak acids EXCEPT Option C and Option E, as dictated by the fact that they are all represented by K a of low values. The acid dissociation constant (K a ) is a measurement of how much an acid proceeds to deprotonate itself to produce H + . Therefore, K a is a measurement of the strength of acidity of a molecule and is sometimes represented by pK a = –logK a . The higher the K a or the lower the pK a , the stronger the acid. Of all the acids, HNO 3 and H 2 SO 4 are both strong acids. To determine which one is stronger, the one with the higher K a is stronger, which is H 2 SO 4 . When approached with polyatomic acids, only consider the first dissociation, because subsequent acid strength will always decrease. Therefore, the correct answer is Option E .",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 3,
+    "question": {
+      "text": "When the two chemical reactions below are combined together, what is the resulting reaction and its equilibrium constant? N 2 (g) + O 2 (g) ⇄ 2 NO (g) ; K c1 = 1 x 10 30 2 NO (g) + O 2 (g) ⇄ 2 NO 2 (g) ; K c2 = 6.9 x 10 5",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N 2 (g) + 2 O 2(g) ⇄ 2 NO 2(g) ; K c3 = 6.9 x 10 35",
+        "images": [],
+        "percentage_selected": "(80.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "2 NO (g) + 2 O 2(g) ⇄ 4 NO 2(g) ; K c3 = 7.9 x 10 35",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N 2(g) + 2 O 2(g) ⇄ 4 NO 2(g) ; K c3 = 7.9 x 10 35",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N 2(g) + O 2(g) + 2 NO (g) ⇄ 4 NO 2(g) ; K c3 = 7.9 x 10 35",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "N 2(g) + O 2(g) ⇄ 2 NO 2(g) ; K c3 = 6.9 x 10 35",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N 2 (g) + 2 O 2(g) ⇄ 2 NO 2(g) ; K c3 = 6.9 x 10 35",
+    "analytics": {
+      "percent_correct": "80.8%",
+      "time_spent": "4 min, 37 secs",
+      "category": "Chemical Equilibrium"
+    },
+    "category": "Chemical Equilibrium",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 4,
+    "question": {
+      "text": "What are the Bronsted-Lowry acids on both sides of the chemical equilibrium below? NH 4 + (aq) + CN - (aq) ⇄ NH 3(aq) + HCN (aq)",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NH 4 + (aq) , CN - (aq)",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "NH 4 + (aq) , HCN (aq)",
+        "images": [],
+        "percentage_selected": "(91.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "NH 3 (aq) , HCN (aq)",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "NH 3 (aq) , CN - (aq)",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "NH 4 + (aq) , NH 3 (aq)",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "NH 4 + (aq) , HCN (aq)",
+    "analytics": {
+      "percent_correct": "91.8%",
+      "time_spent": "0 min, 33 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "The Bronsted-Lowry acid-base theory focuses on the ability of a species to donate proton (acid) or accept proton (base), as shown in the image below. In the reaction, one should turn the focus on both the reactant side and the product side and determine which one is the acid in each half. In this reaction, NH 4 + (aq) is the Bronsted-Lowry acid as it is donating an H + to CN – (aq) [Bronsted-Lowry base] to form NH 3 (aq) [conjugate base of NH 4 + (aq)] and HCN(aq) [conjugate acid of CN – (aq)]. Therefore, the correct answer is Option B . CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+4+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 5,
+    "question": {
+      "text": "Which of the following changes shifts the equilibrium to the left? 2 H 2 (g) + O 2 (g) ⇌ 2 H 2 O (g) ΔH° = -484 kJ•mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Decreasing temperature",
+        "images": [],
+        "percentage_selected": "(18.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Increasing temperature",
+        "images": [],
+        "percentage_selected": "(73.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Adding H 2(g)",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Adding catalyst",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Increasing pressure",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Increasing temperature",
+    "analytics": {
+      "percent_correct": "73.8%",
+      "time_spent": "1 min, 30 secs",
+      "category": "Chemical Equilibrium"
+    },
+    "category": "Chemical Equilibrium",
+    "explanation": {
+      "concept_text": "This is an example of Le Chatelier’s principle , which states that the system will drive itself back towards equilibrium to counterbalance the change. There are four types of possible changes students should be familiar with on Canadian DAT. This reaction is exothermic. It has 3 moles of gas on reactant side and 2 moles of gas on product side. Therefore, the only ways to shift left would be to: (1) increase concentration of products or decrease concentration of reactants, (2) increase the temperature, or (3) decrease the pressure or increase the volume. Therefore, the correct answer is Option B .",
+      "poe_text": "Option A. Decreasing temperature - This would cause shift to right because heat is a product and this is an exothermic reaction. Therefore, this choice is incorrect . Option C. Adding H 2 (g) - This would cause shift to right because there is an increase in concentration of reactants. Therefore, this choice is incorrect . Option D. Adding catalyst - This would cause no shift because kinetics is not a measurement of equilibrium. Therefore, this choice is incorrect . Option E. Increasing pressure - This would cause shift to right because it would decrease volume and favor product side with lower number of moles of gas. Therefore, this choice is incorrect .",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 6,
+    "question": {
+      "text": "A container that contains several different compounds of identical mass is uniformly heated. Which of the following compounds would increase in temperature the quickest?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H 2 O (c = 4.18 J•K-1•kg-1)",
+        "images": [],
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CH 3 COOH (c = 2.043 J•K-1•kg-1)",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CS 2 (c = 0.992 J•K-1•kg-1)",
+        "images": [],
+        "percentage_selected": "(88.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "HNO 3 (c = 1.72 J•K-1•kg-1)",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 3 H 6 O (c = 2.15 J•K-1•kg-1)",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CS 2 (c = 0.992 J•K-1•kg-1)",
+    "analytics": {
+      "percent_correct": "88.6%",
+      "time_spent": "0 min, 17 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "Specific heat capacity is the amount of heat required to raise 1 unit of a substance by 1 unit of temperature. For specific heat, the SI unit is joule per kelvin and kilogram (J•K -1 •kg -1 ), meaning we are looking at the heat needed to raise the temperature of 1 kg of a substance by 1 K. A substance with a high heat capacity means that it takes a lot of heat to raise its temperature. Therefore, the substance with the lowest heat capacity would increase its temperature the quickest. Therefore, the correct answer is Option C.",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 7,
+    "question": {
+      "text": "An endothermic reaction is shown below. Under what condition is the reaction spontaneous? CH 4 (g) + NH 3 (g) → HCN (g) + 3 H 2 (g) ΔH° = +251 kJ•mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Low temperature",
+        "images": [],
+        "percentage_selected": "(9.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "High temperature",
+        "images": [],
+        "percentage_selected": "(80.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "High pressure",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Low pressure",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Low volume",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "High temperature",
+    "analytics": {
+      "percent_correct": "80.4%",
+      "time_spent": "1 min, 59 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "The equation that relates all three thermodynamic parameters is is ΔG° = ΔH° - TΔS°. For a spontaneous reaction, the free energy must be negative. In order to determine at what temperature this reaction can proceed spontaneously, that would be dependent upon what signs enthalpy and entropy are. The enthalpy of this reaction is positive based on the given value. The entropy of this reaction is positive based on the products have 4 moles of gas compared to the reactants have 2 moles of gas. Thus, this reaction can only proceed spontaneously at high temperature, because for a negative entropic component to overcome a positive enthalpic component, the temperature must be high. Therefore, the correct answer is Option B . Note: Because this reaction requires an extremely high temperature to operate, it often requires a catalyst to make it proceed much more efficiently.",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 8,
+    "question": {
+      "text": "What happens if the temperature is lowered for a liquid in a sealed container?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The pressure would increase",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The total number of all molecules inside the container decreases",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The vapor pressure of the liquid increases",
+        "images": [],
+        "percentage_selected": "(18.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The boiling point of the liquid increases",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "There are less gas molecules",
+        "images": [],
+        "percentage_selected": "(57.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "There are less gas molecules",
+    "analytics": {
+      "percent_correct": "57.7%",
+      "time_spent": "1 min, 29 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "Of the three standard phases, solids are the lowest in energy, as reflected by the low motion of molecules relative to each other. A phase change from solid to the higher energy liquid requires an input of energy to overcome any stable attractions present in the solid phase. The gas phase exhibits even greater energy and, thus, the greatest motion of particles relative to each other. Since nearly all intermolecular forces are broken during the liquid-gas phase transition, this transition requires the most energy. With this in mind, the removal of energy by lowering the temperature will facilitate the transition from a higher energy state to a lower energy state, that is, gas to liquid. Therefore, the correct answer is Option E.",
+      "poe_text": "Option A. The pressure would increase – This option is incorrect because a reduced temperature would facilitate increased phase transitions from gas to liquid, with the latter occupying less volume, thus exerting less pressure on the container. Option B. The total number of all molecules inside the container decreases – This option is incorrect because due to the conservation of mass, the total number of moles of all liquid and gas inside the sealed container must remain constant since a phase change is not a chemical reaction but rather a physical change. Option C. The vapor pressure of the liquid increases – This option is incorrect because the vapor pressure of a liquid increases as the temperature increases. Option D. The boiling point of the liquid increases – This option is incorrect because boiling point is a colligative property that changes only when the concentration of the solutes in the solvent changes.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 9,
+    "question": {
+      "text": "What phase transition is indicated by the red arrow in the graph below? CC BY 4.0",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+9+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Sublimation",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Deposition",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Fusion",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Vaporization",
+        "images": [],
+        "percentage_selected": "(89.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Condensation",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Vaporization",
+    "analytics": {
+      "percent_correct": "89.1%",
+      "time_spent": "0 min, 46 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "In a heating curve, a pure substance must overcome intermolecular forces in order to go through phase changes. There are two types of transitions when calculating the heat absorbed: calorimetry and enthalpy. Calorimetry corresponds to the portions of the graph with sloped lines (single phase: solid, liquid, gas). Enthalpy corresponds to portions of the graph with horizontal lines (phase transitions: melting (solid → liquid) and boiling (liquid → gas)). In the question, the red arrow indicates liquid to gas transition, which is also called vaporization. Remember that during phase changes, such as fusion and vaporization, the temperature does not change (which explains why the line is horizontal). Phase transitions occur at a constant temperature, because all the energy is used to break intermolecular forces holding the solid together during fusion, and those holding the liquid together during vaporization. Only after the phase transition does any additional heat increase the kinetic energy of the particles and temperature. Therefore, the correct answer is Option D . CC BY 4.0",
+      "poe_text": "Option A. Sublimation - This is not directly represented on the graph – it is the sum of both horizontal lines. Therefore, this choice is incorrect . Option B. Deposition - This is not represented on the graph and can only be seen on a cooling curve. Therefore, this choice is incorrect . Option C. Fusion - This is represented by the first red arrow with “melting” marked. Therefore, this choice is incorrect . Option E. Condensation - This is not represented on the graph and can only be seen on a cooling curve. Therefore, this choice is incorrect .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+9+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 10,
+    "question": {
+      "text": "Which of the following is the conjugate base for H 2 SO 3 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H 3 SO 4 +",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "HSO 4 -",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "SO 3",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "HSO 3 -",
+        "images": [],
+        "percentage_selected": "(89%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "H 2 SO 4",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "HSO 3 -",
+    "analytics": {
+      "percent_correct": "89%",
+      "time_spent": "0 min, 24 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "The base is the compound to which the acid donates its hydrogen atom (i.e. a proton). On the other hand, the conjugate base of an acid is the compound that would accept a proton to then reform the acid. Therefore, in order to determine the conjugate base of an acid, you need to determine what the compound would be once it donates one hydrogen atom. In the case of H 2 SO 3 , once it loses a hydrogen atom, it becomes: H 2 SO 3 ⇄ H + + HSO3 - Therefore, the correct answer is Option D. HSO 3 - .",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 11,
+    "question": {
+      "text": "A chemical compound X decomposes with a half-life of 3 hours. Suppose there are 20 grams of X in a container, how long will it take for only 5 grams of X to be left in the container?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1.5 hours",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3 hours",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "6 hours",
+        "images": [],
+        "percentage_selected": "(95.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "9 hours",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "27 hours",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "6 hours",
+    "analytics": {
+      "percent_correct": "95.9%",
+      "time_spent": "0 min, 43 secs",
+      "category": "Chemical Kinetics"
+    },
+    "category": "Chemical Kinetics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 12,
+    "question": {
+      "text": "In the combustion reaction of methane, how many moles of O 2 are required to produce 2 moles of H 2 O?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(19.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(70.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2",
+    "analytics": {
+      "percent_correct": "70.2%",
+      "time_spent": "5 min, 31 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "STEP 1: In order to determine the correct answer, the structure of methane (CH 4 ) must be known and applied to the general form of a combustion reaction, which produces water and carbon dioxide from a carbon precursor: O 2 + CH 4 → CO 2 + H 2 O STEP 2: This equation must then be balanced in the following steps. Start by counting the overall molar amounts of each element: STEP 3 : It is clear that there are too few hydrogens on the right side of the arrow (2) as compared to the left side (4), so this must be remedied by doubling the amount of water, yielding the following table of elements: O 2 + CH 4 → CO 2 + 2H 2 O STEP 4: To balance the extra two oxygens on the right side of the arrow, the oxygen gas molar amount must be doubled to complete the balancing. From the completed equation, it can be seen that 2 mol of O 2 is required for this reaction. 2 O 2 + CH 4 → CO 2 + 2 H 2 O CC BY 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+12+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+12+Solution+3.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+12+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 13,
+    "question": {
+      "text": "What is the empirical formula of a molecular structure that contains Fe (III) and O?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "FeO",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Fe 3 O",
+        "images": [],
+        "percentage_selected": "(11%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Fe 2 O 3",
+        "images": [],
+        "percentage_selected": "(84.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Fe 2 O 2",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Fe 4 O 6",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Fe 2 O 3",
+    "analytics": {
+      "percent_correct": "84.4%",
+      "time_spent": "1 min, 1 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 14,
+    "question": {
+      "text": "Based on the following reduction potential data below, which of the following is most likely to occur? Ag + ( aq ) + e - → Ag ( s ) E o = +0.80 V Cu 2+ ( aq ) + 2e - → Cu ( s ) E o = +0.34 V",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ag ( s ) reduces Cu ( s )",
+        "images": [],
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Ag ( s ) reduces Cu 2+ ( aq )",
+        "images": [],
+        "percentage_selected": "(21%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Cu ( s ) reduces Ag ( s )",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cu ( s ) reduces Ag + ( aq )",
+        "images": [],
+        "percentage_selected": "(50.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Ag + ( aq ) reduces Cu ( s )",
+        "images": [],
+        "percentage_selected": "(13%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Cu ( s ) reduces Ag + ( aq )",
+    "analytics": {
+      "percent_correct": "50.1%",
+      "time_spent": "1 min, 36 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 15,
+    "question": {
+      "text": "Which of the following would most accurately measure 10.0 mL of a liquid?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Beaker",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Erlenmeyer flask",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Burette",
+        "images": [],
+        "percentage_selected": "(87.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Round bottom flask",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Test Tube",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Burette",
+    "analytics": {
+      "percent_correct": "87.1%",
+      "time_spent": "0 min, 13 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "A burette is a very long cylindrical type of glassware with markings throughout which is very accurate at transferring distinct volumes of liquids. A stopcock found just before a pointed tip is turned to release liquid. This glassware is commonly found in titrations of acids and bases. CC by 4.0",
+      "poe_text": "Option A. Beaker - This option is incorrect because beakers have markings in crude increments and the glassware is shaped as a wide cylinder. The coupling of these factors does not allow for accurate measurement. Option B. Erlenmeyer flask - This option is incorrect because Erlenmeyer flasks are mainly used for mixing solutions rather than measuring volumes as they have very crude markings on them. Any measurement from this glassware should not be considered accurate. Option D. Round bottom flask - This option is incorrect because round bottom flasks are typically spherical and have very limited markings of volume (if any). Rather than accurate fluid transfer, these are usually used for reflux reactions. Option E. Test tube - This option is incorrect because test tubes rarely have any markings for volume but are instead small cylinders that are used to qualitatively analyze multiple samples or treatments in small volumes.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+15+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 16,
+    "question": {
+      "text": "Below is a picture of two graduated cylinders containing water. Which of the following correctly displays how to record the two volumes below? CC BY 4.0",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+16+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "13 mL, 13 mL",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "13 mL, 14 mL",
+        "images": [],
+        "percentage_selected": "(17.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "13 mL, 15 mL",
+        "images": [],
+        "percentage_selected": "(78.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "14 mL, 14 mL",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "14 mL, 15 mL",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "13 mL, 15 mL",
+    "analytics": {
+      "percent_correct": "78.7%",
+      "time_spent": "1 min, 11 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "This question requires an understanding of how to measure a meniscus , or the curved part of a liquid in a glass container. The image below illustrates the correct way to read a meniscus. As shown in the image below, a meniscus can be concave (left) if the liquid is attracted to the surrounding glass tubing or it may be convex if the liquid is repelled (right). In either scenario, a meniscus is measured by looking at the tip of the curve or the middle-most part of the liquid. Therefore, the correct answer is Option C . CC BY 4.0",
+      "poe_text": "Option A. 13 mL, 13 mL - This option is incorrect because although the left concave meniscus is measured correctly, the right convex meniscus is not measured in the middle of the curve. Option B. 13 mL, 14 mL - This option is incorrect because although the left concave meniscus is measured correctly, the right convex meniscus is not measured in the middle of the curve. Option D. 14 mL, 14 mL - This option is incorrect because neither meniscus, concave nor convex, is measured in the middle of its curve. Option E. 14 mL, 15 mL - This option is incorrect because although the right convex meniscus is measured correctly, the left meniscus is not measured in the middle of the curve.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+16+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 17,
+    "question": {
+      "text": "A uranium atom undergoes alpha decay. What would be a possible product?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Radium",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Curium",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Protactinium",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Thorium",
+        "images": [],
+        "percentage_selected": "(75.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Plutonium",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Thorium",
+    "analytics": {
+      "percent_correct": "75.8%",
+      "time_spent": "1 min, 34 secs",
+      "category": "Nuclear Reactions"
+    },
+    "category": "Nuclear Reactions",
+    "explanation": {
+      "concept_text": "Alpha decay is a type of radioactive decay in which an atomic nucleus emits an alpha particle (helium nucleus), as shown in the image below. Therefore, the atomic nucleus transforms or 'decays' into a different atomic nucleus, with a mass number that is reduced by four and an atomic number that is reduced by two. CC By 4.0 When uranium-238 undergoes alpha decay, it becomes thorium-234 (the numbers following the chemical names refer to the number of protons plus neutrons). In this reaction, uranium-238 loses two protons and two neutrons to become the element thorium-234. This concept is illustrated by the image below. Therefore, the answer is Option D. thorium . CC By 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+17+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+17+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 18,
+    "question": {
+      "text": "Which of the following has the largest atomic radius?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Mg 2+",
+        "images": [],
+        "percentage_selected": "(12.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Na +",
+        "images": [],
+        "percentage_selected": "(33.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Ne",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "F -",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "O 2-",
+        "images": [],
+        "percentage_selected": "(49%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "O 2-",
+    "analytics": {
+      "percent_correct": "49%",
+      "time_spent": "0 min, 43 secs",
+      "category": "Periodic Properties"
+    },
+    "category": "Periodic Properties",
+    "explanation": {
+      "concept_text": "All of these atoms have the same number of electrons and therefore their atomic number must be considered (isoelectronic series). Moving from oxygen to magnesium, the number of protons increases and therefore surrounding negative electrons are more tightly pulled to the positive nucleus. This increased attraction decreases the size of the radius. Based on this, magnesium has the smallest radius while oxygen has the largest radius. Therefore, the correct answer is Option E. One way to remember this general rule is that “kittens (cats) are small” indicating that cations are smaller than anions. The image below illustrates the sizes of a few cations and anions. CC BY 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+18+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 19,
+    "question": {
+      "text": "Which of the following atom has the lowest first ionization energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "O",
+        "images": [],
+        "percentage_selected": "(10.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "S",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Se",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Te",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Po",
+        "images": [],
+        "percentage_selected": "(88.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Po",
+    "analytics": {
+      "percent_correct": "88.1%",
+      "time_spent": "1 min, 6 secs",
+      "category": "Periodic Properties"
+    },
+    "category": "Periodic Properties",
+    "explanation": {
+      "concept_text": "This answer may be derived through knowledge of periodic trends, which states that ionization energy increases from left to right across a period and from bottom to top through a column. Ionization energy is defined as the energy required to remove an outermost electron from an atom. This feat is easier to accomplish in atoms found at the bottom of the periodic table because there are many levels of electrons shielding the negatively charged electrons in the outermost valence layer from the positive nucleus. Additionally, in large atoms, this valence shell is found at a farther distance from the nucleus as a result of a larger atomic radius. Both the increased shielding and further distance weaken the attraction between the positive nucleus and negative electrons which allows for electrons to be removed with less energy further down in a column. From the options provided, Po has the lowest first ionization energy, therefore the correct answer is Option E . CC BY 4.0",
+      "poe_text": "Option A. O - This option is incorrect because oxygen is the smallest of the options. As a result, oxygen has the weakest electron shielding and the smallest distance between valence electrons and the nucleus. This results in a strong attraction between the positive nucleus and negative electrons which makes it very hard to remove an electron and ionize the atom. Option B. S - This option is incorrect because sulfur does not have the largest size of options listed. As a result, it does not have the most electron shielding or the largest distance between valence electrons and the nucleus. Therefore, it does not have the weakest ionization energy. Option C. Se - This option is incorrect because selenium is not the largest element listed. Therefore, it does not have the maximum amount of electron shielding or radius size required in order for it to be ionized with the least amount of energy. Option D. Te - This option is incorrect because tellurium is found above polonium on the periodic table. Therefore, this element does not have the largest atomic radius or greatest amount of electron shielding between valence electrons and the nucleus. Electrons are consequently not removed more easily on this atom than polonium and therefore it does not have the smallest ionization energy.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+19+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 20,
+    "question": {
+      "text": "Which of the following is the correct list of elements in order of increasing electronegativity?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "He, N, Cl, O, F",
+        "images": [],
+        "percentage_selected": "(87.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "He, Cl, O, N, F",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "He, O, N, F, Cl",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "F, O, N, Cl, He",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "F, O, N, He, Cl",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "He, N, Cl, O, F",
+    "analytics": {
+      "percent_correct": "87.1%",
+      "time_spent": "0 min, 43 secs",
+      "category": "Periodic Properties"
+    },
+    "category": "Periodic Properties",
+    "explanation": {
+      "concept_text": "Electronegativity is a value which indicates how much a given atom attracts electrons. The first trend of interest is that electronegativity increases from left to right across a period because there are more positive protons in the nucleus that can pull on negative electrons. The second trend of interest is that electronegativity increases toward the top of the periodic table because these atoms have a smaller radius and therefore the positive nucleus is physically closer to electrons that it pulls upon. CC BY 4.0 It is important to also note that noble gases (group VIII) have very low electronegativity values (effectively zero in the first rows) because their valence electron subshell is already full and therefore any additional electrons added will be very unstable and readily lost. The lowest electronegativity value out of the options listed must therefore belong to helium, a noble gas. The largest electronegativity value must belong to fluorine, which resides at the top-most and right-most corner of the periodic table. Finally, as a result of previously discussed trends, oxygen must be placed after nitrogen because it resides further right on the periodic table. This leaves the correct choice as Option A. He, N, Cl, O, F.",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+20+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 21,
+    "question": {
+      "text": "What is the number of valence electrons in a Cu 2+ ion?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "7",
+        "images": [],
+        "percentage_selected": "(34.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "9",
+        "images": [],
+        "percentage_selected": "(46.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "11",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "9",
+    "analytics": {
+      "percent_correct": "46.2%",
+      "time_spent": "2 min, 22 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+21+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+21+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+21+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 22,
+    "question": {
+      "text": "What is the correct number of unpaired electrons in cobalt?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(13.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(75.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3",
+    "analytics": {
+      "percent_correct": "75.7%",
+      "time_spent": "1 min, 12 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+22+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 23,
+    "question": {
+      "text": "All of the following are diamagnetic in their ground state form EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "F -",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "F 2",
+        "images": [],
+        "percentage_selected": "(15.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "H -",
+        "images": [],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Li +",
+        "images": [],
+        "percentage_selected": "(15%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "O 2",
+        "images": [],
+        "percentage_selected": "(57%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "O 2",
+    "analytics": {
+      "percent_correct": "57%",
+      "time_spent": "2 min, 54 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+23+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+23+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 24,
+    "question": {
+      "text": "Which of the following molecules has a zero dipole moment?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "NH 3",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CH 3 Cl",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CS 2",
+        "images": [],
+        "percentage_selected": "(83%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "HF",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CS 2",
+    "analytics": {
+      "percent_correct": "83%",
+      "time_spent": "1 min, 13 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "The dipole moment of a given molecule is a direct sum of the individual dipole moments of each individual bond. Although electronegativity values would be useful in determining the dipole moment of a molecule, we can arrive at the answer by focusing on the periodic trend of electronegativity combined with molecular geometry. In the case of carbon disulfide, it can be confirmed that this structure is nonpolar because the overall structure is linear and therefore any polarities between the carbon and sulfur are geographically balanced as they pull in opposite directions. In drawing this structure, carbon donates four valence electrons while each sulfur donates six (sixteen total). Therefore, the overall Lewis structure requires two double bonds to be made to create the overall linear shape with no formal charges on any atoms.",
+      "poe_text": "Option A. H 2 O - This option is incorrect because there is a geographic imbalance of the polar bonds due to the bent molecular geometry. The electrons are pulled unevenly towards the oxygen, and the molecule is overall polar. Option B. NH 3 - This option is incorrect because although NH 3 has a tetrahedral arrangement, the electronegativity difference between the nitrogen and the hydrogen atoms create an uneven pull that favours the nitrogen atom. Furthermore, the presence of lone pair does not allow the net cancelling of the dipole moments for each bond. This option is incorrect as electron density is not pulled equally in all directions. Option C. CH 3 Cl - This option is incorrect because the groups coming off of carbon do not geographically balance one another. The groups are not balanced as the hydrogens - which are the least electronegative atom - branching from the carbon pull very weakly on the electrons while the more electronegative chlorine pulls very strongly. As a result, the electron density is pulled toward the chlorine, causing the molecule to be overall polar. Option E. HF - This option is incorrect because the electron density is very unbalanced in this molecule as a result of fluorine’s high electronegativity compared to hydrogen’s. This difference in electronegativity results in electron density being heavily pulled towards fluorine in this polar bond, causing an overall dipole moment to form.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+24+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 25,
+    "question": {
+      "text": "Which of the following is a polar molecule?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 3 OH",
+        "images": [],
+        "percentage_selected": "(93.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "CCl 4",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "BH 3",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "C 2 H 6",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "N 2",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 3 OH",
+    "analytics": {
+      "percent_correct": "93.7%",
+      "time_spent": "0 min, 17 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "STEP 1: To answer this question, an understanding of polarity is required. Polarity occurs when a molecular dipole moment exists in a molecule as a result of unbalanced electron density. This area of unequal electron density can exist as a result of electronegativity differences between bonds (a value greater than 0.4) coupled with a non-geographical distribution of polar groups. Note: Remember electronegativity trends indicate that electronegativity increases from left to right across rows and from bottom to top through columns. STEP 2: The easiest way to solve this question is to focus on the strongly electronegative oxygen molecule found in methanol, or CH 3 OH. Methanol is a very small molecule, and the electron density is pulled away from the carbon, an atom with a relatively small electronegativity value (2.5), to the oxygen, which possesses a very high electronegativity value (3.5). This imbalance in electronegativity (3.5 – 2.5 = 1 > 0.4) is not geographically balanced by the other hydrogens which bond to the carbon and therefore this molecule is considered polar. Note: This electronegativity difference is also seen in the intermolecular attractions formed by methanol. Hydrogen bonds occur when hydrogens are bonded to oxygen, nitrogen, or fluoride because these hydrogens lose so much electron density that they become partially positive and form very strong attractions with highly electronegative atoms on surrounding molecules. CC BY 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+25+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 26,
+    "question": {
+      "text": "Which of the following contains an atom with a 2+ oxidation state?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NH 4 +",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "MgO",
+        "images": [],
+        "percentage_selected": "(92.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "H 2 O 2",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "NaCl",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "MgO",
+    "analytics": {
+      "percent_correct": "92.6%",
+      "time_spent": "0 min, 52 secs",
+      "category": "Electrochemistry"
+    },
+    "category": "Electrochemistry",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 27,
+    "question": {
+      "text": "Each of the following nitrate salts will form a precipitate when combined in solution with NaF EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Pb(NO 3 ) 2",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Hg(NO 3 ) 2",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "AgNO 3",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "KNO 3",
+        "images": [],
+        "percentage_selected": "(75.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "KNO 3",
+    "analytics": {
+      "percent_correct": "75.9%",
+      "time_spent": "3 min, 43 secs",
+      "category": "Solutions"
+    },
+    "category": "Solutions",
+    "explanation": {
+      "concept_text": "To solve this question, we must apply the solubility rules : Based on the solubility rules, a precipitate results when a displacement produces an insoluble salt. Below are the steps to solving this question.",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 28,
+    "question": {
+      "text": "What is the pOH of an HCl solution with a [H+] concentration of 0.0001?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(11.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(78.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "10",
+    "analytics": {
+      "percent_correct": "78.5%",
+      "time_spent": "1 min, 6 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 29,
+    "question": {
+      "text": "Consider a container that holds He and CH 4 gas. If there is a hole in this container, how many times faster will the faster gas effuse?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1.5",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(73.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(18.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2",
+    "analytics": {
+      "percent_correct": "73.4%",
+      "time_spent": "1 min, 32 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+29+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+29+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+29+Solution+3.png"
+      ]
+    }
+  },
+  {
+    "test_number": 8,
+    "question_number": 30,
+    "question": {
+      "text": "What is the empirical formula of a molecule with 7 g of nitrogen and 16 g of oxygen?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NO",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N 2 O",
+        "images": [],
+        "percentage_selected": "(12.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "NO 2",
+        "images": [],
+        "percentage_selected": "(82%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "NO 3",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "N 2 O 2",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "NO 2",
+    "analytics": {
+      "percent_correct": "82%",
+      "time_spent": "1 min, 14 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+30+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+8/Question+30+Solution+1.png"
+      ]
+    }
+  }
+]

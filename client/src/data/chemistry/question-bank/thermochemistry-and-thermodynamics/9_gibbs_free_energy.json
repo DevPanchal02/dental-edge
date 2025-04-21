@@ -1,0 +1,578 @@
+[
+  {
+    "question_number": 1,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "Which of the following conditions is spontaneous at high temperatures but non-spontaneous at low temperatures?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "ΔH > 0, ΔS > 0",
+        "images": [],
+        "percentage_selected": "(77%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "ΔH > 0, ΔS < 0",
+        "images": [],
+        "percentage_selected": "(8.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "ΔH < 0, ΔS > 0",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "ΔH < 0, ΔS < 0",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "ΔH = 0, ΔS = 0",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "ΔH > 0, ΔS > 0",
+    "analytics": {
+      "percent_correct": "77%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the spontaneity of reactions , let’s review the Gibb’s free energy equation, and the conditions in which Gibb’s free energy is spontaneous or non-spontaneous: ΔG = ΔH – TΔS ΔG = change in free energy, ΔH = change in enthalpy, T = temperature in Kelvin, ΔS = change in entropy In this case, we can see that when ΔH > 0 and ΔS > 0, the reaction is spontaneous at high temperatures but nonspontaneous at low temperatures. Option A. ΔH > 0, ΔS > 0 Correct. This reaction is spontaneous at high temperatures and non-spontaneous at low temperatures, because a large temperature (T) value increases the negative contribution of the TΔS component, which leads to an overall negative ΔG value (spontaneous). Meanwhile, a small temperature (T) value decreases the negative contribution of the TΔS component, which leads to an overall positive ΔG value (non-spontaneous). Option B. ΔH > 0, ΔS < 0 Incorrect. This reaction is nonspontaneous at all temperatures, because both the ΔH component and the -TΔS component is always positive (because of the negative ΔS value). Therefore, regardless of the temperature, the ΔG value is positive, which is non-spontaneous. Option C. ΔH < 0, ΔS > 0 Incorrect. This reaction is spontaneous at all temperatures, because both the ΔH component and the -TΔS component is always negative (because of the positive ΔS value). Therefore, regardless of the temperature, the ΔG value is negative, which is spontaneous. Option D. ΔH < 0, ΔS < 0 Incorrect. This reaction is spontaneous at low temperatures and non-spontaneous at high temperatures, because a low temperature (T) value decreases the positive contribution of the TΔS component, which leads to an overall negative ΔG value (spontaneous). Meanwhile, a large temperature (T) value increases the positive contribution of the TΔS component, which leads to an overall positive ΔG value (non-spontaneous). Option E. ΔH = 0, ΔS = 0 Incorrect. When ΔH = 0 and ΔS = 0, the change in free energy ΔG = 0 regardless of the temperature. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "A scientist conducts a reaction that is spontaneous at all temperatures. What must be true about this reaction?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "ΔH > 0, ΔS > 0",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "ΔH > 0, ΔS < 0",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "ΔH < 0, ΔS > 0",
+        "images": [],
+        "percentage_selected": "(87.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "ΔH < 0, ΔS < 0",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "ΔH = 0, ΔS = 0",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "ΔH < 0, ΔS > 0",
+    "analytics": {
+      "percent_correct": "87.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the spontaneity of reactions , let’s review the Gibb’s free energy equation, and the conditions in which Gibb’s free energy is spontaneous or non-spontaneous: ΔG = ΔH – TΔS ΔG = change in free energy, ΔH = change in enthalpy, T = temperature in Kelvin, ΔS = change in entropy In this case, for a reaction to be spontaneous at all temperatures, or have a negative ΔG value, ΔH has to be negative and ΔS has to be positive according to the Gibbs free energy equation. This is because regardless of the temperature, the negative values of ΔH and -TΔS lead to an overall negative ΔG value, which is a spontaneous reaction. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "Which of the following statements is true regarding Gibbs free energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "ΔG changes in the presence of a catalyst",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "A reaction with ΔG > 0 is spontaneous",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "ΔG° indicates the energy change at a very high temperature",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The entropy of the universe always increases",
+        "images": [],
+        "percentage_selected": "(80.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "All reactions are spontaneous at very high temperatures",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The entropy of the universe always increases",
+    "analytics": {
+      "percent_correct": "80.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the spontaneity of reactions , let’s review the Gibb’s free energy equation, and the conditions in which Gibb’s free energy is spontaneous or non-spontaneous: ΔG = ΔH – TΔS ΔG = change in free energy, ΔH = change in enthalpy, T = temperature in Kelvin, ΔS = change in entropy The entropy of the universe is the sum of the entropy of the system and the surroundings: ΔS universe = ΔS system + ΔS surrounding In this case, we have to recognize that in spontaneous reactions, the entropy of the universe always increases. So, in spontaneous reactions, the entropy change of the universe is always positive. The ΔS value in the Gibbs free energy equation is not the change of the entropy of the universe , but rather the change of entropy of the system . Thus, although the change of entropy of the system could be negative in a spontaneous reaction, the overall change of entropy of the universe is always positive (becoming more disordered for all spontaneous reactions). Option A. ΔG changes in the presence of a catalyst Incorrect. ΔG is not dependent on the presence of a catalyst and thus does not change in the presence of a catalyst. Catalysts do not change any thermodynamic properties of a reaction but only change the kinetic properties of how fast the reaction goes. Option B. A reaction with ΔG > 0 is spontaneous Incorrect. A reaction with ΔG > 0 is non-spontaneous. Instead, a reaction with ΔG < 0 is spontaneous with free energy released to the surroundings. Option C. ΔG° indicates the energy change at a very high temperature Incorrect. The ° symbol behind the ΔG indicates the standard conditions at 298 K, 1 atm, and 1.0 M concentration. Option D. The entropy of the universe always increases Correct. Recalling the equation of the entropy of the universe, ΔS universe = ΔS system + ΔS surrounding , the entropy of the universe always increases in a spontaneous reaction. The ΔS value in the Gibbs free energy equation indicates the change in entropy of the system , not the universe . Thus, a spontaneous reaction can have negative ΔS system values, but it is important to recognize that the ΔS universe is always positive, becoming more disordered. Option E. A ll reactions are spontaneous at very high temperatures Incorrect. Reactions with a positive ΔH and negative ΔS are non-spontaneous at all temperatures, and reactions with a negative ΔH and negative ΔS are non-spontaneous at high temperatures. Thus, not all reactions are spontaneous at very high temperatures. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "If a scientist finds the change in enthalpy of the reaction to be 5 kJ and the change in entropy of the reaction to be 10 J•K -1 at 100 K, what is the change in free energy of the reaction?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-6,000 J",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-995 J",
+        "images": [],
+        "percentage_selected": "(17%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-1,005 J",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4,000 J",
+        "images": [],
+        "percentage_selected": "(73.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "6,000 J",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4,000 J",
+    "analytics": {
+      "percent_correct": "73.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Gibbs free energy , we need to use the Gibbs free energy formula to calculate the ΔG: ΔG = ΔH – TΔS Where ΔG = change in free energy, ΔH = change in enthalpy, T = temperature in Kelvin, ΔS = change in entropy. STEP 1 : First, let’s go over the given values we have and convert the change in enthalpy to kilojoules (kJ) to joules (J): ΔH = 5 kJ = 5,000 J ΔS = 10 J•K -1 T = 100 K STEP 2 : Using the given values, let’s plug them into the Gibbs free energy equation: ΔG = ΔH – TΔS ΔG = 5,000 – 100(10) ΔG = 5,000 – 1,000 ΔG = 4,000 J Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "Each of the following statements is correct of endergonic and exergonic reactions EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Endergonic reactions have a positive ΔG",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Endergonic and endothermic are interchangeable terms",
+        "images": [],
+        "percentage_selected": "(75%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Free energy is released in an exergonic reaction",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Products are favored at equilibrium in an exergonic reaction",
+        "images": [],
+        "percentage_selected": "(9.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "A reaction is exergonic at all temperatures when ΔH < 0 and ΔS > 0",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Endergonic and endothermic are interchangeable terms",
+    "analytics": {
+      "percent_correct": "75%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving endergonic and exergonic reactions , let’s go over the definitions together: In this case, endothermic refers to the change in enthalpy of the system, which is different from endergonic which refers to the change in free energy of the system. Thus, endergonic and endothermic are not interchangeable terms. Keep in mind that we need to find the incorrect statement about the endergonic and exergonic reactions. Option A. Endergonic reactions have a positive ΔG Incorrect. Endergonic reactions absorb free energy from the surroundings and are considered non-spontaneous reactions with a positive ΔG. Option B. Endergonic and endothermic are interchangeable terms Correct. Endergonic refers to the change in free energy of the system while endothermic refers to the change in enthalpy of the system. Thus, they are not interchangeable terms. Option C. Free energy is released in an exergonic reaction Incorrect. Exergonic reaction, a spontaneous reaction with a negative ΔG, releases free energy to the surroundings. Option D. Products are favored at equilibrium in an exergonic reaction Incorrect. In an exergonic reaction where the ΔG is negative, the equilibrium constant K eq > 1, meaning the products are favored at equilibrium. Option E. A reaction is exergonic at all temperatures when ΔH < 0 and ΔS > 0 Incorrect. Recalling that the Gibbs free energy equation is ΔG = ΔH – TΔS, when ΔH is negative and ΔS is positive, ΔG is negative at all temperatures, which means that the reaction is exergonic, or spontaneous. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "Which of the following is true about the following reaction, assuming it takes place at a very high temperature? 2 Al 2 O 3­­( s ) → 4 Al ( s ) + 3 O 2( g ) ΔH° = 138 kJ•mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Reaction is non-spontaneous, and the entropy of the system decreases",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Reaction is non-spontaneous, and the entropy of the system increases",
+        "images": [],
+        "percentage_selected": "(11.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Reaction is non-spontaneous, and the entropy of the system does not change",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Reaction is spontaneous, and the entropy of the system decreases",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Reaction is spontaneous, and the entropy of the system increases",
+        "images": [],
+        "percentage_selected": "(82.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Reaction is spontaneous, and the entropy of the system increases",
+    "analytics": {
+      "percent_correct": "82.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the spontaneity of reactions , let’s review the Gibb’s free energy equation, and the conditions in which Gibb’s free energy is spontaneous or non-spontaneous: ΔG = ΔH – TΔS ΔG = change in free energy, ΔH = change in enthalpy, T = temperature in Kelvin, ΔS = change in entropy In this case, we can first determine the change in entropy of the reaction by looking at the number of gas moles in the reaction. The reactant side has 0 gas moles while the product side has 3 moles of oxygen gas. Having more gas moles in the product compared to the reactant indicates an increase in disorder, and therefore an increase in the entropy of the system. In addition, there are 7 moles of products but only 2 moles of reactants, which is another indication of an increase in entropy. Since we now know that ΔH and ΔS are both positive and we are given a high-temperature condition, the reaction would be spontaneous. This is because a large temperature (T) value increases the negative contribution of the -TΔS component, which leads to an overall negative ΔG value (spontaneous). Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "Which of the following statements is true regarding Gibbs free energy and the equilibrium constant, K eq ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "When ΔG is negative, K eq > 1 and products are favored",
+        "images": [],
+        "percentage_selected": "(88.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "When ΔG is negative, K eq > 1 and reactants are favored",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "When ΔG is positive, K eq > 1 and products are favored",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "When ΔG is positive, K eq > 1 and reactants are favored",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "When ΔG is zero, K eq = 1 and products are favored",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "When ΔG is negative, K eq > 1 and products are favored",
+    "analytics": {
+      "percent_correct": "88.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Gibbs free energy and the equilibrium constant , recall that the equilibrium constant K eq is defined as the ratio of the concentration of product over reactant that is used to determine the chemical behavior: In this case, we can say that when ΔG is negative , the reaction is spontaneous with a K eq > 1 and products being favored . Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+7+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "What is the change in enthalpy of a reaction if the change in the free energy is 10 kJ and the change in entropy is 100 J•K -1 mol -1 at 27°C?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-40,000 J•mol -1",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-20,000 J•mol -1",
+        "images": [],
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "7,300 J•mol -1",
+        "images": [],
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "12,700 J•mol -1",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "40,000 J•mol -1",
+        "images": [],
+        "percentage_selected": "(69.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "40,000 J•mol -1",
+    "analytics": {
+      "percent_correct": "69.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Gibbs free energy , we need to use the Gibbs free energy formula to calculate the ΔH, the change in enthalpy: ΔG = ΔH – TΔS Where ΔG = change in free energy, ΔH = change in enthalpy, T = temperature in Kelvin, ΔS = change in entropy. STEP 1 : First, we can rearrange our Gibbs free energy equation to solve for the change in enthalpy of the reaction. ΔG = ΔH – TΔS ΔH = ΔG + TΔS STEP 2 : Next, let’s convert our temperature in degrees Celsius to Kelvins. It is important to remember that the temperature (T) used in the Gibbs free energy is in Kelvins , not Celsius . T = 27°C + 273 = 300 K STEP 3 : Then, let’s convert the change in the free energy (ΔG) from kilojoules (kJ) to joules (J). ΔG = 10 kJ = 10,000 J STEP 4 : Finally, let’s then plug in our given values to the equation: ΔH = 10,000 + 300(100) ΔH = 10,000 + 30,000 ΔH = 40,000 J•mol -1 Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "Under which of the following conditions will this reaction be spontaneous? 2 NO ( g ) + O 2( g ) → 2 NO 2( g ) ΔH° = -150.0 kJ•mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "This reaction can be spontaneous at high temperatures only",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "This reaction can be spontaneous at low temperatures only",
+        "images": [],
+        "percentage_selected": "(81.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "This reaction can be spontaneous at room temperatures only",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "This reaction can be spontaneous at all temperatures",
+        "images": [],
+        "percentage_selected": "(9.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "This reaction cannot be spontaneous",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "This reaction can be spontaneous at low temperatures only",
+    "analytics": {
+      "percent_correct": "81.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the spontaneity of reactions , let’s review the Gibb’s free energy equation, and the conditions in which Gibb’s free energy is spontaneous or non-spontaneous: ΔG = ΔH – TΔS ΔG = change in free energy, ΔH = change in enthalpy, T = temperature in Kelvin, ΔS = change in entropy In this case, we can first determine the change in entropy of the reaction by looking at the number of gas moles in the reaction. The reactant side has a total of 3 gas moles while the product side has a total of 2 moles. Having fewer gas moles in the product compared to the reactant indicates a decrease in disorder, and therefore a decrease in the entropy of the system. Since we now know that ΔH and ΔS are both negative, the reaction is spontaneous at low temperatures . This is because a small temperature (T) value decreases the positive contribution of the -TΔS value which leads to an overall negative ΔG value, a spontaneous reaction. If we were to increase the temperature, the positive contribution of the -TΔS value would exceed the negative ΔH value, leading to a positive ΔG value, which is nonspontaneous. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy",
+    "question": {
+      "text": "At what temperature would a reaction move from being a non-spontaneous to a spontaneous reaction if the change in entropy is 500 J•K -1 and the change in enthalpy is 40 kJ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-80 K",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-8 K",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "8 K",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "80 K",
+        "images": [],
+        "percentage_selected": "(72.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "800 K",
+        "images": [],
+        "percentage_selected": "(14.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "80 K",
+    "analytics": {
+      "percent_correct": "72.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Gibbs free energy , we need to use the Gibbs free energy formula to calculate the ΔH, the change in enthalpy: Where ΔG = change in free energy, ΔH = change in enthalpy, T = temperature in Kelvin, ΔS = change in entropy. STEP 1 : First, we can rearrange our Gibbs free energy equation to solve for the temperature at which the reaction moves from a non-spontaneous to spontaneous reaction. STEP 2 : Then, let’s convert the change in enthalpy (ΔH) from kilojoules (kJ) to joules (J). STEP 3 : From here, we can plug in our given values into the equation. Recall that the reaction is non-spontaneous when ΔG > 0 and spontaneous when ΔG < 0. So, to calculate when the reaction moves from being a non-spontaneous reaction to a spontaneous reaction, we would need to set ΔG = 0 as this is when the crossover from non-spontaneous to spontaneous occurs. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+10+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+10+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Spontaneity+of+Chemical+reactions%3A+Gibbs+Free+Energy/Question+10+Solution+5.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100be6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100bdf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001007268d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010076d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007ae7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100761a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100babc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100baef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b8ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100baf7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b7cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100bcf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100bcfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100bdecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Gibbs Free Energy"
+  }
+]

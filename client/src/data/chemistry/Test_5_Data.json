@@ -1,0 +1,1798 @@
+[
+  {
+    "test_number": 5,
+    "question_number": 1,
+    "question": {
+      "text": "Which of the following is true regarding pi bonds and sigma bonds?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Pi bonds are stronger than sigma bonds",
+        "images": [],
+        "percentage_selected": "(13%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Sigma bonds are formed by overlapping lateral orbitals",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Pi bonds allow for rotation",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "A triple bond contains one sigma and two pi bonds",
+        "images": [],
+        "percentage_selected": "(81.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Pi bonds are formed by end-to-end overlapping orbitals",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "A triple bond contains one sigma and two pi bonds",
+    "analytics": {
+      "percent_correct": "81.1%",
+      "time_spent": "0 min, 5 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Sigma bonds are covalent bonds made by the end-to-end overlap of atomic orbitals, while pi bonds are covalent bonds made by the side-to-side (lateral) overlap of p-orbitals. Although some atoms only participate in single covalent bonding, other atoms are capable of participating in multiple bonds by the addition of one or more pi bonds. In this way, a double bond consists of one sigma bond and one pi bond. A triple bond consists of one sigma bond and two pi bonds, as shown in the table below. CC BY 4.0 Canadian DAT Pro Tip: The number of sigma and pi bonds in different types of bonds is summarized in the table below:",
+      "poe_text": "Option A. Pi bonds are stronger than sigma bonds – This option is incorrect because pi bonds are weaker than sigma bonds as end-to-end overlap in sigma bonds is stronger than lateral overlap in pi bonds. Option B. Sigma bonds are formed from lateral orbital overlap – This option is incorrect as sigma bonds are formed from end-to-end overlap. Option C. Pi bonds allow rotation – This option is incorrect because molecules joined by a pi bond cannot rotate about that bond without breaking the pi bond. Option E. Pi bonds are formed from end-to-end orbital overlap – This option is incorrect because pi bonds are formed from lateral orbital overlap.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+1+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 2,
+    "question": {
+      "text": "Aqueous NH 3 was titrated with HBr until the endpoint. The resulting solution underwent testing using four pH indicators, and the table below provides information about the indicators and the colors observed during the test. Based on the information provided, which of the following statements is correct?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+2+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "pH at endpoint is 4.8",
+        "images": [],
+        "percentage_selected": "(57.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "pH at endpoint is 6.1",
+        "images": [],
+        "percentage_selected": "(27.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "pH at endpoint is 12.0",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "pH at endpoint is 2.4",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "pH at endpoint is 7.0",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "pH at endpoint is 4.8",
+    "analytics": {
+      "percent_correct": "57.3%",
+      "time_spent": "0 min, 7 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "An effective indicator for a titration experiment is one that has a pH range that includes the endpoint. Recall, the end point is where the indicator just changes color, which is basically the equivalence point where the moles of titrant equals the moles of solution of unknown concentration. Often, the indicator’s color at endpoint is a mixture between the color at a pH lower than the range and the color at a pH higher than the range. Returning back to the question, based on the information provided, we can be determine that the pH at endpoint is between 4.2 and 6.3 because the solution changes Methyl red to an orange color. This eliminates all of the option choices except for option A and option B. Option B is incorrect because if the pH at endpoint is 6.1, then the Bromocresol Purple would likely be an intermediate color between yellow and purple. Therefore, the answer is Option A. the pH at endpoint is 4.8 .",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 3,
+    "question": {
+      "text": "Which of the following best describe bond energy?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Energy required for a reaction to proceed",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Energy required to break a bond",
+        "images": [],
+        "percentage_selected": "(84.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Energy required to create a bond",
+        "images": [],
+        "percentage_selected": "(9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Energy required to maintain a bond",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Energy required to break a bond",
+    "analytics": {
+      "percent_correct": "84.6%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Bond energy , also known as bond enthalpy, is the measure of bond strength in a chemical bond and has the units of kJ • mol -1 or kcal • mol -1 . It can also be defined as the energy required to break apart a chemical bond. Remember, bond breaking is an endothermic process as energy is required, while forming bonds is an exothermic process as energy is released. A bond can contain either a sigma bond OR both sigma and pi bonds. The overall energy of a bond is the sum of the energies of all sigma and pi bonding contributors. When comparing single, double, and triple covalent bonds involving the same two types of atoms, the overall bond energy tends to increase with each additional pi bond. The concept of bond energy/enthalpy tends to show up on the Canadian DAT once in a while so it's important to know it.",
+      "poe_text": "Option A. Energy required for a reaction to proceed – This is incorrect because this is known as activation energy. Option C. Energy required to create a bond – This is incorrect because this is not possible as creating bonds releases energy. Option D. Energy required to maintain a bond - This is incorrect because this option is simply incorrect and does not correspond to the definition of bond energy.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 4,
+    "question": {
+      "text": "If it takes 95 g of diesel at a density of 0.832 g•mL -1 to fill a container, at constant temperature, what mass of benzene (0.740 g•mL -1 ) is needed to fill the same container?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(84.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "84.6%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+4+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 5,
+    "question": {
+      "text": "How many protons, neutrons, and electrons does the following anion have?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+5+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4 protons, 3 neutrons and 4 electrons",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "6 protons, 6 neutrons and 7 electrons",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "6 protons, 3 neutrons and 4 electrons",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3 protons, 3 neutrons and 4 electrons",
+        "images": [],
+        "percentage_selected": "(89.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "3 protons, 4 neutrons and 4 electrons",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3 protons, 3 neutrons and 4 electrons",
+    "analytics": {
+      "percent_correct": "89.1%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 6,
+    "question": {
+      "text": "All of the following are true regarding Galvanic cells EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Oxidation occurs at the anode",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Galvanic cells produce chemical energy",
+        "images": [],
+        "percentage_selected": "(65.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Electrons flow from the anode to cathode",
+        "images": [],
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The salt bridge keeps solutions electrically neutral",
+        "images": [],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Metal electrodes gain electrons at the cathode",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Galvanic cells produce chemical energy",
+    "analytics": {
+      "percent_correct": "65.7%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Electrochemistry"
+    },
+    "category": "Electrochemistry",
+    "explanation": {
+      "concept_text": "Galvanic cells are electrochemical cells which release electrical energy from spontaneous oxidation-reduction reactions. Although chemical energy is used, a Galvanic cells purpose is to produce electrical energy. Therefore, Option B. Functions to produces chemical energy is incorrect . In general, a galvanic cell generally consists of two different metals immersed in an electrolyte. Sometimes it can include individual half-cells with different metals and their ions in solution connected by a salt bridge. Oxidation occurs at the anode in both the galvanic and electrolytic cells, which means that electrons flow from the anode to the cathode. The image below compares the features of a Galvanic cell and an Electrolytic cell . In both cells,  electrons flow from the anode to cathode, where reduction always takes place at the cathode. The key difference between these cells is that in a Galvanic cell, the anode is negative while the cathode is positive; the reverse is true in an electrolytic cell, as shown in the picture below. CC BY 4.0",
+      "poe_text": "Option A. Oxidation occurs at the anode – This option incorrect because this is true in both Galvanic and Electrolytic cells. Option C. Electrons flow from anode to cathode – This option incorrect because this is true in both Galvanic and Electrolytic cells. Option D. Salt bridge keeps solutions electrically neutral – This option incorrect because this is true in both Galvanic and Electrolytic cells. Option E. Cathodes are where metal electrodes gain electrons – This option incorrect because his is true in Galvanic cells. The cathode is where metals are reduced and hence gain electrons.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+6+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 7,
+    "question": {
+      "text": "According to the following reaction, how many grams of Fe 2 O 3 are formed when 383 g of iron is combusted? 4 Fe  +   3 O 2 →  2 Fe 2 O 3",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(95.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "95.2%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+7+Solution+4.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 8,
+    "question": {
+      "text": "Given 5 moles of oxygen gas are present in a 5 L container at 25 o C, what is the pressure of the oxygen gas? (R = 8.314 L•kPa•K -1 •mol -1 )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2,300 kPa",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2,400 kPa",
+        "images": [],
+        "percentage_selected": "(40.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2,500 kPa",
+        "images": [],
+        "percentage_selected": "(49.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "2,600 kPa",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2,700 kPa",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2,500 kPa",
+    "analytics": {
+      "percent_correct": "49.5%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Gases"
+    },
+    "category": "Gases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+8+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 9,
+    "question": {
+      "text": "Each of the following are ionic compounds EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NH 4 NO 2",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "KH",
+        "images": [],
+        "percentage_selected": "(22.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "LiNO 3",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CH 3 NH 2",
+        "images": [],
+        "percentage_selected": "(67.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "NaOH",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 3 NH 2",
+    "analytics": {
+      "percent_correct": "67.1%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Ionic compounds are chemical compounds composed of ions. Ionic compounds are formed by ions with opposite charges binding together through electrostatic force termed ionic bonding. In contrast, covalent compounds contain electrons that are shared between bonded atoms and are simultaneously attracted to more than one nucleus. The illustration below shows the difference between ionic and covalent bonding. Returning back to the question, Option D. CH 3 NH 2 is the only option that is NOT an ionic compound. Instead, it is formed from the covalent bonding of the three hydrogen molecules to carbon and nitrogen, with carbon as the central atom. The other two hydrogens bond covalently to the nitrogen. CC BY 4.0",
+      "poe_text": "Option A. NH 4 NO 2 - This option choice is incorrect because it is formed from the ionic combination of ammonium and nitrate ion, as shown below. NH 4 + NO 2 - → NH 4 NO 2 Option B. KH - This option choice is incorrect because it is formed from the ionic combination of potassium ion and hydride. K loses or transfers its valence electron to hydrogen. Therefore, K gains a positive charge (K + ) and H becomes negatively charged (H - ), as shown below. K + + H - → KH Option C. LiNO3 - This option choice is incorrect because this is formed from the ionic combination of lithium ion and trioxonitrate (V) ion, as shown below. Li + NO 3 - → LiNO 3 Option E. NaOH -This option choice is incorrect because it is formed from the ionic combination of sodium ion and hydroxide ion, as shown below. Na + OH - → NaOH",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+9+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 10,
+    "question": {
+      "text": "Which of the statements is true for a reaction with a negative ΔH?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The reaction will be endothermic",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The reaction will be non-spontaneous",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The reaction will be spontaneous",
+        "images": [],
+        "percentage_selected": "(10.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The reaction will be exothermic",
+        "images": [],
+        "percentage_selected": "(81.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "The reaction will not occur",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The reaction will be exothermic",
+    "analytics": {
+      "percent_correct": "81.3%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "A reaction energy diagram shows the relative energies E of the chemical species involved as a reaction proceeds. During a reaction, reactant bonds are broken and new bonds form to make the products. The energy difference between the reactants and the products is the heat of the reaction ΔH, or enthalpy . If the reactants are higher in energy than the products, ΔH is negative , which indicates that the reaction is exothermic as energy is released. Conversely, if the reactants are lower in energy than the products, ΔH is positive , which indicates that the reaction is endothermic and absorbs additional energy from the surroundings. The reaction diagram below is for an exothermic reaction. It can be seen that the reactants are higher in energy than the products and hence ΔH is negative. CC BY 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+10+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 11,
+    "question": {
+      "text": "How many electrons are involved in the following acidic redox reaction? MnO 4 - + H 2 SO 3 + H + → Mn 2+ + HSO 4 - + H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(15.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(12.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(20.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(10.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "10",
+        "images": [],
+        "percentage_selected": "(40.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "10",
+    "analytics": {
+      "percent_correct": "40.4%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Electrochemistry"
+    },
+    "category": "Electrochemistry",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 12,
+    "question": {
+      "text": "How much energy is needed to bring 250 mL of water (4.18 J•g -1 • o C) at 25 o C to a boil?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+12+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+12+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+12+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+12+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(68.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+12+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(17.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "68.8%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+12+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 13,
+    "question": {
+      "text": "Which of the following is the correct electron configuration for the bromide ion, Br - ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "[Ar] 4 s 2 4 d 5",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "[Ar] 4 s 2 4 d 10 4 p 6",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "[Ar] 4 s 2 3 d 10 4 p 6",
+        "images": [],
+        "percentage_selected": "(87.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "[Ar] 4 s 2 3 d 10 4 p 6 5 s 1",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "[Ar] 4 s 2 3 d 10 3 p 6",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "[Ar] 4 s 2 3 d 10 4 p 6",
+    "analytics": {
+      "percent_correct": "87.7%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Electron configuration is the distribution of electrons of an atom or molecule in atomic or molecular orbitals. The first three orbitals are the s , p and d orbitals which hold 2, 6, and 10 electrons respectively. When trying to solve this question, the most important rule to keep in mind is that electrons will fill the lower orbitals first before going to the next higher orbital. Hence, the electrons will fill the orbitals in the following order: 1 s , 2 s , 2 p , 3 s , 3 p , 4 s , 3 d , 4 p , 5 s , 4 d , 5 p , 6 s , 4 f , 5 d , and 6 p Now, when we try writing the electronic configuration for Bromine, we get: [Ar] 4 s 2 3 d 10 4 p 5 However, bromine has a negative charge in the given question. Since the 4p sub-level needs one more electron to fill it up completely, the electron will be placed there. This is because when adding electrons to form negative ions, the electrons are added to the lowest unfilled n value, as shown in the image below. 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 2 3 d 10 4 p 5 + e - → 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 2 3 d 10 4 p 6 Therefore, the answer is Option C. [Ar] 4s 2 3d 10 4p 6 . The image shown below provides a visualization of the four blocks on the periodic table: CC BY 4.0",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+13+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 14,
+    "question": {
+      "text": "What is the empirical formula of a compound composed of 50.05% sulfur and 49.95% oxygen?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "SO 2",
+        "images": [],
+        "percentage_selected": "(80.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "SO 3",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "SO 4",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "S 2 O 4",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "S 2 O 5",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "SO 2",
+    "analytics": {
+      "percent_correct": "80.4%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "Based on the question, we know that the composition of sulfur (S) is 50.05% and the composition of oxygen (O) is 49.95%. While we do not know the compound, we do know the composition of the elements that make up the compound. Therefore to calculate the empirical formula, we use the following steps: STEP 1: Divide the composition of the given composition of elements by their molar mass. The molar mass of sulfur is 32 and oxygen is 16. Hence: STEP 2: Next, divide the values above by the value that is the smallest among them (1.6). This division yields: Therefore, this compound has the empirical formula of SO 2 .",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+14+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+14+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 15,
+    "question": {
+      "text": "Given methanol has a density of 0.792 g•cm -3 at 273 K, what volume of container is needed to hold 0.060 kg of methanol at 273 K?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "65 cm 3",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "70 cm 3",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "75 cm 3",
+        "images": [],
+        "percentage_selected": "(75.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "80 cm 3",
+        "images": [],
+        "percentage_selected": "(6.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "85 cm 3",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "75 cm 3",
+    "analytics": {
+      "percent_correct": "75.7%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "STEP 1: To determine the answer to this question, we must use the formula: Where P = density, M = mass, and V = volume STEP 2: Next, we rearrange the equation and solve for V: V = (60g) / (0.792 g • cm -3 ) = 75.75 cm 3 V = ~75 cm 3 Canadian DAT Pro-tip: The answer can also be obtained by rounding 0.792 g • cm -3 to 0.8 g • cm -3 in order to make the calculations easier. Remember, dividing by 0.8 is the same as multiplying by 1.25. Therefore, 60 × 1.25 = ~ 75 cm 3 .",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+15+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 16,
+    "question": {
+      "text": "Which of the following represents the highest value of pressure?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "100 kPa",
+        "images": [],
+        "percentage_selected": "(29.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1 atm",
+        "images": [],
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "780 mmHg",
+        "images": [],
+        "percentage_selected": "(42.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "25 torr",
+        "images": [],
+        "percentage_selected": "(12%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "96,000 Pa",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "780 mmHg",
+    "analytics": {
+      "percent_correct": "42.6%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 17,
+    "question": {
+      "text": "Nitrogen gas, hydrogen gas, and ammonia gas were put into a chamber and allowed to react until equilibrium was reached. The reaction is outlined by the following equation: N 2( g ) + 3 H 2( g ) → 2 NH 3( g ) If the pressure at equilibrium was more than the initial pressure, what can be said about the reaction quotient and the direction of reaction as the reaction progressed toward equilibrium?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Q c > K c ; forward reaction",
+        "images": [],
+        "percentage_selected": "(18.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Q c > K c ; backward reaction",
+        "images": [],
+        "percentage_selected": "(35%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Q c < K c ; forward reaction",
+        "images": [],
+        "percentage_selected": "(32.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Q c < K c ; backward reaction",
+        "images": [],
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Q c = K c ; backward reaction",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Q c > K c ; backward reaction",
+    "analytics": {
+      "percent_correct": "35%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Chemical Equilibrium"
+    },
+    "category": "Chemical Equilibrium",
+    "explanation": {
+      "concept_text": "The reaction quotient is proportional to the number of products and reactants as shown below: Where, Q c = ratio of products to reactants at an instantaneous point in time, K c = ratio of products to reactants when equilibrium is reached Here is some key information you should know for the Canadian DAT: Going back to the question, the question says the pressure at equilibrium is higher than the initial pressure. The only way for pressure to increase is if the reaction went backwards (making more moles of gas). If the question told us that we increased the pressure by external means (ex making volume smaller) at equilibrium then the reaction will shift to the right. These type of questions involve the Chatelier's Principle or Equilibrium Law. However, the question in this problem is NOT about the Chatelier's principle. It told us that they put X amount of the three gas into a chamber, then when they reacted the pressure of the container increased. If the pressure increased in the container at a constant volume, then the only way the pressure increased is if there are more moles of gas present than there were initially. By looking at the formula, the only way to make more moles gas is if the reaction went backwards. This also means that they initially added more moles of NH 3 than moles of H 2 and N 2 combined which means Q > K (more products initially). Therefore, the correct answer is Option B. Q c > K c ; backward reaction .",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+17+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 18,
+    "question": {
+      "text": "Which of the following compounds is miscible in water?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "C 6 H 6",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CH 3 COCH 3",
+        "images": [],
+        "percentage_selected": "(88.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "CH 3 CH 2 CH 3",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CCl 4",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CH 3 COCH 3",
+    "analytics": {
+      "percent_correct": "88.4%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "Compounds are soluble in they form homogenous solutions when added together, as shown in the image below. Using the principle of “like-dissolves-like”, polar solutes are soluble in other polar solvents, while non-polar solutes are soluble in other non-polar solvents. In order for a compound to be soluble in water (a polar solvent), it must be able to form strong dipole-dipole interactions or hydrogen bond with water molecules. Acetone, CH 3 COCH 3 , is a polar compound and is a member of the ketone group. The ketone group contains oxygen that is able to form hydrogen bonds with water molecules. Therefore, the correct option is Option B (CH 3 COCH 3 ). CC BY 4.0",
+      "poe_text": "Option A. C 6 H 6 – This option is incorrect because benzene is a non-polar compound. Option C. CH 3 CH 2 CH 3 – This option is incorrect because propane is a non-polar compound. Option D. CCl 4 – This option is incorrect because although the C-Cl bond is polar, the tetrahedral geometry of CCl 4 with four C-Cl bonds cancel out their dipoles, making CCl 4 a non-polar compound. Option E. CH 4 – This option is incorrect because methane is a non-polar compound.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+18+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 19,
+    "question": {
+      "text": "Based on the data shown below, what is the rate law for the following chemical reaction? A + B → C Experiment [A] [B] Initial rate (M • s -1 ) 1 0.1 M 0.1 M 2.0 × 10 -5 2 0.2 M 0.1 M 8.0 × 10 -5 3 0.1 M 0.2 M 4.0 × 10 -5",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Rate = k[A][B]",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Rate = k[A][B] 2",
+        "images": [],
+        "percentage_selected": "(9.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Rate = k[A] 2 [B]",
+        "images": [],
+        "percentage_selected": "(80.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Rate = k[A] 2 [B] 2",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Rate = k[B]",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Rate = k[A] 2 [B]",
+    "analytics": {
+      "percent_correct": "80.2%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Chemical Kinetics"
+    },
+    "category": "Chemical Kinetics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+19+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+19+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 20,
+    "question": {
+      "text": "Given the titration curve below, what quantity of 0.1 M HCl is required to reach the equivalence point in the titration with 0.1 M of NH 3 ?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+20+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "9 mmol",
+        "images": [],
+        "percentage_selected": "(12%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "10 mmol",
+        "images": [],
+        "percentage_selected": "(68.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "12 mmol",
+        "images": [],
+        "percentage_selected": "(14.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "16 mmol",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "18 mmol",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "10 mmol",
+    "analytics": {
+      "percent_correct": "68.3%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 21,
+    "question": {
+      "text": "How many moles of oxygen are in a 190 g solution of KNO 3 at a temperature of 28 o C ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4.8",
+        "images": [],
+        "percentage_selected": "(9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "5.1",
+        "images": [],
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "5.4",
+        "images": [],
+        "percentage_selected": "(16.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "5.7",
+        "images": [],
+        "percentage_selected": "(58.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "6.0",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "5.7",
+    "analytics": {
+      "percent_correct": "58.7%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Stoichiometry & General Concepts"
+    },
+    "category": "Stoichiometry & General Concepts",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+21+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 22,
+    "question": {
+      "text": "Which of the following compounds contains nitrogen with an oxidation number of -2?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N 2 H 5 +",
+        "images": [],
+        "percentage_selected": "(78.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "NH 3",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N 2 O",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "NO",
+        "images": [],
+        "percentage_selected": "(9.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "HNO 2",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N 2 H 5 +",
+    "analytics": {
+      "percent_correct": "78.2%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Electrochemistry"
+    },
+    "category": "Electrochemistry",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "Option B. NH 3 - This is incorrect because when we do the calculation, we get (N × 1) + (1 × 3) = 0, which leads to N = -3. Option C. N 2 O - This is incorrect because when we do the calculation, we get (N × 2) + (-2 × 1) = 0, which leads to N = +1. Option D. NO - This is incorrect because when we do the calculation, we get (N × 1) + (-2 × 1) = 0, which leads to N = +2. Option E. HNO 2 - This is incorrect because when we do the calculation, we get (N × 1) + (+1 × 1) + (-2 × 2) = 0, which leads to N = +3.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 23,
+    "question": {
+      "text": "In a fission reaction, uranium-235 is bombarded with a neutron and decays into two main radioactive fragments and 3 neutrons as depicted in the following reaction: 235 U + 1 n → 141 Ba + X + 3 1 n What is the element and the atomic mass of radioactive fragment X?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "92 U",
+        "images": [],
+        "percentage_selected": "(37%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "92 Kr",
+        "images": [],
+        "percentage_selected": "(49%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "95 Kr",
+        "images": [],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "92 Ba",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "92 Kr",
+    "analytics": {
+      "percent_correct": "49%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Nuclear Reactions"
+    },
+    "category": "Nuclear Reactions",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "Option A. 92 U – This option is incorrect because 92 U is erroneously derived from using 92 for the atomic number instead of atomic mass in calculations. Option C. 95 Kr – This option is incorrect because 95 Kr is erroneously derived from accounting the 3 neutrons plus 92 Kr in the calculations. Option D. 92 Ba – This option is incorrect because 92 Ba is erroneously derived from assuming the two fragments are of the same element.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 24,
+    "question": {
+      "text": "Each of the following electron configurations obeys Hund’s Rule EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(25.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(65%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "65%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "There are three principles that regulate electron configuration that you need to know for the Canadian DAT: Aufbau Principle – states that electrons occupy lower energy orbitals before occupying higher energy orbitals. The order of orbitals increasing in energy is shown by the red arrows going from top to bottom, right to left: Pauli Exclusion Principle – states that electrons occupying the same orbital must have opposite spins. In other words, no two electrons of the same atom can have the same set of quantum numbers, as the spin numbers must be different. Hund’s Rule – states that electrons singly occupy separate orbitals of the same energy level before pairing up to occupy the same orbital. The following shows an example: Going back to the question, the correct answer is Option E. This electron configuration violates Hund’s rule because the paired electrons in the first 2 p orbital should be unpaired so that all three electrons occupy the three 2 p orbitals separately.",
+      "poe_text": "Option A. This option choice is incorrect because it obeys all three principles mentioned above. Option B. This option choice is incorrect because it obeys all three principles mentioned above. Option C. This option choice is incorrect ; it violates the Pauli Exclusion Principle because the two electrons in the 2s orbital have the same spin (represented by two arrows pointing up). Option D. This option choice is incorrect ; it violates the Aufbau Principle because the 2s orbital is lower in energy than the 2p orbital, but there are electrons occupying the 2p orbital before completely occupying the 2s orbital.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+24+Solution+7.png"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 25,
+    "question": {
+      "text": "Using an incorrectly calibrated pipette will result in",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "gross error.",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "random error.",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "systematic error.",
+        "images": [],
+        "percentage_selected": "(89.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "personal error.",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "method error.",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "systematic error.",
+    "analytics": {
+      "percent_correct": "89.6%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Laboratory & Techniques"
+    },
+    "category": "Laboratory & Techniques",
+    "explanation": {
+      "concept_text": "A systematic error is an error that is not determined by chance, but it is introduced by an inaccuracy inherent in the system, leading to consistent inaccuracies in data collection. The error is systematic because all readings taken with the equipment will deviate from their normal value, and therefore skew the data towards one direction (above or below the true value and by the same extent each time). These errors often result from incorrectly calibrated instruments such as pH meters, thermometers and balances. For example, a thermometer reading 3°C higher than the true temperature will result in data that is consistently 3°C higher. Based on this, Option C. Systematic Error is the correct answer.",
+      "poe_text": "Option A. Gross error – This option is incorrect because these errors are caused by experimenter carelessness or equipment failure. These \"outliers\" are so far above or below the true value that they are usually discarded when assessing data. Option B. Random error – This option is incorrect because these errors are caused by uncontrollable fluctuations in variables that affect experimental results. Option D. Personal error – This option is incorrect because these errors occur due to a faulty procedure adopted by the person making measurements. Option E. Method error – This option is incorrect because this refers to an error in the method of the experiment.",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 26,
+    "question": {
+      "text": "Which of the following represents the solubility product constant for lead chloride? PbCl 2( s ) ⇌ Pb 2+ ( aq ) + 2 Cl - ( aq )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "[Pb 2+ ][Cl - ]",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "[Pb 2+ ][Cl - ] 2",
+        "images": [],
+        "percentage_selected": "(92.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "2[Pb 2+ ][Cl - ]",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2[Pb 2+ ][Cl - ] 2",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "[Pb 2+ ] 2 [Cl - ]",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "[Pb 2+ ][Cl - ] 2",
+    "analytics": {
+      "percent_correct": "92.7%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Liquids and Solids"
+    },
+    "category": "Liquids and Solids",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 27,
+    "question": {
+      "text": "Given the enthalpy data for reactions shown below, what is the enthalpy change for the following reaction? N 2( g ) + 2 O 2( g ) → 2 NO 2( g ) 2 NH 3( g ) + 4 H 2 O ( l ) → 2 NO 2( g ) + 7 H 2( g ) ΔH = -140 kJ 2 NH 3( g ) → N 2( g ) + 3 H 2( g ) ΔH = 110 kJ H 2 O ( l ) → H 2( g ) + ½ O 2( g ) ΔH = -50 kJ",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-100 kJ",
+        "images": [],
+        "percentage_selected": "(8.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-50 kJ",
+        "images": [],
+        "percentage_selected": "(66.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "50 kJ",
+        "images": [],
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "100 kJ",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "250 kJ",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-50 kJ",
+    "analytics": {
+      "percent_correct": "66.5%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Thermochemistry & Thermodynamics"
+    },
+    "category": "Thermochemistry & Thermodynamics",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 28,
+    "question": {
+      "text": "For the reaction below, which of the following sets of coefficients would balance the reaction? __Ca 3 (PO 4 ) 2 + __SiO 2 + __C → __CaSiO 3 + __P 4 + __CO 2",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1, 3, 6, 6, 1, 6",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1, 3, 5, 6, 1, 5",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1, 3, 5, 3, 1, 5",
+        "images": [],
+        "percentage_selected": "(15%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2, 6, 5, 6, 1, 5",
+        "images": [],
+        "percentage_selected": "(64.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "2, 6, 10, 6, 1, 10",
+        "images": [],
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2, 6, 5, 6, 1, 5",
+    "analytics": {
+      "percent_correct": "64.8%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "(Not found)",
+      "poe_text": "(Not found)",
+      "images": []
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 29,
+    "question": {
+      "text": "What does the azimuthal quantum number represent?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Orbital size and energy level",
+        "images": [],
+        "percentage_selected": "(14.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Quantity of electrons in an orbital",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Electron spin direction",
+        "images": [],
+        "percentage_selected": "(15.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Shape of the orbital",
+        "images": [],
+        "percentage_selected": "(52.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Orbital orientation",
+        "images": [],
+        "percentage_selected": "(10.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Shape of the orbital",
+    "analytics": {
+      "percent_correct": "52.9%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Atomic & Molecular Structure"
+    },
+    "category": "Atomic & Molecular Structure",
+    "explanation": {
+      "concept_text": "Quantum numbers are used to describe an electron in an atom completely. There four quantum numbers: In particular, the azimuthal quantum number (ℓ) can be defined as a quantum number for an atomic orbital that determines its orbital angular momentum and describes the shape of the orbital, as shown in the image below: CC BY 4.0",
+      "poe_text": "Option A. Orbital size and energy level – This option is incorrect because this describes the Principal quantum number. Option B. Quantity of electrons in an orbital – This option is incorrect because this does not describe the azimuthal quantum number; in fact, this option does not describe any of the quantum numbers. Option C. Electron spin direction – This option is incorrect because this describes the Spin quantum number. Option E. Orbital orientation – This option is incorrect because this describes the Magnetic quantum number.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+29+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Test+5/Question+29+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "test_number": 5,
+    "question_number": 30,
+    "question": {
+      "text": "A Lewis acid is",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "a proton producer.",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "a proton donor.",
+        "images": [],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "a proton acceptor.",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "an electron acceptor.",
+        "images": [],
+        "percentage_selected": "(75.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "an electron donor.",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "an electron acceptor.",
+    "analytics": {
+      "percent_correct": "75.4%",
+      "time_spent": "0 min, 0 secs",
+      "category": "Acids and Bases"
+    },
+    "category": "Acids and Bases",
+    "explanation": {
+      "concept_text": "The Lewis theory of acids and bases states that a Lewis acid is an electron pair acceptor, while a Lewis base is an electron pair donor. Lewis acids are therefore electrophilic, while Lewis bases are nucleophilic. It is important to know this definition for the Canadian DAT. Canadian DAT Pro Tip : This definition is different than the Bronsted-Lowry definition of an acid and base, which states that a Bronsted-Lowry acid is a chemical species that donates a proton, while a Bronsted-Lowry base is a chemical species that accepts a proton.",
+      "poe_text": "Option A. a proton producer. - This is incorrect because it describes an acid according to Arrhenius acid-base theory. Even though Arrhenius acids could also be Lewis acids, this option is not the best answer choice. Option B. a proton donor. - This is incorrect because it describes an acid according to Arrhenius acid-base theory. Therefore, it is not the best choice. Option C. a proton acceptor. - This is incorrect because it describes a base according to Bronsted acid-base theory. Option E. an electron donor. - This is incorrect because it describes a Lewis base, not an acid.",
+      "images": []
+    }
+  }
+]

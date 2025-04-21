@@ -1,0 +1,601 @@
+[
+  {
+    "question_number": 1,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "Reaction rates are usually studied by",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "measuring the concentration of the reactants or products over time.",
+        "images": [],
+        "percentage_selected": "(91.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "calculating the free energy change for the reaction.",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "measuring the heat evolved under different conditions.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "measuring the amount of each reactant in the reaction.",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "calculating the entropy change for the reaction.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "measuring the concentration of the reactants or products over time.",
+    "analytics": {
+      "percent_correct": "91.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving reaction rates , we need to know that reaction rates are defined as the measure of the change in concentration of the reactants or products over time. The units of reaction rates are usually expressed as molarity per unit time, such as M•s -1 or mol•L -1 •sec -1 . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "Each of the following statements is an example of a rate expression EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "miles•hour -1",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "kilometers•hour -1",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "mol•L-1•sec -1",
+        "images": [],
+        "percentage_selected": "(12.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "meters•sec",
+        "images": [],
+        "percentage_selected": "(66.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "grams•sec -1",
+        "images": [],
+        "percentage_selected": "(16.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "meters•sec",
+    "analytics": {
+      "percent_correct": "66.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving rate expression , let’s first review the definition of the rate expression. A rate expression is defined as an expression that describes the change in reactant or product concentration over time. The units of reaction rates are usually expressed as molarity per unit time, such as M•s -1 or mol•L -1 •sec -1 . In this case, all the following choices describe the change in the value over a period of time except for meters • sec, which does not measure the change in value over the change in time. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "Under which of the following conditions would the reaction most likely occur at the fastest rate?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "High activation energy at low temperatures",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "High activation energy at high temperatures",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Low activation energy at low temperatures",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Low activation energy at high temperatures",
+        "images": [],
+        "percentage_selected": "(92.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Low activation energy at room temperature",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Low activation energy at high temperatures",
+    "analytics": {
+      "percent_correct": "92.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving reaction rates , let’s review how activation energy and temperature affect the rate of reactions: Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "Which of the following statements is true regarding kinetics and thermodynamics?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Kinetics focuses on the speed and direction of the reaction",
+        "images": [],
+        "percentage_selected": "(15.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Kinetics focuses on the speed but not the direction of the reaction",
+        "images": [],
+        "percentage_selected": "(75.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Thermodynamics focuses on the speed and direction of the reaction",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Thermodynamics focuses on the speed but not the direction of the reaction",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Kinetics and thermodynamics are terms used interchangeably",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Kinetics focuses on the speed but not the direction of the reaction",
+    "analytics": {
+      "percent_correct": "75.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving kinetics and thermodynamic s, let’s go over both of the definitions and compare them to each other: In this case, kinetics focuses on the speed bu Bt not the direction of the reaction , while thermodynamics focuses on the direction not the speed of the reaction. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "Each of the following changes increases the rate of reaction EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increasing the temperature",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Adding a catalyst",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Decreasing the particle size",
+        "images": [],
+        "percentage_selected": "(17.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Lowering the activation energy",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Decreasing reactant concentration",
+        "images": [],
+        "percentage_selected": "(78.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Decreasing reactant concentration",
+    "analytics": {
+      "percent_correct": "78.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind we need to find the change that does not increase the rate of the reaction. Option A. Increasing the temperature Incorrect. Increasing the temperature increases the velocity of the molecules, which allows for more collisions and increased energy for each collision to succeed. Thus, the rate of reaction increases with increasing temperature. Option B. Adding a catalyst Incorrect. A catalyst is a substance that lowers the activation energy of a reaction without being consumed. By lowering the energy required for the reaction to proceed, the catalyst increases the rate of a reaction, because more particles have sufficient energy to react. Option C. Decreasing the particle size Incorrect. Decreasing the particle size increases the surface area of the molecules available for collisions, which increases the rate of the reaction. For example, imagine a big chunk of salt versus smaller pieces of salt in a container of water. The solution with smaller pieces of salt would dissolve faster or have a faster reaction rate. Option D . Lowering the activation energy Incorrect. Lowering the activation energy increases the rate of the reaction because the energy required for the reaction to proceed is lower. Option E. Decreasing reactant concentration Correct. Decreasing the reactant concentration often decreases the rate of the reaction because there are fewer molecules available for collisions for the reaction to occur. But remember that for zero-order reactions, the rate is independent of concentration, meaning the decrease in the reactant concentration would not affect the rate according to the rate laws. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "A scientist oxidizes magnesium according to the reaction below. The scientist initially has 2 M of magnesium and reacts it with excess oxygen for 2 seconds. If the scientist finds out that the remaining amount of magnesium after the reaction is 1.2 M, what is the average rate of the reaction? 2 Mg ( s ) + O 2( g ) → 2 MgO ( s )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.1 M•s -1",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.2 M•s -1",
+        "images": [],
+        "percentage_selected": "(44%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "0.4 M•s -1",
+        "images": [],
+        "percentage_selected": "(39.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "0.8 M•s -1",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1.6 M•s -1",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.2 M•s -1",
+    "analytics": {
+      "percent_correct": "44%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculating the rate of the reaction , let’s review the formula for rate expressions. STEP 1 : Here, it is important to account for the coefficient of 2 in front of the magnesium, which means that the concentration of the magnesium decreases at twice the rate. Thus, we will make sure to divide the change in concentration by its coefficient, 2. STEP 2 : Next, we will go ahead and plug in the given initial (2 M) and the final concentration (1.2 M) of magnesium, the reactant, to the equation above. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "Which of the following is a correct rate expression in this following reaction? A + 2B → 3C",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+7+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+7+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+7+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(75.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+7+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(10.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+7+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "75.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculating the rate of the reaction , let’s review the formula for rate expressions. In this case, the rate expressions for this reaction would be as following: The concentration of B decreases at twice the rate as A decreases, and the concentration of C increases at three times the rate as A decreases. The coefficients are divided to make sure the rates are equal among the three substances. Of the given answer choices, only Option C is correct. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "For the reaction below, how much faster is Fe ( s ) being produced compared to the rate at which C ( s ) is being consumed? 2 Fe 2 O 3( s ) + 3 C ( s ) → 4 Fe ( s ) + 3 CO 2( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1/2",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3/4",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4/3",
+        "images": [],
+        "percentage_selected": "(81.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4/3",
+    "analytics": {
+      "percent_correct": "81.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculating the rate of the reaction , let’s review the formula for rate expressions. First, looking at the reaction, we can see that for every 3 moles of C ( s ) consumed, 4 moles of 4 Fe ( s ) are produced. Thus, we could obtain 4/3 as the ratio of Fe ( s ) being produced to C ( s ) being consumed. However, we can also take a more systematic approach to this problem: STEP 1 : Let’s visualize this through the rate expression, accounting for the relationship that for every 3 moles of C ( s ) consumed, 4 moles of Fe ( s ) are being formed: STEP 2 : For this question, we will remove the negative sign for the C ( s ) because we are interested in the absolute values of the rates, not the direction of the rates. STEP 3 : Finally, we will simplify the rate expression to compare the ratios: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+8+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+8+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+8+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "For the reaction below, if O 2( g ) is consumed at a rate of 1.00 mol•L -1 •s -1 , at what rate in mol•L -1 •s -1 is CO 2( g ) being formed? C 3 H 8( g ) + 5 O 2( g ) → 3 CO 2( g ) + 4 H 2 O ( l )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.07",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.20",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0.60",
+        "images": [],
+        "percentage_selected": "(78.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "1.67",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "3.00",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.60",
+    "analytics": {
+      "percent_correct": "78.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculating the rate of the reaction , let’s review the formula for rate expressions. STEP 1: First, let’s write out the rate expression, accounting for the relationship that for every 5 moles of O 2(g) consumed, 3 moles of CO 2(g) is being formed. STEP 2: Next, let’s plug in the value for the change in the concentration of O 2(g) with a negative sign as it is being consumed, or decreases in concentration: We’ll plug this value into the rate expression: STEP 3: Finally, we can simplify the rate expression to obtain the rate of formation of CO 2(g) : We can then multiply both sides by 3: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+9+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+9+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+9+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+9+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+9+Solution+4.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics",
+    "question": {
+      "text": "For the reaction below, if 6 M of NH 3( g ) is produced every second, what amount of H 2( g ) is being consumed per second? N 2( g ) + 3 H 2( g ) → 2 NH 3( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 M",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "3 M",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4 M",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "9 M",
+        "images": [],
+        "percentage_selected": "(86.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "12 M",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "9 M",
+    "analytics": {
+      "percent_correct": "86.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving calculating the rate of the reaction , let’s review the formula for rate expressions. STEP 1 : First, let’s write out the rate expression, accounting for the relationship that for every 3 moles of H 2( g ) consumed, 2 moles of NH 3( g ) is being formed. STEP 2 : Next, let’s plug in the value for the change in the concentration of NH 3( g ) : STEP 3 : We will go ahead and cancel out the Δt term in the denominator on both sides and further simplify the rate expression to obtain the rate of consumption of H 2( g ) : The negative sign in the front indicates that the moles of H 2 are being consumed (concentration decreases). Thus, we can say that 9 M of H 2( g ) are being consumed for every 6 M of NH 3( g ) produced. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+10+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+10+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intro+to+Kinetics%3A+Rate+Kinetics/Question+6+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x000000010125ee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001012570ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000100d9e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000100de56a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000100e267b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100dd9a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000101223c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000101226f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000101203a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x00000001012277e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x00000001011f4b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001012479c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000101247b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000101256cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Kinetics"
+  }
+]

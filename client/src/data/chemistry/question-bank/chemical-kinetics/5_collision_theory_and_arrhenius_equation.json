@@ -1,0 +1,615 @@
+[
+  {
+    "question_number": 1,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "According to the collision theory, each of the following conditions is essential for a chemical reaction to occur EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Molecules must collide",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Molecules must overcome the activation energy barrier",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Molecules must have proper orientation",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Molecules must have sufficient energy",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Molecules must have similar size and energy",
+        "images": [],
+        "percentage_selected": "(95%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Molecules must have similar size and energy",
+    "analytics": {
+      "percent_correct": "95%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the collision theory , let’s begin by describing the three conditions for a chemical reaction to occur: In this case, each of the conditions is essential for a chemical reaction except for molecules must have similar size and energy . The rest of the options belong to the three conditions. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "What does the Arrhenius equation describe in chemical kinetics?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The relationship between reaction rate and temperature",
+        "images": [],
+        "percentage_selected": "(61.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "The relationship between concentration and reaction rate",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The effect of catalysts on reaction rates",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The relationship between temperature and activation energy",
+        "images": [],
+        "percentage_selected": "(22.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The energy changes observed in a chemical reaction",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The relationship between reaction rate and temperature",
+    "analytics": {
+      "percent_correct": "61.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the Arrhenius Equation , let’s review the Arrhenius Equation, which describes the temperature dependent nature of reaction rates: k = rate constant, A = frequency factor, e = mathematical constant (2.72) E a = activation energy, R = universal gas constant, T = temperature (K) In this case, the Arrhenius equation describes the relationship between reaction rates and temperature . Factors such as concentration, catalysts, and energy changes are not considered in the Arrhenius equation. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "According to the Arrhenius equation, a decrease in temperature is accompanied by a decrease in",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the frequency factor.",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "activation energy.",
+        "images": [],
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "reaction rate.",
+        "images": [],
+        "percentage_selected": "(86.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "the gas constant.",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "the mathematical constant.",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "reaction rate.",
+    "analytics": {
+      "percent_correct": "86.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the Arrhenius Equation , let’s review the Arrhenius Equation, which describes the temperature dependent nature of reaction rates: k = rate constant, A = frequency factor, e = mathematical constant (2.72) E a = activation energy, R = universal gas constant, T = temperature (K) In this case, according to the Arrhenius equation, a decrease in temperature is accompanied by a decrease in reaction rate . Let’s break it down into components: Decreasing the temperature (T) increases the exponent factor for e , which makes the denominator greater, thereby decreasing the value of k . In this case, a decrease in temperature is accompanied by a decrease in k , the reaction rate . The activation energy, gas constant, and mathematical constant are not affected by temperature. The frequency factor has a slight variation with temperature, but is often insignificant. Alternatively, we can just remember that decreasing temperature slows down reactions. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question++3+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question++3+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "Which of the following correctly represents the Arrhenius equation?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+4+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+4+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(98.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+4+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+4+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+4+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "98.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the Arrhenius Equation , let’s review the Arrhenius Equation, which describes the temperature dependent nature of reaction rates: k = rate constant, A = frequency factor, e = mathematical constant (2.72) E a = activation energy, R = universal gas constant, T = temperature (K) In this case, we can see that Option B is the correct Arrhenius equation. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "Based on the Arrhenius equation, increasing the temperature",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+5+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "increases E a .",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "decreases E a .",
+        "images": [],
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "increases k .",
+        "images": [],
+        "percentage_selected": "(81.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "decreases k .",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "increases A.",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "increases k .",
+    "analytics": {
+      "percent_correct": "81.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the Arrhenius Equation , let’s review the Arrhenius Equation, which describes the temperature dependent nature of reaction rates: k = rate constant, A = frequency factor, e = mathematical constant (2.72) E a = activation energy, R = universal gas constant, T = temperature (K) In this case, according to the Arrhenius equation, an increase in temperature is accompanied by an increase in k . Let’s break it down into its components: Increasing the temperature (T) decreases the exponent factor for e , which makes the denominator smaller, thereby increasing the value of k . In this case, an increase in temperature is accompanied by an increase in k . The activation energy, gas constant, and mathematical constant are not affected by temperature. The frequency factor has a slight variation with temperature, but is often insignificant. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+5+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question++3+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "Which of the following changes can increase the reaction rate?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Decreasing the temperature of colliding molecules",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Increasing the number of collisions with proper orientation",
+        "images": [],
+        "percentage_selected": "(93.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Decreasing the velocity of the colliding molecules",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Increasing the activation energy of the reaction",
+        "images": [],
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Spacing the molecules farther apart",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Increasing the number of collisions with proper orientation",
+    "analytics": {
+      "percent_correct": "93.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the collision theory , let’s begin by describing the three conditions for a chemical reaction to occur: To answer this question, we need to connect the concept of reaction rates with collision theory, which tells us that to increase the frequency of successful reactions, we can increase the number of collisions with proper orientation . Option A. Decreasing the temperature of colliding molecules Incorrect. Decreasing the temperature of colliding molecules lowers the amount of energy available to overcome the activation energy barrier, as well as the frequency in which molecules collide so this decreases the reaction rate. Option B. Increasing the number of collisions with proper orientation Correct. Increasing the number of collisions with proper orientation is essential to increasing the reaction rate. Option C. Decreasing the velocity of the colliding molecules Incorrect. Decreasing the velocity of the colliding molecules lowers the amount of energy available to overcome the activation energy barrier, as well as the frequency in which molecules collide so this decreases the rate. Option D. Increasing the activation energy of the reaction Incorrect. Increasing the activation energy of the reaction makes it harder for the molecules to have sufficient energy to overcome the activation energy barrier, which decreases the reaction rate. Option E. Spacing the molecules farther apart Incorrect. Spacing the molecules farther apart decreases the frequency in which molecules collide so this decreases the reaction rate. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "According to the collision theory, molecules must have sufficient energy to overcome the E a barrier, which can be best done by",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "removing the catalyst.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "increasing the temperature.",
+        "images": [],
+        "percentage_selected": "(94%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "increasing concentration.",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "placing the reaction in the dark.",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "increasing the pressure.",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "increasing the temperature.",
+    "analytics": {
+      "percent_correct": "94%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the collision theory , let’s begin by describing the three conditions for a chemical reaction to occur: To answer this question, we need to connect the concept of reaction rates with collision theory, which tells us that molecules must have sufficient energy to overcome the activation energy (E a ) barrier. This can be best done by either adding a catalyst or increasing the temperature . Option A. removing the catalyst. Incorrect. Catalysts help speed up reactions by lowering the activation energy of a reaction (often by providing an alternative pathway for the reaction). Therefore, removing the catalyst does not help molecules gain sufficient energy to overcome the E a barrier. Option B. increasing the temperature. Correct. Increasing the temperature provides molecules with more energy that is needed to overcome the E a barrier. Option C. increasing concentration. Incorrect. Increasing the concentration certainly can increase the number of collisions between molecules, but do not specifically help molecules gain sufficient energy to overcome the E a barrier, which is being asked for in this question. Option D. placing the reaction in the dark. Incorrect. Placing reactions in light sometimes provides energy to carry out reactions. Therefore, placing reactions in the dark does not help molecules gain sufficient energy to overcome the E a barrier. Option E. increasing the pressure. Incorrect. Increasing the pressure certainly can increase the number of collisions between molecules, but do not specifically help molecules gain sufficient energy to overcome the E a barrier, which is being asked for in this question. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "Each of the following methods increase the rate of the reaction by increasing the rate constant ( k ) EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Increasing temperature",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Decreasing activation energy",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Increasing the concentration",
+        "images": [],
+        "percentage_selected": "(76.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Adding a catalyst",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Increasing molecular velocity",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Increasing the concentration",
+    "analytics": {
+      "percent_correct": "76.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the Arrhenius Equation , let’s review the Arrhenius Equation, which describes the temperature dependent nature of reaction rates: k = rate constant, A = frequency factor, e = mathematical constant (2.72) E a = activation energy, R = universal gas constant, T = temperature (K) In this case, all of the options provide a path in which we can increase the rate constant ( k ) in the reaction except for increasing the concentration . Keep in mind we need to find the method that does not increase the rate of the reaction by increasing the rate constant (k). Option A. Increasing temperature Incorrect. According to the Arrhenius equation, increasing the temperature gives more molecules sufficient energy to overcome the activation energy (E a ) needed for a reaction to occur, thereby increasing the rate constant. Option B. Decreasing activation energy Incorrect. According to the Arrhenius equation, decreasing the activation energy gives more molecules sufficient energy to overcome the lowered activation energy (E a ) needed for a reaction to occur, thereby increasing the rate constant. Option C. Increasing the concentration Correct. There is no concentration factor in the Arrhenius reaction. This means that changing the concentration has no impact on the rate constant k . In fact, changes in concentration do not change the rate constant ( k ), only the rate law itself (ex: Rate = k [A]). Option D. Adding a catalyst Incorrect. Adding a catalyst decreases the activation energy, usually by providing reactions with an alternative pathway, which gives more molecules sufficient energy to overcome the lowered activation energy (E a ). Option E. Increasing molecular velocity Incorrect. Increasing molecular velocity is analogous to increasing the temperature of the molecules, which gives more molecules sufficient energy to overcome the activation energy (E a ). Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "Which of the following represents the rate constant ( k ) for a chemical reaction at 25 o C, with an activation energy of 20 kJ•mol- 1 and a frequency factor of 0.1 (R = 8.314 J•mol -1 )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+9+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(16.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+9+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+9+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+9+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+9+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(80.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "80.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the Arrhenius Equation , let’s review the Arrhenius Equation, which describes the temperature dependent nature of reaction rates: k = rate constant, A = frequency factor, e = mathematical constant (2.72) E a = activation energy, R = universal gas constant, T = temperature (K) STEP 1: First, we convert 25 o C to 25 o C + 273 = 298 Kelvins, which is the unit for temperature required for the Arrhenius equation. STEP 2: Next, we convert 20 kJ•mol -1 to 20,000 J•mol -1 , which is the unit for energy required for the Arrhenius equation (given that R = 8.314 J•mol -1 ). STEP 3: Next, we can plug in our temperature T = 298 K, activation energy E a = 20,000 J•mol -1 , frequency factor A = 0.1, and gas constant R = 8.314 J•mol -1 into our Arrhenius equation and solve for the value of k : Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+9+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation",
+    "question": {
+      "text": "What is the activation energy (E a ) for a chemical reaction at 120 o C with a rate constant ( k ) of 0.5 and a frequency factor of 0.2 (R = 8.314 J•mol -1 )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(16%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(62.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "62.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving the Arrhenius Equation , let’s review the Arrhenius Equation, which describes the temperature dependent nature of reaction rates: k = rate constant, A = frequency factor, e = mathematical constant (2.72) E a = activation energy, R = universal gas constant, T = temperature (K) STEP 1: First, we convert 120 o C to 120 o C + 273 = 393 Kelvins, which is the unit for temperature required for the Arrhenius equation. STEP 2: Next, we can plug in our temperature T = 393 K, rate constant k = 0.5, frequency factor A = 0.2, and gas constant R = 8.314 J•mol -1 into our Arrhenius equation: Next, we divide both sides by 0.2 (equivalent to multiplying both sides by 5): Next, we take the natural logarithm on both sides of the equation: This allows us to remove the mathematical constant ( e ) on the right-hand side: Next, we can multiply both sides by -1: Finally, we multiply both sides by (8.314)(393): Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Collision+Theory+and+Arrhenius+Equation/Question+10+Solution+4.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x000000010125ee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001012570ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000100d9e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000100de56a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000100e267b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100dd9a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000101223c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000101226f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000101203a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x00000001012277e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x00000001011f4b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001012479c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000101247b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000101256cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Chemical Kinetics",
+    "question_bank": "Collision Theory and Arrhenius Equation"
+  }
+]

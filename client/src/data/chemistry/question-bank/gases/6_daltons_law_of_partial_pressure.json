@@ -1,0 +1,609 @@
+[
+  {
+    "question_number": 1,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "According to Dalton’s Law of Partial Pressure, the total pressure of a mixture is equal to the",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "product of the partial pressures of individual gases.",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "difference of the partial pressures of individual gases.",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "average of the partial pressures of individual gases.",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "sum of the partial pressures of individual gases.",
+        "images": [],
+        "percentage_selected": "(93.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "partial pressure of the most abundant gas.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "sum of the partial pressures of individual gases.",
+    "analytics": {
+      "percent_correct": "93.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to know that according to Dalton’s Law of Partial Pressure, the total pressure of a mixture is equal to the sum of the partial pressures of individual gases . The formula is: Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "According to the Kinetic-Molecule Theory of Gases, Dalton’s Law of Partial Pressure is most applicable at",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "low temperature and high pressure.",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "low temperature and low pressure.",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "high temperature and low pressure.",
+        "images": [],
+        "percentage_selected": "(85.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "high temperature and high pressure.",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "any temperature or pressure.",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "high temperature and low pressure.",
+    "analytics": {
+      "percent_correct": "85.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to know that Dalton’s Law of Partial Pressure is most applicable for ideal gases. According to the Kinetic-Molecular Theory of Gases, gases are most ideal at: In this case, we can say that Dalton’s Law of Partial Pressure is most applicable at high temperature and low pressure . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "A mixture contains three gases: A, B, and C. If their partial pressures are 430, 250, and 740 torr, respectively, what is the total pressure of the mixture?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "680 torr",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "740 torr",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "990 torr",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1170 torr",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1420 torr",
+        "images": [],
+        "percentage_selected": "(98.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "1420 torr",
+    "analytics": {
+      "percent_correct": "98.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to use Dalton’s Law of Partial Pressure: STEP 1: First, we adapt this formula to our question: STEP 2: Next, we will plug in the values for the partial pressures of each gas: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+3+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+3+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+3+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "If the total atmospheric pressure of 760 mmHg is composed of nitrogen, which contributes 600 mmHg, and argon, which contributes 7 mmHg, what value represents the partial pressure of oxygen that remains?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "153 mmHg",
+        "images": [],
+        "percentage_selected": "(96.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "160 mmHg",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "753 mmHg",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1360 mmHg",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1367 mmHg",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "153 mmHg",
+    "analytics": {
+      "percent_correct": "96.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to use Dalton’s Law of Partial Pressure: STEP 1: First, we adapt this formula to our question: And re-arrange the variables: STEP 2: Next, we will plug in the values for the total pressure and the partial pressures of each gas: Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+4+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+4+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+4+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+3+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+4+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "A container of gas contains equal moles of helium (4 g·mol -1 ), nitrogen (14.01 g·mol -1 ), argon (39.95 g·mol -1 ), and xenon (131.29 g·mol -1 ). Which of the following gases would contribute the greatest amount of partial pressure?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Helium",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Nitrogen",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Argon",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Xenon",
+        "images": [],
+        "percentage_selected": "(28.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "All gases contribute equally",
+        "images": [],
+        "percentage_selected": "(62.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "All gases contribute equally",
+    "analytics": {
+      "percent_correct": "62.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to know that the partial pressure of a gas is given by its mole fraction of the total pressure. In this case, since all the gases in the container are found in equal moles which results in all gases having the same mole fraction, regardless of the molar mass, all gases will contribute equal partial pressure . Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "A mixture of gases with a total pressure of 2 atm consists of helium, oxygen, and neon. If the partial pressure of oxygen is 1 atm and neon is 0.2 atm, what is the mole fraction of helium in the mixture?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.4",
+        "images": [],
+        "percentage_selected": "(82.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "0.6",
+        "images": [],
+        "percentage_selected": "(8.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1.0",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1.7",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2.5",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.4",
+    "analytics": {
+      "percent_correct": "82.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to know the formula for Dalton’s Law of Partial Pressure and the partial pressure formula: STEP 1: First, we will adapt Dalton’s Law of Partial Pressure to our question: And re-arrange the variables: STEP 2: Next, we will plug in the values for the total pressure and the partial pressures of oxygen and neon to calculate the partial pressure of helium. STEP 3: Next, we will adapt the partial pressure formula to our question: And re-arrange the variables: STEP 4: Finally, we will calculate the mole fraction of helium by plugging in the total pressure and the partial pressure of helium calculated in Step 2. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+6+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+6+Solution+6.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+6+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+6+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+6+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+6+Solution+8.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+6+Solution+7.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+6+Solution+5.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "In a container with an overall pressure of 900 torr, gas A is present in quantity three times greater than gas B, while gas C is present in half the amount of gas B. What is the partial pressure of gas A?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "100 torr",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "200 torr",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "300 torr",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "600 torr",
+        "images": [],
+        "percentage_selected": "(80.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "1800 torr",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "600 torr",
+    "analytics": {
+      "percent_correct": "80.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to know the partial pressure formulas involving mole fractions. STEP 1: First, we will represent the quantity of gases A and C in terms of the quantity of gas B. STEP 2: Next, we will find the mole fraction of gas A using the mole fraction formula. STEP 3: Finally, we will find the partial pressure of A by multiplying the mole fraction calculated in Step 2 with the total pressure of 900 torr. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+7+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+7+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+7+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+7+Solution+6.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "In a container with gases X, Y, and Z at a total pressure of 5 atm, if gases X and Y contribute 40% and 35% respectively to the total pressure, what is the partial pressure of gas Z?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.75 atm",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1.25 atm",
+        "images": [],
+        "percentage_selected": "(91.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "1.75 atm",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2 atm",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "3.75 atm",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1.25 atm",
+    "analytics": {
+      "percent_correct": "91.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to know the partial pressure formula. STEP 1: First, we will find the mole fraction of gas Z by calculating for the remaining percentage in the container. STEP 2: Next, we will calculate for the partial pressure of gas Z with the partial pressure formula, using the mole fraction calculated in Step 1 and the total pressure of 5 atm. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+8+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+8+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+8+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+8+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "Given a vessel at 5 atm with 22 g of CO 2 , and 60 g of NO, what is the partial pressure of CO 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.2 atm",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "0.5 atm",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1 atm",
+        "images": [],
+        "percentage_selected": "(73.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "2.5 atm",
+        "images": [],
+        "percentage_selected": "(14.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "4 atm",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1 atm",
+    "analytics": {
+      "percent_correct": "73.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to know the partial pressure formulas involving mole fractions. STEP 1: First, we will calculate for the moles of 22 g of CO 2 using the mass-mole formula. We know that the molar mass of CO 2 is 44.01 g·mol -1 . STEP 2: Next, we will calculate for the moles of 60 g of NO using the mass-mole formula. We know that the molar mass of NO is 30.01 g·mol -1 . STEP 3: Next, we will calculate the mole fraction of CO 2 with the mole fraction formula, using the moles calculated in Step 1 and 2. STEP 4: Finally, we will calculate the partial pressure of CO 2 with the partial pressure formula, using the mole fraction calculated in Step 3 and the total pressure of 5 atm. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+9+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+9+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+9+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+9+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+9+Solution+5.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure",
+    "question": {
+      "text": "A container with a total pressure of 5 atm consists of nitrogen and carbon dioxide. If the mole fraction of nitrogen is 0.25, what is the partial pressure of carbon dioxide?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1.25 atm",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2.00 atm",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2.50 atm",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3.75 atm",
+        "images": [],
+        "percentage_selected": "(83.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "4.75 atm",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3.75 atm",
+    "analytics": {
+      "percent_correct": "83.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving partial pressure , we need to know the partial pressure formula. STEP 1: First, we will calculate for the mole fraction of carbon dioxide (CO 2 ) using the mole fraction of nitrogen (N 2 ). STEP 2: Next, we will calculate the partial pressure of carbon dioxide with the partial pressure formula, using the mole fraction calculated in Step 1 and the total pressure of 5 atm. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+10+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+10+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+5+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+10+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Other+Gas+Laws%3A+Dalton's+Law+of+Partial+Pressure/Question+10+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100eb6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100eaf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001009f68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000100a3d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000100a7e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100a31a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100e7bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100e7ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100e5ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100e7f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100e4cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100e9f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100e9fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100eaecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Gases",
+    "question_bank": "Dalton's Law of Partial Pressure"
+  }
+]

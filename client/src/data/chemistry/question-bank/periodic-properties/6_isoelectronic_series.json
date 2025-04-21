@@ -1,0 +1,572 @@
+[
+  {
+    "question_number": 1,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "Isoelectronic species have",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "the same number of neutrons but different number of protons.",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "the same number of protons but different number of electrons.",
+        "images": [],
+        "percentage_selected": "(16.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "the same number of protons but different number of neutrons.",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "the same number of electrons but different number of protons.",
+        "images": [],
+        "percentage_selected": "(72.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "the same number of neutrons but different number of electrons.",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "the same number of electrons but different number of protons.",
+    "analytics": {
+      "percent_correct": "72.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving isoelectronic series, let’s begin by defining an isoelectronic series as a group of atoms with the same number of electrons but different number of protons. Since all the atoms have the same number of electrons, but different number of protons, the atoms within an isoelectronic series will each have a different overall charge. Therefore, the answer is D . Note: the prefix iso- means “equal”, while “electronic” refers to the number of electrons. We can break down the term “isoelectronic” to mean “equal electrons”!",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "The three atoms F - , Ne, and Al 3+ have the same",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "number of protons.",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "atomic radius.",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "number of electrons.",
+        "images": [],
+        "percentage_selected": "(90.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "effective nuclear charge.",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "number of neutrons.",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "number of electrons.",
+    "analytics": {
+      "percent_correct": "90.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving isoelectronic series, let’s begin by defining an isoelectronic series as a group of atoms with the same number of electrons but different number of protons. Since all the atoms have the same number of electrons, but different number of protons, the atoms within an isoelectronic series will each have a different overall charge. Option A. number of protons. Incorrect. Elements within an isoelectronic series do not have the same number of protons. Looking at the atomic number, we see that F - , Ne and Al 3+ have 9, 10, and 13 protons, respectively. Option B. atomic radius. Incorrect. Elements within an isoelectronic series do not have the same atomic radius. Between these isoelectronic atoms, F - is the largest atom since anions have the largest atomic radius, followed by Ne, and finally, Al 3+ since cations have the smallest atomic radius. Option C. number of electrons. Correct. Elements within an isoelectric series have the same number of electrons. F - , Ne, and Al 3+ all have 10 electrons. Option D. effective nuclear charge. Incorrect. Elements within an isoelectric series do not have the same effective nuclear charge. F - , Ne, and Al 3+ have an effective nuclear charge of +7, +8, and +11, respectively. Option E. number of neutrons. Incorrect. Elements within an isoelectronic series do not have the same number of neutrons. Looking at the atomic number, we see F - , Ne and Al 3+ have 10, 10, and 14 neutrons, respectively. Therefore, the answer is C.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Isoelectronic+Series/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "Which of the following represents an isoelectronic pair?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Na + and K +",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "O 2- and Cl -",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "B 3+ and He",
+        "images": [],
+        "percentage_selected": "(84.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "S 2- and O 2-",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Ne and Ar",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "B 3+ and He",
+    "analytics": {
+      "percent_correct": "84.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving isoelectronic series, let’s begin by defining an isoelectronic series as a group of atoms with the same number of electrons but different number of protons. Since all the atoms have the same number of electrons, but different number of protons, the atoms within an isoelectronic series will each have a different overall charge. Option A. Na + and K + Incorrect. Na + has 10 electrons while K + has 18 electrons, so this not an isoelectronic pair. Option B. O 2- and Cl - Incorrect. O 2- has 10 electrons while Cl - has 18 electrons, so this not an isoelectronic pair. Option C. B 3+ and He Correct. B 3+ and He have 2 electrons, so they are isoelectronic. Option D. S 2- and O 2- Incorrect. S 2- has 18 electrons while O 2- has 10 electrons, so this not an isoelectronic pair. Option E . Ne and Ar Incorrect. Ne has 10 electrons while Ar has 18 electrons, so this not an isoelectronic pair. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Isoelectronic+Series/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "Which of the following is responsible for the observation that Mg 2+ has a smaller atomic radius than Mg?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Mg 2+ has a more stable electron configuration",
+        "images": [],
+        "percentage_selected": "(9.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Mg 2+ has more shielding electrons",
+        "images": [],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Mg 2+ has stronger nuclear to electron attraction",
+        "images": [],
+        "percentage_selected": "(74.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Mg 2+ has stronger protons",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Mg 2+ has a weaker pull on its valence electrons",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Mg 2+ has stronger nuclear to electron attraction",
+    "analytics": {
+      "percent_correct": "74.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic radius , let’s begin by discussing two atomic radii trends within an isoelectronic series: Cations, having lost one or more electrons, are always smaller in size compared to their neutral parent atom. When an atom loses one or more electrons, there is an increase in effective nuclear charge and a decrease in atomic radius. Consequently, Mg 2+ will have a smaller atomic radius than Mg, because Mg 2+ has a stronger nuclear to electron attraction . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "N 3- has a larger atomic radius than N because N 3- has",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "greater electron-electron repulsion.",
+        "images": [],
+        "percentage_selected": "(66.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "additional electron shells.",
+        "images": [],
+        "percentage_selected": "(16.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "greater protons-electron repulsion.",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "a larger proton-to-electron ratio.",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "gained additional neutrons.",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "greater electron-electron repulsion.",
+    "analytics": {
+      "percent_correct": "66.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic radius , let’s begin by discussing two atomic radii trends within an isoelectronic series: Anions, having gained one or more electrons, are always larger in size than the neutral parent atom. The addition of electrons to the outermost shell increases the repulsive forces between the electrons, which pushes the surrounding electron cloud further from the nucleus. Consequently, N 3- has a larger atomic radius than N because N 3- experiences greater electron-electron repulsion. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "Which of the following has the smallest atomic radius?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "He",
+        "images": [],
+        "percentage_selected": "(18.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Li +",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "H -",
+        "images": [],
+        "percentage_selected": "(8.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "B 3+",
+        "images": [],
+        "percentage_selected": "(66.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Be 2+",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "B 3+",
+    "analytics": {
+      "percent_correct": "66.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic radius , let’s begin by discussing two atomic radii trends within an isoelectronic series: In this case, we need to first identify that we are working with an isoelectronic series since He, Li + , H - , B + , Be 2+ all have 2 electrons. Further, we are asked to find the element with the smallest atomic radius. Since we are looking for the element with the smallest radius, we must select the cation with the largest positive charge. B 3+ has only 2 electrons, but 5 protons, and as a result, it has the strongest nuclear to electron attraction and the smallest atomic radius. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Isoelectronic+Series/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "Which of the following is an isoelectronic series?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "S 2- , Cl - , Ar, Na + , Mg 2+",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "S 2- , Cl - , Ar, K + , Ca 2+",
+        "images": [],
+        "percentage_selected": "(86%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "H - , He, Li + , Be 2+ , Mg 2+",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "O 2- , F - , Ar, K + , Ca 2+",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Li, Be, B, C, N",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "S 2- , Cl - , Ar, K + , Ca 2+",
+    "analytics": {
+      "percent_correct": "86%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving isoelectronic series , let’s begin by defining an isoelectronic series as a group of atoms with the same number of electrons but different number of protons. Since all the atoms have a different number of protons, but the same number of electrons, the atoms within an isoelectronic series will each have a different overall charge. Option A. S 2- , Cl - , Ar, Na + , Mg 2+ Incorrect. S 2- , Cl - , Ar have 18 electrons, while Na + and Mg 2+ only have 10 electrons, so this is not an electronic series. Option B. S 2- , Cl - , Ar, K + , Ca 2+ Correct. S 2- , Cl - , Ar, K + , and Ca 2+ all have 18 electrons, so this is an electronic series. Option C. H - , He, Li + , Be 2+ , Mg 2+ Incorrect. H - , He, Li + , and Be 2+ have 2 electrons, while Mg 2+ has 10 electrons, so this is not an electronic series. Option D. O 2- , F - , Ar, K + , Ca 2+ Incorrect. O 2- and F - have 10 electrons while Ar, K + and Ca 2+ + have 18 electrons , so this is not an electronic series. Option E. Li , Be, B, C, N Incorrect. Li , Be, B, C, and N have 3, 4, 5, 6, and 7 electrons, respectively, so this is not an electronic series. Therefore, the answer is B . Note: Option E can be easily eliminated since all elements within an isoelectronic series must have a different overall charg e.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Isoelectronic+Series/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "Which of the following rankings correctly arranges the atoms in order of increasing atomic radius?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Na + < Mg 2+ < Ne < O 2- < F -",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Mg 2+ < O 2- < Ne < Na + < F -",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "O 2- < F - < Ne < Na + < Mg 2+",
+        "images": [],
+        "percentage_selected": "(13%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Mg 2+ < Na + < Ne < F - < O 2-",
+        "images": [],
+        "percentage_selected": "(73.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "F - < Na + < Ne < O 2- < Mg 2+",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Mg 2+ < Na + < Ne < F - < O 2-",
+    "analytics": {
+      "percent_correct": "73.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic radius , let’s begin by discussing two atomic radii trends within an isoelectronic series: In this case, we are asked to arrange the given isoelectronic atoms in order of smallest to largest radius. STEP 1: In this case, we need to first identify that we are working with an isoelectronic series since Mg 2+ , Na + , Ne, F - , and O 2- all have 10 electrons. STEP 2: Then, we will order the cations . Since Mg 2+ has a larger positive charge than Na + , we know Mg 2+ will have the smallest radius: Mg 2+ < Na + STEP 3: Next, we will order the anions . Since O 2- has a larger negative charge than F - we know that O 2- will have the largest atomic radius: F- < O 2- STEP 4: Finally, we can place all the elements in order of increasing atomic radius. We will place the neutral atom between the anions and the cations, since Ne has a larger atomic radius than Na + , but a smaller atomic radius than F - : Mg 2+ < Na + < Ne < F - < O 2- Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Isoelectronic+Series/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "A researcher measures the atomic radii of Na + , F - , O 2- , N 3- , and Mg 2+ . Based on the recorded measurements below, which of the following elements is labeled Element 2? Measurements (in nm) Element 1: 0.10 Element 2: 0.13 Element 3: 0.17 Element 4: 0.07 Element 5: 0.14",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Na +",
+        "images": [],
+        "percentage_selected": "(8.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "F -",
+        "images": [],
+        "percentage_selected": "(76.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "O 2-",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N 3-",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Mg 2+",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "F -",
+    "analytics": {
+      "percent_correct": "76.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving atomic radius , let’s begin by discussing two atomic radii trends within an isoelectronic series: Measurements (in nm) Element 1: 0.10 Element 2: 0.13 Element 3: 0.17 Element 4: 0.07 Element 5: 0.14 STEP 1 : First, we will order the measurements in increasing order of atomic radius: Element 4 (0.07) < Element 1 (0.10) < Element 2 (0.13) < Element 5 (0.14) < Element 3 (0.17) STEP 2: Next, we will order the atoms in increasing order, keeping in mind that anions have a larger atomic radius than cations: Mg 2+ < Na + < F - < O 2- < N 3- STEP 3: Finally, by comparing the rankings made in STEP 1 and STEP 2, we can easily identify the corresponding atomic radius for each element: Measurements (in nm) Na + : 0.10 F - : 0.13 N 3- : 0.17 Mg 2+ : 0.07 O 2- : 0.14 In this case, we can see that element 2 corresponds to F - . Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Isoelectronic+Series/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series",
+    "question": {
+      "text": "Each of the following is an isoelectronic series EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "O 2- , F - , Ne, K + , Ca 2+",
+        "images": [],
+        "percentage_selected": "(86.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Ca 2+ , K + , Ar, Cl - , S 2-",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "H - , He, Li + , Be 2+ , B 3+",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Se 2- , Br - , Kr, Rb + , Sr 2+",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Te 2- , I - , Xe, Cs + , Ba 2+",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "O 2- , F - , Ne, K + , Ca 2+",
+    "analytics": {
+      "percent_correct": "86.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving isoelectronic series, let’s begin by defining an isoelectronic series as a group of atoms with the same number of electrons but different number of protons. Since all the atoms have the same number of electrons, but different number of protons, the atoms within an isoelectronic series will each have a different overall charge. Keep in mind that we need to find the option that is not an isoelectronic series. Option A. O 2- , F-, Ne, K + , Ca 2+ Correct. O 2- , F-, and Ne each have 10 electrons while K + and Ca 2+ each have 18 electrons, so this is not an isoelectronic series. Option B. Ca 2+ , K + , Ar, Cl - , S 2- Incorrect. Ca 2+ , K + , Ar, Cl - , and S 2- each have 18 electrons, so this is an isoelectronic series. Option C. H - , He, Li + , Be 2+ , B 3+ Incorrect. H - , He, Li + , Be 2+ , and B 3+ each have 2 electrons, so this is an isoelectronic series. Option D. Se 2- , Br-, Kr, Rb + , Sr 2+ Incorrect. Se 2- , Br-, Kr, Rb + , and Sr 2+ each have 36 electrons, so this is an isoelectronic series. Option E. Te 2- , I-, Xe, Cs + , Ba 2+ Incorrect. Te 2- , I-, Xe, Cs + , and Ba 2+ each have 54 electrons, so this is an isoelectronic series. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Periodic+Trends+1%3A+Isoelectronic+Series/Question+2+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001011a2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x000000010119b0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000100ce28d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000100d296a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000100d6a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100d1da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000101167c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010116af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000101147a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010116b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000101138b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x000000010118b9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x000000010118bb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x000000010119acf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Periodic Properties",
+    "question_bank": "Isoelectronic Series"
+  }
+]

@@ -1,0 +1,621 @@
+[
+  {
+    "question_number": 1,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "Which element has the electron configuration 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 1 3 d 10 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Nickel (Ni)",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Copper (Cu)",
+        "images": [],
+        "percentage_selected": "(81.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Zinc (Zn)",
+        "images": [],
+        "percentage_selected": "(15.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Cobalt (Co)",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Gallium (Ga)",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Copper (Cu)",
+    "analytics": {
+      "percent_correct": "81.9%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving exceptions in electron configurations , we need to recall the main exceptions in electron configuration that leads to an increase in electron stability: In this case, we can see that Copper (Cu) does not have an electron configuration of 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 2 3 d 9 as predicted by the Aufbau Principle. Instead, one electron from the 4 s orbital is excited to rises to the 3 d orbital, which results in the configuration 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 1 3 d 10 . Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "How many unpaired electrons are found in a ground-state chromium atom?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(25.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(60.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "6",
+    "analytics": {
+      "percent_correct": "60.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving exceptions in electron configurations , we need to recall the main exceptions in electron configuration that leads to an increase in electron stability: In this case, we can see that a neutral Chromium (Cr) atom does not have an electron configuration of 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 2 3 d 4 as predicted by the Aufbau Principle. Instead, one electron from the 4 s orbital is excited and rises to the 3 d orbital, which results in the configuration 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 1 3 d 5 . As we can see, Cr has 1 unpaired electron in the 4 s subshell and 5 unpaired electrons in its 3 d subshell, giving a total of 1 + 5 = 6 unpaired electrons. Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+2+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "Which of the following is the correct orbital diagram for Ag (atomic number = 47)?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+3+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+3+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+3+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+3+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+3+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(85.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "85.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving exceptions in electron configurations , we need to recall the main exceptions in electron configuration that leads to an increase in electron stability: In this case, we know that Ag does not have an electron configuration of [Kr] 5 s 2 4 d 9 as predicted by the Aufbau Principle. Instead, one electron from the 5 s orbital is excited and rises to the 4 d orbital, which results in the electron configuration of [Kr] 5 s 1 4 d 10 , which looks like: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+3+Option+Choice+E.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "How many electrons are in the 4 d subshell in Mo (atomic number = 42)?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(90.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "5",
+    "analytics": {
+      "percent_correct": "90.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving exceptions in electron configurations , we need to recall the main exceptions in electron configuration that leads to an increase in electron stability: In this case, we know that Mo does not have an electron configuration of [Kr] 5 s 2 4 d 4 as predicted by the Aufbau Principle. Instead, one electron from the 5 s orbital is excited and rises to the 4 d orbital, which results in the electron configuration of [Kr] 5 s 1 4 d 5 , which looks like: As we can see, there are 5 electrons in the 4 d subshell in Mo. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+1+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+4+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "Which of the following is the ground state electron configuration for:",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+5+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 s 2 2 s 2 2 p 6",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1 s 2 2 s 2 2p 6 3 s 2 3 p 6",
+        "images": [],
+        "percentage_selected": "(89.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "1 s 2 2s 2 2 p 6 3 s 2 3 p 4 4 s 2",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 2",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 3 d 10",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1 s 2 2 s 2 2p 6 3 s 2 3 p 6",
+    "analytics": {
+      "percent_correct": "89.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electron configurations for ions , we begin by writing the electron configuration of Ca, and then removing 2 electrons from the highest energy orbital to find the configuration of Ca 2+ . STEP 1: First, we determine that Calcium (Ca) has an electron configuration of: 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 2 STEP 2: Next, we remove two electrons to form Ca 2+ , making sure to remove electrons from the highest energy level, which is the 4 s orbital that contains two electrons: 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+5+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "Which of the following is the ground state electron configuration for phosphorus ion (P 3- )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1 s 2 2 s 2 2 p 6 3 s 2",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "1 s 2 2 s 2 2 p 6 3 s 2 3 p 3",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1 s 2 2 s 2 2 p 6 3 s 2 3 p 5",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "1 s 2 2 s 2 2 p 6 3 s 2 3 p 6",
+        "images": [],
+        "percentage_selected": "(91.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 4 s 1",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "1 s 2 2 s 2 2 p 6 3 s 2 3 p 6",
+    "analytics": {
+      "percent_correct": "91.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electron configurations for ions , we begin by writing the electron configuration of P, and then adding 3 electrons to the highest energy orbital to find the configuration of P 3- . STEP 1: First, we determine that Phosphorus (P) has an electron configuration of: 1 s 2 2 s 2 2 p 6 3 s 2 3 p 3 STEP 2: Next, we add 3 electrons to form P 3- , making sure to add electrons in the highest available energy level, which is the 3 p orbital: 1 s 2 2 s 2 2 p 6 3 s 2 3 p 6 Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+6+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "Which of the following is the correct orbital diagram for Zn 2+ ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+7+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(66.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+7+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(13.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+7+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+7+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(11.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+7+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "66.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electron configuration exceptions and ions , we need to remove two valence electrons from Zn to determine the orbital diagram for Zn 2+ . Let’s first review which orbital we need to focus on when adding or removing electrons: STEP 1: First, we know that Zn has an electron configuration of [Ar] 4 s 2 3 d 10 , which has the following orbital diagram: STEP 2: Next, we remove 2 electrons to find the orbital diagram of Zn 2+ , making sure to remove electrons from the highest available energy level. It is important to know that the filled 4 s subshell is higher in energy than the 3 d subshell because 4 s electrons are farther and more loosely held by the nucleus. So, since it is more energetically favorable to remove the electrons from the higher-energy 4 s orbital, 2 electrons will be removed from the 4 s orbital: Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+7+Option+Choice+A.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+7+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "Which of the following is the correct orbital diagram for Cu + ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+8+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+8+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+8+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+8+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+8+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(77.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "77.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electron configuration exceptions and ions , we need to remove one valence electron from Cu to determine the orbital diagram for Cu + : Let’s first review which orbital we need to focus on when adding or removing electrons: STEP 1: First, we know that Cu has an electron configuration of [Ar] 4 s 1 3 d 10 , which has the following orbital diagram: STEP 2: Next, we remove 1 electron to find the orbital diagram of Cu + , making sure to remove the electron from the highest available energy level. It is important to know that the filled 4 s subshell is higher in energy than the 3 d subshell because 4 s electrons are farther and more loosely held by the nucleus. So, since it is more energetically favorable to remove the electrons from the higher-energy 4 s orbital, one electron will be removed from the 4 s orbital: Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+8+Option+Choice+E.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+8+Option+Choice+C.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "What is the electron configuration of Mo + ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "[Kr] 5 s 2 4 d 3",
+        "images": [],
+        "percentage_selected": "(11.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "[Kr] 4 d 5",
+        "images": [],
+        "percentage_selected": "(70.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "[Kr] 5 s 1 4 d 4",
+        "images": [],
+        "percentage_selected": "(10.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "[Kr] 5 s 2 4 d 4",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "[Kr] 4 d 4",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "[Kr] 4 d 5",
+    "analytics": {
+      "percent_correct": "70.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electron configuration exceptions and ions , we need to remove one valence electron from Mo to determine the orbital diagram for Mo + : Let’s first review which orbital we need to focus on when adding or removing electrons: STEP 1: First, we know that Mo does not have an electron configuration of [Kr] 5 s 2 4 d 4 as predicted by the Aufbau Principle. Instead, one of the electrons from the 5 s orbital is excited, and rises to the 4 d orbital: [Kr] 5 s 1 4 d 5 STEP 2: Next, we need to remove an electron from Mo, making sure to remove from the highest energy level. It is important to know that the filled 5 s subshell is higher in energy than the 4 d subshell because 5 s electrons are farther and more loosely held by the nucleus. So, since it is more energetically favorable to remove the electrons from the higher-energy 5 s orbital, one electron will be removed from the 5 s orbital: [Kr] 4 d 5 Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions",
+    "question": {
+      "text": "How many unpaired electrons are found in the ground state of a Cr 2+ ion?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(19.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(68.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "5",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "6",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4",
+    "analytics": {
+      "percent_correct": "68.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving electron configuration exceptions and ions , we need to remove one valence electron from Cr to determine the orbital diagram for Cr 2+ : Let’s first review which orbital we need to focus on when adding or removing electrons: STEP 1: First, we know that Cr has an electron configuration of [Ar] 4 s 1 3 d 5 , which has the following orbital diagram: STEP 2: Next, we remove the first electron to find the orbital diagram of Cr + , making sure to remove the electron from the highest available energy level. It is important to know that the 4 s subshell is higher in energy than the 3 d subshell because 4 s electrons are farther and more loosely held by the nucleus. So, since it is more energetically favorable to remove the electrons from the higher-energy 4 s orbital, one electron will be removed from the 4 s orbital: STEP 3: Finally, we remove the second electron to find the orbital diagram of Cr 2+ , making sure to remove the electron from the highest available energy level: In this case, there are 4 unpaired electrons found in the ground state of a Cr 2+ atom: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+10+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+10+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+10+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Electron+Configuration%3A+Electron+Configuration+Exceptions+and+Ions/Question+10+Solution+3.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x000000010502ee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001050270ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104b6e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104bb56a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104bf67b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104ba9a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104ff3c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104ff6f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104fd3a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104ff77e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104fc4b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001050179c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000105017b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000105026cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Electron Configuration Exceptions and Ions"
+  }
+]

@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "Each of the following statements correctly describes metallic compounds in the solid state EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "They are brittle",
+        "images": [],
+        "percentage_selected": "(93.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "They are ductile",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "They are malleable",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "They can be hammered into sheets",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "They are good conductors of electricity",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "They are brittle",
+    "analytics": {
+      "percent_correct": "93.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving metallic compounds , we will first go over their properties: In this case, we can see that metallic compounds in the solid state are not brittle (Option A). Brittle objects tend to shatter easily and are usually characteristic of ionic compounds, not metallic compounds. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "Ionic compounds are great conductors of electricity dissolved in an aqueous solution. Which statement best explains this phenomenon?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "An extensive sea of electrons is released in solution",
+        "images": [],
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Water is a conducting polar covalent compound",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Ionic compounds dissociate into component ions",
+        "images": [],
+        "percentage_selected": "(72.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "The ionic bonds form a conductive chain in solution",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Crystalline lattices are formed with water molecules",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ionic compounds dissociate into component ions",
+    "analytics": {
+      "percent_correct": "72.6%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionic compounds , we can recall that when ionic compounds are dissolved in aqueous solutions, they dissociate into their component cations and anions. These ions make their aqueous solutions great conductors of electricity because they help relay electric currents due to their mobility in the aqueous solution. In contrast, when an ionic compound is in its solid state, it is a poor conductor because the ions are fixed in place and cannot move to relay electric currents. In this case, we can say that ionic compounds are great conductors of electricity in aqueous solutions because ionic compounds dissociate into component ions . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "Which of the following statements best distinguishes between ionic and covalent compounds?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ionic compounds are formed between nonmetals, covalent compounds are formed between metals and nonmetals",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Ionic compounds share electrons, covalent compounds transfer electrons",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Ionic compounds are insulators, covalent compounds have high conductivity in solution",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Ionic compounds are usually soluble in water, covalent compounds usually are not",
+        "images": [],
+        "percentage_selected": "(86.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Ionic compounds have a molecular structure, covalent compounds have a lattice structure",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ionic compounds are usually soluble in water, covalent compounds usually are not",
+    "analytics": {
+      "percent_correct": "86.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. Ionic compounds are formed between nonmetals, covalent compounds are formed between metals and nonmetals Incorrect. Ionic compounds are formed between metals and nonmetals , covalent compounds are formed between nonmetals . Option B. Ionic compounds share electrons, covalent compounds transfer electrons Incorrect. Ionic compounds transfer electrons, covalent compounds share electrons. Option C. Ionic compounds are insulators, covalent compounds have high conductivity in solution Incorrect. Ionic compounds are conductors , covalent compounds are insulators (low conductivity) in solution. Option D. Ionic compounds are usually soluble in water, covalent compounds usually are not Correct. Ionic compounds readily dissolve in water, dissociating into their component cations and anions. Covalent compounds are bonded covalently, which means they do not readily dissolve and dissociate in solution. Option E. Ionic compounds have a molecular structure, covalent compounds have a lattice structure Incorrect. Ionic compounds have lattice structure , covalent compounds have molecular structure . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "When compared to metallic compounds, ionic compounds are more",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "ductile.",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "malleable.",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "lustrous.",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "brittle.",
+        "images": [],
+        "percentage_selected": "(83.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "flexible.",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "brittle.",
+    "analytics": {
+      "percent_correct": "83.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving metallic compounds vs. ionic compounds , we will first go over the properties of metallic compounds: and the properties of ionic compounds: In this case, we can say that when compared to metallic compounds, ionic compounds are more brittle (shatter easily). Ionic compounds are composed of cations and anions in a regular lattice. When ionic compounds are disrupted, the component ions shift, which brings cations in close proximity of other cations, resulting in electrostatic repulsion that breaks apart the compound. The same can be said about anions in the ionic compound, which explains why ionic compounds are brittle. The other properties (ductile, malleable, lustrous, flexible) are all characteristic of metallic compounds. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "Which of the following statements best explains why ionic compounds are brittle and metallic compounds are malleable?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "They differ in their size",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "They differ in their conductivity",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "They differ in their bond strength",
+        "images": [],
+        "percentage_selected": "(21.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "They differ in their bond length",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "They differ in their arrangement of ions",
+        "images": [],
+        "percentage_selected": "(69.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "They differ in their arrangement of ions",
+    "analytics": {
+      "percent_correct": "69.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionic compounds vs. metallic compounds , let’s first recall that ionic compounds are brittle (shatter easily) because they are composed of cations and anions in a regular lattice structure. When ionic compounds are disrupted, the component ions shift, which brings cations in close proximity of other cations, resulting in electrostatic repulsion that breaks apart the compound. The same can be said about anions in the ionic compound, which explains why ionic compounds are brittle. Meanwhile, metallic compounds are malleable (can be hammered into thin sheets) because their structure is composed of metallic cations in a “sea” of delocalized electrons. When metallic compounds are “hit”, the metallic structure is simply deformed. In this case, we can say that ionic compounds are brittle and metallic compounds are malleable because they differ in their arrangement of ions . Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "Both diamond and graphite are composed of pure carbon atoms. Which of the following best explains why diamond is a harder substance?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Diamond is connected by ionic bonds, graphite is connected by covalent bonds",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Diamond has an extensive network of covalent bonds, graphite has layered rings",
+        "images": [],
+        "percentage_selected": "(80.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Diamond is made of pure carbon atoms, graphite has carbon and impurities",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Diamond has smaller carbon atoms, graphite has larger, bulky carbon atoms",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Diamond is made of alternating carbon cations and anions, graphite is not",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Diamond has an extensive network of covalent bonds, graphite has layered rings",
+    "analytics": {
+      "percent_correct": "80.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving covalent compounds , let’s first discuss the different molecular structure of diamond and graphite: In this case, we can say that diamond is so much harder than graphite because diamond has an extensive network of covalent bonds , while graphite has layered rings . It is notable that both are covalent compounds composed of only carbon atoms. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "The structure of a metallic compound can be best described as",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "a crystal lattice.",
+        "images": [],
+        "percentage_selected": "(61%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "an amorphous substance.",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "a covalent network.",
+        "images": [],
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "an ionic lattice.",
+        "images": [],
+        "percentage_selected": "(10.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "a random assortment.",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "a crystal lattice.",
+    "analytics": {
+      "percent_correct": "61%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. a crystal lattice. Correct. Metallic compounds have highly ordered crystalline structures, characterized by regular and repeating arrangement of metal atoms in a crystal lattice. They have a long-range, predictable molecular structure. Option B. an amorphous substance. Incorrect. Amorphous materials lack the long-range, predictable molecular structures that metallic compounds have. Instead, they are disordered without a pattern. Option C. a covalent network. Incorrect. Covalent networks are more often associated with covalent compounds (such as diamonds), not metallic compounds. Option D. an ionic lattice. Incorrect. Ionic lattices are more often associated with ionic compounds , not metallic compounds. Option E. a random assortment. Incorrect. Metallic compounds are not randomly assorted, because they have a specific structure of cations arranged in a “sea” of delocalized electrons. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "What property of metallic compounds allow them to conduct heat exceptionally well?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The presence of polar covalent bonds",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The tendency to form complex crystal structures",
+        "images": [],
+        "percentage_selected": "(11.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The sea of negatively-charged electrons",
+        "images": [],
+        "percentage_selected": "(63.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "The strong ionic compounds between metal ions",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The molecular symmetry of the crystal lattice",
+        "images": [],
+        "percentage_selected": "(15.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The sea of negatively-charged electrons",
+    "analytics": {
+      "percent_correct": "63.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving metallic compounds , let’s first recall that metallic compounds are composed of cations in a “sea” of delocalized electrons. It is this “sea” of delocalized free-floating electrons that makes metallic compounds able to conduct heat exceptionally well, because the electrons are readily excitable and free to move around. In this case, we can say that metallic compounds can conduct heat exceptionally well because of the sea of negatively-charged electrons . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "Which of the following generally occurs when covalent compounds are placed in water?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Covalent compounds dissociate into component ions",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Covalent compounds react violently in water",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Covalent compounds always form hydrogen bonds with water",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Covalent compounds release a sea of electrons in water",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Covalent compounds usually do not dissociate in water",
+        "images": [],
+        "percentage_selected": "(91%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Covalent compounds usually do not dissociate in water",
+    "analytics": {
+      "percent_correct": "91%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. Covalent compounds dissociate into component ions Incorrect. This is a property of an ionic compound , which dissociates into component ions. Recall that in covalent compounds, electrons are shared , not transferred like in ionic compounds, so there are no component ions in covalent compounds. Option B. Covalent compounds react violently in water Incorrect. While some covalent compounds may react violently in water, it is not a generally observed phenomenon. Option C. Covalent compounds always form hydrogen bonds with water Incorrect. While some covalent compounds can form hydrogen bonds with water (ex: alcohols, esters, etc.), it is not a generally observed phenomenon. Option D. Covalent compounds release a sea of electrons in water. Incorrect. This is not a generally observed phenomenon with any type of molecule. Option E. Covalent compounds usually do not dissociate in water Correct. Covalent compounds are bonded through shared electrons between two non-metals, which means that they are not composed of the typical component ions we see in ionic compounds. Therefore, when placed in water, they usually do not dissociate. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds",
+    "question": {
+      "text": "Each of the following is a property of KNO 3 EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Crystalline solid",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "High melting point",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Insoluble in water",
+        "images": [],
+        "percentage_selected": "(81.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "Conducts electricity in aqueous solution",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "High boiling point",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Insoluble in water",
+    "analytics": {
+      "percent_correct": "81.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving ionic compounds , we first need to identify that KNO 3 is an ionic compound. KNO 3 is composed of its component cations (K + ) and anions (NO 3 – ) which are ionically bonded together when K donates an electron to NO 3 . Having established that KNO 3 is an ionic compound, let’s review the properties of ionic compounds: In this case, each of the answer choices are properties of ionic compounds except for “ionic compounds are insoluble in water ” (Option C). Just to double check, according to the solubility rules, nitrates (NO 3 – ) and potassium (K + ) are both soluble, so KNO 3 is soluble in water. Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000100b7ee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100b770ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001006be8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001007056a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007467b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001006f9a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100b43c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100b46f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b23a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100b477e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b14b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100b679c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100b67b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100b76cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Ionic vs. Covalent vs. Metallic Compounds"
+  }
+]

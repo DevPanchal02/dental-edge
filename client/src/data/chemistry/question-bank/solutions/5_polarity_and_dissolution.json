@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Polar bonds are formed when two or more atoms are bonded together with different",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "atomic radii.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "intermolecular forces.",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "effective nuclear charge.",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "electronegativity.",
+        "images": [],
+        "percentage_selected": "(95.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "ionization energy.",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "electronegativity.",
+    "analytics": {
+      "percent_correct": "95.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving polarity , let’s define polarity as the distribution of electrical charges over two atoms joined by a bond. Polar bonds occur when atoms of varying electronegativity (Option D) are bonded together. Recall that electronegativity is the measure of an atom’s ability to attract electrons toward itself when forming a chemical bond. A difference in electronegativity between two bonded atoms leads to a disparity in electrical charges, known as “partial charges”, which indicate the presence of a polar bond. The more electronegative atom will attract the electrons more tightly and gain a partial negative charge, while the other atom consequently gains a partial positive charge. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Which of the following molecules can be classified as polar?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 6 H 6",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N 2",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "SO 2",
+        "images": [],
+        "percentage_selected": "(83.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "CO 2",
+        "images": [],
+        "percentage_selected": "(9.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "SO 2",
+    "analytics": {
+      "percent_correct": "83.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving polarity , we must identify the polar molecule. Polarity is the distribution of electrical charges over two atoms joined by a bond. The disparity in electrical charge is known as “partial charges”, which indicate the presence of a polar bond. Such bonds occur when atoms of varying electronegativity are bonded together. Recall that electronegativity measures an atom’s ability to attract electrons in a chemical bond. The more electronegative atom will attract the electrons more tightly and gain a partial negative charge, while the other atom consequently gains a partial positive charge. Option A. CH 4 Incorrect. CH 4 is a symmetrical, tetrahedral molecule comprised of 4 non-polar carbon-hydrogen bonds. Because CH 4 has no polar bonds, this molecule is non-polar. Option B. C 6 H 6 Incorrect. C 6 H 6 is an aromatic hydrocarbon. Because C 6 H 6 is comprised of only non-polar carbon-hydrogen bonds, this molecule is non-polar. Option C. N 2 Incorrect. N 2 is a diatomic molecule comprised of two identical atoms, meaning there is equal sharing of electrons. Because N 2 is a diatomic molecule, this molecule is non-polar. Option D. SO 2 Correct. SO 2 is an asymmetrical, bent molecule comprised of 2 polar sulfur-oxygen bonds. Because SO 2 is asymmetrical, the dipoles do not cancel out and this molecule is polar . Option E. CO 2 Incorrect. CO 2 is a symmetrical, linear molecule comprised of 2 polar carbon-oxygen bonds. Because CO 2 is symmetrical, the dipoles cancel out and this molecule is non-polar. Therefore, the answer is D . Canadian DAT Pro Tip: If a molecule only has non-polar bonds, the molecule must be non-polar. If a molecule has at least 1 polar bond, examine the molecule for its symmetry to determine whether the molecule is polar or non-polar.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Each of the following is an example of a polar molecule EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "NH 3",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "SO 3",
+        "images": [],
+        "percentage_selected": "(47.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "H 2 S",
+        "images": [],
+        "percentage_selected": "(10.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "C 6 H 12 O 6",
+        "images": [],
+        "percentage_selected": "(35%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "SO 3",
+    "analytics": {
+      "percent_correct": "47.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving polarity , we must identify the polar molecule. Polarity is the distribution of electrical charges over two atoms joined by a bond. The disparity in electrical charge is known as “partial charges”, which indicate the presence of a polar bond. Such bonds occur when atoms of varying electronegativity are bonded together. Recall that electronegativity measures an atom’s ability to attract electrons in a chemical bond. The more electronegative atom will attract the electrons more tightly and gain a partial negative charge, while the other atom consequently gains a partial positive charge. Keep in mind that we need to find the option that is not polar. Option A. H 2 O Incorrect. H 2 O is an asymmetrical, bent molecule comprised of 2 polar hydrogen-oxygen bonds. Because H 2 O is asymmetrical, the dipoles do not cancel out and this molecule is polar. Option B. NH 3 Incorrect. NH 3 is an asymmetrical, trigonal pyramidal molecule comprised of 3 polar hydrogen-nitrogen bonds. Because NH 3 has a lone pair and the electric charges are unevenly distributed, this molecule is polar. Option C. SO 3 Correct. SO 3 is a symmetrical, trigonal planar molecule comprised of 3 polar sulfur-oxygen bonds. Because SO 3 is symmetrical, the dipoles cancel out and this molecule is non-polar . Option D. H 2 S Incorrect. H 2 S is an asymmetrical, bent molecule comprised of 2 polar hydrogen-sulfur bonds. Because H 2 S is asymmetrical, the dipoles do not cancel out and this molecule is polar. Option E. C 6 H 12 O 6 Incorrect. C 6 H 12 O 6 is an asymmetrical molecule consisting of multiple regions with dipoles. Because C 6 H 12 O 6 is asymmetrical and has multiple regions with dipoles, this molecule is polar. Therefore, the answer is C . Canadian DAT Pro Tip: Sugars (ex. glucose, fructose, sucrose) are polar molecules. Think about what happens when you add table sugar to water – it dissolves!",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Given that a certain solute is soluble in a solvent, which of the following properties must be similar between the two compounds?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Atomic radii",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Intermolecular forces",
+        "images": [],
+        "percentage_selected": "(79.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "Effective nuclear charge",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Electronegativity",
+        "images": [],
+        "percentage_selected": "(16.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Ionization energy",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Intermolecular forces",
+    "analytics": {
+      "percent_correct": "79.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving dissolution , let’s recall that a simple way to predict whether a compound will dissolve is “like dissolves like”. “Like dissolves like” means that the stronger (and more similar) the intermolecular forces between the solute and solvent, the greater the solubility of the solute in the solvent. In order words, a polar solvent will dissolve a polar solute, while a non-polar solvent will dissolve a non-polar solute. In this case, the two compounds must exhibit similar intermolecular forces . Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Which of the following statements best demonstrates the concept of “like dissolves like”?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "A polar solute will dissolve a polar solvent",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "A polar solvent will dissolve a non-polar solute",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "A polar solvent will dissolve both polar and non-polar solutes",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "A non-polar solvent will dissolve a polar solute",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "A non-polar solvent will dissolve a non-polar solute",
+        "images": [],
+        "percentage_selected": "(86.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "A non-polar solvent will dissolve a non-polar solute",
+    "analytics": {
+      "percent_correct": "86.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving dissolution , let’s recall that a simple way to predict whether a compound will dissolve is “like dissolves like”. “Like dissolves like” means that the stronger (and more similar) the intermolecular forces between the solute and solvent, the greater the solubility of the solute in the solvent. In order words, a polar solvent will dissolve a polar solute, while a non-polar solvent will dissolve a non-polar solute. In this case, the statement that best demonstrates the concept of “like dissolves like” is Option E, which says “ a non-polar solvent will dissolve a non-polar solute ”. Since both the solvent and solute are non-polar, and as a result exhibit similar intermolecular forces, we can predict that the solvent will dissolve the solute. Therefore, the answer is E . Note: Although both the solute and the solvent are polar in Option A, the statement is incorrect because it reads “A polar solute will dissolve a polar solvent”. Recall that a solvent dissolves a solute - not the other way around!",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Which of the following intermolecular forces operates only between polar molecules?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Van der Waal forces",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Dipole-dipole forces",
+        "images": [],
+        "percentage_selected": "(91.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "London dispersion forces",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Covalent bond forces",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Metallic bond forces",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Dipole-dipole forces",
+    "analytics": {
+      "percent_correct": "91.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , let’s recall the three main intermolecular interactions: London dispersion, dipole-dipole, and hydrogen bonding. In this case, looking at the three main intermolecular interactions, we see that dipole-dipole forces occur only between polar molecules . Non-polar molecules do not have a permanent dipole, and therefore, exhibit only dispersion forces. Therefore, the answer is B . Note: Option D (covalent bond forces) and Option E (metallic bond forces) are intramolecular forces and not intermolecular forces.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Which of the following best describes why alcohol compounds tend to be highly soluble in water?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Alcohol and water form hydrogen bonds.",
+        "images": [],
+        "percentage_selected": "(88.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Alcohol and water form London dispersion interactions.",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Alcohol and water form aggregates of micelles.",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Alcohol and water form dipole-dipole interactions.",
+        "images": [],
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Alcohol and water form ion-dipole interactions.",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Alcohol and water form hydrogen bonds.",
+    "analytics": {
+      "percent_correct": "88.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving dissolution , let’s recall that a simple way to predict whether a compound will dissolve is “like dissolves like”. “Like dissolves like” means that the stronger (and more similar) the intermolecular forces between the solute and solvent, the greater the solubility of the solute in the solvent. In order words, a polar solvent will dissolve a polar solute, while a non-polar solvent will dissolve a non-polar solute. In this case, we can recall that water’s molecular structure consists of two hydrogen atoms covalently bonded to an oxygen atom.  Because oxygen is more electronegative than hydrogen, oxygen attracts the electrons more tightly and gains a partial negative charge, while hydrogen gains a partial positive charge. As a result, water molecules form extensive hydrogen bonds – in fact, every water molecule can hydrogen bond with up to three other water molecules! Alcohol compounds have a polar hydroxyl (oxygen-hydrogen) group. As a result, alcohols tend to be highly soluble in water because the hydroxyl group in alcohol molecules forms hydrogen bonds with the water molecules. Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Each of the following is an example of a molecule that dissolves in water EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "C 2 H 5 OH",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 3 H 6 O",
+        "images": [],
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "NH 3",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "BH 3",
+        "images": [],
+        "percentage_selected": "(84.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "C 5 H 10 O 5",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "BH 3",
+    "analytics": {
+      "percent_correct": "84.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving dissolution , let’s recall that a simple way to predict whether a compound will dissolve is “like dissolves like”. “Like dissolves like” means that the stronger (and more similar) the intermolecular forces between the solute and solvent, the greater the solubility of the solute in the solvent. In order words, a polar solvent will dissolve a polar solute, while a non-polar solvent will dissolve a non-polar solute. In this case, we begin by recognizing that water is a polar solvent.  Since water is a polar solvent, and “like dissolves like”, we predict that polar solutes will exhibit high solubility in water, while non-polar solutes exhibit low solubility. Looking at the option choices, we see that BH3 is the only non-polar molecule and, as a result, will exhibit low solubility in a polar solvent, such as water. Keep in mind that we need to find the molecule that does not dissolve in water. Option A. C 2 H 5 OH Incorrect. C 2 H 5 OH (ethanol) is an organic compound containing polar a hydroxyl (oxygen-hydrogen) group. Because the molecule has a dipole, the molecule is polar and will dissolve in water. Note that ethanol and water form strong hydrogen bonds, which increases solubility. Option B. C 3 H 6 O Incorrect. C 3 H 6 O (acetone) is an organic compound containing a polar carbonyl (carbon-oxygen) group. Because the molecule has a dipole, the molecule is polar and will dissolve in water. Note that acetone and water form hydrogen bonds, which increases solubility. Option C. NH 3 Incorrect. NH 3 is an asymmetrical, trigonal pyramidal molecule comprised of 3 polar hydrogen-nitrogen bonds. Because NH 3 has a lone pair and the electric charges are unevenly distributed, this molecule is polar and will dissolve in water. Option D. BH 3 Correct. BH 3 is a symmetrical, trigonal planar molecule comprised of 3 non-polar hydrogen-boron bonds. Because the molecule is symmetrical and all the bonds are non-polar, the molecule is non-polar and does not dissolve in water. Option E. C 5 H 10 O 5 Incorrect. C 5 H 10 O 5 is an asymmetrical molecule consisting of multiple regions with dipoles. Because C 5 H 10 O 5 is asymmetrical and has multiple regions with dipoles, this molecule is polar and will dissolve in water. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "Which of the following compounds would be the best choice for dissolving benzene (C 6 H 6 )?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Toluene (C 6 H 5 CH 3 )",
+        "images": [],
+        "percentage_selected": "(88.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Water (H 2 O)",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Acetone (C 3 H 6 O)",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Methanol (CH 3 OH)",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Isopropanol (C 3 H 8 O)",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Toluene (C 6 H 5 CH 3 )",
+    "analytics": {
+      "percent_correct": "88.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving dissolution , let’s recall that a simple way to predict whether a compound will dissolve is “like dissolves like”. “Like dissolves like” means that the stronger (and more similar) the intermolecular forces between the solute and solvent, the greater the solubility of the solute in the solvent. In order words, a polar solvent will dissolve a polar solute, while a non-polar solvent will dissolve a non-polar solute. In this case, we begin by recognizing that benzene (C 6 H 6 ) is a non-polar solute. Since benzene is a non-polar solute, and “like dissolves like”, we predict that benzene will exhibit high solubility in non-polar solvents and low solubility in polar solvents.  Looking at the option choices, we see that toluene (C₆H₅CH₃) is the only non-polar solvent and would be the best choice for dissolving a non-polar solute, such as benzene. Option A. Toluene (C₆H₅CH₃) Correct. Toluene (C₆H₅CH₃) is an aromatic hydrocarbon. Because C₆H₅CH 3 is comprised of only non-polar carbon-hydrogen bonds, toluene is non-polar and would dissolve a non-polar compound. Option B. Water (H 2 O) Incorrect. H 2 O (water) is an asymmetrical, bent molecule comprised of 2 polar hydrogen-oxygen bonds and, as a result, is capable of hydrogen bonding. Because H 2 O is asymmetrical and the dipoles do not cancel out, water is polar and would not dissolve a non-polar compound. Option C. Acetone (C 3 H 6 O) Incorrect. C 3 H 6 O (acetone) is an organic compound containing a polar carbonyl (carbon-oxygen) group. Because C 3 H 6 O has a dipole, acetone is polar and would not dissolve a non-polar compound. Option D. Methanol (CH 3 OH) Incorrect. CH 3 OH (methanol) is an organic compound containing a polar hydroxyl (oxygen-hydrogen) group and, as a result, is capable of hydrogen bonding. Because CH 3 OH has a dipole, methanol is polar and would not dissolve a non-polar compound. Option E. Isopropanol (C 3 H 8 O) Incorrect. C 3 H 8 O (isopropanol) is an organic compound containing a polar hydroxyl (oxygen-hydrogen) group and, as a result, is capable of hydrogen bonding. Because C 3 H 8 O has a dipole, isopropanol is polar and would not dissolve a non-polar compound. Therefore, the answer is A . Canadian DAT Pro Tip: Non-polar molecules do not have a permanent dipole and, as a result, they cannot form hydrogen bonds. If a molecule is capable of hydrogen bonding, this is a certain indication the molecule is polar.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution",
+    "question": {
+      "text": "A scientist is performing an experiment in which she successfully dissolves C 2 H 4, and CCl 4 in an unknown compound. Which of the following molecules will likely also dissolve in that same compound?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "SO 2",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C 12 H 22 O 11",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CO",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(94.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "CH 4",
+    "analytics": {
+      "percent_correct": "94.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving dissolution , let’s recall that a simple way to predict whether a compound will dissolve is “like dissolves like”. “Like dissolves like” means that the stronger (and more similar) the intermolecular forces between the solute and solvent, the greater the solubility of the solute in the solvent. In other words, a polar solvent will dissolve a polar solute, while a non-polar solvent will dissolve a non-polar solute. In this case, we begin by recognizing that C 2 H 4, and CCl 4 are both non-polar solutes.  Since both solutes are non-polar, and “like dissolves like”, we can predict that the unknown compound is a non-polar solvent. Looking at the option choices, we see that CH 4 is the only non-polar solute and, as a result, will likely also dissolve in the unknown, non-polar solvent. Option A. SO 2 Incorrect. SO 2 is an asymmetrical, bent molecule comprised of 2 polar sulfur-oxygen bonds. Because SO 2 is asymmetrical and the dipoles do not cancel out, SO 2 is polar and will not dissolve in a non-polar compound. Option B. H 2 O Incorrect. H 2 O is an asymmetrical, bent molecule comprised of 2 polar hydrogen-oxygen bonds. Because H 2 O is asymmetrical and the dipoles do not cancel out, H 2 O is polar and would not dissolve a non-polar compound. Option C. C 12 H 22 O 11 Incorrect. C 12 H 22 O 11 is an asymmetrical molecule consisting of multiple regions with dipoles. Because C 12 H 22 O 11 is asymmetrical and has multiple regions with dipoles, C 12 H 22 O 11 is polar and would not dissolve in a non-polar compound. Option D. CO Incorrect. CO is a linear molecule comprised of a polar carbon-oxygen bond. Because CO has a dipole it is a polar molecule and will not dissolve in a non-polar compound. Option E. CH 4 Correct. CH 4 is a symmetrical, tetrahedral molecule comprised of 4 non-polar carbon-hydrogen bonds. Because CH 4 has no polar bonds, CH 4 is non-polar and will dissolve in a non-polar compound. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x00000001053eee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001053e70ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x0000000104f2e8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x0000000104f756a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x0000000104fb67b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104f69a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x00000001053b3c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x00000001053b6f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000105393a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x00000001053b77e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000105384b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001053d79c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001053d7b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001053e6cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Solutions",
+    "question_bank": "Polarity and Dissolution"
+  }
+]

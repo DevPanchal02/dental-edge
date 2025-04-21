@@ -1,0 +1,558 @@
+[
+  {
+    "question_number": 1,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Which of the following statements about entropy and spontaneity is true?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Entropy always decreases in nonspontaneous processes",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Entropy remains constant in all chemical reactions",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Entropy is a measure of the energy content in a system",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Entropy is not related to the spontaneity of a process",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Entropy tends to increase in spontaneous processes",
+        "images": [],
+        "percentage_selected": "(88.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Entropy tends to increase in spontaneous processes",
+    "analytics": {
+      "percent_correct": "88.8%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we need to recall that entropy measures the degree of randomness or disorder within a system. Natural systems evolve towards greater disorder. For example, when gases mix, solids dissolve, or complex molecules break into simpler components, the overall entropy of the system rises. This increase in disorder tends to drive reactions to occur spontaneously (or without external intervention). On the other hand, a decrease in disorder (or an increase in order) is usually associated with a non-spontaneous reaction. In this case, we can say that entropy tends to increase in spontaneous reactions . Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Having fewer product molecules than reactant molecules is likely to be",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "entropically unfavorable.",
+        "images": [],
+        "percentage_selected": "(87.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "entropically favorable.",
+        "images": [],
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "entropically neutral.",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "favorable for enthalpy.",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "unfavorable for enthalpy.",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "entropically unfavorable.",
+    "analytics": {
+      "percent_correct": "87.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we need to recall that entropy measures the degree of randomness or disorder within a system. Natural systems evolve towards greater disorder. For example, when gases mix, solids dissolve, or complex molecules break into simpler components, the overall entropy of the system rises. This increase in disorder tends to drive reactions to occur spontaneously (or without external intervention). On the other hand, a decrease in disorder (or an increase in order) is usually associated with a non-spontaneous reaction. In this case, saying that there are fewer product molecules than reactant molecules is equivalent to saying that the number of molecules decreases during the reaction. Because the number of molecules has decreased, there are fewer possible arrangements of molecules, or less randomness and disorder within the system, so it is entropically unfavorable . Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "What is true about the following chemical reaction? N 2( g ) + 3 H 2( g ) → 2 NH 3( g )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Entropically favorable because more gas molecules are produced",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Entropically favorable because fewer gas molecules are produced",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Entropically unfavorable because more gas molecules are produced",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Entropically unfavorable because fewer gas molecules are produced",
+        "images": [],
+        "percentage_selected": "(95.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Entropically favorable because there is no change in gas molecules",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Entropically unfavorable because fewer gas molecules are produced",
+    "analytics": {
+      "percent_correct": "95.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy , we need to recall that entropy measures the degree of randomness or disorder within a system. Natural systems evolve towards greater disorder. For example, when gases mix, solids dissolve, or complex molecules break into simpler components, the overall entropy of the system rises. This increase in disorder tends to drive reactions to occur spontaneously (or without external intervention). On the other hand, a decrease in disorder (or an increase in order) is usually associated with a non-spontaneous reaction. In this case, we can see that the number of gas molecules has decreased from 4 reactant molecules to 2 product molecules. Because the number of molecules has decreased, there are fewer possible arrangements of molecules, or less randomness and disorder within the system, so it is entropically unfavorable because fewer gas molecules are produced . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Each of the following reactions is entropically favorable EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "2 NI 3( s ) → N 2( g ) + 3 I 2( g )",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2 O ( l ) → H 2 O ( g )",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "NaCl ( s ) → Na + ( aq ) + Cl - ( aq )",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2 Na ( s ) + Cl 2( g ) → 2 NaCl ( s )",
+        "images": [],
+        "percentage_selected": "(94.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "2 H 2 O 2 ( aq ) → 2 H 2 O ( l ) + O 2( g )",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2 Na ( s ) + Cl 2( g ) → 2 NaCl ( s )",
+    "analytics": {
+      "percent_correct": "94.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind that we need to find the reaction that is entropically unfavorable . Option A. 2 NI 3(s) → N 2(g) + 3 I 2(g) Incorrect. Because the number of molecules increases from 2 reactant molecules to 4 product molecules, and there is a production of gas molecules, this reaction is entropically favorable . Option B. H 2 O (l) → H 2 O (g) Incorrect. Because H 2 O changes from liquid to gas, this reaction is entropically favorable . Option C. NaCl (s) → Na + (aq) + Cl - (aq) Incorrect. Because NaCl dissociates from 1 reactant molecule into 2 product molecules, there is an increase in the number of molecules, making this reaction entropically favorable . Option D. 2 Na (s) + Cl 2(g) → 2 NaCl (s) Correct. Because the number of molecules decreases from 3 reactant molecules to 2 product molecules, and there is a loss of gas molecules, this reaction is entropically unfavorable . Option E. 2 H 2 O 2 (aq) → 2 H 2 O (l) + O 2(g) Incorrect. Because the number of molecules increases from 2 reactant molecules to 3 product molecules, and there is a production of gas molecules, this reaction is entropically favorable . Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Given the following reaction and entropies of formation, what is the correct formula for the change in entropy of the reaction? a A + b B → c C ΔS f for A = S A ΔS f for B = S B ΔS f for C = S C",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "a S A – ( b S B + c S c )",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "a S A + b S B – c S c",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "c S c + b S B – a S A",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "c S c – b S B + a S A",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "c S c – ( a S A + b S B )",
+        "images": [],
+        "percentage_selected": "(90.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "c S c – ( a S A + b S B )",
+    "analytics": {
+      "percent_correct": "90.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy calculations , we need to review the formula to calculate the change in entropy: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn > 0 (entropically favorable), ΔS rxn < 0 (entropically unfavorable), n and m (coefficients) All we need to do is to plug in the given entropies of formation, making sure to multiply the entropy of formation with the corresponding coefficients. STEP 1: First, we can write the entropy of formation for product C, which is the coefficient c multiplied by the entropy of formation S c : ­ ∑ n S products = c S c STEP 2: Next, we can write the entropy of formation for the reactants A and B, which is the coefficients a and b multiplied by the entropy of formation S A and S B , respectively: ∑ m S reactants = a S A + b S B STEP 3: Finally, we can re-write our change in entropy equation: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn = c S c – ( a S A + b S B ) Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Given the following reaction and entropies of formation, what is the correct formula for the change in entropy of the reaction? 4 A + 7 B → 3 C + 2 D ΔS f for A = x ΔS f for B = y ΔS f for C = z ΔS f for D = w",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3 z + 2 w – (4 x + 7 y )",
+        "images": [],
+        "percentage_selected": "(95.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "4 x + 7 y – (3 z + 2 w )",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "3 z + 2 w – (4 x – 7 y )",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4 x + 7 y – (3 z – 2 w )",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "3 z – 2 w – (4 x + 7 y )",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "3 z + 2 w – (4 x + 7 y )",
+    "analytics": {
+      "percent_correct": "95.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy calculations , we need to review the formula to calculate the change in entropy: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn > 0 (entropically favorable), ΔS rxn < 0 (entropically unfavorable), n and m (coefficients) All we need to do is to plug in the given entropies of formation, making sure to multiply the entropy of formation with the corresponding coefficients. STEP 1 : First, we can write the entropy of formation for products C and D, which is the coefficients 3 and 2 multiplied by the entropy of formation z and w , respectively: ­ ∑ n S products = 3 z + 2 w STEP 2 : Next, we can write the entropy of formation for the reactants A and B, which is the coefficients 4 and 7 multiplied by the entropy of formation x and y , respectively: ∑ m S reactants = 4 x + 7 y STEP 3 : Finally, we can re-write our change in entropy equation: ΔS rxn = ∑ n S products s - ∑ m S reactants ΔS rxn = 3 z + 2 w – (4 x + 7 y ) Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Based on the given entropies of formation, the following reaction is A + B → C ΔS f for A = 50 J•mol -1 •K -1 ΔS f for B = 30 J•mol -1 •K -1 ΔS f for C = 80 J•mol -1 •K -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "entropically favorable.",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "entropically unfavorable.",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "neither entropically favorable nor unfavorable.",
+        "images": [],
+        "percentage_selected": "(92.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "entropically unstable.",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "entropically violent.",
+        "images": [],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "neither entropically favorable nor unfavorable.",
+    "analytics": {
+      "percent_correct": "92.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy calculations , we need to review the formula to calculate the change in entropy: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn > 0 (entropically favorable), ΔS rxn < 0 (entropically unfavorable), n and m (coefficients) All we need to do is to plug in the given entropies of formation, making sure to multiply the entropy of formation with the corresponding coefficients. STEP 1 : First, we can write the entropy of formation for product C, which is just the entropy of formation for C (80 J•mol -1 •K -1 ): ­ ∑ n S products = 80 STEP 2 : Next, we can write the entropy of formation for the reactants A and B, which is just the entropy of formation for A (50 J•mol -1 •K -1 ) and B (30 J•mol -1 •K -1 ) added together: ∑ m S reactants = 50 + 30 STEP 3 : Finally, we can re-write our change in entropy equation: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn = 80 – (50 + 30) = 80 – 80 = 0 As we can see, this tells us that the reaction is, overall, neither entropically favorable nor unfavorable . Therefore, the answer is C .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Based on the given entropies of formation, what is the change of entropy (ΔS) of the reaction, in kJ•mol-1•K-1? 2 X → 4 Y + 3 Z ΔS f for X = 40 kJ•mol -1 •K -1 ΔS f for Y = 25 kJ•mol -1 •K -1 ΔS f for Z = 60 kJ•mol -1 •K -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "200",
+        "images": [],
+        "percentage_selected": "(96.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "225",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "235",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "315",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "360",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "200",
+    "analytics": {
+      "percent_correct": "96.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy calculations , we need to review the formula to calculate the change in entropy: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn > 0 (entropically favorable), ΔS rxn < 0 (entropically unfavorable), n and m (coefficients) All we need to do is to plug in the given entropies of formation, making sure to multiply the entropy of formation with the corresponding coefficients. STEP 1 : First, we can write the entropy of formation for products Y and Z, which is the coefficients of 4 and 3, multiplied by their respective entropies of formation, 25 and 60 kJ•mol -1 •K -1 , added together: ∑ n S products = 4(25) + 3(60) = 100 + 180 = 280 STEP 2 : Next, we can write the entropy of formation for the reactant X, which is the coefficient 2, multiplied by its respective entropy of formation, 40 kJ•mol -1 •K -1 : ∑ m S reactants = 2(40) = 80 STEP 3 : Finally, we can re-write our change in entropy equation: ΔS rxn = ∑ n S products -  ∑ m S reactants ΔS rxn = 280 – 80 = 200 Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Based on the given information, what is the entropy of change of the given reaction, in kJ•mol -1 •K -1 ? 4 NH 3( g ) + 5 O 2( g ) → 4 NO ( g ) + 6 H 2 O ( g ) ΔS f for NH 3( g ) = 190 kJ•mol -1 •K -1 ΔS f for O 2( g ) = 200 kJ•mol -1 •K -1 ΔS f for NO ( g ) = 210 kJ•mol -1 •K -1 ΔS f for H 2 O ( g ) = 180 kJ•mol -1 •K -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "120",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "160",
+        "images": [],
+        "percentage_selected": "(91.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "185",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "190",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "220",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "160",
+    "analytics": {
+      "percent_correct": "91.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy calculations , we need to review the formula to calculate the change in entropy: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn > 0 (entropically favorable), ΔS rxn < 0 (entropically unfavorable), n and m (coefficients) All we need to do is to plug in the given entropies of formation, making sure to multiply the entropy of formation with the corresponding coefficients. STEP 1 : First, we can write the entropy of formation for products NO and H 2 O, which is the coefficients of 4 and 6, multiplied by their respective entropies of formation, 210 and 180 kJ•mol -1 •K -1 , added together: ­∑ n S products = 4(210) + 6(180) = 840 + 1,080 = 1,920 STEP 2 : Next, we can write the entropy of formation for the reactants NH 3 and O 2 , which is the coefficients of 4 and 5, multiplied by their respective entropies of formation, 190 and 200 kJ•mol -1 •K -1 , added together: ∑ m S reactants = 4(190) + 5(200) = 760 + 1,000 = 1,760 STEP 3 : Finally, we can re-write our change in entropy equation: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn = 1,920 – 1,760 = 160 Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy",
+    "question": {
+      "text": "Based on the given information, what is the entropy of formation for glucose, C 6 H 12 O 6 ( aq ) , in cellular respiration? C 6 H 12 O 6 ( aq ) + 6 O 2( g ) → 6 CO 2( g ) + 6 H 2 O ( l ) ΔS rxn = 990 kJ•mol -1 •K -1 ΔS f for O 2( g ) = 200 kJ•mol -1 •K -1 ΔS f for CO 2( g ) = 220 kJ•mol -1 •K -1 ΔS f for H 2 O ( l ) = 180 kJ•mol -1 •K -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "180",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "210",
+        "images": [],
+        "percentage_selected": "(81.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "305",
+        "images": [],
+        "percentage_selected": "(7.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "420",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "425",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "210",
+    "analytics": {
+      "percent_correct": "81.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving entropy calculations , we need to review the formula to calculate the change in entropy: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn > 0 (entropically favorable), ΔS rxn < 0 (entropically unfavorable), n and m (coefficients) All we need to do is to plug in the given entropies of formation, making sure to multiply the entropy of formation with the corresponding coefficients. STEP 1 : First, we can write the entropy of formation for products CO 2 and H 2 O, which is the coefficients of 6 and 6, multiplied by their respective entropies of formation, 220 and 180 kJ•mol -1 •K -1 , added together: ­∑ n S products = 6(220) + 6(180) = 1,320 + 1,080 = 2,400 STEP 2 : Next, we can write the entropy of formation for the reactants C 6 H 12 O 6 and O 2 , which is the coefficients of 1 and 6, multiplied by their respective entropies of formation, x and 200 kJ•mol -1 •K -1 , added together (we have set x to be the entropy of formation for C 6 H 12 O 6 , which we need to solve for): ∑ m S reactants = x + 6(200) = x + 1,200 STEP 3 : Finally, we can re-write our change in entropy equation: ΔS rxn = ∑ n S products - ∑ m S reactants ΔS rxn = 2,400 – (x + 1,200) Now, we can replace ΔS rxn with 990 kJ•mol -1 •K -1 (value given in the question): 990 = 2,400 – (x + 1,200) 990 = 2,400 – x – 1,200 990 = 1200 – x x = 1,200 – 990 = 210 Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100be6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100bdf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001007268d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010076d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007ae7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100761a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100babc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100baef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b8ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100baf7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b7cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100bcf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100bcfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100bdecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Thermochemistry & Thermodynamics",
+    "question_bank": "Calculating Entropy"
+  }
+]

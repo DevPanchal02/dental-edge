@@ -1,10 +1,15 @@
+// FILE: client/src/main.jsx
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom'; // Import BrowserRouter
 import App from './App';
-// Global CSS is imported in App.jsx or here, ensure it's imported once.
+import './styles/App.css'; // Keep global styles
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+    {/* Wrap App with BrowserRouter */}
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>
 );

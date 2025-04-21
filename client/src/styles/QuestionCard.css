@@ -1,0 +1,267 @@
+/* FILE: client/src/styles/QuestionCard.css */
+.question-card {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    padding: 25px 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .question-card.error-card {
+      background-color: #3b2424; /* Error background */
+      border: 1px solid #772d2d;
+  }
+  .error-message {
+      color: #ff8a8a;
+      font-weight: 500;
+  }
+  .error-details {
+      color: #f1b1b1;
+      font-size: 0.9em;
+      font-family: monospace;
+      display: block;
+      margin-top: 8px;
+  }
+  
+  
+  .question-content {
+    margin-bottom: 25px;
+  }
+  
+  .question-number {
+      font-size: 0.9em;
+      color: #888;
+      margin-bottom: 10px;
+  }
+  
+  .question-text {
+    font-size: 1.1em;
+    color: #e0e0e0;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+  
+  .question-images img, .option-image, .explanation-images img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 4px;
+    background-color: #f0f0f0; /* Lighter background for images */
+    padding: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    border: 1px solid #ccc;
+  }
+  .option-image {
+      max-width: 200px; /* Smaller images for options */
+      margin: 10px 0 5px 35px; /* Indent option images */
+  }
+  .explanation-images img {
+      max-width: 500px; /* Control max size in explanation */
+  }
+  
+  
+  .options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .option-label {
+    display: block; /* Makes the whole label clickable */
+    background-color: #333;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    border: 2px solid transparent; /* For selected/correct/incorrect states */
+    position: relative; /* For percentage positioning */
+  }
+  
+  .option-radio {
+    margin-right: 10px;
+    vertical-align: middle;
+    display: none; /* Hide default radio button */
+  }
+  
+  .option-label-text {
+      display: inline-flex; /* Align letter and text */
+      align-items: baseline; /* Align text baseline */
+      width: calc(100% - 50px); /* Adjust width to leave space for percentage */
+  }
+  
+  .option-letter {
+      display: inline-block;
+      font-weight: bold;
+      margin-right: 10px;
+      color: #aaa;
+      min-width: 20px; /* Ensure alignment */
+  }
+  
+  /* Styling based on state */
+  .option-label:not(.submitted):hover { /* Only hover if not submitted */
+    background-color: #404040;
+  }
+  
+  .option-label.selected {
+    border-color: #00bcd4; /* Highlight selected but not submitted */
+    background-color: #3a4a4d;
+  }
+  .option-label.selected .option-letter {
+      color: #00bcd4;
+  }
+  
+  
+  .option-label.correct {
+    border-color: #4CAF50; /* Green for correct */
+    background-color: #2a3a2b;
+    color: #b0f0b2;
+  }
+  .option-label.correct .option-letter {
+      color: #4CAF50;
+  }
+  
+  
+  .option-label.incorrect {
+    border-color: #f44336; /* Red for incorrect */
+    background-color: #3a2a2a;
+     color: #f0b0b0;
+  }
+  .option-label.incorrect .option-letter {
+      color: #f44336;
+  }
+  
+  
+  /* Disable hover and cursor on submitted */
+  .option-label.submitted {
+    cursor: default;
+  }
+  
+  .option-percentage {
+      position: absolute;
+      right: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8em;
+      color: #888;
+      background-color: rgba(0,0,0,0.2);
+      padding: 2px 6px;
+      border-radius: 3px;
+  }
+  .option-label.correct .option-percentage,
+  .option-label.incorrect .option-percentage {
+      color: #ccc; /* Make percentage more visible on colored backgrounds */
+  }
+  
+  
+  .action-buttons {
+      margin-top: 25px;
+      display: flex;
+      justify-content: flex-end;
+  }
+  
+  .submit-button, .explanation-button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+  }
+  .submit-button:hover:not(:disabled) {
+      background-color: #0056b3;
+  }
+  .submit-button:disabled {
+      background-color: #555;
+      cursor: not-allowed;
+      opacity: 0.7;
+  }
+  
+  .explanation-button {
+      background-color: #6c757d;
+  }
+  .explanation-button:hover {
+      background-color: #5a6268;
+  }
+  
+  
+  .explanation-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #555;
+    background-color: #222; /* Slightly darker background */
+    padding: 20px;
+    border-radius: 6px;
+  }
+  
+  .explanation-title {
+    color: #00bcd4;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+  
+  .explanation-content {
+    color: #ccc;
+    line-height: 1.7;
+  }
+  .explanation-content p {
+      margin-bottom: 1em;
+  }
+  .explanation-content h4 {
+      color: #ddd;
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      font-weight: 500;
+  }
+  
+  .analytics-section {
+      margin-top: 20px;
+      padding-top: 15px;
+      border-top: 1px dashed #444;
+      font-size: 0.9em;
+      color: #aaa;
+  }
+  .analytics-section h4 {
+      color: #bbb;
+      margin-bottom: 8px;
+  }
+  .analytics-section p {
+      margin-bottom: 5px;
+  }
+  
+  /* Improve POE formatting */
+  .explanation-content div > strong {
+      display: block;
+      margin-top: 0.5em;
+      color: #ddd;
+  }
+  .explanation-content div > span {
+      display: inline; /* Keep text flowing */
+  }
+  .poe-section {
+    margin-top: 1.5em;
+    padding-top: 1em;
+    border-top: 1px dashed #444;
+}
+
+.poe-section h4 {
+    margin-bottom: 0.8em;
+    color: #ddd;
+}
+
+.poe-header {
+    display: block;
+    margin-top: 0.7em;
+    margin-bottom: 0.2em;
+    color: #e0e0e0; /* Make headers stand out a bit */
+    font-weight: 600;
+}
+
+.poe-text {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em; /* Indent text slightly under header */
+    color: #bbb; /* Slightly dimmer text for POE */
+}

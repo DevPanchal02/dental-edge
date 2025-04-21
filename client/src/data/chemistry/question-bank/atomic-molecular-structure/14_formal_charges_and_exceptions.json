@@ -1,0 +1,632 @@
+[
+  {
+    "question_number": 1,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "Cyanide is a rapidly acting, deadly chemical with the molecular formula CN - . Which of the following correctly pairs an atom in cyanide with its formal charge?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Carbon has a formal charge of -1",
+        "images": [],
+        "percentage_selected": "(63.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "Nitrogen has a formal charge of -1",
+        "images": [],
+        "percentage_selected": "(21.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Neither atom has a formal charge",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Carbon has a formal charge of +1",
+        "images": [],
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Nitrogen has a formal charge of +1",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Carbon has a formal charge of -1",
+    "analytics": {
+      "percent_correct": "63.5%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving formal charges , let’s review the steps to drawing a Lewis dot diagram (which depict the bonding between the atoms of a molecule, as well as any lone pairs of electrons that may exist in a molecule), and calculating formal charges: STEP 1: Surround the central atom with other atoms. In this case, there is no “central atom”: STEP 2: Calculate the total number of valence electrons. Carbon (group 14) has 4 valence electrons and nitrogen (group 15) has 5 valence electrons. Since cyanide has an overall charge of -1, there is an additional electron: 4 e - + 5 e - + 1 e - = 10 e - STEP 3: Make a single bond between the atoms. In this case, since we have 1 bond, 2 e - are used, and so we have a total of 10 e - – 2 e - = 8 e - leftover. STEP 4: Fill the octet of surrounding atoms. To fill each atom, we would need 12 e - ; however, we only have 8 e - available. In this case, let’s add an additional bond between the atoms. Since we have 2 bonds, 4 e - are used, and so we have a total of 10 e - – 4 e - = 6 e - leftover. STEP 5: Let’s try again to fill the octet of surrounding atoms. To fill each atom, we would need 8 e - ; however, we only have 6 e - available. In this case, let’s add an additional bond between the atoms. Since we have 3 bonds, 6 e - are used, and so we have a total of 10 e - – 6 e - = 4 e - leftover. STEP 6: Let’s try again to fill the octet of surrounding atoms. To fill each atom, we need 2 e - and so all 4 e - are used up. This is the final structure of CN - . STEP 7: Determine the formal charge of N using the formula. Nitrogen has 5 valence electrons, 2 non-bonding electrons and 3 bonds: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) Formal charge = 5 – 2 – 3 = 0 STEP 8: Determine the formal charge of C using the formula. Carbon has 4 valence electrons, 2 non-bonding electrons, and 3 bonds: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) Formal charge = 4 – 2 – 3 = -1 In this case, CN – has a carbon atom with a formal charge of -1 . Therefore, the answer is A.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+1+Solution+4.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+1+Solution+5.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+1+Solution+2.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+1+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+1+Solution+3.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "What is the formal charge of N in NO 3 – ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-2",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-1",
+        "images": [],
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(12.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "+1",
+        "images": [],
+        "percentage_selected": "(67.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "+2",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "+1",
+    "analytics": {
+      "percent_correct": "67.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving formal charges , let’s review the steps to drawing a Lewis dot diagram (which depicts the bonding between the atoms of a molecule, as well as any lone pairs of electrons that may exist in a molecule), and calculating formal charges: STEP 1: Surround the central atom with other atoms. The central atom is the least electronegative atom. In this case, N is less electronegative than O: STEP 2: Calculate the total number of valence electrons. Nitrogen (group 15) has 5 valence electrons and oxygen (group 16) has 6 valence electrons. Since NO 3 – has an overall charge of -1, there is an additional electron: 5 e - + 6 e - + 6 e - + 6 e - + 1 e - = 24 e - STEP 3: Make a single bond between the atoms. In this case, since we have 3 bonds, 6 e - are used, and so we have a total of 24 e - – 6 e - = 18 e - leftover. STEP 4: Fill the octet of surrounding atoms. To fill each atom, we need 6 e - , and so we used up all remaining 18 e - . STEP 5: Give the remaining electrons to the central atom… but there are no electrons left over! STEP 6: Satisfy the central atom by making multiple bonds. One of the oxygen atoms donates 2 electrons. Now, each atom has 8 electrons and fulfills the octet rule! STEP 7: Determine the formal charge of N using the formula. Nitrogen has 5 valence electrons, 0 non-bonding electrons, and 4 bonds: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) Formal charge = 5 – 0 – 4 = +1 In this case, NO 3 – has a nitrogen atom with a formal charge of +1. Therefore, the answer is D.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+2+Solution+3.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+2+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+2+Solution+4.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+2+Solution+2.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "What is the formal charge of C in CO?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-2",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-1",
+        "images": [],
+        "percentage_selected": "(60.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(20.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "+1",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "+2",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-1",
+    "analytics": {
+      "percent_correct": "60.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving formal charges , let’s review the steps to drawing a Lewis dot diagram (which depict the bonding between the atoms of a molecule, as well as any lone pairs of electrons that may exist in a molecule), and calculating formal charges: STEP 1: Surround the central atom with other atoms. In this case, there is no central atom. STEP 2: Calculate the total number of valence electrons. Carbon (group 14) has 4 valence electrons and oxygen (group 16) has 6 valence electrons. 4 e - + 6 e - = 10 e - STEP 3: Make a single bond between the atoms. In this case, since we have 1 bond, 2 e - are used, and so we have a total of 10 e - – 2 e - = 8 e - leftover. STEP 4: Fill the octet of surrounding atoms. To fill each atom, we would need 12 e - ; however, we only have 8 e - available. In this case, let’s add an additional bond between the atoms. Since we have 2 bonds, 4 e - are used, and so we have a total of 10 e - – 4 e - = 6 e - leftover. STEP 5: Let’s try again to fill the octet of surrounding atoms. To fill each atom, we would need 8 e - ; however, we only have 6 e - available. In this case, let’s add an additional bond between the atoms. Since we have 3 bonds, 6 e - are used, and so we have a total of 10 e - – 6 e - = 4 e - leftover. STEP 6: Let’s try again to fill the octet of surrounding atoms. To fill each atom, we need 2 e - and so all 4 e - are used up. This is the final structure of CO. STEP 7: Determine the formal charge of C using the formula. Carbon has 4 valence electrons, 2 non-bonding electrons and 3 bonds: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) Formal charge = 4 – 2 – 3 = -1 In this case, CO has a carbon atom with a formal charge of -1 . Therefore, the answer is B.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+3+Solution+5.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+3+Solution+2.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+3+Solution+3.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+3+Solution+4.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+3+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "Which of the following molecules features an atom bearing a +1 formal charge, another atom with a -1 formal charge, and a third atom that is electrically neutral?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CO 2",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Cl 2 O",
+        "images": [],
+        "percentage_selected": "(5.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "H 2 O",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N 2 O",
+        "images": [],
+        "percentage_selected": "(58%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "NO 2 –",
+        "images": [],
+        "percentage_selected": "(28.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N 2 O",
+    "analytics": {
+      "percent_correct": "58%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving formal charges , draw out each molecule, and calculate the formal charge of each atom. Recall that the formula that we will be using to calculate the formal charges is: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) Option A. CO 2 Incorrect. The formal charge of both oxygen atoms, and the carbon atom is 0 . Option B. Cl 2 O Incorrect. The formal charge of both chlorine atoms, and the oxygen atom is 0 . Option C. H 2 O Incorrect. The formal charge of both hydrogen atoms, and the oxygen atom is 0 . Option D. N 2 O Correct. The formal charge of the oxygen is -1 , the formal charge of the nitrogen (middle) is +1 , while the formal charge of the nitrogen (right) is 0 . Option E. NO 2 – Incorrect. The formal charge of the oxygen (left) is -1 , while the formal charge of the nitrogen and oxygen (right) is 0 . Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+4+Solution+5.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+4+Solution+3.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+4+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+4+Solution+2.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+4+Solution+4.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "Each of the following atoms can expand its octet EXCEPT one . Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "As",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "P",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "S",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Xe",
+        "images": [],
+        "percentage_selected": "(26.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "N",
+        "images": [],
+        "percentage_selected": "(63.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N",
+    "analytics": {
+      "percent_correct": "63.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving exceptions to the octet rule , we need to determine which of the atoms does not form a expand its octet. Recall that the octet rule states that atoms prefer to have eight electrons in the valence shell. However, there are certain electrons that don’t follow the octet rule: In this case, recall that atoms in the 3 rd period and below use an energetically accessible d orbital for bonding, and therefore can have more than 8 electrons (i.e., an expanded octet). From our option choices, we see that N is the only element found in the 2 nd period . Since it does not have access to the d orbital, N cannot expand its octet. Therefore, the answer is E.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "How many non-bonding electrons does XeF 2 have?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "12",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "16",
+        "images": [],
+        "percentage_selected": "(16.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "18",
+        "images": [],
+        "percentage_selected": "(69.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "20",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "22",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "18",
+    "analytics": {
+      "percent_correct": "69.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Lewis dot diagrams , let’s review the steps to drawing a Lewis dot diagram (which depicts the bonding between the atoms of a molecule, as well as any lone pairs of electrons that may exist in a molecule): STEP 1: Surround the central atom with other atoms. The central atom is the least electronegative atom. In this case, Xe is less electronegative than F (Tip: recall that F is the most electronegative element on the periodic table): STEP 2: Calculate the total number of valence electrons. Xenon (group 18) has 8 valence electrons and fluorine (group 17) has 7 valence electrons. 8 e - + 7 e - + 7 e - = 22 e - STEP 3: Make a single bond between the atoms. In this case, since we have 2 bonds, 4 e - are used, and so we have a total of 22 e - – 4 e - = 1 8 e - leftover. STEP 4: Fill the octet of surrounding atoms. To fill each atom, we need 6 e - , and so we have a total of 18 e - – 12 e - = 6 e - leftover. STEP 5: Give the remaining electrons to the central atom. Xe has 8 valence electrons in its outermost shell: 2 in the 5 s orbital and 6 in the 5 p orbital. F has 7 valence electrons in its outermost shell: 2 in the 2 s orbital and 5 in the 2 p orbital. F only needs one more electron to achieve the stable state of a noble gas, so it only forms one bond. In this instance, since there are 2 halogens (F), 2 valence electrons from Xe are used to form the bonds while the remaining 6 electrons form 3 “lone pairs”. Xe forms an expanded octet . In this case, XeF 2 has 18 non-bonding electrons. Therefore, the answer is C.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+6+Solution+3.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+6+Solution+2.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+6+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+6+Solution+4.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "Each of the following molecules depicts an exception to the octet rule EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "AlCl 3",
+        "images": [],
+        "percentage_selected": "(11.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "BeH 2",
+        "images": [],
+        "percentage_selected": "(20.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "AsBr 3",
+        "images": [],
+        "percentage_selected": "(47.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "SF 4",
+        "images": [],
+        "percentage_selected": "(13.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "XeF 4",
+        "images": [],
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "AsBr 3",
+    "analytics": {
+      "percent_correct": "47.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving exceptions to the octet rule , draw out each electron to determine if the octet rule is followed. Recall that the octet rule states that atoms prefer to have eight electrons in the valence shell. However, there are certain electrons that don’t follow the octet rule: Option A. AlCl 3 Incorrect. Al has 3 valence electrons in its outermost shell: 2 electrons in the 3 s orbital and 1 electron in the 3 p orbital. Therefore, Al can form 3 bonds with three different atoms. Cl has 7 valence electrons in its outermost shell: 2 in the 3 s orbital and 5 in the 3 p orbital. Cl only needs one more electron to achieve the stable state of a noble gas, so it only forms one bond. In this instance, each valence electron from Al forms 1 bond with each Cl atom. Option B. BeH 2 Incorrect. Be has 2 valence electrons in its outermost shell in the 2 s orbital. H only has 1 valence electron in its outermost shell in the 1 s orbital. B eH 2 has a total of 4 valence electrons, so it can only form a total of 2 bonds. Option C. AsBr 3 Correct. As has 5 valence electrons in its outermost shell: 2 in the 4 s orbital and 3 in the 4 p orbital. As can form up to 5 bonds with a halogen, like Br. Br has 7 valence electrons in its outermost shell: 2 in the 4 s orbital and 5 in the 4 p orbital. Br only needs one more electron to achieve the stable state of a noble gas, so it only forms one bond. In this instance, since there are 3 halogens (Br), 3 valence electrons from arsenic are used to form the bonds, while the remaining 2 electrons form a “lone pair”. As a result, each atom has a complete octet. Option D. SF 4 Incorrect. S has 6 valence electrons in its outermost shell: 2 in the 3 s orbital and 4 in the 3 p orbital. S can form up to 6 bonds with a halogen, like F. F has 7 valence electrons in its outermost shell: 2 in the 2 s orbital and 5 in the 2 p orbital. F only needs one more electron to achieve the stable state of a noble gas, so it only forms one bond. In this instance, since there are 4 halogens (F), 4 valence electrons from S are used to form the bonds, while the remaining 2 electrons form a “lone pair”. Option E. XeF 4 Incorrect. Xe has 8 valence electrons in its outermost shell: 2 in the 5 s orbital and 6 in the 5 p orbital. F has 7 valence electrons in its outermost shell: 2 in the 2 s orbital and 5 in the 2 p orbital. F only needs one more electron to achieve the stable state of a noble gas, so it only forms one bond. In this instance, since there are 4 halogens (F), 4 valence electrons from Xe are used to form the bonds while the remaining 4 electrons form 2 “lone pairs”. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+7+Solution+2.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+7+Solution+3.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+7+Solution+4.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+7+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+7+Solution+5.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "What is the formal charge of Xe in XeF 4 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-2",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-1",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "0",
+        "images": [],
+        "percentage_selected": "(82.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "+1",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "+2",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0",
+    "analytics": {
+      "percent_correct": "82.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving formal charges , let’s review the steps to drawing a Lewis dot diagram (which depict the bonding between the atoms of a molecule, as well as any lone pairs of electrons that may exist in a molecule), and calculating formal charges: STEP 1: Surround the central atom with other atoms. The central atom is the least electronegative atom. In this case, Xe is less electronegative than F (Tip: recall that F is the most electronegative element on the periodic table): STEP 2: Calculate the total number of valence electrons. Xenon (group 18) has 8 valence electrons and fluorine (group 17) has 7 valence electrons: 8 e - + 7 e - + 7 e - + 7 e - + 7 e - = 36 e - STEP 3: Make a single bond between the atoms. In this case, since we have 4 bonds, 8 e - are used, and so we have a total of 36 e - – 8 e - = 28 e - leftover. STEP 4: Fill the octet of surrounding atoms. To fill each atom, we need 6 e - , and so we have a total of 28 e - – 24 e - = 4 e - leftover. STEP 5: Give the remaining electrons to the central atom. Xe has 8 valence electrons in its outermost shell: 2 in the 5 s orbital and 6 in the 5 p orbital. F has 7 valence electrons in its outermost shell: 2 in the 2 s orbital and 5 in the 2 p orbital. F only needs one more electron to achieve the stable state of a noble gas, so it only forms one bond. In this instance, since there are 4 halogens (F), 4 valence electrons from Xe are used to form the bonds while the remaining 4 electrons form 2 “lone pairs”. Xe forms an expanded octet . STEP 6: Determine the formal charge of Xe using the formula: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) Formal charge = 8 – 4 – 4 = 0 Xenon has 8 valence electrons, 4 non-bonding electrons and 4 bonds. Xenon has a formal charge of 0. In this case, XeF 4 has a xenon atom with a formal charge of 0 . Therefore, the answer is C.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+8+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+8+Solution+3.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+8+Solution+4.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+8+Solution+2.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "Which of the following is the correct Lewis dot structure of CO 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Option+Choice+A.jpg"
+        ],
+        "percentage_selected": "(98.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Option+Choice+B.jpg"
+        ],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Option+Choice+C.jpg"
+        ],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Option+Choice+D.jpg"
+        ],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Option+Choice+E.jpg"
+        ],
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "98.2%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Lewis dot structures , which depict the bonding between the atoms of a molecule, as well as any lone pairs of electrons that may exist in a molecule, let’s review the steps to drawing a Lewis dot diagram and determining the formal charges: STEP 1: Surround the central atom with other atoms. The central atom is the least electronegative atom. Most often, the central atom is C. STEP 2: Calculate the total number of valence electrons. Oxygen (group 16) has 6 valence electrons and carbon (group 14) has 4 valence electrons: 4 e - + 6 e - + 6 e - = 16 e - STEP 3: Make a single bond between the atoms. In this case, since we have 2 bonds, 4 e - are used, and so we have a total of 16 e - – 4 e - = 12 e - leftover. STEP 4: Fill the octet of surrounding atoms. To fill each atom, we need 6 e - , and so we used up all remaining 12 e - . STEP 5: Give the remaining electrons to the central atom… but there are no electrons left over! STEP 6: Satisfy the central atom by making multiple bonds. Each oxygen atom will ‘donate’ a lone pair to carbon to form a double bond and satisfy carbon’s octet. STEP 7: Check formal charges. Recall that the best Lewis structure is the one with the least number of formal charges. Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) In this case, none of the atoms have a formal charge. Why doesn’t one oxygen ‘donate’ 2 lone pairs to form a triple bond instead? Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) In this case, the atom on the left has a formal charge of -1, while the atom on the right has a formal charge of +1. The best Lewis structure is the one that minimizes formal charges , so this is incorrect. Therefore, the answer is A.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Solution+6.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Solution+4.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Solution+2.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Solution+5.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+9+Solution+3.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions",
+    "question": {
+      "text": "Which of the following is the correct Lewis dot structure of OCN – ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Option+Choice+A.jpg"
+        ],
+        "percentage_selected": "(15.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Option+Choice+B.jpg"
+        ],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Option+Choice+C.jpg "
+        ],
+        "percentage_selected": "(80.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Option+Choice+D.jpg "
+        ],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Option+Choice+E.jpg "
+        ],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "80.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving Lewis dot structures , which depict the bonding between the atoms of a molecule, as well as any lone pairs of electrons that may exist in a molecule, let’s review the steps to drawing a Lewis dot diagram and determining the formal charges: STEP 1: Surround the central atom with other atoms. The central atom is the least electronegative atom. Most often, the central atom is C. STEP 2: Calculate the total number of valence electrons. Nitrogen (group 15) has 5 valence electrons, oxygen (group 16) has 6 valence electrons, and carbon (group 14) has 4 valence electrons. Since OCN – has an overall charge of -1, there is an additional electron: 5 e - + 6 e - + 4 e - + 1 e - = 16 e - STEP 3: Make a single bond between the atoms. In this case, since we have 2 bonds, 4 e - are used, and so we have a total of 16 e - – 4 e - = 12 e - leftover. STEP 4: Fill the octet of surrounding atoms. To fill each atom, we need 6 e - , and so we used up all remaining 12 e - . STEP 5: Give the remaining electrons to the central atom… but there are no electrons left over! STEP 6: Satisfy the central atom by making multiple bonds. The nitrogen atom will ‘donate’ 2 lone pairs to carbon to form a triple bond and satisfy carbon’s octet. There are multiple ways to draw OCN – however, the structure in which nitrogen forms a triple bond with carbon is the best choice ? Why? We need to look at formal charges. STRUCTURE 1: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) In this case, oxygen has a formal charge of -1. STRUCTURE 2: If oxygen forms the triple bond with carbon: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) In this case, oxygen has a formal charge of +1 and nitrogen has a formal charge of -2. The best Lewis structure is the structure that minimizes formal charges . This Lewis structure has 2 formal charges, and therefore is incorrect . STRUCTURE 3: If oxygen and nitrogen each form a double bond with carbon: Formal Charge = (# of valence e - ) – (# of nonbonding e - ) – (# of bonds) In this case, nitrogen has a formal charge of -1. Oxygen is more electronegative than nitrogen, and therefore, oxygen should take the negative charge. This Lewis structure gives the negative charge to nitrogen, and therefore is incorrect . Therefore, the answer is C.",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Solution+3.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Solution+1.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Solution+2.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Solution+6.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Solution+4.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Solution+5.jpg",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Lewis+Dot+Structures%3A+Formal+Charges+and+Exceptions/Question+10+Solution+7.jpg"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000100b7ee10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100b770ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001006be8d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001007056a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x00000001007467b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x00000001006f9a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100b43c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100b46f64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100b23a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100b477e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100b14b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100b679c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100b67b50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100b76cf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Atomic & Molecular Structure",
+    "question_bank": "Formal Charges and Exceptions"
+  }
+]

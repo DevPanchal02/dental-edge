@@ -1,0 +1,578 @@
+[
+  {
+    "question_number": 1,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which of the following best describes the dipoles within CH 3 F?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The geometry results in an equal sharing of electrons amongst its atoms",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "The carbon atom donates electrons to the fluorine, making the carbon partially negative",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The electronegativity difference between carbon and fluorine creates a polar bond",
+        "images": [],
+        "percentage_selected": "(89.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "The carbon-hydrogen bonds have higher electronegativity differences compared to carbon-fluorine",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The partially negative fluorine atom results in the molecule to have no net dipole",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The electronegativity difference between carbon and fluorine creates a polar bond",
+    "analytics": {
+      "percent_correct": "89.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we will need to know that CH 3 F has a net dipole for the following reasons: In this case, we can say that the electronegativity difference between the carbon and fluorine creates a polar bond . Option A. The geometry results in an equal sharing of electrons amongst its atoms Incorrect. The geometry of CH 3 F results in unequal sharing of electrons amongst its atoms because fluorine has higher electronegativity and attracts more of the electron cloud in the molecule. Option B. The carbon atom donates electrons to the fluorine, making the carbon partially negative Incorrect. The carbon atom donates electrons to fluorine, making the carbon partially positive . This is because fluorine exerts a stronger pull on the shared electrons. Option C. The electronegativity difference between carbon and fluorine creates a polar bond Correct. The large electronegativity difference between the carbon and fluorine leads to polarity within the carbon-fluorine bond. Fluorine’s high electronegativity causes it to attract more of the electrons within its covalent bond with carbon, leading to a partially negative fluorine atom and partially positive carbon. Option D. The carbon-hydrogen bonds have higher electronegativity differences compared to carbon-fluorine Incorrect. The carbon-hydrogen bonds have lower electronegativity differences compared to the carbon-fluorine bond. This is because there is a greater electronegativity difference between carbon and fluorine, compared to carbon and hydrogen. Option E. The partially negative fluorine atom results in the molecule to have no net dipole. Incorrect. The partially negative fluorine atom results in the molecule to have a net dipole in the direction of the fluorine atom. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Why does I 2 have a higher boiling point than F 2 ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "I 2 has stronger hydrogen bonding than F 2",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "I 2 has stronger dipole-dipole forces than F 2",
+        "images": [],
+        "percentage_selected": "(11.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "I 2 has higher ionization energy than F 2",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "I 2 has a larger electron cloud than F 2",
+        "images": [],
+        "percentage_selected": "(72.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "I 2 has more tightly held electrons than F 2",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "I 2 has a larger electron cloud than F 2",
+    "analytics": {
+      "percent_correct": "72.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we will need to know that the strength of London dispersion forces increases with size. Since iodine is lower on the periodic table than fluorine, I 2 is much larger and has greater molecular weight than F 2 . Therefore, I 2 has a larger electron cloud, which allows for greater fluctuations and larger temporary dipole moments. This leads to stronger London dispersion forces which causes I 2 to have a higher boiling point. In this case, I 2 has a higher boiling point than F 2 because I 2 has a larger electron cloud than F 2 . It is also important to note that both F 2 and I 2 do not engage in dipole-dipole forces, nor hydrogen bonds, because they are nonpolar. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Each one of the given compounds has similar polarity as BH 3 EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "NH 3",
+        "images": [],
+        "percentage_selected": "(61.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "CO 3 2-",
+        "images": [],
+        "percentage_selected": "(14.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "SO 3",
+        "images": [],
+        "percentage_selected": "(6.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "BF 3",
+        "images": [],
+        "percentage_selected": "(11.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "NO 3 -",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "NH 3",
+    "analytics": {
+      "percent_correct": "61.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we will need to know that BH 3 is a nonpolar molecule due to its trigonal planar structure: Although the three B-H bonds have dipoles towards the hydrogen atom, the molecule is symmetrical, which causes the dipoles to cancel out and result in no net dipole. Similarly, CO 3 2- , SO 3 , BF 3 , and NO 3 - are all nonpolar because they have symmetrical trigonal planar structures which causes the dipoles to cancel out: In this case, NH 3 is the exception because its lone electron pair causes an asymmetrical tetrahedral structure leading to a polar molecule: Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+3+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+3+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+3+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which linear compound is incapable of forming a dipole-dipole interaction?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "HCN",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CO 2",
+        "images": [],
+        "percentage_selected": "(76.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "NO",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CO",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "HCl",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "CO 2",
+    "analytics": {
+      "percent_correct": "76.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we need to know that a molecule that does not have a net dipole will be incapable of forming a dipole-dipole interaction. Option A. HCN Incorrect. HCN is capable of forming a dipole-dipole interaction because the compound is asymmetrical. The nitrogen is the most electronegative atom in the compound and therefore, has the strongest attraction of the shared electrons. As a result, nitrogen is partially negative in comparison to the rest of the compound and the molecule has a net dipole. Option B. CO 2 Correct. CO 2 is incapable of forming a dipole-dipole interaction because the compound is symmetrical. Both oxygen atoms are more electronegative than the carbon atom and attract more of the shared electrons, making the oxygen atoms partially negative. However, due to the symmetrical nature of the molecule, the dipole moments cancel out, resulting in no net dipole. Option C. NO Incorrect. NO is capable of forming a dipole-dipole interaction because the compound is asymmetrical. The oxygen is more electronegative than the nitrogen and has a stronger attraction of the shared electrons. As a result, oxygen is partially negative in comparison to the nitrogen atom and the molecule has a net dipole. Option D. CO Incorrect. CO is capable of forming a dipole-dipole interaction because the compound is asymmetrical. The oxygen is more electronegative than the carbon and has a stronger attraction of the shared electrons. As a result, oxygen is partially negative in comparison to the carbon atom and the molecule has a net dipole. Option E. HCl Incorrect. HCl is capable of forming a dipole-dipole interaction because the compound is asymmetrical. The chlorine is more electronegative than the hydrogen and has a stronger attraction of the shared electrons. As a result, chlorine is partially negative in comparison to the carbon atom and the molecule has a net dipole. Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+4+Solution+5.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+4+Solution+4.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+4+Solution+3.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+4+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+4+Solution+2.png"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "When comparing butane (C 4 H 10 ) to boron trifluoride (BF 3 ), which statement is most accurate regarding their London dispersion forces?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "C 4 H 10 experiences weaker London dispersion forces due to its extended linear structure",
+        "images": [],
+        "percentage_selected": "(7.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 4 H 10 exhibits stronger London dispersion forces as a result of its increased surface area",
+        "images": [],
+        "percentage_selected": "(80%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "BF 3 has stronger London dispersion forces due to its symmetrical arrangement",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "BF 3 experiences weaker London dispersion forces due to its highly polar nature",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The strength of London dispersion forces is independent of molecular shape and size",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "C 4 H 10 exhibits stronger London dispersion forces as a result of its increased surface area",
+    "analytics": {
+      "percent_correct": "80%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we will need to know that the strength of London dispersion forces increases with greater molecule surface area. Larger molecules have a higher likelihood of inducing temporary dipoles in the electron distribution of the molecule, leading to stronger London dispersion forces. C 4 H 10 has a longer linear structure which results in a larger surface area when compared to the trigonal planar structure of BF 3 : In this case, C 4 H 10 exhibits stronger London dispersion forces as a result of its increased surface area . Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which option correctly ranks the boiling points of each molecule from lowest to highest?",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+11+Top+Figure+1.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "4 < 3 < 2 < 1",
+        "images": [],
+        "percentage_selected": "(71.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "4 < 2 < 3 < 1",
+        "images": [],
+        "percentage_selected": "(13.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "4 < 1 < 2 < 3",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "3 < 4 < 2 < 1",
+        "images": [],
+        "percentage_selected": "(11.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "1 < 2 < 3 < 4",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4 < 3 < 2 < 1",
+    "analytics": {
+      "percent_correct": "71.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we will need to know that the boiling point of nonpolar molecules generally increases as the surface area of the molecules increases. Larger and longer molecules allow for more points of contact between the temporary positive and negative dipoles found in London dispersion forces, which lead to higher boiling points. Out of the given molecules, C 2 H 6 has the smallest surface area since it has the least amount of carbon atoms. Next, between the two C 4 H 10 molecules, molecule 3 has a smaller surface area than molecule 2 and its structure allows for less points of contact between the London dispersion forces of two C 4 H 10 molecules. Molecule 2, however, has a linear shape, allowing for more points of contact with other C 4 H 10 molecules. This can be visualized in the diagram below: Finally, C 2 H 8 O has an alcohol group, which can perform hydrogen bonding. Therefore, molecule 1 has the highest boiling point. In this case, the ranks of the boiling points of each molecule from lowest to highest goes from molecules 4 < 3 < 2 < 1 . Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+11+Solution+1.jpg"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Why does water have a higher boiling point than compounds with similar molecular weight?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Water molecules have stronger London dispersion forces",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Water’s bent molecular geometry allows for efficient packing",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Water exhibits exceptionally strong covalent bonds",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Water exhibits unique electron density distribution",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "Water experiences extensive hydrogen bonding",
+        "images": [],
+        "percentage_selected": "(93.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "Water experiences extensive hydrogen bonding",
+    "analytics": {
+      "percent_correct": "93.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we will need to know that water has a high boiling point because it can perform hydrogen bonding: In this case, water has a higher boiling point than compounds with similar molecular weight because water experiences extensive hydrogen bonding . Therefore, the answer is E .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Intermolecular+Forces%3A+Intermolecular+Forces/Question+7+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which compound will have the highest boiling point?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 3 F",
+        "images": [],
+        "percentage_selected": "(28.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CH 4",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "CH 3 Br",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "CH 3 Cl",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "CH 3 I",
+        "images": [],
+        "percentage_selected": "(67.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "CH 3 I",
+    "analytics": {
+      "percent_correct": "67.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we need to recall that an increase in intermolecular forces results in an increase in the boiling point of a molecule. Comparing our given answer choices, we can see that we are given CH 4 , and a list of different halogens bonded to CH 3 . As the size of the halogen increases, the size of the electron cloud increases. This results in stronger London dispersion forces, which at this molecular weight, plays a stronger role than dipole-dipole interactions. In this case, CH 3 I contains the largest halogen, which implies that it has the strongest interactions, and subsequently the greatest intermolecular forces and highest boiling point. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "Which option correctly ranks the increase in boiling points for the given compounds?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "CH 4 < H 2 O < HF < Ne",
+        "images": [],
+        "percentage_selected": "(5.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "CCl 4 < CH 3 Cl < NH 3 < CH 4",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "I 2 < Cl 2 < NH 3 < HF",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "H 2 < O 2 < CHCl 3 < H 2 O",
+        "images": [],
+        "percentage_selected": "(77.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "C 3 H 6 O < CF 4 < H 2 O < H 2 O 2",
+        "images": [],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "H 2 < O 2 < CHCl 3 < H 2 O",
+    "analytics": {
+      "percent_correct": "77.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Option A. CH 4 < H 2 O < HF < Ne Incorrect. Since neon is a noble gas and does not bond to other atoms, it only exhibits London dispersion forces and cannot have a dipole moment. As a result, it does not have a higher boiling point than H 2 O and HF which can both undergo hydrogen bonding. Option B. CCl 4 < CH 3 Cl < NH 3 < CH 4 Incorrect. Since CH 4 is nonpolar, it can only exhibit London dispersion forces. As a result, it does not have a higher boiling point than CH 3 Cl and NH 3 , which both have a net dipole and can form dipole-dipole interactions. Option C. I 2 < Cl 2 < NH 3 < HF Incorrect. Since I 2 is much larger than Cl 2 , it has a larger electron cloud which allows for stronger temporary dipoles and therefore, stronger London dispersion forces. As a result, it does not have a lower boiling point than Cl 2 . Option D. H 2 < O 2 < CHCl 3 < H 2 O Correct. Both O 2 and H 2­ are nonpolar. However, O 2 has a higher boiling point than H 2 because O 2 has a larger molecular size and its larger electron cloud allows for stronger temporary dipoles and therefore, stronger London dispersion forces. CHCl 3 has a higher boiling point than both H 2 and O 2 because it has a net dipole which allows it to form dipole-dipole interactions. Finally, H 2 O has the highest boiling point out of the given options because it can undergo hydrogen bonding, which is stronger. Option E. C 3 H 6 O < CF 4 < H 2 O < H 2 O 2 Incorrect. Since C 3 H 6 O is a polar molecule, it can form dipole-dipole interactions. As a result, it does not have a lower boiling point than CF 4 which is a nonpolar molecule and only exhibits London dispersion forces. Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces",
+    "question": {
+      "text": "I 2 is observed to have a higher boiling point than HF. Based on this observation, all of the following statements are true EXCEPT one. Which one is this EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "I 2 has greater molecular weight than HF",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Dipole-dipole interactions are responsible for the higher boiling point of I 2",
+        "images": [],
+        "percentage_selected": "(74.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "The vapor pressure of I 2 is less than that of HF at a given temperature",
+        "images": [],
+        "percentage_selected": "(11.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "I 2 has stronger London dispersion forces than HF",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The high boiling point of I 2 originates from its large electron cloud",
+        "images": [],
+        "percentage_selected": "(6.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Dipole-dipole interactions are responsible for the higher boiling point of I 2",
+    "analytics": {
+      "percent_correct": "74.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving intermolecular forces , we will need to know that I 2 is a molecule with no net dipole while HF can exhibit hydrogen bonding. However, this is a special case in which London dispersion forces are stronger than hydrogen bonding: In this case, it is not possible for dipole-dipole interactions to be responsible for the higher boiling point of I 2 since I 2 does not have a net dipole. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100ad6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100acf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001006168d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010065d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010069e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100651a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100a9bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100a9ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100a7ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100a9f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100a6cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100abf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100abfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100acecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Liquids and Solids",
+    "question_bank": "Intermolecular Forces"
+  }
+]

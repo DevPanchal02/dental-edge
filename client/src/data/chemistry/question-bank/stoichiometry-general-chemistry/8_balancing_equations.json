@@ -1,0 +1,564 @@
+[
+  {
+    "question_number": 1,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "What is the correct set of coefficients for the following reaction of ammonia with oxygen? __NH 3 + __O 2 → __N 2 O + __H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1, 2, 3, 2",
+        "images": [],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2, 3, 1, 2",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "2, 2, 1, 2",
+        "images": [],
+        "percentage_selected": "(1.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2, 2, 1, 3",
+        "images": [],
+        "percentage_selected": "(92.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "4, 4, 2, 6",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "2, 2, 1, 3",
+    "analytics": {
+      "percent_correct": "92.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing equations , we will need to determine the coefficients , or the number of each molecule that are used to balance the chemical equation. When balancing equations, it is often easier to start by balancing the elements that appear in the least number of compounds. STEP 1: First, we identify each element and its quantity for both reactants and products. There is 1 N, 3 H, and 2 O on the reactants side, and 2 N, 2 O, and 2 H on the products side. __NH 3 + __O 2 → __N 2 O + __H 2 O STEP 2: Next, we will balance the nitrogen. Since there are 2 N on the product side, let’s add a 2 in front of NH 3 to balance the nitrogen: 2 NH 3 + O 2 → N 2 O + H 2 O STEP 3: Now let’s balance the hydrogen. There are 6 H on the reactant side and 2 H on the product side, so let’s add a 3 in front of H 2 O to balance hydrogen: 2 NH 3 + O 2 → N 2 O + 3 H 2 O STEP 4: Finally, let’s balance the oxygen. There are 2 O on the reactant side and now 4 O on the product side, so let’s add a 2 in front of O 2 to balance oxygen: 2 NH 3 + 2 O 2 → N 2 O + 3 H 2 O STEP 5: We did not add anything in front of N 2 O, so the coefficient is 1 and the balanced reaction is: 2 NH 3 + 2 O 2 → 1 N 2 O + 3 H 2 O Therefore, the answer is D.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "Which of the following sets of coefficients correctly balances the reaction shown below? __KClO 3 + __P 4 → __KCl + __P 2 O 5",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1, 1, 1, 2",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "5, 2, 5, 4",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "10, 3, 10, 6",
+        "images": [],
+        "percentage_selected": "(89.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "15, 6, 15, 3",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "20, 6, 20, 12",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "10, 3, 10, 6",
+    "analytics": {
+      "percent_correct": "89.3%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing equations , we will need to determine the coefficients , or the number of each molecule that are used to balance the chemical equation. When balancing equations, it is often easier to start by balancing the elements that appear in the least number of compounds. STEP 1: First, we identify each element and its quantity for both reactants and products. There is 1 K, 1 Cl, 3 O, and 4 P on the reactants side, and 1 K, 1 Cl, 5 O, and 2 P on the products side. __KClO 3 + __P 4 → __KCl + __P 2 O 5 STEP 2: Next, we will balance the phosphorus. Since there are 4 P on the reactant side, let’s add a 2 in front of P 2 O 5 to balance the phosphorus: KClO 3 + P 4 → KCl + 2 P 2 O 5 STEP 3: Now let’s balance the oxygen. There are 3 O on the reactant side and 10 O on the product side, so let’s add a 10 in front of KClO 3 and change the coefficient in front of P 2 O 5 to a 6 , so there are 30 O on both sides: 10 KClO 3 + P 4 → KCl + 6 P 2 O 5 STEP 4: Now, let’s balance the potassium and chlorine. There are 10 K and 10 Cl on the reactant side, so let’s add a 10 in front of KCl to balance both of them: 10 KClO 3 + P 4 → 10 KCl + 6 P 2 O 5 STEP 5: Finally, we must double check the phosphorus, as coefficients can sometimes change during the process of balancing. We must add a 3 in front of P 4 so that there are 12 P on both sides of the reaction. The balanced reaction is: 10 KClO 3 + 3 P 4 → 10 KCl + 6 P 2 O 5 Therefore, the answer is C. Note : Option E is incorrect. Although the equation is technically balanced, the coefficients are not in their most reduced form.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "The combustion of acetylene in the presence of oxygen to produce carbon dioxide and water can be expressed with the following chemical equation. What is the coefficient c that is needed to balance the chemical equation? a C 2 H 2 + b O 2 → c CO 2 + d H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1",
+        "images": [],
+        "percentage_selected": "(1.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "2",
+        "images": [],
+        "percentage_selected": "(16.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(76.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "8",
+        "images": [],
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "4",
+    "analytics": {
+      "percent_correct": "76.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "This is an example of a combustion reaction , where the reactant side is composed of hydrocarbon and oxygen, and the product side is composed of carbon dioxide and water. STEP 1: First, we identify each element and its quantity for both reactants and products. There is 2 C, 2 H, and 2 O on the reactants side, and 1 C, 3 O, and 2 H on the products side. a C 2 H 2 + b O 2 → c CO 2 + d H 2 O STEP 2: Next, we will balance the carbon. Since there are 2 C on the reactant side, let’s add a 2 in front of CO₂ to balance the carbon: C 2 H 2 + O 2 → 2 CO 2 + H 2 O STEP 3: Now let’s balance the oxygen, since the hydrogen is already balanced. There are 2 O on the reactant side and 5 O total on the product side, so we will need to balance the equation by adding a 5 to O₂, a 2 in front of H 2 O, and changing the coefficient in front of CO 2 to a 4 , so that there are 10 O on both sides: C 2 H 2 + 5 O 2 → 4 CO 2 + 2 H 2 O STEP 4: Finally, let’s balance the carbon by adding a 2 in front of C 2 H 2 : 2 C 2 H 2 + 5 O 2 → 4 CO 2 + 2 H 2 O STEP 5: To answer the question regarding the coefficient c in front of the CO₂ term, we can refer to our newly balanced equation and see that the answer is 4 . Therefore, the answer is D.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "In the balanced chemical equation, what is the sum of the coefficients of the reactants? __Fe + __O 2 → ­­­­__Fe 2 O 3",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "3",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "4",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "7",
+        "images": [],
+        "percentage_selected": "(76.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "9",
+        "images": [],
+        "percentage_selected": "(21.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "11",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "7",
+    "analytics": {
+      "percent_correct": "76.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "In order to obtain the sum of the coefficients, we must first balance the equation . STEP 1: First, we identify each element and its quantity for both reactants and products. There is 1 Fe and 2 O on the reactants side, and 2 Fe and 3 O on the products side. __Fe + __O 2 → ­­­­__Fe 2 O 3 STEP 2: Next, we will balance the oxygen. Since there are 2 O in the reactant side and 3 O in the products, we will add a 3 to O₂ and 2 in front of Fe 2 O 3 to balance the oxygen: Fe + 3 O 2 → ­­­­ 2 Fe 2 O 3 STEP 3: Now let’s balance the iron. There are 4 Fe on the products side, so let’s add a 4 to the Fe. 4 Fe + 3 O 2 → ­­­­ 2 Fe 2 O 3 STEP 4: Finally, to answer the question, we can add the coefficients of 4 and 3 to get our final of answer of 7 . This is an important step, as you can accidentally choose the wrong answer if you forget to sum these up. Therefore, the answer is C.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "How many moles of Al 2 O 3 are needed to produce X moles of AlF 3 ? __Al 2 O 3 + __F 2 → __AlF 3 + __O 2",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "0.5 X",
+        "images": [],
+        "percentage_selected": "(65.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "X",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "1.5 X",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2 X",
+        "images": [],
+        "percentage_selected": "(28.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "3 X",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "0.5 X",
+    "analytics": {
+      "percent_correct": "65.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "In this question, we need to find the ratio of the coefficients by first balancing the equation. STEP 1: First, we identify each element and its quantity for both reactants and products. There is 2 Al, 3 O, and 2 F on the reactants side, and 1 Al, 3 F, and 2 O on the products side. __Al 2 O 3 + __F 2 → __AlF 3 + __O 2 STEP 2: Next, we will balance the O. Since there are 3 O on the reactants side and 2 O on the products side, we will add a 3 to O 2 and 2 in front of Al 2 O 3 to balance the oxygen: 2 Al 2 O 3 + F 2 → AlF 3 + 3 O 2 STEP 3: Now let’s balance the aluminum. There are 4 Al on the reactants side and 1 Al on the product side, so let’s add a 4 in front of AlF 3 to balance aluminum: 2 Al 2 O 3 + F 2 → 4 AlF 3 + 3 O 2 STEP 4: Finally, let’s balance the fluorine. There are 2 F on the reactants side and 12 F on the product side, so let’s add a 6 in front of F 2 to balance fluorine: 2 Al 2 O 3 + 6 F 2 → 4 AlF 3 + 3 O 2 STEP 5: Now that every term has a coefficient, we must go back through and check that it still balances. Once we see that it does, we can look at the coefficients and see that for each mole of AlF 3 produced, we need half that number of moles of Al 2 O 3 . Therefore, for X moles of AlF 3 to be produced, we need 0.5 X moles of Al 2 O 3 to be reacted. Therefore, the answer is A.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "When glucose undergoes oxidation to produce carbon dioxide and water, as shown below, what is the sum of the coefficients in the balanced equation? __C 6 H 12 O 6 + __O 2 → __CO 2 + __H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "14",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "18",
+        "images": [],
+        "percentage_selected": "(12.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "19",
+        "images": [],
+        "percentage_selected": "(79%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "20",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "26",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "19",
+    "analytics": {
+      "percent_correct": "79%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "This is an example of a combustion reaction , where the reactant side is composed of hydrocarbon and oxygen, and the product side is composed of carbon dioxide and water. This specific one represents the basic process during cellular respiration. To obtain the sum of the coefficients, we must first balance the equation. STEP 1: First, we identify each element and its quantity for both reactants and products. There is 6 C, 12 H, and 8 O on the reactants side, and 1 C, 2 H, and 3 O on the products side. __C 6 H 12 O 6 + __O 2 → __CO 2 + __H 2 O STEP 2: Next, we will balance the C. Since there are 6 C on the reactants side, let’s add a 6 to CO 2 to balance the carbon: C 6 H 12 O 6 + O 2 → 6 CO 2 + H 2 O STEP 3: Now let’s balance the H. Since there are 12 H on the reactant side and 2 H on the product side, let’s add a 6 in front of H 2 O to balance the hydrogen: C 6 H 12 O 6 + O 2 → 6 CO 2 + 6 H 2 O STEP 4: Finally, let’s balance the oxygen. There are 8 O on the reactant side and 18 O on the left side, so let’s add a 6 in front of O 2 to balance oxygen: C 6 H 12 O 6 + 6 O 2 → 6 CO 2 + 6 H 2 O STEP 5: We did not add anything in front of C 6 H 12 O 6 so the coefficient is 1 and the balanced reaction is: 1 C 6 H 12 O 6 + 6 O 2 → 6 CO 2 + 6 H 2 O STEP 6: To answer the question regarding the sum of the coefficients, we can proceed to add up the coefficients like so: 1 + 6 + 6 + 6 = 19 Therefore, the answer is C.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "Which of the following reactions best represents the balanced combustion reaction of pentane?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "C 5 H 12 + 4 O 2 → 5 CO 2 + 3 H 2 O",
+        "images": [],
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "C 5 H 12 + 8 O 2 → 5 CO 2 + 6 H 2 O",
+        "images": [],
+        "percentage_selected": "(96.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "C 5 H 12 + O 2 → 5 CO 2 + 6 H 2 O",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "2 C 5 H 12 + 5 O 2 → 5 CO 2 + 2 H 2 O",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "2 C 5 H 12 + 4 O 2 → 5 CO 2 + H 2 O",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "C 5 H 12 + 8 O 2 → 5 CO 2 + 6 H 2 O",
+    "analytics": {
+      "percent_correct": "96.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving balancing equations , we will need to determine the coefficients , or the number of each element that are used to balance the chemical equation. When balancing equations, it is often easier to start by balancing the elements that appear in the least number of compounds. STEP 1: First, we identify each element and its quantity for both reactants and products. There is 5 C, 12 H, and 2 O on the reactants side, and 1 C, 2 H, and 3 O on the products side. C 5 H 12 + O 2 → CO 2 + H 2 O STEP 2: Next, we will balance the C. Since there are 5 C on the reactant side, let’s add a 5 in front of CO 2 to balance the carbon: C 5 H 12 + O 2 → 5 CO 2 + H 2 O STEP 3: Now let’s balance the hydrogen. There are 12 H on the reactant side and 2 H on the product side, so let’s add a 6 in front of H 2 O to balance hydrogen: C 5 H 12 + O 2 → 5 CO 2 + 6 H 2 O STEP 4: Finally, let’s balance the oxygen. There are 2 O on the reactant side and 16 O on the product side, so let’s add an 8 in front of O 2 to balance oxygen: C 5 H 12 + 8 O 2 → 5 CO 2 + 6 H 2 O Therefore, the answer is B.",
+      "images": []
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "According to the reaction below, how many grams of iron(III) oxide are formed when 60 g of iron disulfide reacts with excess oxygen? FeS 2 + O 2 → Fe 2 O 3 + SO 2",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "20",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "30",
+        "images": [],
+        "percentage_selected": "(14.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "40",
+        "images": [],
+        "percentage_selected": "(65.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "60",
+        "images": [],
+        "percentage_selected": "(7.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "80",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "40",
+    "analytics": {
+      "percent_correct": "65.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "In order to find the molar mass of the product, we must first balance the equation . STEP 1: First, we identify each element and its quantity for both reactants and products. There is 1 Fe, 2 S, and 2 O on the reactants side, and 2 Fe, 1 S, and 5 O on the products side. FeS 2 + O 2 → Fe 2 O 3 + SO 2 STEP 2: Next, we will balance the iron. Since there are 2 Fe on the product side, let’s add a 2 in front of FeS 2 to balance the iron: 2 FeS 2 + O 2 → Fe 2 O 3 + SO 2 STEP 3: Now let’s balance the sulfur. There are 4 S on the reactant side, so let’s add a 4 in front of SO 2 to balance sulfur: 2 FeS 2 + O 2 → Fe 2 O 3 + 4 SO 2 STEP 4: Now, we can consider the oxygen. There are 2 O on the reactant side and 11 O on the product side, so we must add coefficients so that it multiplies out to a total of 22 O on each side. We can do this by adding an 11 in front of O 2 , a 2 in front of Fe 2 O 3 , and changing the coefficient in front of SO 2 to an 8 . 2 FeS 2 + 11 O 2 → 2 Fe 2 O 3 + 8 SO 2 STEP 5: Finally, we have to go back and check the Fe and the S. We can balance both by changing the coefficient in front of FeS 2 to a 4 : 4 FeS 2 + 11 O 2 → 2 Fe 2 O 3 + 8 SO 2 STEP 6: Now that the equation is balanced, we can begin our molar mass calculations using our coefficients: Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Balancing+Equations%3A+Balancing+Equations/Question+8+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "What is the mass of H 2 SO 4 required to completely react with 40 g of NaOH according to the following reaction? H 2 SO 4 + NaOH → Na 2 SO 4 + H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "26",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "38",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "49",
+        "images": [],
+        "percentage_selected": "(84.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "52",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "65",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "49",
+    "analytics": {
+      "percent_correct": "84.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "In order to obtain the mass of this reactant, we must first balance the equation . Then, we will use a molar mass conversion to find the mass. STEP 1: First, we identify each element and its quantity for both reactants and products. There is 3 H, 1 S, 5 O, and 1 Na on the reactants side, and 2 H, 1 S, 5 O, and 2 Na on the products side. H 2 SO 4 + NaOH → Na 2 SO 4 + H 2 O STEP 2: Next, we will balance the sodium. Since there are 2 Na on the product side, let’s add a 2 in front of NaOH to balance the sodium: H 2 SO 4 + 2 NaOH → Na 2 SO 4 + H 2 O STEP 3: Now let’s balance the hydrogen. There are 4 H on the product side, so let’s add a 2 in front of H 2 O to balance hydrogen: H 2 SO 4 + 2 NaOH → Na 2 SO 4 + 2 H 2 O STEP 4: Now that the equation is balanced, we can begin our mass calculations. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Balancing+Equations%3A+Balancing+Equations/Question+9+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations",
+    "question": {
+      "text": "How many grams of calcium hydroxide are needed to react completely with 4 moles of hydrochloric acid according to the unbalanced equation below? (balance the equation first) Ca(OH) 2 + HCl → CaCl 2 + H 2 O",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "37",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "74",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "120",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "148",
+        "images": [],
+        "percentage_selected": "(82.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "296",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "148",
+    "analytics": {
+      "percent_correct": "82.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "In order to obtain the mass of this reactant, we must first balance the equation . Then, we will use a molar mass conversion to find the mass. STEP 1: First, we identify each element and its quantity for both reactants and products. There is 1 Ca, 2 O, 3 H, 1 Cl on the reactants side, and 1 Ca, 1 O, 2 H, 2 Cl on the products side. Ca(OH) 2 + HCl → CaCl 2 + H 2 O STEP 2: Next, we will balance the chlorine. Since there are 2 Cl on the product side, let’s add a 2 in front of HCl to balance the chlorine: Ca(OH) 2 + 2 HCl → CaCl 2 + H 2 O STEP 3: Now let’s balance the hydrogen. There are 4 H on the reactant side now, so let’s add a 2 in front of H 2 O to balance hydrogen: Ca(OH) 2 + 2 HCl → CaCl 2 + 2 H 2 O STEP 4: Now that the equation is balanced, we can begin our mass calculations. Therefore, the answer is D .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Balancing+Equations%3A+Balancing+Equations/Question+10+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "error": "Timeout during quiz processing (Q10): Message: \nStacktrace:\n0   chromedriver                        0x0000000104cb6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000104caf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001047f68d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010483d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010487e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000104831a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000104c7bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000104c7ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000104c5ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000104c7f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000104c4cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000104c9f9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000104c9fb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000104caecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Stoichiometry & General Concepts",
+    "question_bank": "Balancing Equations"
+  }
+]

@@ -1,0 +1,578 @@
+[
+  {
+    "question_number": 1,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Which of the following statements about the change in enthalpy (ΔH) during phase changes is correct?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "The heat of vaporization is greater than the heat of fusion",
+        "images": [],
+        "percentage_selected": "(87.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "The heat of vaporization is greater than the heat of sublimation",
+        "images": [],
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "The heat of fusion is greater than the heat of sublimation",
+        "images": [],
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "The heat of fusion is greater than the heat of vaporization",
+        "images": [],
+        "percentage_selected": "(4.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "The heat of fusion is equal to the heat of vaporization",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "The heat of vaporization is greater than the heat of fusion",
+    "analytics": {
+      "percent_correct": "87.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heats of formation , we will need to review the enthalpy during different phase changes: In this case, we can reach two important conclusions regarding phase change enthalpies: Option A. The heat of vaporization is greater than the heat of fusion Correct. In vaporization, molecules go from a flowing liquid state into a freely moving gaseous state, which requires more energy than fusion, in which molecules go from a locked solid state to a flowing liquid state. Option B. The heat of vaporization is greater than the heat of sublimation Incorrect. In vaporization, molecules go from a flowing liquid state into a freely moving gaseous state, which requires less energy than sublimation, in which molecules go from a locked solid state to a freely moving gaseous state. Option C. The heat of fusion is greater than the heat of sublimation Incorrect. In fusion, molecules go from a locked solid state to a flowing liquid state, which requires less energy than sublimation, in which molecules go from a locked solid state to a freely moving gaseous state. Option D. The heat of fusion is greater than the heat of vaporization Incorrect. In fusion, molecules go from a locked solid state to a flowing liquid state, which requires less energy than vaporization, in which molecules go from a flowing liquid state into a freely moving gaseous state. Option E. The heat of fusion is equal to the heat of vaporization Incorrect. In fusion, molecules go from a locked solid state to a flowing liquid state, which requires less energy than vaporization, in which molecules go from a flowing liquid state into a freely moving gaseous state. Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+1+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Which of the following regarding standard enthalpy of formation (ΔH o f ) is incorrect?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "All reactants must be in their standard states",
+        "images": [],
+        "percentage_selected": "(12.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Each reactant must have a quantity of one mole",
+        "images": [],
+        "percentage_selected": "(63.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "ΔH o f varies depending on the state of the product",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "An element in its standard state has a ΔH o f of zero",
+        "images": [],
+        "percentage_selected": "(8.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "One mole of the product of interest is formed",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Each reactant must have a quantity of one mole",
+    "analytics": {
+      "percent_correct": "63.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Keep in mind we need to find the statement that is not correct about standard enthalpy of formation (ΔH o f). Option A. All reactants must be in their standard states Incorrect. To calculate the standard enthalpy of formation, all reactants must be in their standard states. Option B. Each reactant must have a quantity of one mole Correct. The formation reaction must produce one mole of a substance, but the reactants don’t necessarily need to have a quantity of one mole. For example, the standard enthalpy of formation equation for HCl ( g ) is: 1/2 H 2( g ) + 1/2 Cl 2( g ) → HCl ( g ) . Option C. ΔH o f varies depending on the state of the product Incorrect. ΔH o f values can vary depending on which state the product is in. For example, ΔH o f of H 2 O ( g ) is -242 kJ• mol -1 , whereas ΔH o f of H 2 O ( l ) is -286 kJ• mol -1 . Option D. An element in its standard state has a ΔH o f of zero Incorrect. In formation reactions, a reacting element in its standard state has a ΔH o f of zero. Option E. One mole of the product of interest is formed Incorrect. The standard enthalpy of formation equation results in one mole of a product of interest being formed. Therefore, the answer is B .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Each of the following elements have a standard enthalpy of formation (ΔH o f ) of zero EXCEPT one. Which one is the EXCEPTION?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "O 2( g )",
+        "images": [],
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "H 2( g )",
+        "images": [],
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "C ( s, graphite )",
+        "images": [],
+        "percentage_selected": "(24.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Br 2( l )",
+        "images": [],
+        "percentage_selected": "(11.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "F 2( s )",
+        "images": [],
+        "percentage_selected": "(60.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "F 2( s )",
+    "analytics": {
+      "percent_correct": "60.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Concept To solve this problem involving heats of formation , we will need to review the standard states of general elements: Keep in mind we need to find the element that does not have a standard enthalpy of formation of zero. Option A. O 2(g) Incorrect. In standard state, oxygen exists as a diatomic molecule in gaseous form. Option B. H 2(g) Incorrect. In standard state, hydrogen exists as a diatomic molecule in gaseous form. Option C. C (s, graphite) Incorrect. In standard state, carbon exists as a molecule in solid form. Option D. Br 2(l) Incorrect. In standard state, bromine exists as a diatomic molecule in liquid form. Option E. F 2(s) Correct. In standard state, fluorine exists as a diatomic molecule in gaseous form. Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Which of the following represents the standard enthalpy of formation (ΔH o f ) for MgCl 2( s ) ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "MgCl 2( s ) → Mg ( s ) + 2 Cl ( s )",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "MgCl 2( s ) → Mg ( s ) + 2 Cl ( g )",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Mg ( s ) + 2 Cl ( s ) → MgCl 2( s )",
+        "images": [],
+        "percentage_selected": "(11.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Mg ( s ) + Cl 2( g ) → MgCl 2( s )",
+        "images": [],
+        "percentage_selected": "(73.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "Mg ( g ) + 2 Cl ( g ) → MgCl 2( s )",
+        "images": [],
+        "percentage_selected": "(7.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Mg ( s ) + Cl 2( g ) → MgCl 2( s )",
+    "analytics": {
+      "percent_correct": "73.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Solution To solve this problem involving heats of formation , we will need to review how to write standard of enthalpy of formation equations. STEP 1 : Standard enthalpy of formation reactions should represent 1 mole of a substance formed from their constituent elements. In this case, Mg and Cl should form 1 mole of MgCl 2( s ) . STEP 2 : We now need to identify the standard states for Mg and Cl: STEP 3 : We now form the balanced equation. In this case, the equation is already balanced. Altogether, the standard enthalpy of formation equation for MgCl 2( s ) is as follows: Mg ( s ) + Cl 2( g ) → MgCl 2( s ) Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Given the standard heats of formation, calculate the enthalpy change for the combustion of methane: CH 4( g ) + 2 O 2( g ) → CO 2( g ) + 2 H 2 O ( l ) Compound ΔH o f (kJ• mol -1 ) CH 4( g ) -75 CO 2( g ) -394 H 2 O ( l ) -286",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "1040 kJ",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "-891 kJ",
+        "images": [],
+        "percentage_selected": "(74.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "-755 kJ",
+        "images": [],
+        "percentage_selected": "(9.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "605 kJ",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "891 kJ",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-891 kJ",
+    "analytics": {
+      "percent_correct": "74.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heats of formation , we will need to calculate the enthalpy change for a reaction based on the standard heats of formation given. STEP 1 : The equation for calculating the enthalpy change is as follows: STEP 2 : We now input the ΔH o f of the compounds given from the table. Since O 2( g ) is an element in its standard state, its ΔH o f is zero. ΔH o rxn = [(1 mol of CO 2( g ) )(-394) + (2 mol of H 2 O ( l ) )(-286)] – (1 mol of CH 4( g ) )(-75) STEP 3 : We can now solve the equation to determine ΔH o f of the reaction. ΔH o rxn = [(-394) + (-572)] – (-75) ΔH o rxn = -394 – 572 + 75 ΔH o rxn = -891 kJ Therefore, the answer is B .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Which of the following is the correct formation equation for CaCO 3( s ) ?",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "Ca ( s ) + CO 3( g ) → CaCO 3( s )",
+        "images": [],
+        "percentage_selected": "(32.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "Ca ( s ) + C ( s ) + 3 O ( g ) → CaCO 3( s )",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "Ca ( s ) + C ( s ) + O 3( g ) → CaCO 3( s )",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "Ca ( s ) + C ( s ) + 3/2 O 2( g ) → CaCO 3( s )",
+        "images": [],
+        "percentage_selected": "(54.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "text": "2 Ca ( s ) + 2 C ( s ) + 3 O 2( g ) → 2 CaCO 3( s )",
+        "images": [],
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "Ca ( s ) + C ( s ) + 3/2 O 2( g ) → CaCO 3( s )",
+    "analytics": {
+      "percent_correct": "54.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Solution To solve this problem involving heats of formation , we will need to review how to write standard of enthalpy of formation equations. STEP 1 : Standard enthalpy of formation reactions should represent 1 mole of a substance formed from their constituent elements. In this case, Ca, C, and O should form 1 mole of CaCO 3( s ) . STEP 2 : We now need to identify the standard states for Ca, C, and O. STEP 3 : We now form the equation. So far, the standard enthalpy of formation equation for CaCO 3( s ) is as follows: Ca ( s ) + C ( s ) + O 2( g ) → CaCO 3( s ) STEP 4 : We now need to balance the equation. Since the formation equation must result in 1 mole of a substance produced, we cannot change the coefficient of CaCO 3( s ) . Instead, we must change the coefficient of O 2( g ) to balance the equation. In this case, we multiply 3/2 to O 2( g ) to balance the oxygens on either side. Ca ( s ) + C ( s ) + 3/2 O 2( g ) → CaCO 3( s ) Therefore, the answer is D .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Which of the following represents the enthalpy change for the reaction below, using each compound’s (A, B, C, D) standard enthalpy of formation? 2 A + B → 2 C + 3 D",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+7+Option+Choice+A.png"
+        ],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+7+Option+Choice+B.png"
+        ],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+7+Option+Choice+C.png"
+        ],
+        "percentage_selected": "(92.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+7+Option+Choice+D.png"
+        ],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "",
+        "images": [
+          "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+7+Option+Choice+E.png"
+        ],
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "",
+    "analytics": {
+      "percent_correct": "92.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heats of formation , we will need to review how to calculate the enthalpy change for a reaction based on the standard heats of formation of each substance. STEP 1 : To calculate the enthalpy change, we need to know the standard heats of formation. In this case, they are represented by H o f (A) for compound A, and so on. STEP 2 : Next, we need to use the equation for calculating enthalpy change: STEP 3 : We can now use the equation to input the standard enthalpies of formation for each compound. Therefore, the answer is C .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+7+Solution+1.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+7+Solution+2.png",
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Given the following equation for the oxidation of ammonia, what is the standard heat of formation (ΔH o f ) of ammonia gas (NH 3 )? NH 3( g ) + 5 O 2( g ) → 4 NO ( g ) + 6 H 2 O ( g ) ΔH o rxn = -906 kJ Compound ΔH o f (kJ•mol -1 ) NO ( g ) 90 H 2 O ( g ) -242 H 2 O ( l ) -286",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "ΔH o f = (906) + [6(-242) + 4(90)]",
+        "images": [],
+        "percentage_selected": "(63.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "ΔH o f = (-906) + [6(-242) + 4(90)]",
+        "images": [],
+        "percentage_selected": "(12.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "ΔH o f = (-906) – [6(-242) + 4(90)]",
+        "images": [],
+        "percentage_selected": "(18.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "ΔH o f = (906) + [6(-286) + 4(90)]",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "ΔH o f = (-906) + [6(-286) + 4(90)]",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "ΔH o f = (906) + [6(-242) + 4(90)]",
+    "analytics": {
+      "percent_correct": "63.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "To solve this problem involving heats of formation , we will need to use the enthalpy change for the reaction and the given standard heats of formation to calculate the unknown standard heat of formation. STEP 1 : The equation for calculating the enthalpy change is as follows: STEP 2 : In this case, we are given the enthalpy change of the reaction and the standard heats of formation for some of the substances. Since O 2( g ) is an element in its standard state, its ΔH o f is zero. We also need to keep in mind that standard heats of formation will differ for elements in different states, and we must use H 2 O ( g ) instead of H 2 O ( l ) . -906 = [(6 mol H 2 O ( g ) )(-241.8) + (4 mol NO ( g ) )(90.3)] – [(1 mol NH 3( g ) )(ΔH o f of NH 3( g ) )] STEP 3 : We can now rearrange to solve for ΔH o f of NH 3( g ) . -906 = [6(-241.8) + 4(90.3)] – (ΔH o f of NH 3( g ) ) ΔH o f of NH 3( g ) = 906 + [6(-241.8) + 4(90.3)] Therefore, the answer is A .",
+      "images": [
+        "https://datbooster.s3.amazonaws.com/General+Chemistry/Entropy+and+Enthalpy%3A+Heats+of+Formation/Question+5+Solution+1.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Determine the enthalpy change for the reaction below, given the standard heat of formation for the following equations: A → B + 3D ΔH o = ? kJ·mol -1 A + 2B → 3C ΔH o f = -200 kJ·mol -1 C → B + D ΔH o f = -150 kJ·mol -1",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-650",
+        "images": [],
+        "percentage_selected": "(55.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "-500",
+        "images": [],
+        "percentage_selected": "(9.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-350",
+        "images": [],
+        "percentage_selected": "(24.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "-50",
+        "images": [],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "50",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "-650",
+    "analytics": {
+      "percent_correct": "55.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "Solution To solve this problem involving heats of formation , we will need to review Hess’ Law and how to apply it. To find the overall enthalpy change for reaction, we can sum up the enthalpy changes of its intermediate reactions. When we manipulate equations, we also change the ΔH o as follows: The provided heats of formations are: A → B + 3D ΔH o = ? kJ·mol -1 A + 2B → 3C ΔH o f = -200 kJ·mol -1 C → B + D ΔH o f = -150 kJ·mol -1 STEP 1 : Looking at the 1st equation for the overall enthalpy change, we see that there is 3 D on the product side. The only other place there is compound D is in the 3rd equation. Therefore, we multiply the 3rd equation by 3 to match the 3 D in the 1st equation. 3 C → 3 B + 3 D                              ΔH o f = -450 kJ•mol -1 STEP 2 : When we look at the 2nd equation, there is 1 A on the reactant side, which matches with the 1 A in the 1st equation. We can now add the 2nd and 3rd equations together to result in the 1st equation. We can cancel out molecules if they are on opposite (reactant and product) sides. A + 2 B → 3 C ΔH o f = -200 kJ•mol -1 3 C → 3 B + 3 D                               ΔH o f = -450 kJ•mol -1 STEP 3 : Both 3 C compounds cancel each other out, and there is 1 B remaining on the product side. The resulting equation and overall enthalpy change is as follows: A → B + 3 D                                      ΔH o = -650 kJ·mol -1 Therefore, the answer is A .",
+      "images": []
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation",
+    "question": {
+      "text": "Given the following enthalpies: C 6 H 12 O 6( s ) + 6 O 2( g ) → 6 CO 2( g ) + 6 H 2 O ( l ) ΔH o 1 = X C ( s ) + O 2( g ) → CO 2( g ) ΔH o 2 = Y 2 H 2( g ) + O 2( g ) → 2 H 2 O ( l ) ΔH o 3 = Z What is the enthalpy change for the formation of glucose in the following reaction? 6 C ( s ) + 6 H 2( g ) + 3 O 2( g ) → C 6 H 12 O 6( s )",
+      "images": []
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "-X + 2Y + Z",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "X + 2Y + Z",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "-X + 6Y – 3Z",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "X + 6Y + 3Z",
+        "images": [],
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "text": "-X + 6Y + 3Z",
+        "images": [],
+        "percentage_selected": "(78.7%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "-X + 6Y + 3Z",
+    "analytics": {
+      "percent_correct": "78.7%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "Solution To solve this problem involving heats of formation , we will need to review Hess’ Law and how to apply it. To find the overall enthalpy change for reaction, we can sum up the enthalpy changes of its intermediate reactions. When we manipulate equations, we also change the ΔH o as follows: STEP 1 : Looking at the equation for the formation of glucose, we see that we need C 6 H 12 O 6( s ) to be on the product side. In equation 1, it is on the reactant side. We can reverse the equation to bring C 6 H 12 O 6( s ) to the opposite side, but according to Hess’ Law, we also need to multiply ΔH o 1 by -1. 6 CO 2( g ) + 6 H 2 O ( l ) → C 6 H 12 O 6( s ) + 6 O 2( g ) ΔH o 1 = -X STEP 2 : We also see that we need 6 C ( s ) on the reactant side. We can multiply equation 2 by 6 to obtain this: 6 C ( s ) + 6 O 2( g ) → 6 CO 2( g ) ΔH o 2 = 6Y STEP 3 :  Finally, we see that we need 6 H2 ( g ) on the reactant side. We can multiply equation 3 by 3 to obtain this: 6 H 2( g ) + 3O 2( g ) → 6 H 2 O ( l ) ΔH o 3 = 3Z STEP 4 : Lastly, we add all the equations together to determine the overall enthalpy change for the formation of glucose reaction. 6 CO 2( g ) + 6 H 2 O ( l ) → C 6 H 12 O 6( s ) + 6 O 2( g ) ΔH o 1 = -X 6 C ( s ) + 6 O 2( g ) → 6 CO 2( g ) ΔH o 2 = 6Y 6 H 2( g ) + 3O 2( g ) → 6 H 2 O ( l ) ΔH o 3 = 3Z Which gives us: 6 C ( s ) + 6 H 2( g ) + 3 O 2( g ) → C 6 H 12 O 6( s ) ΔH o rxn = -X + 6Y + 3Z Therefore, the answer is E .",
+      "images": []
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x0000000100ad6e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x0000000100acf0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001006168d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x000000010065d6a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010069e7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x0000000100651a80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100a9bc98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x0000000100a9ef64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100a7ba20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x0000000100a9f7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100a6cb14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x0000000100abf9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x0000000100abfb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x0000000100acecf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Liquids and Solids",
+    "question_bank": "Heats of Formation"
+  }
+]

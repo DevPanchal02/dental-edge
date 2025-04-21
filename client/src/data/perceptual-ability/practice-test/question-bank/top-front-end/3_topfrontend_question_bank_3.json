@@ -1,0 +1,2808 @@
+[
+  {
+    "question_number": 1,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/101C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(79.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "79.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/101C+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/101C+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/101end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/101front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/101top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/102A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(74.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "74.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/102A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/102front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/102end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/102top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/102A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/103D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(24%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(66.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "66.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/103end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/103D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/103D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/103top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/103front.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/104B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(82.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "82.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/104top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/104front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/104B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/104B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/104end.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/105B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/105front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/105end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/105B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/105B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/105top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/106D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(88.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "88.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/106D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/106front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/106top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/106D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/106end.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/107A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(52.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(34.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "52.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/107end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/107front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/107A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/107A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/107top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/108B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(88%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "88%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/108front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/108B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/108end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/108top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/108B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/109D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/109top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/109D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/109front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/109D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/109end.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/110C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(14.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(66.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "66.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/110end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/110C+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/110C+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/110front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/110top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 11,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/111A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(90.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "90.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/111A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/111top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/111end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/111front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/111A+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 12,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/112C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(86%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "86%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/112C+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/112front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/112end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/112C+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/112top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 13,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/113B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(82.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "82.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/113top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/113B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/113end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/113B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/113front.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 14,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/114A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/114A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/114front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/114top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/114end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/114A+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 15,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/115D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(78.3%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "78.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/115D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/115D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/115front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/115end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/115top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 16,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/116D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(20.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(70.5%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "70.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/116end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/116D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/116D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/116top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/116front.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 17,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/117B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(90.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "90.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/117B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/117B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/117front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/117end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/117top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 18,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/118D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(88.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "88.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/118end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/118D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/118D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/118front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/118top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 19,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/119C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(96.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "96.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/119end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/119front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/119top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/119C+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/119C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 20,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/120A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(90.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "90.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/120end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/120A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/120front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/120A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/120top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 21,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/121B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(27.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(68.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "68.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/121end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/121B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/121front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/121top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/121B+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 22,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/122D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85.6%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/122top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/122end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/122D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/122front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/122D+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 23,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/123A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(78.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "78.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/123A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/123top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/123A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/123end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/123front.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 24,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/124C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(79.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "79.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/124front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/124C+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/124end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/124top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/124C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 25,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/125A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(80.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "80.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/125top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/125A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/125A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/125front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/125end.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 26,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/126D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/126front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/126top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/126D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/126end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/126D+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 27,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/127B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(78.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "78.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/127end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/127front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/127top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/127B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/127B+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 28,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/128A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(59.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(33%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "59.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/128A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/128front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/128end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/128top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/128A+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 29,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/129D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(74.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "74.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/129D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/129D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/129front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/129end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/129top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 30,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/130C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(16.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(72.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "72.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/130top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/130front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/130end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/130C+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/130C+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 31,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/131B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(15.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(69.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "69.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/131top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/131front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/131B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/131B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/131end.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 32,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/132A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(71.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "71.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/132top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/132A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/132end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/132front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/132A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 33,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/133D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(24%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(54.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "54.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/133D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/133end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/133D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/133front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/133top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 34,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/134B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(14.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(84.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "84.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/134B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/134B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/134top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/134end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/134front.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 35,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/135A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(96.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "96.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/135front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/135A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/135end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/135top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/135A+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 36,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/136C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(37.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(56.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "56.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/136C+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/136C+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/136front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/136top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/136end.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 37,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/137A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(89%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "89%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/137A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/137front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/137end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/137A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/137top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 38,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/138D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(93.8%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "93.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/138top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/138D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/138end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/138front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/138D+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 39,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/139B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(14.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(76.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "76.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/139front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/139top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/139B+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/139B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/139end.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 40,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/140C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(75.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(11.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "75.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/140top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/140end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/140C+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/140front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/140C+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 41,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/141A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(75.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "75.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/141front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/141A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/141A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/141end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/141top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 42,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/142A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(96.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "96.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/142A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/142A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/142end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/142front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/142top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 43,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/143B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(93.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "93.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/143end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/143front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/143top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/143B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/143B+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 44,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/144D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(4.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(92.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "92.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/144end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/144D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/144top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/144front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/144D+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 45,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/145C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(13.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(74%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "74%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/145end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/145top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/145C+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/145front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/145C+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 46,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/146D-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(85.1%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "85.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/146D+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/146D+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/146front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/146end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/146top.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 47,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/147B-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(12.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(73.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(10.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "73.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/147front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/147end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/147B+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/147top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/147B+Solution+2-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 48,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/148C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(8.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.5%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.5%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/148top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/148C+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/148front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/148end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/148C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "question_number": 49,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/149A-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(91.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "91.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/149A+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/149front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/149A+Solution-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/149top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/149end.gif"
+      ]
+    }
+  },
+  {
+    "question_number": 50,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3",
+    "question": {
+      "text": "",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/150C-01.png"
+      ]
+    },
+    "options": [
+      {
+        "label": "A.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(81.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "text": "N/A",
+        "images": [],
+        "percentage_selected": "(7.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_text": "N/A",
+    "analytics": {
+      "percent_correct": "81.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "concept_text": "(Not found)",
+      "images": [
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/150end.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/150C+Solution+2-01.png",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/150top.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/150front.gif",
+        "https://patbooster.s3.amazonaws.com/TopFrontEnd/Qbank/150C+Solution-01.png"
+      ]
+    }
+  },
+  {
+    "error": "Quiz error Q50: Message: \nStacktrace:\n0   chromedriver                        0x00000001009d2e10 cxxbridge1$str$ptr + 2817040\n1   chromedriver                        0x00000001009cb0ac cxxbridge1$str$ptr + 2784940\n2   chromedriver                        0x00000001005128d8 cxxbridge1$string$len + 93028\n3   chromedriver                        0x00000001005596a0 cxxbridge1$string$len + 383276\n4   chromedriver                        0x000000010059a7b8 cxxbridge1$string$len + 649796\n5   chromedriver                        0x000000010054da80 cxxbridge1$string$len + 335116\n6   chromedriver                        0x0000000100997c98 cxxbridge1$str$ptr + 2575000\n7   chromedriver                        0x000000010099af64 cxxbridge1$str$ptr + 2588004\n8   chromedriver                        0x0000000100977a20 cxxbridge1$str$ptr + 2443296\n9   chromedriver                        0x000000010099b7e0 cxxbridge1$str$ptr + 2590176\n10  chromedriver                        0x0000000100968b14 cxxbridge1$str$ptr + 2382100\n11  chromedriver                        0x00000001009bb9c4 cxxbridge1$str$ptr + 2721732\n12  chromedriver                        0x00000001009bbb50 cxxbridge1$str$ptr + 2722128\n13  chromedriver                        0x00000001009cacf8 cxxbridge1$str$ptr + 2783992\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 50,
+    "category": "Top-Front-End",
+    "question_bank": "Top-Front-End Question Bank #3"
+  }
+]
