@@ -2,22 +2,29 @@
 import React from 'react';
 import '../styles/QuestionCard.css';
 
-// Helper to safely render POE text (same as before)
+// Helper to safely render POE text
 const renderPoeText = (poeText) => {
     if (!poeText || typeof poeText !== 'string') {
         return <p>Process of elimination not available.</p>;
     }
+    // Match "Option X." variants (optional space, case-insensitive)
     const parts = poeText.split(/(Option\s+[A-Z]\s*\.)/i);
+
     return parts.filter(part => part?.trim()).map((part, index) => {
         const isHeader = /Option\s+[A-Z]\s*\./i.test(part);
         if (isHeader) {
+            // Render the header boldly
             return <strong key={`poe-header-${index}`} className="poe-header">{part.trim()}</strong>;
         } else {
+             // Render the text part following a header, or the initial text
+             // Check if the *previous* non-empty part was a header
              const previousPartIndex = parts.slice(0, index).findLastIndex(p => p?.trim());
              const previousPartIsHeader = previousPartIndex !== -1 && /Option\s+[A-Z]\s*\./i.test(parts[previousPartIndex]);
+
              if (index === 0 || previousPartIsHeader) {
                 return <p key={`poe-text-${index}`} className="poe-text">{part.trim()}</p>;
              }
+             // Avoid rendering text parts that might be empty strings or artifacts of splitting
              return null;
         }
     });
@@ -31,6 +38,7 @@ function QuestionCard({
   isSubmitted,
   showExplanation,
   crossedOffOptions, // Receive crossed off options Set
+  userTimeSpentOnQuestion, // NEW PROP: Pass the specific time for this question
   onOptionSelect,
   onSubmit,
   onToggleExplanation,
@@ -45,6 +53,7 @@ function QuestionCard({
     return ( <div className="question-card error-card"><p className="error-message">Error loading Question {questionIndex + 1}:<br /><span className="error-details">{questionData.error}</span></p></div> );
   }
 
+  // Destructure safely, providing defaults
   const {
       question = { text: 'Question text missing.', images: [] },
       options = [],
@@ -55,7 +64,8 @@ function QuestionCard({
 
 
   const handleSelect = (optionLabel) => {
-    if (!isSubmitted) {
+    // Allow selecting only if not submitted AND not crossed off
+    if (!isSubmitted && !crossedOffOptions.has(optionLabel)) {
       onOptionSelect(questionIndex, optionLabel);
     }
   };
@@ -81,7 +91,10 @@ function QuestionCard({
             className += ' incorrect';
         }
     } else if (option.label === selectedOption) {
-        className += ' selected';
+      // Only apply selected style if not crossed off
+      if (!crossedOffOptions.has(option.label)) {
+          className += ' selected';
+      }
     }
     return className;
   };
@@ -103,19 +116,26 @@ function QuestionCard({
 
       {/* Options */}
       <div className="options-container">
+        {/* Ensure options is an array before mapping */}
         {Array.isArray(options) && options.map((option) => (
           <label
             key={option.label}
             className={getOptionClassName(option)}
             onContextMenu={(e) => handleContextMenu(e, option.label)} // Add context menu handler
+            // Add onClick handler to the label for better mobile/touch interaction
+            // and to handle clicks on crossed-off items if needed (currently does nothing if crossed)
+            onClick={() => handleSelect(option.label)}
           >
             <input
               type="radio"
               name={`question-${questionIndex}`}
               value={option.label}
-              checked={selectedOption === option.label && !crossedOffOptions.has(option.label)} // Don't show radio checked if crossed off
-              onChange={() => handleSelect(option.label)}
-              disabled={isSubmitted || crossedOffOptions.has(option.label)} // Disable radio if submitted or crossed off
+              // Radio is checked only if it's the selected one AND NOT crossed off
+              checked={selectedOption === option.label && !crossedOffOptions.has(option.label)}
+              // ReadOnly because the actual change is handled by the label's onClick
+              readOnly
+              // Disable if submitted or crossed off
+              disabled={isSubmitted || crossedOffOptions.has(option.label)}
               className="option-radio"
             />
             <span className="option-label-text">
@@ -142,8 +162,9 @@ function QuestionCard({
           <button
              onClick={() => onSubmit(questionIndex)}
              className="submit-button"
-             disabled={!selectedOption || crossedOffOptions.has(selectedOption)} // Disable submit if selected option is crossed off
-             title={crossedOffOptions.has(selectedOption) ? "Cannot submit a crossed-off option" : ""}
+             // Disable submit if nothing is selected OR if the selected option is crossed off
+             disabled={!selectedOption || crossedOffOptions.has(selectedOption)}
+             title={crossedOffOptions.has(selectedOption) ? "Cannot submit a crossed-off option" : (!selectedOption ? "Please select an answer" : "")}
              >
             Submit Answer
           </button>
@@ -167,8 +188,13 @@ function QuestionCard({
           </div>
            <div className="analytics-section">
                 <h4>Analytics</h4>
-                <p>Percent Correct: {analytics.percent_correct}</p>
-                <p>Avg Time Spent: {analytics.time_spent}</p>
+                 {/* Display user's time if available, otherwise fallback to JSON data */}
+                 <p>Time Spent: {
+                    userTimeSpentOnQuestion !== undefined
+                        ? `${userTimeSpentOnQuestion}s` // Display user's recorded time
+                        : (analytics?.time_spent || 'N/A') // Fallback to JSON data
+                 }</p>
+                <p>Percent Correct (Average): {analytics.percent_correct || 'N/A'}</p>
                 {(questionData.category || analytics?.category) && <p>Category: {questionData.category || analytics.category}</p>}
             </div>
         </div>

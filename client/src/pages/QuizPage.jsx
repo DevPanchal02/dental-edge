@@ -27,6 +27,7 @@ function QuizPage() {
     const { topicId, sectionType, quizId } = useParams();
     const navigate = useNavigate();
     const timerIntervalRef = useRef(null); // Ref to store interval ID
+    const questionStartTimeRef = useRef(null); // Ref to store timestamp when question appears
 
     const [quizData, setQuizData] = useState(null);
     const [quizMetadata, setQuizMetadata] = useState(null);
@@ -35,6 +36,7 @@ function QuizPage() {
     const [submittedAnswers, setSubmittedAnswers] = useState({});
     const [showExplanation, setShowExplanation] = useState({});
     const [crossedOffOptions, setCrossedOffOptions] = useState({}); // { qIndex: Set<optionLabel> }
+    const [userTimeSpent, setUserTimeSpent] = useState({}); // NEW state: { qIndex: timeInSeconds }
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
@@ -56,6 +58,7 @@ function QuizPage() {
         setSubmittedAnswers({});
         setShowExplanation({});
         setCrossedOffOptions({});
+        setUserTimeSpent({}); // Reset user time spent
         setIsTimerActive(false); // Stop timer during load
         setTimerValue(0);
         setIsCountdown(false);
@@ -63,16 +66,14 @@ function QuizPage() {
              clearInterval(timerIntervalRef.current); // Clear existing interval
              timerIntervalRef.current = null;
         }
-
+        questionStartTimeRef.current = null; // Reset start time ref
 
         try {
             const data = getQuizData(topicId, sectionType, quizId);
             const metadata = getQuizMetadata(topicId, sectionType, quizId);
-
             if (!data || data.length === 0 || !metadata) {
                 throw new Error(`Quiz data or metadata not found for ${topicId}/${sectionType}/${quizId}.`);
             }
-
             setQuizData(data);
             setQuizMetadata(metadata);
 
@@ -114,16 +115,15 @@ function QuizPage() {
 
     // --- Timer Effect ---
     useEffect(() => {
-        if (isTimerActive) {
+         if (isTimerActive) {
             timerIntervalRef.current = setInterval(() => {
                 setTimerValue(prevTime => {
                     if (isCountdown) {
                         const newTime = prevTime - 1;
                         if (newTime <= 0) {
-                            clearInterval(timerIntervalRef.current); // Stop timer
+                            clearInterval(timerIntervalRef.current);
                             timerIntervalRef.current = null;
                             setIsTimerActive(false);
-                            // Optional: Auto-finish or show time's up message
                             alert("Time's up!");
                             // handleFinishQuiz(); // Optionally auto-finish
                             return 0;
@@ -152,6 +152,23 @@ function QuizPage() {
         };
     }, [isTimerActive, isCountdown]); // Rerun effect if these change
 
+    // --- Effect to Record Question Start Time ---
+    useEffect(() => {
+        // Record the time when the current question becomes visible *after* loading is complete
+        if (!isLoading && quizData && currentQuestionIndex >= 0) {
+             // Only record if the answer hasn't been submitted for this question yet
+             // to avoid resetting time if user navigates back and forth after submitting
+            if (!submittedAnswers[currentQuestionIndex]) {
+                console.log(`[QuizPage] Recording start time for Question ${currentQuestionIndex + 1}`);
+                questionStartTimeRef.current = Date.now();
+            } else {
+                 // Clear the start time ref if the question was already submitted
+                 // Prevents accidentally using old start time if user navigates back
+                 questionStartTimeRef.current = null;
+            }
+        }
+    }, [currentQuestionIndex, isLoading, quizData, submittedAnswers]); // Rerun when index, loading state, or data changes
+
     // --- Event Handlers ---
     const handleOptionSelect = (questionIndex, optionLabel) => {
         if (!submittedAnswers[questionIndex]) {
@@ -160,12 +177,36 @@ function QuizPage() {
     };
 
     const handleSubmitAnswer = (questionIndex) => {
-        if (userAnswers[questionIndex]) {
+        // Ensure an answer is selected and it hasn't been submitted already
+        if (userAnswers[questionIndex] && !submittedAnswers[questionIndex]) {
+
+            // --- Calculate and Record Time Spent ---
+            if (questionStartTimeRef.current) {
+                const endTime = Date.now();
+                const elapsedMs = endTime - questionStartTimeRef.current;
+                const elapsedSeconds = Math.round(elapsedMs / 1000);
+
+                console.log(`[QuizPage] Time spent on Question ${questionIndex + 1}: ${elapsedSeconds}s`);
+
+                setUserTimeSpent(prev => ({
+                    ...prev,
+                    [questionIndex]: elapsedSeconds // Store time in seconds
+                }));
+
+                questionStartTimeRef.current = null; // Clear start time after recording
+            } else {
+                 console.warn(`[QuizPage] Could not record time for Q${questionIndex + 1}: Start time not found.`);
+            }
+            // --- End Time Calculation ---
+
+            // Mark as submitted and show explanation
             setSubmittedAnswers((prev) => ({ ...prev, [questionIndex]: true }));
             setShowExplanation((prev) => ({ ...prev, [questionIndex]: true }));
-        } else {
+
+        } else if (!userAnswers[questionIndex]) {
             alert("Please select an answer before submitting.");
         }
+        // If already submitted, do nothing
     };
 
     const toggleExplanation = (questionIndex) => {
@@ -174,15 +215,26 @@ function QuizPage() {
 
     // Handler for right-click cross-off
     const handleToggleCrossOff = (questionIndex, optionLabel) => {
-        setCrossedOffOptions(prev => {
-            const currentSet = prev[questionIndex] ? new Set(prev[questionIndex]) : new Set();
-            if (currentSet.has(optionLabel)) {
-                currentSet.delete(optionLabel);
-            } else {
-                currentSet.add(optionLabel);
-            }
-            return { ...prev, [questionIndex]: currentSet };
-        });
+        // Only allow crossing off if not submitted
+        if (!submittedAnswers[questionIndex]) {
+            setCrossedOffOptions(prev => {
+                const currentSet = prev[questionIndex] ? new Set(prev[questionIndex]) : new Set();
+                if (currentSet.has(optionLabel)) {
+                    currentSet.delete(optionLabel);
+                } else {
+                    currentSet.add(optionLabel);
+                }
+                // If the currently selected answer is crossed off, deselect it
+                if (currentSet.has(userAnswers[questionIndex])) {
+                    setUserAnswers(prevUserAnswers => {
+                        const updatedAnswers = { ...prevUserAnswers };
+                        delete updatedAnswers[questionIndex];
+                        return updatedAnswers;
+                    });
+                }
+                return { ...prev, [questionIndex]: currentSet };
+            });
+        }
     };
 
 
@@ -194,14 +246,15 @@ function QuizPage() {
 
     const handlePrevious = () => {
         if (currentQuestionIndex > 0) {
+             questionStartTimeRef.current = null; // Clear start time ref when going back
             setCurrentQuestionIndex(currentQuestionIndex - 1);
         }
     };
 
     const handleFinishQuiz = () => {
         setIsTimerActive(false); // Stop timer on finish
-        // Optional: Show summary/results page
-        alert("Quiz Finished! (Implement results page later)");
+        console.log("[QuizPage] User Time Spent Data:", userTimeSpent); // Log final times
+        alert("Quiz Finished! Check console for time spent data (Implement results page later)");
         navigate(`/topic/${topicId}`); // Go back to topic page
     };
 
@@ -255,9 +308,10 @@ function QuizPage() {
                     selectedOption={userAnswers[currentQuestionIndex]}
                     isSubmitted={isSubmitted}
                     showExplanation={showExplanation[currentQuestionIndex]}
-                    crossedOffOptions={currentCrossedOff} // Pass down crossed off set
+                    crossedOffOptions={currentCrossedOff}
+                    userTimeSpentOnQuestion={userTimeSpent[currentQuestionIndex]} // Pass the recorded time
                     onOptionSelect={handleOptionSelect}
-                    onSubmit={handleSubmitAnswer}
+                    onSubmit={handleSubmitAnswer} // Pass the updated handler
                     onToggleExplanation={toggleExplanation}
                     onToggleCrossOff={handleToggleCrossOff} // Pass down toggle handler
                 />
