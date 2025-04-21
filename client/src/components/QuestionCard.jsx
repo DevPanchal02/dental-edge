@@ -2,29 +2,22 @@
 import React from 'react';
 import '../styles/QuestionCard.css';
 
-// Helper to safely render POE text
+// Helper to safely render POE text (same as before)
 const renderPoeText = (poeText) => {
     if (!poeText || typeof poeText !== 'string') {
         return <p>Process of elimination not available.</p>;
     }
-    // Match "Option X." variants (optional space, case-insensitive)
     const parts = poeText.split(/(Option\s+[A-Z]\s*\.)/i);
-
     return parts.filter(part => part?.trim()).map((part, index) => {
         const isHeader = /Option\s+[A-Z]\s*\./i.test(part);
         if (isHeader) {
-            // Render the header boldly
             return <strong key={`poe-header-${index}`} className="poe-header">{part.trim()}</strong>;
         } else {
-             // Render the text part following a header, or the initial text
-             // Check if the *previous* non-empty part was a header
              const previousPartIndex = parts.slice(0, index).findLastIndex(p => p?.trim());
              const previousPartIsHeader = previousPartIndex !== -1 && /Option\s+[A-Z]\s*\./i.test(parts[previousPartIndex]);
-
              if (index === 0 || previousPartIsHeader) {
                 return <p key={`poe-text-${index}`} className="poe-text">{part.trim()}</p>;
              }
-             // Avoid rendering text parts that might be empty strings or artifacts of splitting
              return null;
         }
     });
@@ -37,37 +30,21 @@ function QuestionCard({
   selectedOption,
   isSubmitted,
   showExplanation,
+  crossedOffOptions, // Receive crossed off options Set
   onOptionSelect,
   onSubmit,
-  onToggleExplanation
+  onToggleExplanation,
+  onToggleCrossOff // Receive handler for right-click
 }) {
 
-  // Handle cases where question data might be missing or is an error object
    if (!questionData || typeof questionData !== 'object' || questionData === null) {
      console.warn(`[QuestionCard] Invalid question data at index ${questionIndex}:`, questionData);
-     return (
-       <div className="question-card error-card">
-         <p className="error-message">
-           Error displaying Question {questionIndex + 1}: Invalid data format.
-         </p>
-       </div>
-     );
+     return ( <div className="question-card error-card"><p className="error-message">Error displaying Question {questionIndex + 1}: Invalid data format.</p></div> );
    }
-
-  // Handle specific error objects passed down
   if (questionData.error) {
-    return (
-      <div className="question-card error-card">
-        <p className="error-message">
-          Error loading Question {questionIndex + 1}:
-          <br />
-          <span className="error-details">{questionData.error}</span>
-        </p>
-      </div>
-    );
+    return ( <div className="question-card error-card"><p className="error-message">Error loading Question {questionIndex + 1}:<br /><span className="error-details">{questionData.error}</span></p></div> );
   }
 
-  // Destructure safely, providing defaults
   const {
       question = { text: 'Question text missing.', images: [] },
       options = [],
@@ -83,20 +60,28 @@ function QuestionCard({
     }
   };
 
+  // Handle Right Click
+  const handleContextMenu = (event, optionLabel) => {
+      event.preventDefault(); // Prevent default browser menu
+      if (!isSubmitted) { // Only allow crossing off before submitting
+        onToggleCrossOff(questionIndex, optionLabel);
+      }
+  };
+
   const getOptionClassName = (option) => {
     let className = 'option-label';
-    if (isSubmitted) {
-      if (option.is_correct) {
-        className += ' correct';
-      } else if (option.label === selectedOption) {
-        className += ' incorrect';
-      }
-    } else if (option.label === selectedOption) {
-      className += ' selected';
+    if (crossedOffOptions.has(option.label)) { // Check if crossed off
+        className += ' crossed-off';
     }
-    // Add disabled class if submitted
     if (isSubmitted) {
-        className += ' submitted';
+        className += ' submitted'; // General submitted state
+        if (option.is_correct) {
+            className += ' correct';
+        } else if (option.label === selectedOption) {
+            className += ' incorrect';
+        }
+    } else if (option.label === selectedOption) {
+        className += ' selected';
     }
     return className;
   };
@@ -118,16 +103,19 @@ function QuestionCard({
 
       {/* Options */}
       <div className="options-container">
-        {/* Ensure options is an array before mapping */}
         {Array.isArray(options) && options.map((option) => (
-          <label key={option.label} className={getOptionClassName(option)}>
+          <label
+            key={option.label}
+            className={getOptionClassName(option)}
+            onContextMenu={(e) => handleContextMenu(e, option.label)} // Add context menu handler
+          >
             <input
               type="radio"
               name={`question-${questionIndex}`}
               value={option.label}
-              checked={selectedOption === option.label}
+              checked={selectedOption === option.label && !crossedOffOptions.has(option.label)} // Don't show radio checked if crossed off
               onChange={() => handleSelect(option.label)}
-              disabled={isSubmitted}
+              disabled={isSubmitted || crossedOffOptions.has(option.label)} // Disable radio if submitted or crossed off
               className="option-radio"
             />
             <span className="option-label-text">
@@ -148,10 +136,15 @@ function QuestionCard({
         ))}
       </div>
 
-       {/* Action Buttons (Submit / Show Explanation) */}
+       {/* Action Buttons */}
        <div className="action-buttons">
         {!isSubmitted ? (
-          <button onClick={() => onSubmit(questionIndex)} className="submit-button" disabled={!selectedOption}>
+          <button
+             onClick={() => onSubmit(questionIndex)}
+             className="submit-button"
+             disabled={!selectedOption || crossedOffOptions.has(selectedOption)} // Disable submit if selected option is crossed off
+             title={crossedOffOptions.has(selectedOption) ? "Cannot submit a crossed-off option" : ""}
+             >
             Submit Answer
           </button>
         ) : (
@@ -168,37 +161,15 @@ function QuestionCard({
           <h3 className="explanation-title">Explanation</h3>
           <div className="explanation-content">
             <p><strong>Correct Answer:</strong> {correct_answer_text}</p>
-
-            {/* Concept Text */}
             {explanation.concept_text && <p>{explanation.concept_text}</p>}
-
-             {/* POE Text */}
-            {explanation.poe_text && (
-                <div className="poe-section">
-                    <h4>Process of Elimination:</h4>
-                    {renderPoeText(explanation.poe_text)}
-                </div>
-            )}
-
-            {/* Explanation Images */}
-            {explanation.images && explanation.images.length > 0 && (
-              <div className="explanation-images">
-                {explanation.images.map((imgSrc, index) => (
-                  <img key={index} src={imgSrc} alt={`Explanation image ${index + 1}`} />
-                ))}
-              </div>
-            )}
+            {explanation.poe_text && ( <div className="poe-section"> <h4>Process of Elimination:</h4> {renderPoeText(explanation.poe_text)} </div> )}
+            {explanation.images && explanation.images.length > 0 && ( <div className="explanation-images"> {explanation.images.map((imgSrc, index) => ( <img key={index} src={imgSrc} alt={`Explanation image ${index + 1}`} /> ))} </div> )}
           </div>
-
-           {/* Analytics Section */}
-            <div className="analytics-section">
+           <div className="analytics-section">
                 <h4>Analytics</h4>
                 <p>Percent Correct: {analytics.percent_correct}</p>
                 <p>Avg Time Spent: {analytics.time_spent}</p>
-                 {/* Display category from question data if available */}
-                {(questionData.category || analytics?.category) &&
-                    <p>Category: {questionData.category || analytics.category}</p>
-                }
+                {(questionData.category || analytics?.category) && <p>Category: {questionData.category || analytics.category}</p>}
             </div>
         </div>
       )}

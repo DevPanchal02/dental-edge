@@ -265,3 +265,43 @@
     padding-left: 0.5em; /* Indent text slightly under header */
     color: #bbb; /* Slightly dimmer text for POE */
 }
+/* Cross-off Styling */
+.option-label.crossed-off .option-label-text {
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: #ff7b7b; /* Or another contrasting color */
+    opacity: 0.6; /* Dim crossed-off options */
+}
+
+/* Ensure crossed-off doesn't override correct/incorrect visual cues */
+.option-label.crossed-off.correct .option-label-text,
+.option-label.crossed-off.incorrect .option-label-text {
+     opacity: 0.7; /* Keep slightly more visible if also correct/incorrect */
+}
+
+/* Prevent hover effect on crossed-off options */
+.option-label.crossed-off:hover {
+    background-color: #333; /* Keep original background */
+}
+
+/* Adjust radio button visibility when crossed off */
+.option-label.crossed-off .option-radio {
+    /* Optionally hide radio completely or just keep it disabled */
+     /* visibility: hidden; */
+}
+
+/* Style for POE headers and text */
+.poe-header {
+    display: block;
+    margin-top: 0.7em;
+    margin-bottom: 0.2em;
+    color: #e0e0e0;
+    font-weight: 600;
+}
+
+.poe-text {
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    padding-left: 0.5em;
+    color: #bbb;
+}
