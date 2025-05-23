@@ -2,27 +2,9 @@
 import React from 'react';
 import '../styles/QuestionCard.css';
 
-// Helper to safely render POE text
-const renderPoeText = (poeText) => {
-    if (!poeText || typeof poeText !== 'string') {
-        return <p>Process of elimination not available.</p>;
-    }
-    const parts = poeText.split(/(Option\s+[A-Z]\s*\.)/i);
-    return parts.filter(part => part?.trim()).map((part, index) => {
-        const isHeader = /Option\s+[A-Z]\s*\./i.test(part);
-        if (isHeader) {
-            return <strong key={`poe-header-${index}`} className="poe-header">{part.trim()}</strong>;
-        } else {
-             const previousPartIndex = parts.slice(0, index).findLastIndex(p => p?.trim());
-             const previousPartIsHeader = previousPartIndex !== -1 && /Option\s+[A-Z]\s*\./i.test(parts[previousPartIndex]);
-             if (index === 0 || previousPartIsHeader) {
-                return <p key={`poe-text-${index}`} className="poe-text">{part.trim()}</p>;
-             }
-             return null;
-        }
-    });
-};
-
+// The renderPoeText helper is likely no longer needed if POE is part of the explanation's HTML content.
+// We'll remove it for now. If your scraper outputs POE as a separate HTML block that needs special styling
+// you might re-introduce a similar helper or style it via CSS targeting classes within the explanation HTML.
 
 function QuestionCard({
   questionData,
@@ -33,29 +15,28 @@ function QuestionCard({
   crossedOffOptions,
   userTimeSpentOnQuestion,
   isReviewMode,
-  isMarked, // Keep prop, used for display logic if needed elsewhere maybe
+  isMarked, // Keep prop
   onOptionSelect,
-  onViewAnswer, // Renamed prop for clarity, triggered by the card's button
+  onViewAnswer,
   onToggleExplanation,
   onToggleCrossOff,
-  onToggleMark // Keep prop, button moved to nav
+  onToggleMark // Keep prop
 }) {
 
    if (!questionData || typeof questionData !== 'object' || questionData === null) {
      console.warn(`[QuestionCard] Invalid question data at index ${questionIndex}:`, questionData);
      return ( <div className="question-card error-card"><p className="error-message">Error displaying Question {questionIndex + 1}: Invalid data format.</p></div> );
    }
-   // Handle error objects passed down from loader/QuizPage
    if (questionData.error) {
     return ( <div className="question-card error-card"><p className="error-message">Error loading Question {questionIndex + 1}:<br /><span className="error-details">{questionData.error}</span></p></div> );
   }
 
   // Destructure safely, providing defaults
   const {
-      question = { text: 'Question text missing.', images: [] },
+      question = { html_content: '<p>Question content missing.</p>' }, // Expect html_content
       options = [],
-      correct_answer_text = 'N/A',
-      explanation = { concept_text: '', poe_text: '', images: [] },
+      correct_answer_original_text = 'N/A', // Updated field name
+      explanation = { html_content: '<p>Explanation not available.</p>' }, // Expect html_content
       analytics = { percent_correct: 'N/A', time_spent: 'N/A' }
   } = questionData;
 
@@ -87,7 +68,6 @@ function QuestionCard({
     return className;
   };
 
-  // Determine if the current question is an error placeholder
   const isErrorQuestion = !!questionData.error;
 
   return (
@@ -97,14 +77,8 @@ function QuestionCard({
           {/* Question Content */}
           <div className="question-content">
             <p className="question-number">Question {questionIndex + 1}</p>
-            <p className="question-text">{question.text}</p>
-            {question.images && question.images.length > 0 && (
-              <div className="question-images">
-                {question.images.map((imgSrc, index) => (
-                  <img key={index} src={imgSrc} alt={`Question ${questionIndex + 1} image ${index + 1}`} />
-                ))}
-              </div>
-            )}
+            {/* Render question HTML content */}
+            <div className="question-html-content" dangerouslySetInnerHTML={{ __html: question.html_content || '<p>Question text missing.</p>' }} />
           </div>
 
           {/* Options */}
@@ -127,15 +101,9 @@ function QuestionCard({
                 />
                 <span className="option-label-text">
                     <span className="option-letter">{option.label}</span>
-                    {option.text}
+                    {/* Render option HTML content */}
+                    <div className="option-html-content" dangerouslySetInnerHTML={{ __html: option.html_content || '<p>Option text missing.</p>' }} />
                 </span>
-                {option.images && option.images.length > 0 && (
-                  <div className="option-images">
-                     {option.images.map((imgSrc, idx) => (
-                        <img key={idx} src={imgSrc} alt={`Option ${option.label} image ${idx + 1}`} className="option-image"/>
-                     ))}
-                  </div>
-                )}
                 {isSubmitted && !isReviewMode && option.percentage_selected && (
                      <span className="option-percentage">{option.percentage_selected}</span>
                 )}
@@ -145,31 +113,28 @@ function QuestionCard({
 
            {/* Action Buttons inside card - NOW ONLY EXPLANATION */}
            <div className="action-buttons">
-             {/* Show Explanation button if submitted OR in review mode */}
-            {(isSubmitted || isReviewMode) && !!explanation && ( // Only show if explanation exists
+            {(isSubmitted || isReviewMode) && !!explanation && (
               <button onClick={() => onToggleExplanation(questionIndex)} className="explanation-button">
                 {showExplanation ? 'Hide' : 'Show'} Explanation
               </button>
             )}
           </div>
 
-
           {/* Explanation Section */}
           {(showExplanation || (isReviewMode && !!explanation)) && (
             <div className="explanation-section">
               <h3 className="explanation-title">Explanation</h3>
               <div className="explanation-content">
-                <p><strong>Correct Answer:</strong> {correct_answer_text}</p>
-                {explanation.concept_text && <p>{explanation.concept_text}</p>}
-                {explanation.poe_text && ( <div className="poe-section"> <h4>Process of Elimination:</h4> {renderPoeText(explanation.poe_text)} </div> )}
-                {explanation.images && explanation.images.length > 0 && ( <div className="explanation-images"> {explanation.images.map((imgSrc, index) => ( <img key={index} src={imgSrc} alt={`Explanation image ${index + 1}`} /> ))} </div> )}
+                <p><strong>Correct Answer:</strong> {correct_answer_original_text}</p> {/* Use new field name */}
+                {/* Render explanation HTML content */}
+                <div className="explanation-html-content" dangerouslySetInnerHTML={{ __html: explanation.html_content || '<p>Explanation details not available.</p>' }} />
               </div>
                <div className="analytics-section">
                     <h4>Analytics</h4>
                      <p>Time Spent: {
                         userTimeSpentOnQuestion !== undefined
-                            ? `${userTimeSpentOnQuestion}s` // Display user's recorded time
-                            : (analytics?.time_spent || 'N/A') // Fallback to JSON data
+                            ? `${userTimeSpentOnQuestion}s`
+                            : (analytics?.time_spent || 'N/A')
                      }</p>
                     <p>Percent Correct (Average): {analytics.percent_correct || 'N/A'}</p>
                     {(questionData.category || analytics?.category) && <p>Category: {questionData.category || analytics.category}</p>}
@@ -178,11 +143,10 @@ function QuestionCard({
           )}
         </>
       ) : (
-        // Render only the error message if it's an error question
         <p className="error-message">Error loading Question {questionIndex + 1}:<br /><span className="error-details">{questionData.error}</span></p>
       )}
     </div>
   );
 }
 
-export default QuestionCard;
+export default QuestionCard;  

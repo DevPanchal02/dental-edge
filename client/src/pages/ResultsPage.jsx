@@ -1,15 +1,27 @@
 // FILE: client/src/pages/ResultsPage.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { getQuizData, getQuizMetadata, fetchTopicData, formatDisplayName } from '../data/loader'; // Import formatDisplayName
-import '../styles/ResultsPage.css'; // Make sure this CSS file exists
+import { getQuizData, getQuizMetadata, fetchTopicData, formatDisplayName } from '../data/loader';
+import '../styles/ResultsPage.css';
+
+// Helper function to extract text from HTML (basic version)
+const extractTextFromHtml = (htmlString) => {
+    if (!htmlString || typeof htmlString !== 'string') return '';
+    const tempDiv = document.createElement('div');
+    tempDiv.innerHTML = htmlString;
+    let text = tempDiv.textContent || tempDiv.innerText || '';
+    // Optional: Clean up excessive whitespace
+    text = text.replace(/\s+/g, ' ').trim();
+    return text;
+};
+
 
 function ResultsPage() {
     const { topicId, sectionType, quizId } = useParams();
     const navigate = useNavigate();
 
     const [results, setResults] = useState(null);
-    const [quizQuestions, setQuizQuestions] = useState([]); // Store full question data for review
+    const [quizQuestions, setQuizQuestions] = useState([]);
     const [quizTitle, setQuizTitle] = useState('');
     const [topicName, setTopicName] = useState('');
     const [isLoading, setIsLoading] = useState(true);
@@ -33,65 +45,56 @@ function ResultsPage() {
             setResults(parsedResults);
             setQuizTitle(parsedResults.quizName || 'Quiz Results');
 
-            // Fetch topic name for breadcrumbs/title
             fetchTopicData(topicId)
                 .then(topicData => setTopicName(topicData.name))
                 .catch(err => console.error("Error fetching topic name:", err));
 
-            // Fetch the full question data again for review purposes
             const allData = getQuizData(topicId, sectionType, quizId);
             if (allData && Array.isArray(allData)) {
-                 // Ensure questions are available even if results are minimal
                  setQuizQuestions(allData);
             } else {
                 console.warn("Could not retrieve full quiz data for review.");
                 setError("Could not load question details for review.");
-                // Results can still be shown, but review might be limited
             }
 
         } catch (e) {
             console.error("Error parsing results from localStorage:", e);
             setError('Could not load results. Data might be corrupted.');
-            // Optionally clear corrupted data: localStorage.removeItem(resultsKey);
         } finally {
             setIsLoading(false);
         }
 
-    }, [topicId, sectionType, quizId]); // Rerun if params change
+    }, [topicId, sectionType, quizId]);
 
-    const getQuestionText = (index) => {
-        // Check if quizQuestions has data and the index is valid
+    const getQuestionPreviewText = (index) => {
         if (quizQuestions && quizQuestions.length > index && quizQuestions[index]) {
-            const question = quizQuestions[index];
-            // Add an extra check for the nested question object and text property
-            if (question.question && question.question.text) {
-                return question.question.text;
+            const questionItem = quizQuestions[index];
+            // Check the new structure: questionItem.question.html_content
+            if (questionItem.question && questionItem.question.html_content) {
+                const text = extractTextFromHtml(questionItem.question.html_content);
+                return text.substring(0, 70) + (text.length > 70 ? "..." : ""); // Preview length
             }
         }
-        // Fallback message
         return `Question ${index + 1} text unavailable`;
     };
 
 
-    // --- Render Logic ---
     if (isLoading) return <div className="page-loading">Loading Results...</div>;
-    if (error && !results) return ( // Show error prominently if results couldn't load at all
+    if (error && !results) return (
         <div className="page-error"> {error}
             <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button>
         </div>
     );
-     // If results loaded but there was another error (like fetching questions)
      if (error && results) {
-         console.warn("Results page error:", error); // Log the secondary error
+         console.warn("Results page error:", error);
      }
 
-    if (!results) return ( // Should be caught by error above, but as a fallback
+    if (!results) return (
         <div className="page-info"> No results available.
             <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button>
         </div>
     );
 
-    // Use totalValidQuestions for percentage calculation if available
     const totalForPercentage = results.totalValidQuestions > 0 ? results.totalValidQuestions : results.totalQuestions;
     const scorePercentage = totalForPercentage > 0
         ? ((results.score / totalForPercentage) * 100).toFixed(1)
@@ -106,7 +109,6 @@ function ResultsPage() {
                 <h1 className="results-title">{quizTitle} - Results</h1>
             </div>
 
-            {/* Display secondary error if needed */}
             {error && <div className="page-error" style={{maxWidth: '800px', margin: '0 auto 20px auto'}}>{error}</div>}
 
             <div className="results-summary">
@@ -115,7 +117,6 @@ function ResultsPage() {
                     <span className="score-value">{results.score}</span> / {totalForPercentage}
                     <span className="score-percentage"> ({scorePercentage}%)</span>
                 </p>
-                 {/* Optionally show raw total if different */}
                 {results.totalQuestions !== totalForPercentage &&
                      <p className="total-raw-info">(Based on {totalForPercentage} valid questions out of {results.totalQuestions} total items)</p>
                 }
@@ -129,10 +130,9 @@ function ResultsPage() {
                         <ul>
                             {results.correctIndices.map(index => (
                                 <li key={`correct-${index}`}>
-                                    {/* Pass results state to review link */}
                                     <Link to={`/quiz/${topicId}/${sectionType}/${quizId}`}
                                           state={{ review: true, questionIndex: index }}>
-                                        Q{index + 1}: {getQuestionText(index).substring(0, 50)}...
+                                        Q{index + 1}: {getQuestionPreviewText(index)}
                                     </Link>
                                 </li>
                             ))}
@@ -146,12 +146,10 @@ function ResultsPage() {
                         <ul>
                             {results.incorrectIndices.map(index => (
                                 <li key={`incorrect-${index}`}>
-                                     {/* Pass results state to review link */}
                                     <Link to={`/quiz/${topicId}/${sectionType}/${quizId}`}
                                           state={{ review: true, questionIndex: index }}>
-                                         Q{index + 1}: {getQuestionText(index).substring(0, 50)}...
+                                         Q{index + 1}: {getQuestionPreviewText(index)}
                                     </Link>
-                                     {/* Optionally show user's incorrect answer */}
                                      {results.userAnswers[index] &&
                                          <span className="user-answer-preview"> (Your answer: {results.userAnswers[index]})</span>
                                      }

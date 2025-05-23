@@ -1,0 +1,488 @@
+[
+  {
+    "question_number": 1,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>In a first-order reaction, if the concentration of the reactant is doubled, how does the rate change? </p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The rate remains constant</p></div>",
+        "percentage_selected": "(9.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The final rate is halved</p></div>",
+        "percentage_selected": "(3.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The final rate is doubled</p></div>",
+        "percentage_selected": "(84.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The final rate increases by a factor of 4</p></div>",
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The final rate increases by a factor of 8</p></div>",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "The final rate is doubled",
+    "analytics": {
+      "percent_correct": "84.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate laws</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p>In this case, we know that the reaction is first-order. A first-order reaction is when the rate of the reaction is directly proportional to the concentration of one reactant. The initial rate law for this reaction can be written as:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+2.png\"/></p><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\"><span lang=\"EN-US\">Therefore, when the concentration of the reactant is doubled, <strong>the final rate is doubled</strong>. </span></p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+3.png\"/></p><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">Therefore, the answer is <strong>C</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>A reaction with a certain rate law produced the graph below. What is the order of the reaction with respect to HCl?</p><figure class=\"image image_resized\" style=\"width:490px;\"><img class=\"image_resized image\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+2+Top+Figure+1.png\"/></figure></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Zero-order</p></div>",
+        "percentage_selected": "(96.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>First-order</p></div>",
+        "percentage_selected": "(2.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Second-order</p></div>",
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Third-order</p></div>",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Fourth-order</p></div>",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "Zero-order",
+    "analytics": {
+      "percent_correct": "96.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate laws</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p>In this case, we can see that the slope of the concentration-rate graph is zero. The slope of zero indicates that changes in the concentration of that specific reactant does not affect the rate of the reaction. This is a characteristic of a zero-order reaction. The rate law for the zero-order reaction can be written as:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+2+Solution+1.png\"/></p><p>We can see that the rate is equal to the rate constant and does not depend on the concentrations of the reactants. Therefore, the order of the reaction with respect to HCl is <strong>zero-order.</strong> </p><p>Therefore, the answer is <strong>A</strong>. </p></span></div>"
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">What is the rate law for a reaction A + 2 B → C if the rate is directly proportional to the concentration of A and the square of the concentration of B?</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A][B]<sup>2</sup></p></div>",
+        "percentage_selected": "(93.7%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A][B]</p></div>",
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A]<sup>2</sup>[B]</p></div>",
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A][B]<sup>1/2</sup></p></div>",
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A]<sup>1/2</sup>[B]</p></div>",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "rate = k[A][B] 2",
+    "analytics": {
+      "percent_correct": "93.7%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate laws</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p>If the rate is directly proportional to the concentration of A and the square of the concentration of B, the order for the reactant A is 1, and the order for the reactant B is 2. Therefore, the rate law for the reaction A + 2 B à C is <strong>rate = k[A][B]<sup>2</sup>.</strong></p><p>Therefore, the answer is <strong>A</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">For a reaction 2 A + 3 B → C, if the rate is directly proportional to the square of the concentration of A and the cube of the concentration of B, what is the rate law and the overall reaction order?</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A][B]<sup>3</sup>, overall order = 4</p></div>",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A]<sup>3</sup>[B]<sup>2</sup>, overall order = 5</p></div>",
+        "percentage_selected": "(0.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A][B]<sup>5</sup>, overall order = 5</p></div>",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A]<sup>2</sup>[B]<sup>3</sup>, overall order = 3</p></div>",
+        "percentage_selected": "(4.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>rate = k[A]<sup>2</sup>[B]<sup>3</sup>, overall order = 5</p></div>",
+        "percentage_selected": "(92.2%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_original_text": "rate = k[A] 2 [B] 3 , overall order = 5",
+    "analytics": {
+      "percent_correct": "92.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate laws</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p><strong>STEP 1:</strong> First, we need to determine the order for each reactant. If the rate is directly proportional to the square of the concentration of A and the cube of the concentration of B, the order of the reactant A is 2, and the order of the reactant B is 3:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+4+Solution+1.png\"/></p><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\"><span lang=\"EN-US\"><strong>STEP 2: </strong>Then, we can calculate for the overall order of the reaction, which is the sum of all the reaction orders:</span></p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+4+Solution+2.png\"/></p><p>Therefore, if the rate is directly proportional to the square of the concentration of A and the cube of the concentration of B, the rate law and the overall rate order is <strong>rate = k[A]<sup>2</sup>[B]<sup>3</sup>, overall order = 5. </strong></p><p>Therefore, the answer is <strong>E</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>For the reaction below, the experimentally determined rate of formation of C is given by rate = k[A][B]<sup>3</sup>. Halving the concentration of B would result in which of the following?</p><p style=\"text-align:center;\">A + B → C</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The reaction rate will change by a factor of 1/8</p></div>",
+        "percentage_selected": "(72.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The reaction rate will change by a factor of 3</p></div>",
+        "percentage_selected": "(14%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The reaction rate will remain constant</p></div>",
+        "percentage_selected": "(5.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The reaction rate will change by a factor of 4</p></div>",
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The reaction rate will change by a factor of 8</p></div>",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "The reaction rate will change by a factor of 1/8",
+    "analytics": {
+      "percent_correct": "72.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate laws</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p>In this case, we know that the reaction is 3rd order with respect to B. We can use the rate law given from the question to calculate for the factor of change in the reaction rate:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+5+Solution+1.png\"/> </p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+5+Solution+2.png\"/></p><p style=\"text-align:center;\"> <img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+5+Solution+3.png\"/></p><p>Therefore, when the concentration of B is halved, the reaction rate will change by a factor of <strong>1/8.</strong></p><p>Therefore, the answer is <strong>A</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\"><span lang=\"EN-US\">What is the overall order of the reaction if the unit of the rate constant has units of s<sup>-1</sup>?</span></p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>0</p></div>",
+        "percentage_selected": "(8.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>1</p></div>",
+        "percentage_selected": "(87.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>2</p></div>",
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>3</p></div>",
+        "percentage_selected": "(0.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>4</p></div>",
+        "percentage_selected": "(0.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "1",
+    "analytics": {
+      "percent_correct": "87.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate law</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p><strong>STEP 1:</strong> First, we need to know the formula that tells us the unit of rate constants: </p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+6+Solution+1.png\"/></p><p class=\"MsoNormal\" style=\"margin-top:6.0pt;text-align:center;\"><i><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">n </span></i><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">= reaction order</span></p><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\"><strong>STEP 2: </strong>Then, we can use the formula above to determine the overall order of the reaction:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+6+Solution+2.png\"/></p><p style=\"text-align:center;\"> <img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+6+Solution+3.png\"/></p><p style=\"text-align:center;\"> <img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+6+Solution+4.png\"/> </p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+6+Solution+5.png\"/></p><p style=\"text-align:center;\"> <img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+6+Solution+6.png\"/></p><p class=\"MsoNormal\" style=\"margin-bottom:12.0pt;margin-left:0cm;margin-right:0cm;margin-top:6.0pt;\"><span lang=\"EN-US\">In this case, the overall order of the reaction is <strong>1.</strong> </span></p><figure class=\"table\" style=\"width:54.6%;\"><table class=\"ck-table-resized\"><colgroup><col style=\"width:22.27%;\"/><col style=\"width:14.95%;\"/><col style=\"width:12.39%;\"/><col style=\"width:15.58%;\"/><col style=\"width:17.24%;\"/><col style=\"width:17.57%;\"/></colgroup><tbody><tr><td style=\"border:1.0pt solid windowtext;height:17.5pt;mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:93.55pt;\" width=\"125\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">Reaction Order</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">0</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">1</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">2</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">3</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">4</span></p></td></tr><tr><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:solid;border-right-style:solid;border-top-style:none;border-width:1.0pt;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:93.55pt;\" width=\"125\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">Units for </span><i><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">k</span></i></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">M•s<sup>-1</sup></span></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">s<sup>-1</sup></span></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">M<sup>-1</sup>•s<sup>-1</sup></span></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">M<sup>-2</sup>•s<sup>-1</sup></span></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">M<sup>-3</sup>•s<sup>-1</sup></span></p></td></tr></tbody></table></figure><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">Therefore, the answer is <strong>B</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p class=\"MsoNormal\" style=\"line-height:normal;margin-top:0cm;\"><span lang=\"EN-US\">What is the overall order of the reaction if the unit of the rate constant has units of M<sup>-2</sup>•s<sup>-1</sup>?</span></p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>0</p></div>",
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>1</p></div>",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>2</p></div>",
+        "percentage_selected": "(10.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>3</p></div>",
+        "percentage_selected": "(87.4%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>5</p></div>",
+        "percentage_selected": "(0.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "3",
+    "analytics": {
+      "percent_correct": "87.4%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate law</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p><strong>STEP 1:</strong> First, we need to know the formula that tells us the unit of rate constants: </p><p style=\"text-align:center;\"><img class=\"image_resized image\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+6+Solution+1.png\" style=\"width:107px;\"/></p><p style=\"text-align:center;\"><i>n </i>= reaction order</p><p><strong>STEP 2: </strong>Then we can find the overall rate order when the rate constant’s unit M<sup>-2</sup>•s<sup>-1</sup>:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+7+Solution+1.png\"/> </p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+7+Solution+2.png\"/></p><p style=\"text-align:center;\"> <img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+7+Solution+3.png\"/></p><p style=\"text-align:center;\"> <img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+7+Solution+4.png\"/></p><p style=\"text-align:center;\"> <img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+7+Solution+5.png\"/></p><p style=\"text-align:center;\"> <img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+7+Solution+6.png\"/></p><p class=\"MsoNormal\" style=\"margin-bottom:12.0pt;margin-left:0cm;margin-right:0cm;margin-top:6.0pt;\"><span lang=\"EN-US\">In this case, the overall order of the reaction is <strong>3. </strong></span></p><figure class=\"table\" style=\"width:46.35%;\"><table class=\"ck-table-resized\"><colgroup><col style=\"width:26.66%;\"/><col style=\"width:12.25%;\"/><col style=\"width:12.27%;\"/><col style=\"width:15.87%;\"/><col style=\"width:15.31%;\"/><col style=\"width:17.64%;\"/></colgroup><tbody><tr><td style=\"border:1.0pt solid windowtext;height:17.5pt;mso-border-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:93.55pt;\" width=\"125\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">Reaction Order</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">0</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">1</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">2</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">3</span></p></td><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:none;border-right-style:solid;border-top-style:solid;border-width:1.0pt;height:17.5pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">4</span></p></td></tr><tr><td style=\"border-bottom-style:solid;border-color:windowtext;border-left-style:solid;border-right-style:solid;border-top-style:none;border-width:1.0pt;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:93.55pt;\" width=\"125\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">Units for </span><i><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">k</span></i></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">M•s<sup>-1</sup></span></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">s<sup>-1</sup></span></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">M<sup>-1</sup>•s<sup>-1</sup></span></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">M<sup>-2</sup>•s<sup>-1</sup></span></p></td><td style=\"border-bottom:1.0pt solid windowtext;border-left-style:none;border-right:1.0pt solid windowtext;border-top-style:none;height:17.9pt;mso-border-alt:solid windowtext .5pt;mso-border-left-alt:solid windowtext .5pt;mso-border-top-alt:solid windowtext .5pt;padding:0cm 5.4pt;width:55.9pt;\" width=\"75\"><p class=\"MsoNormal\" style=\"margin-top:0cm;text-align:center;\"><span lang=\"EN-US\" style=\"font-size:12.0pt;line-height:107%;\">M<sup>-3</sup>•s<sup>-1</sup></span></p></td></tr></tbody></table></figure><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">Therefore, the answer is <strong>D</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>Which of the following is the correct unit for the rate constant if the overall rate order of the reaction is 2? </p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>M<sup>-2</sup>•s<sup>-1</sup></p></div>",
+        "percentage_selected": "(2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>s<sup>-1</sup></p></div>",
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>M<sup>-1</sup>•s<sup>-1</sup></p></div>",
+        "percentage_selected": "(93.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>M<sup>2</sup>•s<sup>-1</sup></p></div>",
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>M<sup>-2</sup>•s<sup>1</sup></p></div>",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "M -1 •s -1",
+    "analytics": {
+      "percent_correct": "93.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate law</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p><strong>STEP 1: </strong>First, we need to know the units for the rate and the concentration of reactants:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+8+Solution+1.png\"/> </p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+8+Solution+2.png\"/></p><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\"><strong>STEP 2:</strong> Then, we can use the rate law formula, but replace the variables with the units:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+8+Solution+3.png\"/> </p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+8+Solution+4.png\"/> </p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+8+Solution+5.png\"/></p><p>In this case, the correct unit for the rate constant if the overall rate order of the reaction is 2 is <strong>M<sup>-1</sup>•s<sup>-1</sup>.</strong></p><p>Therefore, the answer is <strong>C</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>What can be done to quadruple the initial rate of reaction given the following chemical reaction and its rate law?</p><p style=\"text-align:center;\">A + B + 2 C → products</p><p style=\"text-align:center;\">rate = k[B]<sup>2</sup>[C]</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Double [A]</p></div>",
+        "percentage_selected": "(1.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Double [B]</p></div>",
+        "percentage_selected": "(87%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Double [C]</p></div>",
+        "percentage_selected": "(8.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Quadruple [A]</p></div>",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Quadruple [B]</p></div>",
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "Double [B]",
+    "analytics": {
+      "percent_correct": "87%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p><span class=\"bar\">Concept </span></p><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate law</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><p style=\"text-align:center;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></p><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p>Since the rate law is rate = k[B]<sup>2</sup>[C], doubling [B] will change the rate by the factor of 4 (rate = k[2B]<sup>2</sup>[C] = 4k[B][C]).  Therefore, to quadruple the initial rate of reaction, we can <strong>double [B].</strong> </p><p><span class=\"bar\"> Process of Elimination</span></p><p><strong>Option A. </strong><i>Double [A]</i><br/><span style=\"color:hsl(0,75%,60%);\"><strong>Incorrect.</strong></span><strong> </strong>Since the rate law is rate = k[B]<sup>2</sup>[C], doubling [A] will not change the rate. This is because [A] is not part of the rate law, which means [A] does not impact the rate. </p><p><strong>Option B. </strong><i>Double [B]</i><br/><span style=\"color:hsl(120,75%,60%);\"><strong>Correct.</strong></span><strong> </strong>Since the rate law is rate = k[B]<sup>2</sup>[C], doubling [B] will change the rate by a factor of 4 (rate = k[2B]<sup>2</sup>[C] = 4k[B]<sup>2</sup>[C]).  </p><p><strong>Option C. </strong><i>Double [C]</i><br/><span style=\"color:hsl(0,75%,60%);\"><strong>Incorrect.</strong></span><strong> </strong>Since the rate law is rate = k[B]<sup>2</sup>[C], doubling [C] will change the rate by a factor of 2 (rate = k[B]<sup>2</sup>[2C] = 2k[B]<sup>2</sup>[C]). </p><p><strong>Option D. </strong><i>Quadruple [A]</i><br/><span style=\"color:hsl(0,75%,60%);\"><strong>Incorrect.</strong></span><strong> </strong>Since the rate law is rate = k[B]<sup>2</sup>[C], quadrupling [A] will not change the rate. This is because [A] is not part of the rate law, which means [A] does not impact the rate. </p><p><strong>Option E. </strong><i>Quadruple [B]</i><br/><span style=\"color:hsl(0,75%,60%);\"><strong>Incorrect.</strong></span><strong> </strong>Since the rate law is rate = k[B]<sup>2</sup>[C], quadrupling [B] will change the rate by a factor of 16 (rate = k[4B]<sup>2</sup>[C] = 16k[B]<sup>2</sup>[C]). </p><p>Therefore, the answer is <strong>B</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\"><span lang=\"EN-US\">Consider a reaction with the rate law: rate = k[A]<sup>2</sup>[B]. What can be inferred about this reaction?</span></p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>It is a zero-order reaction</p></div>",
+        "percentage_selected": "(0.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The rate is directly proportional to the square of the concentration of A</p></div>",
+        "percentage_selected": "(89.3%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The rate is inversely proportional to the concentration of B</p></div>",
+        "percentage_selected": "(3.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The rate is independent of the concentrations of A and B</p></div>",
+        "percentage_selected": "(4.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>It is a first-order reaction with respect to A and second-order with respect to B</p></div>",
+        "percentage_selected": "(2.2%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "The rate is directly proportional to the square of the concentration of A",
+    "analytics": {
+      "percent_correct": "89.3%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p><span class=\"bar\">Concept</span></p><p class=\"MsoNormal\" style=\"margin-top:6.0pt;\">To solve this problem involving <strong>rate law</strong>, we need to know that the rate law shows how the concentration of certain reactants affects the reaction rate. We also need to know that the rate law for an elementary reaction can be derived from the coefficients of the reactants in the balanced equation. Here is an example of the rate law derived from a reaction A + B ⇢ C + D:</p><figure class=\"image image_resized\" style=\"width:152px;\"><img class=\"image image_resized\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Rate+Laws%3A+Rate+Orders/Question+1+Solution+1.png\"/></figure><p style=\"text-align:center;\"><i>k </i>= rate constant<i>, </i>[<i>A</i>] and [<i>B</i>] = concentration of reactants, <i>m</i> and <i>n</i> = reaction orders</p><p>In this case, we can see that the given rate law (rate = k[A]2[B]) indicates that the rate is directly proportional to the square of the concentration of A and directly proportional to the concentration of B. Therefore, the correct statement is <strong>the rate is directly proportional to the square of the concentration of A.</strong></p><p><span class=\"bar\"> Process of Elimination</span></p><p><strong>Option A. </strong><i>It is a zero-order reaction</i><br/><span style=\"color:hsl(0,75%,60%);\"><strong>Incorrect.</strong></span><strong> </strong>In a zero-order reaction, the rate is independent of the concentration of the reactants. However, in the given rate law (rate = k[A]<sup>2</sup>[B]), the rate depends on the concentrations of A and B.</p><p><strong>Option B. </strong><i>The rate is directly proportional to the square of the concentration of A </i><br/><span style=\"color:hsl(120,75%,60%);\"><strong>Correct.</strong></span><strong> </strong>The given rate law (rate = k[A]<sup>2</sup>[B]) indicates that the rate is directly proportional to the square of the concentration of A.</p><p><strong>Option C. </strong><i>The rate is inversely proportional to the concentration of B</i><br/><span style=\"color:hsl(0,75%,60%);\"><strong>Incorrect.</strong></span><strong> </strong>The given rate law (rate = k[A]<sup>2</sup>[B]) indicates that the rate is directly proportional to the concentration of B, not inversely proportional.</p><p><strong>Option D. </strong><i>The rate is independent of the concentrations of A and B</i><br/><span style=\"color:hsl(0,75%,60%);\"><strong>Incorrect.</strong></span><strong> </strong>In the given rate law (rate = k[A]<sup>2</sup>[B]), the rate depends on the concentrations of A and B.</p><p><strong>Option E. </strong><i>It is a first-order reaction with respect to A and second-order with respect to B</i><br/><span style=\"color:hsl(0,75%,60%);\"><strong>Incorrect.</strong></span><strong> </strong>The given rate law (rate = k[A]<sup>2</sup>[B]) indicates that the reaction is second order with respect to A and first-order with respect to B.</p><p>Therefore, the answer is <strong>B</strong>.</p></span></div>"
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x00000001052403e0 cxxbridge1$str$ptr + 2829900\n1   chromedriver                        0x00000001052386a8 cxxbridge1$str$ptr + 2797844\n2   chromedriver                        0x0000000104d75fbc cxxbridge1$string$len + 90140\n3   chromedriver                        0x0000000104dbd1bc cxxbridge1$string$len + 381468\n4   chromedriver                        0x0000000104dfe044 cxxbridge1$string$len + 647332\n5   chromedriver                        0x0000000104db13f8 cxxbridge1$string$len + 332888\n6   chromedriver                        0x0000000105204804 cxxbridge1$str$ptr + 2585200\n7   chromedriver                        0x0000000105207ad4 cxxbridge1$str$ptr + 2598208\n8   chromedriver                        0x00000001051e5dd8 cxxbridge1$str$ptr + 2459716\n9   chromedriver                        0x000000010520834c cxxbridge1$str$ptr + 2600376\n10  chromedriver                        0x00000001051d7664 cxxbridge1$str$ptr + 2400464\n11  chromedriver                        0x00000001052282b0 cxxbridge1$str$ptr + 2731292\n12  chromedriver                        0x000000010522843c cxxbridge1$str$ptr + 2731688\n13  chromedriver                        0x00000001052382f4 cxxbridge1$str$ptr + 2796896\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Chemical Kinetics",
+    "question_bank": "Rate Orders"
+  }
+]

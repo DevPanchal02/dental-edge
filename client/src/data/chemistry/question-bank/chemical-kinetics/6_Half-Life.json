@@ -1,0 +1,488 @@
+[
+  {
+    "question_number": 1,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>Which of the following statements correctly describes half-life? </p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The time it takes for half of the reactants to become products</p></div>",
+        "percentage_selected": "(78%)",
+        "is_correct": true
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The time it takes for half of a single molecule to decompose</p></div>",
+        "percentage_selected": "(18.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The time it takes for half of the reactants to reach equilibrium</p></div>",
+        "percentage_selected": "(1.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The time it takes for a substance to reach half of its boiling point</p></div>",
+        "percentage_selected": "(0.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The time it takes for half of the substance to become stable</p></div>",
+        "percentage_selected": "(1.6%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "The time it takes for half of the reactants to become products",
+    "analytics": {
+      "percent_correct": "78%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p><span class=\"bar\">Concept</span></p><p>To solve this problem involving <strong>half-life</strong>, we need to recall that the half-life of a substance is the time it takes to convert half of the reactants to products. </p><p>In this case, we can say that half-life is the <strong>time it takes for half of the reactants to become products</strong>.</p><p>Therefore, the answer is <strong>A</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 2,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>The half-life is independent of concentration for  </p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>zero order reactions.</p></div>",
+        "percentage_selected": "(20.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>first order reactions.</p></div>",
+        "percentage_selected": "(68.2%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>second order reactions.</p></div>",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>third order reactions.</p></div>",
+        "percentage_selected": "(0.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>all ordered reactions.</p></div>",
+        "percentage_selected": "(8.5%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "first order reactions.",
+    "analytics": {
+      "percent_correct": "68.2%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p><span class=\"bar\">Concept</span></p><p>To solve this problem involving <strong>half-life</strong>, which is the time it takes to convert half of the reactants to products, we can first review the half-life equations:</p><ul style=\"list-style-type:disc;\"><li>Zero-order reactions – as concentration <i>decreases</i>, half-life <i>decreases</i>:</li></ul><figure class=\"image image_resized\" style=\"width:108px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+1.png\"/></figure><ul style=\"list-style-type:disc;\"><li>First-order reactions – half-life is independent of concentration:</li></ul><figure class=\"image image_resized\" style=\"width:116px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+2.png\"/></figure><ul style=\"list-style-type:disc;\"><li>Second-order reactions – as concentration <i>decreases</i>, half-life <i>increases</i>:</li></ul><figure class=\"image image_resized\" style=\"width:120px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+3.png\"/></figure><p>In this case, we can say that half-life is independent of concentration for <strong>first order reactions</strong>. As we can see in the formula, the half-life is only dependent on <i>k, </i>and is not influenced by [A]<sub>0</sub> because it is not part of its equation. </p><p>Therefore, the answer is <strong>B</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 3,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>If a 15 g sample of carbon-14, with a half-life of 5,730 years, decays such that only 7.5 g remain, how many years have elapsed?</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>2,865</p></div>",
+        "percentage_selected": "(6.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>3,500</p></div>",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>4,300</p></div>",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>5,730</p></div>",
+        "percentage_selected": "(89.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>7,500</p></div>",
+        "percentage_selected": "(0.7%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "5,730",
+    "analytics": {
+      "percent_correct": "89.1%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p>To solve this problem involving <strong>half-life</strong>, we need to recall that the half-life of a substance is the time it takes to convert half of the reactants to products. </p><p><strong>STEP 1:</strong> First, we know that our initial sample weighed 15 g and our final sample weighed 7.5 g. Since 7.5 is exactly half of 15 g, we know that exactly one half-life has elapsed in this time. </p><p><strong>STEP 2:</strong> Since we are told that the half-life of carbon-14 is 5,730 years, we can conclude that <strong>5,730</strong> years have elapsed when a 15 g sample of carbon 14 decays such that only 7.5 g remain.  </p><p>Therefore, the answer is <strong>D</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 4,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>Given a radioactive isotope with a half-life of 15 days with an initial mass of 500 g, how long will it take for this sample to decay such that only 125 g remains?</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>15 days</p></div>",
+        "percentage_selected": "(1.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>30 days</p></div>",
+        "percentage_selected": "(89.9%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>36 days</p></div>",
+        "percentage_selected": "(1.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>45 days</p></div>",
+        "percentage_selected": "(5.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>60 days</p></div>",
+        "percentage_selected": "(1.9%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "30 days",
+    "analytics": {
+      "percent_correct": "89.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p>To solve this problem involving <strong>half-life</strong>, we need to recall that the half-life of a substance is the time it takes to convert half of the reactants to products. </p><p><strong>STEP 1:</strong> First, we know that our initial sample weighed 500 g. After one half-life, the sample weighs 500 ÷ 2 = 250 g. </p><p><strong>STEP 2:</strong> Next, after the second half-life, the sample weights 250 ÷ 2 = 125 g. This means that it takes 2 half-lives for a 500 g sample to decay such that only 125 g remains. </p><p><strong>STEP 3: </strong>Since each half-life is 15 days long, 2 half-lives is 15 × 2 = 30 days long. </p><p>Therefore, the answer is <strong>B</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 5,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>Which of the following equations represents the half-life equation for first-order reactions?</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p><img src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+5+Option+Choice+A.png\"/></p></div>",
+        "percentage_selected": "(4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p><img src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+5+Option+Choice+B.png\"/></p></div>",
+        "percentage_selected": "(87.6%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p><img src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+5+Option+Choice+C.png\"/></p></div>",
+        "percentage_selected": "(3.5%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p><img src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+5+Option+Choice+D.png\"/></p></div>",
+        "percentage_selected": "(2.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p><img src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+5+Option+Choice+E.png\"/></p></div>",
+        "percentage_selected": "(2.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "",
+    "analytics": {
+      "percent_correct": "87.6%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p><span class=\"bar\">Concept</span></p><p>To solve this problem involving <strong>half-life</strong>, which is the time it takes to convert half of the reactants to products, we can first review the half-life equations:</p><ul style=\"list-style-type:disc;\"><li>Zero-order reactions – as concentration <i>decreases</i>, half-life <i>decreases</i>:</li></ul><figure class=\"image image_resized\" style=\"width:108px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+1.png\"/></figure><ul style=\"list-style-type:disc;\"><li>First-order reactions – half-life is independent of concentration:</li></ul><figure class=\"image image_resized\" style=\"width:116px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+2.png\"/></figure><ul style=\"list-style-type:disc;\"><li>Second-order reactions – as concentration <i>decreases</i>, half-life <i>increases</i>:</li></ul><figure class=\"image image_resized\" style=\"width:120px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+3.png\"/></figure><p>In this case, we can select <strong>Option B</strong> as the correct first-order reaction half-life. In fact, we do not need to know the actual formulas to correctly answer this question. Since first-order reaction half-lives are independent of concentration, and Option B is the only answer choice where the half-life is not dependent on the concentration of A (all the other equations have a [A]<sub>0</sub> component), Option B is the only possible correct answer. </p><p>Therefore, the answer is <strong>B</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 6,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>In a reaction governed by first order kinetics, compound X undergoes decomposition. What fraction of the initial reactants have been consumed after 3 half-lives?</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>1/16</p></div>",
+        "percentage_selected": "(3.7%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>1/8</p></div>",
+        "percentage_selected": "(31.2%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>1/4</p></div>",
+        "percentage_selected": "(7.1%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>3/4</p></div>",
+        "percentage_selected": "(7.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>7/8</p></div>",
+        "percentage_selected": "(50.4%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_original_text": "7/8",
+    "analytics": {
+      "percent_correct": "50.4%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p>To solve this problem involving <strong>half-life</strong>, we need to recall that the half-life of a substance is the time it takes to convert half of the reactants to products. </p><p><strong>STEP 1:</strong> First, we know that in first order reactions, the half-life is independent of concentration. Therefore, the amount of compound X after the first half-life is:</p><figure class=\"image image_resized\" style=\"width:88px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+6+Solution+1.png\"/></figure><p><strong>STEP 2:</strong> Next, the amount of compound X after the second half-life is:</p><figure class=\"image image_resized\" style=\"width:88px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+6+Solution+2.png\"/></figure><p><strong>STEP 3:</strong> Finally, the amount of compound X after the third half-life is:</p><figure class=\"image image_resized\" style=\"width:88px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+6+Solution+3.png\"/></figure><p><strong>STEP 4:</strong> But be careful! Since the question asks us for the fraction of initial reactants that have been <strong>consumed </strong>after 3 half-lives, we subtract the 1/8 of compound X remaining after 3 half-lives from 1 to determine the amount consumed:</p><figure class=\"image image_resized\" style=\"width:88px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+6+Solution+4.png\"/></figure><p>Therefore, the answer is <strong>E</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 7,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>What is the most likely rate law for a reaction, given that a 50 g sample of A, having a half-life of 2 minutes, reduces to 6.25 g of A after 6 minutes?</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Rate = k[A]<sup>½</sup></p></div>",
+        "percentage_selected": "(13.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Rate = k[A]</p></div>",
+        "percentage_selected": "(63.1%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Rate = k[A]<sup>2</sup></p></div>",
+        "percentage_selected": "(15.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Rate = k[A][B]</p></div>",
+        "percentage_selected": "(2.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>Rate = k[A][B]<sup>2</sup></p></div>",
+        "percentage_selected": "(5.8%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "Rate = k[A]",
+    "analytics": {
+      "percent_correct": "63.1%",
+      "time_spent": "0 min, 1 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p>To solve this problem involving <strong>half-life</strong>, we need to recall that the half-life of a substance is the time it takes to convert half of the reactants to products. </p><p><strong>STEP 1:</strong> First, let’s assume that compound A’s reaction follows first order kinetics (the half-life does not change based on concentration) This means that 50 g of sample A after the first half-life will have 50 × ½ = 25 g remaining. After two half-lives, 25 × ½ = 12.5 g will remain. Finally, after three half-lives, 12.5 × ½ = 6.25 g will remain. </p><p><strong>STEP 2:</strong> Since each half-life for compound A is 2 minutes, 3 half-lives is 3 × 2 = 6 minutes. The question tells us that our 50 g sample reduces to 6.25 g after 6 minutes, which aligns with our assumption that compound A follows first order kinetics. If the sample reduces to 6.25 g in a time less than or greater than 6 minutes, this tells us that our initial assumption that compound A’s reaction follows first order kinetics is incorrect.</p><p><strong>STEP 3: </strong>Knowing that compound A’s reaction follows first order kinetics, we can take a look at each answer choice and see that the only rate law that is first order is <strong>Rate = k[A]</strong>.</p><p>Therefore, the answer is <strong>B</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 8,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>If a first-order reaction X → Y has a half-life of 2.4 minutes and starts with a concentration of X = 20 M, then what concentration of X, in M, will be present after 12 minutes of reaction? </p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>5/16</p></div>",
+        "percentage_selected": "(9.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>5/8</p></div>",
+        "percentage_selected": "(76.8%)",
+        "is_correct": true
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>5/4</p></div>",
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>5/2</p></div>",
+        "percentage_selected": "(2.9%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>5</p></div>",
+        "percentage_selected": "(2.3%)",
+        "is_correct": false
+      }
+    ],
+    "correct_answer_original_text": "5/8",
+    "analytics": {
+      "percent_correct": "76.8%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p>To solve this problem involving <strong>half-life</strong>, we need to recall that the half-life of a substance is the time it takes to convert half of the reactants to products. </p><p><strong>STEP 1:</strong> First, we know that X → Y is a first-order reaction, so its half-life of 2.4 minutes does not change based on concentration. Since we are interested in knowing the concentration after 12 minutes of reaction, we are interested in 12 ÷ 2.4 = 5 half-lives.</p><p><strong>STEP 2:</strong> Next, we can determine the concentration of X, with an initial concentration of 20 M after 5 half-lives:</p><p style=\"text-align:center;\">1st half-life: 20 × ½ = 10</p><p style=\"text-align:center;\">2nd half-life: 10 × ½ = 5 </p><p style=\"text-align:center;\">3rd half-life: 5 × ½ = 5/2</p><p style=\"text-align:center;\">4th half-life: 5/2 × ½ = 5/4</p><p style=\"text-align:center;\">5th half-life: 5/4 × ½ = 5/8 </p><p>In this case, we can conclude that the concentration of X after 12 minutes is <strong>5/8</strong> M. </p><p>Therefore, the answer is <strong>B</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 9,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>If the half-life of A is 8 hours and its first order half-life reaction is represented by A → 2B + 3C, what concentration of B is present after one day, assuming a starting concentration of 2.4 M of A?</p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>0.6 M</p></div>",
+        "percentage_selected": "(40%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>1.8 M</p></div>",
+        "percentage_selected": "(8.6%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>2.4 M</p></div>",
+        "percentage_selected": "(8%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>3.6 M</p></div>",
+        "percentage_selected": "(5.3%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>4.2 M</p></div>",
+        "percentage_selected": "(38%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_original_text": "4.2 M",
+    "analytics": {
+      "percent_correct": "38%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p>To solve this problem involving <strong>half-life</strong>, we need to recall that the half-life of a substance is the time it takes to convert half of the reactants to products. </p><p><strong>STEP 1:</strong> First, we know that A → 2B + 3C is a first order reaction, so its half-life of 8 hours does not change based on concentration. Since we are interested in the concentration of B after 1 day (24 hours), we are interested in 24 ÷ 8 = 3 half-lives. </p><p><strong>STEP 2:</strong> Next, we can determine the concentration of A after three half-lives, knowing that is has an initial concentration of 2.4 M:</p><p style=\"text-align:center;\">2.4 × ½ × ½ × ½ = 0.3 M</p><p><strong>STEP 3:</strong> 0.3 M is the concentration of A after three half-lives. We can subtract 0.3 M from 2.4 M to determine the concentration of A that has been reacted in this amount of time:</p><p style=\"text-align:center;\">2.4 M – 0.3 M = 2.1 M</p><p><strong>STEP 4:</strong> In A → 2B + 3C, for each mole of A consumed, 2 moles of B are formed. This implies that when 2.1 M of A has been consumed, 2.1 × 2 = <strong>4.2 M</strong> of B have been formed. </p><p>Therefore, the answer is <strong>E</strong>.</p></span></div>"
+    }
+  },
+  {
+    "question_number": 10,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life",
+    "question": {
+      "html_content": "<div class=\"MuiTypography-root MuiTypography-small1 mui-style-1hhewbj\" data-testid=\"question-text\"><p>Based on the given half-life equation for molecule A, what is the reaction order and what happens when the concentration of A decreases?</p><p style=\"text-align:center;\"><img class=\"image_resized image\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+10+Top+Figure+1.png\" style=\"width:122px;\"/></p></div>"
+    },
+    "options": [
+      {
+        "label": "A.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The zero order reaction half-life will decrease</p></div>",
+        "percentage_selected": "(6.4%)",
+        "is_correct": false
+      },
+      {
+        "label": "B.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The first order reaction half-life will decrease</p></div>",
+        "percentage_selected": "(5%)",
+        "is_correct": false
+      },
+      {
+        "label": "C.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The first order reaction half-life will increase</p></div>",
+        "percentage_selected": "(7%)",
+        "is_correct": false
+      },
+      {
+        "label": "D.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The second order reaction half-life will decrease</p></div>",
+        "percentage_selected": "(7.8%)",
+        "is_correct": false
+      },
+      {
+        "label": "E.",
+        "html_content": "<div class=\"mui-style-a23rcr\" data-testid=\"answer-text\"><p>The second order reaction half-life will increase</p></div>",
+        "percentage_selected": "(73.9%)",
+        "is_correct": true
+      }
+    ],
+    "correct_answer_original_text": "The second order reaction half-life will increase",
+    "analytics": {
+      "percent_correct": "73.9%",
+      "time_spent": "0 min, 2 secs"
+    },
+    "explanation": {
+      "html_content": "<div class=\"mui-style-133viby\" data-testid=\"concept-wrapper\"><span class=\"MuiTypography-root MuiTypography-body3 mui-style-14k96us\"><p><span class=\"bar\">Concept</span></p><p> To solve this problem involving <strong>half-life</strong>, which is the time it takes to convert half of the reactants to products, we can first review the half-life equations:</p><ul style=\"list-style-type:disc;\"><li>Zero-order reactions – as concentration <i>decreases</i>, half-life <i>decreases</i>:</li></ul><figure class=\"image image_resized\" style=\"width:108px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+1.png\"/></figure><ul style=\"list-style-type:disc;\"><li>First-order reactions – half-life is independent of concentration:</li></ul><figure class=\"image image_resized\" style=\"width:116px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+2.png\"/></figure><ul style=\"list-style-type:disc;\"><li>Second-order reactions – as concentration <i>decreases</i>, half-life <i>increases</i>:</li></ul><figure class=\"image image_resized\" style=\"width:120px;\"><img class=\"wp-image-11208 aligncenter\" src=\"https://datbooster.s3.amazonaws.com/General+Chemistry/Collision+Theory+and+Arrhenius+Equation%3A+Half-Life/Question+2+Solution+3.png\"/></figure><p>In this case, we can conclude that the given formula is a <strong>second-order reaction</strong>, in which as concentration of A decreases, the <strong>half-life increases</strong>. Remember that the second-order reaction is often graphed with an inverse concentration form, which is a hint that our given equation was a second-order reaction. Based on the equation, we can actually see that if we decreased [A]<sub>0</sub>, we decrease the denominator in the half-life formula, so t<sub>1/2</sub> increases. </p><p>Therefore, the answer is <strong>E</strong>.</p></span></div>"
+    }
+  },
+  {
+    "error": "Quiz error Q10: Message: \nStacktrace:\n0   chromedriver                        0x00000001052403e0 cxxbridge1$str$ptr + 2829900\n1   chromedriver                        0x00000001052386a8 cxxbridge1$str$ptr + 2797844\n2   chromedriver                        0x0000000104d75fbc cxxbridge1$string$len + 90140\n3   chromedriver                        0x0000000104dbd1bc cxxbridge1$string$len + 381468\n4   chromedriver                        0x0000000104dfe044 cxxbridge1$string$len + 647332\n5   chromedriver                        0x0000000104db13f8 cxxbridge1$string$len + 332888\n6   chromedriver                        0x0000000105204804 cxxbridge1$str$ptr + 2585200\n7   chromedriver                        0x0000000105207ad4 cxxbridge1$str$ptr + 2598208\n8   chromedriver                        0x00000001051e5dd8 cxxbridge1$str$ptr + 2459716\n9   chromedriver                        0x000000010520834c cxxbridge1$str$ptr + 2600376\n10  chromedriver                        0x00000001051d7664 cxxbridge1$str$ptr + 2400464\n11  chromedriver                        0x00000001052282b0 cxxbridge1$str$ptr + 2731292\n12  chromedriver                        0x000000010522843c cxxbridge1$str$ptr + 2731688\n13  chromedriver                        0x00000001052382f4 cxxbridge1$str$ptr + 2796896\n14  libsystem_pthread.dylib             0x00000001973472e4 _pthread_start + 136\n15  libsystem_pthread.dylib             0x00000001973420fc thread_start + 8\n",
+    "question_number": 10,
+    "category": "Chemical Kinetics",
+    "question_bank": "Half-Life"
+  }
+]
