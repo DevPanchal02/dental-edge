@@ -220,3 +220,60 @@
   .back-button:hover {
       background-color: #0056b3;
   }
+  .passage-container {
+    background-color: #252525; /* Slightly different from question card or same */
+    border: 1px solid #404040;
+    padding: 20px 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    max-height: 45vh; /* Adjust as needed, viewport height relative */
+    overflow-y: auto; /* Scroll for long passages */
+    line-height: 1.7; /* Improved readability */
+    color: #dcdcdc; /* Lighter text for passage */
+     /* Basic scrollbar styling */
+     scrollbar-width: thin;
+     scrollbar-color: #555 #333;
+}
+.passage-container::-webkit-scrollbar { width: 8px; }
+.passage-container::-webkit-scrollbar-track { background: #252525; border-radius: 4px; }
+.passage-container::-webkit-scrollbar-thumb { background-color: #555; border-radius: 4px; border: 2px solid #252525; }
+
+
+.passage-title { /* Optional if you add a title element for passages */
+    color: #00bcd4;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+.passage-content p {
+    margin-top: 0;
+    margin-bottom: 1.2em; /* More spacing between paragraphs */
+}
+.passage-content p:last-child {
+    margin-bottom: 0;
+}
+
+.passage-content strong, .passage-content b { /* Make bold text stand out a bit more */
+    color: #e8e8e8;
+    font-weight: 600; /* Slightly bolder if font supports it */
+}
+
+.passage-content em, .passage-content i { /* Style italics */
+    color: #c8c8c8;
+}
+
+/* Ensure images within passage content are responsive and styled */
+.passage-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto; /* More vertical margin for passage images */
+  border-radius: 4px;
+  background-color: #ffffff; /* White background for transparent images */
+  padding: 8px;             /* Padding around the image */
+  border: 1px solid #cccccc; /* Light border */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
