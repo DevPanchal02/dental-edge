@@ -1,4 +1,3 @@
-
 #~~~~~~~~~~~~~~~~~ Necessary Ignores ~~~~~~~~~~~~~~~~~#
 
 # Node dependencies (inside client)
@@ -7,6 +6,25 @@ client/node_modules/
 # Build output & cache (inside client)
 client/dist/
 client/.vite/
+
+# === Data Files to Ignore (KEEP loader.js and the data directory itself) ===
+# Ignore specific subject folders and all their contents
+client/src/data/biology/
+client/src/data/chemistry/
+client/src/data/perceptual-ability/
+client/src/data/reading-comprehension/
+# Add any other subject folders you want to ignore here, e.g.:
+# client/src/data/your-new-subject-folder/
+
+# Ignore other specific data-related folders if they exist and should be ignored
+client/src/new-data/
+client/src/old-data/
+
+# IMPORTANT:
+# The specific folder ignores above (e.g., client/src/data/biology/)
+# will correctly ignore those folders and their contents.
+# The data directory itself (client/src/data/) is NOT ignored,
+# so client/src/data/loader.js will remain tracked.
 
 # Environment variables (inside client)
 # Important: Uncomment if you use .env files! Keep secrets out of Git.
