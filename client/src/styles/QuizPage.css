@@ -1,3 +1,5 @@
+/* FILE: client/src/styles/QuizPage.css */
+
 .quiz-page-container {
   max-width: 900px;
   margin: 0 auto;
@@ -8,10 +10,11 @@
   color: var(--text-primary);
   min-height: calc(100vh - 40px); /* Assuming 20px padding top/bottom */
   box-sizing: border-box;
+  position: relative; 
 }
 
 .quiz-header {
-  margin-bottom: 20px; /* Increased margin */
+  margin-bottom: 20px; 
   padding-bottom: 15px;
   border-bottom: 1px solid var(--border-primary);
   position: relative;
@@ -19,8 +22,6 @@
   align-items: center;
   justify-content: space-between;
   min-height: 40px;
-  /* background-color: var(--bg-secondary); /* Optional: subtle header background */
-  /* padding: 10px 0; */ /* Padding for items inside header if bg is different */
 }
 
 .back-button-quiz {
@@ -69,13 +70,19 @@
   border: 1px solid var(--border-primary);
   padding: 20px 25px;
   margin-bottom: 20px;
-  border-radius: 6px; /* Softer radius */
-  max-height: 40vh; /* Adjusted max height */
-  overflow-y: auto;
+  border-radius: 6px; 
+  max-height: 40vh; 
+  overflow-y: scroll; /* MODIFIED: Changed from auto to scroll to reserve space for scrollbar */
   line-height: 1.7;
   color: var(--text-primary);
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
+  /* scrollbar-width: thin; */ /* This is fine, but -webkit- styles are more specific */
+  /* scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg); */
+  position: relative; 
+  user-select: text; 
+  -webkit-user-select: text; 
+  -moz-user-select: text; 
+  -ms-user-select: text; 
+  padding-bottom: 10px; 
 }
 .passage-container::-webkit-scrollbar { width: 8px; }
 .passage-container::-webkit-scrollbar-track { background: var(--bg-passage); border-radius: 4px; }
@@ -90,45 +97,45 @@
   display: block;
   margin: 15px auto;
   border-radius: 4px;
-  background-color: var(--bg-primary); /* Ensures visibility on any theme */
+  background-color: var(--bg-primary); 
   padding: 5px;
   border: 1px solid var(--border-primary);
   box-shadow: var(--shadow-card);
 }
-body.light-mode .passage-content img { background-color: #fff; } /* Explicit for light if needed */
+body.light-mode .passage-content img { background-color: #fff; } 
 
 
 .quiz-controls-top {
   display: flex;
-  justify-content: flex-end; /* Timer to the right */
+  justify-content: flex-end; 
   align-items: center;
-  margin-bottom: 20px; /* Increased margin */
-  min-height: 40px;
+  margin-bottom: 20px; 
+  min-height: 40px; /* Ensures space is reserved, good for CLS */
   padding: 5px 0;
 }
 
 .timer-display {
   background-color: var(--bg-secondary);
   color: var(--text-primary);
-  padding: 8px 14px; /* Slightly larger */
+  padding: 8px 14px; 
   border-radius: 5px;
-  font-size: 1em; /* Adjusted font size */
+  font-size: 1em; 
   font-family: 'Courier New', Courier, monospace;
   box-shadow: var(--shadow-card);
-  min-width: 120px; /* Adjusted min-width */
+  min-width: 120px; /* Helps maintain consistent size */
   text-align: right;
   flex-shrink: 0;
   border: 1px solid var(--border-primary);
 }
 .timer-display .timer-low { color: var(--bg-button-warning); font-weight: bold; }
 .timer-display .timer-total { font-size: 0.8em; color: var(--text-secondary); margin-left: 5px; }
-.timer-display-placeholder { min-width: 120px; visibility: hidden; }
+.timer-display-placeholder { min-width: 120px; height: 38px; /* Match potential timer height */ visibility: hidden; }
+
 
 .quiz-content-area {
   margin-bottom: 20px;
 }
 
-/* Quiz Navigation Bar */
 .quiz-navigation {
   display: flex;
   justify-content: space-between;
@@ -150,14 +157,14 @@ body.light-mode .passage-content img { background-color: #fff; } /* Explicit for
 .nav-group-right { justify-content: flex-end; }
 
 .nav-button, .mark-button-nav {
-  padding: 9px 16px; /* Unified padding */
+  padding: 9px 16px; 
   font-size: 0.9em;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   white-space: nowrap;
   margin: 0 5px;
-  border: 1px solid transparent; /* Base for all */
+  border: 1px solid transparent; 
   min-width: 80px;
   text-align: center;
 }
@@ -176,7 +183,7 @@ body.light-mode .passage-content img { background-color: #fff; } /* Explicit for
   border-color: var(--bg-button-solution);
 }
 .solution-toggle-button-bottom:hover:not(:disabled) {
-  background-color: var(--bg-button-secondary-hover); /* Or a specific solution hover */
+  background-color: var(--bg-button-solution-hover); /* Corrected from secondary hover */
 }
 
 .next-button,
@@ -212,17 +219,15 @@ body.light-mode .passage-content img { background-color: #fff; } /* Explicit for
 }
 .review-button-bottom:hover:not(:disabled) { background-color: var(--bg-button-secondary-hover); }
 
-/* Placeholders */
 .mark-button-nav-placeholder,
 .review-button-bottom-placeholder,
 .solution-toggle-button-bottom-placeholder {
-  min-width: 80px; /* Match button min-width */
-  height: 38px;   /* Match approx button height (padding + font) */
+  min-width: 80px; 
+  height: 38px;   
   margin: 0 5px;
   visibility: hidden;
-  display: inline-block; /* Ensure it takes space like a button */
+  display: inline-block; 
 }
-
 
 .back-button {
   display: inline-block;
@@ -236,3 +241,27 @@ body.light-mode .passage-content img { background-color: #fff; } /* Explicit for
   text-decoration: none;
 }
 .back-button:hover { background-color: var(--bg-button-primary-hover); }
+
+/* HIGHLIGHTER STYLES */
+.highlight-popup-button {
+  position: absolute; 
+  display: none; 
+  background-color: #333; 
+  color: white;
+  border: 1px solid #555;
+  padding: 4px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1000; 
+  font-size: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transform: translateX(-50%); 
+}
+
+mark.custom-highlight {
+  background-color: var(--highlight-bg); /* Use themed highlight background */
+  color: var(--highlight-text);          /* Use themed highlight text color */
+  /* Ensure no extra padding/margin that could cause minor shifts */
+  padding: 0; 
+  margin: 0;
+}

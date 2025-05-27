@@ -4,18 +4,17 @@
 :root {
   /* Light Mode (Default) - Based on new palette */
   --bg-primary: #FFFAEC;                            /* Lightest Beige from palette */
-  --bg-secondary: #F5ECD5;                          /* Medium Beige for secondary backgrounds */
-  --bg-sidebar: #F5ECD5;                            /* Medium Beige for sidebar */
+  --bg-secondary: #f4efe5;                          /* Medium Beige for secondary backgrounds */
+  --bg-sidebar: #f4efe5;                            /* Medium Beige for sidebar */
   --bg-quiz-content-area: #FFFFFF;                  /* Explicit white for quiz area as previously requested */
   --bg-question-card: #FFFFFF;                      /* Explicit white for question card */
-  --bg-option: #FAF6EF;                            /* Very light beige, derived from F5ECD5 */
-  --bg-option-hover: #F5ECD5;                       /* Medium Beige for hover */
-  --bg-option-selected: #E0D8C5;                    /* Darker shade of F5ECD5 for selected */
+  --bg-option: #FAF6EF;                            /* Very light beige, derived from f4efe5 */
+  --bg-option-hover: #f4efe5;                       /* Medium Beige for hover */
+  --bg-option-selected: #E0D8C5;                    /* Darker shade of f4efe5 for selected */
   --bg-option-correct: #d4edda;                     /* Standard light green - keep for clarity */
   --bg-option-incorrect: #f8d7da;                   /* Standard light red - keep for clarity */
-  /* UPDATED --bg-explanation to match --bg-question-card */
   --bg-explanation: var(--bg-question-card);        /* Should resolve to #FFFFFF */
-  --bg-passage: #F5ECD5;                           /* Medium Beige for passage (can be different if desired) */
+  --bg-passage: var(--bg-question-card);            /* UPDATED: Passage bg to match question card bg */
   --bg-modal-content: #FFFAEC;                      /* Lightest Beige for modal */
 
   --bg-button-primary: #578E7E;                     /* Teal from palette */
@@ -28,7 +27,7 @@
   --bg-button-warning-hover: #e0a800;
   --bg-button-solution: #578E7E;                    /* Teal for solution button */
   --bg-button-solution-hover: #4A7A6B;
-  --bg-item-link: #F5ECD5;                          /* TopicPage test/QB items - Medium Beige */
+  --bg-item-link: #f4efe5;                          /* TopicPage test/QB items - Medium Beige */
   --bg-item-link-hover: #E0D8C5;                    /* Darker Medium Beige */
 
   --text-primary: #3D3D3D;                         /* Dark Grey/Black from palette */
@@ -53,14 +52,18 @@
 
   --shadow-card: 0 1px 3px rgba(61, 61, 61, 0.1);   /* Shadow based on dark grey */
 
-  --scrollbar-track-bg: #F5ECD5;                    /* Medium Beige scrollbar track */
+  /* UPDATED Light Mode Highlight Colors */
+  --highlight-bg: #fff099; /* Darker yellow for light mode highlighting */
+  --highlight-text: #3D3D3D; /* Dark text for good contrast on light highlight */
+
+  --scrollbar-track-bg: #f4efe5;                    /* Medium Beige scrollbar track */
   --scrollbar-thumb-bg: #C4BBAF;                    /* Muted Beige/Grey scrollbar thumb */
 }
 
 body.dark-mode {
   /* Dark Mode - Inverted and adjusted from the new light palette */
   --bg-primary: #1E1E1E;                            /* Very dark grey, counterpart to FFFAEC */
-  --bg-secondary: #2B2B2B;                          /* Darker grey, counterpart to F5ECD5 */
+  --bg-secondary: #2B2B2B;                          /* Darker grey, counterpart to f4efe5 */
   --bg-sidebar: #2B2B2B;
   --bg-quiz-content-area: #1E1E1E;                  /* Dark for quiz page */
   --bg-question-card: #252525;                      /* Slightly off-black for card */
@@ -69,9 +72,8 @@ body.dark-mode {
   --bg-option-selected: #4A4A4A;
   --bg-option-correct: #2E4B3A;                     /* Dark Teal-Green */
   --bg-option-incorrect: #4A2E2E;                    /* Dark Maroon */
-  /* UPDATED --bg-explanation to match --bg-question-card */
   --bg-explanation: var(--bg-question-card);        /* Should resolve to #252525 */
-  --bg-passage: #2B2B2B;                           /* Darker grey for passage (can be different if desired) */
+  --bg-passage: var(--bg-question-card);            /* UPDATED: Passage bg to match question card bg */
   --bg-modal-content: #252525;
 
   --bg-button-primary: #79B0A1;                     /* Lighter Teal for dark mode primary buttons */
@@ -87,7 +89,7 @@ body.dark-mode {
   --bg-item-link: #333333;                          /* Darker for TopicPage buttons */
   --bg-item-link-hover: #3D3D3D;
 
-  --text-primary: #F5ECD5;                          /* Medium Beige from palette for main text */
+  --text-primary: #f4efe5;                          /* Medium Beige from palette for main text */
   --text-secondary: #BEB3A2;                       /* Lighter beige for secondary text */
   --text-on-button-primary: #1E1E1E;                /* Dark text on lighter teal buttons */
   --text-on-button-secondary: #FFFAEC;              /* Lightest Beige on original teal buttons */
@@ -109,8 +111,13 @@ body.dark-mode {
 
   --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.45);     /* More visible shadow for dark mode */
 
+  /* UPDATED Dark Mode Highlight Colors */
+  --highlight-bg: #ffd700; /* Yellow (gold) for highlight background in dark mode */
+  --highlight-text: #1E1E1E; /* Very dark grey text for contrast on yellow highlight */
+
   --scrollbar-track-bg: #2B2B2B;
   --scrollbar-thumb-bg: #3D3D3D;
+
 }
 /* --- End CSS Variables --- */
 
