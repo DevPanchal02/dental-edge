@@ -159,7 +159,7 @@ function QuizPage() {
 
     useEffect(() => {
         isMountedRef.current = true;
-        setIsLoading(true); setError(null); setPassageHtml(null);
+        setIsLoading(true); setError(null); // setPassageHtml(null) removed from here for clarity, will be handled by its own effect.
         if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
 
         try {
@@ -172,14 +172,12 @@ function QuizPage() {
 
             setAllQuizQuestions(loadedQuizData);
             setQuizMetadata(loadedQuizMetadata);
-            if (loadedQuizData[0]?.passage?.html_content) {
-                setPassageHtml(loadedQuizData[0].passage.html_content);
-            }
+            // Initial passage setting is removed from here and handled by the new useEffect below
             loadSavedStateAndInitialize(loadedQuizData, loadedQuizMetadata);
         } catch (err) {
             console.error('[QuizPage] Error loading quiz data:', err);
             setError(err.message || 'Failed to load quiz.');
-            setAllQuizQuestions([]); setQuizMetadata(null); setPassageHtml(null);
+            setAllQuizQuestions([]); setQuizMetadata(null);
         } finally {
              if(isMountedRef.current) setIsLoading(false);
         }
@@ -189,6 +187,22 @@ function QuizPage() {
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
         };
     }, [topicId, sectionType, quizId, loadSavedStateAndInitialize]);
+
+    // *** NEW useEffect to update passageHtml based on currentQuestionIndex ***
+    useEffect(() => {
+        if (allQuizQuestions && allQuizQuestions.length > 0 && currentQuestionIndex >= 0 && currentQuestionIndex < allQuizQuestions.length) {
+            const currentQData = allQuizQuestions[currentQuestionIndex];
+            if (currentQData && !currentQData.error && currentQData.passage && currentQData.passage.html_content) {
+                setPassageHtml(currentQData.passage.html_content);
+            } else {
+                // If current question has no passage or is an error, clear passage display
+                setPassageHtml(null);
+            }
+        } else {
+            setPassageHtml(null); // Clear passage if questions/index are invalid
+        }
+    }, [currentQuestionIndex, allQuizQuestions]);
+    // *** END NEW useEffect ***
 
     useEffect(() => {
         if (timerIntervalRef.current) { clearInterval(timerIntervalRef.current); timerIntervalRef.current = null; }
@@ -210,7 +224,7 @@ function QuizPage() {
             }, 1000);
         }
         return () => { if (timerIntervalRef.current) clearInterval(timerIntervalRef.current); };
-    }, [isTimerActive, isCountdown, isReviewMode]);
+    }, [isTimerActive, isCountdown, isReviewMode]); // Added handleFinishQuiz to dependency array if it's used inside, but it's called, not defined here.
 
      useEffect(() => {
         if (!isLoading && allQuizQuestions?.length > 0 && currentQuestionIndex >= 0 && !isReviewMode) {
