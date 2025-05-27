@@ -6,6 +6,16 @@ import QuestionCard from '../components/QuestionCard';
 import ReviewModal from '../components/ReviewModal';
 import '../styles/QuizPage.css';
 
+// Debounce utility
+function debounce(func, delay) {
+    let timeoutId;
+    return function(...args) {
+        const context = this;
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(context, args), delay);
+    };
+}
+
 const cleanPassageHtml = (htmlString) => {
     if (!htmlString || typeof htmlString !== 'string') return '';
     let cleanedHtml = htmlString;
@@ -32,8 +42,7 @@ const formatTime = (totalSeconds) => {
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 };
 
-// MemoizedPassage Component
-const MemoizedPassage = React.memo(function MemoizedPassage({ html, onMouseUp, onClick, passageRef }) { // Added onClick prop
+const MemoizedPassage = React.memo(function MemoizedPassage({ html, passageRef }) {
     if (!html) {
         return null;
     }
@@ -41,13 +50,12 @@ const MemoizedPassage = React.memo(function MemoizedPassage({ html, onMouseUp, o
         <div
             className="passage-container"
             ref={passageRef}
-            onMouseUp={onMouseUp}
-            onClick={onClick} // Attach the new click handler
             dangerouslySetInnerHTML={{ __html: html }}
         />
     );
 });
 
+const EMPTY_SET = new Set();
 
 function QuizPage() {
     const { topicId, sectionType, quizId } = useParams();
@@ -75,29 +83,27 @@ function QuizPage() {
     const [isCountdown, setIsCountdown] = useState(false);
     const [initialDuration, setInitialDuration] = useState(0);
     const isMountedRef = useRef(true);
-    const stateRef = useRef();
-
+    
+    const quizPageContainerRef = useRef(null); // Ref for the main div
     const passageContainerRef = useRef(null);
     const highlightButtonRef = useRef(null); 
 
     const [passageHtml, setPassageHtml] = useState(null);
     const [tempReveal, setTempReveal] = useState({});
+
+    const debouncedSelectionChangeHandlerRef = useRef(null);
     
     const getQuizStateKey = useCallback(() => {
         return `quizState-${topicId}-${sectionType}-${quizId}`;
     }, [topicId, sectionType, quizId]);
 
-    stateRef.current = {
-        currentQuestionIndex, userAnswers, submittedAnswers, crossedOffOptions,
-        userTimeSpent, timerValue, isCountdown, initialDuration, markedQuestions
-    };
-
     const saveState = useCallback(() => {
         if (isReviewMode || !isMountedRef.current) return;
         const stateToSave = {
-            ...stateRef.current,
+            currentQuestionIndex, userAnswers, submittedAnswers, userTimeSpent,
+            timerValue, isCountdown, initialDuration, markedQuestions, tempReveal, showExplanation,
             crossedOffOptions: Object.fromEntries(
-                Object.entries(stateRef.current.crossedOffOptions).map(([key, valueSet]) => [
+                Object.entries(crossedOffOptions).map(([key, valueSet]) => [
                     key, Array.from(valueSet instanceof Set ? valueSet : new Set())
                 ])
             ),
@@ -105,7 +111,15 @@ function QuizPage() {
         try {
             localStorage.setItem(getQuizStateKey(), JSON.stringify(stateToSave));
         } catch (e) { console.error("[QuizPage] Error saving state:", e); }
-    }, [getQuizStateKey, isReviewMode]);
+    }, [
+        getQuizStateKey, isReviewMode, currentQuestionIndex, userAnswers, submittedAnswers,
+        userTimeSpent, timerValue, isCountdown, initialDuration, markedQuestions, tempReveal,
+        showExplanation, crossedOffOptions
+    ]);
+    const saveStateRef = useRef(saveState);
+    useEffect(() => {
+        saveStateRef.current = saveState;
+    }, [saveState]);
 
     const handleFinishQuiz = useCallback((timedOut = false) => {
         if (!isMountedRef.current) return;
@@ -120,13 +134,11 @@ function QuizPage() {
             return;
         }
         
-        const finalState = stateRef.current;
         let score = 0;
         let correctIndices = [];
         let incorrectIndices = [];
 
         if (!allQuizQuestions || allQuizQuestions.length === 0 || !quizMetadata) {
-            console.error("handleFinishQuiz called before quiz data is fully loaded or quizMetadata is null.");
             setError("Could not finalize quiz due to missing data. Please try again.");
             return; 
         }
@@ -136,12 +148,12 @@ function QuizPage() {
 
         allQuizQuestions.forEach((q, index) => {
             if (!q || q.error) return;
-            const userAnswerLabel = finalState.userAnswers[index];
-            const isSubmitted = !!finalState.submittedAnswers[index];
+            const userAnswerLabel = userAnswers[index]; 
+            const isAnswerSubmitted = submittedAnswers[index]; 
             const correctOption = q.options?.find(opt => opt.is_correct === true);
             const correctAnswerLabel = correctOption?.label;
 
-            if (isSubmitted) {
+            if (isAnswerSubmitted) {
                 if (userAnswerLabel !== undefined && userAnswerLabel === correctAnswerLabel) {
                     score++;
                     correctIndices.push(index);
@@ -155,8 +167,8 @@ function QuizPage() {
 
         const results = {
             score, totalQuestions: totalPossibleScore, totalValidQuestions,
-            correctIndices, incorrectIndices, userAnswers: finalState.userAnswers,
-            userTimeSpent: finalState.userTimeSpent, markedQuestions: finalState.markedQuestions,
+            correctIndices, incorrectIndices, userAnswers, 
+            userTimeSpent, markedQuestions, 
             timestamp: Date.now(), quizName: quizMetadata.name || 'Quiz',
             topicName: formatDisplayName(topicId)
         };
@@ -165,14 +177,18 @@ function QuizPage() {
         catch (e) { console.error("Error saving results:", e); }
         localStorage.removeItem(getQuizStateKey());
         navigate(`/results/${topicId}/${sectionType}/${quizId}`, { replace: true });
-    }, [allQuizQuestions, quizMetadata, getQuizStateKey, isReviewMode, navigate, sectionType, topicId, quizId, setIsTimerActive, setError]);
-
+    }, [
+        allQuizQuestions, quizMetadata, isReviewMode, navigate, sectionType, topicId, quizId,
+        userAnswers, submittedAnswers, userTimeSpent, markedQuestions, 
+        getQuizStateKey, setError 
+    ]);
     const handleFinishQuizRef = useRef(handleFinishQuiz);
     useEffect(() => {
         handleFinishQuizRef.current = handleFinishQuiz;
     }, [handleFinishQuiz]);
 
-    const loadSavedStateAndInitialize = useCallback((data, metadata) => {
+
+    const loadSavedStateAndInitialize = useCallback((data) => {
         let stateLoaded = false;
         if (isReviewMode) {
             const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
@@ -221,7 +237,8 @@ function QuizPage() {
                     setTimerValue(savedState.timerValue !== undefined ? savedState.timerValue : 0);
                     setIsCountdown(savedState.isCountdown !== undefined ? savedState.isCountdown : false);
                     setInitialDuration(savedState.initialDuration || 0);
-                    setTempReveal({}); 
+                    setTempReveal(savedState.tempReveal || {}); 
+                    setShowExplanation(savedState.showExplanation || {});
 
                     if (!(savedState.isCountdown && savedState.timerValue <= 0)) { 
                         setIsTimerActive(true);
@@ -248,94 +265,149 @@ function QuizPage() {
                  setInitialDuration(0); 
             }
         }
-    }, [getQuizStateKey, isReviewMode, reviewQuestionIndex, topicId, sectionType, quizId, setIsTimerActive, setTimerValue, setIsCountdown, setInitialDuration, setCurrentQuestionIndex, setUserAnswers, setSubmittedAnswers, setShowExplanation, setCrossedOffOptions, setUserTimeSpent, setMarkedQuestions, setTempReveal]);
+    }, [getQuizStateKey, isReviewMode, reviewQuestionIndex, topicId, sectionType, quizId]);
     
-    const handleMouseUp = useCallback(() => {
-        if (!passageContainerRef.current || isReviewMode || !highlightButtonRef.current) return;
-        
+    const handleActualSelectionChange = useCallback(() => {
+        if (isReviewMode || !highlightButtonRef.current || !quizPageContainerRef.current) return;
+
         requestAnimationFrame(() => {
             const selection = window.getSelection();
-        
-            if (selection && !selection.isCollapsed && selection.rangeCount > 0) {
-                const range = selection.getRangeAt(0);
-                // Ensure the selection is within the passage container
-                if (passageContainerRef.current && passageContainerRef.current.contains(range.commonAncestorContainer)) {
-                    const rect = range.getBoundingClientRect(); 
-                    const quizPageContainerElem = passageContainerRef.current.closest('.quiz-page-container');
-        
-                    if (quizPageContainerElem) {
-                        const quizPageRect = quizPageContainerElem.getBoundingClientRect();
-            
-                        const buttonTop = rect.top - quizPageRect.top + quizPageContainerElem.scrollTop - 35; 
-                        const buttonLeft = rect.left - quizPageRect.left + quizPageContainerElem.scrollLeft + (rect.width / 2); 
-            
-                        highlightButtonRef.current.style.top = `${buttonTop}px`;
-                        highlightButtonRef.current.style.left = `${buttonLeft}px`;
-                        highlightButtonRef.current.style.display = 'block';
-                        highlightButtonRef.current._selectionRange = range.cloneRange(); 
+            if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
+                if (highlightButtonRef.current.style.display === 'block') {
+                    highlightButtonRef.current.style.display = 'none';
+                    highlightButtonRef.current._selectionRange = null;
+                }
+                return;
+            }
+
+            const range = selection.getRangeAt(0);
+            let commonAncestor = range.commonAncestorContainer;
+            if (commonAncestor.nodeType === Node.TEXT_NODE) {
+                commonAncestor = commonAncestor.parentNode;
+            }
+
+            let highlightTargetElement = null;
+            if (passageContainerRef.current && passageContainerRef.current.contains(commonAncestor)) {
+                highlightTargetElement = passageContainerRef.current;
+            } else if (commonAncestor.closest) {
+                // Ensure the closest element is within the quizPageContainerRef
+                const questionCardElement = quizPageContainerRef.current.querySelector('.question-card');
+                if (questionCardElement) {
+                    const questionContent = commonAncestor.closest('.question-html-content');
+                    const optionContent = commonAncestor.closest('.option-html-content');
+
+                    if (questionContent && questionCardElement.contains(questionContent)) {
+                        highlightTargetElement = questionContent;
+                    } else if (optionContent && questionCardElement.contains(optionContent)) {
+                        highlightTargetElement = optionContent;
                     }
-                    return; 
                 }
             }
-            // If selection is outside, or collapsed, or no range, ensure button is hidden.
-            // This might be called if user clicks without dragging.
-            // highlightButtonRef.current.style.display = 'none'; 
-            // highlightButtonRef.current._selectionRange = null;
+
+
+            if (highlightTargetElement && range.toString().trim() !== "") {
+                const rect = range.getBoundingClientRect();
+                const mainContainerRect = quizPageContainerRef.current.getBoundingClientRect();
+
+                const buttonTop = rect.top - mainContainerRect.top + quizPageContainerRef.current.scrollTop - 35;
+                const buttonLeft = rect.left - mainContainerRect.left + quizPageContainerRef.current.scrollLeft + (rect.width / 2);
+
+                highlightButtonRef.current.style.top = `${buttonTop}px`;
+                highlightButtonRef.current.style.left = `${buttonLeft}px`;
+                highlightButtonRef.current.style.display = 'block';
+                highlightButtonRef.current._selectionRange = range.cloneRange();
+            } else {
+                if (highlightButtonRef.current.style.display === 'block') {
+                    highlightButtonRef.current.style.display = 'none';
+                    highlightButtonRef.current._selectionRange = null;
+                }
+            }
         });
-    }, [isReviewMode]); 
+    }, [isReviewMode]);
+
+    useEffect(() => {
+        debouncedSelectionChangeHandlerRef.current = debounce(handleActualSelectionChange, 150);
+    }, [handleActualSelectionChange]);
 
 
-    const handleMouseUpOutside = useCallback((event) => {
-        if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
-            const isClickOnPassage = passageContainerRef.current && passageContainerRef.current.contains(event.target);
-            const isClickOnButton = highlightButtonRef.current === event.target;
+    const handleContainerClick = useCallback((event) => {
+        console.log("[HC Click] Event Target:", event.target); 
 
-            if (!isClickOnPassage && !isClickOnButton) {
-                highlightButtonRef.current.style.display = 'none';
-                highlightButtonRef.current._selectionRange = null; 
+        if (isReviewMode || !quizPageContainerRef.current) {
+            console.log("[HC Click] Early exit: Review mode or no container ref.");
+            return;
+        }
+        const clickedElement = event.target;
+
+        if (highlightButtonRef.current && highlightButtonRef.current.contains(clickedElement)) {
+            console.log("[HC Click] Clicked on highlight button itself.");
+            return; 
+        }
+
+        const markElement = clickedElement.closest('mark.custom-highlight');
+        console.log("[HC Click] Closest mark.custom-highlight:", markElement);
+
+        if (markElement && quizPageContainerRef.current.contains(markElement)) {
+            console.log("[HC Click] Mark found in quizPageContainerRef. ClassName:", markElement.className);
+
+            let isInValidArea = false;
+            const parentPassage = markElement.closest('.passage-container');
+            const parentQuestion = markElement.closest('.question-html-content');
+            const parentOption = markElement.closest('.option-html-content');
+
+            if (parentPassage && passageContainerRef.current && passageContainerRef.current.contains(markElement)) {
+                isInValidArea = true;
+                console.log("[HC Click] Mark IS in passage area.");
+            } else if (parentQuestion && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentQuestion)) {
+                isInValidArea = true;
+                console.log("[HC Click] Mark IS in a question area.");
+            } else if (parentOption && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentOption)) {
+                isInValidArea = true;
+                console.log("[HC Click] Mark IS in an option area.");
+            }
+            
+            console.log(`[HC Click] Mark location check (upward): isInValidArea = ${isInValidArea}`);
+
+            if (isInValidArea) {
+                console.log("[HC Click] Attempting to unwrap mark element.");
+                const parentOfMark = markElement.parentNode;
+                if (parentOfMark) {
+                    while (markElement.firstChild) {
+                        parentOfMark.insertBefore(markElement.firstChild, markElement);
+                    }
+                    parentOfMark.removeChild(markElement);
+                    parentOfMark.normalize();
+                    console.log("[HC Click] Mark unwrapped and removed.");
+                }  else {
+                    console.warn("[HC Click] Mark element has no parentNode during unwrap attempt.");
+                }
+
+                if (highlightButtonRef.current) {
+                    highlightButtonRef.current.style.display = 'none';
+                    highlightButtonRef.current._selectionRange = null;
+                }
                 const selection = window.getSelection();
                 if (selection) {
                     selection.removeAllRanges();
                 }
+                event.stopPropagation(); 
+                return; 
+            } else {
+                 console.log("[HC Click] Mark element found, but not within a designated highlightable zone (upward check + contains failed).");
             }
         }
-    }, []); 
-
-    // NEW: Click handler for the passage container to remove highlights
-    const handlePassageClick = useCallback((event) => {
-        if (isReviewMode || !passageContainerRef.current) return;
-    
-        const clickedElement = event.target;
-        // Find the closest ancestor that is a <mark class="custom-highlight">
-        const markElement = clickedElement.closest('mark.custom-highlight');
-    
-        if (markElement && passageContainerRef.current.contains(markElement)) {
-            const parent = markElement.parentNode;
-            if (parent) {
-                // Move all children of the mark element out before the mark element
-                while (markElement.firstChild) {
-                    parent.insertBefore(markElement.firstChild, markElement);
-                }
-                // Remove the now-empty mark element
-                parent.removeChild(markElement);
-                // Normalize the parent to merge adjacent text nodes
-                parent.normalize();
-            }
-    
-            // If the highlight button is visible, hide it since an action (unhighlighting) was taken
-            if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
+        
+        if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
+             const selection = window.getSelection();
+             if (!selection || selection.isCollapsed || selection.rangeCount === 0 || selection.toString().trim() === "") {
                 highlightButtonRef.current.style.display = 'none';
                 highlightButtonRef.current._selectionRange = null;
-            }
-            // Clear any browser selection that might have occurred from the click
-            const selection = window.getSelection();
-            if (selection) {
-                selection.removeAllRanges();
-            }
-            event.stopPropagation(); // Prevent click from triggering other actions if necessary
+                if (selection) selection.removeAllRanges();
+             }
         }
-    }, [isReviewMode]); // Refs are stable, only isReviewMode is a dependency.
-
+    }, [isReviewMode]); 
+    
+    // Main useEffect for setup and teardown
     useEffect(() => {
         isMountedRef.current = true;
         setIsLoading(true); setError(null);
@@ -350,7 +422,7 @@ function QuizPage() {
             }
             setAllQuizQuestions(loadedQuizData);
             setQuizMetadata(loadedQuizMetadata);
-            loadSavedStateAndInitialize(loadedQuizData, loadedQuizMetadata);
+            loadSavedStateAndInitialize(loadedQuizData);
 
         } catch (err) {
             console.error('[QuizPage] Error loading quiz data:', err);
@@ -360,14 +432,20 @@ function QuizPage() {
              if(isMountedRef.current) setIsLoading(false);
         }
         
-        document.addEventListener('mouseup', handleMouseUpOutside);
+        const currentDebouncedHandler = debouncedSelectionChangeHandlerRef.current;
+        document.addEventListener('selectionchange', currentDebouncedHandler);
+        
+        // REMOVED manual event listener attachment for 'click' here. Will use React's onClick prop.
+
         return () => {
             isMountedRef.current = false;
-            saveState();
+            saveStateRef.current(); 
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
-            document.removeEventListener('mouseup', handleMouseUpOutside);
+            document.removeEventListener('selectionchange', currentDebouncedHandler);
+            // REMOVED manual event listener removal for 'click' here.
         };
-    }, [topicId, sectionType, quizId, loadSavedStateAndInitialize, saveState, handleMouseUpOutside]);
+    }, [topicId, sectionType, quizId, loadSavedStateAndInitialize]);
+
 
     useEffect(() => {
         if (allQuizQuestions && allQuizQuestions.length > 0 && currentQuestionIndex >= 0 && currentQuestionIndex < allQuizQuestions.length) {
@@ -380,69 +458,49 @@ function QuizPage() {
         } else {
             setPassageHtml(null);
         }
-        if (highlightButtonRef.current) { 
-            highlightButtonRef.current.style.display = 'none';
-            highlightButtonRef.current._selectionRange = null; 
-        }
     }, [currentQuestionIndex, allQuizQuestions]);
     
-    // MODIFIED: toggleHighlight simplified to primarily add highlights
-    const toggleHighlight = () => {
+    const toggleHighlight = useCallback(() => {
         if (!highlightButtonRef.current || !highlightButtonRef.current._selectionRange) {
             if(highlightButtonRef.current) highlightButtonRef.current.style.display = 'none';
             return;
         }
     
         const range = highlightButtonRef.current._selectionRange;
-        // Ensure range is not collapsed and contains non-whitespace text
         if (!range || range.collapsed || range.toString().trim() === "") {
             highlightButtonRef.current.style.display = 'none';
             highlightButtonRef.current._selectionRange = null;
-            // Clear any browser selection as well
             const currentSelection = window.getSelection();
             if (currentSelection) currentSelection.removeAllRanges();
             return;
         }
     
-        // Apply a new highlight
         const mark = document.createElement('mark');
         mark.className = 'custom-highlight';
         try {
-            // Wrap the contents of the range with the mark element
-            // extractContents removes the content from the document, then appendChild puts it in the mark
-            // then insertNode puts the mark (with its content) back into the document at the range's start.
-            mark.appendChild(range.extractContents());
-            range.insertNode(mark);
+            range.surroundContents(mark);
         } catch (e) {
-            console.error("Highlighting failed. Range might be too complex or invalid:", e);
-            // Attempt to restore original content if extractContents was partially successful
-            // This is tricky; for now, we'll just log the error.
-            // A more robust solution might involve more complex range manipulation or a library.
+            console.warn("range.surroundContents() failed. Error:", e);
         }
-        
-        // Clear the browser selection and hide the button
-        const currentSelection = window.getSelection();
-        if(currentSelection) currentSelection.removeAllRanges(); 
         
         highlightButtonRef.current.style.display = 'none';
         highlightButtonRef.current._selectionRange = null;
-    };
+        const currentSelection = window.getSelection();
+        if(currentSelection) currentSelection.removeAllRanges(); 
+        
+    }, []);
     
     useEffect(() => {
-        if (timerIntervalRef.current) {
-            clearInterval(timerIntervalRef.current);
-            timerIntervalRef.current = null;
-        }
         if (isTimerActive && !isReviewMode) {
             timerIntervalRef.current = setInterval(() => {
-                setTimerValue(prevTime => {
+                setTimerValue(prevTime => { 
                     if (isCountdown) {
                         const newTime = prevTime - 1;
                         if (newTime <= 0) {
                             clearInterval(timerIntervalRef.current);
                             timerIntervalRef.current = null;
                             alert("Time's up!");
-                            handleFinishQuizRef.current(true);
+                            handleFinishQuizRef.current(true); 
                             return 0;
                         }
                         return newTime;
@@ -451,13 +509,14 @@ function QuizPage() {
                     }
                 });
             }, 1000);
+        } else {
+            if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
         }
         return () => {
-            if (timerIntervalRef.current) {
-                clearInterval(timerIntervalRef.current);
-            }
+            if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
         };
-    }, [isTimerActive, isCountdown, isReviewMode, setTimerValue]); 
+    }, [isTimerActive, isCountdown, isReviewMode]);
+
 
     useEffect(() => {
         if (!isLoading && allQuizQuestions?.length > 0 && currentQuestionIndex >= 0 && !isReviewMode) {
@@ -472,22 +531,23 @@ function QuizPage() {
 
     const toggleSolutionReveal = useCallback(() => {
         if (sectionType === 'qbank' && !isReviewMode && allQuizQuestions[currentQuestionIndex] && !allQuizQuestions[currentQuestionIndex].error) {
+            const qIndex = currentQuestionIndex;
             setTempReveal(prev => {
-                const newRevealState = !prev[currentQuestionIndex];
-                setShowExplanation(prevExp => ({
-                    ...prevExp,
-                    [currentQuestionIndex]: newRevealState
-                }));
-                if (newRevealState && questionStartTimeRef.current) {
+                const newRevealStateForCurrent = !prev[qIndex];
+                if (newRevealStateForCurrent && questionStartTimeRef.current) {
                     const endTime = Date.now();
                     const elapsedSeconds = Math.round((endTime - questionStartTimeRef.current) / 1000);
-                    setUserTimeSpent(prevTS => ({ ...prevTS, [currentQuestionIndex]: (prevTS[currentQuestionIndex] || 0) + elapsedSeconds }));
-                    questionStartTimeRef.current = null;
+                    setUserTimeSpent(prevTS => ({ ...prevTS, [qIndex]: (prevTS[qIndex] || 0) + elapsedSeconds }));
+                    questionStartTimeRef.current = null; 
                 }
-                return {...prev, [currentQuestionIndex]: newRevealState};
+                return {...prev, [qIndex]: newRevealStateForCurrent};
             });
+            setShowExplanation(prevExp => ({
+                ...prevExp,
+                [qIndex]: !tempReveal[qIndex] 
+            }));
         }
-    }, [sectionType, isReviewMode, allQuizQuestions, currentQuestionIndex, setUserTimeSpent, setShowExplanation]);
+    }, [sectionType, isReviewMode, allQuizQuestions, currentQuestionIndex, tempReveal]);
 
     useEffect(() => {
         const handleKeyPress = (event) => {
@@ -502,20 +562,17 @@ function QuizPage() {
         };
     }, [toggleSolutionReveal]);
 
-    const handleOptionSelect = (questionIndex, optionLabel) => {
+    const handleOptionSelect = useCallback((questionIndex, optionLabel) => {
         if (!submittedAnswers[questionIndex] && !isReviewMode && !tempReveal[questionIndex]) {
             setUserAnswers((prev) => ({ ...prev, [questionIndex]: optionLabel }));
         }
-    };
+    }, [isReviewMode, submittedAnswers, tempReveal]);
 
-    const submitAnswerForIndex = (questionIndex) => {
+    const submitAnswerForIndex = useCallback((questionIndex) => {
         const questionToSubmit = allQuizQuestions[questionIndex];
-        if (!questionToSubmit || questionToSubmit.error) {
-            return 'error_question';
-        }
-        if (isReviewMode || tempReveal[questionIndex]) {
-            return true;
-        }
+        if (!questionToSubmit || questionToSubmit.error) return 'error_question';
+        if (isReviewMode || tempReveal[questionIndex]) return true;
+
         if (userAnswers[questionIndex] && !submittedAnswers[questionIndex]) {
             let elapsedSeconds = userTimeSpent[questionIndex] !== undefined ? userTimeSpent[questionIndex] : 0;
             if (questionStartTimeRef.current) {
@@ -526,27 +583,33 @@ function QuizPage() {
             setUserTimeSpent(prev => ({ ...prev, [questionIndex]: elapsedSeconds }));
             setSubmittedAnswers(prev => ({ ...prev, [questionIndex]: true }));
             setShowExplanation(prev => ({ ...prev, [questionIndex]: true }));
-            setTimeout(saveState, 0);
+            setTimeout(() => saveStateRef.current(), 0); 
             return true;
         } else if (submittedAnswers[questionIndex]) {
             return true;
         }
         return 'no_answer_selected';
-    };
+    }, [allQuizQuestions, isReviewMode, tempReveal, userAnswers, submittedAnswers, userTimeSpent]);
 
-    const toggleExplanation = (questionIndex) => {
-        if (sectionType === 'qbank' && tempReveal[questionIndex] !== undefined) {
-             setTempReveal(prev => ({...prev, [questionIndex]: !showExplanation[questionIndex] }));
+    const toggleExplanation = useCallback((questionIndex) => {
+        const currentTempRevealForQuestion = tempReveal[questionIndex];
+        const currentShowExplanationForQuestion = showExplanation[questionIndex];
+        
+        if (sectionType === 'qbank' && currentTempRevealForQuestion !== undefined) {
+             setTempReveal(prev => ({...prev, [questionIndex]: !currentShowExplanationForQuestion }));
         }
         setShowExplanation((prev) => ({ ...prev, [questionIndex]: !prev[questionIndex] }));
-    };
+    }, [sectionType, tempReveal, showExplanation]);
 
-    const handleToggleCrossOff = (questionIndex, optionLabel) => {
+    const handleToggleCrossOff = useCallback((questionIndex, optionLabel) => {
         if (!submittedAnswers[questionIndex] && !isReviewMode && !tempReveal[questionIndex]) {
             setCrossedOffOptions(prev => {
-                const currentSet = prev[questionIndex] ? new Set(prev[questionIndex]) : new Set();
+                const newCrossedOff = {...prev};
+                const currentSet = newCrossedOff[questionIndex] ? new Set(newCrossedOff[questionIndex]) : new Set();
                 if (currentSet.has(optionLabel)) { currentSet.delete(optionLabel); }
                 else { currentSet.add(optionLabel); }
+                newCrossedOff[questionIndex] = currentSet;
+                
                 if (currentSet.has(userAnswers[questionIndex])) {
                     setUserAnswers(prevUserAnswers => {
                         const updatedAnswers = { ...prevUserAnswers };
@@ -554,24 +617,24 @@ function QuizPage() {
                         return updatedAnswers;
                     });
                 }
-                return { ...prev, [questionIndex]: currentSet };
+                return newCrossedOff;
             });
-            setTimeout(saveState, 0);
+            setTimeout(() => saveStateRef.current(), 0); 
         }
-    };
+    }, [isReviewMode, submittedAnswers, tempReveal, userAnswers]); 
 
-    const handleToggleMark = (questionIndex) => {
+    const handleToggleMark = useCallback((questionIndex) => {
         if (!isReviewMode) {
             setMarkedQuestions(prev => {
                 const newState = { ...prev };
                 newState[questionIndex] = !newState[questionIndex];
                 return newState;
             });
-            setTimeout(saveState, 0);
+            setTimeout(() => saveStateRef.current(), 0); 
         }
-    };
+    }, [isReviewMode]); 
 
-    const handleJumpToQuestion = (index) => {
+    const handleJumpToQuestion = useCallback((index) => {
         if (index >= 0 && index < allQuizQuestions.length) {
             if (tempReveal[currentQuestionIndex]) {
                 setTempReveal(prev => ({...prev, [currentQuestionIndex]: false}));
@@ -581,39 +644,50 @@ function QuizPage() {
                 setShowExplanation({ [index]: true });
             } else {
                 setTempReveal(prev => ({...prev, [index]: false}));
+                if (!submittedAnswers[index]) { 
+                     setShowExplanation(prev => ({ ...prev, [index]: false }));
+                } else { 
+                     setShowExplanation(prev => ({ ...prev, [index]: true }));
+                }
             }
             setIsReviewModalOpen(false);
         }
-     };
+     }, [allQuizQuestions, isReviewMode, tempReveal, currentQuestionIndex, submittedAnswers]);
 
-    const handleSubmitAndNavigate = () => {
+    const handleSubmitAndNavigate = useCallback(() => {
         submitAnswerForIndex(currentQuestionIndex);
         if (tempReveal[currentQuestionIndex]) {
             setTempReveal(prev => ({ ...prev, [currentQuestionIndex]: false }));
         }
         if (currentQuestionIndex < allQuizQuestions.length - 1) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-            setTempReveal(prev => ({ ...prev, [currentQuestionIndex + 1]: false }));
-            if (!submittedAnswers[currentQuestionIndex + 1]) {
-                 setShowExplanation(prev => ({ ...prev, [currentQuestionIndex + 1]: false }));
+            const nextIndex = currentQuestionIndex + 1;
+            setCurrentQuestionIndex(nextIndex);
+            setTempReveal(prev => ({ ...prev, [nextIndex]: false }));
+            if (!submittedAnswers[nextIndex] && !tempReveal[nextIndex]) {
+                 setShowExplanation(prev => ({ ...prev, [nextIndex]: false }));
+            } else if (submittedAnswers[nextIndex]) { 
+                 setShowExplanation(prev => ({ ...prev, [nextIndex]: true }));
             }
         } else {
              handleFinishQuizRef.current(false); 
         }
-    };
+    }, [allQuizQuestions, currentQuestionIndex, submitAnswerForIndex, tempReveal, submittedAnswers]);
 
-    const handlePrevious = () => {
+    const handlePrevious = useCallback(() => {
         if (currentQuestionIndex > 0) {
             if (tempReveal[currentQuestionIndex]) {
                 setTempReveal(prev => ({ ...prev, [currentQuestionIndex]: false }));
             }
-            setCurrentQuestionIndex(currentQuestionIndex - 1);
-             setTempReveal(prev => ({ ...prev, [currentQuestionIndex - 1]: false }));
-             if (!submittedAnswers[currentQuestionIndex -1] && !tempReveal[currentQuestionIndex -1]) {
-                setShowExplanation(prev => ({ ...prev, [currentQuestionIndex - 1]: false }));
+            const prevIndex = currentQuestionIndex - 1;
+            setCurrentQuestionIndex(prevIndex);
+            setTempReveal(prev => ({ ...prev, [prevIndex]: false }));
+             if (!submittedAnswers[prevIndex] && !tempReveal[prevIndex]) {
+                setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
+             } else if (submittedAnswers[prevIndex]) { 
+                setShowExplanation(prev => ({ ...prev, [prevIndex]: true }));
              }
         }
-    };
+    }, [currentQuestionIndex, tempReveal, submittedAnswers]);
 
     if (isLoading) return <div className="page-loading">Loading Quiz...</div>;
     if (error) return ( <div className="page-error"> Error: {error} <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div> );
@@ -622,9 +696,10 @@ function QuizPage() {
     const currentQuestionData = allQuizQuestions[currentQuestionIndex];
     const displayAsSubmitted = !!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex];
     const displayExplanation = !!showExplanation[currentQuestionIndex] || (isReviewMode && !currentQuestionData?.error) || !!tempReveal[currentQuestionIndex];
+    
     const isLastQuestion = currentQuestionIndex === allQuizQuestions.length - 1;
-    const currentCrossedOff = crossedOffOptions[currentQuestionIndex] || new Set();
-    const currentIsMarked = !!markedQuestions[currentQuestionIndex];
+    const currentCrossedOffForCard = crossedOffOptions[currentQuestionIndex] || EMPTY_SET;
+    const currentIsMarkedForCard = !!markedQuestions[currentQuestionIndex];
     const isCurrentQuestionError = !!currentQuestionData?.error;
 
      if (!currentQuestionData) {
@@ -632,9 +707,10 @@ function QuizPage() {
      }
 
     const totalQuestionsForDisplay = quizMetadata?.totalQuestions || allQuizQuestions.length;
-
+    
     return (
-        <div className="quiz-page-container"> 
+        // Attach React's onClick to the main container
+        <div className="quiz-page-container" ref={quizPageContainerRef} onClick={handleContainerClick} > 
             <div className="quiz-header">
                  <button onClick={() => isReviewMode ? navigate(`/results/${topicId}/${sectionType}/${quizId}`) : navigate(`/topic/${topicId}`)} className="back-button-quiz">
                     {isReviewMode ? `\u21A9 Back to Results` : `\u21A9 Back to ${formatDisplayName(topicId)}`}
@@ -649,8 +725,6 @@ function QuizPage() {
 
             <MemoizedPassage
                 html={passageHtml}
-                onMouseUp={handleMouseUp}
-                onClick={handlePassageClick} // Pass the click handler
                 passageRef={passageContainerRef}
             />
             
@@ -658,7 +732,7 @@ function QuizPage() {
                 ref={highlightButtonRef}
                 className="highlight-popup-button" 
                 style={{ display: 'none' }} 
-                onClick={toggleHighlight}
+                onClick={toggleHighlight} // This click should be distinct from handleContainerClick
                 onMouseDown={(e) => e.preventDefault()} 
             >
                 Highlight
@@ -680,12 +754,12 @@ function QuizPage() {
                     selectedOption={userAnswers[currentQuestionIndex]}
                     isSubmitted={displayAsSubmitted}
                     showExplanation={displayExplanation}
-                    crossedOffOptions={currentCrossedOff}
+                    crossedOffOptions={currentCrossedOffForCard}
                     userTimeSpentOnQuestion={userTimeSpent[currentQuestionIndex]}
                     isReviewMode={isReviewMode}
-                    isMarked={currentIsMarked}
+                    isMarked={currentIsMarkedForCard}
                     onOptionSelect={handleOptionSelect}
-                    onViewAnswer={() => submitAnswerForIndex(currentQuestionIndex)}
+                    onViewAnswer={toggleSolutionReveal} 
                     onToggleExplanation={toggleExplanation}
                     onToggleCrossOff={handleToggleCrossOff}
                     onToggleMark={handleToggleMark}
@@ -726,10 +800,10 @@ function QuizPage() {
                     {!isReviewMode && !isCurrentQuestionError && (
                         <button
                             onClick={() => handleToggleMark(currentQuestionIndex)}
-                            className={`mark-button-nav ${currentIsMarked ? 'marked' : ''}`}
-                            title={currentIsMarked ? "Unmark this question" : "Mark for review"}
+                            className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`}
+                            title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}
                         >
-                        {currentIsMarked ? '🚩 Unmark' : '🏳️ Mark'}
+                        {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
                         </button>
                     )}
                      {isReviewMode && <div className="mark-button-nav-placeholder"></div>}
