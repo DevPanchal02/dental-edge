@@ -1,332 +1,174 @@
 /* FILE: client/src/styles/QuestionCard.css */
 .question-card {
-    background-color: #2a2a2a;
-    border-radius: 8px;
-    padding: 25px 30px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  .question-card.error-card {
-      background-color: #3b2424;
-      border: 1px solid #772d2d;
-      padding: 20px;
-  }
-  .error-message {
-      color: #ff8a8a;
-      font-weight: 500;
-      margin: 0;
-  }
-  .error-details {
-      color: #f1b1b1;
-      font-size: 0.9em;
-      font-family: monospace;
-      display: block;
-      margin-top: 8px;
-  }
-  
-  
-  .question-content {
-    margin-bottom: 25px;
-  }
-  
-  .question-number {
-      font-size: 0.9em;
-      color: #888;
-      margin-bottom: 10px;
-  }
-  
-  /* Styling for the wrapper div of question's HTML content */
-  .question-html-content {
-    font-size: 1.1em;
-    color: #e0e0e0;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    margin-top: 0;
-  }
-  .question-html-content p { /* Target p tags within the injected HTML */
-    margin-top: 0.5em;
-    margin-bottom: 1em;
-  }
-  
-  /* Styling for the wrapper div of option's HTML content */
-  .option-html-content {
-    display: inline; /* Allow it to flow with the option letter */
-  }
-  .option-html-content p { /* Target p tags within option HTML */
-    display: inline; /* If it's just a p, make it flow */
-    margin: 0;
-  }
+  background-color: var(--bg-question-card);
+  border-radius: 6px;
+  padding: 20px 25px;
+  margin-bottom: 0;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-card-outline); /* Themed outline */
+  color: var(--text-primary);
+}
 
+.question-card.error-card {
+  background-color: var(--bg-option-incorrect); /* Themed */
+  border: 1px solid var(--border-option-incorrect); /* Themed */
+  padding: 20px;
+}
+.error-message {
+  color: var(--text-option-incorrect); /* Themed */
+  font-weight: 500;
+  margin: 0;
+}
+.error-details {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  font-family: monospace;
+  display: block;
+  margin-top: 8px;
+}
 
-  /* --- Consolidated Image Styling for Injected HTML --- */
-  .question-html-content img,
-  .option-html-content img,
-  .explanation-html-content img {
-    max-width: 100%;
-    height: auto;
-    display: block; 
-    margin: 15px auto; 
-    border-radius: 4px;
-  
-    /* Key for readability of transparent images with dark text */
-    background-color: #ffffff; /* SOLID WHITE BACKGROUND */
-    padding: 10px;             /* Padding between image content and border */
-    border: 1px solid #cccccc; /* Light grey border */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.15); /* Softer shadow */
-  }
-  
-  /* Optional: Specific max-width for images in certain contexts if needed */
-   .explanation-html-content img {
-     max-width: 600px; /* Example: allow explanation images to be larger */
-   }
-  /* Images directly within options might need different sizing or less padding */
-  .option-html-content img {
-      max-width: 250px; /* Adjust as needed for option images */
-      margin: 8px 0 5px 0; /* Adjust margin if it's inside the flow of option text */
-      padding: 5px;
-  }
-  /* --- End Consolidated Image Styling --- */
-  
-  
-  .options-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  .option-label {
-    display: block; 
-    background-color: #333;
-    padding: 12px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
-    border: 2px solid transparent;
-    position: relative;
-  }
-  
-  .option-radio {
-    margin-right: 10px;
-    vertical-align: middle;
-    display: none;
-  }
-  
-  .option-label-text {
-      display: inline-flex; 
-      align-items: baseline; 
-      width: calc(100% - 50px); 
-  }
-  
-  .option-letter {
-      display: inline-block;
-      font-weight: bold;
-      margin-right: 10px;
-      color: #aaa;
-      min-width: 20px; 
-  }
-  
-  .option-label:not(.submitted):not(.crossed-off):hover {
-    background-color: #404040;
-  }
-  
-  .option-label.selected {
-    border-color: #00bcd4; 
-    background-color: #3a4a4d;
-  }
-  .option-label.selected .option-letter {
-      color: #00bcd4;
-  }
-  
-  
-  .option-label.correct {
-    border-color: #4CAF50; 
-    background-color: #2a3a2b;
-    color: #b0f0b2;
-  }
-  .option-label.correct .option-letter {
-      color: #4CAF50;
-  }
-  
-  
-  .option-label.incorrect {
-    border-color: #f44336; 
-    background-color: #3a2a2a;
-     color: #f0b0b0;
-  }
-  .option-label.incorrect .option-letter {
-      color: #f44336;
-  }
-  
-  .option-label.submitted {
-    cursor: default;
-  }
-  .option-label.submitted:hover {
-      background-color: #333;
-       &.correct { background-color: #2a3a2b; }
-       &.incorrect { background-color: #3a2a2a; }
-  }
-  
-  .option-label.crossed-off .option-label-text {
-      text-decoration: line-through;
-      text-decoration-thickness: 2px;
-      text-decoration-color: #ff7b7b; 
-      opacity: 0.6; 
-  }
-  .option-label.crossed-off.correct .option-label-text,
-  .option-label.crossed-off.incorrect .option-label-text {
-       opacity: 0.7; 
-  }
-  .option-label.crossed-off:hover {
-      background-color: #333; 
-      cursor: pointer;
-  }
+.question-content { margin-bottom: 20px; }
+.question-number { font-size: 0.9em; color: var(--text-secondary); margin-bottom: 8px; }
+.question-html-content { font-size: 1.05em; color: var(--text-primary); line-height: 1.6; }
+.question-html-content p { margin-top: 0.5em; margin-bottom: 1em; }
 
-  .option-label.review-mode {
-      cursor: default; 
-  }
-  .option-label.review-mode:hover {
-      background-color: #333; 
-       &.correct { background-color: #2a3a2b; }
-       &.incorrect { background-color: #3a2a2a; }
-  }
-  .option-label.review-mode.selected {
-      border-color: #008ead;
-      background-color: #333; 
-  }
-  .option-label.review-mode.crossed-off .option-label-text {
-       text-decoration-color: #b35b5b; 
-       opacity: 0.5;
-  }
-  
-  .option-percentage {
-      position: absolute;
-      right: 15px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 0.8em;
-      color: #888;
-      background-color: rgba(0,0,0,0.2);
-      padding: 2px 6px;
-      border-radius: 3px;
-  }
-  .option-label.correct .option-percentage,
-  .option-label.incorrect .option-percentage {
-      color: #ccc; 
-  }
-  
-  .action-buttons {
-      margin-top: 25px;
-      display: flex;
-      justify-content: flex-end; 
-      gap: 10px;
-      min-height: 40px; 
-  }
-  
-  .explanation-button {
-      background-color: #6c757d; 
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 1em;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-  }
-  .explanation-button:hover {
-      background-color: #5a6268;
-  }
-  
-  .explanation-section {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #555;
-    background-color: #222; 
-    padding: 20px;
-    border-radius: 6px;
-  }
-  
-  .explanation-title {
-    color: #00bcd4;
-    font-size: 1.2em;
-    margin-bottom: 15px;
-  }
-  
-  /* Styling for the wrapper div of explanation's HTML content */
-  .explanation-html-content {
-    color: #ccc;
-    line-height: 1.7;
-  }
-  .explanation-html-content p {
-      margin-bottom: 1em;
-  }
-  .explanation-html-content h4 { /* If STEP headers are h4 */
-      color: #ddd;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
-      font-weight: 500;
-  }
-  .explanation-html-content strong { /* Bolding from rate laws, STEP etc. */
-      color: #e0e0e0; /* Brighter than normal explanation text */
-  }
+.option-html-content { display: inline; }
+.option-html-content p { display: inline; margin: 0; }
 
-  /* Styling for tables injected via HTML */
-  .explanation-html-content figure.table,
-  .question-html-content figure.table {
-    margin: 1.5em auto;
-    max-width: 100%;
-    overflow-x: auto; /* Scroll for wide tables */
-  }
+.question-html-content img,
+.option-html-content img,
+.explanation-html-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 15px auto;
+  border-radius: 4px;
+  background-color: #FFFFFF; /* Always white background for images for clarity */
+  padding: 8px;
+  border: 1px solid var(--border-primary);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+.explanation-html-content img { max-width: 550px; }
+.option-html-content img { max-width: 200px; margin: 5px 0; padding: 4px; }
 
-  .explanation-html-content table,
-  .question-html-content table {
-    border-collapse: collapse;
-    width: auto; /* Let table size itself, or use 100% */
-    margin: 0 auto;
-    color: #ccc;
-    font-size: 0.95em;
-    background-color: #282828; /* Slight background for table area */
-  }
+.options-container { display: flex; flex-direction: column; gap: 8px; }
 
-  .explanation-html-content th,
-  .explanation-html-content td,
-  .question-html-content th,
-  .question-html-content td {
-    border: 1px solid #4d4d4d; /* Slightly lighter border for visibility */
-    padding: 10px 12px;
-    text-align: left;
-    vertical-align: middle; /* Better for table cell content */
-  }
+.option-label {
+  display: block;
+  background-color: var(--bg-option);
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease;
+  border: 1px solid var(--border-primary);
+  position: relative;
+  color: var(--text-primary);
+}
+.option-radio { display: none; }
+.option-label-text { display: inline-flex; align-items: baseline; width: calc(100% - 40px); }
+.option-letter { font-weight: bold; margin-right: 8px; color: var(--text-secondary); min-width: 18px; }
 
-  .explanation-html-content th,
-  .question-html-content th {
-    background-color: #383838;
-    font-weight: bold;
-    color: #eee;
-  }
-  .explanation-html-content td p, /* Target p tags inside table cells */
-  .question-html-content td p {
-    margin: 0; /* Remove default paragraph margins inside cells */
-    text-align: center; /* As per example image */
-  }
-  .explanation-html-content td span, /* Target spans inside table cells */
-  .question-html-content td span {
-    display: block; /* Ensures text-align:center works if span is the only child */
-    text-align: center;
-  }
-  
-  .analytics-section {
-      margin-top: 20px;
-      padding-top: 15px;
-      border-top: 1px dashed #444;
-      font-size: 0.9em;
-      color: #aaa;
-  }
-  .analytics-section h4 {
-      color: #bbb;
-      margin-bottom: 8px;
-  }
-  .analytics-section p {
-      margin-bottom: 5px;
-  }
-  
+.option-label:not(.submitted):not(.crossed-off):hover { background-color: var(--bg-option-hover); }
+
+.option-label.selected {
+  border-color: var(--border-option-selected) !important;
+  background-color: var(--bg-option-selected);
+}
+.option-label.selected .option-letter { color: var(--border-option-selected); }
+
+.option-label.correct {
+  border-color: var(--border-option-correct) !important;
+  background-color: var(--bg-option-correct);
+  color: var(--text-option-correct);
+}
+.option-label.correct .option-letter { color: var(--border-option-correct); }
+
+.option-label.incorrect {
+  border-color: var(--border-option-incorrect) !important;
+  background-color: var(--bg-option-incorrect);
+  color: var(--text-option-incorrect);
+}
+.option-label.incorrect .option-letter { color: var(--border-option-incorrect); }
+
+.option-label.submitted { cursor: default; }
+.option-label.submitted:hover {
+  &.correct { background-color: var(--bg-option-correct); }
+  &.incorrect { background-color: var(--bg-option-incorrect); }
+  &:not(.correct):not(.incorrect) { background-color: var(--bg-option); }
+}
+
+.option-label.crossed-off .option-label-text {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  text-decoration-color: var(--bg-button-danger);
+  opacity: 0.6;
+}
+.option-label.crossed-off:hover { background-color: var(--bg-option); cursor: pointer; }
+
+.option-label.review-mode:hover {
+    &.correct { background-color: var(--bg-option-correct); }
+    &.incorrect { background-color: var(--bg-option-incorrect); }
+    &:not(.correct):not(.incorrect) { background-color: var(--bg-option); }
+}
+.option-label.review-mode.selected {
+  border-color: var(--text-accent) !important;
+  background-color: var(--bg-option);
+}
+
+.option-percentage {
+  position: absolute; right: 10px; top: 50%;
+  transform: translateY(-50%); font-size: 0.75em;
+  color: var(--text-secondary);
+  background-color: rgba(0,0,0,0.03);
+  padding: 2px 5px; border-radius: 3px;
+}
+body.dark-mode .option-percentage { background-color: rgba(255,255,255,0.05); }
+
+.action-buttons {
+  margin-top: 20px; display: flex;
+  justify-content: flex-end; gap: 10px; min-height: 36px;
+}
+.explanation-button {
+  background-color: var(--bg-button-secondary);
+  color: var(--text-on-button-secondary);
+  border: none; padding: 8px 16px; border-radius: 4px; font-size: 0.9em;
+}
+.explanation-button:hover { background-color: var(--bg-button-secondary-hover); }
+
+.explanation-section {
+  margin-top: 25px; padding-top: 15px;
+  border-top: 1px solid var(--border-primary);
+  background-color: var(--bg-explanation);
+  padding: 15px; border-radius: 4px; color: var(--text-primary);
+}
+.explanation-title { color: var(--text-accent); font-size: 1.1em; margin-bottom: 10px; }
+.explanation-html-content { line-height: 1.6; }
+.explanation-html-content p { margin-bottom: 0.8em; }
+.explanation-html-content h4 { font-weight: 500; margin-top: 1.2em; margin-bottom: 0.4em;}
+.explanation-html-content strong { font-weight: bold; }
+
+.explanation-html-content figure.table,
+.question-html-content figure.table { margin: 1em auto; }
+.explanation-html-content table,
+.question-html-content table {
+  color: var(--text-primary); font-size: 0.9em;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+}
+.explanation-html-content th, .explanation-html-content td,
+.question-html-content th, .question-html-content td {
+  border: 1px solid var(--border-primary); padding: 8px 10px;
+}
+.explanation-html-content th, .question-html-content th {
+  background-color: var(--bg-secondary);
+}
+.explanation-html-content td p, .question-html-content td p { margin: 0; text-align: center; }
+.explanation-html-content td span, .question-html-content td span { display: block; text-align: center; }
+
+.analytics-section {
+  margin-top: 15px; padding-top: 10px;
+  border-top: 1px dashed var(--border-primary);
+  font-size: 0.85em; color: var(--text-secondary);
+}
+.analytics-section h4 { color: var(--text-primary); margin-bottom: 6px; }
+.analytics-section p { margin-bottom: 4px; }

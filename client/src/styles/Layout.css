@@ -1,24 +1,28 @@
 /* FILE: client/src/styles/Layout.css */
 .layout-container {
+  display: flex;
+  min-height: 100vh;
+  height: 100vh; /* Ensure full viewport height */
+  background-color: var(--bg-primary); /* Themed */
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 30px 40px;
+  overflow-y: auto; /* Allow scrolling for main content */
+  height: 100vh; /* Ensure main content takes full height */
+  box-sizing: border-box; /* Include padding in height calculation */
+  background-color: var(--bg-primary); /* Themed */
+  color: var(--text-primary); /* Themed */
+}
+
+/* Make sure error/loading messages fill the main content area */
+.main-content > .page-loading,
+.main-content > .page-error,
+.main-content > .page-info {
+    height: calc(100% - 60px); /* Adjust based on padding */
     display: flex;
-    min-height: 100vh;
-    height: 100vh; /* Ensure full viewport height */
-  }
-  
-  .main-content {
-    flex-grow: 1;
-    padding: 30px 40px;
-    overflow-y: auto; /* Allow scrolling for main content */
-    height: 100vh; /* Ensure main content takes full height */
-    box-sizing: border-box; /* Include padding in height calculation */
-  }
-  
-  /* Make sure error/loading messages fill the main content area */
-  .main-content > .page-loading,
-  .main-content > .page-error,
-  .main-content > .page-info {
-      height: calc(100% - 60px); /* Adjust based on padding */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+    justify-content: center;
+    align-items: center;
+    /* Background and color will be inherited from .main-content or specific .page-error styles */
+}

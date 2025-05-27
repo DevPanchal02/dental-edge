@@ -1,26 +1,22 @@
-// FILE: client/src/components/QuestionCard.jsx
 import React from 'react';
 import '../styles/QuestionCard.css';
-
-// The renderPoeText helper is likely no longer needed if POE is part of the explanation's HTML content.
-// We'll remove it for now. If your scraper outputs POE as a separate HTML block that needs special styling
-// you might re-introduce a similar helper or style it via CSS targeting classes within the explanation HTML.
 
 function QuestionCard({
   questionData,
   questionIndex,
   selectedOption,
-  isSubmitted,
-  showExplanation,
+  isSubmitted, // This prop now reflects (actual submission OR S-key reveal OR review mode)
+  showExplanation, // This prop now reflects (actual show OR S-key reveal OR review mode)
   crossedOffOptions,
   userTimeSpentOnQuestion,
   isReviewMode,
-  isMarked, // Keep prop
+  isMarked,
   onOptionSelect,
-  onViewAnswer,
+  onViewAnswer, // This is effectively what S-key + Next button does
   onToggleExplanation,
   onToggleCrossOff,
-  onToggleMark // Keep prop
+  onToggleMark,
+  isTemporarilyRevealed // NEW PROP: specifically for S-key state from QuizPage
 }) {
 
    if (!questionData || typeof questionData !== 'object' || questionData === null) {
@@ -31,25 +27,25 @@ function QuestionCard({
     return ( <div className="question-card error-card"><p className="error-message">Error loading Question {questionIndex + 1}:<br /><span className="error-details">{questionData.error}</span></p></div> );
   }
 
-  // Destructure safely, providing defaults
   const {
-      question = { html_content: '<p>Question content missing.</p>' }, // Expect html_content
+      question = { html_content: '<p>Question content missing.</p>' },
       options = [],
-      correct_answer_original_text = 'N/A', // Updated field name
-      explanation = { html_content: '<p>Explanation not available.</p>' }, // Expect html_content
+      correct_answer_original_text = 'N/A',
+      explanation = { html_content: '<p>Explanation not available.</p>' },
       analytics = { percent_correct: 'N/A', time_spent: 'N/A' }
   } = questionData;
 
-
   const handleSelect = (optionLabel) => {
-    if (!isSubmitted && !isReviewMode && !crossedOffOptions.has(optionLabel)) {
+    // Allow option selection only if not truly submitted, not in review, and not S-revealed
+    if (!isSubmitted && !isReviewMode && !isTemporarilyRevealed && !crossedOffOptions.has(optionLabel)) {
       onOptionSelect(questionIndex, optionLabel);
     }
   };
 
   const handleContextMenu = (event, optionLabel) => {
       event.preventDefault();
-      if (!isSubmitted && !isReviewMode) {
+      // Allow crossing off only if not truly submitted, not in review, and not S-revealed
+      if (!isSubmitted && !isReviewMode && !isTemporarilyRevealed) {
         onToggleCrossOff(questionIndex, optionLabel);
       }
   };
@@ -57,31 +53,39 @@ function QuestionCard({
   const getOptionClassName = (option) => {
     let className = 'option-label';
     if (crossedOffOptions.has(option.label)) { className += ' crossed-off'; }
-    if (isSubmitted || isReviewMode) {
+
+    // isSubmitted prop is now true if (actual user submission OR S-key reveal OR review mode)
+    if (isSubmitted) { // isSubmitted from props already incorporates tempReveal logic from QuizPage
         className += ' submitted';
-        if (option.is_correct) { className += ' correct'; }
-        else if (option.label === selectedOption) { className += ' incorrect'; }
-    } else if (option.label === selectedOption) {
-      if (!crossedOffOptions.has(option.label)) { className += ' selected'; }
+        if (option.is_correct) {
+            className += ' correct';
+        } else if (option.label === selectedOption) { // Show user's incorrect choice
+            className += ' incorrect';
+        }
+    } else if (option.label === selectedOption) { // Not submitted/revealed yet
+      if (!crossedOffOptions.has(option.label)) {
+        className += ' selected';
+      }
     }
-    if (isReviewMode) { className += ' review-mode'; }
+    // isReviewMode prop is also used by QuizPage to set isSubmitted to true for QuestionCard
+    // if (isReviewMode) { className += ' review-mode'; } // This might be redundant
     return className;
   };
 
   const isErrorQuestion = !!questionData.error;
+  // Use the showExplanation prop directly as it's controlled by QuizPage (which considers S-key, submission, review mode)
+  const shouldShowExplanation = showExplanation && !!explanation.html_content;
+
 
   return (
     <div className={`question-card ${isErrorQuestion ? 'error-card' : ''}`}>
       {!isErrorQuestion ? (
         <>
-          {/* Question Content */}
           <div className="question-content">
             <p className="question-number">Question {questionIndex + 1}</p>
-            {/* Render question HTML content */}
             <div className="question-html-content" dangerouslySetInnerHTML={{ __html: question.html_content || '<p>Question text missing.</p>' }} />
           </div>
 
-          {/* Options */}
           <div className="options-container">
             {Array.isArray(options) && options.map((option) => (
               <label
@@ -96,37 +100,34 @@ function QuestionCard({
                   value={option.label}
                   checked={selectedOption === option.label && !crossedOffOptions.has(option.label)}
                   readOnly
+                  // Disable radio if answers are shown (isSubmitted includes S-key reveal) or in review mode
                   disabled={isSubmitted || isReviewMode || crossedOffOptions.has(option.label)}
                   className="option-radio"
                 />
                 <span className="option-label-text">
                     <span className="option-letter">{option.label}</span>
-                    {/* Render option HTML content */}
                     <div className="option-html-content" dangerouslySetInnerHTML={{ __html: option.html_content || '<p>Option text missing.</p>' }} />
                 </span>
-                {isSubmitted && !isReviewMode && option.percentage_selected && (
+                {isSubmitted && !isReviewMode && option.percentage_selected && !isTemporarilyRevealed && ( // Hide percentage if S-revealed
                      <span className="option-percentage">{option.percentage_selected}</span>
                 )}
               </label>
             ))}
           </div>
 
-           {/* Action Buttons inside card - NOW ONLY EXPLANATION */}
            <div className="action-buttons">
-            {(isSubmitted || isReviewMode) && !!explanation && (
+            {(isSubmitted || isReviewMode || isTemporarilyRevealed) && !!explanation.html_content && ( // Show button if explanation can be shown
               <button onClick={() => onToggleExplanation(questionIndex)} className="explanation-button">
-                {showExplanation ? 'Hide' : 'Show'} Explanation
+                {showExplanation ? 'Hide' : 'Show'} Explanation 
               </button>
             )}
           </div>
-
-          {/* Explanation Section */}
-          {(showExplanation || (isReviewMode && !!explanation)) && (
+          
+          {shouldShowExplanation && (
             <div className="explanation-section">
               <h3 className="explanation-title">Explanation</h3>
               <div className="explanation-content">
-                <p><strong>Correct Answer:</strong> {correct_answer_original_text}</p> {/* Use new field name */}
-                {/* Render explanation HTML content */}
+                <p><strong>Correct Answer:</strong> {correct_answer_original_text}</p>
                 <div className="explanation-html-content" dangerouslySetInnerHTML={{ __html: explanation.html_content || '<p>Explanation details not available.</p>' }} />
               </div>
                <div className="analytics-section">
@@ -149,4 +150,4 @@ function QuestionCard({
   );
 }
 
-export default QuestionCard;  
+export default QuestionCard;

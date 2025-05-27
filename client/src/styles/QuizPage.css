@@ -1,279 +1,238 @@
-/* FILE: client/src/styles/QuizPage.css */
 .quiz-page-container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* --- Header Adjustments --- */
-  .quiz-header {
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #444;
-    position: relative;
-    display: flex;
-    align-items: center; /* Vertically center all items in the header */
-    justify-content: space-between; /* Creates space */
-    min-height: 40px;
-  }
-  
-  .back-button-quiz {
-      /* Position on the left */
-      flex: 0 0 auto; /* Don't grow, don't shrink, use auto size */
-      margin-right: 15px;
-      background: none;
-      border: none;
-      color: #00bcd4;
-      cursor: pointer;
-      font-size: 0.9em;
-      padding: 5px 0;
-      white-space: nowrap;
-      text-align: left;
-  }
-  .back-button-quiz:hover {
-      text-decoration: underline;
-  }
-  
-  /* Container for Title - Centered */
-  .quiz-title-container { /* Reintroduce this wrapper */
-      flex: 1 1 auto; /* Allow grow/shrink, use auto size */
-      text-align: center; /* Center the title text within this container */
-      min-width: 0; /* Allow shrinking */
-      padding: 0 10px; /* Prevent touching edges */
-  }
-  
-  .quiz-title {
-      color: #e0e0e0;
-      font-size: 1.6em;
-      margin: 0;
-      font-weight: 500;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      line-height: 1.2;
-      display: inline-block; /* Keep it from taking full width */
-  }
-  
-  /* Question Progress - Positioned Right */
-  .quiz-progress {
-      /* Position on the right */
-      flex: 0 0 auto; /* Don't grow, don't shrink, use auto size */
-      color: #aaa;
-      font-size: 0.9em;
-      margin: 0;
-      margin-left: 15px; /* Space before progress */
-      white-space: nowrap;
-      text-align: right;
-  }
-  /* --- End Header Adjustments --- */
-  
-  
-  /* --- Top Controls Area Adjustments --- */
-  .quiz-controls-top {
-      display: flex;
-      justify-content: space-between; /* Space between review and timer */
-      align-items: center; /* Vertical alignment */
-      margin-bottom: 15px;
-      min-height: 40px;
-      padding: 5px 0;
-  }
-  
-  .review-button-inline {
-      background-color: #6c757d;
-      color: white;
-      border: none;
-      padding: 6px 12px;
-      border-radius: 5px;
-      font-size: 0.9em;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-      white-space: nowrap;
-      flex-shrink: 0;
-      /* order: 1; (default) */
-  }
-  .review-button-inline:hover {
-      background-color: #5a6268;
-  }
-  
-  /* Timer Styling */
-  .timer-display {
-      /* order: 2; (default) */
-      background-color: #333;
-      color: #eee;
-      padding: 6px 12px;
-      border-radius: 5px;
-      font-size: 1.1em;
-      font-family: 'Courier New', Courier, monospace;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-      min-width: 130px;
-      text-align: right;
-      flex-shrink: 0;
-  }
-  .timer-display .timer-low { color: #ffc107; font-weight: bold; }
-  .timer-display .timer-total { font-size: 0.8em; color: #aaa; margin-left: 5px; }
-  /* --- End Top Controls Area Adjustments --- */
-  
-  
-  .quiz-content-area {
-      /* position: relative; No longer needed for timer */
-      /* padding-top: 0; Remove padding */
-      margin-bottom: 20px;
-  }
-  
-  .question-card {
-     margin-top: 0;
-      background-color: #2a2a2a;
-      border-radius: 8px;
-      padding: 25px 30px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* --- Navigation Area Adjustments --- */
-  .quiz-navigation {
-    display: flex;
-    justify-content: space-between; /* Pushes Previous/Submit|Finish to ends */
-    align-items: center; /* Vertically align buttons */
-    padding-top: 20px;
-    border-top: 1px solid #444;
-  }
-  
-  .nav-button {
-    background-color: #333;
-    color: #eee;
-    border: none;
-    padding: 10px 25px;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    white-space: nowrap;
-  }
-  .nav-button:hover:not(:disabled) { background-color: #444; }
-  .nav-button:disabled { background-color: #2a2a2a; color: #666; cursor: not-allowed; }
-  
-  .prev-button {
-      margin-right: auto; /* Push other buttons to the right */
-      order: 1; /* Ensure it's first */
-  }
-  
-  /* Mark Button in Navigation */
-  .mark-button-nav {
-      background-color: #555;
-      color: #eee;
-      border: 1px solid #777;
-      padding: 8px 15px; /* Slightly larger padding */
-      margin: 0 15px; /* Horizontal margin */
-      border-radius: 4px;
-      font-size: 0.95em; /* Slightly larger font */
-      cursor: pointer;
-      transition: all 0.2s ease;
-      white-space: nowrap;
-      order: 2; /* Place between Prev and Submit/Finish */
-      margin-left: auto; /* Push Mark button towards the right, before Submit */
-      margin-right: 15px; /* Space between Mark and Submit/Finish */
-  }
-  .mark-button-nav:hover:not(:disabled) { background-color: #666; border-color: #999; }
-  .mark-button-nav.marked { background-color: #ffeb3b; color: #333; border-color: #fbc02d; font-weight: bold; }
-  .mark-button-nav.marked:hover:not(:disabled) { background-color: #fdd835; border-color: #f9a825; }
-  .mark-button-nav:disabled { opacity: 0.5; cursor: not-allowed; }
-  .mark-button-nav-placeholder { /* For Review Mode */
-      min-width: 90px; /* Match approx width of button */
-      margin: 0 15px;
-      order: 2;
-      margin-left: auto;
-      margin-right: 15px;
-  }
-  
-  
-  /* Submit Button (Formerly Next) */
-  .submit-button {
-      background-color: #007bff; /* Blue color */
-      color: white;
-      order: 3; /* Place on the far right */
-  }
-  .submit-button:hover:not(:disabled) { background-color: #0056b3; }
-  
-  /* Finish Quiz Button */
-  .submit-quiz-button {
-      background-color: #008c9e;
-      color: white;
-       order: 3; /* Place on the far right */
-  }
-  .submit-quiz-button:hover { background-color: #00bcd4; }
-  /* --- End Navigation Area Adjustments --- */
-  
-  
-  /* General Back button (used in error states etc.) */
-  .back-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 8px 15px;
-      background-color: #007bff;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      text-decoration: none;
-  }
-  .back-button:hover {
-      background-color: #0056b3;
-  }
-  .passage-container {
-    background-color: #252525; /* Slightly different from question card or same */
-    border: 1px solid #404040;
-    padding: 20px 25px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    max-height: 45vh; /* Adjust as needed, viewport height relative */
-    overflow-y: auto; /* Scroll for long passages */
-    line-height: 1.7; /* Improved readability */
-    color: #dcdcdc; /* Lighter text for passage */
-     /* Basic scrollbar styling */
-     scrollbar-width: thin;
-     scrollbar-color: #555 #333;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-quiz-content-area); /* Themed background for quiz area */
+  color: var(--text-primary);
+  min-height: calc(100vh - 40px); /* Assuming 20px padding top/bottom */
+  box-sizing: border-box;
+}
+
+.quiz-header {
+  margin-bottom: 20px; /* Increased margin */
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-primary);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 40px;
+  /* background-color: var(--bg-secondary); /* Optional: subtle header background */
+  /* padding: 10px 0; */ /* Padding for items inside header if bg is different */
+}
+
+.back-button-quiz {
+  background: none;
+  border: none;
+  color: var(--text-accent);
+  cursor: pointer;
+  font-size: 0.9em;
+  padding: 5px 0;
+  text-align: left;
+}
+.back-button-quiz:hover {
+  text-decoration: underline;
+}
+
+.quiz-title-container {
+  flex: 1 1 auto;
+  text-align: center;
+  min-width: 0;
+  padding: 0 10px;
+}
+
+.quiz-title {
+  color: var(--text-quiz-title);
+  font-size: 1.6em;
+  margin: 0;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+.quiz-progress {
+  color: var(--text-secondary);
+  font-size: 0.9em;
+  margin: 0;
+  margin-left: 15px;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.passage-container {
+  background-color: var(--bg-passage);
+  border: 1px solid var(--border-primary);
+  padding: 20px 25px;
+  margin-bottom: 20px;
+  border-radius: 6px; /* Softer radius */
+  max-height: 40vh; /* Adjusted max height */
+  overflow-y: auto;
+  line-height: 1.7;
+  color: var(--text-primary);
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
 }
 .passage-container::-webkit-scrollbar { width: 8px; }
-.passage-container::-webkit-scrollbar-track { background: #252525; border-radius: 4px; }
-.passage-container::-webkit-scrollbar-thumb { background-color: #555; border-radius: 4px; border: 2px solid #252525; }
+.passage-container::-webkit-scrollbar-track { background: var(--bg-passage); border-radius: 4px; }
+.passage-container::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb-bg); border-radius: 4px; border: 2px solid var(--bg-passage); }
 
-
-.passage-title { /* Optional if you add a title element for passages */
-    color: #00bcd4;
-    margin-top: 0;
-    margin-bottom: 15px;
-    font-size: 1.4em;
-    border-bottom: 1px solid #555;
-    padding-bottom: 10px;
-}
-
-.passage-content p {
-    margin-top: 0;
-    margin-bottom: 1.2em; /* More spacing between paragraphs */
-}
-.passage-content p:last-child {
-    margin-bottom: 0;
-}
-
-.passage-content strong, .passage-content b { /* Make bold text stand out a bit more */
-    color: #e8e8e8;
-    font-weight: 600; /* Slightly bolder if font supports it */
-}
-
-.passage-content em, .passage-content i { /* Style italics */
-    color: #c8c8c8;
-}
-
-/* Ensure images within passage content are responsive and styled */
+.passage-content p { margin-top: 0; margin-bottom: 1.2em; }
+.passage-content p:last-child { margin-bottom: 0; }
+.passage-content strong, .passage-content b { font-weight: 600; }
 .passage-content img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin: 20px auto; /* More vertical margin for passage images */
+  margin: 15px auto;
   border-radius: 4px;
-  background-color: #ffffff; /* White background for transparent images */
-  padding: 8px;             /* Padding around the image */
-  border: 1px solid #cccccc; /* Light border */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: var(--bg-primary); /* Ensures visibility on any theme */
+  padding: 5px;
+  border: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-card);
 }
+body.light-mode .passage-content img { background-color: #fff; } /* Explicit for light if needed */
+
+
+.quiz-controls-top {
+  display: flex;
+  justify-content: flex-end; /* Timer to the right */
+  align-items: center;
+  margin-bottom: 20px; /* Increased margin */
+  min-height: 40px;
+  padding: 5px 0;
+}
+
+.timer-display {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  padding: 8px 14px; /* Slightly larger */
+  border-radius: 5px;
+  font-size: 1em; /* Adjusted font size */
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: var(--shadow-card);
+  min-width: 120px; /* Adjusted min-width */
+  text-align: right;
+  flex-shrink: 0;
+  border: 1px solid var(--border-primary);
+}
+.timer-display .timer-low { color: var(--bg-button-warning); font-weight: bold; }
+.timer-display .timer-total { font-size: 0.8em; color: var(--text-secondary); margin-left: 5px; }
+.timer-display-placeholder { min-width: 120px; visibility: hidden; }
+
+.quiz-content-area {
+  margin-bottom: 20px;
+}
+
+/* Quiz Navigation Bar */
+.quiz-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-top: 1px solid var(--border-primary);
+  margin-top: 20px;
+}
+
+.nav-group-left,
+.nav-group-center,
+.nav-group-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-group-left { justify-content: flex-start; }
+.nav-group-center { flex-grow: 1; justify-content: center; }
+.nav-group-right { justify-content: flex-end; }
+
+.nav-button, .mark-button-nav {
+  padding: 9px 16px; /* Unified padding */
+  font-size: 0.9em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+  margin: 0 5px;
+  border: 1px solid transparent; /* Base for all */
+  min-width: 80px;
+  text-align: center;
+}
+.nav-button:disabled, .mark-button-nav:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.prev-button {
+  background-color: var(--bg-button-secondary);
+  color: var(--text-on-button-secondary);
+  border-color: var(--bg-button-secondary);
+}
+.prev-button:hover:not(:disabled) { background-color: var(--bg-button-secondary-hover); }
+
+.solution-toggle-button-bottom {
+  background-color: var(--bg-button-solution);
+  color: var(--text-on-button-solution);
+  border-color: var(--bg-button-solution);
+}
+.solution-toggle-button-bottom:hover:not(:disabled) {
+  background-color: var(--bg-button-secondary-hover); /* Or a specific solution hover */
+}
+
+.next-button,
+.submit-quiz-button {
+  background-color: var(--bg-button-primary);
+  color: var(--text-on-button-primary);
+  border-color: var(--bg-button-primary);
+}
+.next-button:hover:not(:disabled),
+.submit-quiz-button:hover:not(:disabled) {
+  background-color: var(--bg-button-primary-hover);
+}
+
+.mark-button-nav {
+  background-color: var(--bg-button-secondary);
+  color: var(--text-on-button-secondary);
+  border-color: var(--bg-button-secondary);
+}
+.mark-button-nav:hover:not(:disabled) { background-color: var(--bg-button-secondary-hover); }
+.mark-button-nav.marked {
+  background-color: var(--bg-button-warning);
+  color: var(--text-on-button-warning);
+  border-color: var(--bg-button-warning);
+  font-weight: bold;
+}
+.mark-button-nav.marked:hover:not(:disabled) { background-color: var(--bg-button-warning-hover); }
+
+
+.review-button-bottom {
+  background-color: var(--bg-button-secondary);
+  color: var(--text-on-button-secondary);
+  border-color: var(--bg-button-secondary);
+}
+.review-button-bottom:hover:not(:disabled) { background-color: var(--bg-button-secondary-hover); }
+
+/* Placeholders */
+.mark-button-nav-placeholder,
+.review-button-bottom-placeholder,
+.solution-toggle-button-bottom-placeholder {
+  min-width: 80px; /* Match button min-width */
+  height: 38px;   /* Match approx button height (padding + font) */
+  margin: 0 5px;
+  visibility: hidden;
+  display: inline-block; /* Ensure it takes space like a button */
+}
+
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: var(--bg-button-primary);
+  color: var(--text-on-button-primary);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.back-button:hover { background-color: var(--bg-button-primary-hover); }

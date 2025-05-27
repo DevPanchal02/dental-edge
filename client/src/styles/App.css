@@ -1,17 +1,134 @@
 /* FILE: client/src/styles/App.css */
+
+/* --- CSS Variables for Theming --- */
+:root {
+  /* Light Mode (Default) - Based on new palette */
+  --bg-primary: #FFFAEC;                            /* Lightest Beige from palette */
+  --bg-secondary: #F5ECD5;                          /* Medium Beige for secondary backgrounds */
+  --bg-sidebar: #F5ECD5;                            /* Medium Beige for sidebar */
+  --bg-quiz-content-area: #FFFFFF;                  /* Explicit white for quiz area as previously requested */
+  --bg-question-card: #FFFFFF;                      /* Explicit white for question card */
+  --bg-option: #FAF6EF;                            /* Very light beige, derived from F5ECD5 */
+  --bg-option-hover: #F5ECD5;                       /* Medium Beige for hover */
+  --bg-option-selected: #E0D8C5;                    /* Darker shade of F5ECD5 for selected */
+  --bg-option-correct: #d4edda;                     /* Standard light green - keep for clarity */
+  --bg-option-incorrect: #f8d7da;                   /* Standard light red - keep for clarity */
+  /* UPDATED --bg-explanation to match --bg-question-card */
+  --bg-explanation: var(--bg-question-card);        /* Should resolve to #FFFFFF */
+  --bg-passage: #F5ECD5;                           /* Medium Beige for passage (can be different if desired) */
+  --bg-modal-content: #FFFAEC;                      /* Lightest Beige for modal */
+
+  --bg-button-primary: #578E7E;                     /* Teal from palette */
+  --bg-button-primary-hover: #4A7A6B;               /* Darker shade of Teal */
+  --bg-button-secondary: #A7B0B9;                   /* Muted Grey, derived from #3D3D3D if needed, or a lighter teal */
+  --bg-button-secondary-hover: #8E9AA4;            /* Darker shade of muted grey */
+  --bg-button-danger: #dc3545;                      /* Standard red - keep for clarity */
+  --bg-button-danger-hover: #c82333;
+  --bg-button-warning: #ffc107;                     /* Standard yellow - keep for clarity */
+  --bg-button-warning-hover: #e0a800;
+  --bg-button-solution: #578E7E;                    /* Teal for solution button */
+  --bg-button-solution-hover: #4A7A6B;
+  --bg-item-link: #F5ECD5;                          /* TopicPage test/QB items - Medium Beige */
+  --bg-item-link-hover: #E0D8C5;                    /* Darker Medium Beige */
+
+  --text-primary: #3D3D3D;                         /* Dark Grey/Black from palette */
+  --text-secondary: #5E5E5E;                       /* Slightly lighter than primary text */
+  --text-on-button-primary: #FFFAEC;                /* Lightest Beige on Teal buttons */
+  --text-on-button-secondary: #3D3D3D;              /* Dark Grey on lighter secondary buttons */
+  --text-on-button-danger: #FFFFFF;
+  --text-on-button-warning: #3D3D3D;                /* Dark text on yellow */
+  --text-on-button-solution: #FFFAEC;
+  --text-item-link: #3D3D3D;                        /* Dark text on Medium Beige items */
+  --text-accent: #578E7E;                           /* Teal from palette for links */
+  --text-quiz-title: #3D3D3D;
+  --text-option-correct: #155724;                   /* Standard dark green */
+  --text-option-incorrect: #721c24;                 /* Standard dark red */
+
+  --border-primary: #E0D8C5;                        /* Darker Medium Beige for borders */
+  --border-card-outline: #3D3D3D;                   /* Dark Grey/Black for question card outline */
+  --border-option-selected: #578E7E;                /* Teal border for selected */
+  --border-option-correct: #155724;
+  --border-option-incorrect: #721c24;
+  --border-button: #578E7E;                         /* Teal for theme toggle and other general buttons */
+
+  --shadow-card: 0 1px 3px rgba(61, 61, 61, 0.1);   /* Shadow based on dark grey */
+
+  --scrollbar-track-bg: #F5ECD5;                    /* Medium Beige scrollbar track */
+  --scrollbar-thumb-bg: #C4BBAF;                    /* Muted Beige/Grey scrollbar thumb */
+}
+
+body.dark-mode {
+  /* Dark Mode - Inverted and adjusted from the new light palette */
+  --bg-primary: #1E1E1E;                            /* Very dark grey, counterpart to FFFAEC */
+  --bg-secondary: #2B2B2B;                          /* Darker grey, counterpart to F5ECD5 */
+  --bg-sidebar: #2B2B2B;
+  --bg-quiz-content-area: #1E1E1E;                  /* Dark for quiz page */
+  --bg-question-card: #252525;                      /* Slightly off-black for card */
+  --bg-option: #333333;
+  --bg-option-hover: #3D3D3D;                       /* Palette's dark grey for hover */
+  --bg-option-selected: #4A4A4A;
+  --bg-option-correct: #2E4B3A;                     /* Dark Teal-Green */
+  --bg-option-incorrect: #4A2E2E;                    /* Dark Maroon */
+  /* UPDATED --bg-explanation to match --bg-question-card */
+  --bg-explanation: var(--bg-question-card);        /* Should resolve to #252525 */
+  --bg-passage: #2B2B2B;                           /* Darker grey for passage (can be different if desired) */
+  --bg-modal-content: #252525;
+
+  --bg-button-primary: #79B0A1;                     /* Lighter Teal for dark mode primary buttons */
+  --bg-button-primary-hover: #8DCEC0;
+  --bg-button-secondary: #578E7E;                   /* Original Teal as secondary in dark mode */
+  --bg-button-secondary-hover: #6BA092;
+  --bg-button-danger: #A35757;
+  --bg-button-danger-hover: #B86A6A;
+  --bg-button-warning: #B7950B;                      /* Keep warning colors distinct */
+  --bg-button-warning-hover: #D4AC0D;
+  --bg-button-solution: #578E7E;
+  --bg-button-solution-hover: #6BA092;
+  --bg-item-link: #333333;                          /* Darker for TopicPage buttons */
+  --bg-item-link-hover: #3D3D3D;
+
+  --text-primary: #F5ECD5;                          /* Medium Beige from palette for main text */
+  --text-secondary: #BEB3A2;                       /* Lighter beige for secondary text */
+  --text-on-button-primary: #1E1E1E;                /* Dark text on lighter teal buttons */
+  --text-on-button-secondary: #FFFAEC;              /* Lightest Beige on original teal buttons */
+  --text-on-button-danger: #FFFAEC;
+  --text-on-button-warning: #1E1E1E;
+  --text-on-button-solution: #FFFAEC;
+  --text-item-link: #F5ECD5;
+  --text-accent: #79B0A1;                           /* Lighter Teal for links */
+  --text-quiz-title: #F5ECD5;
+  --text-option-correct: #A6D9B8;
+  --text-option-incorrect: #F0B8B8;
+
+  --border-primary: #3D3D3D;                        /* Palette's Dark Grey/Black for borders */
+  --border-card-outline: #578E7E;                   /* Teal outline for dark mode card */
+  --border-option-selected: #79B0A1;
+  --border-option-correct: #A6D9B8;
+  --border-option-incorrect: #F0B8B8;
+  --border-button: #578E7E;
+
+  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.45);     /* More visible shadow for dark mode */
+
+  --scrollbar-track-bg: #2B2B2B;
+  --scrollbar-thumb-bg: #3D3D3D;
+}
+/* --- End CSS Variables --- */
+
+
 html, body, #root {
-  height: 100%; /* Ensure root elements take full height */
-  overflow: hidden; /* Prevent body scroll, let containers handle scroll */
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 button {
@@ -30,37 +147,53 @@ ul {
   margin: 0;
 }
 
-/* Global Loading / Error / Info States */
 .page-loading,
 .page-error,
 .page-info {
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-grow: 1; /* Allow filling space in flex containers */
-  height: 100%; /* Fill container */
+  flex-grow: 1;
+  height: 100%;
   font-size: 1.2em;
   padding: 40px;
   text-align: center;
   box-sizing: border-box;
+  color: var(--text-secondary);
+  background-color: var(--bg-primary);
 }
 
 .page-error {
-  color: #ff6b6b;
-  background-color: #2f1a1a;
-  border: 1px solid #772d2d;
+  color: var(--text-on-button-danger);
+  background-color: var(--bg-button-danger);
+  border: 1px solid var(--border-primary);
   border-radius: 8px;
 }
 
-.page-info {
-  color: #aaa;
-}
-
-a { /* Basic link styling */
-  color: #00bcd4;
+a {
+  color: var(--text-accent);
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-bg);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 4px;
+  border: 2px solid var(--scrollbar-track-bg);
+}
+* { /* For Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
 }

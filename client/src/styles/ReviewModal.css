@@ -1,161 +1,141 @@
 /* FILE: client/src/styles/ReviewModal.css */
-
 .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black overlay */
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly less transparent for better focus */
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000; /* Ensure it's on top */
+    z-index: 1000;
+}
+body.light-mode .modal-overlay {
+    background-color: rgba(50, 50, 93, 0.25); /* Light mode overlay */
 }
 
+
 .modal-content {
-    background-color: #2a2a2a; /* Dark background for the modal */
+    background-color: var(--bg-modal-content); /* Themed */
     padding: 25px 30px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
     width: 90%;
-    max-width: 500px; /* Limit maximum width */
-    max-height: 80vh; /* Limit maximum height */
+    max-width: 500px;
+    max-height: 80vh;
     display: flex;
     flex-direction: column;
-    position: relative; /* For close button positioning */
-    color: #e0e0e0;
+    position: relative;
+    color: var(--text-primary); /* Themed */
+    border: 1px solid var(--border-primary); /* Added border */
 }
+body.dark-mode .modal-content {
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Dark mode shadow */
+}
+
 
 .modal-close-button {
     position: absolute;
-    top: 10px;
+    top: 12px; /* Adjusted for better placement */
     right: 15px;
     background: none;
     border: none;
-    font-size: 2em; /* Larger close button */
-    color: #aaa;
+    font-size: 1.8em; /* Slightly smaller */
+    color: var(--text-secondary); /* Themed */
     cursor: pointer;
     line-height: 1;
     padding: 0;
 }
-
 .modal-close-button:hover {
-    color: #fff;
+    color: var(--text-accent); /* Themed */
 }
 
 .modal-content h2 {
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
-    color: #eee;
+    color: var(--text-quiz-title); /* Themed */
     font-weight: 500;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid var(--border-primary); /* Themed */
     padding-bottom: 10px;
 }
 
 .modal-question-list {
-    overflow-y: auto; /* Allow scrolling if list is long */
-    flex-grow: 1; /* Allow list to take available space */
-    margin-bottom: 20px; /* Add space before action button */
-     /* Basic scrollbar styling */
-     scrollbar-width: thin;
-     scrollbar-color: #555 #333;
+    overflow-y: auto;
+    flex-grow: 1;
+    margin-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
 }
-/* Webkit scrollbar styling */
 .modal-question-list::-webkit-scrollbar { width: 8px; }
-.modal-question-list::-webkit-scrollbar-track { background: #333; border-radius: 4px; }
-.modal-question-list::-webkit-scrollbar-thumb { background-color: #555; border-radius: 4px; border: 2px solid #333; }
+.modal-question-list::-webkit-scrollbar-track { background: var(--bg-modal-content); border-radius: 4px; } /* Use modal bg for track */
+.modal-question-list::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb-bg); border-radius: 4px; border: 2px solid var(--bg-modal-content); }
 
-
-.modal-question-list table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
+.modal-question-list table { width: 100%; border-collapse: collapse; }
 .modal-question-list th,
 .modal-question-list td {
     text-align: center;
     padding: 10px 8px;
-    border-bottom: 1px solid #444;
+    border-bottom: 1px solid var(--border-primary); /* Themed */
 }
-
 .modal-question-list th {
-    color: #bbb;
+    color: var(--text-secondary); /* Themed */
     font-weight: 500;
     font-size: 0.9em;
-    position: sticky; /* Make header sticky */
+    position: sticky;
     top: 0;
-    background-color: #2a2a2a; /* Match modal background */
-    z-index: 1; /* Keep header above scrolling content */
+    background-color: var(--bg-modal-content); /* Themed */
+    z-index: 1;
 }
-
-.modal-question-list td {
-     font-size: 0.95em;
-}
-
-.modal-question-list tr:last-child td {
-    border-bottom: none;
-}
+.modal-question-list td { font-size: 0.95em; }
+.modal-question-list tr:last-child td { border-bottom: none; }
 
 .modal-question-list tr.current-question-row td {
-    background-color: #383838; /* Highlight current question */
+    background-color: var(--bg-item-link-hover); /* Themed highlight */
     font-weight: bold;
+    color: var(--text-accent);
 }
-
 
 .jump-button {
     background: none;
-    border: 1px solid #555;
-    color: #00bcd4;
+    border: 1px solid var(--border-button); /* Themed */
+    color: var(--text-accent); /* Themed */
     cursor: pointer;
     padding: 4px 8px;
     border-radius: 4px;
     font-weight: bold;
     transition: background-color 0.2s ease, color 0.2s ease;
 }
-
 .jump-button:hover {
-    background-color: #00bcd4;
-    color: #121212;
-    border-color: #00bcd4;
+    background-color: var(--text-accent); /* Themed */
+    color: var(--bg-primary); /* Invert for hover */
+    border-color: var(--text-accent); /* Themed */
 }
 
-.status-answered {
-    color: #4CAF50; /* Green */
-    font-weight: bold;
-}
+.status-answered { color: var(--text-option-correct); font-weight: bold; } /* Themed */
+.status-unanswered { color: var(--text-secondary); } /* Themed */
+.status-marked { color: var(--bg-button-warning); font-size: 1.2em; } /* Themed */
 
-.status-unanswered {
-    color: #aaa;
-}
-
-.status-marked {
-    color: #ffeb3b; /* Yellow/Gold */
-    font-size: 1.2em; /* Make flag slightly larger */
-}
-
-/* --- NEW Styles for Modal Actions --- */
 .modal-actions {
-    margin-top: auto; /* Push actions to the bottom */
+    margin-top: auto;
     padding-top: 15px;
-    border-top: 1px solid #444;
+    border-top: 1px solid var(--border-primary); /* Themed */
     display: flex;
-    justify-content: flex-end; /* Align button to the right */
+    justify-content: flex-end;
 }
 
 .modal-finish-button {
-    background-color: #008c9e; /* Use finish button color */
-    color: white;
-    border: none;
+    background-color: var(--bg-button-primary); /* Themed */
+    color: var(--text-on-button-primary); /* Themed */
+    border: 1px solid var(--bg-button-primary); /* Themed */
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
 }
-
 .modal-finish-button:hover {
-    background-color: #00bcd4;
+    background-color: var(--bg-button-primary-hover); /* Themed */
+    border-color: var(--bg-button-primary-hover); /* Themed */
 }
-/* --- End NEW Styles --- */

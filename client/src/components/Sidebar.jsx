@@ -1,12 +1,12 @@
-// FILE: client/src/components/Sidebar.jsx
 import React from 'react';
-import { NavLink } from 'react-router-dom'; // Use NavLink for active styling
+import { NavLink } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext'; // Import useTheme
 import '../styles/Sidebar.css';
 
 function Sidebar({ topics, activeTopicId }) {
+    const { theme, toggleTheme } = useTheme(); // Use the theme context
 
     const handleResetProgress = () => {
-        // Confirmation dialog
         const confirmation = window.confirm(
             "Are you sure you want to reset ALL quiz progress?\n" +
             "This will clear saved answers, times, and results for ALL topics and quizzes.\n" +
@@ -16,7 +16,6 @@ function Sidebar({ topics, activeTopicId }) {
         if (confirmation) {
             console.log("Resetting all quiz progress...");
             try {
-                // Iterate through localStorage keys and remove relevant ones
                 Object.keys(localStorage).forEach(key => {
                     if (key.startsWith('quizState-') || key.startsWith('quizResults-')) {
                         localStorage.removeItem(key);
@@ -24,7 +23,6 @@ function Sidebar({ topics, activeTopicId }) {
                     }
                 });
                 alert("All quiz progress has been reset.");
-                // Optionally reload the page to reflect the reset state immediately
                 window.location.reload();
             } catch (error) {
                 console.error("Error resetting progress:", error);
@@ -35,45 +33,37 @@ function Sidebar({ topics, activeTopicId }) {
         }
     };
 
-
-    if (!topics || topics.length === 0) {
-        return (
-            <aside className="sidebar">
-                <h2 className="sidebar-title">TOPICS</h2>
-                <p className="no-topics-sidebar">No topics loaded.</p>
-                {/* Optionally show reset button even if topics fail? */}
-                 <div className="sidebar-actions">
-                    <button onClick={handleResetProgress} className="reset-button">
-                        Reset All Progress
-                    </button>
-                </div>
-            </aside>
-        );
-    }
-
     return (
         <aside className="sidebar">
-            <h2 className="sidebar-title">TOPICS</h2>
+            <div className="sidebar-header">
+                <h2 className="sidebar-title">TOPICS</h2>
+            </div>
             <nav>
                 <ul>
-                    {topics.map((topic) => (
-                        <li key={topic.id}>
-                            <NavLink
-                                to={`/topic/${topic.id}`}
-                                className={({ isActive }) =>
-                                `topic-button ${isActive ? 'active' : ''}`
-                                }
-                            >
-                                {topic.name}
-                                <span className="topic-arrow">→</span>
-                            </NavLink>
-                        </li>
-                    ))}
+                    {topics && topics.length > 0 ? (
+                        topics.map((topic) => (
+                            <li key={topic.id}>
+                                <NavLink
+                                    to={`/topic/${topic.id}`}
+                                    className={({ isActive }) =>
+                                    `topic-button ${isActive ? 'active' : ''}`
+                                    }
+                                >
+                                    {topic.name}
+                                    <span className="topic-arrow">→</span>
+                                </NavLink>
+                            </li>
+                        ))
+                    ) : (
+                         <li><p className="no-topics-sidebar">No topics loaded.</p></li>
+                    )}
                 </ul>
             </nav>
 
-            {/* Reset Button Section */}
             <div className="sidebar-actions">
+                <button onClick={toggleTheme} className="theme-toggle-button">
+                    Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
+                </button>
                 <button onClick={handleResetProgress} className="reset-button">
                     Reset All Progress
                 </button>

@@ -1,99 +1,115 @@
 /* FILE: client/src/styles/TopicPage.css */
 .topic-page-container {
-    padding: 20px;
-  }
-  
-  .topic-title {
-    color: #00bcd4; /* Accent color */
-    margin-bottom: 30px;
-    border-bottom: 1px solid #444;
-    padding-bottom: 10px;
-    font-weight: 500;
-  }
-  
-  .topic-section {
-    margin-bottom: 40px;
-  }
-  
-  .section-title {
-    color: #ccc;
-    font-size: 1.3em;
-    margin-bottom: 20px;
-    font-weight: 400;
-  }
-  
-  .qbank-category {
-    margin-bottom: 25px;
-    padding-left: 15px; /* Indent categories */
-    border-left: 3px solid #333;
-  }
-  
-  .category-title {
-      color: #bbb;
-      font-size: 1.1em;
-      margin-top: 0; /* Remove top margin if it's the first element */
-      margin-bottom: 15px;
-      font-weight: 400;
-  }
-  
-  .item-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .list-item {
-    margin-bottom: 10px;
-    background-color: #2a2a2a;
-    border-radius: 6px;
-    transition: background-color 0.2s ease;
-  }
-  
-  .list-item:not(.disabled):hover {
-      background-color: #353535;
-  }
-  
-  .list-item.disabled {
-      opacity: 0.5;
-      cursor: not-allowed;
-  }
-  
-  .item-link, .item-link-disabled {
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-    color: #e0e0e0;
-    text-decoration: none;
-    font-size: 1em;
-  }
-  
-  .item-link-disabled {
-      cursor: not-allowed;
-  }
-  
-  .item-details {
-      font-size: 0.85em;
-      color: #888;
-      margin-left: 15px;
-      white-space: nowrap; /* Prevent wrapping */
-  }
-  
-  .item-arrow {
-    margin-left: auto;
-    color: #666;
-    font-size: 1.2em;
-    transition: transform 0.2s ease;
-    padding-left: 10px; /* Space before arrow */
-  }
-  
-  .list-item:not(.disabled):hover .item-arrow {
-    transform: translateX(5px);
-    color: #00bcd4;
-  }
-  
-  .no-items-message {
-    color: #888;
-    font-style: italic;
-    margin-left: 10px;
-    padding: 10px 0;
-  }
+  padding: 20px 30px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.topic-title {
+  color: var(--text-accent);
+  margin-bottom: 25px;
+  border-bottom: 1px solid var(--border-primary);
+  padding-bottom: 15px;
+  font-weight: 500;
+  font-size: 1.8em;
+}
+
+.topic-section {
+  margin-bottom: 35px;
+}
+
+.section-title {
+  color: var(--text-primary);
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.qbank-category {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  border-left: 3px solid var(--border-primary);
+}
+
+.category-title {
+  color: var(--text-secondary);
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.list-item {
+  margin-bottom: 8px;
+  background-color: var(--bg-item-link);
+  border-radius: 5px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-primary);
+}
+
+.list-item:not(.disabled):hover {
+  background-color: var(--bg-item-link-hover);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.07); /* Slightly more pronounced shadow */
+}
+
+.list-item.disabled {
+  opacity: 0.65; /* Slightly more visible than pure 0.5 */
+  cursor: not-allowed;
+  background-color: var(--bg-secondary);
+  box-shadow: none;
+}
+
+.item-link, .item-link-disabled {
+  display: flex;
+  align-items: center;
+  padding: 12px 18px;
+  color: var(--text-item-link);
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.item-link-disabled {
+  cursor: not-allowed;
+  color: var(--text-secondary);
+}
+
+.item-details {
+  font-size: 0.8em;
+  color: var(--text-secondary);
+  margin-left: 12px;
+  white-space: nowrap;
+}
+
+.item-arrow {
+  margin-left: auto;
+  color: var(--text-secondary);
+  font-size: 1.1em;
+  transition: transform 0.2s ease, color 0.2s ease;
+  padding-left: 8px;
+}
+
+.list-item:not(.disabled):hover .item-arrow {
+  transform: translateX(4px);
+  color: var(--text-accent);
+}
+.list-item.disabled .item-arrow {
+  display: none;
+}
+
+.no-items-message {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin-left: 10px;
+  padding: 10px 0;
+  font-size: 0.9em;
+}
