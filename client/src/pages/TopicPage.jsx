@@ -1,17 +1,20 @@
 // FILE: client/src/pages/TopicPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { fetchTopicData } from '../data/loader'; // Use the dynamic loader
+import { fetchTopicData } from '../data/loader';
+import { useLayout } from '../context/LayoutContext'; // Import useLayout
 import '../styles/TopicPage.css';
 
 function TopicPage() {
   const { topicId } = useParams();
+  const { isSidebarEffectivelyPinned } = useLayout(); // Consume layout context
+
   const [topicData, setTopicData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let isMounted = true; // Flag to prevent state update on unmounted component
+    let isMounted = true;
     const loadData = async () => {
       if (!topicId) {
         setIsLoading(false);
@@ -28,8 +31,6 @@ function TopicPage() {
           setTopicData(data);
           if (!data.practiceTests?.length && !data.questionBanks?.length) {
               console.warn(`[TopicPage] No tests or banks found for ${topicId}`);
-              // Optionally set an info message instead of error
-              // setError(`No practice tests or question banks found for ${data.name}. Check data structure.`);
           }
         }
       } catch (err) {
@@ -45,9 +46,9 @@ function TopicPage() {
     };
     loadData();
 
-    return () => { isMounted = false; }; // Cleanup function
+    return () => { isMounted = false; };
 
-  }, [topicId]); // Re-fetch when topicId changes
+  }, [topicId]);
 
   const renderItemList = (items, sectionType) => {
     if (!items || items.length === 0) {
@@ -67,7 +68,6 @@ function TopicPage() {
               <span className="item-link-disabled">
                 {item.name}
                 <span className="item-details">(Data N/A)</span>
-                {/* Removed arrow for disabled items */}
               </span>
             )}
           </li>
@@ -81,29 +81,29 @@ function TopicPage() {
     return <div className="page-loading">Loading Topic Details...</div>;
   }
 
-  // Display error prominently if data fetching failed
   if (error && !topicData) {
     return <div className="page-error">{error}</div>;
   }
 
-  // Handle case where topic might exist but has no content loaded
   if (!topicData) {
     return <div className="page-info">Topic '{topicId}' not found or failed to load content.</div>;
   }
 
+  const topicPageDynamicStyle = {
+    marginLeft: isSidebarEffectivelyPinned ? '250px' : '0',
+    width: isSidebarEffectivelyPinned ? 'calc(100% - 250px)' : '100%',
+  };
+
   return (
-    <div className="topic-page-container">
+    <div className="topic-page-container" style={topicPageDynamicStyle}>
       <h1 className="topic-title">{topicData.name}</h1>
-       {/* Display error as a warning if content is partially missing */}
       {error && <div className="page-error" style={{marginBottom: '20px', maxWidth:'800px'}}>{error}</div>}
 
-      {/* Practice Tests Section */}
       <section className="topic-section">
         <h2 className="section-title">Practice Tests</h2>
         {renderItemList(topicData.practiceTests, 'practice')}
       </section>
 
-      {/* Question Banks Section */}
       <section className="topic-section">
         <h2 className="section-title">Question Banks</h2>
         {topicData.questionBanks && topicData.questionBanks.length > 0 ? (

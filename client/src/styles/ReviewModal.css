@@ -5,59 +5,60 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Slightly less transparent for better focus */
+    background-color: rgba(0, 0, 0, 0.6); 
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2000; /* Higher z-index to be above sidebar (1050) */
 }
 body.light-mode .modal-overlay {
-    background-color: rgba(50, 50, 93, 0.25); /* Light mode overlay */
+    background-color: rgba(50, 50, 93, 0.25); 
 }
 
 
 .modal-content {
-    background-color: var(--bg-modal-content); /* Themed */
+    background-color: var(--bg-modal-content); 
     padding: 25px 30px;
     border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
     width: 90%;
     max-width: 500px;
     max-height: 80vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    color: var(--text-primary); /* Themed */
-    border: 1px solid var(--border-primary); /* Added border */
+    color: var(--text-primary); 
+    border: 1px solid var(--border-primary); 
+    z-index: 2001; /* Above its own overlay */
 }
 body.dark-mode .modal-content {
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); /* Dark mode shadow */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5); 
 }
 
 
 .modal-close-button {
     position: absolute;
-    top: 12px; /* Adjusted for better placement */
+    top: 12px; 
     right: 15px;
     background: none;
     border: none;
-    font-size: 1.8em; /* Slightly smaller */
-    color: var(--text-secondary); /* Themed */
+    font-size: 1.8em; 
+    color: var(--text-secondary); 
     cursor: pointer;
     line-height: 1;
     padding: 0;
 }
 .modal-close-button:hover {
-    color: var(--text-accent); /* Themed */
+    color: var(--text-accent); 
 }
 
 .modal-content h2 {
     margin-top: 0;
     margin-bottom: 20px;
     text-align: center;
-    color: var(--text-quiz-title); /* Themed */
+    color: var(--text-quiz-title); 
     font-weight: 500;
-    border-bottom: 1px solid var(--border-primary); /* Themed */
+    border-bottom: 1px solid var(--border-primary); 
     padding-bottom: 10px;
 }
 
@@ -69,7 +70,7 @@ body.dark-mode .modal-content {
     scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg);
 }
 .modal-question-list::-webkit-scrollbar { width: 8px; }
-.modal-question-list::-webkit-scrollbar-track { background: var(--bg-modal-content); border-radius: 4px; } /* Use modal bg for track */
+.modal-question-list::-webkit-scrollbar-track { background: var(--bg-modal-content); border-radius: 4px; } 
 .modal-question-list::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb-bg); border-radius: 4px; border: 2px solid var(--bg-modal-content); }
 
 .modal-question-list table { width: 100%; border-collapse: collapse; }
@@ -77,30 +78,30 @@ body.dark-mode .modal-content {
 .modal-question-list td {
     text-align: center;
     padding: 10px 8px;
-    border-bottom: 1px solid var(--border-primary); /* Themed */
+    border-bottom: 1px solid var(--border-primary); 
 }
 .modal-question-list th {
-    color: var(--text-secondary); /* Themed */
+    color: var(--text-secondary); 
     font-weight: 500;
     font-size: 0.9em;
     position: sticky;
     top: 0;
-    background-color: var(--bg-modal-content); /* Themed */
-    z-index: 1;
+    background-color: var(--bg-modal-content); 
+    z-index: 1; /* Relative to modal-content stacking context */
 }
 .modal-question-list td { font-size: 0.95em; }
 .modal-question-list tr:last-child td { border-bottom: none; }
 
 .modal-question-list tr.current-question-row td {
-    background-color: var(--bg-item-link-hover); /* Themed highlight */
+    background-color: var(--bg-item-link-hover); 
     font-weight: bold;
     color: var(--text-accent);
 }
 
 .jump-button {
     background: none;
-    border: 1px solid var(--border-button); /* Themed */
-    color: var(--text-accent); /* Themed */
+    border: 1px solid var(--border-button); 
+    color: var(--text-accent); 
     cursor: pointer;
     padding: 4px 8px;
     border-radius: 4px;
@@ -108,27 +109,27 @@ body.dark-mode .modal-content {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 .jump-button:hover {
-    background-color: var(--text-accent); /* Themed */
-    color: var(--bg-primary); /* Invert for hover */
-    border-color: var(--text-accent); /* Themed */
+    background-color: var(--text-accent); 
+    color: var(--bg-primary); 
+    border-color: var(--text-accent); 
 }
 
-.status-answered { color: var(--text-option-correct); font-weight: bold; } /* Themed */
-.status-unanswered { color: var(--text-secondary); } /* Themed */
-.status-marked { color: var(--bg-button-warning); font-size: 1.2em; } /* Themed */
+.status-answered { color: var(--text-option-correct); font-weight: bold; } 
+.status-unanswered { color: var(--text-secondary); } 
+.status-marked { color: var(--bg-button-warning); font-size: 1.2em; } 
 
 .modal-actions {
     margin-top: auto;
     padding-top: 15px;
-    border-top: 1px solid var(--border-primary); /* Themed */
+    border-top: 1px solid var(--border-primary); 
     display: flex;
     justify-content: flex-end;
 }
 
 .modal-finish-button {
-    background-color: var(--bg-button-primary); /* Themed */
-    color: var(--text-on-button-primary); /* Themed */
-    border: 1px solid var(--bg-button-primary); /* Themed */
+    background-color: var(--bg-button-primary); 
+    color: var(--text-on-button-primary); 
+    border: 1px solid var(--bg-button-primary); 
     padding: 10px 20px;
     border-radius: 5px;
     font-size: 1em;
@@ -136,6 +137,6 @@ body.dark-mode .modal-content {
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 .modal-finish-button:hover {
-    background-color: var(--bg-button-primary-hover); /* Themed */
-    border-color: var(--bg-button-primary-hover); /* Themed */
+    background-color: var(--bg-button-primary-hover); 
+    border-color: var(--bg-button-primary-hover); 
 }

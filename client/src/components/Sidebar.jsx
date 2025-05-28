@@ -1,10 +1,27 @@
+// FILE: client/src/components/Sidebar.jsx
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext'; // Import useTheme
+import { useTheme } from '../context/ThemeContext';
 import '../styles/Sidebar.css';
 
-function Sidebar({ topics, activeTopicId }) {
-    const { theme, toggleTheme } = useTheme(); // Use the theme context
+const PinIcon = ({ pinned }) => (
+  <span style={{ marginRight: '8px', display: 'inline-block', fontSize: '1em' }}> {/* Adjusted font size if needed */}
+    {pinned ? '🔒' : '🔓'}
+  </span>
+);
+
+
+function Sidebar({ 
+    topics, 
+    activeTopicId, 
+    isOpen, 
+    isPinned, 
+    onMouseEnter, 
+    onMouseLeave, 
+    onPinToggle,
+    isContentPage 
+}) {
+    const { theme, toggleTheme } = useTheme();
 
     const handleResetProgress = () => {
         const confirmation = window.confirm(
@@ -34,9 +51,22 @@ function Sidebar({ topics, activeTopicId }) {
     };
 
     return (
-        <aside className="sidebar">
+        <aside 
+            className={`sidebar ${isOpen ? 'open' : 'closed'}`}
+            onMouseEnter={onMouseEnter}
+            onMouseLeave={onMouseLeave}
+        >
             <div className="sidebar-header">
                 <h2 className="sidebar-title">TOPICS</h2>
+                {isContentPage && isOpen && (
+                    <button 
+                        onClick={onPinToggle} 
+                        className="pin-toggle-button" 
+                        title={isPinned ? "Unpin Sidebar (allow overlay)" : "Pin Sidebar Open (push content)"}
+                    >
+                        <PinIcon pinned={isPinned} />
+                    </button>
+                )}
             </div>
             <nav>
                 <ul>
@@ -46,7 +76,7 @@ function Sidebar({ topics, activeTopicId }) {
                                 <NavLink
                                     to={`/topic/${topic.id}`}
                                     className={({ isActive }) =>
-                                    `topic-button ${isActive ? 'active' : ''}`
+                                    `topic-button ${isActive || topic.id === activeTopicId ? 'active' : ''}`
                                     }
                                 >
                                     {topic.name}

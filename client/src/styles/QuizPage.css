@@ -1,16 +1,17 @@
 /* FILE: client/src/styles/QuizPage.css */
 
 .quiz-page-container {
-  max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto; 
   padding: 20px;
   display: flex;
   flex-direction: column;
-  background-color: var(--bg-quiz-content-area); /* Themed background for quiz area */
+  background-color: var(--bg-quiz-content-area);
   color: var(--text-primary);
-  min-height: calc(100vh - 40px); /* Assuming 20px padding top/bottom */
+  min-height: 100%; 
   box-sizing: border-box;
   position: relative; 
+  padding-bottom: 90px; 
+  transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
 .quiz-header {
@@ -72,11 +73,9 @@
   margin-bottom: 20px;
   border-radius: 6px; 
   max-height: 40vh; 
-  overflow-y: scroll; /* MODIFIED: Changed from auto to scroll to reserve space for scrollbar */
+  overflow-y: scroll;
   line-height: 1.7;
   color: var(--text-primary);
-  /* scrollbar-width: thin; */ /* This is fine, but -webkit- styles are more specific */
-  /* scrollbar-color: var(--scrollbar-thumb-bg) var(--scrollbar-track-bg); */
   position: relative; 
   user-select: text; 
   -webkit-user-select: text; 
@@ -110,7 +109,7 @@ body.light-mode .passage-content img { background-color: #fff; }
   justify-content: flex-end; 
   align-items: center;
   margin-bottom: 20px; 
-  min-height: 40px; /* Ensures space is reserved, good for CLS */
+  min-height: 40px;
   padding: 5px 0;
 }
 
@@ -122,28 +121,37 @@ body.light-mode .passage-content img { background-color: #fff; }
   font-size: 1em; 
   font-family: 'Courier New', Courier, monospace;
   box-shadow: var(--shadow-card);
-  min-width: 120px; /* Helps maintain consistent size */
+  min-width: 120px;
   text-align: right;
   flex-shrink: 0;
   border: 1px solid var(--border-primary);
 }
 .timer-display .timer-low { color: var(--bg-button-warning); font-weight: bold; }
 .timer-display .timer-total { font-size: 0.8em; color: var(--text-secondary); margin-left: 5px; }
-.timer-display-placeholder { min-width: 120px; height: 38px; /* Match potential timer height */ visibility: hidden; }
+.timer-display-placeholder { min-width: 120px; height: 38px; visibility: hidden; }
 
 
 .quiz-content-area {
-  margin-bottom: 20px;
+  margin-bottom: 20px; 
 }
 
 .quiz-navigation {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  
+  position: fixed;
+  bottom: 0;
+  background-color: var(--bg-secondary);
+  padding: 12px 25px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
+  z-index: 1000; /* Base z-index for quiz nav */
   border-top: 1px solid var(--border-primary);
-  margin-top: 20px;
+  box-sizing: border-box;
+  transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
+  min-height: 70px;
 }
+
 
 .nav-group-left,
 .nav-group-center,
@@ -152,20 +160,20 @@ body.light-mode .passage-content img { background-color: #fff; }
   align-items: center;
 }
 
-.nav-group-left { justify-content: flex-start; }
-.nav-group-center { flex-grow: 1; justify-content: center; }
-.nav-group-right { justify-content: flex-end; }
+.nav-group-left { justify-content: flex-start; flex: 1; }
+.nav-group-center { flex-grow: 1; justify-content: center; flex: 1; }
+.nav-group-right { justify-content: flex-end; flex: 1; }
 
 .nav-button, .mark-button-nav {
-  padding: 9px 16px; 
-  font-size: 0.9em;
+  padding: 10px 18px; 
+  font-size: 0.95em;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   white-space: nowrap;
-  margin: 0 5px;
+  margin: 0 6px;
   border: 1px solid transparent; 
-  min-width: 80px;
+  min-width: 85px;
   text-align: center;
 }
 .nav-button:disabled, .mark-button-nav:disabled { opacity: 0.6; cursor: not-allowed; }
@@ -183,7 +191,7 @@ body.light-mode .passage-content img { background-color: #fff; }
   border-color: var(--bg-button-solution);
 }
 .solution-toggle-button-bottom:hover:not(:disabled) {
-  background-color: var(--bg-button-solution-hover); /* Corrected from secondary hover */
+  background-color: var(--bg-button-solution-hover);
 }
 
 .next-button,
@@ -191,6 +199,7 @@ body.light-mode .passage-content img { background-color: #fff; }
   background-color: var(--bg-button-primary);
   color: var(--text-on-button-primary);
   border-color: var(--bg-button-primary);
+  font-weight: 500;
 }
 .next-button:hover:not(:disabled),
 .submit-quiz-button:hover:not(:disabled) {
@@ -222,9 +231,9 @@ body.light-mode .passage-content img { background-color: #fff; }
 .mark-button-nav-placeholder,
 .review-button-bottom-placeholder,
 .solution-toggle-button-bottom-placeholder {
-  min-width: 80px; 
-  height: 38px;   
-  margin: 0 5px;
+  min-width: 85px; 
+  height: 40px;
+  margin: 0 6px;
   visibility: hidden;
   display: inline-block; 
 }
@@ -242,7 +251,6 @@ body.light-mode .passage-content img { background-color: #fff; }
 }
 .back-button:hover { background-color: var(--bg-button-primary-hover); }
 
-/* HIGHLIGHTER STYLES */
 .highlight-popup-button {
   position: absolute; 
   display: none; 
@@ -252,16 +260,15 @@ body.light-mode .passage-content img { background-color: #fff; }
   padding: 4px 8px;
   border-radius: 4px;
   cursor: pointer;
-  z-index: 1000; 
+  z-index: 1001; /* Above quiz nav if overlapping selection */
   font-size: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transform: translateX(-50%); 
 }
 
 mark.custom-highlight {
-  background-color: var(--highlight-bg); /* Use themed highlight background */
-  color: var(--highlight-text);          /* Use themed highlight text color */
-  /* Ensure no extra padding/margin that could cause minor shifts */
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
   padding: 0; 
   margin: 0;
 }

@@ -4,8 +4,10 @@ import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getQuizData, getQuizMetadata, formatDisplayName } from '../data/loader';
 import QuestionCard from '../components/QuestionCard';
 import ReviewModal from '../components/ReviewModal';
+import { useLayout } from '../context/LayoutContext';
 import '../styles/QuizPage.css';
 
+// ... (debounce, cleanPassageHtml, PRACTICE_TEST_DURATIONS, formatTime, MemoizedPassage, EMPTY_SET remain the same) ...
 // Debounce utility
 function debounce(func, delay) {
     let timeoutId;
@@ -57,10 +59,13 @@ const MemoizedPassage = React.memo(function MemoizedPassage({ html, passageRef }
 
 const EMPTY_SET = new Set();
 
+
 function QuizPage() {
     const { topicId, sectionType, quizId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
+    const { isSidebarEffectivelyPinned } = useLayout(); // Consume context
+
     const timerIntervalRef = useRef(null);
     const questionStartTimeRef = useRef(null);
     const isReviewMode = location.state?.review || false;
@@ -84,7 +89,7 @@ function QuizPage() {
     const [initialDuration, setInitialDuration] = useState(0);
     const isMountedRef = useRef(true);
     
-    const quizPageContainerRef = useRef(null); // Ref for the main div
+    const quizPageContainerRef = useRef(null);
     const passageContainerRef = useRef(null);
     const highlightButtonRef = useRef(null); 
 
@@ -290,7 +295,6 @@ function QuizPage() {
             if (passageContainerRef.current && passageContainerRef.current.contains(commonAncestor)) {
                 highlightTargetElement = passageContainerRef.current;
             } else if (commonAncestor.closest) {
-                // Ensure the closest element is within the quizPageContainerRef
                 const questionCardElement = quizPageContainerRef.current.querySelector('.question-card');
                 if (questionCardElement) {
                     const questionContent = commonAncestor.closest('.question-html-content');
@@ -331,69 +335,36 @@ function QuizPage() {
 
 
     const handleContainerClick = useCallback((event) => {
-        console.log("[HC Click] Event Target:", event.target); 
-
-        if (isReviewMode || !quizPageContainerRef.current) {
-            console.log("[HC Click] Early exit: Review mode or no container ref.");
-            return;
-        }
+        if (isReviewMode || !quizPageContainerRef.current) { return; }
         const clickedElement = event.target;
-
-        if (highlightButtonRef.current && highlightButtonRef.current.contains(clickedElement)) {
-            console.log("[HC Click] Clicked on highlight button itself.");
-            return; 
-        }
+        if (highlightButtonRef.current && highlightButtonRef.current.contains(clickedElement)) { return; }
 
         const markElement = clickedElement.closest('mark.custom-highlight');
-        console.log("[HC Click] Closest mark.custom-highlight:", markElement);
-
         if (markElement && quizPageContainerRef.current.contains(markElement)) {
-            console.log("[HC Click] Mark found in quizPageContainerRef. ClassName:", markElement.className);
-
             let isInValidArea = false;
             const parentPassage = markElement.closest('.passage-container');
             const parentQuestion = markElement.closest('.question-html-content');
             const parentOption = markElement.closest('.option-html-content');
 
-            if (parentPassage && passageContainerRef.current && passageContainerRef.current.contains(markElement)) {
-                isInValidArea = true;
-                console.log("[HC Click] Mark IS in passage area.");
-            } else if (parentQuestion && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentQuestion)) {
-                isInValidArea = true;
-                console.log("[HC Click] Mark IS in a question area.");
-            } else if (parentOption && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentOption)) {
-                isInValidArea = true;
-                console.log("[HC Click] Mark IS in an option area.");
-            }
+            if (parentPassage && passageContainerRef.current && passageContainerRef.current.contains(markElement)) isInValidArea = true;
+            else if (parentQuestion && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentQuestion)) isInValidArea = true;
+            else if (parentOption && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentOption)) isInValidArea = true;
             
-            console.log(`[HC Click] Mark location check (upward): isInValidArea = ${isInValidArea}`);
-
             if (isInValidArea) {
-                console.log("[HC Click] Attempting to unwrap mark element.");
                 const parentOfMark = markElement.parentNode;
                 if (parentOfMark) {
-                    while (markElement.firstChild) {
-                        parentOfMark.insertBefore(markElement.firstChild, markElement);
-                    }
+                    while (markElement.firstChild) parentOfMark.insertBefore(markElement.firstChild, markElement);
                     parentOfMark.removeChild(markElement);
                     parentOfMark.normalize();
-                    console.log("[HC Click] Mark unwrapped and removed.");
-                }  else {
-                    console.warn("[HC Click] Mark element has no parentNode during unwrap attempt.");
                 }
-
                 if (highlightButtonRef.current) {
                     highlightButtonRef.current.style.display = 'none';
                     highlightButtonRef.current._selectionRange = null;
                 }
                 const selection = window.getSelection();
-                if (selection) {
-                    selection.removeAllRanges();
-                }
+                if (selection) selection.removeAllRanges();
                 event.stopPropagation(); 
                 return; 
-            } else {
-                 console.log("[HC Click] Mark element found, but not within a designated highlightable zone (upward check + contains failed).");
             }
         }
         
@@ -407,7 +378,6 @@ function QuizPage() {
         }
     }, [isReviewMode]); 
     
-    // Main useEffect for setup and teardown
     useEffect(() => {
         isMountedRef.current = true;
         setIsLoading(true); setError(null);
@@ -435,14 +405,11 @@ function QuizPage() {
         const currentDebouncedHandler = debouncedSelectionChangeHandlerRef.current;
         document.addEventListener('selectionchange', currentDebouncedHandler);
         
-        // REMOVED manual event listener attachment for 'click' here. Will use React's onClick prop.
-
         return () => {
             isMountedRef.current = false;
             saveStateRef.current(); 
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
             document.removeEventListener('selectionchange', currentDebouncedHandler);
-            // REMOVED manual event listener removal for 'click' here.
         };
     }, [topicId, sectionType, quizId, loadSavedStateAndInitialize]);
 
@@ -689,6 +656,7 @@ function QuizPage() {
         }
     }, [currentQuestionIndex, tempReveal, submittedAnswers]);
 
+
     if (isLoading) return <div className="page-loading">Loading Quiz...</div>;
     if (error) return ( <div className="page-error"> Error: {error} <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div> );
     if (!allQuizQuestions || allQuizQuestions.length === 0) return ( <div className="page-info"> No questions found for this quiz. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div> );
@@ -708,9 +676,23 @@ function QuizPage() {
 
     const totalQuestionsForDisplay = quizMetadata?.totalQuestions || allQuizQuestions.length;
     
+    const quizPageDynamicStyle = {
+        marginLeft: isSidebarEffectivelyPinned ? '250px' : '0',
+        width: isSidebarEffectivelyPinned ? 'calc(100% - 250px)' : '100%',
+    };
+
+    const quizNavigationDynamicStyle = {
+        left: isSidebarEffectivelyPinned ? '250px' : '0', // Relative to viewport
+        width: isSidebarEffectivelyPinned ? 'calc(100% - 250px)' : '100%', // Spans the available viewport width
+    };
+    
     return (
-        // Attach React's onClick to the main container
-        <div className="quiz-page-container" ref={quizPageContainerRef} onClick={handleContainerClick} > 
+        <div 
+            className="quiz-page-container" 
+            ref={quizPageContainerRef} 
+            onClick={handleContainerClick}
+            style={quizPageDynamicStyle}
+        > 
             <div className="quiz-header">
                  <button onClick={() => isReviewMode ? navigate(`/results/${topicId}/${sectionType}/${quizId}`) : navigate(`/topic/${topicId}`)} className="back-button-quiz">
                     {isReviewMode ? `\u21A9 Back to Results` : `\u21A9 Back to ${formatDisplayName(topicId)}`}
@@ -732,7 +714,7 @@ function QuizPage() {
                 ref={highlightButtonRef}
                 className="highlight-popup-button" 
                 style={{ display: 'none' }} 
-                onClick={toggleHighlight} // This click should be distinct from handleContainerClick
+                onClick={toggleHighlight}
                 onMouseDown={(e) => e.preventDefault()} 
             >
                 Highlight
@@ -767,7 +749,7 @@ function QuizPage() {
                 />
             </div>
 
-            <div className="quiz-navigation">
+            <div className="quiz-navigation" style={quizNavigationDynamicStyle}>
                 <div className="nav-group-left">
                     <button
                         onClick={handlePrevious}

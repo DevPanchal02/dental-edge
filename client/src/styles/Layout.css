@@ -1,28 +1,40 @@
 /* FILE: client/src/styles/Layout.css */
-.layout-container {
-  display: flex;
+.layout-container-wrapper {
   min-height: 100vh;
-  height: 100vh; /* Ensure full viewport height */
-  background-color: var(--bg-primary); /* Themed */
+  height: 100vh;
+  position: relative;
+  background-color: var(--bg-primary);
+  display: flex; /* Add flex to layout sidebar and main content */
 }
 
 .main-content {
   flex-grow: 1;
   padding: 30px 40px;
-  overflow-y: auto; /* Allow scrolling for main content */
-  height: 100vh; /* Ensure main content takes full height */
-  box-sizing: border-box; /* Include padding in height calculation */
-  background-color: var(--bg-primary); /* Themed */
-  color: var(--text-primary); /* Themed */
+  overflow-y: auto;
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  /* No margin-left here; QuizPage will handle its own shift */
+  position: relative; /* For potential absolute children within main content, if any */
+  /* transition: margin-left 0.3s ease-in-out; */ /* Not needed if QuizPage handles its margin */
 }
 
-/* Make sure error/loading messages fill the main content area */
+
 .main-content > .page-loading,
 .main-content > .page-error,
 .main-content > .page-info {
-    height: calc(100% - 60px); /* Adjust based on padding */
+    height: calc(100% - 60px); 
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Background and color will be inherited from .main-content or specific .page-error styles */
+}
+
+.sidebar-hover-trigger-zone {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 100vh;
+  z-index: 199;
 }
