@@ -3,7 +3,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getQuizData, getQuizMetadata, formatDisplayName } from '../data/loader';
 import QuestionCard from '../components/QuestionCard';
-import ReviewModal from '../components/ReviewModal';
+import QuizReviewSummary from '../components/QuizReviewSummary';
 import { useLayout } from '../context/LayoutContext';
 import '../styles/QuizPage.css';
 
@@ -64,7 +64,7 @@ function QuizPage() {
     const { topicId, sectionType, quizId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    const { isSidebarEffectivelyPinned } = useLayout(); // Consume context
+    const { isSidebarEffectivelyPinned } = useLayout();
 
     const timerIntervalRef = useRef(null);
     const questionStartTimeRef = useRef(null);
@@ -80,7 +80,6 @@ function QuizPage() {
     const [crossedOffOptions, setCrossedOffOptions] = useState({});
     const [userTimeSpent, setUserTimeSpent] = useState({});
     const [markedQuestions, setMarkedQuestions] = useState({});
-    const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
     const [timerValue, setTimerValue] = useState(0);
@@ -88,16 +87,19 @@ function QuizPage() {
     const [isCountdown, setIsCountdown] = useState(false);
     const [initialDuration, setInitialDuration] = useState(0);
     const isMountedRef = useRef(true);
-    
+
     const quizPageContainerRef = useRef(null);
     const passageContainerRef = useRef(null);
-    const highlightButtonRef = useRef(null); 
+    const highlightButtonRef = useRef(null);
 
     const [passageHtml, setPassageHtml] = useState(null);
     const [tempReveal, setTempReveal] = useState({});
 
     const debouncedSelectionChangeHandlerRef = useRef(null);
-    
+
+    const [isReviewSummaryVisible, setIsReviewSummaryVisible] = useState(false);
+    const [currentQuestionIndexBeforeReview, setCurrentQuestionIndexBeforeReview] = useState(0);
+
     const getQuizStateKey = useCallback(() => {
         return `quizState-${topicId}-${sectionType}-${quizId}`;
     }, [topicId, sectionType, quizId]);
@@ -107,6 +109,7 @@ function QuizPage() {
         const stateToSave = {
             currentQuestionIndex, userAnswers, submittedAnswers, userTimeSpent,
             timerValue, isCountdown, initialDuration, markedQuestions, tempReveal, showExplanation,
+            isReviewSummaryVisible, currentQuestionIndexBeforeReview,
             crossedOffOptions: Object.fromEntries(
                 Object.entries(crossedOffOptions).map(([key, valueSet]) => [
                     key, Array.from(valueSet instanceof Set ? valueSet : new Set())
@@ -119,7 +122,7 @@ function QuizPage() {
     }, [
         getQuizStateKey, isReviewMode, currentQuestionIndex, userAnswers, submittedAnswers,
         userTimeSpent, timerValue, isCountdown, initialDuration, markedQuestions, tempReveal,
-        showExplanation, crossedOffOptions
+        showExplanation, crossedOffOptions, isReviewSummaryVisible, currentQuestionIndexBeforeReview
     ]);
     const saveStateRef = useRef(saveState);
     useEffect(() => {
@@ -128,7 +131,7 @@ function QuizPage() {
 
     const handleFinishQuiz = useCallback((timedOut = false) => {
         if (!isMountedRef.current) return;
-        setIsTimerActive(false); 
+        setIsTimerActive(false);
         if (timerIntervalRef.current) {
             clearInterval(timerIntervalRef.current);
             timerIntervalRef.current = null;
@@ -138,23 +141,23 @@ function QuizPage() {
             navigate(`/results/${topicId}/${sectionType}/${quizId}`);
             return;
         }
-        
+
         let score = 0;
         let correctIndices = [];
         let incorrectIndices = [];
 
         if (!allQuizQuestions || allQuizQuestions.length === 0 || !quizMetadata) {
             setError("Could not finalize quiz due to missing data. Please try again.");
-            return; 
+            return;
         }
-        
+
         const totalPossibleScore = allQuizQuestions.length;
         const totalValidQuestions = allQuizQuestions.filter(q => q && !q.error).length;
 
         allQuizQuestions.forEach((q, index) => {
             if (!q || q.error) return;
-            const userAnswerLabel = userAnswers[index]; 
-            const isAnswerSubmitted = submittedAnswers[index]; 
+            const userAnswerLabel = userAnswers[index];
+            const isAnswerSubmitted = submittedAnswers[index];
             const correctOption = q.options?.find(opt => opt.is_correct === true);
             const correctAnswerLabel = correctOption?.label;
 
@@ -172,8 +175,8 @@ function QuizPage() {
 
         const results = {
             score, totalQuestions: totalPossibleScore, totalValidQuestions,
-            correctIndices, incorrectIndices, userAnswers, 
-            userTimeSpent, markedQuestions, 
+            correctIndices, incorrectIndices, userAnswers,
+            userTimeSpent, markedQuestions,
             timestamp: Date.now(), quizName: quizMetadata.name || 'Quiz',
             topicName: formatDisplayName(topicId)
         };
@@ -181,11 +184,12 @@ function QuizPage() {
         try { localStorage.setItem(resultsKey, JSON.stringify(results)); }
         catch (e) { console.error("Error saving results:", e); }
         localStorage.removeItem(getQuizStateKey());
+        setIsReviewSummaryVisible(false);
         navigate(`/results/${topicId}/${sectionType}/${quizId}`, { replace: true });
     }, [
         allQuizQuestions, quizMetadata, isReviewMode, navigate, sectionType, topicId, quizId,
-        userAnswers, submittedAnswers, userTimeSpent, markedQuestions, 
-        getQuizStateKey, setError 
+        userAnswers, submittedAnswers, userTimeSpent, markedQuestions,
+        getQuizStateKey, setError
     ]);
     const handleFinishQuizRef = useRef(handleFinishQuiz);
     useEffect(() => {
@@ -195,34 +199,37 @@ function QuizPage() {
 
     const loadSavedStateAndInitialize = useCallback((data) => {
         let stateLoaded = false;
+        const jumpToFromNav = location.state?.jumpTo;
+
         if (isReviewMode) {
-            const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
-            const savedResults = localStorage.getItem(resultsKey);
-             if(savedResults) {
-                try {
-                    const parsedResults = JSON.parse(savedResults);
-                    setUserAnswers(parsedResults.userAnswers || {});
-                    setMarkedQuestions(parsedResults.markedQuestions || {});
-                    const allSubmitted = {};
-                    data.forEach((_, index) => { allSubmitted[index] = true; });
-                    setSubmittedAnswers(allSubmitted);
-                    const jumpToIndex = reviewQuestionIndex !== undefined && reviewQuestionIndex !== null ? reviewQuestionIndex : 0;
-                    setCurrentQuestionIndex(jumpToIndex);
-                    setShowExplanation({ [jumpToIndex]: true }); 
-                    stateLoaded = true;
-                } catch(e) { console.error("Error parsing results for review:", e)}
-             } else { 
-                 const allSubmitted = {};
-                 data.forEach((_, index) => { allSubmitted[index] = true; });
-                 setSubmittedAnswers(allSubmitted);
-                 const jumpToIndex = reviewQuestionIndex ?? 0;
-                 setCurrentQuestionIndex(jumpToIndex);
-                 setShowExplanation({ [jumpToIndex]: true });
-                 stateLoaded = true;
-             }
-            setIsTimerActive(false); setTimerValue(0); setIsCountdown(false);
-            setTempReveal({}); 
-        } else { 
+            setIsReviewSummaryVisible(false);
+             const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
+             const savedResults = localStorage.getItem(resultsKey);
+              if(savedResults) {
+                 try {
+                     const parsedResults = JSON.parse(savedResults);
+                     setUserAnswers(parsedResults.userAnswers || {});
+                     setMarkedQuestions(parsedResults.markedQuestions || {});
+                     const allSubmitted = {};
+                     data.forEach((_, index) => { allSubmitted[index] = true; });
+                     setSubmittedAnswers(allSubmitted);
+                     const jumpToIndex = reviewQuestionIndex !== undefined && reviewQuestionIndex !== null ? reviewQuestionIndex : 0;
+                     setCurrentQuestionIndex(jumpToIndex);
+                     setShowExplanation({ [jumpToIndex]: true });
+                     stateLoaded = true;
+                 } catch(e) { console.error("Error parsing results for review:", e)}
+              } else {
+                  const allSubmitted = {};
+                  data.forEach((_, index) => { allSubmitted[index] = true; });
+                  setSubmittedAnswers(allSubmitted);
+                  const jumpToIndex = reviewQuestionIndex ?? 0;
+                  setCurrentQuestionIndex(jumpToIndex);
+                  setShowExplanation({ [jumpToIndex]: true });
+                  stateLoaded = true;
+              }
+             setIsTimerActive(false); setTimerValue(0); setIsCountdown(false);
+             setTempReveal({});
+        } else {
             const savedStateString = localStorage.getItem(getQuizStateKey());
             if (savedStateString) {
                 try {
@@ -242,10 +249,20 @@ function QuizPage() {
                     setTimerValue(savedState.timerValue !== undefined ? savedState.timerValue : 0);
                     setIsCountdown(savedState.isCountdown !== undefined ? savedState.isCountdown : false);
                     setInitialDuration(savedState.initialDuration || 0);
-                    setTempReveal(savedState.tempReveal || {}); 
+                    setTempReveal(savedState.tempReveal || {});
                     setShowExplanation(savedState.showExplanation || {});
 
-                    if (!(savedState.isCountdown && savedState.timerValue <= 0)) { 
+                    if (jumpToFromNav === undefined) {
+                        setIsReviewSummaryVisible(savedState.isReviewSummaryVisible || false);
+                        setCurrentQuestionIndexBeforeReview(savedState.currentQuestionIndexBeforeReview || 0);
+                    } else {
+                        setIsReviewSummaryVisible(false);
+                        setCurrentQuestionIndex(jumpToFromNav);
+                        setCurrentQuestionIndexBeforeReview(jumpToFromNav);
+                        navigate(location.pathname, { replace: true, state: { ...location.state, jumpTo: undefined } });
+                    }
+
+                    if (!(savedState.isCountdown && savedState.timerValue <= 0)) {
                         setIsTimerActive(true);
                     } else { setIsTimerActive(false); }
                     stateLoaded = true;
@@ -256,23 +273,23 @@ function QuizPage() {
             }
         }
 
-        if (!stateLoaded && !isReviewMode) { 
+        if (!stateLoaded && !isReviewMode) {
             setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
             setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
-            setMarkedQuestions({}); setTempReveal({});
+            setMarkedQuestions({}); setTempReveal({}); setIsReviewSummaryVisible(false); setCurrentQuestionIndexBeforeReview(0);
             const topicTimerKey = topicId.toLowerCase().replace(/\s+/g, '-');
             if (sectionType === 'practice') {
                  const duration = PRACTICE_TEST_DURATIONS[topicTimerKey] || PRACTICE_TEST_DURATIONS.default;
                  setTimerValue(duration); setInitialDuration(duration);
                  setIsCountdown(true); setIsTimerActive(true);
-            } else if (sectionType === 'qbank') { 
+            } else if (sectionType === 'qbank') {
                  setTimerValue(0); setIsCountdown(false); setIsTimerActive(true);
-                 setInitialDuration(0); 
+                 setInitialDuration(0);
             }
         }
-    }, [getQuizStateKey, isReviewMode, reviewQuestionIndex, topicId, sectionType, quizId]);
-    
-    const handleActualSelectionChange = useCallback(() => {
+    }, [getQuizStateKey, isReviewMode, reviewQuestionIndex, topicId, sectionType, quizId, location.pathname, location.state, navigate]);
+
+      const handleActualSelectionChange = useCallback(() => {
         if (isReviewMode || !highlightButtonRef.current || !quizPageContainerRef.current) return;
 
         requestAnimationFrame(() => {
@@ -349,7 +366,7 @@ function QuizPage() {
             if (parentPassage && passageContainerRef.current && passageContainerRef.current.contains(markElement)) isInValidArea = true;
             else if (parentQuestion && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentQuestion)) isInValidArea = true;
             else if (parentOption && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentOption)) isInValidArea = true;
-            
+
             if (isInValidArea) {
                 const parentOfMark = markElement.parentNode;
                 if (parentOfMark) {
@@ -363,11 +380,11 @@ function QuizPage() {
                 }
                 const selection = window.getSelection();
                 if (selection) selection.removeAllRanges();
-                event.stopPropagation(); 
-                return; 
+                event.stopPropagation();
+                return;
             }
         }
-        
+
         if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
              const selection = window.getSelection();
              if (!selection || selection.isCollapsed || selection.rangeCount === 0 || selection.toString().trim() === "") {
@@ -376,8 +393,8 @@ function QuizPage() {
                 if (selection) selection.removeAllRanges();
              }
         }
-    }, [isReviewMode]); 
-    
+    }, [isReviewMode]);
+
     useEffect(() => {
         isMountedRef.current = true;
         setIsLoading(true); setError(null);
@@ -401,13 +418,13 @@ function QuizPage() {
         } finally {
              if(isMountedRef.current) setIsLoading(false);
         }
-        
+
         const currentDebouncedHandler = debouncedSelectionChangeHandlerRef.current;
         document.addEventListener('selectionchange', currentDebouncedHandler);
-        
+
         return () => {
             isMountedRef.current = false;
-            saveStateRef.current(); 
+            saveStateRef.current();
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
             document.removeEventListener('selectionchange', currentDebouncedHandler);
         };
@@ -426,13 +443,13 @@ function QuizPage() {
             setPassageHtml(null);
         }
     }, [currentQuestionIndex, allQuizQuestions]);
-    
+
     const toggleHighlight = useCallback(() => {
         if (!highlightButtonRef.current || !highlightButtonRef.current._selectionRange) {
             if(highlightButtonRef.current) highlightButtonRef.current.style.display = 'none';
             return;
         }
-    
+
         const range = highlightButtonRef.current._selectionRange;
         if (!range || range.collapsed || range.toString().trim() === "") {
             highlightButtonRef.current.style.display = 'none';
@@ -441,7 +458,7 @@ function QuizPage() {
             if (currentSelection) currentSelection.removeAllRanges();
             return;
         }
-    
+
         const mark = document.createElement('mark');
         mark.className = 'custom-highlight';
         try {
@@ -449,25 +466,27 @@ function QuizPage() {
         } catch (e) {
             console.warn("range.surroundContents() failed. Error:", e);
         }
-        
+
         highlightButtonRef.current.style.display = 'none';
         highlightButtonRef.current._selectionRange = null;
         const currentSelection = window.getSelection();
-        if(currentSelection) currentSelection.removeAllRanges(); 
-        
+        if(currentSelection) currentSelection.removeAllRanges();
+
     }, []);
-    
+
     useEffect(() => {
         if (isTimerActive && !isReviewMode) {
             timerIntervalRef.current = setInterval(() => {
-                setTimerValue(prevTime => { 
+                setTimerValue(prevTime => {
                     if (isCountdown) {
                         const newTime = prevTime - 1;
                         if (newTime <= 0) {
                             clearInterval(timerIntervalRef.current);
                             timerIntervalRef.current = null;
-                            alert("Time's up!");
-                            handleFinishQuizRef.current(true); 
+                            if (isMountedRef.current) {
+                                alert("Time's up!");
+                                handleFinishQuizRef.current(true);
+                            }
                             return 0;
                         }
                         return newTime;
@@ -488,13 +507,18 @@ function QuizPage() {
     useEffect(() => {
         if (!isLoading && allQuizQuestions?.length > 0 && currentQuestionIndex >= 0 && !isReviewMode) {
             const currentQ = allQuizQuestions[currentQuestionIndex];
-            if (currentQ && !currentQ.error && !submittedAnswers[currentQuestionIndex] && !tempReveal[currentQuestionIndex]) {
+            if (!isReviewSummaryVisible && currentQ && !currentQ.error && !submittedAnswers[currentQuestionIndex] && !tempReveal[currentQuestionIndex]) {
                 questionStartTimeRef.current = Date.now();
-            } else {
+            } else if (isReviewSummaryVisible || submittedAnswers[currentQuestionIndex] || tempReveal[currentQuestionIndex]) {
                 questionStartTimeRef.current = null;
             }
         }
-    }, [currentQuestionIndex, isLoading, allQuizQuestions, submittedAnswers, isReviewMode, tempReveal]);
+        return () => {
+             if (questionStartTimeRef.current && !isReviewSummaryVisible) {
+                // Time captured by other handlers (submit, reveal, nav)
+             }
+        };
+    }, [currentQuestionIndex, isLoading, allQuizQuestions, submittedAnswers, isReviewMode, tempReveal, isReviewSummaryVisible]);
 
     const toggleSolutionReveal = useCallback(() => {
         if (sectionType === 'qbank' && !isReviewMode && allQuizQuestions[currentQuestionIndex] && !allQuizQuestions[currentQuestionIndex].error) {
@@ -505,19 +529,20 @@ function QuizPage() {
                     const endTime = Date.now();
                     const elapsedSeconds = Math.round((endTime - questionStartTimeRef.current) / 1000);
                     setUserTimeSpent(prevTS => ({ ...prevTS, [qIndex]: (prevTS[qIndex] || 0) + elapsedSeconds }));
-                    questionStartTimeRef.current = null; 
+                    questionStartTimeRef.current = null;
                 }
                 return {...prev, [qIndex]: newRevealStateForCurrent};
             });
             setShowExplanation(prevExp => ({
                 ...prevExp,
-                [qIndex]: !tempReveal[qIndex] 
+                [qIndex]: !tempReveal[qIndex]
             }));
         }
     }, [sectionType, isReviewMode, allQuizQuestions, currentQuestionIndex, tempReveal]);
 
     useEffect(() => {
         const handleKeyPress = (event) => {
+            if (isReviewSummaryVisible) return;
             if ((event.key === 's' || event.key === 'S') && !event.ctrlKey && !event.metaKey && !event.altKey) {
                 event.preventDefault();
                 toggleSolutionReveal();
@@ -527,7 +552,8 @@ function QuizPage() {
         return () => {
             window.removeEventListener('keydown', handleKeyPress);
         };
-    }, [toggleSolutionReveal]);
+    }, [toggleSolutionReveal, isReviewSummaryVisible]);
+
 
     const handleOptionSelect = useCallback((questionIndex, optionLabel) => {
         if (!submittedAnswers[questionIndex] && !isReviewMode && !tempReveal[questionIndex]) {
@@ -550,7 +576,7 @@ function QuizPage() {
             setUserTimeSpent(prev => ({ ...prev, [questionIndex]: elapsedSeconds }));
             setSubmittedAnswers(prev => ({ ...prev, [questionIndex]: true }));
             setShowExplanation(prev => ({ ...prev, [questionIndex]: true }));
-            setTimeout(() => saveStateRef.current(), 0); 
+            setTimeout(() => saveStateRef.current(), 0);
             return true;
         } else if (submittedAnswers[questionIndex]) {
             return true;
@@ -561,7 +587,7 @@ function QuizPage() {
     const toggleExplanation = useCallback((questionIndex) => {
         const currentTempRevealForQuestion = tempReveal[questionIndex];
         const currentShowExplanationForQuestion = showExplanation[questionIndex];
-        
+
         if (sectionType === 'qbank' && currentTempRevealForQuestion !== undefined) {
              setTempReveal(prev => ({...prev, [questionIndex]: !currentShowExplanationForQuestion }));
         }
@@ -576,7 +602,7 @@ function QuizPage() {
                 if (currentSet.has(optionLabel)) { currentSet.delete(optionLabel); }
                 else { currentSet.add(optionLabel); }
                 newCrossedOff[questionIndex] = currentSet;
-                
+
                 if (currentSet.has(userAnswers[questionIndex])) {
                     setUserAnswers(prevUserAnswers => {
                         const updatedAnswers = { ...prevUserAnswers };
@@ -586,9 +612,9 @@ function QuizPage() {
                 }
                 return newCrossedOff;
             });
-            setTimeout(() => saveStateRef.current(), 0); 
+            setTimeout(() => saveStateRef.current(), 0);
         }
-    }, [isReviewMode, submittedAnswers, tempReveal, userAnswers]); 
+    }, [isReviewMode, submittedAnswers, tempReveal, userAnswers]);
 
     const handleToggleMark = useCallback((questionIndex) => {
         if (!isReviewMode) {
@@ -597,9 +623,9 @@ function QuizPage() {
                 newState[questionIndex] = !newState[questionIndex];
                 return newState;
             });
-            setTimeout(() => saveStateRef.current(), 0); 
+            setTimeout(() => saveStateRef.current(), 0);
         }
-    }, [isReviewMode]); 
+    }, [isReviewMode]);
 
     const handleJumpToQuestion = useCallback((index) => {
         if (index >= 0 && index < allQuizQuestions.length) {
@@ -611,13 +637,13 @@ function QuizPage() {
                 setShowExplanation({ [index]: true });
             } else {
                 setTempReveal(prev => ({...prev, [index]: false}));
-                if (!submittedAnswers[index]) { 
+                if (!submittedAnswers[index]) {
                      setShowExplanation(prev => ({ ...prev, [index]: false }));
-                } else { 
+                } else {
                      setShowExplanation(prev => ({ ...prev, [index]: true }));
                 }
             }
-            setIsReviewModalOpen(false);
+            setIsReviewSummaryVisible(false);
         }
      }, [allQuizQuestions, isReviewMode, tempReveal, currentQuestionIndex, submittedAnswers]);
 
@@ -632,11 +658,11 @@ function QuizPage() {
             setTempReveal(prev => ({ ...prev, [nextIndex]: false }));
             if (!submittedAnswers[nextIndex] && !tempReveal[nextIndex]) {
                  setShowExplanation(prev => ({ ...prev, [nextIndex]: false }));
-            } else if (submittedAnswers[nextIndex]) { 
+            } else if (submittedAnswers[nextIndex]) {
                  setShowExplanation(prev => ({ ...prev, [nextIndex]: true }));
             }
         } else {
-             handleFinishQuizRef.current(false); 
+             handleFinishQuizRef.current(false);
         }
     }, [allQuizQuestions, currentQuestionIndex, submitAnswerForIndex, tempReveal, submittedAnswers]);
 
@@ -650,12 +676,21 @@ function QuizPage() {
             setTempReveal(prev => ({ ...prev, [prevIndex]: false }));
              if (!submittedAnswers[prevIndex] && !tempReveal[prevIndex]) {
                 setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
-             } else if (submittedAnswers[prevIndex]) { 
+             } else if (submittedAnswers[prevIndex]) {
                 setShowExplanation(prev => ({ ...prev, [prevIndex]: true }));
              }
         }
     }, [currentQuestionIndex, tempReveal, submittedAnswers]);
 
+    const handleOpenReviewSummary = () => {
+        setCurrentQuestionIndexBeforeReview(currentQuestionIndex);
+        setIsReviewSummaryVisible(true);
+    };
+
+    const handleCloseReviewSummary = () => {
+        setIsReviewSummaryVisible(false);
+        setCurrentQuestionIndex(currentQuestionIndexBeforeReview);
+    };
 
     if (isLoading) return <div className="page-loading">Loading Quiz...</div>;
     if (error) return ( <div className="page-error"> Error: {error} <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div> );
@@ -664,152 +699,169 @@ function QuizPage() {
     const currentQuestionData = allQuizQuestions[currentQuestionIndex];
     const displayAsSubmitted = !!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex];
     const displayExplanation = !!showExplanation[currentQuestionIndex] || (isReviewMode && !currentQuestionData?.error) || !!tempReveal[currentQuestionIndex];
-    
+
     const isLastQuestion = currentQuestionIndex === allQuizQuestions.length - 1;
     const currentCrossedOffForCard = crossedOffOptions[currentQuestionIndex] || EMPTY_SET;
     const currentIsMarkedForCard = !!markedQuestions[currentQuestionIndex];
     const isCurrentQuestionError = !!currentQuestionData?.error;
 
-     if (!currentQuestionData) {
+     if (!currentQuestionData && !isReviewSummaryVisible) {
          return <div className="page-error">Error: Question data missing. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>;
      }
 
     const totalQuestionsForDisplay = quizMetadata?.totalQuestions || allQuizQuestions.length;
-    
-    const quizPageDynamicStyle = {
+
+    // Determine the style for the main quiz page container
+    // Remove bottom padding if review summary is visible, so its own fixed footer can sit at the very bottom.
+    const quizPageContainerActiveStyle = {
         marginLeft: isSidebarEffectivelyPinned ? '250px' : '0',
-        width: isSidebarEffectivelyPinned ? 'calc(100% - 250px)' : '100%',
+        width: isSidebarEffectivelyPinned ? `calc(100% - 250px)` : '100%',
+        paddingBottom: isReviewSummaryVisible ? '0px' : '90px', // 90px is for normal quiz nav
     };
 
-    const quizNavigationDynamicStyle = {
-        left: isSidebarEffectivelyPinned ? '250px' : '0', // Relative to viewport
-        width: isSidebarEffectivelyPinned ? 'calc(100% - 250px)' : '100%', // Spans the available viewport width
+    const sharedFixedFooterStyle = {
+        left: isSidebarEffectivelyPinned ? '250px' : '0',
+        width: isSidebarEffectivelyPinned ? `calc(100% - 250px)` : '100%',
     };
-    
+
+    const timerDisplayComponent = (
+        <>
+            {isCountdown ? 'Time Left: ' : 'Time Elapsed: '}
+            <span className={isCountdown && timerValue < 60 && timerValue > 0 ? 'timer-low' : ''}> {formatTime(timerValue)} </span>
+            {isCountdown && initialDuration > 0 && <span className="timer-total"> / {formatTime(initialDuration)}</span>}
+        </>
+    );
+
     return (
-        <div 
-            className="quiz-page-container" 
-            ref={quizPageContainerRef} 
+        <div
+            className="quiz-page-container"
+            ref={quizPageContainerRef}
             onClick={handleContainerClick}
-            style={quizPageDynamicStyle}
-        > 
-            <div className="quiz-header">
-                 <button onClick={() => isReviewMode ? navigate(`/results/${topicId}/${sectionType}/${quizId}`) : navigate(`/topic/${topicId}`)} className="back-button-quiz">
-                    {isReviewMode ? `\u21A9 Back to Results` : `\u21A9 Back to ${formatDisplayName(topicId)}`}
-                </button>
-                <div className="quiz-title-container">
-                    <h1 className="quiz-title">{quizMetadata?.name || 'Quiz'}</h1>
-                </div>
-                <p className="quiz-progress">
-                    Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay}
-                </p>
-            </div>
-
-            <MemoizedPassage
-                html={passageHtml}
-                passageRef={passageContainerRef}
-            />
-            
-            <button
-                ref={highlightButtonRef}
-                className="highlight-popup-button" 
-                style={{ display: 'none' }} 
-                onClick={toggleHighlight}
-                onMouseDown={(e) => e.preventDefault()} 
-            >
-                Highlight
-            </button>
-
-            <div className="quiz-controls-top">
-                 {!isReviewMode && ( <div className="timer-display">
-                     {isCountdown ? 'Time Left: ' : 'Time Elapsed: '}
-                     <span className={isCountdown && timerValue < 60 && timerValue > 0 ? 'timer-low' : ''}> {formatTime(timerValue)} </span>
-                     {isCountdown && initialDuration > 0 && <span className="timer-total"> / {formatTime(initialDuration)}</span>}
-                 </div> )}
-                 {isReviewMode && <div className="timer-display-placeholder"></div>}
-            </div>
-
-            <div className="quiz-content-area">
-                <QuestionCard
-                    questionData={currentQuestionData}
-                    questionIndex={currentQuestionIndex}
-                    selectedOption={userAnswers[currentQuestionIndex]}
-                    isSubmitted={displayAsSubmitted}
-                    showExplanation={displayExplanation}
-                    crossedOffOptions={currentCrossedOffForCard}
-                    userTimeSpentOnQuestion={userTimeSpent[currentQuestionIndex]}
-                    isReviewMode={isReviewMode}
-                    isMarked={currentIsMarkedForCard}
-                    onOptionSelect={handleOptionSelect}
-                    onViewAnswer={toggleSolutionReveal} 
-                    onToggleExplanation={toggleExplanation}
-                    onToggleCrossOff={handleToggleCrossOff}
-                    onToggleMark={handleToggleMark}
-                    isTemporarilyRevealed={!!tempReveal[currentQuestionIndex]}
+            style={quizPageContainerActiveStyle}
+        >
+            {isReviewSummaryVisible ? (
+                <QuizReviewSummary
+                    allQuizQuestions={allQuizQuestions}
+                    quizMetadata={quizMetadata}
+                    markedQuestions={markedQuestions}
+                    submittedAnswers={submittedAnswers}
+                    userAnswers={userAnswers}
+                    currentQuestionIndexBeforeReview={currentQuestionIndexBeforeReview}
+                    topicId={topicId}
+                    onCloseReviewSummary={handleCloseReviewSummary}
+                    onJumpToQuestionInQuiz={handleJumpToQuestion}
+                    onEndQuiz={() => handleFinishQuizRef.current(false)}
+                    timerDisplayContent={timerDisplayComponent}
+                    dynamicFooterStyle={sharedFixedFooterStyle}
                 />
-            </div>
+            ) : (
+                <>
+                    <div className="quiz-header">
+                        <button onClick={() => isReviewMode ? navigate(`/results/${topicId}/${sectionType}/${quizId}`) : navigate(`/topic/${topicId}`)} className="back-button-quiz">
+                            {isReviewMode ? `\u21A9 Back to Results` : `\u21A9 Back to ${formatDisplayName(topicId)}`}
+                        </button>
+                        <div className="quiz-title-container">
+                            <h1 className="quiz-title">{quizMetadata?.name || 'Quiz'}</h1>
+                        </div>
+                        <p className="quiz-progress">
+                            Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay}
+                        </p>
+                    </div>
 
-            <div className="quiz-navigation" style={quizNavigationDynamicStyle}>
-                <div className="nav-group-left">
+                    <MemoizedPassage
+                        html={passageHtml}
+                        passageRef={passageContainerRef}
+                    />
+
                     <button
-                        onClick={handlePrevious}
-                        disabled={currentQuestionIndex === 0}
-                        className="nav-button prev-button"
-                    > Previous </button>
+                        ref={highlightButtonRef}
+                        className="highlight-popup-button"
+                        style={{ display: 'none' }}
+                        onClick={toggleHighlight}
+                        onMouseDown={(e) => e.preventDefault()}
+                    >
+                        Highlight
+                    </button>
 
-                    {sectionType === 'qbank' && !isReviewMode && !isCurrentQuestionError && (
-                        <button onClick={toggleSolutionReveal} className="nav-button solution-toggle-button-bottom">
-                            {tempReveal[currentQuestionIndex] ? "Hide Solution" : "'S' Solution"}
-                        </button>
-                    )}
-                </div>
+                    <div className="quiz-controls-top">
+                        {!isReviewMode && ( <div className="timer-display">{timerDisplayComponent}</div> )}
+                        {isReviewMode && <div className="timer-display-placeholder"></div>}
+                    </div>
 
-                <div className="nav-group-center">
-                    {(isLastQuestion || (isReviewMode && isLastQuestion) ) ? (
-                        <button onClick={() => handleFinishQuizRef.current(false)} className="nav-button submit-quiz-button">
-                            {isReviewMode ? 'Back to Results' : 'Finish Quiz'}
-                        </button>
-                    ) : (
-                        <button
-                            onClick={handleSubmitAndNavigate}
-                            className="nav-button next-button"
-                            disabled={isCurrentQuestionError}
-                        > Next </button>
-                    )}
-                </div>
+                    <div className="quiz-content-area">
+                        {currentQuestionData && (
+                             <QuestionCard
+                                questionData={currentQuestionData}
+                                questionIndex={currentQuestionIndex}
+                                selectedOption={userAnswers[currentQuestionIndex]}
+                                isSubmitted={displayAsSubmitted}
+                                showExplanation={displayExplanation}
+                                crossedOffOptions={currentCrossedOffForCard}
+                                userTimeSpentOnQuestion={userTimeSpent[currentQuestionIndex]}
+                                isReviewMode={isReviewMode}
+                                isMarked={currentIsMarkedForCard}
+                                onOptionSelect={handleOptionSelect}
+                                onViewAnswer={toggleSolutionReveal}
+                                onToggleExplanation={toggleExplanation}
+                                onToggleCrossOff={handleToggleCrossOff}
+                                onToggleMark={handleToggleMark}
+                                isTemporarilyRevealed={!!tempReveal[currentQuestionIndex]}
+                            />
+                        )}
+                    </div>
 
-                <div className="nav-group-right">
-                    {!isReviewMode && !isCurrentQuestionError && (
-                        <button
-                            onClick={() => handleToggleMark(currentQuestionIndex)}
-                            className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`}
-                            title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}
-                        >
-                        {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
-                        </button>
-                    )}
-                     {isReviewMode && <div className="mark-button-nav-placeholder"></div>}
+                    <div className="quiz-navigation" style={sharedFixedFooterStyle}>
+                        <div className="nav-group-left">
+                            <button
+                                onClick={handlePrevious}
+                                disabled={currentQuestionIndex === 0}
+                                className="nav-button prev-button"
+                            > Previous </button>
+
+                            {sectionType === 'qbank' && !isReviewMode && !isCurrentQuestionError && (
+                                <button onClick={toggleSolutionReveal} className="nav-button solution-toggle-button-bottom">
+                                    {tempReveal[currentQuestionIndex] ? "Hide Solution" : "'S' Solution"}
+                                </button>
+                            )}
+                        </div>
+
+                        <div className="nav-group-center">
+                            {(isLastQuestion || (isReviewMode && isLastQuestion) ) ? (
+                                <button onClick={() => handleFinishQuizRef.current(false)} className="nav-button submit-quiz-button">
+                                    {isReviewMode ? 'Back to Results' : 'Finish Quiz'}
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={handleSubmitAndNavigate}
+                                    className="nav-button next-button"
+                                    disabled={isCurrentQuestionError}
+                                > Next </button>
+                            )}
+                        </div>
+
+                        <div className="nav-group-right">
+                            {!isReviewMode && !isCurrentQuestionError && (
+                                <button
+                                    onClick={() => handleToggleMark(currentQuestionIndex)}
+                                    className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`}
+                                    title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}
+                                >
+                                {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
+                                </button>
+                            )}
+                            {isReviewMode && <div className="mark-button-nav-placeholder"></div>}
 
 
-                    {!isReviewMode && (
-                        <button onClick={() => setIsReviewModalOpen(true)} className="nav-button review-button-bottom">
-                            Review
-                        </button>
-                    )}
-                     {isReviewMode && <div className="review-button-bottom-placeholder"></div>}
-                </div>
-            </div>
-
-            <ReviewModal
-                isOpen={isReviewModalOpen}
-                onClose={() => setIsReviewModalOpen(false)}
-                questions={allQuizQuestions}
-                markedQuestions={markedQuestions}
-                submittedAnswers={submittedAnswers}
-                onJumpToQuestion={handleJumpToQuestion}
-                currentQuestionIndex={currentQuestionIndex}
-                onFinishQuiz={() => handleFinishQuizRef.current(false)} 
-            />
+                            {!isReviewMode && (
+                                <button onClick={handleOpenReviewSummary} className="nav-button review-button-bottom">
+                                    Review
+                                </button>
+                            )}
+                            {isReviewMode && <div className="review-button-bottom-placeholder"></div>}
+                        </div>
+                    </div>
+                </>
+            )}
         </div>
     );
 }

@@ -1,0 +1,202 @@
+/* FILE: client/src/styles/QuizReviewSummary.css */
+.quiz-review-summary-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Fill the QuizPage content area */
+    background-color: var(--bg-quiz-content-area);
+    color: var(--text-primary);
+    box-sizing: border-box;
+    /* No overflow: hidden here, let the table container manage its scroll */
+}
+
+.quiz-review-summary-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--border-primary);
+    flex-shrink: 0; 
+    min-height: 50px;
+    background-color: var(--bg-quiz-content-area); /* Ensure header has a background */
+    z-index: 100; /* Above table content, below fixed footer */
+}
+
+.qrs-back-button {
+    background: none;
+    border: none;
+    color: var(--text-accent);
+    cursor: pointer;
+    font-size: 0.9em;
+    padding: 5px 0;
+}
+.qrs-back-button:hover {
+    text-decoration: underline;
+}
+
+.qrs-title-container {
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 10px;
+}
+
+.qrs-title {
+    color: var(--text-quiz-title);
+    font-size: 1.4em;
+    margin: 0;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.qrs-timer-display {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    font-family: 'Courier New', Courier, monospace;
+    box-shadow: var(--shadow-card);
+    min-width: 100px;
+    text-align: right;
+    border: 1px solid var(--border-primary);
+}
+.qrs-timer-display .timer-low { color: var(--bg-button-warning); font-weight: bold; }
+.qrs-timer-display .timer-total { font-size: 0.8em; color: var(--text-secondary); margin-left: 5px; }
+
+
+.quiz-review-summary-table-container {
+    flex-grow: 1; 
+    overflow-y: auto; 
+    padding: 20px;
+    /* CRUCIAL: Add padding to the bottom equal to or more than the footer's height */
+    padding-bottom: 80px; /* Adjust this value based on the actual height of your footer */
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb-bg) var(--bg-quiz-content-area);
+}
+.quiz-review-summary-table-container::-webkit-scrollbar { width: 8px; }
+.quiz-review-summary-table-container::-webkit-scrollbar-track { background: var(--bg-quiz-content-area); border-radius: 4px; }
+.quiz-review-summary-table-container::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb-bg); border-radius: 4px; border: 2px solid var(--bg-quiz-content-area); }
+
+.quiz-review-summary-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.quiz-review-summary-table th,
+.quiz-review-summary-table td {
+    text-align: left;
+    padding: 12px 10px;
+    border-bottom: 1px solid var(--border-primary);
+    font-size: 0.95em;
+}
+.quiz-review-summary-table th:nth-child(1), 
+.quiz-review-summary-table td:nth-child(1) {
+    width: 40%;
+}
+.quiz-review-summary-table th:not(:nth-child(1)),
+.quiz-review-summary-table td:not(:nth-child(1)) {
+    text-align: center;
+    width: 20%;
+}
+
+
+.quiz-review-summary-table th {
+    color: var(--text-secondary);
+    font-weight: 500;
+    position: sticky;
+    top: -1px; 
+    background-color: var(--bg-quiz-content-area); 
+    z-index: 1; 
+    box-shadow: 0 1px 0 var(--border-primary); 
+}
+
+
+.qrs-row.qrs-current-highlight td {
+    background-color: var(--bg-item-link-hover); 
+}
+.qrs-row-error td {
+    color: var(--text-option-incorrect);
+    font-style: italic;
+}
+
+.qrs-jump-button {
+    background: none;
+    border: none;
+    color: var(--text-accent);
+    cursor: pointer;
+    text-align: left;
+    padding: 0;
+    font-size: 1em;
+    width: 100%; 
+    display: block;
+}
+.qrs-jump-button:hover {
+    text-decoration: underline;
+}
+
+.qrs-status-marked { color: var(--bg-button-warning); font-weight: bold; }
+.qrs-status-completed { color: var(--text-option-correct); font-weight: bold; }
+.qrs-status-not-completed, .qrs-status-skipped, .qrs-status-not-skipped { color: var(--text-secondary); }
+
+
+.quiz-review-summary-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px; 
+    border-top: 1px solid var(--border-primary);
+    background-color: var(--bg-secondary); 
+    flex-shrink: 0; 
+    
+    /* --- Make footer behave like quiz-navigation --- */
+    position: fixed; /* Fixed to the viewport */
+    bottom: 0;
+    /* left and width will be set dynamically via inline styles from QuizPage */
+    box-sizing: border-box;
+    z-index: 1000; /* Ensure it's above general content, same as quiz-navigation */
+    min-height: 70px; /* Match quiz-navigation height */
+    transition: left 0.3s ease-in-out, width 0.3s ease-in-out; /* Match quiz-navigation transition */
+}
+
+.qrs-footer-group-left,
+.qrs-footer-group-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.qrs-footer-button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.qrs-footer-button.review-marked,
+.qrs-footer-button.review-all,
+.qrs-footer-button.review-incomplete {
+    background-color: var(--bg-button-secondary);
+    color: var(--text-on-button-secondary);
+    border-color: var(--bg-button-secondary);
+}
+.qrs-footer-button.review-marked:hover:not(:disabled),
+.qrs-footer-button.review-all:hover:not(:disabled),
+.qrs-footer-button.review-incomplete:hover:not(:disabled) {
+    background-color: var(--bg-button-secondary-hover);
+}
+
+.qrs-footer-button.end-quiz {
+    background-color: var(--bg-button-danger);
+    color: var(--text-on-button-danger);
+    border-color: var(--bg-button-danger);
+    font-weight: 500;
+}
+.qrs-footer-button.end-quiz:hover:not(:disabled) {
+    background-color: var(--bg-button-danger-hover);
+}
