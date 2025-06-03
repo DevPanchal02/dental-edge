@@ -106,21 +106,31 @@ function QuizPage() {
     const [hasPracticeTestStarted, setHasPracticeTestStarted] = useState(false); 
     const [isNavActionInProgress, setIsNavActionInProgress] = useState(false);
 
-    // console.log(`[QuizPage TOP RENDER - ${quizId}] isLoading: ${isLoading}, ModalOpen: ${isPracticeOptionsModalOpen}, PTStarted: ${hasPracticeTestStarted}, Review: ${isReviewMode}, NavDelay: ${isNavActionInProgress}`);
+    const latestStateRef = useRef({});
+    useEffect(() => {
+        latestStateRef.current = {
+            isReviewMode,
+            hasPracticeTestStarted,
+            isPracticeOptionsModalOpen,
+            isNavActionInProgress,
+        };
+    }, [isReviewMode, hasPracticeTestStarted, isPracticeOptionsModalOpen, isNavActionInProgress]);
+
 
     const getQuizStateKey = useCallback(() => {
         return `quizState-${topicId}-${sectionType}-${quizId}`;
     }, [topicId, sectionType, quizId]);
 
     const saveState = useCallback(() => {
-        if (isReviewMode || !isMountedRef.current || (sectionType === 'practice' && !hasPracticeTestStarted)) {
+        if (latestStateRef.current.isReviewMode || !isMountedRef.current || (sectionType === 'practice' && !latestStateRef.current.hasPracticeTestStarted)) {
             return;
         }
         const stateToSave = {
             currentQuestionIndex, userAnswers, submittedAnswers, userTimeSpent,
             timerValue, isCountdown, initialDuration, markedQuestions, tempReveal, showExplanation,
             isReviewSummaryVisible, currentQuestionIndexBeforeReview,
-            hasPracticeTestStarted, practiceTestSettings,
+            hasPracticeTestStarted: latestStateRef.current.hasPracticeTestStarted, 
+            practiceTestSettings,
             crossedOffOptions: Object.fromEntries(
                 Object.entries(crossedOffOptions).map(([key, valueSet]) => [
                     key, Array.from(valueSet instanceof Set ? valueSet : new Set())
@@ -129,32 +139,29 @@ function QuizPage() {
         };
         try { localStorage.setItem(getQuizStateKey(), JSON.stringify(stateToSave)); }
         catch (e) { console.error("[QuizPage] Error saving state:", e); }
-    }, [
-        getQuizStateKey, isReviewMode, currentQuestionIndex, userAnswers, submittedAnswers,
+    }, [ 
+        getQuizStateKey, currentQuestionIndex, userAnswers, submittedAnswers,
         userTimeSpent, timerValue, isCountdown, initialDuration, markedQuestions, tempReveal,
         showExplanation, crossedOffOptions, isReviewSummaryVisible, currentQuestionIndexBeforeReview,
-        hasPracticeTestStarted, practiceTestSettings, sectionType
+        practiceTestSettings, sectionType
     ]);
     const saveStateRef = useRef(saveState);
     useEffect(() => { saveStateRef.current = saveState; }, [saveState]);
 
 
     const handleFinishQuiz = useCallback((timedOut = false) => {
-        // console.log(`[QuizPage FINISH_QUIZ - ${quizId}] Timed out: ${timedOut}, PTStarted: ${hasPracticeTestStarted}`);
-        if (!isMountedRef.current || (sectionType === 'practice' && !hasPracticeTestStarted && !isReviewMode)) { 
+        if (!isMountedRef.current || (sectionType === 'practice' && !latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isReviewMode)) { 
             return;
         }
         setIsTimerActive(false);
         if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
-        if (isReviewMode) {
+        if (latestStateRef.current.isReviewMode) {
             navigate(`/results/${topicId}/${sectionType}/${quizId}`);
             return;
         }
-        
         let score = 0;
         let correctIndices = [];
         let incorrectIndices = [];
-
         if (!allQuizQuestions || allQuizQuestions.length === 0 || !quizMetadata) {
             setError("Could not finalize quiz due to missing data.");
             if(isMountedRef.current) setIsLoading(false);
@@ -162,14 +169,12 @@ function QuizPage() {
         }
         const totalPossibleScore = allQuizQuestions.length;
         const totalValidQuestions = allQuizQuestions.filter(q => q && !q.error).length;
-        
         allQuizQuestions.forEach((q, index) => {
             if (!q || q.error) return;
             const userAnswerLabel = userAnswers[index];
             const isAnswerSubmittedByState = submittedAnswers[index]; 
             const correctOption = q.options?.find(opt => opt.is_correct === true);
             const correctAnswerLabel = correctOption?.label;
-
             if (isAnswerSubmittedByState) { 
                 if (userAnswerLabel !== undefined && userAnswerLabel === correctAnswerLabel) {
                     score++;
@@ -181,7 +186,6 @@ function QuizPage() {
                 incorrectIndices.push(index);
             }
         });
-
         const results = {
             score, totalQuestions: totalPossibleScore, totalValidQuestions,
             correctIndices, incorrectIndices, userAnswers,
@@ -196,35 +200,28 @@ function QuizPage() {
         setIsReviewSummaryVisible(false);
         if(isMountedRef.current) setIsLoading(false);
         navigate(`/results/${topicId}/${sectionType}/${quizId}`, { replace: true });
-    }, [allQuizQuestions, quizMetadata, isReviewMode, navigate, sectionType, topicId, quizId, userAnswers, submittedAnswers, userTimeSpent, markedQuestions, practiceTestSettings, getQuizStateKey, setError, hasPracticeTestStarted]);
+    }, [allQuizQuestions, quizMetadata, navigate, sectionType, topicId, quizId, userAnswers, submittedAnswers, userTimeSpent, markedQuestions, practiceTestSettings, getQuizStateKey, setError]);
     const handleFinishQuizRef = useRef(handleFinishQuiz);
     useEffect(() => { handleFinishQuizRef.current = handleFinishQuiz; }, [handleFinishQuiz]);
 
-
     const initializeNewQuizState = useCallback((ptSettings) => {
-        // console.log(`[QuizPage INIT_NEW_QUIZ - ${quizId}] PT Settings:`, ptSettings, `Current quizMetadata:`, quizMetadata);
         setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
         setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
         setMarkedQuestions({}); setTempReveal({}); setIsReviewSummaryVisible(false); setCurrentQuestionIndexBeforeReview(0);
-
         if (sectionType === 'practice') {
             if (!quizMetadata) { 
-                console.error(`[QuizPage INIT_NEW_QUIZ (PT) - ${quizId}]: quizMetadata is NULL.`);
                 setError("Failed to initialize practice test: essential data missing for timing.");
                 return; 
             }
             const topicKeyForDuration = quizMetadata.topicName?.toLowerCase().replace(/\s+/g, '-') || topicId.toLowerCase().replace(/\s+/g, '-');
             let duration = PRACTICE_TEST_DURATIONS[topicKeyForDuration] || PRACTICE_TEST_DURATIONS.default;
-            
             if (ptSettings?.additionalTime) {
                 duration = Math.round(duration * 1.5);
             }
             setTimerValue(duration); setInitialDuration(duration);
             setIsCountdown(true); setIsTimerActive(true); 
             setHasPracticeTestStarted(true); 
-            // console.log(`[QuizPage INIT_NEW_QUIZ (PT) - ${quizId}] PT started. Duration: ${duration}s. hasPracticeTestStarted: true.`);
         } else { 
-            // console.log(`[QuizPage INIT_NEW_QUIZ (QBank) - ${quizId}]`);
             setTimerValue(0); setIsCountdown(false); setIsTimerActive(true); 
             setInitialDuration(0);
             setHasPracticeTestStarted(true); 
@@ -232,78 +229,57 @@ function QuizPage() {
     }, [topicId, sectionType, quizMetadata, quizId]);
 
 
-    // Effect 1: Handles route changes (topicId, sectionType, quizId) & fetches core data
+    // Effect 1: Route changes, core data fetching, and initial state reset
     useEffect(() => {
         isMountedRef.current = true;
-        const quizInstanceKey = `${topicId}-${sectionType}-${quizId}`;
-        // console.log(`[QuizPage EFFECT 1 (${quizInstanceKey})] Mount/Update. location.state:`, location.state);
-
         setIsLoading(true); 
         setError(null);
-        if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
-        
-        setAllQuizQuestions([]);
-        setQuizMetadata(null); 
-        setHasPracticeTestStarted(false);
-        setIsPracticeOptionsModalOpen(false);
-        setCurrentQuestionIndex(0);
-        setUserAnswers({}); setSubmittedAnswers({}); setShowExplanation({});
+        setAllQuizQuestions([]); setQuizMetadata(null);
+        setHasPracticeTestStarted(false); setIsPracticeOptionsModalOpen(false);
+        setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({}); setShowExplanation({});
         setCrossedOffOptions({}); setUserTimeSpent({}); setMarkedQuestions({});
         setTempReveal({}); setIsReviewSummaryVisible(false);
-        setTimerValue(0); setIsTimerActive(false);
+        setTimerValue(0); setIsTimerActive(false); 
         setPracticeTestSettings({ prometricDelay: false, additionalTime: false });
         setIsNavActionInProgress(false);
+        if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
 
-        const currentIsReview = location.state?.review || false;
-        const currentReviewIdx = location.state?.questionIndex;
-        setIsReviewMode(currentIsReview); 
-        setReviewQuestionIndex(currentReviewIdx); 
-        
+        const currentReviewStatus = location.state?.review || false;
+        const currentReviewIdx = location.state?.questionIndex ?? 0;
+        setIsReviewMode(currentReviewStatus);
+        setReviewQuestionIndex(currentReviewIdx);
+
         try {
-            const localQuizData = getQuizData(topicId, sectionType, quizId);
-            const localQuizMetadataInstance = getQuizMetadata(topicId, sectionType, quizId);
-
-            if (!localQuizData || localQuizData.length === 0 || !localQuizMetadataInstance) {
-                throw new Error(`Quiz data or metadata not found for ${quizInstanceKey}.`);
+            const loadedQuizData = getQuizData(topicId, sectionType, quizId);
+            const loadedQuizMetadata = getQuizMetadata(topicId, sectionType, quizId);
+            if (!loadedQuizData || loadedQuizData.length === 0 || !loadedQuizMetadata) {
+                throw new Error(`Essential quiz data or metadata not found.`);
             }
-            
             if (isMountedRef.current) {
-                setAllQuizQuestions(localQuizData);
-                setQuizMetadata(localQuizMetadataInstance); 
+                setAllQuizQuestions(loadedQuizData);
+                setQuizMetadata(loadedQuizMetadata);
             }
         } catch (err) {
-            console.error(`[QuizPage EFFECT 1 (${quizInstanceKey})] Critical error fetching data:`, err);
             if (isMountedRef.current) {
-                setError(err.message || 'Failed to load quiz data.');
-                setIsLoading(false); 
+                setError(err.message);
+                setIsLoading(false);
             }
         }
-        
-        const currentDebouncedHandler = debouncedSelectionChangeHandlerRef.current;
-        if (currentDebouncedHandler) document.addEventListener('selectionchange', currentDebouncedHandler);
-
         return () => {
             isMountedRef.current = false;
             saveStateRef.current();
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
-            if (currentDebouncedHandler) document.removeEventListener('selectionchange', currentDebouncedHandler);
         };
-    }, [topicId, sectionType, quizId, location.state]);
+    }, [topicId, sectionType, quizId, location.state?.review, location.state?.questionIndex]);
 
 
-    // Effect 2: Handles quiz setup AFTER quizMetadata and questions are loaded, and review mode is determined.
+    // Effect 2: Handles logic after core data is loaded
     useEffect(() => {
-        const quizInstanceKey = `${topicId}-${sectionType}-${quizId}`;
-        
         if (!quizMetadata || !allQuizQuestions || allQuizQuestions.length === 0) {
-            if (!error && isLoading) { /* console.log waiting */ }
-            else if (error) { if (isMountedRef.current) setIsLoading(false); }
+            if (error && isMountedRef.current) setIsLoading(false); 
             return; 
         }
-        
-        if (isReviewMode) {
-            setIsPracticeOptionsModalOpen(false); 
-            setHasPracticeTestStarted(true); 
+        if (isReviewMode) { 
             const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
             const savedResults = localStorage.getItem(resultsKey);
             if (savedResults) {
@@ -314,34 +290,32 @@ function QuizPage() {
                     const allSubmitted = {};
                     allQuizQuestions.forEach((_, index) => { allSubmitted[index] = true; });
                     setSubmittedAnswers(allSubmitted);
-                    const jumpToIndex = reviewQuestionIndex !== undefined && reviewQuestionIndex !== null ? reviewQuestionIndex : 0;
-                    setCurrentQuestionIndex(jumpToIndex);
-                    setShowExplanation({ [jumpToIndex]: true }); 
+                    setCurrentQuestionIndex(reviewQuestionIndex);
+                    setShowExplanation({ [reviewQuestionIndex]: true }); 
                     setPracticeTestSettings(parsedResults.practiceTestSettings || { prometricDelay: false, additionalTime: false });
                 } catch (e) { console.error("Error parsing results for review:", e); }
             }
-            setIsTimerActive(false); setTimerValue(0); setIsCountdown(false); setTempReveal({});
-            if (isMountedRef.current) setIsLoading(false);
-
-        } else { // Not review mode
+            setHasPracticeTestStarted(true); 
+            setIsPracticeOptionsModalOpen(false);
+            setIsTimerActive(false); setTimerValue(0); setIsCountdown(false);
+            setTempReveal({});
+        } else { 
             const savedStateString = localStorage.getItem(getQuizStateKey());
             if (savedStateString) {
                 try {
                     const savedState = JSON.parse(savedStateString);
                     setPracticeTestSettings(savedState.practiceTestSettings || { prometricDelay: false, additionalTime: false });
-                    
                     if (sectionType === 'practice' && !savedState.hasPracticeTestStarted) {
-                        setIsPracticeOptionsModalOpen(true); 
-                        if (isMountedRef.current) setIsLoading(false); 
+                        setIsPracticeOptionsModalOpen(true); setHasPracticeTestStarted(false);
                     } else {
                         setHasPracticeTestStarted(savedState.hasPracticeTestStarted || (sectionType !== 'practice'));
                         setCurrentQuestionIndex(savedState.currentQuestionIndex || 0);
                         setUserAnswers(savedState.userAnswers || {});
                         setSubmittedAnswers(savedState.submittedAnswers || {});
                         const loadedCrossed = {};
-                        for (const qIndex in savedState.crossedOffOptions) {
-                            if (Array.isArray(savedState.crossedOffOptions[qIndex])) {
-                                loadedCrossed[qIndex] = new Set(savedState.crossedOffOptions[qIndex]);
+                        for (const qIdx in savedState.crossedOffOptions) {
+                            if (Array.isArray(savedState.crossedOffOptions[qIdx])) {
+                                loadedCrossed[qIdx] = new Set(savedState.crossedOffOptions[qIdx]);
                             }
                         }
                         setCrossedOffOptions(loadedCrossed || {});
@@ -351,73 +325,47 @@ function QuizPage() {
                         setIsCountdown(savedState.isCountdown !== undefined ? savedState.isCountdown : false);
                         setInitialDuration(savedState.initialDuration || 0);
                         setTempReveal(savedState.tempReveal || {});
-                        
-                        let initialShowExp = {}; 
-                        if (sectionType === 'practice') {
-                            Object.keys(savedState.submittedAnswers || {}).forEach(idx => {
-                                initialShowExp[idx] = false; 
-                            });
-                        } else { 
-                             initialShowExp = savedState.showExplanation || {};
-                        }
-                        setShowExplanation(initialShowExp);
-                        
-                        const jumpToFromNav = location.state?.jumpTo; 
-                        if (jumpToFromNav === undefined) {
-                            setIsReviewSummaryVisible(savedState.isReviewSummaryVisible || false);
-                            setCurrentQuestionIndexBeforeReview(savedState.currentQuestionIndexBeforeReview || 0);
-                        } else { 
-                            setIsReviewSummaryVisible(false);
-                            setCurrentQuestionIndex(jumpToFromNav);
-                            setCurrentQuestionIndexBeforeReview(jumpToFromNav);
-                            navigate(location.pathname, { replace: true, state: { ...location.state, jumpTo: undefined } });
-                        }
-
+                        setShowExplanation(savedState.showExplanation || {});
+                        setIsReviewSummaryVisible(savedState.isReviewSummaryVisible || false);
+                        setCurrentQuestionIndexBeforeReview(savedState.currentQuestionIndexBeforeReview || 0);
                         if (!(savedState.isCountdown && savedState.timerValue <= 0) && (savedState.hasPracticeTestStarted || sectionType !== 'practice')) {
                             setIsTimerActive(true);
                         } else { setIsTimerActive(false); }
-                        if (isMountedRef.current) setIsLoading(false);
+                        setIsPracticeOptionsModalOpen(false); 
                     }
                 } catch (e) {
-                    console.error(`[QuizPage EFFECT 2 (${quizInstanceKey})] Error loading saved state, re-initializing:`, e);
                     localStorage.removeItem(getQuizStateKey());
                     if (sectionType === 'practice') {
-                        setIsPracticeOptionsModalOpen(true); 
-                        if (isMountedRef.current) setIsLoading(false); 
+                        setIsPracticeOptionsModalOpen(true); setHasPracticeTestStarted(false);
                     } else {
-                        initializeNewQuizState(null); 
-                        if (isMountedRef.current) setIsLoading(false);
+                        initializeNewQuizState(null); setIsPracticeOptionsModalOpen(false);
                     }
                 }
             } else { 
                 if (sectionType === 'practice') {
-                    setIsPracticeOptionsModalOpen(true); 
-                    if (isMountedRef.current) setIsLoading(false); 
+                    setIsPracticeOptionsModalOpen(true); setHasPracticeTestStarted(false);
                 } else { 
-                    initializeNewQuizState(null); 
-                    if (isMountedRef.current) setIsLoading(false);
+                    initializeNewQuizState(null); setIsPracticeOptionsModalOpen(false);
                 }
             }
         }
-    }, [quizMetadata, allQuizQuestions, isReviewMode, reviewQuestionIndex, 
-        topicId, sectionType, quizId, 
-        getQuizStateKey, initializeNewQuizState, navigate, location.state, error
-    ]);
+        if (isMountedRef.current) setIsLoading(false);
+    }, [quizMetadata, allQuizQuestions, isReviewMode, reviewQuestionIndex, getQuizStateKey, sectionType, initializeNewQuizState, topicId, quizId, error]);
 
 
     const handlePracticeTestOptionsClose = useCallback(() => {
         setIsPracticeOptionsModalOpen(false);
-        if (!hasPracticeTestStarted) {
+        if (!hasPracticeTestStarted) { 
             if (isMountedRef.current) setIsLoading(false); 
             navigate(`/topic/${topicId}`);
         }
-    }, [navigate, topicId, hasPracticeTestStarted, quizId]);
+    }, [navigate, topicId, hasPracticeTestStarted]); 
 
     const handleStartPracticeTest = useCallback((settings) => {
         setPracticeTestSettings(settings); 
         setIsPracticeOptionsModalOpen(false); 
         initializeNewQuizState(settings); 
-    }, [initializeNewQuizState, quizId]);
+    }, [initializeNewQuizState]); 
 
     useEffect(() => {
         if (allQuizQuestions && allQuizQuestions.length > 0 && currentQuestionIndex >= 0 && currentQuestionIndex < allQuizQuestions.length) {
@@ -428,25 +376,175 @@ function QuizPage() {
         } else { setPassageHtml(null); }
     }, [currentQuestionIndex, allQuizQuestions]);
 
-    const toggleHighlight = useCallback(() => { /* ... */ }, []);
+    // --- Highlighting Logic ---
+    const toggleHighlight = useCallback(() => {
+        if (latestStateRef.current.isReviewMode || !highlightButtonRef.current || !highlightButtonRef.current._selectionRange) {
+            if(highlightButtonRef.current) highlightButtonRef.current.style.display = 'none';
+            return;
+        }
+        const range = highlightButtonRef.current._selectionRange;
+        if (!range || range.collapsed || range.toString().trim() === "") {
+            highlightButtonRef.current.style.display = 'none';
+            highlightButtonRef.current._selectionRange = null;
+            const currentSelection = window.getSelection();
+            if (currentSelection) currentSelection.removeAllRanges();
+            return;
+        }
+        const mark = document.createElement('mark');
+        mark.className = 'custom-highlight';
+        try {
+            range.surroundContents(mark);
+        } catch (e) {
+            console.warn("[HL] toggleHighlight: range.surroundContents() failed. Error:", e);
+        }
+        highlightButtonRef.current.style.display = 'none';
+        highlightButtonRef.current._selectionRange = null;
+        const currentSelection = window.getSelection();
+        if(currentSelection) currentSelection.removeAllRanges(); 
+    }, []); 
 
     const handleActualSelectionChange = useCallback(() => {
-        if (isNavActionInProgress || isReviewMode || !highlightButtonRef.current || !quizPageContainerRef.current || isPracticeOptionsModalOpen || !hasPracticeTestStarted) return;
-        // ...
-    }, [isNavActionInProgress, isReviewMode, isPracticeOptionsModalOpen, hasPracticeTestStarted]);
+        const { 
+            isReviewMode: currentIsReviewMode,
+            hasPracticeTestStarted: currentHasPracticeTestStarted,
+            isPracticeOptionsModalOpen: currentIsPracticeOptionsModalOpen,
+            isNavActionInProgress: currentIsNavActionInProgress,
+        } = latestStateRef.current;
 
-    useEffect(() => {
+        if (currentIsReviewMode || !currentHasPracticeTestStarted || currentIsPracticeOptionsModalOpen || currentIsNavActionInProgress || !highlightButtonRef.current || !quizPageContainerRef.current ) {
+            const selection = window.getSelection();
+            if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
+                if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
+                    highlightButtonRef.current.style.display = 'none';
+                    highlightButtonRef.current._selectionRange = null;
+                }
+            }
+            return;
+        }
+
+        requestAnimationFrame(() => {
+            const selection = window.getSelection();
+            if (!selection || selection.rangeCount === 0) {
+                if (highlightButtonRef.current.style.display === 'block') {
+                    highlightButtonRef.current.style.display = 'none';
+                    highlightButtonRef.current._selectionRange = null;
+                }
+                return;
+            }
+            const range = selection.getRangeAt(0);
+            if (selection.isCollapsed || range.toString().trim() === "") {
+                 if (highlightButtonRef.current.style.display === 'block') {
+                    highlightButtonRef.current.style.display = 'none';
+                    highlightButtonRef.current._selectionRange = null;
+                }
+                return;
+            }
+            let commonAncestor = range.commonAncestorContainer;
+            if (commonAncestor.nodeType === Node.TEXT_NODE) {
+                commonAncestor = commonAncestor.parentNode;
+            }
+            let highlightTargetElement = null;
+            const questionCardElement = quizPageContainerRef.current.querySelector('.question-card');
+            if (passageContainerRef.current && passageContainerRef.current.contains(commonAncestor)) {
+                highlightTargetElement = passageContainerRef.current;
+            } else if (questionCardElement) {
+                const questionContentElement = commonAncestor.closest('.question-html-content');
+                const optionContentElement = commonAncestor.closest('.option-html-content');
+                if (questionContentElement && questionCardElement.contains(questionContentElement)) {
+                    highlightTargetElement = questionContentElement;
+                } else if (optionContentElement && questionCardElement.contains(optionContentElement)) {
+                    highlightTargetElement = optionContentElement;
+                }
+            }
+            if (highlightTargetElement && range.toString().trim() !== "") {
+                const rect = range.getBoundingClientRect();
+                const mainContainerRect = quizPageContainerRef.current.getBoundingClientRect();
+                const buttonTop = rect.top - mainContainerRect.top + quizPageContainerRef.current.scrollTop - 35; 
+                const buttonLeft = rect.left - mainContainerRect.left + quizPageContainerRef.current.scrollLeft + (rect.width / 2);
+                highlightButtonRef.current.style.top = `${buttonTop}px`;
+                highlightButtonRef.current.style.left = `${buttonLeft}px`;
+                highlightButtonRef.current.style.display = 'block';
+                highlightButtonRef.current._selectionRange = range.cloneRange();
+            } else {
+                if (highlightButtonRef.current.style.display === 'block') {
+                    highlightButtonRef.current.style.display = 'none';
+                    highlightButtonRef.current._selectionRange = null;
+                }
+            }
+        });
+    }, []); 
+    
+    useEffect(() => { 
         debouncedSelectionChangeHandlerRef.current = debounce(handleActualSelectionChange, 150);
+        const currentDebouncedHandler = debouncedSelectionChangeHandlerRef.current; 
+        if (currentDebouncedHandler) {
+            document.addEventListener('selectionchange', currentDebouncedHandler);
+        }
+        return () => {
+            if (currentDebouncedHandler) {
+                document.removeEventListener('selectionchange', currentDebouncedHandler);
+            }
+        };
     }, [handleActualSelectionChange]);
 
 
     const handleContainerClick = useCallback((event) => {
-        if (isNavActionInProgress || isReviewMode || !quizPageContainerRef.current || isPracticeOptionsModalOpen || !hasPracticeTestStarted) { return; }
-        // ...
-    }, [isNavActionInProgress, isReviewMode, isPracticeOptionsModalOpen, hasPracticeTestStarted]);
+        const { 
+            isReviewMode: currentIsReviewMode,
+            hasPracticeTestStarted: currentHasPracticeTestStarted,
+            isPracticeOptionsModalOpen: currentIsPracticeOptionsModalOpen,
+            isNavActionInProgress: currentIsNavActionInProgress,
+        } = latestStateRef.current;
+
+        if (currentIsReviewMode || !currentHasPracticeTestStarted || currentIsPracticeOptionsModalOpen || currentIsNavActionInProgress || !quizPageContainerRef.current) {
+            return;
+        }
+        const clickedElement = event.target;
+        if (highlightButtonRef.current && highlightButtonRef.current.contains(clickedElement)) {
+            return; 
+        }
+        const markElement = clickedElement.closest('mark.custom-highlight');
+        if (markElement && quizPageContainerRef.current.contains(markElement)) {
+            let isInValidArea = false;
+            const parentPassage = markElement.closest('.passage-container');
+            const parentQuestion = markElement.closest('.question-html-content');
+            const parentOption = markElement.closest('.option-html-content');
+
+            if (parentPassage && passageContainerRef.current && passageContainerRef.current.contains(markElement)) isInValidArea = true;
+            else if (parentQuestion && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentQuestion)) isInValidArea = true;
+            else if (parentOption && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentOption)) isInValidArea = true;
+            
+            if (isInValidArea) {
+                const parentOfMark = markElement.parentNode;
+                if (parentOfMark) {
+                    while (markElement.firstChild) parentOfMark.insertBefore(markElement.firstChild, markElement);
+                    parentOfMark.removeChild(markElement);
+                    parentOfMark.normalize();
+                }
+                if (highlightButtonRef.current) {
+                    highlightButtonRef.current.style.display = 'none';
+                    highlightButtonRef.current._selectionRange = null;
+                }
+                const selection = window.getSelection();
+                if (selection) selection.removeAllRanges();
+                event.stopPropagation(); 
+                return; 
+            }
+        }
+        if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
+             const selection = window.getSelection();
+             if (!selection || selection.isCollapsed || selection.rangeCount === 0 || selection.toString().trim() === "") {
+                highlightButtonRef.current.style.display = 'none';
+                highlightButtonRef.current._selectionRange = null;
+                if (selection) selection.removeAllRanges();
+             }
+        }
+    }, []); 
+    // --- End Highlighting Logic ---
+
 
     useEffect(() => {
-        if (isTimerActive && !isReviewMode && hasPracticeTestStarted && !isNavActionInProgress) {
+        if (isTimerActive && !latestStateRef.current.isReviewMode && latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isNavActionInProgress) {
             timerIntervalRef.current = setInterval(() => {
                 setTimerValue(prevTime => {
                     if (isCountdown) {
@@ -470,11 +568,11 @@ function QuizPage() {
         return () => { 
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current); 
         };
-    }, [isTimerActive, isCountdown, isReviewMode, hasPracticeTestStarted, quizId, handleFinishQuizRef, isNavActionInProgress]); 
+    }, [isTimerActive, isCountdown, handleFinishQuizRef]); 
 
 
     useEffect(() => {
-        if (!isLoading && allQuizQuestions?.length > 0 && currentQuestionIndex >= 0 && !isReviewMode && hasPracticeTestStarted && !isNavActionInProgress) {
+        if (!isLoading && allQuizQuestions?.length > 0 && currentQuestionIndex >= 0 && !latestStateRef.current.isReviewMode && latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isNavActionInProgress) {
             const currentQ = allQuizQuestions[currentQuestionIndex];
             if (!isReviewSummaryVisible && currentQ && !currentQ.error && !submittedAnswers[currentQuestionIndex] && !tempReveal[currentQuestionIndex]) {
                 questionStartTimeRef.current = Date.now();
@@ -482,11 +580,11 @@ function QuizPage() {
                 questionStartTimeRef.current = null;
             }
         }
-    }, [currentQuestionIndex, isLoading, allQuizQuestions, submittedAnswers, isReviewMode, tempReveal, isReviewSummaryVisible, hasPracticeTestStarted, isNavActionInProgress]);
+    }, [currentQuestionIndex, isLoading, allQuizQuestions, submittedAnswers, tempReveal, isReviewSummaryVisible]);
 
     const toggleSolutionReveal = useCallback(() => {
-        if (!hasPracticeTestStarted || isNavActionInProgress) return; 
-        if (sectionType === 'qbank' && !isReviewMode && allQuizQuestions.length > 0 && allQuizQuestions[currentQuestionIndex] && !allQuizQuestions[currentQuestionIndex].error ) {
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
+        if (sectionType === 'qbank' && !latestStateRef.current.isReviewMode && allQuizQuestions.length > 0 && allQuizQuestions[currentQuestionIndex] && !allQuizQuestions[currentQuestionIndex].error ) {
             const qIndex = currentQuestionIndex;
             setTempReveal(prev => {
                 const newRevealStateForCurrent = !prev[qIndex];
@@ -503,11 +601,11 @@ function QuizPage() {
                 [qIndex]: !tempReveal[qIndex] 
             }));
         }
-    }, [sectionType, isReviewMode, allQuizQuestions, currentQuestionIndex, tempReveal, hasPracticeTestStarted, isNavActionInProgress]);
+    }, [sectionType, allQuizQuestions, currentQuestionIndex, tempReveal]);
 
     useEffect(() => {
         const handleKeyPress = (event) => {
-            if (!hasPracticeTestStarted || isReviewSummaryVisible || isPracticeOptionsModalOpen || isNavActionInProgress) return; 
+            if (!latestStateRef.current.hasPracticeTestStarted || isReviewSummaryVisible || latestStateRef.current.isPracticeOptionsModalOpen || latestStateRef.current.isNavActionInProgress) return; 
             if ((event.key === 's' || event.key === 'S') && !event.ctrlKey && !event.metaKey && !event.altKey) {
                 event.preventDefault();
                 toggleSolutionReveal();
@@ -515,32 +613,31 @@ function QuizPage() {
         };
         window.addEventListener('keydown', handleKeyPress);
         return () => { window.removeEventListener('keydown', handleKeyPress); };
-    }, [toggleSolutionReveal, isReviewSummaryVisible, isPracticeOptionsModalOpen, hasPracticeTestStarted, isNavActionInProgress]);
+    }, [toggleSolutionReveal, isReviewSummaryVisible]);
 
     const handleOptionSelect = useCallback((questionIndex, optionLabel) => { 
-        if (!hasPracticeTestStarted || isNavActionInProgress) return; 
-        const isPracticeTestActive = sectionType === 'practice' && !isReviewMode;
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
+        const isPracticeTestActive = sectionType === 'practice' && !latestStateRef.current.isReviewMode;
         
         let canSelectOption = false;
         if (isPracticeTestActive) {
-            // In active PT, can always select/change answer if not crossed off
             canSelectOption = !crossedOffOptions[questionIndex]?.has(optionLabel);
-        } else { // QBank
-            canSelectOption = !submittedAnswers[questionIndex] && !isReviewMode && !tempReveal[questionIndex] && !crossedOffOptions[questionIndex]?.has(optionLabel);
+        } else { 
+            canSelectOption = !submittedAnswers[questionIndex] && !latestStateRef.current.isReviewMode && !tempReveal[questionIndex] && !crossedOffOptions[questionIndex]?.has(optionLabel);
         }
 
         if (canSelectOption) {
             setUserAnswers((prev) => ({ ...prev, [questionIndex]: optionLabel }));
         }
-    }, [isReviewMode, submittedAnswers, tempReveal, hasPracticeTestStarted, isNavActionInProgress, sectionType, crossedOffOptions]);
+    }, [sectionType, submittedAnswers, tempReveal, crossedOffOptions]);
 
     const submitAnswerForIndex = useCallback((questionIndex) => { 
-        if (!hasPracticeTestStarted) return 'test_not_started'; 
+        if (!latestStateRef.current.hasPracticeTestStarted) return 'test_not_started'; 
         if (!allQuizQuestions[questionIndex]) return 'error_question'; 
         const questionToSubmit = allQuizQuestions[questionIndex];
         if (questionToSubmit.error) return 'error_question';
         
-        if (isReviewMode || (sectionType === 'qbank' && tempReveal[questionIndex])) return true; 
+        if (latestStateRef.current.isReviewMode || (sectionType === 'qbank' && tempReveal[questionIndex])) return true; 
 
         if (userAnswers[questionIndex] && !submittedAnswers[questionIndex]) {
             let elapsedSeconds = userTimeSpent[questionIndex] !== undefined ? userTimeSpent[questionIndex] : 0;
@@ -552,9 +649,9 @@ function QuizPage() {
             setUserTimeSpent(prev => ({ ...prev, [questionIndex]: elapsedSeconds }));
             setSubmittedAnswers(prev => ({ ...prev, [questionIndex]: true }));
             
-            if (sectionType === 'qbank' && !isReviewMode) {
+            if (sectionType === 'qbank' && !latestStateRef.current.isReviewMode) {
                 setShowExplanation(prev => ({ ...prev, [questionIndex]: true })); 
-            } else if (sectionType === 'practice' && !isReviewMode) {
+            } else if (sectionType === 'practice' && !latestStateRef.current.isReviewMode) {
                 setShowExplanation(prev => ({ ...prev, [questionIndex]: false })); 
             }
 
@@ -564,29 +661,27 @@ function QuizPage() {
             return true; 
         }
         return 'no_answer_selected';  
-    }, [allQuizQuestions, isReviewMode, tempReveal, userAnswers, submittedAnswers, userTimeSpent, hasPracticeTestStarted, sectionType]);
+    }, [allQuizQuestions, tempReveal, userAnswers, submittedAnswers, userTimeSpent, sectionType]);
 
     const toggleExplanation = useCallback((questionIndex) => { 
-        if (!hasPracticeTestStarted || isNavActionInProgress) return; 
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
         if (!allQuizQuestions[questionIndex]) return; 
         
-        // For active practice test, this button should not be visible/callable based on QuestionCard logic.
-        // This is an additional safeguard if called directly.
-        if (sectionType === 'practice' && !isReviewMode && !tempReveal[questionIndex]) return;
+        if (sectionType === 'practice' && !latestStateRef.current.isReviewMode && !tempReveal[questionIndex]) return;
 
         const currentTempRevealForQuestion = tempReveal[questionIndex];
         const currentShowExplanationForQuestion = showExplanation[questionIndex];
 
-        if (sectionType === 'qbank' && !isReviewMode && currentTempRevealForQuestion !== undefined) {
+        if (sectionType === 'qbank' && !latestStateRef.current.isReviewMode && currentTempRevealForQuestion !== undefined) {
              setTempReveal(prev => ({...prev, [questionIndex]: !currentShowExplanationForQuestion }));
         }
         setShowExplanation((prev) => ({ ...prev, [questionIndex]: !prev[questionIndex] }));
-    }, [sectionType, tempReveal, showExplanation, hasPracticeTestStarted, allQuizQuestions, isNavActionInProgress, isReviewMode]);
+    }, [sectionType, tempReveal, showExplanation, allQuizQuestions]);
 
     const handleToggleCrossOff = useCallback((questionIndex, optionLabel) => { 
-        if (!hasPracticeTestStarted || isNavActionInProgress) return; 
-        const isPracticeTestActive = sectionType === 'practice' && !isReviewMode;
-        const canToggle = isPracticeTestActive || (!submittedAnswers[questionIndex] && !isReviewMode && !tempReveal[questionIndex]);
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
+        const isPracticeTestActive = sectionType === 'practice' && !latestStateRef.current.isReviewMode;
+        const canToggle = isPracticeTestActive || (!submittedAnswers[questionIndex] && !latestStateRef.current.isReviewMode && !tempReveal[questionIndex]);
 
         if (canToggle ) {
             setCrossedOffOptions(prev => {
@@ -606,36 +701,29 @@ function QuizPage() {
             });
             setTimeout(() => saveStateRef.current(), 0);
         }
-    }, [isReviewMode, submittedAnswers, tempReveal, userAnswers, hasPracticeTestStarted, isNavActionInProgress, sectionType]);
+    }, [sectionType, submittedAnswers, tempReveal, userAnswers]);
 
     const handleToggleMark = useCallback((questionIndex) => { 
-        if (!hasPracticeTestStarted ) return; // isNavActionInProgress checked by executeWithDelay
-        if (!isReviewMode) { 
-            setMarkedQuestions(prev => {
-                const newState = { ...prev };
-                newState[questionIndex] = !newState[questionIndex];
-                return newState;
-            });
-            setTimeout(() => saveStateRef.current(), 0);
-        }
-    }, [isReviewMode, hasPracticeTestStarted]);
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isReviewMode ) return; 
+        setMarkedQuestions(prev => {
+            const newState = { ...prev };
+            newState[questionIndex] = !newState[questionIndex];
+            return newState;
+        });
+        setTimeout(() => saveStateRef.current(), 0);
+    }, []); 
 
     const executeWithDelay = useCallback((actionFn, isNonNavFooterAction = false) => {
-        if (!hasPracticeTestStarted && !isReviewMode) { 
-            if(!isReviewMode && !isNonNavFooterAction) { 
-                 // console.log("[executeWithDelay] Aborted: Test not started (active quiz).");
+        if (!latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isReviewMode) { 
+            if(!latestStateRef.current.isReviewMode && !isNonNavFooterAction) { 
                 return;
             }
         }
-        if (isNavActionInProgress && !isNonNavFooterAction) { 
-            // console.log("[executeWithDelay] Aborted: Another navigation action is already in progress.");
+        if (latestStateRef.current.isNavActionInProgress && !isNonNavFooterAction) { 
             return;
         }
-
-        const prometricShouldApply = (sectionType === 'practice' || isReviewMode) && practiceTestSettings.prometricDelay;
-
-        if (prometricShouldApply) { // Apply delay for all actions passed through here if setting is on
-            // For non-nav footer actions like "Mark", we still set isNavActionInProgress to disable other buttons
+        const prometricShouldApply = (sectionType === 'practice' || latestStateRef.current.isReviewMode) && practiceTestSettings.prometricDelay;
+        if (prometricShouldApply) { 
             setIsNavActionInProgress(true);
             setTimeout(() => {
                 actionFn();
@@ -644,19 +732,18 @@ function QuizPage() {
         } else {
             actionFn(); 
         }
-    }, [hasPracticeTestStarted, isReviewMode, sectionType, practiceTestSettings.prometricDelay, isNavActionInProgress]);
+    }, [sectionType, practiceTestSettings.prometricDelay]);
 
 
     const handleJumpToQuestion = useCallback((index, fromSummaryTable = false) => { 
-        if (!hasPracticeTestStarted && !isReviewMode) return; 
-
+        if (!latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isReviewMode) return; 
         const jumpAction = () => { 
             if (index >= 0 && index < allQuizQuestions.length) {
-                 if (tempReveal[currentQuestionIndex] && !isReviewMode) { 
+                 if (tempReveal[currentQuestionIndex] && !latestStateRef.current.isReviewMode) { 
                     setTempReveal(prev => ({...prev, [currentQuestionIndex]: false}));
                 }
                 setCurrentQuestionIndex(index);
-                if (isReviewMode) { 
+                if (latestStateRef.current.isReviewMode) { 
                     setShowExplanation({ [index]: true }); 
                 } else {
                     setTempReveal(prev => ({...prev, [index]: false}));
@@ -671,27 +758,25 @@ function QuizPage() {
                 setIsReviewSummaryVisible(false); 
             }
          };
-        
         if (fromSummaryTable) { 
             jumpAction();
         } else { 
             executeWithDelay(jumpAction, false); 
         }
-     }, [allQuizQuestions, isReviewMode, tempReveal, currentQuestionIndex, submittedAnswers, executeWithDelay, hasPracticeTestStarted, sectionType, isReviewSummaryVisible]);
+     }, [allQuizQuestions, tempReveal, currentQuestionIndex, submittedAnswers, executeWithDelay, sectionType, isReviewSummaryVisible]);
 
     const handleSubmitAndNavigate = useCallback(() => { 
-        if (!hasPracticeTestStarted) return; 
+        if (!latestStateRef.current.hasPracticeTestStarted) return; 
         const submissionResult = submitAnswerForIndex(currentQuestionIndex);
         const navigateAction = () => { 
-            if (tempReveal[currentQuestionIndex] && !isReviewMode) {
+            if (tempReveal[currentQuestionIndex] && !latestStateRef.current.isReviewMode) {
                 setTempReveal(prev => ({ ...prev, [currentQuestionIndex]: false }));
             }
             if (currentQuestionIndex < allQuizQuestions.length - 1) {
                 const nextIndex = currentQuestionIndex + 1;
                 setCurrentQuestionIndex(nextIndex);
                 setTempReveal(prev => ({ ...prev, [nextIndex]: false })); 
-                
-                if (sectionType === 'practice' && !isReviewMode) {
+                if (sectionType === 'practice' && !latestStateRef.current.isReviewMode) {
                     setShowExplanation(prev => ({ ...prev, [nextIndex]: false }));
                 } else if (submittedAnswers[nextIndex]) { 
                      setShowExplanation(prev => ({ ...prev, [nextIndex]: true })); 
@@ -707,20 +792,19 @@ function QuizPage() {
         } else if (submissionResult === 'error_question') { 
             executeWithDelay(navigateAction, false);
         }
-    }, [allQuizQuestions, currentQuestionIndex, submitAnswerForIndex, tempReveal, submittedAnswers, executeWithDelay, hasPracticeTestStarted, sectionType]);
+    }, [allQuizQuestions, currentQuestionIndex, submitAnswerForIndex, tempReveal, submittedAnswers, executeWithDelay, sectionType]);
 
     const handlePrevious = useCallback(() => { 
-        if (!hasPracticeTestStarted) return; 
+        if (!latestStateRef.current.hasPracticeTestStarted) return; 
         const navigateAction = () => { 
             if (currentQuestionIndex > 0) {
-                if (tempReveal[currentQuestionIndex] && !isReviewMode) {
+                if (tempReveal[currentQuestionIndex] && !latestStateRef.current.isReviewMode) {
                     setTempReveal(prev => ({ ...prev, [currentQuestionIndex]: false }));
                 }
                 const prevIndex = currentQuestionIndex - 1;
                 setCurrentQuestionIndex(prevIndex);
                 setTempReveal(prev => ({ ...prev, [prevIndex]: false }));
-                 
-                if (sectionType === 'practice' && !isReviewMode) {
+                if (sectionType === 'practice' && !latestStateRef.current.isReviewMode) {
                     setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
                 } else if (submittedAnswers[prevIndex]) { 
                     setShowExplanation(prev => ({ ...prev, [prevIndex]: true }));
@@ -730,15 +814,15 @@ function QuizPage() {
             }
          };
         executeWithDelay(navigateAction, false);
-    }, [currentQuestionIndex, tempReveal, submittedAnswers, executeWithDelay, hasPracticeTestStarted, sectionType]);
+    }, [currentQuestionIndex, tempReveal, submittedAnswers, executeWithDelay, sectionType]);
     
     const handleOpenReviewSummary = useCallback(() => { 
-        if (!hasPracticeTestStarted) return;
+        if (!latestStateRef.current.hasPracticeTestStarted) return;
         executeWithDelay(() => { 
             setIsReviewSummaryVisible(true); 
             setCurrentQuestionIndexBeforeReview(currentQuestionIndex);
         }, false); 
-    }, [hasPracticeTestStarted, currentQuestionIndex, executeWithDelay]);
+    }, [currentQuestionIndex, executeWithDelay]);
 
     const handleCloseReviewSummary = useCallback(() => { 
         setIsReviewSummaryVisible(false);
@@ -774,7 +858,7 @@ function QuizPage() {
         return ( <div className="page-error"> Error: {error} <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div> );
     }
 
-    if (isPracticeOptionsModalOpen && sectionType === 'practice' && !isReviewMode) {
+    if (isPracticeOptionsModalOpen && sectionType === 'practice' && !isReviewMode) { 
         if (!quizMetadata) { 
             return <div className="page-loading">Preparing Test Options... (Waiting for metadata)</div>;
         }
@@ -794,28 +878,28 @@ function QuizPage() {
         );
     }
     
-    if (sectionType === 'practice' && !hasPracticeTestStarted && !isPracticeOptionsModalOpen && !isReviewMode) {
+    if (sectionType === 'practice' && !hasPracticeTestStarted && !isPracticeOptionsModalOpen && !isReviewMode) { 
         return <div className="page-loading">Preparing Practice Test...</div>;
     }
     
-    if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) {
+    if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { 
          return <div className="page-info"> No questions found for this quiz. Please check data files. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>;
     }
 
     const currentQuestionData = allQuizQuestions[currentQuestionIndex];
-    if (!isReviewSummaryVisible && (hasPracticeTestStarted || isReviewMode) && !currentQuestionData && allQuizQuestions.length > 0) {
+    if (!isReviewSummaryVisible && (hasPracticeTestStarted || isReviewMode) && !currentQuestionData && allQuizQuestions.length > 0) { 
          return <div className="page-error">Error: Could not load current question data. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>;
     }
 
-    const isPracticeTestActive = sectionType === 'practice' && !isReviewMode && hasPracticeTestStarted;
+    const isPracticeTestActive = sectionType === 'practice' && !isReviewMode && hasPracticeTestStarted; 
 
     const cardIsSubmittedState = 
         (isPracticeTestActive && !!submittedAnswers[currentQuestionIndex]) || 
-        (!isPracticeTestActive && (!!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex]));
+        (!isPracticeTestActive && (!!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex])); 
 
     const explanationButtonShouldBeVisible = 
         !!currentQuestionData?.explanation?.html_content &&
-        (isReviewMode || !!tempReveal[currentQuestionIndex] || (sectionType === 'qbank' && submittedAnswers[currentQuestionIndex]));
+        (isReviewMode || !!tempReveal[currentQuestionIndex] || (sectionType === 'qbank' && submittedAnswers[currentQuestionIndex])); 
 
     const explanationContentShouldBeExpanded = showExplanation[currentQuestionIndex] && explanationButtonShouldBeVisible;
 
@@ -830,9 +914,17 @@ function QuizPage() {
         <div
             className="quiz-page-container"
             ref={quizPageContainerRef}
-            onClick={handleContainerClick}
+            onClick={handleContainerClick} 
             style={quizPageContainerActiveStyle}
         >
+            <button 
+                ref={highlightButtonRef} 
+                className="highlight-popup-button" 
+                style={{ display: 'none' }} 
+                onClick={toggleHighlight} 
+                onMouseDown={(e) => e.preventDefault()}
+            > Highlight </button>
+
             {isReviewSummaryVisible ? (
                 <QuizReviewSummary
                     allQuizQuestions={allQuizQuestions}
@@ -847,14 +939,14 @@ function QuizPage() {
                     onEndQuiz={() => executeWithDelay(() => handleFinishQuizRef.current(false), false)} 
                     timerDisplayContent={timerDisplayComponent}
                     dynamicFooterStyle={sharedFixedFooterStyle}
-                    isNavActionInProgress={isNavActionInProgress}
+                    isNavActionInProgress={isNavActionInProgress} 
                     executeActionWithDelay={executeWithDelay} 
                 />
             ) : (
                 <>
                     <div className="quiz-header">
                         <button 
-                            onClick={() => isReviewMode ? navigate(`/results/${topicId}/${sectionType}/${quizId}`) : navigate(`/topic/${topicId}`)} 
+                            onClick={() => isReviewMode ? navigate(`/results/${topicId}/${sectionType}/${quizId}`) : navigate(`/topic/${topicId}`)}  
                             className="back-button-quiz"
                             disabled={isNavActionInProgress}
                         >
@@ -867,10 +959,12 @@ function QuizPage() {
                             Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay}
                         </p>
                     </div>
-
-                    <MemoizedPassage html={passageHtml} passageRef={passageContainerRef} />
-                    <button ref={highlightButtonRef} className="highlight-popup-button" style={{ display: 'none' }} onClick={toggleHighlight} onMouseDown={(e) => e.preventDefault()}> Highlight </button>
-
+                    
+                    {/* Render passage above question card if it exists AND it's NOT reading comprehension (topicId based) */}
+                    {passageHtml && topicId !== 'reading-comprehension' && (
+                         <MemoizedPassage html={passageHtml} passageRef={passageContainerRef} />
+                    )}
+                    
                     <div className="quiz-controls-top">
                         {(!isReviewMode && hasPracticeTestStarted) && ( <div className="timer-display">{timerDisplayComponent}</div> )}
                         {(isReviewMode || !hasPracticeTestStarted) && <div className="timer-display-placeholder"></div>}
@@ -886,7 +980,7 @@ function QuizPage() {
                                 showExplanation={explanationContentShouldBeExpanded} 
                                 crossedOffOptions={currentCrossedOffForCard}
                                 userTimeSpentOnQuestion={userTimeSpent[currentQuestionIndex]}
-                                isReviewMode={isReviewMode}
+                                isReviewMode={isReviewMode} 
                                 isMarked={currentIsMarkedForCard}
                                 onOptionSelect={handleOptionSelect}
                                 onToggleExplanation={toggleExplanation} 
@@ -898,18 +992,26 @@ function QuizPage() {
                         )}
                     </div>
 
+                    {/* Render passage below question card if it exists AND it IS reading comprehension (topicId based) */}
+                    {passageHtml && topicId === 'reading-comprehension' && (
+                        <div className="passage-wrapper-below" style={{ marginTop: '20px' }}>
+                             <MemoizedPassage html={passageHtml} passageRef={passageContainerRef} />
+                        </div>
+                    )}
+
+
                     <div className="quiz-navigation" style={sharedFixedFooterStyle}>
                         <div className="nav-group-left">
                             <button
                                 onClick={handlePrevious}
-                                disabled={!hasPracticeTestStarted || currentQuestionIndex === 0 || isNavActionInProgress}
+                                disabled={!hasPracticeTestStarted || currentQuestionIndex === 0 || isNavActionInProgress} 
                                 className="nav-button prev-button"
                             > Previous </button>
 
-                            {sectionType === 'qbank' && !isReviewMode && !isCurrentQuestionError && hasPracticeTestStarted && (
+                            {sectionType === 'qbank' && !isReviewMode && !isCurrentQuestionError && hasPracticeTestStarted && ( 
                                 <button 
                                     onClick={toggleSolutionReveal} 
-                                    disabled={isNavActionInProgress} 
+                                    disabled={isNavActionInProgress}  
                                     className="nav-button solution-toggle-button-bottom">
                                     {tempReveal[currentQuestionIndex] ? "Hide Solution" : "'S' Solution"}
                                 </button>
@@ -917,28 +1019,28 @@ function QuizPage() {
                         </div>
 
                         <div className="nav-group-center">
-                            {(isLastQuestion || (isReviewMode && isLastQuestion) ) ? (
+                            {(isLastQuestion || (isReviewMode && isLastQuestion) ) ? ( 
                                 <button 
                                     onClick={() => executeWithDelay(() => handleFinishQuizRef.current(false), false)} 
                                     className="nav-button submit-quiz-button"
-                                    disabled={!hasPracticeTestStarted || isNavActionInProgress}
+                                    disabled={!hasPracticeTestStarted || isNavActionInProgress} 
                                 >
-                                    {isReviewMode ? 'Back to Results' : 'Finish Quiz'}
+                                    {isReviewMode ? 'Back to Results' : 'Finish Quiz'} 
                                 </button>
                             ) : (
                                 <button
                                     onClick={handleSubmitAndNavigate} 
                                     className="nav-button next-button"
-                                    disabled={!hasPracticeTestStarted || isCurrentQuestionError || isNavActionInProgress}
+                                    disabled={!hasPracticeTestStarted || isCurrentQuestionError || isNavActionInProgress} 
                                 > Next </button>
                             )}
                         </div>
 
                         <div className="nav-group-right">
-                            {!isReviewMode && !isCurrentQuestionError && hasPracticeTestStarted && (
+                            {!isReviewMode && !isCurrentQuestionError && hasPracticeTestStarted && ( 
                                 <button
-                                    onClick={() => executeWithDelay(() => handleToggleMark(currentQuestionIndex), false)} // Apply delay to Mark
-                                    disabled={isNavActionInProgress} 
+                                    onClick={() => executeWithDelay(() => handleToggleMark(currentQuestionIndex), false)} 
+                                    disabled={isNavActionInProgress}  
                                     className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`}
                                     title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}
                                 >
@@ -948,10 +1050,10 @@ function QuizPage() {
                             {(!hasPracticeTestStarted || isReviewMode || isCurrentQuestionError) && <div className="mark-button-nav-placeholder"></div>}
 
 
-                            {!isReviewMode && hasPracticeTestStarted && (
+                            {!isReviewMode && hasPracticeTestStarted && ( 
                                 <button 
                                     onClick={handleOpenReviewSummary} 
-                                    disabled={isNavActionInProgress}
+                                    disabled={isNavActionInProgress} 
                                     className="nav-button review-button-bottom"
                                 >
                                     Review
