@@ -1,0 +1,240 @@
+/* FILE: client/src/styles/PracticeTestOptions.css */
+.pto-modal-overlay {
+    position: fixed; /* Changed from fixed to relative if QuizPage is the host */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--bg-primary); /* Match page background */
+    display: flex; /* Keep flex for centering container if not full width/height itself */
+    flex-direction: column; /* Align header, body, footer vertically */
+    z-index: 2000;
+    /* padding: 20px; -- Remove padding if container is full screen */
+    box-sizing: border-box;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: hidden; /* Prevent body scroll when modal is "full page" */
+}
+
+.pto-modal-container {
+    background-color: var(--bg-primary); /* Container is now the full page */
+    color: var(--text-primary);
+    /* border-radius: 8px; -- Remove for full page */
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); -- Remove for full page */
+    width: 100%;
+    /* max-width: 600px; -- Remove max-width for full page */
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Container takes full height of overlay */
+    /* max-height: 90vh; -- Remove max-height */
+}
+
+.pto-modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px; /* Match QuizReviewSummary header padding */
+    border-bottom: 1px solid var(--border-primary);
+    flex-shrink: 0;
+    min-height: 50px; /* Match QuizReviewSummary header height */
+    background-color: var(--bg-primary); /* Ensure header has background */
+}
+
+.pto-close-button {
+    background: none;
+    border: none;
+    color: var(--text-accent); /* Themed accent for close */
+    cursor: pointer;
+    font-size: 1.1em; /* Adjusted size */
+    padding: 8px; /* More clickable area */
+    line-height: 1;
+}
+.pto-close-button:hover {
+    color: var(--text-primary);
+}
+.pto-close-button svg {
+    display: block;
+    width: 18px; /* Explicit size for SVG */
+    height: 18px;
+}
+
+.pto-header-title-group {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.pto-app-name {
+    font-size: 0.9em; /* Slightly larger */
+    color: var(--text-secondary);
+    margin: 0 0 3px 0;
+}
+
+.pto-quiz-name {
+    font-size: 1.6em; /* Larger, like quiz title */
+    font-weight: 500;
+    color: var(--text-quiz-title);
+    margin: 0;
+}
+.pto-header-spacer {
+    width: 34px; /* Balance the close button + padding */
+    height: 34px;
+    flex-shrink: 0;
+}
+
+.pto-modal-body {
+    padding: 25px 30px; /* More padding for content */
+    overflow-y: auto;
+    flex-grow: 1;
+    max-width: 800px; /* Content area max width for readability */
+    width: 100%;
+    margin: 0 auto; /* Center content area */
+    box-sizing: border-box;
+}
+
+.pto-instructions-section {
+    margin-bottom: 30px;
+    font-size: 1em; /* Base font size */
+    line-height: 1.7;
+}
+.pto-instructions-section p:first-child {
+    font-weight: 600; /* Bolder intro text */
+    font-size: 1.1em;
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+.pto-instructions-section ul {
+    list-style-type: disc;
+    padding-left: 25px;
+    margin: 0;
+}
+.pto-instructions-section li {
+    margin-bottom: 10px;
+}
+
+.pto-options-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increased gap */
+}
+
+.pto-option {
+    display: flex;
+    align-items: flex-start; /* Align switch to top with text */
+    gap: 15px;
+    padding: 15px; /* Add padding to option containers */
+    background-color: var(--bg-secondary); /* Background for options */
+    border-radius: 6px;
+    border: 1px solid var(--border-primary);
+}
+
+.pto-option-description {
+    font-size: 0.95em;
+    line-height: 1.6;
+    flex-grow: 1;
+    color: var(--text-secondary);
+}
+.pto-option-description b {
+    font-weight: 600;
+    color: var(--text-primary);
+    display: block; /* Make bold text take its own line or use margin */
+    margin-bottom: 5px;
+}
+
+.pto-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px; /* Slightly larger switch */
+  height: 26px;
+  flex-shrink: 0;
+  margin-top: 2px; /* Align with first line of text better */
+}
+
+.pto-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.pto-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-option); /* Lighter background for slider track */
+  border: 1px solid var(--border-primary);
+  transition: .3s;
+  border-radius: 26px;
+}
+
+.pto-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px; /* Larger thumb */
+  width: 20px;
+  left: 2px;
+  bottom: 2px; /* Adjusted for larger thumb and track */
+  background-color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+  transition: .3s;
+  border-radius: 50%;
+}
+
+.pto-switch input:checked + .pto-slider {
+  background-color: var(--bg-button-primary);
+  border-color: var(--bg-button-primary);
+}
+
+.pto-switch input:focus + .pto-slider {
+  box-shadow: 0 0 0 3px var(--bg-primary), 0 0 0 4px var(--border-option-selected); /* Themed focus */
+}
+
+.pto-switch input:checked + .pto-slider:before {
+  transform: translateX(22px); /* Adjusted for larger switch */
+}
+
+.pto-modal-footer {
+    padding: 15px 25px; /* Match header padding */
+    border-top: 1px solid var(--border-primary);
+    display: flex;
+    justify-content: center; /* Center the start button */
+    background-color: var(--bg-secondary);
+    flex-shrink: 0;
+    min-height: 70px; /* Match QuizReviewSummary footer */
+    align-items: center;
+}
+
+.pto-start-button {
+    background-color: var(--bg-button-primary);
+    color: var(--text-on-button-primary);
+    border: none;
+    padding: 12px 35px; /* Larger button */
+    border-radius: 6px;
+    font-size: 1.1em; /* Larger font */
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.pto-start-button:hover {
+    background-color: var(--bg-button-primary-hover);
+}
+
+.pto-modal-body::-webkit-scrollbar {
+  width: 8px;
+}
+.pto-modal-body::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+  border-radius: 4px;
+}
+.pto-modal-body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+}
+.pto-modal-body {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--bg-primary);
+}

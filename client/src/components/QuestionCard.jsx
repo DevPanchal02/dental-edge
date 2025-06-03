@@ -11,22 +11,23 @@ function QuestionCard({
   questionData,
   questionIndex,
   selectedOption,
-  isSubmitted,
-  showExplanation,
-  crossedOffOptions, // This is a Set
+  isSubmitted,         // True if the answer for this question is submitted OR if in review/tempReveal
+  showExplanation,     // Boolean flag from QuizPage to show explanation area
+  crossedOffOptions, 
   userTimeSpentOnQuestion,
-  isReviewMode,
+  isReviewMode,        // True if the entire quiz is in review mode (e.g., from results page)
   isMarked,
   onOptionSelect,
-  onViewAnswer, 
+  // onViewAnswer, // This was for QBank's "S" key, handled by tempReveal now
   onToggleExplanation,
   onToggleCrossOff,
   onToggleMark,
-  isTemporarilyRevealed
+  isTemporarilyRevealed, // For QBank "Show Solution"
+  isPracticeTestActive,  // New prop: true if it's an active (not review) practice test
 }) {
 
    if (!questionData || typeof questionData !== 'object' || questionData === null) {
-     console.warn(`[QuestionCard] Invalid question data at index ${questionIndex}:`, questionData);
+     // console.warn(`[QuestionCard] Invalid question data at index ${questionIndex}:`, questionData);
      return ( <div className="question-card error-card"><p className="error-message">Error displaying Question {questionIndex + 1}: Invalid data format.</p></div> );
    }
    if (questionData.error) {
@@ -42,14 +43,24 @@ function QuestionCard({
   } = questionData;
 
   const handleSelect = (optionLabel) => {
-    if (!isSubmitted && !isReviewMode && !isTemporarilyRevealed && !crossedOffOptions.has(optionLabel)) {
+    // Allow selection only if not submitted (truly, not just for styling), not in review, not temp revealed, and option not crossed off
+    // isSubmitted here refers to the card's prop which might be true in review mode.
+    // We need to ensure it's not an *active* submission that locks things.
+    // The QuizPage's submittedAnswers state is the source of truth for actual submission.
+    // For practice tests, selection is always allowed until test is finished.
+    // For QBanks, selection is disallowed if tempRevealed or if truly submitted via submittedAnswers[questionIndex]
+    const trulySubmitted = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
+
+    if (!trulySubmitted && !isReviewMode && !isTemporarilyRevealed && !crossedOffOptions.has(optionLabel)) {
       onOptionSelect(questionIndex, optionLabel);
     }
   };
 
   const handleContextMenu = (event, optionLabel) => {
       event.preventDefault();
-      if (!isSubmitted && !isReviewMode && !isTemporarilyRevealed) {
+      // Allow crossing off only if not an active practice test's submitted state, not in review, not temp revealed
+      const trulySubmittedForCrossOff = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
+      if (!trulySubmittedForCrossOff && !isReviewMode && !isTemporarilyRevealed) {
         onToggleCrossOff(questionIndex, optionLabel);
       }
   };
@@ -58,12 +69,24 @@ function QuestionCard({
     let className = 'option-label';
     if (crossedOffOptions.has(option.label)) { className += ' crossed-off'; }
 
+    // isSubmitted (prop) is true if:
+    // 1. In Review Mode
+    // 2. QBank answer submitted
+    // 3. QBank solution tempRevealed
+    // 4. Practice Test answer submitted (but we don't show correct/incorrect styling for this case if isPracticeTestActive)
     if (isSubmitted) { 
-        className += ' submitted';
-        if (option.is_correct) {
-            className += ' correct';
-        } else if (option.label === selectedOption) { 
-            className += ' incorrect';
+        className += ' submitted'; // General submitted styling (e.g., less interactive hover)
+        
+        // Show correct/incorrect styling ONLY IF:
+        // - It's review mode OR
+        // - It's a QBank that's been submitted or tempRevealed
+        // - NOT if it's an active practice test (even if answer is in submittedAnswers)
+        if (isReviewMode || isTemporarilyRevealed || (!isPracticeTestActive && isSubmitted)) {
+            if (option.is_correct) {
+                className += ' correct';
+            } else if (option.label === selectedOption) { 
+                className += ' incorrect';
+            }
         }
     } else if (option.label === selectedOption) { 
       if (!crossedOffOptions.has(option.label)) {
@@ -74,7 +97,13 @@ function QuestionCard({
   };
 
   const isErrorQuestion = !!questionData.error;
-  const shouldShowExplanation = showExplanation && !!explanation.html_content;
+  
+  const canShowExplanationButton = 
+    !!explanation.html_content &&
+    (isReviewMode || isTemporarilyRevealed || (!isPracticeTestActive && isSubmitted));
+    
+  const shouldRenderExplanationContent = canShowExplanationButton && showExplanation;
+
 
   return (
     <div className={`question-card ${isErrorQuestion ? 'error-card' : ''}`}>
@@ -82,7 +111,6 @@ function QuestionCard({
         <>
           <div className="question-content">
             <p className="question-number">Question {questionIndex + 1}</p>
-            {/* Use HtmlRenderer for question content */}
             <HtmlRenderer className="question-html-content" htmlString={question.html_content} />
           </div>
 
@@ -99,16 +127,20 @@ function QuestionCard({
                   name={`question-${questionIndex}`}
                   value={option.label}
                   checked={selectedOption === option.label && !crossedOffOptions.has(option.label)}
-                  readOnly
-                  disabled={isSubmitted || isReviewMode || crossedOffOptions.has(option.label)}
+                  readOnly 
+                  disabled={
+                    (isPracticeTestActive ? false : isSubmitted) || // For PT, options remain clickable until test ends
+                    isReviewMode || 
+                    crossedOffOptions.has(option.label) ||
+                    isTemporarilyRevealed // QBank specific
+                  }
                   className="option-radio"
                 />
                 <span className="option-label-text">
                     <span className="option-letter">{option.label}</span>
-                    {/* Use HtmlRenderer for option content */}
                     <HtmlRenderer className="option-html-content" htmlString={option.html_content} />
                 </span>
-                {isSubmitted && !isReviewMode && option.percentage_selected && !isTemporarilyRevealed && (
+                {isSubmitted && (!isPracticeTestActive || isTemporarilyRevealed || isReviewMode) && option.percentage_selected && (
                      <span className="option-percentage">{option.percentage_selected}</span>
                 )}
               </label>
@@ -116,19 +148,18 @@ function QuestionCard({
           </div>
 
            <div className="action-buttons">
-            {(isSubmitted || isReviewMode || isTemporarilyRevealed) && !!explanation.html_content && (
+            {canShowExplanationButton && (
               <button onClick={() => onToggleExplanation(questionIndex)} className="explanation-button">
                 {showExplanation ? 'Hide' : 'Show'} Explanation 
               </button>
             )}
           </div>
           
-          {shouldShowExplanation && (
+          {shouldRenderExplanationContent && (
             <div className="explanation-section">
               <h3 className="explanation-title">Explanation</h3>
               <div className="explanation-content">
                 <p><strong>Correct Answer:</strong> {correct_answer_original_text}</p>
-                {/* Use HtmlRenderer for explanation content */}
                 <HtmlRenderer className="explanation-html-content" htmlString={explanation.html_content} />
               </div>
                <div className="analytics-section">
