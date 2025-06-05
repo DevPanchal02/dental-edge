@@ -930,17 +930,16 @@ function QuizPage() {
                     allQuizQuestions={allQuizQuestions}
                     quizMetadata={quizMetadata}
                     markedQuestions={markedQuestions}
-                    submittedAnswers={submittedAnswers} 
+                    submittedAnswers={submittedAnswers}
                     userAnswers={userAnswers}
                     currentQuestionIndexBeforeReview={currentQuestionIndexBeforeReview}
                     topicId={topicId}
-                    onCloseReviewSummary={handleCloseReviewSummary} 
-                    onJumpToQuestionInQuiz={handleJumpToQuestion} 
-                    onEndQuiz={() => executeWithDelay(() => handleFinishQuizRef.current(false), false)} 
+                    onCloseReviewSummary={handleCloseReviewSummary}
+                    onJumpToQuestionInQuiz={handleJumpToQuestion} // This is QuizPage's handleJumpToQuestion
+                    onEndQuiz={() => executeWithDelay(() => handleFinishQuizRef.current(false), false)}
                     timerDisplayContent={timerDisplayComponent}
                     dynamicFooterStyle={sharedFixedFooterStyle}
-                    isNavActionInProgress={isNavActionInProgress} 
-                    executeActionWithDelay={executeWithDelay} 
+                    isNavActionInProgress={isNavActionInProgress}
                 />
             ) : (
                 <>

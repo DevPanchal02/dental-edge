@@ -1,6 +1,6 @@
 // FILE: client/src/components/QuizReviewSummary.jsx
 import React from 'react';
-import { formatDisplayName } from '../data/loader';
+import { formatDisplayName } from '../data/loader'; // Assuming this is still needed elsewhere or can be removed if not
 import '../styles/QuizReviewSummary.css';
 
 function QuizReviewSummary({
@@ -8,61 +8,53 @@ function QuizReviewSummary({
     quizMetadata,
     markedQuestions,
     submittedAnswers,
-    userAnswers, 
+    userAnswers,
     currentQuestionIndexBeforeReview,
-    topicId,
+    topicId, // Not directly used here but good for context if needed later
     onCloseReviewSummary,
-    onJumpToQuestionInQuiz, 
-    onEndQuiz, 
+    onJumpToQuestionInQuiz,
+    onEndQuiz,
     timerDisplayContent,
     dynamicFooterStyle,
-    isNavActionInProgress, 
-    executeActionWithDelay, 
+    isNavActionInProgress,
+    // executeActionWithDelay, // This prop might become unused
 }) {
 
-    // Jump from table row - NO DELAY
     const handleJumpFromTable = (index) => {
-        // Directly call onJumpToQuestionInQuiz, passing true to indicate it's from table (no delay)
-        onJumpToQuestionInQuiz(index, true); 
+        onJumpToQuestionInQuiz(index, true); // true indicates from table (no delay override by QuizPage)
     };
 
-    // Review Marked button - USES DELAY from executeActionWithDelay
     const handleReviewMarked = () => {
-        executeActionWithDelay(() => { 
-            let targetIndex = -1;
-            const markedIndices = Object.keys(markedQuestions).filter(idx => markedQuestions[idx]).map(Number);
+        let targetIndex = -1;
+        const markedIndices = Object.keys(markedQuestions)
+                                .filter(idx => markedQuestions[idx])
+                                .map(Number)
+                                .sort((a,b) => a - b); // Ensure sorted order
 
-            if (markedIndices.length === 0) {
-                alert("No questions are marked for review.");
-                return;
-            }
-            targetIndex = markedIndices.find(idx => !submittedAnswers[idx]);
-            if (targetIndex === undefined) { 
-                targetIndex = markedIndices[0];
-            }
-            // Call onJumpToQuestionInQuiz, but the delay is handled by executeActionWithDelay wrapper
-            // The 'false' here indicates it's a footer/nav action, not a direct table jump
-            onJumpToQuestionInQuiz(targetIndex, false); 
-        }, false); // false indicates this is a navigation-like action for executeWithDelay
+        if (markedIndices.length === 0) {
+            alert("No questions are marked for review.");
+            return;
+        }
+        // Try to find first marked that is not submitted (incomplete)
+        targetIndex = markedIndices.find(idx => !submittedAnswers[idx]);
+        if (targetIndex === undefined) {
+            // If all marked are submitted, just go to the first marked one
+            targetIndex = markedIndices[0];
+        }
+        onJumpToQuestionInQuiz(targetIndex, false); // false for fromSummaryTable means QuizPage's logic will apply delay
     };
 
-    // Review All button - USES DELAY
     const handleReviewAll = () => {
-        executeActionWithDelay(() => { 
-            onJumpToQuestionInQuiz(0, false);  
-        }, false);
+        onJumpToQuestionInQuiz(0, false);
     };
 
-    // Review Incomplete button - USES DELAY
     const handleReviewIncomplete = () => {
-        executeActionWithDelay(() => { 
-            const firstIncompleteIndex = allQuizQuestions.findIndex((q, idx) => !q.error && !submittedAnswers[idx]);
-            if (firstIncompleteIndex !== -1) {
-                onJumpToQuestionInQuiz(firstIncompleteIndex, false); 
-            } else {
-                alert("All questions have been completed or attempted.");
-            }
-        }, false);
+        const firstIncompleteIndex = allQuizQuestions.findIndex((q, idx) => !q.error && !submittedAnswers[idx]);
+        if (firstIncompleteIndex !== -1) {
+            onJumpToQuestionInQuiz(firstIncompleteIndex, false);
+        } else {
+            alert("All questions have been completed or attempted.");
+        }
     };
 
 
@@ -70,9 +62,9 @@ function QuizReviewSummary({
         <div className="quiz-review-summary-container">
             <div className="quiz-review-summary-header">
                 <button
-                    onClick={onCloseReviewSummary} 
+                    onClick={onCloseReviewSummary}
                     className="qrs-back-button"
-                    disabled={isNavActionInProgress} 
+                    disabled={isNavActionInProgress}
                 >
                     ← Back to Question {currentQuestionIndexBeforeReview + 1}
                 </button>
@@ -95,7 +87,7 @@ function QuizReviewSummary({
                         </tr>
                     </thead>
                     <tbody>
-                        {allQuizQuestions.map((q, index) => { 
+                        {allQuizQuestions.map((q, index) => {
                             if (!q || q.error) return (
                                 <tr key={`error-${index}`} className="qrs-row-error">
                                     <td>Question {index + 1}</td>
@@ -111,10 +103,10 @@ function QuizReviewSummary({
                                 <tr key={index} className={`qrs-row ${index === currentQuestionIndexBeforeReview ? 'qrs-current-highlight' : ''}`}>
                                     <td className="qrs-cell-name">
                                         <button
-                                            onClick={() => handleJumpFromTable(index)} // Direct jump
+                                            onClick={() => handleJumpFromTable(index)}
                                             className="qrs-jump-button"
                                             title={`Jump to Question ${index + 1}`}
-                                            disabled={isNavActionInProgress} 
+                                            disabled={isNavActionInProgress}
                                         >
                                             Question {index + 1}
                                         </button>
@@ -149,22 +141,22 @@ function QuizReviewSummary({
 
             <div className="quiz-review-summary-footer" style={dynamicFooterStyle}>
                 <div className="qrs-footer-group-left">
-                    <button 
-                        onClick={handleReviewMarked} 
+                    <button
+                        onClick={handleReviewMarked}
                         className="qrs-footer-button review-marked"
                         disabled={isNavActionInProgress}
                     >
                         Review Marked
                     </button>
-                    <button 
-                        onClick={handleReviewAll} 
+                    <button
+                        onClick={handleReviewAll}
                         className="qrs-footer-button review-all"
                         disabled={isNavActionInProgress}
                     >
                         Review All
                     </button>
-                    <button 
-                        onClick={handleReviewIncomplete} 
+                    <button
+                        onClick={handleReviewIncomplete}
                         className="qrs-footer-button review-incomplete"
                         disabled={isNavActionInProgress}
                     >
@@ -172,8 +164,8 @@ function QuizReviewSummary({
                     </button>
                 </div>
                 <div className="qrs-footer-group-right">
-                    <button 
-                        onClick={onEndQuiz} // This is already wrapped in executeWithDelay where it's passed as a prop
+                    <button
+                        onClick={onEndQuiz} // This is already wrapped by QuizPage
                         className="qrs-footer-button end-quiz"
                         disabled={isNavActionInProgress}
                     >

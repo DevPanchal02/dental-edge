@@ -1,3 +1,4 @@
+// FILE: client/src/components/QuestionCard.jsx
 import React from 'react';
 import '../styles/QuestionCard.css';
 
@@ -13,7 +14,7 @@ function QuestionCard({
   selectedOption,
   isSubmitted,         // True if the answer for this question is submitted OR if in review/tempReveal
   showExplanation,     // Boolean flag from QuizPage to show explanation area
-  crossedOffOptions, 
+  crossedOffOptions,
   userTimeSpentOnQuestion,
   isReviewMode,        // True if the entire quiz is in review mode (e.g., from results page)
   isMarked,
@@ -43,12 +44,6 @@ function QuestionCard({
   } = questionData;
 
   const handleSelect = (optionLabel) => {
-    // Allow selection only if not submitted (truly, not just for styling), not in review, not temp revealed, and option not crossed off
-    // isSubmitted here refers to the card's prop which might be true in review mode.
-    // We need to ensure it's not an *active* submission that locks things.
-    // The QuizPage's submittedAnswers state is the source of truth for actual submission.
-    // For practice tests, selection is always allowed until test is finished.
-    // For QBanks, selection is disallowed if tempRevealed or if truly submitted via submittedAnswers[questionIndex]
     const trulySubmitted = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
 
     if (!trulySubmitted && !isReviewMode && !isTemporarilyRevealed && !crossedOffOptions.has(optionLabel)) {
@@ -58,7 +53,6 @@ function QuestionCard({
 
   const handleContextMenu = (event, optionLabel) => {
       event.preventDefault();
-      // Allow crossing off only if not an active practice test's submitted state, not in review, not temp revealed
       const trulySubmittedForCrossOff = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
       if (!trulySubmittedForCrossOff && !isReviewMode && !isTemporarilyRevealed) {
         onToggleCrossOff(questionIndex, optionLabel);
@@ -69,39 +63,40 @@ function QuestionCard({
     let className = 'option-label';
     if (crossedOffOptions.has(option.label)) { className += ' crossed-off'; }
 
-    // isSubmitted (prop) is true if:
-    // 1. In Review Mode
-    // 2. QBank answer submitted
-    // 3. QBank solution tempRevealed
-    // 4. Practice Test answer submitted (but we don't show correct/incorrect styling for this case if isPracticeTestActive)
-    if (isSubmitted) { 
-        className += ' submitted'; // General submitted styling (e.g., less interactive hover)
-        
-        // Show correct/incorrect styling ONLY IF:
-        // - It's review mode OR
-        // - It's a QBank that's been submitted or tempRevealed
-        // - NOT if it's an active practice test (even if answer is in submittedAnswers)
-        if (isReviewMode || isTemporarilyRevealed || (!isPracticeTestActive && isSubmitted)) {
-            if (option.is_correct) {
-                className += ' correct';
-            } else if (option.label === selectedOption) { 
-                className += ' incorrect';
-            }
+    const isThisOptionSelected = option.label === selectedOption && !crossedOffOptions.has(option.label);
+    
+    // Determine if grading styles (correct/incorrect) should be shown
+    const showGradingStyles = isReviewMode || isTemporarilyRevealed || (!isPracticeTestActive && isSubmitted);
+
+    if (showGradingStyles) {
+        className += ' submitted'; // General state for when grading is active
+        if (option.is_correct) {
+            className += ' correct';
+        } else if (isThisOptionSelected) { // If this *wrong* option was selected
+            className += ' incorrect';
         }
-    } else if (option.label === selectedOption) { 
-      if (!crossedOffOptions.has(option.label)) {
-        className += ' selected';
-      }
+        // If it's the correct answer and also selected, 'correct' takes precedence.
+        // If it's a wrong answer and selected, 'incorrect' is added.
+        // If it's a wrong answer and NOT selected, no extra grading style.
+    } else {
+        // Active quiz state (not showing full grading)
+        if (isThisOptionSelected) {
+            className += ' selected';
+        }
+        // For QBank, 'submitted' class can apply even if not showing full grading yet (after user submits for that card)
+        if (isSubmitted && !isPracticeTestActive) { 
+             className += ' submitted';
+        }
     }
     return className;
   };
 
   const isErrorQuestion = !!questionData.error;
-  
-  const canShowExplanationButton = 
+
+  const canShowExplanationButton =
     !!explanation.html_content &&
     (isReviewMode || isTemporarilyRevealed || (!isPracticeTestActive && isSubmitted));
-    
+
   const shouldRenderExplanationContent = canShowExplanationButton && showExplanation;
 
 
@@ -126,11 +121,11 @@ function QuestionCard({
                   type="radio"
                   name={`question-${questionIndex}`}
                   value={option.label}
-                  checked={selectedOption === option.label && !crossedOffOptions.has(option.label)}
-                  readOnly 
+                  checked={selectedOption === option.label && !crossedOffOptions.has(option.label)} // This correctly reflects selection
+                  readOnly
                   disabled={
                     (isPracticeTestActive ? false : isSubmitted) || // For PT, options remain clickable until test ends
-                    isReviewMode || 
+                    isReviewMode ||
                     crossedOffOptions.has(option.label) ||
                     isTemporarilyRevealed // QBank specific
                   }
@@ -150,11 +145,11 @@ function QuestionCard({
            <div className="action-buttons">
             {canShowExplanationButton && (
               <button onClick={() => onToggleExplanation(questionIndex)} className="explanation-button">
-                {showExplanation ? 'Hide' : 'Show'} Explanation 
+                {showExplanation ? 'Hide' : 'Show'} Explanation
               </button>
             )}
           </div>
-          
+
           {shouldRenderExplanationContent && (
             <div className="explanation-section">
               <h3 className="explanation-title">Explanation</h3>
