@@ -272,3 +272,20 @@ mark.custom-highlight {
   padding: 0; 
   margin: 0;
 }
+.prometric-transition-overlay {
+  position: fixed; /* Cover the whole viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary); /* Use page background to simulate content 'disappearing' then 'reappearing' */
+  /* For a more traditional overlay effect, you could use:
+  /* background-color: rgba(0, 0, 0, 0.3); */
+  /* backdrop-filter: blur(2px); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000; /* Ensure it's on top of everything */
+  opacity: 1; /* Start fully visible */
+  pointer-events: none; /* Allow clicks to pass through if needed, though usually not for a full overlay */
+}
