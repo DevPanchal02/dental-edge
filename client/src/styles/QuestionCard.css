@@ -7,6 +7,7 @@
   box-shadow: var(--shadow-card);
   border: 1px solid var(--border-card-outline); /* Themed outline */
   color: var(--text-primary);
+  overflow: hidden; /* Contains the negatively-margined images */
 }
 
 .question-card.error-card {
@@ -35,43 +36,34 @@
 .option-html-content { display: inline; }
 .option-html-content p { display: inline; margin: 0; }
 
-/* Base styles for all images in the card */
 .question-html-content img,
 .option-html-content img,
 .explanation-html-content img {
   height: auto;
   display: block;
-  margin: 15px auto;
+  margin: 15px auto; /* This 'auto' is what centers the image */
   border-radius: 4px;
-  background-color: #FFFFFF; /* Always white for clarity */
+  background-color: #FFFFFF; /* Always white background for images for clarity */
   padding: 8px;
   border: 1px solid var(--border-primary);
   box-shadow: 0 1px 3px rgba(0,0,0,0.05);
   box-sizing: border-box;
 }
 
-/* --- Specific Image Size Overrides --- */
-
-/* Make question images larger by expanding into the card's padding */
 .question-html-content img {
-  max-width: 80%; 
-  width: calc(100% + 50px);
-  border-left: none; /* Remove side borders as it's now flush with the card's main border */
-  border-right: none;
-  border-radius: 0; /* Remove corner radius for a seamless edge-to-edge look */
+  width: 85rem;   /* Set a large, scalable width that respects zoom. */
+  max-width: 100%;  /* Add a safeguard for small screens. */
 }
 
 .explanation-html-content img {
-  max-width: 550px;
+  max-width: 34.375rem; /* 550px equivalent, scales with zoom */
 }
 
 .option-html-content img {
-  max-width: 200px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  max-width: 12.5rem; /* 200px equivalent, scales with zoom */
+  margin: 5px 0;
   padding: 4px;
 }
-
 
 .options-container { display: flex; flex-direction: column; gap: 8px; }
 
