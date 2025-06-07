@@ -60,6 +60,7 @@ function QuizPage() {
 
     const timerIntervalRef = useRef(null);
     const questionStartTimeRef = useRef(null);
+    const scrollTimeoutRef = useRef(null); // Ref for choppy scroll timeout
     
     const [isReviewMode, setIsReviewMode] = useState(false);
     const [reviewQuestionIndex, setReviewQuestionIndex] = useState(0);
@@ -419,8 +420,16 @@ function QuizPage() {
             const currentQData = allQuizQuestions[currentQuestionIndex];
             if (currentQData && !currentQData.error && currentQData.passage && currentQData.passage.html_content) {
                 setPassageHtml(cleanPassageHtml(currentQData.passage.html_content));
-            } else { setPassageHtml(null); }
-        } else { setPassageHtml(null); }
+                // Reset scroll position when question changes
+                if (passageContainerRef.current) {
+                    passageContainerRef.current.scrollTop = 0;
+                }
+            } else {
+                setPassageHtml(null);
+            }
+        } else {
+            setPassageHtml(null);
+        }
     }, [currentQuestionIndex, allQuizQuestions]);
 
     const toggleHighlight = useCallback(() => {
@@ -517,6 +526,46 @@ function QuizPage() {
         if (currentDebouncedHandler) document.addEventListener('selectionchange', currentDebouncedHandler);
         return () => { if (currentDebouncedHandler) document.removeEventListener('selectionchange', currentDebouncedHandler); };
     }, [handleActualSelectionChange]);
+
+    // **FIX**: Add isReviewSummaryVisible to dependency array to re-attach listener
+    useEffect(() => {
+        const passageEl = passageContainerRef.current;
+        const isChoppyScrollActive = 
+            topicId === 'reading-comprehension' &&
+            sectionType === 'practice' &&
+            !isReviewMode &&
+            practiceTestSettings.prometricDelay &&
+            !isReviewSummaryVisible; // Don't attach listener when summary is visible
+
+        const handlePassageScroll = (e) => {
+            if (!isChoppyScrollActive || !passageEl) return;
+            e.preventDefault();
+
+            if (scrollTimeoutRef.current) {
+                return; // Ignore new scroll events while a scroll is "pending"
+            }
+            
+            scrollTimeoutRef.current = setTimeout(() => {
+                const scrollAmount = e.deltaY > 0 ? 150 : -150; 
+                passageEl.scrollBy({ top: scrollAmount, behavior: 'auto' });
+                scrollTimeoutRef.current = null;
+            }, 800);
+        };
+
+        if (isChoppyScrollActive && passageEl) {
+            passageEl.addEventListener('wheel', handlePassageScroll, { passive: false });
+        }
+
+        return () => {
+            if (passageEl) {
+                passageEl.removeEventListener('wheel', handlePassageScroll);
+            }
+            if (scrollTimeoutRef.current) {
+                clearTimeout(scrollTimeoutRef.current);
+            }
+        };
+    }, [topicId, sectionType, isReviewMode, practiceTestSettings.prometricDelay, passageHtml, isReviewSummaryVisible]);
+
 
     const handleContainerClick = useCallback((event) => {
         const { 
