@@ -1,0 +1,49 @@
+
+.exhibit-container {
+    position: fixed;
+    z-index: 1500;
+    cursor: move;
+    line-height: 0; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25); 
+    border-radius: 6px;
+    
+    /* Increased padding for more perimeter space */
+    background-color: #FFFFFF;
+    padding: 7px; 
+}
+
+.exhibit-container img {
+    display: block;
+    width: 510px; 
+    height: auto;
+    user-select: none; 
+    pointer-events: none; 
+    border-radius: 3px;
+}
+
+.exhibit-close-btn-img {
+    position: absolute;
+    /* Positioned within the new larger perimeter */
+    top: 1px;      
+    right: 1px;
+    width: 22px;   /* Smaller button size */
+    height: 22px;
+    background: transparent;
+    border: none;
+    color: var(--bg-button-danger); /* Red by default */
+    font-family: 'Verdana', sans-serif;
+    font-size: 1.4rem;   /* Adjusted font size for new button dimensions */
+    font-weight: bold;   /* Bolder/thicker 'x' */
+    line-height: 22px;   /* Match height to keep it centered */
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1501;
+    text-shadow: none; 
+    transition: all 0.2s ease-in-out;
+}
+
+.exhibit-close-btn-img:hover {
+    text-shadow: 0 0 7px var(--bg-button-danger);
+    transform: scale(1.1);
+}

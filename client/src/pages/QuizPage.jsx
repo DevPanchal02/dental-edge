@@ -1,10 +1,11 @@
-// FILE: client/src/pages/QuizPage.jsx
+
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getQuizData, getQuizMetadata, formatDisplayName } from '../data/loader';
 import QuestionCard from '../components/QuestionCard';
 import QuizReviewSummary from '../components/QuizReviewSummary';
 import PracticeTestOptions from '../components/PracticeTestOptions';
+import Exhibit from '../components/Exhibit';
 import { useLayout } from '../context/LayoutContext';
 import '../styles/QuizPage.css';
 
@@ -101,6 +102,8 @@ function QuizPage() {
     const [isNavActionInProgress, setIsNavActionInProgress] = useState(false);
     const activeNavTimeoutsRef = useRef(new Set());
 
+    const [isExhibitVisible, setIsExhibitVisible] = useState(false);
+
 
     const latestStateRef = useRef({});
     useEffect(() => {
@@ -117,11 +120,12 @@ function QuizPage() {
             sectionType, 
             isMounted: isMountedRef.current,
             isLoading,
+            isExhibitVisible, // Add exhibit state to ref
         };
     }, [
         isReviewMode, hasPracticeTestStarted, isPracticeOptionsModalOpen, isNavActionInProgress, 
         practiceTestSettings, currentQuestionIndex, allQuizQuestions.length, tempReveal, 
-        submittedAnswers, sectionType, isLoading
+        submittedAnswers, sectionType, isLoading, isExhibitVisible
     ]);
 
     const getQuizStateKey = useCallback(() => {
@@ -654,6 +658,10 @@ function QuizPage() {
         }
     }, [currentQuestionIndex, allQuizQuestions, submittedAnswers, tempReveal, isReviewSummaryVisible]); // isNavActionInProgress & isLoading from latestStateRef
 
+    const toggleExhibit = useCallback(() => {
+        setIsExhibitVisible(prev => !prev);
+    }, []);
+
     const toggleSolutionReveal = useCallback(() => {
         if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
         if (latestStateRef.current.sectionType === 'qbank' && !latestStateRef.current.isReviewMode && latestStateRef.current.allQuizQuestionsLength > 0 && allQuizQuestions[latestStateRef.current.currentQuestionIndex] && !allQuizQuestions[latestStateRef.current.currentQuestionIndex].error ) {
@@ -676,7 +684,19 @@ function QuizPage() {
 
     useEffect(() => {
         const handleKeyPress = (event) => {
+            const isChemistryQuiz = topicId === 'chemistry';
+            if (isChemistryQuiz && (event.key === 'e' || event.key === 'E')) {
+                if (!event.ctrlKey && !event.metaKey && !event.altKey) {
+                    event.preventDefault();
+                    executeWithDelay(toggleExhibit, true); // Apply delay
+                    return;
+                }
+            }
+
             if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isReviewSummaryVisible || latestStateRef.current.isPracticeOptionsModalOpen || latestStateRef.current.isNavActionInProgress) return; 
+            const isTextInput = event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA' || event.target.isContentEditable;
+            if (isTextInput) return;
+            
             if ((event.key === 's' || event.key === 'S') && !event.ctrlKey && !event.metaKey && !event.altKey) {
                 event.preventDefault();
                 toggleSolutionReveal();
@@ -684,7 +704,7 @@ function QuizPage() {
         };
         window.addEventListener('keydown', handleKeyPress);
         return () => { window.removeEventListener('keydown', handleKeyPress); };
-    }, [toggleSolutionReveal]); // isNavActionInProgress from latestStateRef
+    }, [toggleSolutionReveal, toggleExhibit, topicId, executeWithDelay]); // Added executeWithDelay
 
     const handleOptionSelect = useCallback((questionIndex, optionLabel) => { 
         if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
@@ -790,7 +810,10 @@ function QuizPage() {
     const handleSubmitAndNavigate = useCallback(() => {
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
-    
+            
+            if (latestStateRef.current.isExhibitVisible) {
+                setIsExhibitVisible(false);
+            }
             submitAnswerForIndex(cqIdx);
     
             if (lTempReveal[cqIdx] && !lIsReviewMode) {
@@ -818,6 +841,9 @@ function QuizPage() {
         const currentQ = allQuizQuestions[currentQuestionIndex];
         if (currentQ && currentQ.error) {
              executeWithDelay(() => {
+                if (latestStateRef.current.isExhibitVisible) {
+                    setIsExhibitVisible(false);
+                }
                 if (currentQuestionIndex < allQuizQuestions.length - 1) {
                     setCurrentQuestionIndex(currentQuestionIndex + 1);
                 } else {
@@ -833,6 +859,10 @@ function QuizPage() {
     const handlePrevious = useCallback(() => { 
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
+            
+            if (latestStateRef.current.isExhibitVisible) {
+                setIsExhibitVisible(false);
+            }
             if (cqIdx > 0) {
                 if (lTempReveal[cqIdx] && !lIsReviewMode) {
                     setTempReveal(prev => ({ ...prev, [cqIdx]: false }));
@@ -948,6 +978,12 @@ function QuizPage() {
 
     return (
         <div className="quiz-page-container" ref={quizPageContainerRef} onClick={handleContainerClick} style={quizPageContainerActiveStyle}>
+            {topicId === 'chemistry' && (
+                <Exhibit
+                    isVisible={isExhibitVisible}
+                    onClose={toggleExhibit}
+                />
+            )}
             <button ref={highlightButtonRef} className="highlight-popup-button" style={{ display: 'none' }} onClick={toggleHighlight} onMouseDown={(e) => e.preventDefault()}> Highlight </button>
             {isReviewSummaryVisible ? (
                 <QuizReviewSummary
@@ -1010,12 +1046,25 @@ function QuizPage() {
                             )}
                         </div>
                         <div className="nav-group-right">
-                            {!isReviewMode && !isCurrentQuestionError && hasPracticeTestStarted && ( 
-                                <button onClick={() => handleToggleMark(currentQuestionIndex)} className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`} title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}> {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'} </button>
+                            {!isReviewMode && hasPracticeTestStarted && (
+                                <>
+                                    {!isCurrentQuestionError && (
+                                        <button onClick={() => handleToggleMark(currentQuestionIndex)} className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`} title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}>
+                                            {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
+                                        </button>
+                                    )}
+
+                                    {topicId === 'chemistry' && (
+                                        <button onClick={() => executeWithDelay(toggleExhibit, true)} className="nav-button exhibit-button">
+                                            Exhibit
+                                        </button>
+                                    )}
+
+                                    <button onClick={handleOpenReviewSummary} className="nav-button review-button-bottom">
+                                        Review
+                                    </button>
+                                </>
                             )}
-                            {(!hasPracticeTestStarted || isReviewMode || isCurrentQuestionError) && <div className="mark-button-nav-placeholder"></div>}
-                            {!isReviewMode && hasPracticeTestStarted && ( <button onClick={handleOpenReviewSummary} className="nav-button review-button-bottom"> Review </button> )}
-                            {(!hasPracticeTestStarted || isReviewMode) && <div className="review-button-bottom-placeholder"></div>}
                         </div>
                     </div>
                 </>

@@ -1,5 +1,3 @@
-/* FILE: client/src/styles/QuizPage.css */
-
 .quiz-page-container {
   margin: 0 auto; 
   padding: 20px;
@@ -158,6 +156,7 @@ body.light-mode .passage-content img { background-color: #fff; }
 .nav-group-right {
   display: flex;
   align-items: center;
+  gap: 12px;
 }
 
 .nav-group-left { justify-content: flex-start; flex: 1; }
@@ -171,7 +170,7 @@ body.light-mode .passage-content img { background-color: #fff; }
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   white-space: nowrap;
-  margin: 0 6px;
+  /* margin: 0 6px; -- Replaced by gap on parent */
   border: 1px solid transparent; 
   min-width: 85px;
   text-align: center;
@@ -221,19 +220,23 @@ body.light-mode .passage-content img { background-color: #fff; }
 .mark-button-nav.marked:hover:not(:disabled) { background-color: var(--bg-button-warning-hover); }
 
 
-.review-button-bottom {
+.review-button-bottom,
+.exhibit-button {
   background-color: var(--bg-button-secondary);
   color: var(--text-on-button-secondary);
   border-color: var(--bg-button-secondary);
 }
-.review-button-bottom:hover:not(:disabled) { background-color: var(--bg-button-secondary-hover); }
+.review-button-bottom:hover:not(:disabled),
+.exhibit-button:hover:not(:disabled) {
+  background-color: var(--bg-button-secondary-hover);
+}
 
 .mark-button-nav-placeholder,
 .review-button-bottom-placeholder,
 .solution-toggle-button-bottom-placeholder {
   min-width: 85px; 
   height: 40px;
-  margin: 0 6px;
+  /* margin: 0 6px; -- Replaced by gap */
   visibility: hidden;
   display: inline-block; 
 }
