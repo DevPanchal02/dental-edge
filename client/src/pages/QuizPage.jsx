@@ -787,41 +787,48 @@ function QuizPage() {
     }, [executeWithDelay]);
 
 
-    const handleSubmitAndNavigate = useCallback(() => { 
+    const handleSubmitAndNavigate = useCallback(() => {
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
-            
-            const submissionResult = submitAnswerForIndex(cqIdx);
-
+    
+            submitAnswerForIndex(cqIdx);
+    
             if (lTempReveal[cqIdx] && !lIsReviewMode) {
                 setTempReveal(prev => ({ ...prev, [cqIdx]: false }));
             }
+    
             if (cqIdx < aqLength - 1) {
                 const nextIndex = cqIdx + 1;
                 setCurrentQuestionIndex(nextIndex);
-                setTempReveal(prev => ({ ...prev, [nextIndex]: false })); 
+                setTempReveal(prev => ({ ...prev, [nextIndex]: false }));
                 if (lSectionType === 'practice' && !lIsReviewMode) {
                     setShowExplanation(prev => ({ ...prev, [nextIndex]: false }));
-                } else if (lSubmittedAnswers[nextIndex]) { 
-                     setShowExplanation(prev => ({ ...prev, [nextIndex]: true })); 
-                } else { 
-                     setShowExplanation(prev => ({ ...prev, [nextIndex]: false }));
+                } else if (lSubmittedAnswers[nextIndex]) {
+                    setShowExplanation(prev => ({ ...prev, [nextIndex]: true }));
+                } else {
+                    setShowExplanation(prev => ({ ...prev, [nextIndex]: false }));
                 }
             } else {
-                 handleFinishQuizRef.current(false); 
+                // If it's the last question, open the review summary page.
+                setIsReviewSummaryVisible(true);
+                setCurrentQuestionIndexBeforeReview(cqIdx);
             }
         };
+    
         const currentQ = allQuizQuestions[currentQuestionIndex];
         if (currentQ && currentQ.error) {
              executeWithDelay(() => {
                 if (currentQuestionIndex < allQuizQuestions.length - 1) {
                     setCurrentQuestionIndex(currentQuestionIndex + 1);
-                } else { handleFinishQuizRef.current(false); }
+                } else {
+                    setIsReviewSummaryVisible(true);
+                    setCurrentQuestionIndexBeforeReview(currentQuestionIndex);
+                }
             });
         } else {
             executeWithDelay(actionFn);
         }
-    }, [allQuizQuestions, currentQuestionIndex, submitAnswerForIndex, executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation]);
+    }, [allQuizQuestions, currentQuestionIndex, submitAnswerForIndex, executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
 
     const handlePrevious = useCallback(() => { 
         const actionFn = () => {
@@ -992,12 +999,14 @@ function QuizPage() {
                             )}
                         </div>
                         <div className="nav-group-center">
-                            {(isLastQuestion && hasPracticeTestStarted && !isReviewMode) ? ( 
-                                <button onClick={triggerFinishQuiz} className="nav-button submit-quiz-button" disabled={!hasPracticeTestStarted}> Finish Quiz </button>
-                            ) : isReviewMode && isLastQuestion ? ( 
-                                <button onClick={triggerFinishQuiz} className="nav-button submit-quiz-button" disabled={!hasPracticeTestStarted}> Back to Results </button>
-                            ) : ( 
-                                <button onClick={handleSubmitAndNavigate} className="nav-button next-button" disabled={!hasPracticeTestStarted || isCurrentQuestionError}> Next </button>
+                            {isReviewMode && isLastQuestion ? (
+                                <button onClick={triggerFinishQuiz} className="nav-button submit-quiz-button" disabled={!hasPracticeTestStarted}>
+                                    Back to Results
+                                </button>
+                            ) : (
+                                <button onClick={handleSubmitAndNavigate} className="nav-button next-button" disabled={!hasPracticeTestStarted || isCurrentQuestionError}>
+                                    Next
+                                </button>
                             )}
                         </div>
                         <div className="nav-group-right">
