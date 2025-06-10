@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { getQuizData, getQuizMetadata, formatDisplayName } from '../data/loader';
@@ -45,9 +44,9 @@ const formatTime = (totalSeconds) => {
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 };
 
-const MemoizedPassage = React.memo(function MemoizedPassage({ html, passageRef }) {
+const MemoizedPassage = React.memo(function MemoizedPassage({ html, passageRef, ...rest }) {
     if (!html) { return null; }
-    return ( <div className="passage-container" ref={passageRef} dangerouslySetInnerHTML={{ __html: html }} /> );
+    return ( <div className="passage-container" ref={passageRef} dangerouslySetInnerHTML={{ __html: html }} {...rest} /> );
 });
 
 const EMPTY_SET = new Set();
@@ -61,7 +60,7 @@ function QuizPage() {
 
     const timerIntervalRef = useRef(null);
     const questionStartTimeRef = useRef(null);
-    const scrollTimeoutRef = useRef(null); // Ref for choppy scroll timeout
+    const scrollTimeoutRef = useRef(null); 
     
     const [isReviewMode, setIsReviewMode] = useState(false);
     const [reviewQuestionIndex, setReviewQuestionIndex] = useState(0);
@@ -103,6 +102,7 @@ function QuizPage() {
     const activeNavTimeoutsRef = useRef(new Set());
 
     const [isExhibitVisible, setIsExhibitVisible] = useState(false);
+    const [highlightedHtml, setHighlightedHtml] = useState({}); // New state for highlights
 
 
     const latestStateRef = useRef({});
@@ -120,7 +120,7 @@ function QuizPage() {
             sectionType, 
             isMounted: isMountedRef.current,
             isLoading,
-            isExhibitVisible, // Add exhibit state to ref
+            isExhibitVisible, 
         };
     }, [
         isReviewMode, hasPracticeTestStarted, isPracticeOptionsModalOpen, isNavActionInProgress, 
@@ -142,6 +142,7 @@ function QuizPage() {
             isReviewSummaryVisible, currentQuestionIndexBeforeReview,
             hasPracticeTestStarted: latestStateRef.current.hasPracticeTestStarted, 
             practiceTestSettings,
+            highlightedHtml, // Save highlights
             crossedOffOptions: Object.fromEntries(
                 Object.entries(crossedOffOptions).map(([key, valueSet]) => [
                     key, Array.from(valueSet instanceof Set ? valueSet : new Set())
@@ -154,7 +155,7 @@ function QuizPage() {
         getQuizStateKey, currentQuestionIndex, userAnswers, submittedAnswers,
         userTimeSpent, timerValue, isCountdown, initialDuration, markedQuestions, tempReveal,
         showExplanation, crossedOffOptions, isReviewSummaryVisible, currentQuestionIndexBeforeReview,
-        practiceTestSettings, sectionType
+        practiceTestSettings, sectionType, highlightedHtml
     ]);
     const saveStateRef = useRef(saveState);
     useEffect(() => { saveStateRef.current = saveState; }, [saveState]);
@@ -224,6 +225,7 @@ function QuizPage() {
         setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
         setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
         setMarkedQuestions({}); setTempReveal({}); setIsReviewSummaryVisible(false); setCurrentQuestionIndexBeforeReview(0);
+        setHighlightedHtml({}); // Reset highlights
         if (sectionType === 'practice') {
             if (!quizMetadata) { 
                 setError("Failed to initialize practice test: essential data missing for timing.");
@@ -249,12 +251,10 @@ function QuizPage() {
 
 
     const executeWithDelay = useCallback((actionFn, isPageTransitionLike = true) => {
-        // This function now queues the action and its associated delay handling.
-        // The 'isNavActionInProgress' state is managed per timeout.
         if (!latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isReviewMode) {
              const isFinishingOrNavigatingBack = 
                 actionFn === handleFinishQuizRef.current || 
-                (typeof actionFn === 'function' && actionFn.toString().includes("navigate(")); // Crude check for navigate
+                (typeof actionFn === 'function' && actionFn.toString().includes("navigate("));
             if(!isFinishingOrNavigatingBack) return;
         }
     
@@ -263,21 +263,21 @@ function QuizPage() {
                                  latestStateRef.current.practiceTestSettings.prometricDelay;
     
         if (prometricShouldApply) {
-            setIsNavActionInProgress(true); // Indicate a delay has started for timer pausing
+            setIsNavActionInProgress(true);
             const timeoutId = setTimeout(() => {
                 if (latestStateRef.current.isMounted) {
-                    actionFn(); // Execute the actual state change / visual update
+                    actionFn();
                     activeNavTimeoutsRef.current.delete(timeoutId);
                     if (activeNavTimeoutsRef.current.size === 0) {
-                         setIsNavActionInProgress(false); // Only set to false if no other delays are pending
+                         setIsNavActionInProgress(false);
                     }
                 }
             }, 2000);
             activeNavTimeoutsRef.current.add(timeoutId);
         } else {
-            actionFn(); // Execute immediately if no delay
+            actionFn();
         }
-    }, []); // Dependencies managed by latestStateRef
+    }, []); 
 
 
     // Effect 1: Route changes, core data fetching, and initial state reset
@@ -290,6 +290,7 @@ function QuizPage() {
         setTempReveal({}); setIsReviewSummaryVisible(false);
         setTimerValue(0); setIsTimerActive(false); 
         setPracticeTestSettings({ prometricDelay: false, additionalTime: false });
+        setHighlightedHtml({}); // Reset highlights on route change
         
         activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
         activeNavTimeoutsRef.current.clear();
@@ -333,10 +334,10 @@ function QuizPage() {
         }
         if (isReviewMode) { 
             const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
-            const savedResults = localStorage.getItem(resultsKey);
-            if (savedResults) {
+            const savedResultsString = localStorage.getItem(resultsKey);
+            if (savedResultsString) {
                 try {
-                    const parsedResults = JSON.parse(savedResults);
+                    const parsedResults = JSON.parse(savedResultsString);
                     setUserAnswers(parsedResults.userAnswers || {});
                     setMarkedQuestions(parsedResults.markedQuestions || {});
                     const allSubmitted = {};
@@ -347,6 +348,19 @@ function QuizPage() {
                     setPracticeTestSettings(parsedResults.practiceTestSettings || { prometricDelay: false, additionalTime: false });
                 } catch (e) { console.error("Error parsing results for review:", e); }
             }
+            // For review mode, we still need to check for locally stored highlights.
+            const savedStateString = localStorage.getItem(getQuizStateKey());
+            if (savedStateString) {
+                try {
+                    const savedState = JSON.parse(savedStateString);
+                    setHighlightedHtml(savedState.highlightedHtml || {});
+                } catch(e) {
+                     setHighlightedHtml({});
+                }
+            } else {
+                 setHighlightedHtml({});
+            }
+            
             setHasPracticeTestStarted(true); 
             setIsPracticeOptionsModalOpen(false);
             setIsTimerActive(false); setTimerValue(0); setIsCountdown(false);
@@ -357,6 +371,7 @@ function QuizPage() {
                 try {
                     const savedState = JSON.parse(savedStateString);
                     setPracticeTestSettings(savedState.practiceTestSettings || { prometricDelay: false, additionalTime: false });
+                    setHighlightedHtml(savedState.highlightedHtml || {}); // Load highlights
                     if (sectionType === 'practice' && !savedState.hasPracticeTestStarted) {
                         setIsPracticeOptionsModalOpen(true); setHasPracticeTestStarted(false);
                     } else {
@@ -423,8 +438,11 @@ function QuizPage() {
         if (allQuizQuestions && allQuizQuestions.length > 0 && currentQuestionIndex >= 0 && currentQuestionIndex < allQuizQuestions.length) {
             const currentQData = allQuizQuestions[currentQuestionIndex];
             if (currentQData && !currentQData.error && currentQData.passage && currentQData.passage.html_content) {
-                setPassageHtml(cleanPassageHtml(currentQData.passage.html_content));
-                // Reset scroll position when question changes
+                // Set original clean passage HTML. Rendering will decide to use this or highlighted version.
+                const cleanHtml = cleanPassageHtml(currentQData.passage.html_content)
+                if (passageHtml !== cleanHtml) {
+                    setPassageHtml(cleanHtml);
+                }
                 if (passageContainerRef.current) {
                     passageContainerRef.current.scrollTop = 0;
                 }
@@ -436,8 +454,22 @@ function QuizPage() {
         }
     }, [currentQuestionIndex, allQuizQuestions]);
 
+    const updateHighlightedContent = useCallback((element) => {
+        if (element && element.dataset && element.dataset.contentKey) {
+            const key = element.dataset.contentKey;
+            if (!key || key.includes('undefined')) {
+                console.warn("Attempted to save highlight with an invalid key:", key);
+                return;
+            }
+            const newHtml = element.innerHTML;
+            setHighlightedHtml(prev => ({ ...prev, [key]: newHtml }));
+            // Save state immediately after a highlight change
+            setTimeout(() => saveStateRef.current(), 0);
+        }
+    }, []);
+
     const toggleHighlight = useCallback(() => {
-        if (latestStateRef.current.isReviewMode || latestStateRef.current.isNavActionInProgress || !highlightButtonRef.current || !highlightButtonRef.current._selectionRange) {
+        if (latestStateRef.current.isNavActionInProgress || !highlightButtonRef.current || !highlightButtonRef.current._selectionRange) {
             if(highlightButtonRef.current) highlightButtonRef.current.style.display = 'none';
             return;
         }
@@ -451,13 +483,17 @@ function QuizPage() {
         }
         const mark = document.createElement('mark');
         mark.className = 'custom-highlight';
-        try { range.surroundContents(mark); } 
+        try {
+             range.surroundContents(mark);
+             const container = mark.closest('[data-content-key]');
+             updateHighlightedContent(container);
+        } 
         catch (e) { console.warn("[HL] toggleHighlight: range.surroundContents() failed. Error:", e); }
         highlightButtonRef.current.style.display = 'none';
         highlightButtonRef.current._selectionRange = null;
         const currentSelection = window.getSelection();
         if(currentSelection) currentSelection.removeAllRanges(); 
-    }, []); 
+    }, [updateHighlightedContent]); 
 
     const handleActualSelectionChange = useCallback(() => {
         const { 
@@ -466,7 +502,7 @@ function QuizPage() {
             isLoading: l_isLoading 
         } = latestStateRef.current;
 
-        if (l_isReviewMode || !l_hasPracticeTestStarted || l_isPracticeOptionsModalOpen || l_isNavActionInProgress || l_isLoading || !highlightButtonRef.current || !quizPageContainerRef.current ) {
+        if (!l_hasPracticeTestStarted || l_isPracticeOptionsModalOpen || l_isNavActionInProgress || l_isLoading || !highlightButtonRef.current || !quizPageContainerRef.current ) {
             const selection = window.getSelection();
             if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
                 if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
@@ -496,17 +532,9 @@ function QuizPage() {
             let commonAncestor = range.commonAncestorContainer;
             if (commonAncestor.nodeType === Node.TEXT_NODE) commonAncestor = commonAncestor.parentNode;
             
-            let highlightTargetElement = null;
-            const questionCardElement = quizPageContainerRef.current.querySelector('.question-card');
-            if (passageContainerRef.current && passageContainerRef.current.contains(commonAncestor)) {
-                highlightTargetElement = passageContainerRef.current;
-            } else if (questionCardElement) {
-                const questionContentElement = commonAncestor.closest('.question-html-content');
-                const optionContentElement = commonAncestor.closest('.option-html-content');
-                if (questionContentElement && questionCardElement.contains(questionContentElement)) highlightTargetElement = questionContentElement;
-                else if (optionContentElement && questionCardElement.contains(optionContentElement)) highlightTargetElement = optionContentElement;
-            }
-            if (highlightTargetElement && range.toString().trim() !== "") {
+            const targetContainer = commonAncestor.closest('[data-content-key]');
+            
+            if (targetContainer && range.toString().trim() !== "") {
                 const rect = range.getBoundingClientRect();
                 const mainContainerRect = quizPageContainerRef.current.getBoundingClientRect();
                 const buttonTop = rect.top - mainContainerRect.top + quizPageContainerRef.current.scrollTop - 35; 
@@ -531,7 +559,6 @@ function QuizPage() {
         return () => { if (currentDebouncedHandler) document.removeEventListener('selectionchange', currentDebouncedHandler); };
     }, [handleActualSelectionChange]);
 
-    // **FIX**: Add isReviewSummaryVisible to dependency array to re-attach listener
     useEffect(() => {
         const passageEl = passageContainerRef.current;
         const isChoppyScrollActive = 
@@ -539,14 +566,14 @@ function QuizPage() {
             sectionType === 'practice' &&
             !isReviewMode &&
             practiceTestSettings.prometricDelay &&
-            !isReviewSummaryVisible; // Don't attach listener when summary is visible
+            !isReviewSummaryVisible; 
 
         const handlePassageScroll = (e) => {
             if (!isChoppyScrollActive || !passageEl) return;
             e.preventDefault();
 
             if (scrollTimeoutRef.current) {
-                return; // Ignore new scroll events while a scroll is "pending"
+                return; 
             }
             
             scrollTimeoutRef.current = setTimeout(() => {
@@ -573,43 +600,35 @@ function QuizPage() {
 
     const handleContainerClick = useCallback((event) => {
         const { 
-            isReviewMode: l_isReviewMode, hasPracticeTestStarted: l_hasPracticeTestStarted, 
-            isPracticeOptionsModalOpen: l_isPracticeOptionsModalOpen, isNavActionInProgress: l_isNavActionInProgress, 
-            isLoading: l_isLoading 
+            hasPracticeTestStarted: l_hasPracticeTestStarted, isPracticeOptionsModalOpen: l_isPracticeOptionsModalOpen, 
+            isNavActionInProgress: l_isNavActionInProgress, isLoading: l_isLoading 
         } = latestStateRef.current;
-        if (l_isReviewMode || !l_hasPracticeTestStarted || l_isPracticeOptionsModalOpen || l_isNavActionInProgress || l_isLoading || !quizPageContainerRef.current) return;
+        if (!l_hasPracticeTestStarted || l_isPracticeOptionsModalOpen || l_isNavActionInProgress || l_isLoading || !quizPageContainerRef.current) return;
         
         const clickedElement = event.target;
         if (highlightButtonRef.current && highlightButtonRef.current.contains(clickedElement)) return; 
         
         const markElement = clickedElement.closest('mark.custom-highlight');
-        if (markElement && quizPageContainerRef.current.contains(markElement)) {
-            let isInValidArea = false;
-            const parentPassage = markElement.closest('.passage-container');
-            const parentQuestion = markElement.closest('.question-html-content');
-            const parentOption = markElement.closest('.option-html-content');
+        const containerWithKey = clickedElement.closest('[data-content-key]');
 
-            if (parentPassage && passageContainerRef.current && passageContainerRef.current.contains(markElement)) isInValidArea = true;
-            else if (parentQuestion && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentQuestion)) isInValidArea = true;
-            else if (parentOption && quizPageContainerRef.current.querySelector('.question-card')?.contains(parentOption)) isInValidArea = true;
-            
-            if (isInValidArea) {
-                const parentOfMark = markElement.parentNode;
-                if (parentOfMark) {
-                    while (markElement.firstChild) parentOfMark.insertBefore(markElement.firstChild, markElement);
-                    parentOfMark.removeChild(markElement);
-                    parentOfMark.normalize();
-                }
-                if (highlightButtonRef.current) {
-                    highlightButtonRef.current.style.display = 'none';
-                    highlightButtonRef.current._selectionRange = null;
-                }
-                const selection = window.getSelection();
-                if (selection) selection.removeAllRanges();
-                event.stopPropagation(); 
-                return; 
+        if (markElement && containerWithKey) {
+            const parentOfMark = markElement.parentNode;
+            if (parentOfMark) {
+                while (markElement.firstChild) parentOfMark.insertBefore(markElement.firstChild, markElement);
+                parentOfMark.removeChild(markElement);
+                parentOfMark.normalize();
+                updateHighlightedContent(containerWithKey);
             }
+            if (highlightButtonRef.current) {
+                highlightButtonRef.current.style.display = 'none';
+                highlightButtonRef.current._selectionRange = null;
+            }
+            const selection = window.getSelection();
+            if (selection) selection.removeAllRanges();
+            event.stopPropagation(); 
+            return; 
         }
+        
         if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
              const selection = window.getSelection();
              if (!selection || selection.isCollapsed || selection.rangeCount === 0 || selection.toString().trim() === "") {
@@ -618,7 +637,7 @@ function QuizPage() {
                 if (selection) selection.removeAllRanges();
              }
         }
-    }, []); 
+    }, [updateHighlightedContent]); 
 
 
     useEffect(() => {
@@ -644,7 +663,7 @@ function QuizPage() {
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
         }
         return () => { if (timerIntervalRef.current) clearInterval(timerIntervalRef.current); };
-    }, [isTimerActive, isCountdown]); // isNavActionInProgress from latestStateRef
+    }, [isTimerActive, isCountdown]); 
 
 
     useEffect(() => {
@@ -656,7 +675,7 @@ function QuizPage() {
                 questionStartTimeRef.current = null;
             }
         }
-    }, [currentQuestionIndex, allQuizQuestions, submittedAnswers, tempReveal, isReviewSummaryVisible]); // isNavActionInProgress & isLoading from latestStateRef
+    }, [currentQuestionIndex, allQuizQuestions, submittedAnswers, tempReveal, isReviewSummaryVisible]); 
 
     const toggleExhibit = useCallback(() => {
         setIsExhibitVisible(prev => !prev);
@@ -680,7 +699,7 @@ function QuizPage() {
             });
             setShowExplanation(prevExp => ({ ...prevExp, [qIndex]: !tempReveal[qIndex] }));
         }
-    }, [allQuizQuestions, setUserTimeSpent, setShowExplanation]); // Other dependencies via latestStateRef
+    }, [allQuizQuestions, setUserTimeSpent, setShowExplanation]); 
 
     useEffect(() => {
         const handleKeyPress = (event) => {
@@ -688,7 +707,7 @@ function QuizPage() {
             if (isChemistryQuiz && (event.key === 'e' || event.key === 'E')) {
                 if (!event.ctrlKey && !event.metaKey && !event.altKey) {
                     event.preventDefault();
-                    executeWithDelay(toggleExhibit, true); // Apply delay
+                    executeWithDelay(toggleExhibit, true);
                     return;
                 }
             }
@@ -704,7 +723,7 @@ function QuizPage() {
         };
         window.addEventListener('keydown', handleKeyPress);
         return () => { window.removeEventListener('keydown', handleKeyPress); };
-    }, [toggleSolutionReveal, toggleExhibit, topicId, executeWithDelay]); // Added executeWithDelay
+    }, [toggleSolutionReveal, toggleExhibit, topicId, executeWithDelay]);
 
     const handleOptionSelect = useCallback((questionIndex, optionLabel) => { 
         if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
@@ -717,7 +736,7 @@ function QuizPage() {
             canSelectOption = !latestStateRef.current.submittedAnswers[questionIndex] && !latestStateRef.current.isReviewMode && !latestStateRef.current.tempReveal[questionIndex] && !crossedOffOptions[questionIndex]?.has(optionLabel);
         }
         if (canSelectOption) setUserAnswers((prev) => ({ ...prev, [questionIndex]: optionLabel }));
-    }, [crossedOffOptions]); // Other deps from latestStateRef
+    }, [crossedOffOptions]); 
 
     const submitAnswerForIndex = useCallback((questionIndex) => { 
         if (!latestStateRef.current.hasPracticeTestStarted) return 'test_not_started'; 
@@ -748,7 +767,7 @@ function QuizPage() {
             return true; 
         }
         return 'no_answer_selected';  
-    }, [allQuizQuestions, userAnswers, userTimeSpent]); // Other deps from latestStateRef
+    }, [allQuizQuestions, userAnswers, userTimeSpent]); 
 
     const toggleExplanation = useCallback((questionIndex) => { 
         if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
@@ -762,7 +781,7 @@ function QuizPage() {
              setTempReveal(prev => ({...prev, [questionIndex]: !currentShowExplanationForQuestion }));
         }
         setShowExplanation((prev) => ({ ...prev, [questionIndex]: !prev[questionIndex] }));
-    }, [allQuizQuestions, showExplanation]); // Other deps from latestStateRef
+    }, [allQuizQuestions, showExplanation]); 
 
     const handleToggleCrossOff = useCallback((questionIndex, optionLabel) => { 
         if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
@@ -787,7 +806,7 @@ function QuizPage() {
             });
             setTimeout(() => saveStateRef.current(), 0);
         }
-    }, [userAnswers]); // Other deps from latestStateRef
+    }, [userAnswers]); 
 
     const handleToggleMark = useCallback((questionIndex) => {
         if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isReviewMode || latestStateRef.current.isNavActionInProgress) return;
@@ -801,7 +820,6 @@ function QuizPage() {
             setTimeout(() => saveStateRef.current(), 0);
         };
         
-        // Apply Prometric delay for the mark action itself
         executeWithDelay(actionFn, true);
     
     }, [executeWithDelay]);
@@ -832,7 +850,6 @@ function QuizPage() {
                     setShowExplanation(prev => ({ ...prev, [nextIndex]: false }));
                 }
             } else {
-                // If it's the last question, open the review summary page.
                 setIsReviewSummaryVisible(true);
                 setCurrentQuestionIndexBeforeReview(cqIdx);
             }
@@ -894,7 +911,6 @@ function QuizPage() {
         const actionFn = () => {
             setIsReviewSummaryVisible(false);
         };
-        // Explicitly set isPageTransitionLike to false to bypass Prometric delay
         executeWithDelay(actionFn, false);
     }, [executeWithDelay]);
 
@@ -921,8 +937,6 @@ function QuizPage() {
                 setIsReviewSummaryVisible(false); 
             }
          };
-        // Only Review Options (Marked, All, Incomplete) from summary use executeWithDelay.
-        // Direct table jumps are immediate.
         if(fromSummaryTable) {
             actionFn();
         } else {
@@ -934,8 +948,6 @@ function QuizPage() {
         executeWithDelay(() => handleFinishQuizRef.current(false));
     }, [executeWithDelay]);
 
-
-    // --- Render Logic ---
     const quizPageContainerActiveStyle = {
         marginLeft: isSidebarEffectivelyPinned ? '250px' : '0',
         width: isSidebarEffectivelyPinned ? `calc(100% - 250px)` : '100%',
@@ -965,6 +977,8 @@ function QuizPage() {
     if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { return <div className="page-info"> No questions found for this quiz. Please check data files. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
     const currentQuestionData = allQuizQuestions[currentQuestionIndex];
     if (!isReviewSummaryVisible && (hasPracticeTestStarted || isReviewMode) && !currentQuestionData && allQuizQuestions.length > 0) { return <div className="page-error">Error: Could not load current question data. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
+    
+    const passageContentKey = passageHtml && currentQuestionData ? `passage_${currentQuestionData.category}` : null;
 
     const isPracticeTestActive = sectionType === 'practice' && !isReviewMode && hasPracticeTestStarted; 
     const cardIsSubmittedState = (isPracticeTestActive && !!submittedAnswers[currentQuestionIndex]) || (!isPracticeTestActive && (!!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex])); 
@@ -998,7 +1012,7 @@ function QuizPage() {
                 <>
                     <div className="quiz-header">
                         <button 
-                            onClick={() => { // No executeWithDelay for this specific back button
+                            onClick={() => {
                                 if (isReviewMode) navigate(`/results/${topicId}/${sectionType}/${quizId}`);
                                 else navigate(`/topic/${topicId}`);
                             }}  
@@ -1009,7 +1023,13 @@ function QuizPage() {
                         <div className="quiz-title-container"><h1 className="quiz-title">{quizMetadata?.fullNameForDisplay || 'Quiz'}</h1></div>
                         <p className="quiz-progress">Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay}</p>
                     </div>
-                    {passageHtml && topicId !== 'reading-comprehension' && ( <MemoizedPassage html={passageHtml} passageRef={passageContainerRef} /> )}
+                    {passageHtml && topicId !== 'reading-comprehension' && ( 
+                        <MemoizedPassage
+                            html={passageContentKey && highlightedHtml[passageContentKey] !== undefined ? highlightedHtml[passageContentKey] : passageHtml}
+                            passageRef={passageContainerRef}
+                            data-content-key={passageContentKey}
+                        /> 
+                    )}
                     <div className="quiz-controls-top">
                         {(!isReviewMode && hasPracticeTestStarted) && ( <div className="timer-display">{timerDisplayComponent}</div> )}
                         {(isReviewMode || !hasPracticeTestStarted) && <div className="timer-display-placeholder"></div>}
@@ -1022,10 +1042,19 @@ function QuizPage() {
                                 userTimeSpentOnQuestion={userTimeSpent[currentQuestionIndex]} isReviewMode={isReviewMode} isMarked={currentIsMarkedForCard}
                                 onOptionSelect={handleOptionSelect} onToggleExplanation={toggleExplanation} onToggleCrossOff={handleToggleCrossOff} onToggleMark={handleToggleMark}
                                 isTemporarilyRevealed={!!tempReveal[currentQuestionIndex]} isPracticeTestActive={isPracticeTestActive}
+                                highlightedHtml={highlightedHtml}
                             />
                         )}
                     </div>
-                    {passageHtml && topicId === 'reading-comprehension' && ( <div className="passage-wrapper-below" style={{ marginTop: '20px' }}> <MemoizedPassage html={passageHtml} passageRef={passageContainerRef} /> </div> )}
+                    {passageHtml && topicId === 'reading-comprehension' && ( 
+                        <div className="passage-wrapper-below" style={{ marginTop: '20px' }}> 
+                            <MemoizedPassage
+                                html={passageContentKey && highlightedHtml[passageContentKey] !== undefined ? highlightedHtml[passageContentKey] : passageHtml}
+                                passageRef={passageContainerRef}
+                                data-content-key={passageContentKey}
+                            /> 
+                        </div> 
+                    )}
                     
                     <div className="quiz-navigation" style={sharedFixedFooterStyle}>
                         <div className="nav-group-left">

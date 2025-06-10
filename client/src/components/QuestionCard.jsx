@@ -1,10 +1,9 @@
-// FILE: client/src/components/QuestionCard.jsx
 import React from 'react';
 import '../styles/QuestionCard.css';
 
-// Memoized component for rendering HTML content
-const HtmlRenderer = React.memo(function HtmlRenderer({ htmlString, className }) {
-  return <div className={className} dangerouslySetInnerHTML={{ __html: htmlString || '<p>Content missing.</p>' }} />;
+// Memoized component for rendering HTML content, updated to pass through extra props
+const HtmlRenderer = React.memo(function HtmlRenderer({ htmlString, className, ...rest }) {
+  return <div className={className} dangerouslySetInnerHTML={{ __html: htmlString || '<p>Content missing.</p>' }} {...rest} />;
 });
 
 
@@ -25,10 +24,10 @@ function QuestionCard({
   onToggleMark,
   isTemporarilyRevealed, // For QBank "Show Solution"
   isPracticeTestActive,  // New prop: true if it's an active (not review) practice test
+  highlightedHtml,       // New prop for persistent highlights
 }) {
 
    if (!questionData || typeof questionData !== 'object' || questionData === null) {
-     // console.warn(`[QuestionCard] Invalid question data at index ${questionIndex}:`, questionData);
      return ( <div className="question-card error-card"><p className="error-message">Error displaying Question {questionIndex + 1}: Invalid data format.</p></div> );
    }
    if (questionData.error) {
@@ -42,6 +41,12 @@ function QuestionCard({
       explanation = { html_content: '<p>Explanation not available.</p>' },
       analytics = { percent_correct: 'N/A', time_spent: 'N/A' }
   } = questionData;
+
+  const getDisplayHtml = (originalHtml, contentKey) => {
+    return highlightedHtml && highlightedHtml[contentKey] !== undefined
+      ? highlightedHtml[contentKey]
+      : originalHtml;
+  };
 
   const handleSelect = (optionLabel) => {
     const trulySubmitted = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
@@ -65,25 +70,19 @@ function QuestionCard({
 
     const isThisOptionSelected = option.label === selectedOption && !crossedOffOptions.has(option.label);
     
-    // Determine if grading styles (correct/incorrect) should be shown
     const showGradingStyles = isReviewMode || isTemporarilyRevealed || (!isPracticeTestActive && isSubmitted);
 
     if (showGradingStyles) {
-        className += ' submitted'; // General state for when grading is active
+        className += ' submitted'; 
         if (option.is_correct) {
             className += ' correct';
-        } else if (isThisOptionSelected) { // If this *wrong* option was selected
+        } else if (isThisOptionSelected) { 
             className += ' incorrect';
         }
-        // If it's the correct answer and also selected, 'correct' takes precedence.
-        // If it's a wrong answer and selected, 'incorrect' is added.
-        // If it's a wrong answer and NOT selected, no extra grading style.
     } else {
-        // Active quiz state (not showing full grading)
         if (isThisOptionSelected) {
             className += ' selected';
         }
-        // For QBank, 'submitted' class can apply even if not showing full grading yet (after user submits for that card)
         if (isSubmitted && !isPracticeTestActive) { 
              className += ' submitted';
         }
@@ -106,7 +105,11 @@ function QuestionCard({
         <>
           <div className="question-content">
             <p className="question-number">Question {questionIndex + 1}</p>
-            <HtmlRenderer className="question-html-content" htmlString={question.html_content} />
+            <HtmlRenderer
+              className="question-html-content"
+              htmlString={getDisplayHtml(question.html_content, `question_${questionIndex}`)}
+              data-content-key={`question_${questionIndex}`}
+            />
           </div>
 
           <div className="options-container">
@@ -121,19 +124,23 @@ function QuestionCard({
                   type="radio"
                   name={`question-${questionIndex}`}
                   value={option.label}
-                  checked={selectedOption === option.label && !crossedOffOptions.has(option.label)} // This correctly reflects selection
+                  checked={selectedOption === option.label && !crossedOffOptions.has(option.label)}
                   readOnly
                   disabled={
-                    (isPracticeTestActive ? false : isSubmitted) || // For PT, options remain clickable until test ends
+                    (isPracticeTestActive ? false : isSubmitted) || 
                     isReviewMode ||
                     crossedOffOptions.has(option.label) ||
-                    isTemporarilyRevealed // QBank specific
+                    isTemporarilyRevealed
                   }
                   className="option-radio"
                 />
                 <span className="option-label-text">
                     <span className="option-letter">{option.label}</span>
-                    <HtmlRenderer className="option-html-content" htmlString={option.html_content} />
+                    <HtmlRenderer
+                      className="option-html-content"
+                      htmlString={getDisplayHtml(option.html_content, `option_${questionIndex}_${option.label}`)}
+                      data-content-key={`option_${questionIndex}_${option.label}`}
+                    />
                 </span>
                 {isSubmitted && (!isPracticeTestActive || isTemporarilyRevealed || isReviewMode) && option.percentage_selected && (
                      <span className="option-percentage">{option.percentage_selected}</span>
@@ -155,7 +162,11 @@ function QuestionCard({
               <h3 className="explanation-title">Explanation</h3>
               <div className="explanation-content">
                 <p><strong>Correct Answer:</strong> {correct_answer_original_text}</p>
-                <HtmlRenderer className="explanation-html-content" htmlString={explanation.html_content} />
+                <HtmlRenderer
+                  className="explanation-html-content"
+                  htmlString={getDisplayHtml(explanation.html_content, `explanation_${questionIndex}`)}
+                  data-content-key={`explanation_${questionIndex}`}
+                />
               </div>
                <div className="analytics-section">
                     <h4>Analytics</h4>
