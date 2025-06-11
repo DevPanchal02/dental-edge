@@ -60,7 +60,6 @@ function QuizPage() {
 
     const timerIntervalRef = useRef(null);
     const questionStartTimeRef = useRef(null);
-    const scrollTimeoutRef = useRef(null); 
     
     const [isReviewMode, setIsReviewMode] = useState(false);
     const [reviewQuestionIndex, setReviewQuestionIndex] = useState(0);
@@ -102,7 +101,7 @@ function QuizPage() {
     const activeNavTimeoutsRef = useRef(new Set());
 
     const [isExhibitVisible, setIsExhibitVisible] = useState(false);
-    const [highlightedHtml, setHighlightedHtml] = useState({}); // New state for highlights
+    const [highlightedHtml, setHighlightedHtml] = useState({}); 
 
 
     const latestStateRef = useRef({});
@@ -142,7 +141,7 @@ function QuizPage() {
             isReviewSummaryVisible, currentQuestionIndexBeforeReview,
             hasPracticeTestStarted: latestStateRef.current.hasPracticeTestStarted, 
             practiceTestSettings,
-            highlightedHtml, // Save highlights
+            highlightedHtml, 
             crossedOffOptions: Object.fromEntries(
                 Object.entries(crossedOffOptions).map(([key, valueSet]) => [
                     key, Array.from(valueSet instanceof Set ? valueSet : new Set())
@@ -225,7 +224,7 @@ function QuizPage() {
         setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
         setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
         setMarkedQuestions({}); setTempReveal({}); setIsReviewSummaryVisible(false); setCurrentQuestionIndexBeforeReview(0);
-        setHighlightedHtml({}); // Reset highlights
+        setHighlightedHtml({}); 
         if (sectionType === 'practice') {
             if (!quizMetadata) { 
                 setError("Failed to initialize practice test: essential data missing for timing.");
@@ -290,7 +289,7 @@ function QuizPage() {
         setTempReveal({}); setIsReviewSummaryVisible(false);
         setTimerValue(0); setIsTimerActive(false); 
         setPracticeTestSettings({ prometricDelay: false, additionalTime: false });
-        setHighlightedHtml({}); // Reset highlights on route change
+        setHighlightedHtml({}); 
         
         activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
         activeNavTimeoutsRef.current.clear();
@@ -348,7 +347,6 @@ function QuizPage() {
                     setPracticeTestSettings(parsedResults.practiceTestSettings || { prometricDelay: false, additionalTime: false });
                 } catch (e) { console.error("Error parsing results for review:", e); }
             }
-            // For review mode, we still need to check for locally stored highlights.
             const savedStateString = localStorage.getItem(getQuizStateKey());
             if (savedStateString) {
                 try {
@@ -371,7 +369,7 @@ function QuizPage() {
                 try {
                     const savedState = JSON.parse(savedStateString);
                     setPracticeTestSettings(savedState.practiceTestSettings || { prometricDelay: false, additionalTime: false });
-                    setHighlightedHtml(savedState.highlightedHtml || {}); // Load highlights
+                    setHighlightedHtml(savedState.highlightedHtml || {});
                     if (sectionType === 'practice' && !savedState.hasPracticeTestStarted) {
                         setIsPracticeOptionsModalOpen(true); setHasPracticeTestStarted(false);
                     } else {
@@ -438,7 +436,6 @@ function QuizPage() {
         if (allQuizQuestions && allQuizQuestions.length > 0 && currentQuestionIndex >= 0 && currentQuestionIndex < allQuizQuestions.length) {
             const currentQData = allQuizQuestions[currentQuestionIndex];
             if (currentQData && !currentQData.error && currentQData.passage && currentQData.passage.html_content) {
-                // Set original clean passage HTML. Rendering will decide to use this or highlighted version.
                 const cleanHtml = cleanPassageHtml(currentQData.passage.html_content)
                 if (passageHtml !== cleanHtml) {
                     setPassageHtml(cleanHtml);
@@ -463,7 +460,6 @@ function QuizPage() {
             }
             const newHtml = element.innerHTML;
             setHighlightedHtml(prev => ({ ...prev, [key]: newHtml }));
-            // Save state immediately after a highlight change
             setTimeout(() => saveStateRef.current(), 0);
         }
     }, []);
@@ -497,9 +493,8 @@ function QuizPage() {
 
     const handleActualSelectionChange = useCallback(() => {
         const { 
-            isReviewMode: l_isReviewMode, hasPracticeTestStarted: l_hasPracticeTestStarted, 
-            isPracticeOptionsModalOpen: l_isPracticeOptionsModalOpen, isNavActionInProgress: l_isNavActionInProgress, 
-            isLoading: l_isLoading 
+            hasPracticeTestStarted: l_hasPracticeTestStarted, isPracticeOptionsModalOpen: l_isPracticeOptionsModalOpen, 
+            isNavActionInProgress: l_isNavActionInProgress, isLoading: l_isLoading 
         } = latestStateRef.current;
 
         if (!l_hasPracticeTestStarted || l_isPracticeOptionsModalOpen || l_isNavActionInProgress || l_isLoading || !highlightButtonRef.current || !quizPageContainerRef.current ) {
@@ -558,45 +553,6 @@ function QuizPage() {
         if (currentDebouncedHandler) document.addEventListener('selectionchange', currentDebouncedHandler);
         return () => { if (currentDebouncedHandler) document.removeEventListener('selectionchange', currentDebouncedHandler); };
     }, [handleActualSelectionChange]);
-
-    useEffect(() => {
-        const passageEl = passageContainerRef.current;
-        const isChoppyScrollActive = 
-            topicId === 'reading-comprehension' &&
-            sectionType === 'practice' &&
-            !isReviewMode &&
-            practiceTestSettings.prometricDelay &&
-            !isReviewSummaryVisible; 
-
-        const handlePassageScroll = (e) => {
-            if (!isChoppyScrollActive || !passageEl) return;
-            e.preventDefault();
-
-            if (scrollTimeoutRef.current) {
-                return; 
-            }
-            
-            scrollTimeoutRef.current = setTimeout(() => {
-                const scrollAmount = e.deltaY > 0 ? 150 : -150; 
-                passageEl.scrollBy({ top: scrollAmount, behavior: 'auto' });
-                scrollTimeoutRef.current = null;
-            }, 800);
-        };
-
-        if (isChoppyScrollActive && passageEl) {
-            passageEl.addEventListener('wheel', handlePassageScroll, { passive: false });
-        }
-
-        return () => {
-            if (passageEl) {
-                passageEl.removeEventListener('wheel', handlePassageScroll);
-            }
-            if (scrollTimeoutRef.current) {
-                clearTimeout(scrollTimeoutRef.current);
-            }
-        };
-    }, [topicId, sectionType, isReviewMode, practiceTestSettings.prometricDelay, passageHtml, isReviewSummaryVisible]);
-
 
     const handleContainerClick = useCallback((event) => {
         const { 
@@ -947,6 +903,7 @@ function QuizPage() {
     const triggerFinishQuiz = useCallback(() => {
         executeWithDelay(() => handleFinishQuizRef.current(false));
     }, [executeWithDelay]);
+
 
     const quizPageContainerActiveStyle = {
         marginLeft: isSidebarEffectivelyPinned ? '250px' : '0',
