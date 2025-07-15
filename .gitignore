@@ -1,50 +1,51 @@
-#~~~~~~~~~~~~~~~~~ Necessary Ignores ~~~~~~~~~~~~~~~~~#
+#~~~~~~~~~~~~~~~~~ General Ignores ~~~~~~~~~~~~~~~~~#
 
-# Node dependencies (inside client)
-client/node_modules/
+# Dependency directories
+# This will ignore ALL node_modules folders (in client/, functions/, etc.)
+node_modules/
 
-# Build output & cache (inside client)
-client/dist/
-client/.vite/
+# Build and cache output
+# This will ignore ALL dist and .vite folders
+dist/
+.vite/
 
-# === Data Files to Ignore (KEEP loader.js and the data directory itself) ===
-# Ignore specific subject folders and all their contents
-client/src/data/biology/
-client/src/data/chemistry/
-client/src/data/perceptual-ability/
-client/src/data/reading-comprehension/
-# Add any other subject folders you want to ignore here, e.g.:
-# client/src/data/your-new-subject-folder/
-
-# Ignore other specific data-related folders if they exist and should be ignored
-client/src/new-data/
-client/src/old-data/
-
-# IMPORTANT:
-# The specific folder ignores above (e.g., client/src/data/biology/)
-# will correctly ignore those folders and their contents.
-# The data directory itself (client/src/data/) is NOT ignored,
-# so client/src/data/loader.js will remain tracked.
-
-# Environment variables (inside client)
-# Important: Uncomment if you use .env files! Keep secrets out of Git.
-# client/.env
-# client/.env.*
-# !client/.env.example
-
-# Log files (anywhere, including client)
+# Log files
 *.log
-client/npm-debug.log*
-client/yarn-debug.log*
-client/yarn-error.log*
-client/pnpm-debug.log*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# IDE / Editor configuration
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+._*
+
+#~~~~~~~~~~~~~~~~~ Project-Specific Ignores ~~~~~~~~~~~~~~~~~#
+
+# Ignore Firebase project configuration
+.firebaserc
+
+# Ignore the output files from the LLMCodeContextualizer script
+*_combined_full_structure.txt
+*_combined_gitignore_filtered.txt
+*_txt_full_structure_manifest/
+
+#~~~~~~~~~~~~~~~~~ Editor/IDE Ignores ~~~~~~~~~~~~~~~~~#
 .idea/
 .vscode/
 *.sw?
 
-# OS generated files
-.DS_Store
-Thumbs.db
-._*
+#~~~~~~~~~~~~~~~~~ Data Files to Ignore ~~~~~~~~~~~~~~~~~#
+# This section seems correct for your project, so it remains unchanged.
+client/src/data/biology/
+client/src/data/chemistry/
+client/src/data/perceptual-ability/
+client/src/data/reading-comprehension/
+client/src/new-data/
+client/src/old-data/
