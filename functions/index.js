@@ -3,15 +3,10 @@ const admin = require("firebase-admin");
 const cors = require("cors");
 const logger = require("firebase-functions/logger");
 
-// Initialize the Firebase Admin SDK. This is a one-time setup.
 admin.initializeApp();
-
-// Create a configured CORS middleware handler.
 const corsHandler = cors({origin: true});
 
 // --- Helper Functions ---
-
-// Formats a raw folder/file name into a user-friendly display name.
 const formatDisplayName = (rawName) => {
   if (!rawName) {
     return "";
@@ -24,109 +19,188 @@ const formatDisplayName = (rawName) => {
       .replace(/\b\w/g, (char) => char.toUpperCase());
 };
 
+const formatId = (rawName) => {
+  if (!rawName) return "";
+  const baseName = rawName.replace(/\.json$/i, "");
+  return baseName
+      .toLowerCase()
+      .replace(/\s+/g, "-")
+      .replace(/[^a-z0-9-]+/g, "")
+      .replace(/-+/g, "-")
+      .replace(/^-+|-+$/g, "");
+};
+
+const getSortOrder = (fileName) => {
+  const matchTest = fileName.match(/^(?:Test_)?(\d+)/i);
+  if (matchTest) return parseInt(matchTest[1], 10);
+  const generalNumberMatch = fileName.match(/^(\d+)/);
+  if (generalNumberMatch) return parseInt(generalNumberMatch[1], 10);
+  return Infinity;
+};
+
 // --- Cloud Functions ---
 
-exports.getQuizData = functions.https.onRequest((request, response) => {
+/**
+ * [PUBLIC] Gets the list of top-level topics.
+ */
+exports.getTopics = functions.https.onRequest((request, response) => {
   corsHandler(request, response, async () => {
-    logger.info("getQuizData function triggered.");
-
-    const authHeader = request.headers.authorization;
-    if (!authHeader || !authHeader.startsWith("Bearer ")) {
-      logger.error("Unauthorized: No authorization token was provided.");
-      response.status(401).send("Unauthorized");
-      return;
-    }
-
-    const idToken = authHeader.split("Bearer ")[1];
-
+    logger.info("getTopics function triggered.");
+    const bucket = admin.storage().bucket();
+    const options = {prefix: "data/", delimiter: "/"};
     try {
-      const decodedToken = await admin.auth().verifyIdToken(idToken);
-      logger.info(`Request authenticated for user: ${decodedToken.uid}`);
-
-      const {topicId, sectionType, quizId} = request.query;
-
-      if (!topicId || !sectionType || !quizId) {
-        logger.error("Bad Request: Missing required query parameters.");
-        response.status(400).send("Bad Request: Missing required parameters.");
-        return;
-      }
-
-      const validPathRegex = /^[a-zA-Z0-9-]+$/;
-      if (
-        !validPathRegex.test(topicId) ||
-        !validPathRegex.test(sectionType) ||
-        !validPathRegex.test(quizId)
-      ) {
-        logger.error("Bad Request: Invalid characters in query parameters.", {
-          topicId,
-          sectionType,
-          quizId,
-        });
-        response
-            .status(400)
-            .send("Bad Request: Invalid characters in parameters.");
-        return;
-      }
-
-      const bucket = admin.storage().bucket();
-      const filePath = `data/${topicId}/${sectionType}/${quizId}.json`;
-      logger.info(`Attempting to retrieve file: ${filePath}`);
-
-      const file = bucket.file(filePath);
-      const [data] = await file.download();
-
-      const quizContent = JSON.parse(data.toString("utf8"));
-      response.status(200).json(quizContent);
+      const [, , apiResponse] = await bucket.getFiles(options);
+      const prefixes = apiResponse.prefixes || [];
+      const topicIds = prefixes.map((prefix) => {
+        const parts = prefix.slice(0, -1).split("/");
+        const topicId = parts[parts.length - 1];
+        return {id: topicId, name: formatDisplayName(topicId)};
+      });
+      response.status(200).json(topicIds);
     } catch (error) {
-      const {code, message} = error;
-      if (code === "auth/id-token-expired" || code === "auth/argument-error") {
-        logger.error("Authentication error:", error);
-        response.status(403).send("Forbidden: Invalid authentication token.");
-      } else if (code === 404) {
-        logger.error(`File not found at path: ${message}`);
-        response
-            .status(404)
-            .send("Not Found: The requested quiz data does not exist.");
-      } else {
-        logger.error("Internal error in getQuizData:", error);
-        response.status(500).send("Internal Server Error");
-      }
+      logger.error("Error fetching topics:", error);
+      response
+          .status(500)
+          .send("Internal Server Error: Could not retrieve topics.");
     }
   });
 });
 
-exports.getTopics = functions.https.onRequest((request, response) => {
+/**
+ * [PUBLIC] Gets the detailed structure of a single topic.
+ */
+exports.getTopicStructure = functions.https.onRequest((request, response) => {
   corsHandler(request, response, async () => {
-    logger.info("getTopics function triggered.");
+    const {topicId} = request.query;
+    if (!topicId) {
+      response.status(400).send("Bad Request: Missing topicId parameter.");
+      return;
+    }
+    logger.info(`getTopicStructure triggered for topicId: ${topicId}`);
 
     const bucket = admin.storage().bucket();
-    const options = {
-      prefix: "data/",
-      delimiter: "/",
+    const [files] = await bucket.getFiles({prefix: `data/${topicId}/`});
+
+    const topicStructure = {
+      id: topicId,
+      name: formatDisplayName(topicId),
+      practiceTests: [],
+      questionBanks: {},
     };
 
+    for (const file of files) {
+      if (!file.name.endsWith(".json")) continue;
+
+      const parts = file.name.split("/").filter((p) => p);
+      if (parts.length < 4) continue;
+
+      const sectionTypeFolder = parts[2];
+      const fileNameWithExt = parts[parts.length - 1];
+      const quizId = formatId(fileNameWithExt);
+      const sortOrder = getSortOrder(fileNameWithExt);
+
+      const isPracticeTest = sectionTypeFolder === "practice-test" &&
+        fileNameWithExt.toLowerCase().startsWith("test_");
+
+      if (isPracticeTest) {
+        const match = fileNameWithExt.toLowerCase().match(/test_(\d+)/);
+        const num = match ? parseInt(match[1], 10) : sortOrder;
+        topicStructure.practiceTests.push({
+          id: quizId,
+          name: `Test ${num}`,
+          storagePath: file.name,
+          _sortOrder: sortOrder,
+          topicName: formatDisplayName(topicId),
+        });
+      } else if (sectionTypeFolder === "question-bank") {
+        const category = (parts.length > 4) ?
+          formatDisplayName(parts[3]) : formatDisplayName(topicId);
+        if (!topicStructure.questionBanks[category]) {
+          topicStructure.questionBanks[category] = [];
+        }
+        topicStructure.questionBanks[category].push({
+          id: quizId,
+          name: formatDisplayName(fileNameWithExt),
+          storagePath: file.name,
+          _sortOrder: sortOrder,
+          qbCategory: category,
+        });
+      }
+    }
+
+    topicStructure.practiceTests.sort((a, b) => a._sortOrder - b._sortOrder);
+    const sortedCategories = Object.keys(topicStructure.questionBanks)
+        .sort((a, b) => {
+          const numA = parseInt(
+              a.match(/^(\d+)/)?.[1] || a.match(/Passage #?(\d+)/i)?.[1],
+          );
+          const numB = parseInt(
+              b.match(/^(\d+)/)?.[1] || b.match(/Passage #?(\d+)/i)?.[1],
+          );
+          if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
+          return a.localeCompare(b);
+        });
+    const sortedQuestionBanks = {};
+    for (const category of sortedCategories) {
+      topicStructure.questionBanks[category]
+          .sort((a, b) => a._sortOrder - b._sortOrder);
+      sortedQuestionBanks[category] = topicStructure.questionBanks[category];
+    }
+    const banksArray = Object.entries(sortedQuestionBanks)
+        .map(([category, banks]) => ({category, banks}));
+    topicStructure.questionBanks = banksArray;
+
+    response.status(200).json(topicStructure);
+  });
+});
+
+
+/**
+ * [AUTHENTICATED] Fetches the raw data for a single quiz file.
+ */
+exports.getQuizData = functions.https.onRequest((request, response) => {
+  corsHandler(request, response, async () => {
+    const authHeader = request.headers.authorization;
+    if (!authHeader || !authHeader.startsWith("Bearer ")) {
+      logger.error("Unauthorized: No Firebase ID token was provided.");
+      response.status(401).send("Unauthorized");
+      return;
+    }
+    const idToken = authHeader.split("Bearer ")[1];
     try {
-      // Corrected: We only need the third element (apiResponse) from the array.
-      // Using ",," is a valid way to ignore the first two elements.
-      const [, , apiResponse] = await bucket.getFiles(options);
-
-      const prefixes = apiResponse.prefixes || [];
-
-      const topicIds = prefixes.map((prefix) => {
-        const parts = prefix.slice(0, -1).split("/");
-        const topicId = parts[parts.length - 1];
-        return {
-          id: topicId,
-          name: formatDisplayName(topicId),
-        };
-      });
-
-      response.status(200).json(topicIds);
+      await admin.auth().verifyIdToken(idToken);
     } catch (error) {
-      logger.error("Error fetching topics from Cloud Storage:", error);
-      response
-          .status(500)
-          .send("Internal Server Error: Could not retrieve topics.");
+      logger.error("Forbidden: Invalid Firebase ID token.", error);
+      response.status(403).send("Forbidden");
+      return;
+    }
+
+    const {storagePath} = request.query;
+    if (!storagePath) {
+      response.status(400)
+          .send("Bad Request: Missing 'storagePath' parameter.");
+      return;
+    }
+
+    if (!storagePath.startsWith("data/") || storagePath.includes("..")) {
+      logger.error(`Forbidden Access Attempt: Invalid path "${storagePath}"`);
+      response.status(403).send("Forbidden");
+      return;
+    }
+
+    try {
+      const bucket = admin.storage().bucket();
+      const file = bucket.file(storagePath);
+      const [data] = await file.download();
+      response.status(200).send(data);
+    } catch (error) {
+      logger.error(`Failed to retrieve file from GCS: ${storagePath}`, error);
+      if (error.code === 404) {
+        response.status(404)
+            .send("Not Found: The requested quiz file does not exist.");
+      } else {
+        response.status(500).send("Internal Server Error");
+      }
     }
   });
 });
