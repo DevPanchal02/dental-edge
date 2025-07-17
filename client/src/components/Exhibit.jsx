@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Exhibit.css';
-import periodicTableImage from '../data/periodic_table.png';
+import periodicTableImage from '../assets/periodic_table.png';
 
 const Exhibit = ({ isVisible, onClose }) => {
     const [position, setPosition] = useState(null);

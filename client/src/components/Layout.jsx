@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
-import { fetchTopics } from '../data/loader';
+import { fetchTopics } from '../services/loader.js';
 import { LayoutContext } from '../context/LayoutContext';
 import '../styles/Layout.css';
 
@@ -64,7 +64,7 @@ function Layout() {
         const fetchedTopics = await fetchTopics();
         setTopics(fetchedTopics);
         if (fetchedTopics.length === 0) {
-            setError("No topics found. Check the 'client/src/data' folder structure.");
+            setError("No topics could be loaded.");
         }
       } catch (err) {
         console.error("Error fetching topics:", err);

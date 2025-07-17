@@ -1,6 +1,6 @@
 // FILE: client/src/components/QuizReviewSummary.jsx
 import React from 'react';
-import { formatDisplayName } from '../data/loader'; // Assuming this is still needed elsewhere or can be removed if not
+import { formatDisplayName } from '../services/loader'; // Assuming this is still needed elsewhere or can be removed if not
 import '../styles/QuizReviewSummary.css';
 
 function QuizReviewSummary({
