@@ -1,18 +1,19 @@
-// FILE: client/src/pages/TopicPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { fetchTopicData } from '../data/loader';
-import { useLayout } from '../context/LayoutContext'; // Import useLayout
+import { fetchTopicData } from '../services/loader.js';
+import { useLayout } from '../context/LayoutContext';
 import '../styles/TopicPage.css';
 
 function TopicPage() {
   const { topicId } = useParams();
-  const { isSidebarEffectivelyPinned } = useLayout(); // Consume layout context
+  const { isSidebarEffectivelyPinned } = useLayout();
 
   const [topicData, setTopicData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  // When fetchTopicData became async, this code handles the loading and error
+  // states without needing any changes.
   useEffect(() => {
     let isMounted = true;
     const loadData = async () => {
@@ -23,20 +24,18 @@ function TopicPage() {
       setIsLoading(true);
       setError(null);
       setTopicData(null);
-      console.log(`[TopicPage] Loading data for topic: ${topicId}`);
+      
       try {
         const data = await fetchTopicData(topicId);
         if (isMounted) {
-          console.log(`[TopicPage] Received data for ${topicId}:`, data);
           setTopicData(data);
           if (!data.practiceTests?.length && !data.questionBanks?.length) {
               console.warn(`[TopicPage] No tests or banks found for ${topicId}`);
           }
         }
       } catch (err) {
-        console.error(`[TopicPage] Error fetching data for topic ${topicId}:`, err);
          if (isMounted) {
-            setError(`Could not load data for topic: ${topicId}. ${err.message}`);
+            setError(`Could not load data for topic: ${topicId}. Please check the network connection and backend function logs.`);
          }
       } finally {
          if (isMounted) {
@@ -50,26 +49,20 @@ function TopicPage() {
 
   }, [topicId]);
 
+  // This render function is updated to work with the data structure from the API.
   const renderItemList = (items, sectionType) => {
     if (!items || items.length === 0) {
-      return <p className="no-items-message">No {sectionType === 'practice' ? 'practice tests' : 'items'} found.</p>;
+      return <p className="no-items-message">No {sectionType === 'practice' ? 'practice tests' : 'items'} available for this topic.</p>;
     }
     return (
       <ul className="item-list">
         {items.map((item) => (
-          <li key={item.id} className={`list-item ${!item.dataAvailable ? 'disabled' : ''}`}>
-            {item.dataAvailable ? (
-              <Link to={`/quiz/${topicId}/${sectionType}/${item.id}`} className="item-link">
-                {item.name}
-                <span className="item-details">({item.totalQuestions || 'N/A'} Qs)</span>
-                <span className="item-arrow">→</span>
-              </Link>
-            ) : (
-              <span className="item-link-disabled">
-                {item.name}
-                <span className="item-details">(Data N/A)</span>
-              </span>
-            )}
+          <li key={item.id} className="list-item">
+            <Link to={`/quiz/${topicId}/${sectionType}/${item.id}`} className="item-link">
+              {item.name}
+              {/* The question count is removed from here for efficiency. */}
+              <span className="item-arrow">→</span>
+            </Link>
           </li>
         ))}
       </ul>
@@ -78,15 +71,15 @@ function TopicPage() {
 
 
   if (isLoading) {
-    return <div className="page-loading">Loading Topic Details...</div>;
+    return <div className="page-loading">Loading Topic Details from Cloud...</div>;
   }
 
-  if (error && !topicData) {
+  if (error) {
     return <div className="page-error">{error}</div>;
   }
 
   if (!topicData) {
-    return <div className="page-info">Topic '{topicId}' not found or failed to load content.</div>;
+    return <div className="page-info">Select a topic to begin.</div>;
   }
 
   const topicPageDynamicStyle = {

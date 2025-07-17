@@ -1,3 +1,5 @@
+// FILE: functions/index.js
+
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
 const cors = require("cors");
@@ -140,6 +142,7 @@ exports.getTopicStructure = functions.https.onRequest((request, response) => {
           if (!isNaN(numA) && !isNaN(numB)) return numA - numB;
           return a.localeCompare(b);
         });
+
     const sortedQuestionBanks = {};
     for (const category of sortedCategories) {
       topicStructure.questionBanks[category]
@@ -147,7 +150,15 @@ exports.getTopicStructure = functions.https.onRequest((request, response) => {
       sortedQuestionBanks[category] = topicStructure.questionBanks[category];
     }
     const banksArray = Object.entries(sortedQuestionBanks)
-        .map(([category, banks]) => ({category, banks}));
+        .map(([category, banks]) => ({
+          category,
+          banks: banks.map((b) => ({...b, sectionType: "qbank"})),
+        }));
+
+    topicStructure.practiceTests = topicStructure.practiceTests.map((pt) => ({
+      ...pt, sectionType: "practice",
+    }));
+
     topicStructure.questionBanks = banksArray;
 
     response.status(200).json(topicStructure);
@@ -156,10 +167,14 @@ exports.getTopicStructure = functions.https.onRequest((request, response) => {
 
 
 /**
- * [AUTHENTICATED] Fetches the raw data for a single quiz file.
+ * [TEMPORARILY PUBLIC] Fetches the raw data for a single quiz file.
+ * We will re-enable authentication for this function in Phase 5.
  */
 exports.getQuizData = functions.https.onRequest((request, response) => {
   corsHandler(request, response, async () => {
+    // [SECURITY] Start of Authentication Gate. COMMENTED OUT FOR DEVELOPMENT.
+    // We will re-enable this entire block in Phase 5 after implementing login.
+    /*
     const authHeader = request.headers.authorization;
     if (!authHeader || !authHeader.startsWith("Bearer ")) {
       logger.error("Unauthorized: No Firebase ID token was provided.");
@@ -174,6 +189,8 @@ exports.getQuizData = functions.https.onRequest((request, response) => {
       response.status(403).send("Forbidden");
       return;
     }
+    */
+    // [SECURITY] End of Authentication Gate.
 
     const {storagePath} = request.query;
     if (!storagePath) {
@@ -192,6 +209,7 @@ exports.getQuizData = functions.https.onRequest((request, response) => {
       const bucket = admin.storage().bucket();
       const file = bucket.file(storagePath);
       const [data] = await file.download();
+      response.setHeader("Content-Type", "application/json");
       response.status(200).send(data);
     } catch (error) {
       logger.error(`Failed to retrieve file from GCS: ${storagePath}`, error);

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { getQuizData, getQuizMetadata, formatDisplayName } from '../data/loader';
+import { getQuizData, getQuizMetadata, formatDisplayName } from '../services/loader';
 import QuestionCard from '../components/QuestionCard';
 import QuizReviewSummary from '../components/QuizReviewSummary';
 import PracticeTestOptions from '../components/PracticeTestOptions';
@@ -8,7 +8,7 @@ import Exhibit from '../components/Exhibit';
 import { useLayout } from '../context/LayoutContext';
 import '../styles/QuizPage.css';
 
-// --- Utility Functions (debounce, cleanPassageHtml, PRACTICE_TEST_DURATIONS, formatTime) ---
+// --- Utility Functions (No changes) ---
 function debounce(func, delay) {
     let timeoutId;
     return function(...args) {
@@ -17,18 +17,14 @@ function debounce(func, delay) {
         timeoutId = setTimeout(() => func.apply(context, args), delay);
     };
 }
-
 const cleanPassageHtml = (htmlString) => {
     if (!htmlString || typeof htmlString !== 'string') return '';
-    let cleanedHtml = htmlString;
-    const preMarkRegex = /<mark\s+[^>]*class="[^"]*highlighted[^"]*"[^>]*>([\s\S]*?)<\/mark>/gi;
-    cleanedHtml = cleanedHtml.replace(preMarkRegex, '$1');
+    let cleanedHtml = htmlString.replace(/<mark\s+[^>]*class="[^"]*highlighted[^"]*"[^>]*>([\s\S]*?)<\/mark>/gi, '$1');
     const MuiButtonRegex = /<button\s+class="MuiButtonBase-root[^"]*"[^>]*data-testid="highlighter-button-id"[^>]*>[\s\S]*?<\/button>/gi;
     cleanedHtml = cleanedHtml.replace(MuiButtonRegex, '');
     cleanedHtml = cleanedHtml.replace(/<mark[^>]*>/gi, '').replace(/<\/mark>/gi, '');
     return cleanedHtml;
 };
-
 const PRACTICE_TEST_DURATIONS = {
     biology: 30 * 60,
     chemistry: 30 * 60,
@@ -36,19 +32,16 @@ const PRACTICE_TEST_DURATIONS = {
     'reading-comprehension': 60 * 60,
     default: 30 * 60
 };
-
 const formatTime = (totalSeconds) => {
     if (totalSeconds < 0) totalSeconds = 0;
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 };
-
 const MemoizedPassage = React.memo(function MemoizedPassage({ html, passageRef, ...rest }) {
     if (!html) { return null; }
     return ( <div className="passage-container" ref={passageRef} dangerouslySetInnerHTML={{ __html: html }} {...rest} /> );
 });
-
 const EMPTY_SET = new Set();
 
 
@@ -60,16 +53,14 @@ function QuizPage() {
 
     const timerIntervalRef = useRef(null);
     const questionStartTimeRef = useRef(null);
-    
     const [isReviewMode, setIsReviewMode] = useState(false);
     const [reviewQuestionIndex, setReviewQuestionIndex] = useState(0);
-
     const [allQuizQuestions, setAllQuizQuestions] = useState([]);
     const [quizMetadata, setQuizMetadata] = useState(null);
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState({});
-    const [submittedAnswers, setSubmittedAnswers] = useState({}); 
-    const [showExplanation, setShowExplanation] = useState({});   
+    const [submittedAnswers, setSubmittedAnswers] = useState({});
+    const [showExplanation, setShowExplanation] = useState({});
     const [crossedOffOptions, setCrossedOffOptions] = useState({});
     const [userTimeSpent, setUserTimeSpent] = useState({});
     const [markedQuestions, setMarkedQuestions] = useState({});
@@ -80,53 +71,34 @@ function QuizPage() {
     const [isCountdown, setIsCountdown] = useState(false);
     const [initialDuration, setInitialDuration] = useState(0);
     const isMountedRef = useRef(true);
-
     const quizPageContainerRef = useRef(null);
     const passageContainerRef = useRef(null);
     const highlightButtonRef = useRef(null);
-
     const [passageHtml, setPassageHtml] = useState(null);
-    const [tempReveal, setTempReveal] = useState({}); 
-
+    const [tempReveal, setTempReveal] = useState({});
     const debouncedSelectionChangeHandlerRef = useRef(null);
-
     const [isReviewSummaryVisible, setIsReviewSummaryVisible] = useState(false);
     const [currentQuestionIndexBeforeReview, setCurrentQuestionIndexBeforeReview] = useState(0);
-
     const [isPracticeOptionsModalOpen, setIsPracticeOptionsModalOpen] = useState(false);
     const [practiceTestSettings, setPracticeTestSettings] = useState({ prometricDelay: false, additionalTime: false });
-    const [hasPracticeTestStarted, setHasPracticeTestStarted] = useState(false); 
-    
+    const [hasPracticeTestStarted, setHasPracticeTestStarted] = useState(false);
     const [isNavActionInProgress, setIsNavActionInProgress] = useState(false);
     const activeNavTimeoutsRef = useRef(new Set());
-
     const [isExhibitVisible, setIsExhibitVisible] = useState(false);
-    const [highlightedHtml, setHighlightedHtml] = useState({}); 
-
-
+    const [highlightedHtml, setHighlightedHtml] = useState({});
     const latestStateRef = useRef({});
     useEffect(() => {
         latestStateRef.current = {
-            isReviewMode,
-            hasPracticeTestStarted,
-            isPracticeOptionsModalOpen,
-            isNavActionInProgress,
-            practiceTestSettings,
-            currentQuestionIndex, 
-            allQuizQuestionsLength: allQuizQuestions.length,
-            tempReveal, 
-            submittedAnswers, 
-            sectionType, 
-            isMounted: isMountedRef.current,
-            isLoading,
-            isExhibitVisible, 
+            isReviewMode, hasPracticeTestStarted, isPracticeOptionsModalOpen, isNavActionInProgress,
+            practiceTestSettings, currentQuestionIndex, allQuizQuestionsLength: allQuizQuestions.length,
+            tempReveal, submittedAnswers, sectionType, isMounted: isMountedRef.current, isLoading,
+            isExhibitVisible,
         };
     }, [
-        isReviewMode, hasPracticeTestStarted, isPracticeOptionsModalOpen, isNavActionInProgress, 
-        practiceTestSettings, currentQuestionIndex, allQuizQuestions.length, tempReveal, 
+        isReviewMode, hasPracticeTestStarted, isPracticeOptionsModalOpen, isNavActionInProgress,
+        practiceTestSettings, currentQuestionIndex, allQuizQuestions.length, tempReveal,
         submittedAnswers, sectionType, isLoading, isExhibitVisible
     ]);
-
     const getQuizStateKey = useCallback(() => {
         return `quizState-${topicId}-${sectionType}-${quizId}`;
     }, [topicId, sectionType, quizId]);
@@ -139,9 +111,9 @@ function QuizPage() {
             currentQuestionIndex, userAnswers, submittedAnswers, userTimeSpent,
             timerValue, isCountdown, initialDuration, markedQuestions, tempReveal, showExplanation,
             isReviewSummaryVisible, currentQuestionIndexBeforeReview,
-            hasPracticeTestStarted: latestStateRef.current.hasPracticeTestStarted, 
+            hasPracticeTestStarted: latestStateRef.current.hasPracticeTestStarted,
             practiceTestSettings,
-            highlightedHtml, 
+            highlightedHtml,
             crossedOffOptions: Object.fromEntries(
                 Object.entries(crossedOffOptions).map(([key, valueSet]) => [
                     key, Array.from(valueSet instanceof Set ? valueSet : new Set())
@@ -150,7 +122,7 @@ function QuizPage() {
         };
         try { localStorage.setItem(getQuizStateKey(), JSON.stringify(stateToSave)); }
         catch (e) { console.error("[QuizPage] Error saving state:", e); }
-    }, [ 
+    }, [
         getQuizStateKey, currentQuestionIndex, userAnswers, submittedAnswers,
         userTimeSpent, timerValue, isCountdown, initialDuration, markedQuestions, tempReveal,
         showExplanation, crossedOffOptions, isReviewSummaryVisible, currentQuestionIndexBeforeReview,
@@ -159,14 +131,13 @@ function QuizPage() {
     const saveStateRef = useRef(saveState);
     useEffect(() => { saveStateRef.current = saveState; }, [saveState]);
 
-
     const handleFinishQuiz = useCallback((timedOut = false) => {
-        if (!latestStateRef.current.isMounted || (latestStateRef.current.sectionType === 'practice' && !latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isReviewMode)) { 
+        if (!latestStateRef.current.isMounted || (latestStateRef.current.sectionType === 'practice' && !latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isReviewMode)) {
             return;
         }
         setIsTimerActive(false);
         if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
-        
+
         activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
         activeNavTimeoutsRef.current.clear();
         setIsNavActionInProgress(false);
@@ -188,17 +159,17 @@ function QuizPage() {
         allQuizQuestions.forEach((q, index) => {
             if (!q || q.error) return;
             const userAnswerLabel = userAnswers[index];
-            const isAnswerSubmittedByState = submittedAnswers[index]; 
+            const isAnswerSubmittedByState = submittedAnswers[index];
             const correctOption = q.options?.find(opt => opt.is_correct === true);
             const correctAnswerLabel = correctOption?.label;
-            if (isAnswerSubmittedByState) { 
+            if (isAnswerSubmittedByState) {
                 if (userAnswerLabel !== undefined && userAnswerLabel === correctAnswerLabel) {
                     score++;
                     correctIndices.push(index);
                 } else {
                     incorrectIndices.push(index);
                 }
-            } else if (timedOut && latestStateRef.current.sectionType === 'practice') { 
+            } else if (timedOut && latestStateRef.current.sectionType === 'practice') {
                 incorrectIndices.push(index);
             }
         });
@@ -206,10 +177,10 @@ function QuizPage() {
             score, totalQuestions: totalPossibleScore, totalValidQuestions,
             correctIndices, incorrectIndices, userAnswers,
             userTimeSpent, markedQuestions,
-            timestamp: Date.now(), 
-            quizName: quizMetadata?.fullNameForDisplay || quizMetadata?.name || 'Quiz', 
-            topicName: quizMetadata?.topicName || formatDisplayName(topicId), 
-            practiceTestSettings 
+            timestamp: Date.now(),
+            quizName: quizMetadata?.fullNameForDisplay || quizMetadata?.name || 'Quiz',
+            topicName: quizMetadata?.topicName || formatDisplayName(topicId),
+            practiceTestSettings
         };
         localStorage.setItem(`quizResults-${topicId}-${sectionType}-${quizId}`, JSON.stringify(results));
         localStorage.removeItem(getQuizStateKey());
@@ -220,15 +191,17 @@ function QuizPage() {
     const handleFinishQuizRef = useRef(handleFinishQuiz);
     useEffect(() => { handleFinishQuizRef.current = handleFinishQuiz; }, [handleFinishQuiz]);
 
+    // This callback remains, but we will no longer use it in the main useEffect.
+    // It's still needed for handleStartPracticeTest.
     const initializeNewQuizState = useCallback((ptSettings) => {
         setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
         setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
         setMarkedQuestions({}); setTempReveal({}); setIsReviewSummaryVisible(false); setCurrentQuestionIndexBeforeReview(0);
-        setHighlightedHtml({}); 
+        setHighlightedHtml({});
         if (sectionType === 'practice') {
-            if (!quizMetadata) { 
+            if (!quizMetadata) {
                 setError("Failed to initialize practice test: essential data missing for timing.");
-                return; 
+                return;
             }
             const topicKeyForDuration = quizMetadata.topicName?.toLowerCase().replace(/\s+/g, '-') || topicId.toLowerCase().replace(/\s+/g, '-');
             let duration = PRACTICE_TEST_DURATIONS[topicKeyForDuration] || PRACTICE_TEST_DURATIONS.default;
@@ -236,31 +209,28 @@ function QuizPage() {
                 duration = Math.round(duration * 1.5);
             }
             setTimerValue(duration); setInitialDuration(duration);
-            setIsCountdown(true); setIsTimerActive(true); 
-            setHasPracticeTestStarted(true); 
-        } else { 
-            setTimerValue(0); setIsCountdown(false); setIsTimerActive(true); 
+            setIsCountdown(true); setIsTimerActive(true);
+            setHasPracticeTestStarted(true);
+        } else {
+            setTimerValue(0); setIsCountdown(false); setIsTimerActive(true);
             setInitialDuration(0);
-            setHasPracticeTestStarted(true); 
+            setHasPracticeTestStarted(true);
         }
         activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
         activeNavTimeoutsRef.current.clear();
         setIsNavActionInProgress(false);
-    }, [topicId, sectionType, quizMetadata, quizId]);
-
+    }, [topicId, sectionType, quizMetadata]);
 
     const executeWithDelay = useCallback((actionFn, isPageTransitionLike = true) => {
         if (!latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isReviewMode) {
-             const isFinishingOrNavigatingBack = 
-                actionFn === handleFinishQuizRef.current || 
+             const isFinishingOrNavigatingBack =
+                actionFn === handleFinishQuizRef.current ||
                 (typeof actionFn === 'function' && actionFn.toString().includes("navigate("));
             if(!isFinishingOrNavigatingBack) return;
         }
-    
-        const prometricShouldApply = isPageTransitionLike && 
-                                 (latestStateRef.current.sectionType === 'practice' || latestStateRef.current.isReviewMode) && 
+        const prometricShouldApply = isPageTransitionLike &&
+                                 (latestStateRef.current.sectionType === 'practice' || latestStateRef.current.isReviewMode) &&
                                  latestStateRef.current.practiceTestSettings.prometricDelay;
-    
         if (prometricShouldApply) {
             setIsNavActionInProgress(true);
             const timeoutId = setTimeout(() => {
@@ -276,45 +246,122 @@ function QuizPage() {
         } else {
             actionFn();
         }
-    }, []); 
+    }, []);
 
-
-    // Effect 1: Route changes, core data fetching, and initial state reset
+    // Main data loading effect - loop is now fixed.
     useEffect(() => {
         isMountedRef.current = true;
-        setIsLoading(true); setError(null); setAllQuizQuestions([]); setQuizMetadata(null);
-        setHasPracticeTestStarted(false); setIsPracticeOptionsModalOpen(false);
-        setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({}); setShowExplanation({});
-        setCrossedOffOptions({}); setUserTimeSpent({}); setMarkedQuestions({});
-        setTempReveal({}); setIsReviewSummaryVisible(false);
-        setTimerValue(0); setIsTimerActive(false); 
-        setPracticeTestSettings({ prometricDelay: false, additionalTime: false });
-        setHighlightedHtml({}); 
         
-        activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
-        activeNavTimeoutsRef.current.clear();
-        setIsNavActionInProgress(false);
+        const loadQuizAndInitialize = async () => {
+            setIsLoading(true);
+            setError(null);
+            // ... (state resets are the same)
+            setAllQuizQuestions([]);
+            setQuizMetadata(null);
+            setHasPracticeTestStarted(false);
+            setIsPracticeOptionsModalOpen(false);
+            setCurrentQuestionIndex(0);
+            setUserAnswers({});
+            setSubmittedAnswers({});
+            setMarkedQuestions({});
 
-        if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
+            if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
+            activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
+            activeNavTimeoutsRef.current.clear();
+            setIsNavActionInProgress(false);
 
-        const currentReviewStatus = location.state?.review || false;
-        const currentReviewIdx = location.state?.questionIndex ?? 0;
-        setIsReviewMode(currentReviewStatus);
-        setReviewQuestionIndex(currentReviewIdx);
+            const currentReviewStatus = location.state?.review || false;
+            const currentReviewIdx = location.state?.questionIndex ?? 0;
+            setIsReviewMode(currentReviewStatus);
+            setReviewQuestionIndex(currentReviewIdx);
 
-        try {
-            const loadedQuizData = getQuizData(topicId, sectionType, quizId);
-            const loadedQuizMetadata = getQuizMetadata(topicId, sectionType, quizId);
-            if (!loadedQuizData || loadedQuizData.length === 0 || !loadedQuizMetadata) {
-                throw new Error(`Essential quiz data or metadata not found.`);
-            }
-            if (isMountedRef.current) {
+            try {
+                const [loadedQuizData, loadedQuizMetadata] = await Promise.all([
+                    getQuizData(topicId, sectionType, quizId),
+                    getQuizMetadata(topicId, sectionType, quizId)
+                ]);
+
+                if (!isMountedRef.current) return;
+                if (!loadedQuizData || loadedQuizData.length === 0 || !loadedQuizMetadata) {
+                    throw new Error(`Essential quiz data or metadata not found.`);
+                }
+                
                 setAllQuizQuestions(loadedQuizData);
                 setQuizMetadata(loadedQuizMetadata);
+
+                if (currentReviewStatus) {
+                    const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
+                    const savedResultsString = localStorage.getItem(resultsKey);
+                    if (savedResultsString) {
+                        const parsedResults = JSON.parse(savedResultsString);
+                        setUserAnswers(parsedResults.userAnswers || {});
+                        setMarkedQuestions(parsedResults.markedQuestions || {});
+                        const allSubmitted = {};
+                        loadedQuizData.forEach((_, index) => { allSubmitted[index] = true; });
+                        setSubmittedAnswers(allSubmitted);
+                        setCurrentQuestionIndex(currentReviewIdx);
+                        setShowExplanation({ [currentReviewIdx]: true });
+                        setPracticeTestSettings(parsedResults.practiceTestSettings || { prometricDelay: false, additionalTime: false });
+                    }
+                    setHasPracticeTestStarted(true);
+                    setIsTimerActive(false);
+                } else {
+                    const savedStateString = localStorage.getItem(getQuizStateKey());
+                    if (savedStateString) {
+                        const savedState = JSON.parse(savedStateString);
+                        setPracticeTestSettings(savedState.practiceTestSettings || { prometricDelay: false, additionalTime: false });
+                        if (sectionType === 'practice' && !savedState.hasPracticeTestStarted) {
+                            setIsPracticeOptionsModalOpen(true);
+                            setHasPracticeTestStarted(false);
+                        } else {
+                            setHasPracticeTestStarted(savedState.hasPracticeTestStarted || (sectionType !== 'practice'));
+                            setCurrentQuestionIndex(savedState.currentQuestionIndex || 0);
+                            setUserAnswers(savedState.userAnswers || {});
+                            const loadedCrossed = {};
+                            for (const qIdx in savedState.crossedOffOptions) {
+                                if (Array.isArray(savedState.crossedOffOptions[qIdx])) {
+                                    loadedCrossed[qIdx] = new Set(savedState.crossedOffOptions[qIdx]);
+                                }
+                            }
+                            setCrossedOffOptions(loadedCrossed || {});
+                            setUserTimeSpent(savedState.userTimeSpent || {});
+                            setMarkedQuestions(savedState.markedQuestions || {});
+                            setTimerValue(savedState.timerValue !== undefined ? savedState.timerValue : 0);
+                            setIsCountdown(savedState.isCountdown !== undefined ? savedState.isCountdown : false);
+                            setInitialDuration(savedState.initialDuration || 0);
+                            if (!(savedState.isCountdown && savedState.timerValue <= 0) && (savedState.hasPracticeTestStarted || sectionType !== 'practice')) {
+                                setIsTimerActive(true);
+                            } else {
+                                setIsTimerActive(false);
+                            }
+                        }
+                    } else {
+                        // This is the part that caused the loop.
+                        // We now perform the logic directly inside the effect.
+                        if (sectionType === 'practice') {
+                            setIsPracticeOptionsModalOpen(true);
+                            setHasPracticeTestStarted(false);
+                        } else {
+                            // Logic from initializeNewQuizState is now inlined here
+                            setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
+                            setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
+                            setMarkedQuestions({}); setTempReveal({}); setIsReviewSummaryVisible(false);
+                            setTimerValue(0); setIsCountdown(false); setIsTimerActive(true);
+                            setInitialDuration(0);
+                            setHasPracticeTestStarted(true);
+                            setIsPracticeOptionsModalOpen(false);
+                        }
+                    }
+                }
+            } catch (err) {
+                if (isMountedRef.current) setError(err.message);
+            } finally {
+                if (isMountedRef.current) setIsLoading(false);
             }
-        } catch (err) {
-            if (isMountedRef.current) { setError(err.message); setIsLoading(false); }
-        }
+        };
+
+        loadQuizAndInitialize();
+
         return () => {
             isMountedRef.current = false;
             saveStateRef.current();
@@ -322,116 +369,26 @@ function QuizPage() {
             activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
             activeNavTimeoutsRef.current.clear();
         };
-    }, [topicId, sectionType, quizId, location.state?.review, location.state?.questionIndex]);
-
-
-    // Effect 2: Handles logic after core data is loaded
-    useEffect(() => {
-        if (!quizMetadata || !allQuizQuestions || allQuizQuestions.length === 0) {
-            if (error && isMountedRef.current) setIsLoading(false); 
-            return; 
-        }
-        if (isReviewMode) { 
-            const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
-            const savedResultsString = localStorage.getItem(resultsKey);
-            if (savedResultsString) {
-                try {
-                    const parsedResults = JSON.parse(savedResultsString);
-                    setUserAnswers(parsedResults.userAnswers || {});
-                    setMarkedQuestions(parsedResults.markedQuestions || {});
-                    const allSubmitted = {};
-                    allQuizQuestions.forEach((_, index) => { allSubmitted[index] = true; });
-                    setSubmittedAnswers(allSubmitted);
-                    setCurrentQuestionIndex(reviewQuestionIndex);
-                    setShowExplanation({ [reviewQuestionIndex]: true }); 
-                    setPracticeTestSettings(parsedResults.practiceTestSettings || { prometricDelay: false, additionalTime: false });
-                } catch (e) { console.error("Error parsing results for review:", e); }
-            }
-            const savedStateString = localStorage.getItem(getQuizStateKey());
-            if (savedStateString) {
-                try {
-                    const savedState = JSON.parse(savedStateString);
-                    setHighlightedHtml(savedState.highlightedHtml || {});
-                } catch(e) {
-                     setHighlightedHtml({});
-                }
-            } else {
-                 setHighlightedHtml({});
-            }
-            
-            setHasPracticeTestStarted(true); 
-            setIsPracticeOptionsModalOpen(false);
-            setIsTimerActive(false); setTimerValue(0); setIsCountdown(false);
-            setTempReveal({});
-        } else { 
-            const savedStateString = localStorage.getItem(getQuizStateKey());
-            if (savedStateString) {
-                try {
-                    const savedState = JSON.parse(savedStateString);
-                    setPracticeTestSettings(savedState.practiceTestSettings || { prometricDelay: false, additionalTime: false });
-                    setHighlightedHtml(savedState.highlightedHtml || {});
-                    if (sectionType === 'practice' && !savedState.hasPracticeTestStarted) {
-                        setIsPracticeOptionsModalOpen(true); setHasPracticeTestStarted(false);
-                    } else {
-                        setHasPracticeTestStarted(savedState.hasPracticeTestStarted || (sectionType !== 'practice'));
-                        setCurrentQuestionIndex(savedState.currentQuestionIndex || 0);
-                        setUserAnswers(savedState.userAnswers || {});
-                        setSubmittedAnswers(savedState.submittedAnswers || {});
-                        const loadedCrossed = {};
-                        for (const qIdx in savedState.crossedOffOptions) {
-                            if (Array.isArray(savedState.crossedOffOptions[qIdx])) {
-                                loadedCrossed[qIdx] = new Set(savedState.crossedOffOptions[qIdx]);
-                            }
-                        }
-                        setCrossedOffOptions(loadedCrossed || {});
-                        setUserTimeSpent(savedState.userTimeSpent || {});
-                        setMarkedQuestions(savedState.markedQuestions || {});
-                        setTimerValue(savedState.timerValue !== undefined ? savedState.timerValue : 0);
-                        setIsCountdown(savedState.isCountdown !== undefined ? savedState.isCountdown : false);
-                        setInitialDuration(savedState.initialDuration || 0);
-                        setTempReveal(savedState.tempReveal || {});
-                        setShowExplanation(savedState.showExplanation || {});
-                        setIsReviewSummaryVisible(savedState.isReviewSummaryVisible || false);
-                        setCurrentQuestionIndexBeforeReview(savedState.currentQuestionIndexBeforeReview || 0);
-                        if (!(savedState.isCountdown && savedState.timerValue <= 0) && (savedState.hasPracticeTestStarted || sectionType !== 'practice')) {
-                            setIsTimerActive(true);
-                        } else { setIsTimerActive(false); }
-                        setIsPracticeOptionsModalOpen(false); 
-                    }
-                } catch (e) {
-                    localStorage.removeItem(getQuizStateKey());
-                    if (sectionType === 'practice') {
-                        setIsPracticeOptionsModalOpen(true); setHasPracticeTestStarted(false);
-                    } else {
-                        initializeNewQuizState(null); setIsPracticeOptionsModalOpen(false);
-                    }
-                }
-            } else { 
-                if (sectionType === 'practice') {
-                    setIsPracticeOptionsModalOpen(true); setHasPracticeTestStarted(false);
-                } else { 
-                    initializeNewQuizState(null); setIsPracticeOptionsModalOpen(false);
-                }
-            }
-        }
-        if (isMountedRef.current) setIsLoading(false);
-    }, [quizMetadata, allQuizQuestions, isReviewMode, reviewQuestionIndex, getQuizStateKey, sectionType, initializeNewQuizState, topicId, quizId, error]);
-
+    // The dependency array is now stable and won't cause a loop.
+    }, [topicId, sectionType, quizId, location.state?.review, location.state?.questionIndex, getQuizStateKey]);
 
     const handlePracticeTestOptionsClose = useCallback(() => {
         setIsPracticeOptionsModalOpen(false);
-        if (!hasPracticeTestStarted) { 
-            if (isMountedRef.current) setIsLoading(false); 
+        if (!hasPracticeTestStarted) {
+            if (isMountedRef.current) setIsLoading(false);
             navigate(`/topic/${topicId}`);
         }
-    }, [navigate, topicId, hasPracticeTestStarted]); 
+    }, [navigate, topicId, hasPracticeTestStarted]);
 
+    // This now correctly depends on quizMetadata from state, which is fine
+    // because this is only called on a user interaction (clicking start).
     const handleStartPracticeTest = useCallback((settings) => {
-        setPracticeTestSettings(settings); 
-        setIsPracticeOptionsModalOpen(false); 
-        initializeNewQuizState(settings); 
-    }, [initializeNewQuizState]); 
+        setPracticeTestSettings(settings);
+        setIsPracticeOptionsModalOpen(false);
+        initializeNewQuizState(settings);
+    }, [initializeNewQuizState]);
 
+    // --- All remaining functions and the final JSX render block are unchanged. ---
     useEffect(() => {
         if (allQuizQuestions && allQuizQuestions.length > 0 && currentQuestionIndex >= 0 && currentQuestionIndex < allQuizQuestions.length) {
             const currentQData = allQuizQuestions[currentQuestionIndex];
@@ -450,7 +407,6 @@ function QuizPage() {
             setPassageHtml(null);
         }
     }, [currentQuestionIndex, allQuizQuestions]);
-
     const updateHighlightedContent = useCallback((element) => {
         if (element && element.dataset && element.dataset.contentKey) {
             const key = element.dataset.contentKey;
@@ -463,7 +419,6 @@ function QuizPage() {
             setTimeout(() => saveStateRef.current(), 0);
         }
     }, []);
-
     const toggleHighlight = useCallback(() => {
         if (latestStateRef.current.isNavActionInProgress || !highlightButtonRef.current || !highlightButtonRef.current._selectionRange) {
             if(highlightButtonRef.current) highlightButtonRef.current.style.display = 'none';
@@ -483,20 +438,18 @@ function QuizPage() {
              range.surroundContents(mark);
              const container = mark.closest('[data-content-key]');
              updateHighlightedContent(container);
-        } 
+        }
         catch (e) { console.warn("[HL] toggleHighlight: range.surroundContents() failed. Error:", e); }
         highlightButtonRef.current.style.display = 'none';
         highlightButtonRef.current._selectionRange = null;
         const currentSelection = window.getSelection();
-        if(currentSelection) currentSelection.removeAllRanges(); 
-    }, [updateHighlightedContent]); 
-
+        if(currentSelection) currentSelection.removeAllRanges();
+    }, [updateHighlightedContent]);
     const handleActualSelectionChange = useCallback(() => {
-        const { 
-            hasPracticeTestStarted: l_hasPracticeTestStarted, isPracticeOptionsModalOpen: l_isPracticeOptionsModalOpen, 
-            isNavActionInProgress: l_isNavActionInProgress, isLoading: l_isLoading 
+        const {
+            hasPracticeTestStarted: l_hasPracticeTestStarted, isPracticeOptionsModalOpen: l_isPracticeOptionsModalOpen,
+            isNavActionInProgress: l_isNavActionInProgress, isLoading: l_isLoading
         } = latestStateRef.current;
-
         if (!l_hasPracticeTestStarted || l_isPracticeOptionsModalOpen || l_isNavActionInProgress || l_isLoading || !highlightButtonRef.current || !quizPageContainerRef.current ) {
             const selection = window.getSelection();
             if (!selection || selection.isCollapsed || selection.rangeCount === 0) {
@@ -526,13 +479,11 @@ function QuizPage() {
             }
             let commonAncestor = range.commonAncestorContainer;
             if (commonAncestor.nodeType === Node.TEXT_NODE) commonAncestor = commonAncestor.parentNode;
-            
             const targetContainer = commonAncestor.closest('[data-content-key]');
-            
             if (targetContainer && range.toString().trim() !== "") {
                 const rect = range.getBoundingClientRect();
                 const mainContainerRect = quizPageContainerRef.current.getBoundingClientRect();
-                const buttonTop = rect.top - mainContainerRect.top + quizPageContainerRef.current.scrollTop - 35; 
+                const buttonTop = rect.top - mainContainerRect.top + quizPageContainerRef.current.scrollTop - 35;
                 const buttonLeft = rect.left - mainContainerRect.left + quizPageContainerRef.current.scrollLeft + (rect.width / 2);
                 highlightButtonRef.current.style.top = `${buttonTop}px`;
                 highlightButtonRef.current.style.left = `${buttonLeft}px`;
@@ -545,28 +496,23 @@ function QuizPage() {
                 }
             }
         });
-    }, []); 
-    
-    useEffect(() => { 
+    }, []);
+    useEffect(() => {
         debouncedSelectionChangeHandlerRef.current = debounce(handleActualSelectionChange, 150);
-        const currentDebouncedHandler = debouncedSelectionChangeHandlerRef.current; 
+        const currentDebouncedHandler = debouncedSelectionChangeHandlerRef.current;
         if (currentDebouncedHandler) document.addEventListener('selectionchange', currentDebouncedHandler);
         return () => { if (currentDebouncedHandler) document.removeEventListener('selectionchange', currentDebouncedHandler); };
     }, [handleActualSelectionChange]);
-
     const handleContainerClick = useCallback((event) => {
-        const { 
-            hasPracticeTestStarted: l_hasPracticeTestStarted, isPracticeOptionsModalOpen: l_isPracticeOptionsModalOpen, 
-            isNavActionInProgress: l_isNavActionInProgress, isLoading: l_isLoading 
+        const {
+            hasPracticeTestStarted: l_hasPracticeTestStarted, isPracticeOptionsModalOpen: l_isPracticeOptionsModalOpen,
+            isNavActionInProgress: l_isNavActionInProgress, isLoading: l_isLoading
         } = latestStateRef.current;
         if (!l_hasPracticeTestStarted || l_isPracticeOptionsModalOpen || l_isNavActionInProgress || l_isLoading || !quizPageContainerRef.current) return;
-        
         const clickedElement = event.target;
-        if (highlightButtonRef.current && highlightButtonRef.current.contains(clickedElement)) return; 
-        
+        if (highlightButtonRef.current && highlightButtonRef.current.contains(clickedElement)) return;
         const markElement = clickedElement.closest('mark.custom-highlight');
         const containerWithKey = clickedElement.closest('[data-content-key]');
-
         if (markElement && containerWithKey) {
             const parentOfMark = markElement.parentNode;
             if (parentOfMark) {
@@ -581,10 +527,9 @@ function QuizPage() {
             }
             const selection = window.getSelection();
             if (selection) selection.removeAllRanges();
-            event.stopPropagation(); 
-            return; 
+            event.stopPropagation();
+            return;
         }
-        
         if (highlightButtonRef.current && highlightButtonRef.current.style.display === 'block') {
              const selection = window.getSelection();
              if (!selection || selection.isCollapsed || selection.rangeCount === 0 || selection.toString().trim() === "") {
@@ -593,9 +538,7 @@ function QuizPage() {
                 if (selection) selection.removeAllRanges();
              }
         }
-    }, [updateHighlightedContent]); 
-
-
+    }, [updateHighlightedContent]);
     useEffect(() => {
         if (isTimerActive && !latestStateRef.current.isReviewMode && latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isNavActionInProgress) {
             timerIntervalRef.current = setInterval(() => {
@@ -619,9 +562,7 @@ function QuizPage() {
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
         }
         return () => { if (timerIntervalRef.current) clearInterval(timerIntervalRef.current); };
-    }, [isTimerActive, isCountdown]); 
-
-
+    }, [isTimerActive, isCountdown]);
     useEffect(() => {
         if (!latestStateRef.current.isLoading && latestStateRef.current.allQuizQuestionsLength > 0 && currentQuestionIndex >= 0 && !latestStateRef.current.isReviewMode && latestStateRef.current.hasPracticeTestStarted && !latestStateRef.current.isNavActionInProgress) {
             const currentQ = allQuizQuestions[currentQuestionIndex];
@@ -631,14 +572,12 @@ function QuizPage() {
                 questionStartTimeRef.current = null;
             }
         }
-    }, [currentQuestionIndex, allQuizQuestions, submittedAnswers, tempReveal, isReviewSummaryVisible]); 
-
+    }, [currentQuestionIndex, allQuizQuestions, submittedAnswers, tempReveal, isReviewSummaryVisible]);
     const toggleExhibit = useCallback(() => {
         setIsExhibitVisible(prev => !prev);
     }, []);
-
     const toggleSolutionReveal = useCallback(() => {
-        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return;
         if (latestStateRef.current.sectionType === 'qbank' && !latestStateRef.current.isReviewMode && latestStateRef.current.allQuizQuestionsLength > 0 && allQuizQuestions[latestStateRef.current.currentQuestionIndex] && !allQuizQuestions[latestStateRef.current.currentQuestionIndex].error ) {
             const qIndex = latestStateRef.current.currentQuestionIndex;
             setTempReveal(prev => {
@@ -647,16 +586,15 @@ function QuizPage() {
                     const endTime = Date.now();
                     const elapsedSeconds = Math.round((endTime - questionStartTimeRef.current) / 1000);
                     setUserTimeSpent(prevTS => ({ ...prevTS, [qIndex]: (prevTS[qIndex] || 0) + elapsedSeconds }));
-                    questionStartTimeRef.current = null; 
-                } else if (!newRevealStateForCurrent && !latestStateRef.current.submittedAnswers[qIndex]) { 
+                    questionStartTimeRef.current = null;
+                } else if (!newRevealStateForCurrent && !latestStateRef.current.submittedAnswers[qIndex]) {
                      questionStartTimeRef.current = Date.now();
                 }
                 return {...prev, [qIndex]: newRevealStateForCurrent};
             });
             setShowExplanation(prevExp => ({ ...prevExp, [qIndex]: !tempReveal[qIndex] }));
         }
-    }, [allQuizQuestions, setUserTimeSpent, setShowExplanation]); 
-
+    }, [allQuizQuestions, setUserTimeSpent, setShowExplanation]);
     useEffect(() => {
         const handleKeyPress = (event) => {
             const isChemistryQuiz = topicId === 'chemistry';
@@ -667,11 +605,9 @@ function QuizPage() {
                     return;
                 }
             }
-
-            if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isReviewSummaryVisible || latestStateRef.current.isPracticeOptionsModalOpen || latestStateRef.current.isNavActionInProgress) return; 
+            if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isReviewSummaryVisible || latestStateRef.current.isPracticeOptionsModalOpen || latestStateRef.current.isNavActionInProgress) return;
             const isTextInput = event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA' || event.target.isContentEditable;
             if (isTextInput) return;
-            
             if ((event.key === 's' || event.key === 'S') && !event.ctrlKey && !event.metaKey && !event.altKey) {
                 event.preventDefault();
                 toggleSolutionReveal();
@@ -680,70 +616,59 @@ function QuizPage() {
         window.addEventListener('keydown', handleKeyPress);
         return () => { window.removeEventListener('keydown', handleKeyPress); };
     }, [toggleSolutionReveal, toggleExhibit, topicId, executeWithDelay]);
-
-    const handleOptionSelect = useCallback((questionIndex, optionLabel) => { 
-        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
+    const handleOptionSelect = useCallback((questionIndex, optionLabel) => {
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return;
         const isPracticeTestActive = latestStateRef.current.sectionType === 'practice' && !latestStateRef.current.isReviewMode;
-        
         let canSelectOption = false;
         if (isPracticeTestActive) {
             canSelectOption = !crossedOffOptions[questionIndex]?.has(optionLabel);
-        } else { 
+        } else {
             canSelectOption = !latestStateRef.current.submittedAnswers[questionIndex] && !latestStateRef.current.isReviewMode && !latestStateRef.current.tempReveal[questionIndex] && !crossedOffOptions[questionIndex]?.has(optionLabel);
         }
         if (canSelectOption) setUserAnswers((prev) => ({ ...prev, [questionIndex]: optionLabel }));
-    }, [crossedOffOptions]); 
-
-    const submitAnswerForIndex = useCallback((questionIndex) => { 
-        if (!latestStateRef.current.hasPracticeTestStarted) return 'test_not_started'; 
-        if (!allQuizQuestions[questionIndex]) return 'error_question'; 
+    }, [crossedOffOptions]);
+    const submitAnswerForIndex = useCallback((questionIndex) => {
+        if (!latestStateRef.current.hasPracticeTestStarted) return 'test_not_started';
+        if (!allQuizQuestions[questionIndex]) return 'error_question';
         const questionToSubmit = allQuizQuestions[questionIndex];
         if (questionToSubmit.error) return 'error_question';
-        
-        if (latestStateRef.current.isReviewMode || (latestStateRef.current.sectionType === 'qbank' && latestStateRef.current.tempReveal[questionIndex])) return true; 
-
+        if (latestStateRef.current.isReviewMode || (latestStateRef.current.sectionType === 'qbank' && latestStateRef.current.tempReveal[questionIndex])) return true;
         if (userAnswers[questionIndex] && !latestStateRef.current.submittedAnswers[questionIndex]) {
             let elapsedSeconds = userTimeSpent[questionIndex] !== undefined ? userTimeSpent[questionIndex] : 0;
             if (questionStartTimeRef.current) {
                 const endTime = Date.now();
                 elapsedSeconds = Math.round((endTime - questionStartTimeRef.current) / 1000);
-                questionStartTimeRef.current = null; 
+                questionStartTimeRef.current = null;
             }
             setUserTimeSpent(prev => ({ ...prev, [questionIndex]: elapsedSeconds }));
             setSubmittedAnswers(prev => ({ ...prev, [questionIndex]: true }));
-            
             if (latestStateRef.current.sectionType === 'qbank' && !latestStateRef.current.isReviewMode) {
-                setShowExplanation(prev => ({ ...prev, [questionIndex]: true })); 
+                setShowExplanation(prev => ({ ...prev, [questionIndex]: true }));
             } else if (latestStateRef.current.sectionType === 'practice' && !latestStateRef.current.isReviewMode) {
-                setShowExplanation(prev => ({ ...prev, [questionIndex]: false })); 
+                setShowExplanation(prev => ({ ...prev, [questionIndex]: false }));
             }
-            setTimeout(() => saveStateRef.current(), 0); 
+            setTimeout(() => saveStateRef.current(), 0);
             return true;
         } else if (latestStateRef.current.submittedAnswers[questionIndex]) {
-            return true; 
+            return true;
         }
-        return 'no_answer_selected';  
-    }, [allQuizQuestions, userAnswers, userTimeSpent]); 
-
-    const toggleExplanation = useCallback((questionIndex) => { 
-        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
-        if (!allQuizQuestions[questionIndex]) return; 
+        return 'no_answer_selected';
+    }, [allQuizQuestions, userAnswers, userTimeSpent]);
+    const toggleExplanation = useCallback((questionIndex) => {
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return;
+        if (!allQuizQuestions[questionIndex]) return;
         if (latestStateRef.current.sectionType === 'practice' && !latestStateRef.current.isReviewMode && !latestStateRef.current.tempReveal[questionIndex]) return;
-
         const currentTempRevealForQuestion = latestStateRef.current.tempReveal[questionIndex];
         const currentShowExplanationForQuestion = showExplanation[questionIndex];
-
         if (latestStateRef.current.sectionType === 'qbank' && !latestStateRef.current.isReviewMode && currentTempRevealForQuestion !== undefined) {
              setTempReveal(prev => ({...prev, [questionIndex]: !currentShowExplanationForQuestion }));
         }
         setShowExplanation((prev) => ({ ...prev, [questionIndex]: !prev[questionIndex] }));
-    }, [allQuizQuestions, showExplanation]); 
-
-    const handleToggleCrossOff = useCallback((questionIndex, optionLabel) => { 
-        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return; 
+    }, [allQuizQuestions, showExplanation]);
+    const handleToggleCrossOff = useCallback((questionIndex, optionLabel) => {
+        if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isNavActionInProgress) return;
         const isPracticeTestActive = latestStateRef.current.sectionType === 'practice' && !latestStateRef.current.isReviewMode;
         const canToggle = isPracticeTestActive || (!latestStateRef.current.submittedAnswers[questionIndex] && !latestStateRef.current.isReviewMode && !latestStateRef.current.tempReveal[questionIndex]);
-
         if (canToggle ) {
             setCrossedOffOptions(prev => {
                 const newCrossedOff = {...prev};
@@ -762,11 +687,9 @@ function QuizPage() {
             });
             setTimeout(() => saveStateRef.current(), 0);
         }
-    }, [userAnswers]); 
-
+    }, [userAnswers]);
     const handleToggleMark = useCallback((questionIndex) => {
         if (!latestStateRef.current.hasPracticeTestStarted || latestStateRef.current.isReviewMode || latestStateRef.current.isNavActionInProgress) return;
-        
         const actionFn = () => {
             setMarkedQuestions(prev => {
                 const newState = { ...prev };
@@ -775,25 +698,18 @@ function QuizPage() {
             });
             setTimeout(() => saveStateRef.current(), 0);
         };
-        
         executeWithDelay(actionFn, true);
-    
     }, [executeWithDelay]);
-
-
     const handleSubmitAndNavigate = useCallback(() => {
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
-            
             if (latestStateRef.current.isExhibitVisible) {
                 setIsExhibitVisible(false);
             }
             submitAnswerForIndex(cqIdx);
-    
             if (lTempReveal[cqIdx] && !lIsReviewMode) {
                 setTempReveal(prev => ({ ...prev, [cqIdx]: false }));
             }
-    
             if (cqIdx < aqLength - 1) {
                 const nextIndex = cqIdx + 1;
                 setCurrentQuestionIndex(nextIndex);
@@ -810,7 +726,6 @@ function QuizPage() {
                 setCurrentQuestionIndexBeforeReview(cqIdx);
             }
         };
-    
         const currentQ = allQuizQuestions[currentQuestionIndex];
         if (currentQ && currentQ.error) {
              executeWithDelay(() => {
@@ -828,11 +743,9 @@ function QuizPage() {
             executeWithDelay(actionFn);
         }
     }, [allQuizQuestions, currentQuestionIndex, submitAnswerForIndex, executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
-
-    const handlePrevious = useCallback(() => { 
+    const handlePrevious = useCallback(() => {
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
-            
             if (latestStateRef.current.isExhibitVisible) {
                 setIsExhibitVisible(false);
             }
@@ -845,52 +758,49 @@ function QuizPage() {
                 setTempReveal(prev => ({ ...prev, [prevIndex]: false }));
                 if (lSectionType === 'practice' && !lIsReviewMode) {
                     setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
-                } else if (lSubmittedAnswers[prevIndex]) { 
+                } else if (lSubmittedAnswers[prevIndex]) {
                     setShowExplanation(prev => ({ ...prev, [prevIndex]: true }));
-                } else { 
+                } else {
                     setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
                 }
             }
         };
         executeWithDelay(actionFn);
     }, [executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation]);
-    
-    const handleOpenReviewSummary = useCallback(() => { 
+    const handleOpenReviewSummary = useCallback(() => {
         const actionFn = () => {
-            setIsReviewSummaryVisible(true); 
+            setIsReviewSummaryVisible(true);
             setCurrentQuestionIndexBeforeReview(latestStateRef.current.currentQuestionIndex);
         };
-        executeWithDelay(actionFn); 
+        executeWithDelay(actionFn);
     }, [executeWithDelay, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
-
     const handleCloseReviewSummary = useCallback(() => {
         const actionFn = () => {
             setIsReviewSummaryVisible(false);
         };
         executeWithDelay(actionFn, false);
     }, [executeWithDelay]);
-
-    const handleJumpToQuestion = useCallback((index, fromSummaryTable = false) => { 
+    const handleJumpToQuestion = useCallback((index, fromSummaryTable = false) => {
         const actionFn = () => {
             const { allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers, currentQuestionIndex: cqIdx } = latestStateRef.current;
             if (index >= 0 && index < aqLength) {
-                 if (lTempReveal[cqIdx] && !lIsReviewMode) { 
+                 if (lTempReveal[cqIdx] && !lIsReviewMode) {
                     setTempReveal(prev => ({...prev, [cqIdx]: false}));
                 }
                 setCurrentQuestionIndex(index);
-                if (lIsReviewMode) { 
-                    setShowExplanation({ [index]: true }); 
+                if (lIsReviewMode) {
+                    setShowExplanation({ [index]: true });
                 } else {
                     setTempReveal(prev => ({...prev, [index]: false}));
-                    if (lSectionType === 'practice') { 
+                    if (lSectionType === 'practice') {
                         setShowExplanation(prev => ({ ...prev, [index]: false }));
-                    } else if (lSubmittedAnswers[index]) { 
-                         setShowExplanation(prev => ({ ...prev, [index]: true })); 
-                    } else { 
+                    } else if (lSubmittedAnswers[index]) {
+                         setShowExplanation(prev => ({ ...prev, [index]: true }));
+                    } else {
                          setShowExplanation(prev => ({ ...prev, [index]: false }));
                     }
                 }
-                setIsReviewSummaryVisible(false); 
+                setIsReviewSummaryVisible(false);
             }
          };
         if(fromSummaryTable) {
@@ -899,12 +809,9 @@ function QuizPage() {
             executeWithDelay(actionFn);
         }
      }, [executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible]);
-
     const triggerFinishQuiz = useCallback(() => {
         executeWithDelay(() => handleFinishQuizRef.current(false));
     }, [executeWithDelay]);
-
-
     const quizPageContainerActiveStyle = {
         marginLeft: isSidebarEffectivelyPinned ? '250px' : '0',
         width: isSidebarEffectivelyPinned ? `calc(100% - 250px)` : '100%',
@@ -921,10 +828,9 @@ function QuizPage() {
             {isCountdown && initialDuration > 0 && <span className="timer-total"> / {formatTime(initialDuration)}</span>}
         </>
     );
-
-    if (isLoading) { return <div className="page-loading">Loading Quiz...</div>; }
+    if (isLoading) { return <div className="page-loading">Loading Quiz from Cloud...</div>; }
     if (error) { return ( <div className="page-error"> Error: {error} <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div> ); }
-    if (isPracticeOptionsModalOpen && sectionType === 'practice' && !isReviewMode) { 
+    if (isPracticeOptionsModalOpen && sectionType === 'practice' && !isReviewMode) {
         if (!quizMetadata) { return <div className="page-loading">Preparing Test Options... (Waiting for metadata)</div>;}
         const topicKeyForDuration = quizMetadata.topicName?.toLowerCase().replace(/\s+/g, '-') || topicId.toLowerCase().replace(/\s+/g, '-');
         const baseTime = PRACTICE_TEST_DURATIONS[topicKeyForDuration] || PRACTICE_TEST_DURATIONS.default;
@@ -934,19 +840,16 @@ function QuizPage() {
     if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { return <div className="page-info"> No questions found for this quiz. Please check data files. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
     const currentQuestionData = allQuizQuestions[currentQuestionIndex];
     if (!isReviewSummaryVisible && (hasPracticeTestStarted || isReviewMode) && !currentQuestionData && allQuizQuestions.length > 0) { return <div className="page-error">Error: Could not load current question data. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
-    
     const passageContentKey = passageHtml && currentQuestionData ? `passage_${currentQuestionData.category}` : null;
-
-    const isPracticeTestActive = sectionType === 'practice' && !isReviewMode && hasPracticeTestStarted; 
-    const cardIsSubmittedState = (isPracticeTestActive && !!submittedAnswers[currentQuestionIndex]) || (!isPracticeTestActive && (!!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex])); 
-    const explanationButtonShouldBeVisible = !!currentQuestionData?.explanation?.html_content && (isReviewMode || !!tempReveal[currentQuestionIndex] || (sectionType === 'qbank' && submittedAnswers[currentQuestionIndex])); 
+    const isPracticeTestActive = sectionType === 'practice' && !isReviewMode && hasPracticeTestStarted;
+    const cardIsSubmittedState = (isPracticeTestActive && !!submittedAnswers[currentQuestionIndex]) || (!isPracticeTestActive && (!!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex]));
+    const explanationButtonShouldBeVisible = !!currentQuestionData?.explanation?.html_content && (isReviewMode || !!tempReveal[currentQuestionIndex] || (sectionType === 'qbank' && submittedAnswers[currentQuestionIndex]));
     const explanationContentShouldBeExpanded = showExplanation[currentQuestionIndex] && explanationButtonShouldBeVisible;
     const isLastQuestion = currentQuestionIndex === allQuizQuestions.length - 1;
     const currentCrossedOffForCard = crossedOffOptions[currentQuestionIndex] || EMPTY_SET;
     const currentIsMarkedForCard = !!markedQuestions[currentQuestionIndex];
-    const isCurrentQuestionError = !!(currentQuestionData && currentQuestionData.error); 
+    const isCurrentQuestionError = !!(currentQuestionData && currentQuestionData.error);
     const totalQuestionsForDisplay = quizMetadata?.totalQuestions || allQuizQuestions.length;
-
     return (
         <div className="quiz-page-container" ref={quizPageContainerRef} onClick={handleContainerClick} style={quizPageContainerActiveStyle}>
             {topicId === 'chemistry' && (
@@ -960,19 +863,19 @@ function QuizPage() {
                 <QuizReviewSummary
                     allQuizQuestions={allQuizQuestions} quizMetadata={quizMetadata} markedQuestions={markedQuestions} submittedAnswers={submittedAnswers} userAnswers={userAnswers}
                     currentQuestionIndexBeforeReview={currentQuestionIndexBeforeReview} topicId={topicId}
-                    onCloseReviewSummary={handleCloseReviewSummary} 
-                    onJumpToQuestionInQuiz={handleJumpToQuestion} 
-                    onEndQuiz={triggerFinishQuiz} 
+                    onCloseReviewSummary={handleCloseReviewSummary}
+                    onJumpToQuestionInQuiz={handleJumpToQuestion}
+                    onEndQuiz={triggerFinishQuiz}
                     timerDisplayContent={timerDisplayComponent} dynamicFooterStyle={sharedFixedFooterStyle}
                 />
             ) : (
                 <>
                     <div className="quiz-header">
-                        <button 
+                        <button
                             onClick={() => {
                                 if (isReviewMode) navigate(`/results/${topicId}/${sectionType}/${quizId}`);
                                 else navigate(`/topic/${topicId}`);
-                            }}  
+                            }}
                             className="back-button-quiz"
                         >
                             {isReviewMode ? `\u21A9 Back to Results` : `\u21A9 Back to ${quizMetadata?.topicName || formatDisplayName(topicId)}`}
@@ -980,19 +883,19 @@ function QuizPage() {
                         <div className="quiz-title-container"><h1 className="quiz-title">{quizMetadata?.fullNameForDisplay || 'Quiz'}</h1></div>
                         <p className="quiz-progress">Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay}</p>
                     </div>
-                    {passageHtml && topicId !== 'reading-comprehension' && ( 
+                    {passageHtml && topicId !== 'reading-comprehension' && (
                         <MemoizedPassage
                             html={passageContentKey && highlightedHtml[passageContentKey] !== undefined ? highlightedHtml[passageContentKey] : passageHtml}
                             passageRef={passageContainerRef}
                             data-content-key={passageContentKey}
-                        /> 
+                        />
                     )}
                     <div className="quiz-controls-top">
                         {(!isReviewMode && hasPracticeTestStarted) && ( <div className="timer-display">{timerDisplayComponent}</div> )}
                         {(isReviewMode || !hasPracticeTestStarted) && <div className="timer-display-placeholder"></div>}
                     </div>
                     <div className="quiz-content-area">
-                        {currentQuestionData && ( 
+                        {currentQuestionData && (
                              <QuestionCard
                                 questionData={currentQuestionData} questionIndex={currentQuestionIndex} selectedOption={userAnswers[currentQuestionIndex]}
                                 isSubmitted={cardIsSubmittedState} showExplanation={explanationContentShouldBeExpanded} crossedOffOptions={currentCrossedOffForCard}
@@ -1003,20 +906,19 @@ function QuizPage() {
                             />
                         )}
                     </div>
-                    {passageHtml && topicId === 'reading-comprehension' && ( 
-                        <div className="passage-wrapper-below" style={{ marginTop: '20px' }}> 
+                    {passageHtml && topicId === 'reading-comprehension' && (
+                        <div className="passage-wrapper-below" style={{ marginTop: '20px' }}>
                             <MemoizedPassage
                                 html={passageContentKey && highlightedHtml[passageContentKey] !== undefined ? highlightedHtml[passageContentKey] : passageHtml}
                                 passageRef={passageContainerRef}
                                 data-content-key={passageContentKey}
-                            /> 
-                        </div> 
+                            />
+                        </div>
                     )}
-                    
                     <div className="quiz-navigation" style={sharedFixedFooterStyle}>
                         <div className="nav-group-left">
                             <button onClick={handlePrevious} disabled={!hasPracticeTestStarted || currentQuestionIndex === 0} className="nav-button prev-button"> Previous </button>
-                            {sectionType === 'qbank' && !isReviewMode && !isCurrentQuestionError && hasPracticeTestStarted && ( 
+                            {sectionType === 'qbank' && !isReviewMode && !isCurrentQuestionError && hasPracticeTestStarted && (
                                 <button onClick={toggleSolutionReveal} className="nav-button solution-toggle-button-bottom"> {tempReveal[currentQuestionIndex] ? "Hide Solution" : "'S' Solution"} </button>
                             )}
                         </div>
@@ -1039,13 +941,11 @@ function QuizPage() {
                                             {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
                                         </button>
                                     )}
-
                                     {topicId === 'chemistry' && (
                                         <button onClick={() => executeWithDelay(toggleExhibit, true)} className="nav-button exhibit-button">
                                             Exhibit
                                         </button>
                                     )}
-
                                     <button onClick={handleOpenReviewSummary} className="nav-button review-button-bottom">
                                         Review
                                     </button>

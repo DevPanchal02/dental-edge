@@ -1,20 +1,16 @@
-// FILE: client/src/pages/ResultsPage.jsx
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { getQuizData, getQuizMetadata, fetchTopicData, formatDisplayName } from '../data/loader';
+import { getQuizData, getQuizMetadata, fetchTopicData, formatDisplayName } from '../services/loader';
 import '../styles/ResultsPage.css';
 
-// Helper function to extract text from HTML (basic version)
 const extractTextFromHtml = (htmlString) => {
     if (!htmlString || typeof htmlString !== 'string') return '';
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = htmlString;
     let text = tempDiv.textContent || tempDiv.innerText || '';
-    // Optional: Clean up excessive whitespace
     text = text.replace(/\s+/g, ' ').trim();
     return text;
 };
-
 
 function ResultsPage() {
     const { topicId, sectionType, quizId } = useParams();
@@ -22,62 +18,59 @@ function ResultsPage() {
 
     const [results, setResults] = useState(null);
     const [quizQuestions, setQuizQuestions] = useState([]);
-    const [quizTitle, setQuizTitle] = useState('');
     const [topicName, setTopicName] = useState('');
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // This useEffect hook is now properly async.
     useEffect(() => {
-        setIsLoading(true);
-        setError(null);
-        const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
-        const savedResultsString = localStorage.getItem(resultsKey);
+        const loadResultsData = async () => {
+            setIsLoading(true);
+            setError(null);
 
-        if (!savedResultsString) {
-            setError('No results found for this quiz. Please complete the quiz first.');
-            setIsLoading(false);
-            return;
-        }
+            const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
+            const savedResultsString = localStorage.getItem(resultsKey);
 
-        let parsedResults;
-        try {
-            parsedResults = JSON.parse(savedResultsString);
-            setResults(parsedResults);
-            setQuizTitle(parsedResults.quizName || 'Quiz Results');
-
-            fetchTopicData(topicId)
-                .then(topicData => setTopicName(topicData.name))
-                .catch(err => console.error("Error fetching topic name:", err));
-
-            const allData = getQuizData(topicId, sectionType, quizId);
-            if (allData && Array.isArray(allData)) {
-                 setQuizQuestions(allData);
-            } else {
-                console.warn("Could not retrieve full quiz data for review.");
-                setError("Could not load question details for review.");
+            if (!savedResultsString) {
+                setError('No results found for this quiz. Please complete the quiz first.');
+                setIsLoading(false);
+                return;
             }
 
-        } catch (e) {
-            console.error("Error parsing results from localStorage:", e);
-            setError('Could not load results. Data might be corrupted.');
-        } finally {
-            setIsLoading(false);
-        }
+            try {
+                const parsedResults = JSON.parse(savedResultsString);
+                setResults(parsedResults);
 
+                // Fetch topic and quiz data asynchronously
+                const [topicData, allQuizData] = await Promise.all([
+                    fetchTopicData(topicId),
+                    getQuizData(topicId, sectionType, quizId)
+                ]);
+
+                setTopicName(topicData.name);
+                setQuizQuestions(allQuizData || []);
+
+            } catch (e) {
+                console.error("Error loading results page data:", e);
+                setError('Could not load results. Data might be corrupted or failed to fetch.');
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        loadResultsData();
     }, [topicId, sectionType, quizId]);
 
     const getQuestionPreviewText = (index) => {
         if (quizQuestions && quizQuestions.length > index && quizQuestions[index]) {
             const questionItem = quizQuestions[index];
-            // Check the new structure: questionItem.question.html_content
             if (questionItem.question && questionItem.question.html_content) {
                 const text = extractTextFromHtml(questionItem.question.html_content);
-                return text.substring(0, 70) + (text.length > 70 ? "..." : ""); // Preview length
+                return text.substring(0, 70) + (text.length > 70 ? "..." : "");
             }
         }
         return `Question ${index + 1} text unavailable`;
     };
-
 
     if (isLoading) return <div className="page-loading">Loading Results...</div>;
     if (error && !results) return (
@@ -88,7 +81,6 @@ function ResultsPage() {
      if (error && results) {
          console.warn("Results page error:", error);
      }
-
     if (!results) return (
         <div className="page-info"> No results available.
             <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button>
@@ -99,6 +91,9 @@ function ResultsPage() {
     const scorePercentage = totalForPercentage > 0
         ? ((results.score / totalForPercentage) * 100).toFixed(1)
         : 0;
+    
+    // Use the quizName from the stored results object
+    const quizTitle = results.quizName || 'Quiz Results';
 
     return (
         <div className="results-page-container">
