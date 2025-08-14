@@ -4,13 +4,17 @@ import Layout from './components/Layout';
 import TopicPage from './pages/TopicPage';
 import QuizPage from './pages/QuizPage';
 import ResultsPage from './pages/ResultsPage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import LandingPage from './pages/LandingPage'; // Import the new landing page
 import { fetchTopics } from './services/loader.js';
+import { useAuth } from './context/AuthContext'; 
 
 function App() {
   const [firstTopicId, setFirstTopicId] = useState(null);
   const [loadingTopics, setLoadingTopics] = useState(true);
-  const [fetchError, setFetchError] = useState(null);
   const location = useLocation();
+  const { currentUser } = useAuth();
 
   useEffect(() => {
     const getFirstTopic = async () => {
@@ -19,38 +23,42 @@ function App() {
         const topics = await fetchTopics();
         if (topics && topics.length > 0) {
           setFirstTopicId(topics[0].id);
-        } else {
-          setFirstTopicId('no-topics');
-          setFetchError("No topics found from the backend API.");
         }
       } catch (error) {
         console.error("Error fetching initial topics in App.jsx:", error);
         setFirstTopicId('no-topics');
-        setFetchError("Error loading topics.");
       } finally {
         setLoadingTopics(false);
       }
     };
-    getFirstTopic();
-  }, []);
+    if (currentUser) {
+      getFirstTopic();
+    } else {
+      setLoadingTopics(false);
+    }
+  }, [currentUser]);
 
   if (loadingTopics) {
-    return <div className="page-loading">Initializing...</div>;
+    return <div className="page-loading">Initializing Application...</div>;
   }
-
-  const initialRedirectPath = firstTopicId ? `/topic/${firstTopicId}` : '/topic/no-topics';
 
   return (
     <Routes>
-      <Route path="/" element={<Layout />}>
-        <Route index element={<Navigate to={initialRedirectPath} replace />} />
+      {/* Public Routes */}
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="/register" element={<RegisterPage />} />
+
+      {/* Protected Routes */}
+      <Route path="/app" element={currentUser ? <Layout /> : <Navigate to="/login" />}>
+        <Route index element={firstTopicId ? <Navigate to={`/app/topic/${firstTopicId}`} replace /> : <div>Loading...</div>} />
         <Route path="topic/:topicId" element={<TopicPage />} />
         <Route
             path="quiz/:topicId/:sectionType/:quizId"
             element={<QuizPage key={location.pathname} />}
         />
         <Route path="results/:topicId/:sectionType/:quizId" element={<ResultsPage />} />
-        <Route path="/topic/no-topics" element={<div className="page-info">No topics found. Check backend function logs.</div>} />
+        <Route path="topic/no-topics" element={<div className="page-info">No topics found. Check backend function logs.</div>} />
       </Route>
     </Routes>
   );

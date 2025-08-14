@@ -1,15 +1,14 @@
-// FILE: client/src/components/Sidebar.jsx
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import { useAuth } from '../context/AuthContext'; 
 import '../styles/Sidebar.css';
 
 const PinIcon = ({ pinned }) => (
-  <span style={{ marginRight: '8px', display: 'inline-block', fontSize: '1em' }}> {/* Adjusted font size if needed */}
+  <span style={{ marginRight: '8px', display: 'inline-block', fontSize: '1em' }}>
     {pinned ? '🔒' : '🔓'}
   </span>
 );
-
 
 function Sidebar({ 
     topics, 
@@ -22,6 +21,20 @@ function Sidebar({
     isContentPage 
 }) {
     const { theme, toggleTheme } = useTheme();
+    const { currentUser, logout } = useAuth(); // Get user and logout function
+    const navigate = useNavigate();
+
+    const handleLogout = async () => {
+      try {
+        await logout();
+        // After logout, redirect the user to the login page
+        navigate('/login');
+      } catch (error) {
+        console.error("Failed to log out:", error);
+        alert("Failed to log out. Please try again.");
+      }
+    };
+    
 
     const handleResetProgress = () => {
         const confirmation = window.confirm(
@@ -29,24 +42,18 @@ function Sidebar({
             "This will clear saved answers, times, and results for ALL topics and quizzes.\n" +
             "This action cannot be undone."
         );
-
         if (confirmation) {
-            console.log("Resetting all quiz progress...");
             try {
                 Object.keys(localStorage).forEach(key => {
                     if (key.startsWith('quizState-') || key.startsWith('quizResults-')) {
                         localStorage.removeItem(key);
-                        console.log(`Removed item: ${key}`);
                     }
                 });
                 alert("All quiz progress has been reset.");
                 window.location.reload();
             } catch (error) {
                 console.error("Error resetting progress:", error);
-                alert("An error occurred while resetting progress.");
             }
-        } else {
-            console.log("Progress reset cancelled.");
         }
     };
 
@@ -91,11 +98,17 @@ function Sidebar({
             </nav>
 
             <div className="sidebar-actions">
+                {/* Display user's email if they are logged in */}
+                {currentUser && <p className="user-email">{currentUser.displayName || currentUser.email}</p>}
+                
                 <button onClick={toggleTheme} className="theme-toggle-button">
                     Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
                 </button>
                 <button onClick={handleResetProgress} className="reset-button">
                     Reset All Progress
+                </button>
+                <button onClick={handleLogout} className="logout-button">
+                    Logout
                 </button>
             </div>
         </aside>
