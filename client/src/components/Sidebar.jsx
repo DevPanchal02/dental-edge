@@ -21,13 +21,12 @@ function Sidebar({
     isContentPage 
 }) {
     const { theme, toggleTheme } = useTheme();
-    const { currentUser, logout } = useAuth(); // Get user and logout function
+    const { currentUser, logout } = useAuth();
     const navigate = useNavigate();
 
     const handleLogout = async () => {
       try {
         await logout();
-        // After logout, redirect the user to the login page
         navigate('/login');
       } catch (error) {
         console.error("Failed to log out:", error);
@@ -81,7 +80,7 @@ function Sidebar({
                         topics.map((topic) => (
                             <li key={topic.id}>
                                 <NavLink
-                                    to={`/topic/${topic.id}`}
+                                    to={`/app/topic/${topic.id}`}
                                     className={({ isActive }) =>
                                     `topic-button ${isActive || topic.id === activeTopicId ? 'active' : ''}`
                                     }
@@ -98,16 +97,18 @@ function Sidebar({
             </nav>
 
             <div className="sidebar-actions">
-                {/* Display user's email if they are logged in */}
                 {currentUser && <p className="user-email">{currentUser.displayName || currentUser.email}</p>}
                 
-                <button onClick={toggleTheme} className="theme-toggle-button">
+                {/* Link to the new Plans page */}
+                <Link to="/plans" className="sidebar-action-button">Upgrade Plan</Link>
+
+                <button onClick={toggleTheme} className="sidebar-action-button">
                     Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
                 </button>
-                <button onClick={handleResetProgress} className="reset-button">
+                <button onClick={handleResetProgress} className="sidebar-action-button danger">
                     Reset All Progress
                 </button>
-                <button onClick={handleLogout} className="logout-button">
+                <button onClick={handleLogout} className="sidebar-action-button">
                     Logout
                 </button>
             </div>
@@ -115,4 +116,4 @@ function Sidebar({
     );
 }
 
-export default Sidebar;
+export default Sidebar

@@ -87,20 +87,19 @@ const LandingPage = () => {
           <div className="logo"><h1>Dental Edge</h1></div>
           <div className="navbar">
             <ul className="nav-menu">
-              <li className="nav-item"><a href="#" className="nav-link">Home</a></li>
               <li className="nav-item"><a href="#" className="nav-link">About</a></li>
-              <li className="nav-item"><a href="#" className="nav-link">Services</a></li>
               <li className="nav-item"><a href="#" className="nav-link">Contact</a></li>
-              <li className="nav-item nav-top"><Link to="/app" className="nav-button">Get Started</Link></li>
+              <li className="nav-item"><a href="#" className="nav-link"><Link to="/plans">View Plans</Link></a></li>
+              <li className="nav-item nav-top"><Link to="/login" className="nav-button">Sign Up</Link></li>
             </ul>
           </div>
         </nav>
         <section className="container-one">
           <div className="landing-page">
             <div className="phase-two upword">
-              <h1 className="bold-76 headline">Innovate <br /> Tomorrow.</h1>
+              <h1 className="bold-76 headline">Secure Your <br /> Dental Future.</h1>
               <ul className="landing-button">
-                <li><a href="#" className="landing-link">Learn More</a></li>
+                <li><a href="#" className="landing-link">Get Started</a></li>
               </ul>
             </div>
             <div className="decp Regular-18 upword">

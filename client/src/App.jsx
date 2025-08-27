@@ -6,7 +6,8 @@ import QuizPage from './pages/QuizPage';
 import ResultsPage from './pages/ResultsPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
-import LandingPage from './pages/LandingPage'; // Import the new landing page
+import LandingPage from './pages/LandingPage';
+import PlansPage from './pages/PlansPage'; // Import the new Plans page
 import { fetchTopics } from './services/loader.js';
 import { useAuth } from './context/AuthContext'; 
 
@@ -48,6 +49,9 @@ function App() {
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
+      
+      {/* Add route to the plans page, accessible when logged in */}
+      <Route path="/plans" element={currentUser ? <PlansPage /> : <Navigate to="/login" />} />
 
       {/* Protected Routes */}
       <Route path="/app" element={currentUser ? <Layout /> : <Navigate to="/login" />}>
