@@ -1,11 +1,12 @@
 import React, { Suspense, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, MeshReflectorMaterial, Stage } from '@react-three/drei';
 import '../styles/LandingPage.css';
 import { CiLocationArrow1 } from "react-icons/ci";
+import { useAuth } from '../context/AuthContext';
 
-// The Model component is correct and unchanged.
+// The Model and Scene components remain unchanged.
 function Model() {
     const modelRef = useRef();
     const { scene } = useGLTF('/Models/Tooth.glb'); 
@@ -28,22 +29,14 @@ function Model() {
     return <primitive ref={modelRef} object={scene} />;
 }
 
-
-// --- THIS IS THE FIX: The Scene is adjusted for a 10% size increase. ---
 function Scene() {
     return (
         <Suspense fallback={null}>
             <group position={[0, -0.1, 0]} rotation={[-0.05, 0, 0]}>
                 <Stage environment={"city"} intensity={0.6} contactShadow={{ opacity: 0.5, blur: 2 }} preset="rembrandt">
-                    {/* 
-                      The scale of this invisible box is reduced by 10% (from 4 to 3.6).
-                      This makes the Stage's camera zoom IN slightly, making the tooth
-                      appear 10% larger.
-                    */}
                     <mesh visible={false} scale={[2.8, 2.8, 2.8]}>
                         <boxGeometry />
                     </mesh>
-
                     <group position={[0, -0.9, 0]}>
                         <Model />
                     </group>
@@ -68,11 +61,26 @@ function Scene() {
         </Suspense>
     );
 }
-// --- END OF FIX ---
 
 
 // --- MAIN LANDING PAGE COMPONENT ---
 const LandingPage = () => {
+  // Get the current user and navigation function
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
+
+  // Handle the click event for the "Get Started" button
+  const handleGetStarted = (e) => {
+    e.preventDefault(); // Prevent the default link behavior
+    if (currentUser) {
+      // If user is logged in, go to the app
+      navigate('/app');
+    } else {
+      // If not logged in, go to the registration page
+      navigate('/register');
+    }
+  };
+
   return (
     <div className="landing-page-body">
       <Canvas 
@@ -100,7 +108,12 @@ const LandingPage = () => {
             <div className="phase-two upword">
               <h1 className="bold-76 headline">Secure Your <br /> Dental Future.</h1>
               <ul className="landing-button">
-                <li><a href="#" className="landing-link">Get Started <CiLocationArrow1 /></a></li>
+                {/* Updated the link to use the new click handler */}
+                <li>
+                  <a href="/register" onClick={handleGetStarted} className="landing-link">
+                    Get Started <CiLocationArrow1 />
+                  </a>
+                </li>
               </ul>
             </div>
             <div className="decp Regular-18 upword">
