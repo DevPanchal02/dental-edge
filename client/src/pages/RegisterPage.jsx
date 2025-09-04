@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../styles/userLogin.css";
 import registerImage from "../assets/registerImage.jpg";
 import googleLogo from "../assets/google-logo.svg";
 import { useAuth } from "../context/AuthContext"; 
 import { updateProfile, sendEmailVerification } from "firebase/auth"; 
-import { auth } from "../firebase"; 
 
 function RegisterPage() {
-  // State remains the same
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [username, setUsername] = useState("");
@@ -16,21 +14,25 @@ function RegisterPage() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Get the signup and signInWithGoogle functions from our context
-  const { signup, signInWithGoogle } = useAuth();
+  const { signup, signInWithGoogle, currentUser } = useAuth();
+
+  useEffect(() => {
+    // If the user is already logged in, redirect them to the app.
+    if (currentUser) {
+      navigate("/app", { replace: true });
+    }
+  }, [currentUser, navigate]);
 
   const handleSignup = async (event) => {
     event.preventDefault();
-    setError(""); // Clear previous errors
+    setError("");
     setLoading(true);
 
     try {
       const userCredential = await signup(email, password);
-      // After signup, update the profile and send verification email
       await updateProfile(userCredential.user, { displayName: username });
       await sendEmailVerification(userCredential.user);
       
-      // Navigate to the login page with a state message to inform the user
       navigate("/login", {
         state: { message: "Registration successful! Please check your email to verify your account before logging in." }
       });
@@ -47,12 +49,17 @@ function RegisterPage() {
     setLoading(true);
     try {
       await signInWithGoogle();
-      navigate("/"); // On successful Google sign-in, go to the main app
+      // Navigation is now handled by the useEffect hook.
     } catch (err) {
       setError(err.message);
+      setLoading(false);
     }
-    setLoading(false);
   };
+
+  // Render nothing while checking for currentUser.
+  if (currentUser) {
+    return null;
+  }
 
   return (
     <div className="login-page">

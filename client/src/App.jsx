@@ -51,9 +51,7 @@ function App() {
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/contact" element={<ContactPage />} />
-      
-      {/* Add route to the plans page, accessible when logged in */}
-      <Route path="/plans" element={currentUser ? <PlansPage /> : <Navigate to="/login" />} />
+      <Route path="/plans" element={<PlansPage />} />
 
       {/* Protected Routes */}
       <Route path="/app" element={currentUser ? <Layout /> : <Navigate to="/login" />}>

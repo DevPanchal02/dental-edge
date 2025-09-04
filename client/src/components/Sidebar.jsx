@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useNavigate, Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
 import { useAuth } from '../context/AuthContext'; 
 import '../styles/Sidebar.css';
@@ -116,4 +116,4 @@ function Sidebar({
     );
 }
 
-export default Sidebar
+export default Sidebar;

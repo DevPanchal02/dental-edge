@@ -65,31 +65,33 @@ nav, .landing-button {
 .Regular-18 {
     font-size: 1.4rem;
     font-weight: 400;
-    color: var(--text-primary);
+    color: #FFFFFF;
 }
 .bold-76 {
     font-size: 6rem;
     line-height: 1.1;
     font-weight: bold;
-    color: var(--text-primary);
+    color: #FFFFFF;
     margin-bottom: 0; 
 }
 
 /* Navigation */
 .nav-button {
-    border: 1px solid var(--text-primary);
+    border: 1px solid #FFFFFF;
     padding: 8px 22px;
     border-radius: 20px;
-    color: var(--text-primary);
+    color: #FFFFFF;
     font-size: 1.3rem;
     transition: all 0.3s ease-in-out;
+    background-color: transparent;
 }
 .nav-button:hover {
-  color: var(--bg-primary);
-  background-color: var(--text-primary);
+  background-color: var(--text-accent);
+  border-color: var(--text-accent);
+  color: #FFFFFF;
 }
 .logo {
-    color: var(--text-primary);
+    color: #FFFFFF;
     font-size: 1.7rem;
     font-weight: bold;
 }
@@ -110,13 +112,15 @@ nav {
     list-style: none;
 }
 .nav-menu li { padding: 0 2rem; }
-a.nav-link {
-    color: var(--text-primary);
+
+/* This now applies to the <Link> component which renders an <a> tag */
+.nav-link {
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 1.3rem;
     transition: color 0.3s;
 }
-a.nav-link:hover { color: var(--text-accent); }
+.nav-link:hover { color: var(--text-accent); }
 
 /* Main Layout */
 .container-one{
@@ -159,11 +163,11 @@ a.nav-link:hover { color: var(--text-accent); }
 .landing-button{
     margin-top: 42px;
     padding-top: 18px;
-    border-top: 1px solid var(--text-primary);
+    border-top: 1px solid #FFFFFF;
     width: fit-content;
 }
 .landing-link{
-    color: var(--text-primary);
+    color: #FFFFFF;
     font-size: 2.0rem;
     transition: color 0.3s ease-in-out;
 }
@@ -177,15 +181,15 @@ a.nav-link:hover { color: var(--text-accent); }
   color: var(--text-accent);
 }
 .para{
-    border-left: 1px solid var(--text-primary);
+    border-left: 1px solid #FFFFFF;
     padding-left: 15px;
-    color: var(--text-secondary);
+    color: #CCCCCC;
     font-size: 1.5rem;
 }
 .landing-arrow-svg {
     width: 2.2rem;
     height: 2.2rem;
-    color: var(--text-primary);
+    color: #FFFFFF;
     margin-left: 15px;
     transition: all 0.3s ease-in-out;
 }

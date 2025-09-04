@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Link, useLocation } from "react-router-dom";
 import "../styles/userLogin.css";
 import loginImage from "../assets/login.jpg";
@@ -11,35 +11,37 @@ function LoginPage() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const location = useLocation(); // Hook to get state passed from navigation
+  const location = useLocation();
 
-  // Get the login functions from our context
-  const { login, signInWithGoogle } = useAuth();
+  const { login, signInWithGoogle, currentUser } = useAuth();
 
-  // Display the message from the registration page if it exists
+  useEffect(() => {
+    // If the user is already logged in, redirect them to the app.
+    if (currentUser) {
+      navigate("/app", { replace: true });
+    }
+  }, [currentUser, navigate]);
+
   const registrationMessage = location.state?.message;
 
   const handleSignIn = async (event) => {
     event.preventDefault();
-    setError(""); // Clear previous errors
+    setError("");
     setLoading(true);
     
     try {
       const userCredential = await login(email, password);
       if (!userCredential.user.emailVerified) {
         setError("Please verify your email address before logging in.");
-        // We don't need to sign out; the user is still in a "limbo" state.
         setLoading(false);
         return;
       }
-      // On successful login, AuthProvider's onAuthStateChanged will update the
-      // global state. We just need to navigate to the main app.
-      navigate("/");
-
+      // Navigation is now handled by the useEffect hook reacting to currentUser change.
     } catch (err) {
       setError(err.message);
+      setLoading(false);
     }
-    setLoading(false);
+    // No need to set loading to false here, as the redirect will happen.
   };
 
   const handleGoogleSignIn = async (event) => {
@@ -48,12 +50,17 @@ function LoginPage() {
     setLoading(true);
     try {
       await signInWithGoogle();
-      navigate("/"); // On successful Google sign-in, go to the main app
+      // Navigation is handled by the useEffect hook.
     } catch (err) {
       setError(err.message);
+      setLoading(false);
     }
-    setLoading(false);
   };
+
+  // Render nothing while checking for currentUser to avoid flashing the form.
+  if (currentUser) {
+    return null;
+  }
 
   return (
     <div className="login-page">
