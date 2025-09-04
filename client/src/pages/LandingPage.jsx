@@ -88,9 +88,9 @@ const LandingPage = () => {
           <div className="navbar">
             <ul className="nav-menu">
               <li className="nav-item"><a href="#" className="nav-link">About</a></li>
-              <li className="nav-item"><a href="#" className="nav-link">Contact</a></li>
+              <li className="nav-item"><a href="#" className="nav-link"><Link to="/contact">Contact</Link></a></li>
               <li className="nav-item"><a href="#" className="nav-link"><Link to="/plans">View Plans</Link></a></li>
-              <li className="nav-item nav-top"><Link to="/login" className="nav-button">Sign Up</Link></li>
+              <li className="nav-item nav-top"><Link to="/login" className="nav-button">Log In</Link></li>
             </ul>
           </div>
         </nav>
