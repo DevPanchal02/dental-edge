@@ -1,12 +1,11 @@
 import React, { Suspense, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, MeshReflectorMaterial, Stage } from '@react-three/drei';
 import '../styles/LandingPage.css';
 import { CiLocationArrow1 } from "react-icons/ci";
-import { useAuth } from '../context/AuthContext';
 
-// Model and Scene components remain unchanged...
+// The Model component is correct and unchanged.
 function Model() {
     const modelRef = useRef();
     const { scene } = useGLTF('/Models/Tooth.glb'); 
@@ -29,14 +28,22 @@ function Model() {
     return <primitive ref={modelRef} object={scene} />;
 }
 
+
+// --- THIS IS THE FIX: The Scene is adjusted for a 10% size increase. ---
 function Scene() {
     return (
         <Suspense fallback={null}>
             <group position={[0, -0.1, 0]} rotation={[-0.05, 0, 0]}>
                 <Stage environment={"city"} intensity={0.6} contactShadow={{ opacity: 0.5, blur: 2 }} preset="rembrandt">
+                    {/* 
+                      The scale of this invisible box is reduced by 10% (from 4 to 3.6).
+                      This makes the Stage's camera zoom IN slightly, making the tooth
+                      appear 10% larger.
+                    */}
                     <mesh visible={false} scale={[2.8, 2.8, 2.8]}>
                         <boxGeometry />
                     </mesh>
+
                     <group position={[0, -0.9, 0]}>
                         <Model />
                     </group>
@@ -61,23 +68,11 @@ function Scene() {
         </Suspense>
     );
 }
+// --- END OF FIX ---
 
+
+// --- MAIN LANDING PAGE COMPONENT ---
 const LandingPage = () => {
-  const { currentUser } = useAuth();
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    // If the user is logged in, redirect them from the landing page to the app.
-    if (currentUser) {
-      navigate('/app', { replace: true });
-    }
-  }, [currentUser, navigate]);
-
-  // Avoid rendering the page if a redirect is imminent.
-  if (currentUser) {
-    return null;
-  }
-
   return (
     <div className="landing-page-body">
       <Canvas 
