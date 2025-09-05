@@ -75,7 +75,7 @@ function ResultsPage() {
     if (isLoading) return <div className="page-loading">Loading Results...</div>;
     if (error && !results) return (
         <div className="page-error"> {error}
-            <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button>
+            <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button>
         </div>
     );
      if (error && results) {
@@ -83,7 +83,7 @@ function ResultsPage() {
      }
     if (!results) return (
         <div className="page-info"> No results available.
-            <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button>
+            <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button>
         </div>
     );
 
@@ -98,7 +98,7 @@ function ResultsPage() {
     return (
         <div className="results-page-container">
             <div className="results-header">
-                <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button-results">
+                <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button-results">
                      ← Back to {topicName || formatDisplayName(topicId)}
                 </button>
                 <h1 className="results-title">{quizTitle} - Results</h1>
@@ -156,10 +156,10 @@ function ResultsPage() {
             </div>
 
              <div className="results-actions">
-                <button onClick={() => navigate(`/quiz/${topicId}/${sectionType}/${quizId}`, { state: { review: true, questionIndex: 0 } })} className="review-button">
+                <button onClick={() => navigate(`/app/quiz/${topicId}/${sectionType}/${quizId}`, { state: { review: true, questionIndex: 0 } })} className="review-button">
                     Review All Questions
                 </button>
-                 <button onClick={() => navigate(`/topic/${topicId}`)} className="back-to-topic-button">
+                 <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-to-topic-button">
                     Back to Topic List
                 </button>
             </div>

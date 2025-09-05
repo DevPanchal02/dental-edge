@@ -143,7 +143,7 @@ function QuizPage() {
         setIsNavActionInProgress(false);
 
         if (latestStateRef.current.isReviewMode) {
-            navigate(`/results/${topicId}/${sectionType}/${quizId}`);
+            navigate(`/app/results/${topicId}/${sectionType}/${quizId}`);
             return;
         }
         let score = 0;
@@ -186,7 +186,7 @@ function QuizPage() {
         localStorage.removeItem(getQuizStateKey());
         setIsReviewSummaryVisible(false);
         if (latestStateRef.current.isMounted) setIsLoading(false);
-        navigate(`/results/${topicId}/${sectionType}/${quizId}`, { replace: true });
+        navigate(`/app/results/${topicId}/${sectionType}/${quizId}`, { replace: true });
     }, [allQuizQuestions, quizMetadata, navigate, sectionType, topicId, quizId, userAnswers, submittedAnswers, userTimeSpent, markedQuestions, practiceTestSettings, getQuizStateKey, setError]);
     const handleFinishQuizRef = useRef(handleFinishQuiz);
     useEffect(() => { handleFinishQuizRef.current = handleFinishQuiz; }, [handleFinishQuiz]);
@@ -376,7 +376,7 @@ function QuizPage() {
         setIsPracticeOptionsModalOpen(false);
         if (!hasPracticeTestStarted) {
             if (isMountedRef.current) setIsLoading(false);
-            navigate(`/topic/${topicId}`);
+            navigate(`/app/topic/${topicId}`);
         }
     }, [navigate, topicId, hasPracticeTestStarted]);
 
@@ -829,17 +829,17 @@ function QuizPage() {
         </>
     );
     if (isLoading) { return <div className="page-loading">Loading Quiz from Cloud...</div>; }
-    if (error) { return (<div className="page-error"> Error: {error} <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>); }
+    if (error) { return (<div className="page-error"> Error: {error} <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>); }
     if (isPracticeOptionsModalOpen && sectionType === 'practice' && !isReviewMode) {
         if (!quizMetadata) { return <div className="page-loading">Preparing Test Options... (Waiting for metadata)</div>; }
         const topicKeyForDuration = quizMetadata.topicName?.toLowerCase().replace(/\s+/g, '-') || topicId.toLowerCase().replace(/\s+/g, '-');
         const baseTime = PRACTICE_TEST_DURATIONS[topicKeyForDuration] || PRACTICE_TEST_DURATIONS.default;
-        return (<PracticeTestOptions isOpen={isPracticeOptionsModalOpen} onClose={handlePracticeTestOptionsClose} onStartTest={handleStartPracticeTest} fullNameForDisplay={quizMetadata.fullNameForDisplay} categoryForInstructions={quizMetadata.categoryForInstructions} baseTimeLimitMinutes={Math.floor(baseTime / 60)} numQuestions={quizMetadata.totalQuestions} />);
+        return (<PracticeTestOptions isOpen={isPracticeOptionsModalOpen} onClose={handlePracticeTestOptionsClose} onStartTest={handleStartPracticeTest} fullNameForDisplay={quizMetadata.fullNameForDisplay} categoryForInstructions={quizMetadata.categoryForInstructions} baseTimeLimitMinutes={Math.floor(baseTime / 60)} numQuestions={quizMetadata.totalQuestions}  />);
     }
     if (sectionType === 'practice' && !hasPracticeTestStarted && !isPracticeOptionsModalOpen && !isReviewMode) { return <div className="page-loading">Preparing Practice Test...</div>; }
-    if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { return <div className="page-info"> No questions found for this quiz. Please check data files. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
+    if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { return <div className="page-info"> No questions found for this quiz. Please check data files. <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
     const currentQuestionData = allQuizQuestions[currentQuestionIndex];
-    if (!isReviewSummaryVisible && (hasPracticeTestStarted || isReviewMode) && !currentQuestionData && allQuizQuestions.length > 0) { return <div className="page-error">Error: Could not load current question data. <button onClick={() => navigate(`/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
+    if (!isReviewSummaryVisible && (hasPracticeTestStarted || isReviewMode) && !currentQuestionData && allQuizQuestions.length > 0) { return <div className="page-error">Error: Could not load current question data. <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
     const passageContentKey = passageHtml && currentQuestionData ? `passage_${currentQuestionData.category}` : null;
     const isPracticeTestActive = sectionType === 'practice' && !isReviewMode && hasPracticeTestStarted;
     const cardIsSubmittedState = (isPracticeTestActive && !!submittedAnswers[currentQuestionIndex]) || (!isPracticeTestActive && (!!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex]));
@@ -873,8 +873,8 @@ function QuizPage() {
                     <div className="quiz-header">
                         <button
                             onClick={() => {
-                                if (isReviewMode) navigate(`/results/${topicId}/${sectionType}/${quizId}`);
-                                else navigate(`/topic/${topicId}`);
+                                if (isReviewMode) navigate(`/app/results/${topicId}/${sectionType}/${quizId}`);
+                                else navigate(`/app/topic/${topicId}`);
                             }}
                             className="back-button-quiz"
                         >

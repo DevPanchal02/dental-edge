@@ -12,8 +12,6 @@ function TopicPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // When fetchTopicData became async, this code handles the loading and error
-  // states without needing any changes.
   useEffect(() => {
     let isMounted = true;
     const loadData = async () => {
@@ -49,7 +47,6 @@ function TopicPage() {
 
   }, [topicId]);
 
-  // This render function is updated to work with the data structure from the API.
   const renderItemList = (items, sectionType) => {
     if (!items || items.length === 0) {
       return <p className="no-items-message">No {sectionType === 'practice' ? 'practice tests' : 'items'} available for this topic.</p>;
@@ -58,9 +55,9 @@ function TopicPage() {
       <ul className="item-list">
         {items.map((item) => (
           <li key={item.id} className="list-item">
-            <Link to={`/quiz/${topicId}/${sectionType}/${item.id}`} className="item-link">
+            {/* --- FIX: Added the '/app' prefix to generate the correct URL --- */}
+            <Link to={`/app/quiz/${topicId}/${sectionType}/${item.id}`} className="item-link">
               {item.name}
-              {/* The question count is removed from here for efficiency. */}
               <span className="item-arrow">→</span>
             </Link>
           </li>
