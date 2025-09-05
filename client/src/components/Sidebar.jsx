@@ -1,13 +1,12 @@
-import React from 'react';
-import { NavLink, useNavigate, Link } from 'react-router-dom';
-import { useTheme } from '../context/ThemeContext';
-import { useAuth } from '../context/AuthContext'; 
+import React, { useState, useRef, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import '../styles/Sidebar.css';
 
-const PinIcon = ({ pinned }) => (
-  <span style={{ marginRight: '8px', display: 'inline-block', fontSize: '1em' }}>
-    {pinned ? '🔒' : '🔓'}
-  </span>
+const PinIcon = () => (
+  <div className="pin-icon-wrapper">
+    <div className="pin-icon-body"></div>
+  </div>
 );
 
 function Sidebar({ 
@@ -20,41 +19,32 @@ function Sidebar({
     onPinToggle,
     isContentPage 
 }) {
-    const { theme, toggleTheme } = useTheme();
-    const { currentUser, logout } = useAuth();
-    const navigate = useNavigate();
+    const { currentUser } = useAuth();
+    const userName = currentUser?.displayName || currentUser?.email || 'User';
+    const userProfilePic = currentUser?.photoURL;
+    const userInitial = userName.charAt(0).toUpperCase();
 
-    const handleLogout = async () => {
-      try {
-        await logout();
-        navigate('/login');
-      } catch (error) {
-        console.error("Failed to log out:", error);
-        alert("Failed to log out. Please try again.");
-      }
-    };
-    
+    // --- START: Logic for the animated indicator ---
+    const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0, opacity: 0 });
+    const navListRef = useRef(null);
 
-    const handleResetProgress = () => {
-        const confirmation = window.confirm(
-            "Are you sure you want to reset ALL quiz progress?\n" +
-            "This will clear saved answers, times, and results for ALL topics and quizzes.\n" +
-            "This action cannot be undone."
-        );
-        if (confirmation) {
-            try {
-                Object.keys(localStorage).forEach(key => {
-                    if (key.startsWith('quizState-') || key.startsWith('quizResults-')) {
-                        localStorage.removeItem(key);
-                    }
-                });
-                alert("All quiz progress has been reset.");
-                window.location.reload();
-            } catch (error) {
-                console.error("Error resetting progress:", error);
-            }
+    useEffect(() => {
+        // Find the active link element within the list
+        const activeElement = navListRef.current?.querySelector('.topic-button.active');
+        
+        if (activeElement) {
+            // Get its position and size relative to the list container
+            const top = activeElement.offsetTop;
+            const height = activeElement.offsetHeight;
+            
+            // Update the state to move the indicator
+            setIndicatorStyle({ top, height, opacity: 1 });
+        } else {
+            // If no active topic, hide the indicator
+            setIndicatorStyle(prevStyle => ({ ...prevStyle, opacity: 0 }));
         }
-    };
+    }, [activeTopicId, topics, isOpen]); // Recalculate when active topic, topics list, or sidebar visibility changes
+    // --- END: Logic for the animated indicator ---
 
     return (
         <aside 
@@ -62,20 +52,24 @@ function Sidebar({
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
-            <div className="sidebar-header">
-                <h2 className="sidebar-title">TOPICS</h2>
+            <div className="sidebar-top-header">
+                <h1 className="sidebar-logo">Dental Edge</h1>
                 {isContentPage && isOpen && (
                     <button 
                         onClick={onPinToggle} 
                         className="pin-toggle-button" 
-                        title={isPinned ? "Unpin Sidebar (allow overlay)" : "Pin Sidebar Open (push content)"}
+                        title={isPinned ? "Unpin Sidebar" : "Pin Sidebar"}
                     >
-                        <PinIcon pinned={isPinned} />
+                        <PinIcon />
                     </button>
                 )}
             </div>
-            <nav>
-                <ul>
+
+            <nav className="topics-nav">
+                <h2 className="sidebar-title">Topics</h2>
+                {/* Add the ref and the indicator element to the list */}
+                <ul ref={navListRef}>
+                    <div className="active-topic-indicator" style={indicatorStyle} />
                     {topics && topics.length > 0 ? (
                         topics.map((topic) => (
                             <li key={topic.id}>
@@ -86,31 +80,27 @@ function Sidebar({
                                     }
                                 >
                                     {topic.name}
-                                    <span className="topic-arrow">→</span>
                                 </NavLink>
                             </li>
                         ))
                     ) : (
-                         <li><p className="no-topics-sidebar">No topics loaded.</p></li>
+                        <li className="no-topics-sidebar">No topics loaded.</li>
                     )}
                 </ul>
             </nav>
 
-            <div className="sidebar-actions">
-                {currentUser && <p className="user-email">{currentUser.displayName || currentUser.email}</p>}
-                
-                {/* Link to the new Plans page */}
-                <Link to="/plans" className="sidebar-action-button">Upgrade Plan</Link>
-
-                <button onClick={toggleTheme} className="sidebar-action-button">
-                    Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
-                </button>
-                <button onClick={handleResetProgress} className="sidebar-action-button danger">
-                    Reset All Progress
-                </button>
-                <button onClick={handleLogout} className="sidebar-action-button">
-                    Logout
-                </button>
+            <div className="sidebar-footer">
+                {currentUser && (
+                    <div className="user-profile">
+                        {userProfilePic ? (
+                            <img src={userProfilePic} alt="Profile" className="profile-picture" />
+                        ) : (
+                            <div className="profile-initial">{userInitial}</div>
+                        )}
+                        <span className="user-name">{userName}</span>
+                    </div>
+                )}
+                <Link to="/plans" className="upgrade-button">Upgrade</Link>
             </div>
         </aside>
     );

@@ -13,28 +13,15 @@ function Layout() {
   const { topicId: currentUrlTopicId } = useParams();
   const location = useLocation();
 
-  const [sidebarPinned, setSidebarPinned] = useState(false);
+  // --- FIX: Set initial state to pinned, but do not reset it on navigation ---
+  const [sidebarPinned, setSidebarPinned] = useState(true);
   const [sidebarHovered, setSidebarHovered] = useState(false);
 
-  useEffect(() => {
-    const onQuizPage = location.pathname.startsWith('/quiz/');
-    const onTopicPage = location.pathname.startsWith('/topic/');
+  // --- REMOVED: The faulty useEffect that was resetting the pin state ---
 
-    if (onQuizPage) {
-      setSidebarPinned(false); // Default unpinned on quiz pages
-      setSidebarHovered(false);
-    } else if (onTopicPage) {
-      setSidebarPinned(true);  // Default pinned on topic (selection) pages
-      setSidebarHovered(false);
-    } else {
-      setSidebarPinned(false); // Default to unpinned for other general pages
-      setSidebarHovered(false);
-    }
-  }, [location.pathname]);
-
-  const isContentPage = location.pathname.startsWith('/quiz/') || location.pathname.startsWith('/topic/');
+  const isContentPage = location.pathname.includes('/quiz/') || location.pathname.includes('/topic/');
   const actualSidebarIsOpen = sidebarPinned || (isContentPage && sidebarHovered);
-  const isSidebarEffectivelyPinned = sidebarPinned && actualSidebarIsOpen; // True if pinned and thus should affect layout
+  const isSidebarEffectivelyPinned = sidebarPinned && actualSidebarIsOpen;
 
   const handleSidebarMouseEnter = () => {
     if (isContentPage && !sidebarPinned) {
@@ -99,7 +86,7 @@ function Layout() {
           onPinToggle={toggleSidebarPin}
           isContentPage={isContentPage}
         />
-        <main className="main-content"> {/* main-content no longer gets margin from CSS class */}
+        <main className="main-content">
            {error ? <div className="page-error">{error}</div> : <Outlet />}
         </main>
       </div>

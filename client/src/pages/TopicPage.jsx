@@ -83,8 +83,8 @@ function TopicPage() {
   }
 
   const topicPageDynamicStyle = {
-    marginLeft: isSidebarEffectivelyPinned ? '250px' : '0',
-    width: isSidebarEffectivelyPinned ? 'calc(100% - 250px)' : '100%',
+    marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
+    width: isSidebarEffectivelyPinned ? 'calc(100% - var(--sidebar-width))' : '100%',
   };
 
   return (
