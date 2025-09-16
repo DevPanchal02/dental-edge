@@ -1,13 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { useTheme } from '../context/ThemeContext';
+import { TbLayoutSidebarLeftExpandFilled, TbLayoutSidebarLeftCollapseFilled } from 'react-icons/tb';
+import { FaRegMoon, FaRegSun  } from "react-icons/fa6";
 import '../styles/Sidebar.css';
-
-const PinIcon = () => (
-  <div className="pin-icon-wrapper">
-    <div className="pin-icon-body"></div>
-  </div>
-);
 
 function Sidebar({ 
     topics, 
@@ -20,31 +17,26 @@ function Sidebar({
     isContentPage 
 }) {
     const { currentUser } = useAuth();
+    const { theme, toggleTheme } = useTheme();
     const userName = currentUser?.displayName || currentUser?.email || 'User';
     const userProfilePic = currentUser?.photoURL;
     const userInitial = userName.charAt(0).toUpperCase();
 
-    // --- START: Logic for the animated indicator ---
     const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0, opacity: 0 });
     const navListRef = useRef(null);
 
     useEffect(() => {
-        // Find the active link element within the list
         const activeElement = navListRef.current?.querySelector('.topic-button.active');
         
         if (activeElement) {
-            // Get its position and size relative to the list container
             const top = activeElement.offsetTop;
             const height = activeElement.offsetHeight;
             
-            // Update the state to move the indicator
             setIndicatorStyle({ top, height, opacity: 1 });
         } else {
-            // If no active topic, hide the indicator
             setIndicatorStyle(prevStyle => ({ ...prevStyle, opacity: 0 }));
         }
-    }, [activeTopicId, topics, isOpen]); // Recalculate when active topic, topics list, or sidebar visibility changes
-    // --- END: Logic for the animated indicator ---
+    }, [activeTopicId, topics, isOpen]);
 
     return (
         <aside 
@@ -55,19 +47,27 @@ function Sidebar({
             <div className="sidebar-top-header">
                 <h1 className="sidebar-logo">Dental Edge</h1>
                 {isContentPage && isOpen && (
-                    <button 
-                        onClick={onPinToggle} 
-                        className="pin-toggle-button" 
-                        title={isPinned ? "Unpin Sidebar" : "Pin Sidebar"}
-                    >
-                        <PinIcon />
-                    </button>
+                    <div className="sidebar-header-actions">
+                        <button
+                            onClick={toggleTheme}
+                            className="theme-toggle-button"
+                            title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
+                        >
+                            {theme === 'light' ? <FaRegMoon /> : <FaRegSun />}
+                        </button>
+                        <button 
+                            onClick={onPinToggle} 
+                            className="pin-toggle-button" 
+                            title={isPinned ? "Unpin Sidebar" : "Pin Sidebar"}
+                        >
+                            {isPinned ? <TbLayoutSidebarLeftCollapseFilled /> : <TbLayoutSidebarLeftExpandFilled />}
+                        </button>
+                    </div>
                 )}
             </div>
 
             <nav className="topics-nav">
                 <h2 className="sidebar-title">Topics</h2>
-                {/* Add the ref and the indicator element to the list */}
                 <ul ref={navListRef}>
                     <div className="active-topic-indicator" style={indicatorStyle} />
                     {topics && topics.length > 0 ? (
