@@ -99,11 +99,25 @@
     color: #FFFFFF;
 }
 
+/* UPDATED Logo styles for image */
 .logo {
-    color: #FFFFFF;
-    font-size: 1.7rem;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
 }
+
+.landing-logo-img {
+    height: 70px; /* Adjust the size of your logo */
+    width: auto;
+    transition: opacity 0.2s ease-in-out;
+    
+}
+
+.logo:hover .landing-logo-img {
+    opacity: 0.9;
+}
+
 
 /* --- FIX: Changed selector from 'nav' to '.landing-nav' --- */
 .landing-nav {

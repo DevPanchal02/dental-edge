@@ -26,30 +26,40 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 25px 15px 25px;
+  padding: 20px 25px; /* Adjusted padding for new sizes */
   flex-shrink: 0;
 }
 
-.sidebar-logo {
-  font-size: 1.6em;
-  font-weight: 600;
-  margin: 0;
-  color: var(--text-primary);
+/* UPDATED Logo Link and Image styles */
+.sidebar-logo-link {
+  display: flex;
+  align-items: center;
 }
+
+.sidebar-logo-img {
+  height: 55px; /* Increased logo height */
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-logo-link:hover .sidebar-logo-img {
+  opacity: 0.85;
+}
+
 
 /* Wrapper for the header action buttons */
 .sidebar-header-actions {
   display: flex;
   align-items: center;
-  gap: 8px; /* Space between the buttons */
+  gap: 10px; /* Increased gap */
 }
 
 /* Grouped styles for both buttons to ensure they are identical */
 .pin-toggle-button,
 .theme-toggle-button {
-  width: 32px;
-  height: 32px;
-  border-radius: 6px;
+  width: 40px;   /* Increased button size */
+  height: 40px;  /* Increased button size */
+  border-radius: 8px; /* Slightly larger radius */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,8 +79,8 @@
 /* Style the SVG icons within the buttons to be larger */
 .pin-toggle-button svg,
 .theme-toggle-button svg {
-  width: 22px; 
-  height: 22px;
+  width: 26px; /* Increased icon size */
+  height: 26px;/* Increased icon size */
 }
 
 /* --- Main Content Area --- */
@@ -290,4 +300,9 @@
   height: 1px;
   background-color: var(--border-primary);
   margin: 4px 8px; /* Vertical and horizontal margin */
+}
+
+/* --- NEW: Rule for light mode logo --- */
+body.light-mode .sidebar-logo-img {
+  filter: invert(1);
 }

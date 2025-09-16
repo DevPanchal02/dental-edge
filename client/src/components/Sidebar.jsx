@@ -4,7 +4,8 @@ import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 import { TbLayoutSidebarLeftExpandFilled, TbLayoutSidebarLeftCollapseFilled } from 'react-icons/tb';
 import { FaRegMoon, FaRegSun } from "react-icons/fa6";
-import { FiLogOut, FiUser, FiHelpCircle } from 'react-icons/fi'; // Import FiHelpCircle
+import { FiLogOut, FiUser, FiHelpCircle } from 'react-icons/fi';
+import appLogo from '../assets/logo.png'; // Import the logo
 import '../styles/Sidebar.css';
 
 function Sidebar({
@@ -78,7 +79,9 @@ function Sidebar({
             onMouseLeave={onMouseLeave}
         >
             <div className="sidebar-top-header">
-                <h1 className="sidebar-logo">Dental Edge</h1>
+                <Link to="/app" className="sidebar-logo-link" title="Home">
+                    <img src={appLogo} alt="Dental Edge Logo" className="sidebar-logo-img" />
+                </Link>
                 {isContentPage && isOpen && (
                     <div className="sidebar-header-actions">
                         <button

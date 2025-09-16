@@ -5,6 +5,7 @@ import { useGLTF, MeshReflectorMaterial, Stage } from '@react-three/drei';
 import '../styles/LandingPage.css';
 import { CiLocationArrow1 } from "react-icons/ci";
 import { useAuth } from '../context/AuthContext';
+import appLogo from '../assets/logo.png'; // Import the logo
 
 // Model and Scene components remain unchanged...
 function Model() {
@@ -44,7 +45,9 @@ const LandingPage = () => {
       <div className="ui-container">
         {/* --- FIX: Added a specific class to this nav element --- */}
         <nav className="landing-nav">
-          <div className="logo"><h1>Dental Edge</h1></div>
+          <Link to="/" className="logo">
+            <img src={appLogo} alt="Dental Edge Logo" className="landing-logo-img" />
+          </Link>
           <div className="navbar">
             <ul className="nav-menu">
               <li className="nav-item"><Link to="#" className="nav-link">About</Link></li>

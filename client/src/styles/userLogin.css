@@ -52,7 +52,7 @@
 }
 
 .auth-logo-back-button img {
-  height: 70px; /* Increased logo size */
+  height: 50px; /* Increased logo size */
   width: auto;
   transition: opacity 0.2s ease-in-out; /* Changed hover effect to opacity */
 }
@@ -185,4 +185,9 @@
 .google-button:disabled {
   opacity: 0.6;
   cursor: not-allowed;
+}
+
+/* --- NEW: Rule for light mode logo --- */
+body.light-mode .auth-logo-back-button img {
+  filter: invert(1);
 }
