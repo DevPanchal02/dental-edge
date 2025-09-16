@@ -135,14 +135,27 @@
 
 /* --- Footer (User Profile + Upgrade) --- */
 .sidebar-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 22px 25px;
+  padding: 12px;
   border-top: 1px solid var(--border-primary);
   flex-shrink: 0;
   background-color: var(--bg-sidebar);
+  position: relative;
 }
+
+.sidebar-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-footer-content:hover {
+  background-color: var(--bg-item-link-hover);
+}
+
 
 .user-profile {
   display: flex;
@@ -204,4 +217,77 @@
   font-size: 0.9em;
   padding: 8px 10px;
   font-style: italic;
+}
+
+/* --- UPDATED User Menu Popup Styles --- */
+.user-menu-popup {
+  position: absolute;
+  bottom: calc(100% - 5px); /* Position above the footer with a small gap */
+  left: 12px;
+  right: 12px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-primary);
+  z-index: 1100;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 0.2s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shared styles for all menu items */
+.user-menu-email-section,
+.user-menu-logout-button,
+.user-menu-help-button { /* Added help button to shared styles */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  font-size: 1.05em; /* Increased font size */
+  font-weight: 400; /* Regular font weight */
+  border-radius: 8px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none; /* For the Link component */
+}
+
+/* Specific interactive styles */
+.user-menu-logout-button,
+.user-menu-help-button {
+  width: 100%;
+  transition: background-color 0.2s ease;
+}
+
+.user-menu-logout-button:hover,
+.user-menu-help-button:hover {
+  background-color: var(--bg-item-link-hover);
+}
+
+/* Icon styles */
+.user-menu-email-section svg,
+.user-menu-logout-button svg,
+.user-menu-help-button svg { /* Added help button icon */
+  font-size: 1.2em;
+  color: var(--text-secondary);
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.user-menu-separator {
+  height: 1px;
+  background-color: var(--border-primary);
+  margin: 4px 8px; /* Vertical and horizontal margin */
 }

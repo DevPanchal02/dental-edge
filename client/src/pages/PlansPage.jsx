@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import '../styles/PlansPage.css';
 
 /**
@@ -7,10 +8,23 @@ import '../styles/PlansPage.css';
  * Users can view different tiers and choose a plan.
  */
 function PlansPage() {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { currentUser } = useAuth();
+
+  const handleClose = () => {
+    // If there is a page in the history, go back to it
+    if (location.key !== 'default') {
+      navigate(-1);
+    } else {
+      // Otherwise, go to a sensible fallback page
+      navigate(currentUser ? '/app' : '/');
+    }
+  };
+
   return (
     <div className="plans-page-container">
-      {/* Updated link to point to the landing page */}
-      <Link to="/" className="close-button-plans" aria-label="Close">×</Link>
+      <button onClick={handleClose} className="close-button-plans" aria-label="Close">×</button>
 
       <div className="plans-header">
         <h1 className="plans-title">Upgrade your plan</h1>

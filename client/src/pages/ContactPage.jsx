@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import '../styles/ContactPage.css';
 
 /**
@@ -11,6 +12,10 @@ function ContactPage() {
     email: '',
     message: '',
   });
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { currentUser } = useAuth();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,9 +31,19 @@ function ContactPage() {
     setFormData({ name: '', email: '', message: '' });
   };
 
+  const handleClose = () => {
+    // If there is a page in the history, go back to it
+    if (location.key !== 'default') {
+      navigate(-1);
+    } else {
+      // Otherwise, go to a sensible fallback page
+      navigate(currentUser ? '/app' : '/');
+    }
+  };
+
   return (
     <div className="contact-page-container">
-      <Link to="/" className="close-button-contact" aria-label="Close">×</Link>
+      <button onClick={handleClose} className="close-button-contact" aria-label="Close">×</button>
       
       {/* Wrapper to control the left-aligned content */}
       <div className="contact-content-wrapper">

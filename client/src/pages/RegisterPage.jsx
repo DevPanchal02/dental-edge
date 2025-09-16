@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import "../styles/userLogin.css";
 import registerImage from "../assets/registerImage.jpg";
 import googleLogo from "../assets/google-logo.svg";
+import appLogo from "../assets/logo.png"; // Import the logo
 import { useAuth } from "../context/AuthContext"; 
 import { updateProfile, sendEmailVerification } from "firebase/auth"; 
 
@@ -67,6 +68,9 @@ function RegisterPage() {
         <img src={registerImage} alt="Dental assisting tools" className="background-image" />
       </div>
       <div className="login-form">
+        <Link to="/" className="auth-logo-back-button" title="Back to Home" aria-label="Back to Home">
+          <img src={appLogo} alt="Dental Edge Logo" />
+        </Link>
         <h1 className="welcome-back">Create an Account</h1>
         <form onSubmit={handleSignup} className="login-form-container">
           <input

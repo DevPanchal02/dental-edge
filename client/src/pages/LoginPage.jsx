@@ -3,6 +3,7 @@ import { useNavigate, Link, useLocation } from "react-router-dom";
 import "../styles/userLogin.css";
 import loginImage from "../assets/login.jpg";
 import googleLogo from "../assets/google-logo.svg";
+import appLogo from "../assets/logo.png"; // Import the logo
 import { useAuth } from "../context/AuthContext"; 
 
 function LoginPage() {
@@ -68,6 +69,9 @@ function LoginPage() {
         <img src={loginImage} alt="Dental tools on a tray" className="background-image" />
       </div>
       <div className="login-form">
+        <Link to="/" className="auth-logo-back-button" title="Back to Home" aria-label="Back to Home">
+          <img src={appLogo} alt="Dental Edge Logo" />
+        </Link>
         <h1 className="welcome-back">Welcome back</h1>
         {registrationMessage && <p className="verification-message">{registrationMessage}</p>}
         <form onSubmit={handleSignIn} className="login-form-container">

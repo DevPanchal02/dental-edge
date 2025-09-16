@@ -38,16 +38,37 @@
   border-left: none;
   min-width: 400px;
   overflow-y: auto;
+  position: relative; /* Added for positioning context */
 }
 
-/* --- No changes to the rest of the file below this line --- */
-/* ... (all other styles remain the same) ... */
+/* --- UPDATED STYLE for the logo button --- */
+.auth-logo-back-button {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  display: block;
+  line-height: 0;
+  cursor: pointer; /* Ensure the cursor is a pointer */
+}
+
+.auth-logo-back-button img {
+  height: 70px; /* Increased logo size */
+  width: auto;
+  transition: opacity 0.2s ease-in-out; /* Changed hover effect to opacity */
+}
+
+.auth-logo-back-button:hover img {
+  opacity: 0.85; /* Slight fade on hover instead of scaling */
+}
+
+
 .welcome-back {
   font-size: 2.2rem;
   font-weight: 500;
   color: var(--text-primary);
   margin-bottom: 2.5rem;
   text-align: center;
+  padding-top: 60px; /* Add padding to push content down from the logo */
 }
 
 .login-form-container {
