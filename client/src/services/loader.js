@@ -1,57 +1,41 @@
-// This file is now an "adapter" that connects the application's components
-// to the backend API service. It ensures components can request data
-// without needing to know the specific API endpoints or data-fetching logic.
-
 import {
   fetchTopics as apiFetchTopics,
   fetchTopicStructure,
   fetchQuizData as apiFetchQuizData,
 } from './api.js';
 
-// A simple in-memory cache to avoid re-fetching the structure of a topic
-// every time we need metadata or quiz data.
+// A simple in-memory cache to avoid re-fetching the structure of a topic.
 const topicStructureCache = {};
 
 /**
  * Fetches the list of all topics.
- * This function simply passes the call through to the API service.
  */
 export const fetchTopics = apiFetchTopics;
 
 /**
  * Fetches the detailed structure of a topic (its lists of tests and banks).
- * It uses the cache to avoid redundant network requests.
- * @param {string} topicId - The ID of the topic.
- * @returns {Promise<Object>} The topic structure data.
  */
 export const fetchTopicData = async (topicId) => {
   if (topicStructureCache[topicId]) {
     return topicStructureCache[topicId];
   }
   const structure = await fetchTopicStructure(topicId);
-  topicStructureCache[topicId] = structure; // Cache the result
+  topicStructureCache[topicId] = structure;
   return structure;
 };
 
 /**
  * A helper function to find a specific quiz's metadata within a topic structure.
- * @param {Object} topicData - The full, cached topic structure.
- * @param {string} sectionType - 'practice' or 'qbank'.
- * @param {string} quizId - The ID of the quiz.
- * @returns {Object|null} The metadata object for the quiz, or null if not found.
  */
 const findQuizInStructure = (topicData, sectionType, quizId) => {
   if (!topicData) return null;
-
   if (sectionType === 'practice') {
     return topicData.practiceTests.find(pt => pt.id === quizId) || null;
   }
-
   if (sectionType === 'qbank') {
     for (const categoryGroup of topicData.questionBanks) {
       const bank = categoryGroup.banks.find(b => b.id === quizId);
       if (bank) {
-        // Return the bank with its parent category's name for context
         return { ...bank, actualQbCategory: categoryGroup.category };
       }
     }
@@ -61,45 +45,39 @@ const findQuizInStructure = (topicData, sectionType, quizId) => {
 
 /**
  * Retrieves the full JSON data for a specific quiz.
- * This is now an async function as it fetches data from the network.
- * @param {string} topicId - The ID of the topic.
- * @param {string} sectionType - 'practice' or 'qbank'.
- * @param {string} quizId - The ID of the quiz.
- * @returns {Promise<Array<Object>>} A promise that resolves to the array of question objects.
+ * This function now correctly passes the required IDs to the API service.
  */
 export const getQuizData = async (topicId, sectionType, quizId) => {
-  const topicData = await fetchTopicData(topicId); // Ensures structure is cached
+  // This function no longer needs to find the storagePath.
+  // It simply validates that the quiz exists in the structure before calling the API.
+  const topicData = await fetchTopicData(topicId);
   const quizMeta = findQuizInStructure(topicData, sectionType, quizId);
 
-  if (!quizMeta || !quizMeta.storagePath) {
+  if (!quizMeta) {
     throw new Error(`Quiz data could not be located for ${topicId}/${quizId}`);
   }
 
-  // Use the storagePath to fetch the actual quiz data from the secure API
-  return apiFetchQuizData(quizMeta.storagePath);
+  // --- THIS IS THE FIX ---
+  // Pass the correct arguments directly to the API function.
+  return apiFetchQuizData(topicId, sectionType, quizId);
 };
-
 
 /**
  * Retrieves and formats metadata for the quiz page header and options modal.
- * This is also now async.
- * @param {string} topicId - The ID of the topic.
- * @param {string} sectionType - 'practice' or 'qbank'.
- * @param {string} quizId - The ID of the quiz.
- * @returns {Promise<Object>} A promise resolving to the formatted metadata.
  */
 export const getQuizMetadata = async (topicId, sectionType, quizId) => {
-  const topicData = await fetchTopicData(topicId); // Ensure structure is cached
+  const topicData = await fetchTopicData(topicId);
   const quizMeta = findQuizInStructure(topicData, sectionType, quizId);
 
   if (!quizMeta) return null;
 
+  // We fetch the quiz data to accurately get the question count.
   const quizData = await getQuizData(topicId, sectionType, quizId);
   const totalQuestions = Array.isArray(quizData) ? quizData.filter(q => q && !q.error).length : 0;
 
   let fullNameForDisplay;
   let categoryForInstructions;
-  const mainTopicName = topicData.name; // e.g., "Biology"
+  const mainTopicName = topicData.name;
 
   if (sectionType === 'practice') {
     fullNameForDisplay = `${quizMeta.topicName} ${quizMeta.name}`;
@@ -122,7 +100,7 @@ export const getQuizMetadata = async (topicId, sectionType, quizId) => {
 };
 
 /**
- * A utility function for formatting display names, which can still be useful on the frontend.
+ * A utility function for formatting display names.
  */
 export const formatDisplayName = (rawName) => {
     if (!rawName) return '';

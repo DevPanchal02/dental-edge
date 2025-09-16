@@ -1,6 +1,6 @@
-// FILE: functions/index.js - FINAL CORRECTED VERSION V2
+// FILE: functions/index.js - UPDATED FOR PHASE 2
 
-const functions = require("firebase-functions/v1"); // <-- THE CRITICAL FIX IS HERE
+const functions = require("firebase-functions/v1");
 const {onRequest} = require("firebase-functions/v2/https");
 const logger = require("firebase-functions/logger");
 const admin = require("firebase-admin");
@@ -40,18 +40,11 @@ const getSortOrder = (fileName) => {
   return Infinity;
 };
 
-// --- NEW FUNCTION (Stable v1 Syntax) ---
-/**
- * Handles the creation of a new user account.
- * This function is triggered when a new user is created in Firebase Auth.
- * It creates a corresponding document in the 'users' collection in Firestore.
- */
+// --- createUserDocument Function (No changes needed) ---
 exports.createUserDocument = functions.auth.user().onCreate((user) => {
   const {uid, email, displayName} = user;
   logger.info(`New user signed up: ${uid}, Email: ${email}`);
-
   const newUserRef = db.collection("users").doc(uid);
-
   return newUserRef.set({
     email: email,
     displayName: displayName || null,
@@ -70,11 +63,7 @@ exports.createUserDocument = functions.auth.user().onCreate((user) => {
 });
 
 
-// --- Existing Cloud Functions (Modern v2 Syntax) ---
-
-/**
- * [PUBLIC] Gets the list of top-level topics.
- */
+// --- getTopics & getTopicStructure Functions (No changes needed) ---
 exports.getTopics = onRequest({cors: true}, async (request, response) => {
   logger.info("getTopics function triggered.");
   const bucket = admin.storage().bucket();
@@ -90,15 +79,10 @@ exports.getTopics = onRequest({cors: true}, async (request, response) => {
     response.status(200).json(topicIds);
   } catch (error) {
     logger.error("Error fetching topics:", error);
-    response
-        .status(500)
-        .send("Internal Server Error: Could not retrieve topics.");
+    response.status(500).send("Internal Server Error");
   }
 });
 
-/**
- * [PUBLIC] Gets the detailed structure of a single topic.
- */
 exports.getTopicStructure = onRequest({cors: true}, async (request, response) => {
   const {topicId} = request.query;
   if (!topicId) {
@@ -106,17 +90,14 @@ exports.getTopicStructure = onRequest({cors: true}, async (request, response) =>
     return;
   }
   logger.info(`getTopicStructure triggered for topicId: ${topicId}`);
-
   const bucket = admin.storage().bucket();
   const [files] = await bucket.getFiles({prefix: `data/${topicId}/`});
-
   const topicStructure = {
     id: topicId,
     name: formatDisplayName(topicId),
     practiceTests: [],
     questionBanks: {},
   };
-
   for (const file of files) {
     if (!file.name.endsWith(".json")) continue;
     const parts = file.name.split("/").filter((p) => p);
@@ -131,11 +112,8 @@ exports.getTopicStructure = onRequest({cors: true}, async (request, response) =>
       const match = fileNameWithExt.toLowerCase().match(/test_(\d+)/);
       const num = match ? parseInt(match[1], 10) : sortOrder;
       topicStructure.practiceTests.push({
-        id: quizId,
-        name: `Test ${num}`,
-        storagePath: file.name,
-        _sortOrder: sortOrder,
-        topicName: formatDisplayName(topicId),
+        id: quizId, name: `Test ${num}`, storagePath: file.name,
+        _sortOrder: sortOrder, topicName: formatDisplayName(topicId),
       });
     } else if (sectionTypeFolder === "question-bank") {
       const category = (parts.length > 4) ?
@@ -144,15 +122,11 @@ exports.getTopicStructure = onRequest({cors: true}, async (request, response) =>
         topicStructure.questionBanks[category] = [];
       }
       topicStructure.questionBanks[category].push({
-        id: quizId,
-        name: formatDisplayName(fileNameWithExt),
-        storagePath: file.name,
-        _sortOrder: sortOrder,
-        qbCategory: category,
+        id: quizId, name: formatDisplayName(fileNameWithExt),
+        storagePath: file.name, _sortOrder: sortOrder, qbCategory: category,
       });
     }
   }
-
   topicStructure.practiceTests.sort((a, b) => a._sortOrder - b._sortOrder);
   const sortedCategories = Object.keys(topicStructure.questionBanks).sort();
   const sortedQuestionBanks = {};
@@ -173,34 +147,107 @@ exports.getTopicStructure = onRequest({cors: true}, async (request, response) =>
   response.status(200).json(topicStructure);
 });
 
+
+// --- UPDATED getQuizData Function ---
 /**
- * [TEMPORARILY PUBLIC] Fetches the raw data for a single quiz file.
+ * [SECURE] Fetches quiz data based on the user's authentication and tier.
  */
 exports.getQuizData = onRequest({cors: true}, async (request, response) => {
-  const {storagePath} = request.query;
-  if (!storagePath) {
-    response.status(400)
-        .send("Bad Request: Missing 'storagePath' parameter.");
-    return;
+  const {topicId, sectionType, quizId} = request.query;
+  if (!topicId || !sectionType || !quizId) {
+    return response.status(400).send("Bad Request: Missing parameters.");
   }
-  if (!storagePath.startsWith("data/") || storagePath.includes("..")) {
-    logger.error(`Forbidden Access Attempt: Invalid path "${storagePath}"`);
-    response.status(403).send("Forbidden");
-    return;
+
+  // --- Find the requested quiz's metadata and storage path ---
+  const bucket = admin.storage().bucket();
+  const prefix = `data/${topicId}/${sectionType === "practice" ? "practice-test" : "question-bank"}/`;
+  const [files] = await bucket.getFiles({prefix});
+
+  let requestedQuizMeta = null;
+  const allQuizzes = files
+      .filter((file) => file.name.endsWith(".json"))
+      .map((file) => ({
+        id: formatId(file.name.split("/").pop()),
+        storagePath: file.name,
+        _sortOrder: getSortOrder(file.name.split("/").pop()),
+      }))
+      .sort((a, b) => a._sortOrder - b._sortOrder);
+
+  if (allQuizzes.length > 0) {
+    requestedQuizMeta = allQuizzes.find((q) => q.id === quizId);
   }
-  try {
-    const bucket = admin.storage().bucket();
-    const file = bucket.file(storagePath);
-    const [data] = await file.download();
-    response.setHeader("Content-Type", "application/json");
-    response.status(200).send(data);
-  } catch (error) {
-    logger.error(`Failed to retrieve file from GCS: ${storagePath}`, error);
-    if (error.code === 404) {
-      response.status(404)
-          .send("Not Found: The requested quiz file does not exist.");
-    } else {
-      response.status(500).send("Internal Server Error");
+
+  if (!requestedQuizMeta) {
+    return response.status(404).send("Not Found: Quiz data not found.");
+  }
+
+  // --- Unregistered User Preview Logic ---
+  const isBiologyTest1 = topicId === "biology" && sectionType === "practice" &&
+                         allQuizzes[0] && requestedQuizMeta.id === allQuizzes[0].id;
+
+  if (!request.headers.authorization && isBiologyTest1) {
+    logger.info(`Unregistered user preview for: ${requestedQuizMeta.storagePath}`);
+    try {
+      const [data] = await bucket.file(requestedQuizMeta.storagePath).download();
+      const quizData = JSON.parse(data.toString());
+      // Return only the first two questions for the preview
+      return response.status(200).json(quizData.slice(0, 2));
+    } catch (e) {
+      logger.error("Error serving unregistered preview", e);
+      return response.status(500).send("Internal Server Error");
     }
   }
+
+  // --- Authentication Gate: All other requests require a valid user ---
+  if (!request.headers.authorization || !request.headers.authorization.startsWith("Bearer ")) {
+    logger.error("Unauthorized: No Firebase ID token was provided.");
+    return response.status(401).send("Unauthorized");
+  }
+
+  const idToken = request.headers.authorization.split("Bearer ")[1];
+  let decodedToken;
+  try {
+    decodedToken = await admin.auth().verifyIdToken(idToken);
+  } catch (error) {
+    logger.error("Forbidden: Invalid Firebase ID token.", error);
+    return response.status(403).send("Forbidden");
+  }
+
+  // --- Tier-Based Permission Logic ---
+  const uid = decodedToken.uid;
+  const userDoc = await db.collection("users").doc(uid).get();
+  if (!userDoc.exists) {
+    logger.error(`User document not found for UID: ${uid}`);
+    return response.status(403).send("Forbidden: User profile not found.");
+  }
+
+  const userTier = userDoc.data().tier;
+
+  // Plus and Pro tiers get access to everything
+  if (userTier === "plus" || userTier === "pro") {
+    logger.info(`Access granted for tier '${userTier}' to ${requestedQuizMeta.storagePath}`);
+    const [data] = await bucket.file(requestedQuizMeta.storagePath).download();
+    return response.status(200).send(data);
+  }
+
+  // Free tier logic
+  if (userTier === "free") {
+    const isFirstPracticeTest = sectionType === "practice" && allQuizzes[0] &&
+                                requestedQuizMeta.id === allQuizzes[0].id;
+    const isFirstQuestionBank = sectionType === "qbank" && allQuizzes[0] &&
+                                requestedQuizMeta.id === allQuizzes[0].id;
+
+    if (isFirstPracticeTest || isFirstQuestionBank) {
+      logger.info(`Access granted for 'free' tier to ${requestedQuizMeta.storagePath}`);
+      const [data] = await bucket.file(requestedQuizMeta.storagePath).download();
+      return response.status(200).send(data);
+    }
+  }
+
+  // If none of the above conditions were met, deny access.
+  logger.warn(`Access DENIED for tier '${userTier}' to ${requestedQuizMeta.storagePath}`);
+  return response.status(403).json({
+    error: "upgrade_required",
+    message: `This content requires a higher tier plan.`,
+  });
 });
