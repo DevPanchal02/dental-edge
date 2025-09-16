@@ -60,7 +60,7 @@ const LandingPage = () => {
         <section className="container-one">
           <div className="landing-page">
             <div className="phase-two upword">
-              <h1 className="bold-76 headline">Secure Your <br /> Dental Future.</h1>
+              <h1 className="bold-76 headline">Gain the Edge<br />With Our<br />DAT Simulator.</h1>
               <ul className="landing-button">
                 <li><a href="/register" onClick={handleGetStarted} className="landing-link">Get Started <CiLocationArrow1 /></a></li>
               </ul>

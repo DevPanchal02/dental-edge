@@ -7,7 +7,7 @@
 }
 
 .image-container {
-  flex: 1 1 55%; /* Give the image a bit more space than the form */
+  flex: 1 1 45%; /* UPDATED: Image container now takes up the smaller portion */
   background-color: #000;
   height: 100vh;
   display: flex;
@@ -26,7 +26,7 @@
 }
 
 .login-form {
-  flex: 1 1 45%; /* The form takes the remaining space */
+  flex: 1 1 55%; /* UPDATED: Form is now the larger, primary portion */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,9 +36,8 @@
   color: var(--text-primary);
   border-right: 1px solid var(--border-primary);
   border-left: none;
-  min-width: 400px;
   overflow-y: auto;
-  position: relative; /* Added for positioning context */
+  position: relative; 
 }
 
 /* --- UPDATED STYLE for the logo button --- */
@@ -52,9 +51,10 @@
 }
 
 .auth-logo-back-button img {
-  height: 50px; /* Increased logo size */
+  height: 60px; /* Increased logo size */
   width: auto;
   transition: opacity 0.2s ease-in-out; /* Changed hover effect to opacity */
+  margin-left: 35%;
 }
 
 .auth-logo-back-button:hover img {
