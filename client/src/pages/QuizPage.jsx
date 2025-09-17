@@ -7,6 +7,8 @@ import PracticeTestOptions from '../components/PracticeTestOptions';
 import Exhibit from '../components/Exhibit';
 import { useLayout } from '../context/LayoutContext';
 import '../styles/QuizPage.css';
+import RegistrationPromptModal from '../components/RegistrationPromptModal';
+import { useAuth } from '../context/AuthContext';
 
 // --- Utility Functions (No changes) ---
 function debounce(func, delay) {
@@ -45,11 +47,13 @@ const MemoizedPassage = React.memo(function MemoizedPassage({ html, passageRef, 
 const EMPTY_SET = new Set();
 
 
-function QuizPage() {
+function QuizPage({ isPreviewMode = false }) {
     const { topicId, sectionType, quizId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-    const { isSidebarEffectivelyPinned } = useLayout();
+const { currentUser } = useAuth();
+const layout = !isPreviewMode ? useLayout() : { isSidebarEffectivelyPinned: false };
+const { isSidebarEffectivelyPinned } = layout;
 
     const timerIntervalRef = useRef(null);
     const questionStartTimeRef = useRef(null);
@@ -86,6 +90,7 @@ function QuizPage() {
     const activeNavTimeoutsRef = useRef(new Set());
     const [isExhibitVisible, setIsExhibitVisible] = useState(false);
     const [highlightedHtml, setHighlightedHtml] = useState({});
+    const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
     const latestStateRef = useRef({});
     useEffect(() => {
         latestStateRef.current = {
@@ -371,6 +376,76 @@ function QuizPage() {
         };
         // The dependency array is now stable and won't cause a loop.
     }, [topicId, sectionType, quizId, location.state?.review, location.state?.questionIndex, getQuizStateKey]);
+
+       const handlePrevious = useCallback(() => {
+        const actionFn = () => {
+            const { currentQuestionIndex: cqIdx, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
+            if (latestStateRef.current.isExhibitVisible) {
+                setIsExhibitVisible(false);
+            }
+            if (cqIdx > 0) {
+                if (lTempReveal[cqIdx] && !lIsReviewMode) {
+                    setTempReveal(prev => ({ ...prev, [cqIdx]: false }));
+                }
+                const prevIndex = cqIdx - 1;
+                setCurrentQuestionIndex(prevIndex);
+                setTempReveal(prev => ({ ...prev, [prevIndex]: false }));
+                if (lSectionType === 'practice' && !lIsReviewMode) {
+                    setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
+                } else if (lSubmittedAnswers[prevIndex]) {
+                    setShowExplanation(prev => ({ ...prev, [prevIndex]: true }));
+                } else {
+                    setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
+                }
+            }
+        };
+        executeWithDelay(actionFn);
+    }, [executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation]);
+
+    const handleOpenReviewSummary = useCallback(() => {
+        const actionFn = () => {
+            setIsReviewSummaryVisible(true);
+            setCurrentQuestionIndexBeforeReview(latestStateRef.current.currentQuestionIndex);
+        };
+        executeWithDelay(actionFn);
+    }, [executeWithDelay, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
+    
+    const handleCloseReviewSummary = useCallback(() => {
+        const actionFn = () => {
+            setIsReviewSummaryVisible(false);
+        };
+        executeWithDelay(actionFn, false);
+    }, [executeWithDelay]);
+
+    const handleJumpToQuestion = useCallback((index, fromSummaryTable = false) => {
+        const actionFn = () => {
+            const { allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers, currentQuestionIndex: cqIdx } = latestStateRef.current;
+            if (index >= 0 && index < aqLength) {
+                if (lTempReveal[cqIdx] && !lIsReviewMode) {
+                    setTempReveal(prev => ({ ...prev, [cqIdx]: false }));
+                }
+                setCurrentQuestionIndex(index);
+                if (lIsReviewMode) {
+                    setShowExplanation({ [index]: true });
+                } else {
+                    setTempReveal(prev => ({ ...prev, [index]: false }));
+                    if (lSectionType === 'practice') {
+                        setShowExplanation(prev => ({ ...prev, [index]: false }));
+                    } else if (lSubmittedAnswers[index]) {
+                        setShowExplanation(prev => ({ ...prev, [index]: true }));
+                    } else {
+                        setShowExplanation(prev => ({ ...prev, [index]: false }));
+                    }
+                }
+                setIsReviewSummaryVisible(false);
+            }
+        };
+        if (fromSummaryTable) {
+            actionFn();
+        } else {
+            executeWithDelay(actionFn);
+        }
+    }, [executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible]);
 
     const handlePracticeTestOptionsClose = useCallback(() => {
         setIsPracticeOptionsModalOpen(false);
@@ -701,6 +776,13 @@ function QuizPage() {
         executeWithDelay(actionFn, true);
     }, [executeWithDelay]);
     const handleSubmitAndNavigate = useCallback(() => {
+        // --- THIS IS THE CORE PREVIEW LOGIC ---
+        if (isPreviewMode && !currentUser && currentQuestionIndex === 1) {
+            setIsRegistrationModalOpen(true);
+            return; // Stop execution here for preview users
+        }
+        // --- END PREVIEW LOGIC ---
+
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
             if (latestStateRef.current.isExhibitVisible) {
@@ -742,73 +824,7 @@ function QuizPage() {
         } else {
             executeWithDelay(actionFn);
         }
-    }, [allQuizQuestions, currentQuestionIndex, submitAnswerForIndex, executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
-    const handlePrevious = useCallback(() => {
-        const actionFn = () => {
-            const { currentQuestionIndex: cqIdx, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
-            if (latestStateRef.current.isExhibitVisible) {
-                setIsExhibitVisible(false);
-            }
-            if (cqIdx > 0) {
-                if (lTempReveal[cqIdx] && !lIsReviewMode) {
-                    setTempReveal(prev => ({ ...prev, [cqIdx]: false }));
-                }
-                const prevIndex = cqIdx - 1;
-                setCurrentQuestionIndex(prevIndex);
-                setTempReveal(prev => ({ ...prev, [prevIndex]: false }));
-                if (lSectionType === 'practice' && !lIsReviewMode) {
-                    setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
-                } else if (lSubmittedAnswers[prevIndex]) {
-                    setShowExplanation(prev => ({ ...prev, [prevIndex]: true }));
-                } else {
-                    setShowExplanation(prev => ({ ...prev, [prevIndex]: false }));
-                }
-            }
-        };
-        executeWithDelay(actionFn);
-    }, [executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation]);
-    const handleOpenReviewSummary = useCallback(() => {
-        const actionFn = () => {
-            setIsReviewSummaryVisible(true);
-            setCurrentQuestionIndexBeforeReview(latestStateRef.current.currentQuestionIndex);
-        };
-        executeWithDelay(actionFn);
-    }, [executeWithDelay, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
-    const handleCloseReviewSummary = useCallback(() => {
-        const actionFn = () => {
-            setIsReviewSummaryVisible(false);
-        };
-        executeWithDelay(actionFn, false);
-    }, [executeWithDelay]);
-    const handleJumpToQuestion = useCallback((index, fromSummaryTable = false) => {
-        const actionFn = () => {
-            const { allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers, currentQuestionIndex: cqIdx } = latestStateRef.current;
-            if (index >= 0 && index < aqLength) {
-                if (lTempReveal[cqIdx] && !lIsReviewMode) {
-                    setTempReveal(prev => ({ ...prev, [cqIdx]: false }));
-                }
-                setCurrentQuestionIndex(index);
-                if (lIsReviewMode) {
-                    setShowExplanation({ [index]: true });
-                } else {
-                    setTempReveal(prev => ({ ...prev, [index]: false }));
-                    if (lSectionType === 'practice') {
-                        setShowExplanation(prev => ({ ...prev, [index]: false }));
-                    } else if (lSubmittedAnswers[index]) {
-                        setShowExplanation(prev => ({ ...prev, [index]: true }));
-                    } else {
-                        setShowExplanation(prev => ({ ...prev, [index]: false }));
-                    }
-                }
-                setIsReviewSummaryVisible(false);
-            }
-        };
-        if (fromSummaryTable) {
-            actionFn();
-        } else {
-            executeWithDelay(actionFn);
-        }
-    }, [executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible]);
+    }, [isPreviewMode, currentUser, currentQuestionIndex, allQuizQuestions, submitAnswerForIndex, executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
     const triggerFinishQuiz = useCallback(() => {
         executeWithDelay(() => handleFinishQuizRef.current(false));
     }, [executeWithDelay]);
@@ -834,7 +850,7 @@ function QuizPage() {
         if (!quizMetadata) { return <div className="page-loading">Preparing Test Options... (Waiting for metadata)</div>; }
         const topicKeyForDuration = quizMetadata.topicName?.toLowerCase().replace(/\s+/g, '-') || topicId.toLowerCase().replace(/\s+/g, '-');
         const baseTime = PRACTICE_TEST_DURATIONS[topicKeyForDuration] || PRACTICE_TEST_DURATIONS.default;
-        return (<PracticeTestOptions isOpen={isPracticeOptionsModalOpen} onClose={handlePracticeTestOptionsClose} onStartTest={handleStartPracticeTest} fullNameForDisplay={quizMetadata.fullNameForDisplay} categoryForInstructions={quizMetadata.categoryForInstructions} baseTimeLimitMinutes={Math.floor(baseTime / 60)} numQuestions={quizMetadata.totalQuestions}  />);
+        return (<PracticeTestOptions isOpen={isPracticeOptionsModalOpen} onClose={handlePracticeTestOptionsClose} onStartTest={handleStartPracticeTest} fullNameForDisplay={quizMetadata.fullNameForDisplay} categoryForInstructions={quizMetadata.categoryForInstructions} baseTimeLimitMinutes={Math.floor(baseTime / 60)} numQuestions={quizMetadata.totalQuestions} />);
     }
     if (sectionType === 'practice' && !hasPracticeTestStarted && !isPracticeOptionsModalOpen && !isReviewMode) { return <div className="page-loading">Preparing Practice Test...</div>; }
     if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { return <div className="page-info"> No questions found for this quiz. Please check data files. <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
@@ -849,9 +865,14 @@ function QuizPage() {
     const currentCrossedOffForCard = crossedOffOptions[currentQuestionIndex] || EMPTY_SET;
     const currentIsMarkedForCard = !!markedQuestions[currentQuestionIndex];
     const isCurrentQuestionError = !!(currentQuestionData && currentQuestionData.error);
-    const totalQuestionsForDisplay = quizMetadata?.totalQuestions || allQuizQuestions.length;
+    const totalQuestionsForDisplay = isPreviewMode ? allQuizQuestions.length : (quizMetadata?.totalQuestions || allQuizQuestions.length);
     return (
-        <div className="quiz-page-container" ref={quizPageContainerRef} onClick={handleContainerClick} style={quizPageContainerActiveStyle}>
+        <div className={`quiz-page-container ${isPreviewMode ? 'preview-mode' : ''}`} ref={quizPageContainerRef} onClick={handleContainerClick} style={quizPageContainerActiveStyle}>
+
+            <RegistrationPromptModal
+                isOpen={isRegistrationModalOpen}
+                onClose={() => setIsRegistrationModalOpen(false)}
+            />
             {topicId === 'chemistry' && (
                 <Exhibit
                     isVisible={isExhibitVisible}
@@ -870,19 +891,28 @@ function QuizPage() {
                 />
             ) : (
                 <>
-                    <div className="quiz-header">
-                        <button
-                            onClick={() => {
-                                if (isReviewMode) navigate(`/app/results/${topicId}/${sectionType}/${quizId}`);
-                                else navigate(`/app/topic/${topicId}`);
-                            }}
-                            className="back-button-quiz"
-                        >
-                            {isReviewMode ? `\u21A9 Back to Results` : `\u21A9 Back to ${quizMetadata?.topicName || formatDisplayName(topicId)}`}
-                        </button>
-                        <div className="quiz-title-container"><h1 className="quiz-title">{quizMetadata?.fullNameForDisplay || 'Quiz'}</h1></div>
-                        <p className="quiz-progress">Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay}</p>
-                    </div>
+                    {isPreviewMode ? (
+                        <div className="quiz-header preview-header">
+                            <div className="quiz-title-container">
+                                <h1 className="quiz-title">Welcome to Dental Edge</h1>
+                            </div>
+                            <p className="quiz-progress">Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay} (Preview)</p>
+                        </div>
+                    ) : (
+                        <div className="quiz-header">
+                            <button
+                                onClick={() => {
+                                    if (isReviewMode) navigate(`/app/results/${topicId}/${sectionType}/${quizId}`);
+                                    else navigate(`/app/topic/${topicId}`);
+                                }}
+                                className="back-button-quiz"
+                            >
+                                {isReviewMode ? `\u21A9 Back to Results` : `\u21A9 Back to ${quizMetadata?.topicName || formatDisplayName(topicId)}`}
+                            </button>
+                            <div className="quiz-title-container"><h1 className="quiz-title">{quizMetadata?.fullNameForDisplay || 'Quiz'}</h1></div>
+                            <p className="quiz-progress">Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay}</p>
+                        </div>
+                    )}
                     {passageHtml && topicId !== 'reading-comprehension' && (
                         <MemoizedPassage
                             html={passageContentKey && highlightedHtml[passageContentKey] !== undefined ? highlightedHtml[passageContentKey] : passageHtml}
@@ -916,12 +946,13 @@ function QuizPage() {
                         </div>
                     )}
                     <div className="quiz-navigation" style={sharedFixedFooterStyle}>
-                        <div className="nav-group-left">
-                            <button onClick={handlePrevious} disabled={!hasPracticeTestStarted || currentQuestionIndex === 0} className="nav-button prev-button"> Previous </button>
-                            {sectionType === 'qbank' && !isReviewMode && !isCurrentQuestionError && hasPracticeTestStarted && (
-                                <button onClick={toggleSolutionReveal} className="nav-button solution-toggle-button-bottom"> {tempReveal[currentQuestionIndex] ? "Hide Solution" : "'S' Solution"} </button>
-                            )}
-                        </div>
+    <div className="nav-group-left">
+        <button onClick={handlePrevious} disabled={!hasPracticeTestStarted || currentQuestionIndex === 0} className="nav-button prev-button"> Previous </button>
+        {/* Hide Solution button in preview */}
+        {sectionType === 'qbank' && !isReviewMode && !isPreviewMode && !isCurrentQuestionError && hasPracticeTestStarted && (
+            <button onClick={toggleSolutionReveal} className="nav-button solution-toggle-button-bottom"> {tempReveal[currentQuestionIndex] ? "Hide Solution" : "'S' Solution"} </button>
+        )}
+    </div>
                         <div className="nav-group-center">
                             {isReviewMode && isLastQuestion ? (
                                 <button onClick={triggerFinishQuiz} className="nav-button submit-quiz-button" disabled={!hasPracticeTestStarted}>
@@ -933,26 +964,27 @@ function QuizPage() {
                                 </button>
                             )}
                         </div>
-                        <div className="nav-group-right">
-                            {!isReviewMode && hasPracticeTestStarted && (
-                                <>
-                                    {!isCurrentQuestionError && (
-                                        <button onClick={() => handleToggleMark(currentQuestionIndex)} className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`} title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}>
-                                            {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
-                                        </button>
-                                    )}
-                                    {topicId === 'chemistry' && (
-                                        <button onClick={() => executeWithDelay(toggleExhibit, true)} className="nav-button exhibit-button">
-                                            Exhibit
-                                        </button>
-                                    )}
-                                    <button onClick={handleOpenReviewSummary} className="nav-button review-button-bottom">
-                                        Review
-                                    </button>
-                                </>
-                            )}
-                        </div>
-                    </div>
+    <div className="nav-group-right">
+        {/* Hide right-side controls in preview */}
+        {!isReviewMode && !isPreviewMode && hasPracticeTestStarted && (
+            <>
+                {!isCurrentQuestionError && (
+                    <button onClick={() => handleToggleMark(currentQuestionIndex)} className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`} title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}>
+                        {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
+                    </button>
+                )}
+                {topicId === 'chemistry' && (
+                    <button onClick={() => executeWithDelay(toggleExhibit, true)} className="nav-button exhibit-button">
+                        Exhibit
+                    </button>
+                )}
+                <button onClick={handleOpenReviewSummary} className="nav-button review-button-bottom">
+                    Review
+                </button>
+            </>
+        )}
+    </div>
+</div>
                 </>
             )}
         </div>

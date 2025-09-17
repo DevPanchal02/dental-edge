@@ -1,3 +1,5 @@
+// FILE: client/src/pages/LandingPage.jsx
+
 import React, { Suspense, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -5,9 +7,9 @@ import { useGLTF, MeshReflectorMaterial, Stage } from '@react-three/drei';
 import '../styles/LandingPage.css';
 import { CiLocationArrow1 } from "react-icons/ci";
 import { useAuth } from '../context/AuthContext';
-import appLogo from '../assets/logo.png'; // Import the logo
+import appLogo from '../assets/logo.png';
 
-// Model and Scene components remain unchanged...
+// Model and Scene components remain unchanged.
 function Model() {
     const modelRef = useRef();
     const { scene } = useGLTF('/Models/Tooth.glb'); 
@@ -34,8 +36,10 @@ function Scene() {
 
 const LandingPage = () => {
   const { currentUser } = useAuth();
-  const navigate = useNavigate();
-  const handleGetStarted = (e) => { e.preventDefault(); if (currentUser) { navigate('/app'); } else { navigate('/register'); } };
+  
+  // Determine the correct destination for the "Get Started" button.
+  // If logged in, go to the main app. If not, go to the quiz preview.
+const getStartedLink = currentUser ? "/app" : "/preview/quiz/biology/practice/test-1";
 
   return (
     <div className="landing-page-body">
@@ -43,7 +47,6 @@ const LandingPage = () => {
         <Scene />
       </Canvas>
       <div className="ui-container">
-        {/* --- FIX: Added a specific class to this nav element --- */}
         <nav className="landing-nav">
           <Link to="/" className="logo">
             <img src={appLogo} alt="Dental Edge Logo" className="landing-logo-img" />
@@ -62,7 +65,8 @@ const LandingPage = () => {
             <div className="phase-two upword">
               <h1 className="bold-76 headline">Gain the Edge<br />With Our<br />DAT Simulator.</h1>
               <ul className="landing-button">
-                <li><a href="/register" onClick={handleGetStarted} className="landing-link">Get Started <CiLocationArrow1 /></a></li>
+                {/* --- MODIFICATION: The link now points to our new destination --- */}
+                <li><Link to={getStartedLink} className="landing-link">Get Started <CiLocationArrow1 /></Link></li>
               </ul>
             </div>
             <div className="decp Regular-18 upword">

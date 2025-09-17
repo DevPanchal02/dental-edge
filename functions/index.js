@@ -1,4 +1,4 @@
-// FILE: functions/index.js - UPDATED FOR PHASE 2
+// FILE: functions/index.js
 
 const functions = require("firebase-functions/v1");
 const {onRequest} = require("firebase-functions/v2/https");
@@ -8,7 +8,7 @@ const admin = require("firebase-admin");
 admin.initializeApp();
 const db = admin.firestore();
 
-// --- Helper Functions (No changes needed) ---
+// --- Helper Functions ---
 const formatDisplayName = (rawName) => {
   if (!rawName) {
     return "";
@@ -40,11 +40,13 @@ const getSortOrder = (fileName) => {
   return Infinity;
 };
 
-// --- createUserDocument Function (No changes needed) ---
+// --- createUserDocument Function ---
 exports.createUserDocument = functions.auth.user().onCreate((user) => {
   const {uid, email, displayName} = user;
   logger.info(`New user signed up: ${uid}, Email: ${email}`);
+
   const newUserRef = db.collection("users").doc(uid);
+
   return newUserRef.set({
     email: email,
     displayName: displayName || null,
@@ -63,7 +65,7 @@ exports.createUserDocument = functions.auth.user().onCreate((user) => {
 });
 
 
-// --- getTopics & getTopicStructure Functions (No changes needed) ---
+// --- getTopics Function ---
 exports.getTopics = onRequest({cors: true}, async (request, response) => {
   logger.info("getTopics function triggered.");
   const bucket = admin.storage().bucket();
@@ -83,50 +85,66 @@ exports.getTopics = onRequest({cors: true}, async (request, response) => {
   }
 });
 
+// --- getTopicStructure Function ---
 exports.getTopicStructure = onRequest({cors: true}, async (request, response) => {
   const {topicId} = request.query;
   if (!topicId) {
-    response.status(400).send("Bad Request: Missing topicId parameter.");
-    return;
+    return response.status(400).send("Bad Request: Missing topicId parameter.");
   }
   logger.info(`getTopicStructure triggered for topicId: ${topicId}`);
+
   const bucket = admin.storage().bucket();
   const [files] = await bucket.getFiles({prefix: `data/${topicId}/`});
+
   const topicStructure = {
     id: topicId,
     name: formatDisplayName(topicId),
     practiceTests: [],
     questionBanks: {},
   };
+
   for (const file of files) {
     if (!file.name.endsWith(".json")) continue;
+
     const parts = file.name.split("/").filter((p) => p);
     if (parts.length < 4) continue;
+
     const sectionTypeFolder = parts[2];
     const fileNameWithExt = parts[parts.length - 1];
-    const quizId = formatId(fileNameWithExt);
     const sortOrder = getSortOrder(fileNameWithExt);
+
     const isPracticeTest = sectionTypeFolder === "practice-test" &&
       fileNameWithExt.toLowerCase().startsWith("test_");
+
     if (isPracticeTest) {
       const match = fileNameWithExt.toLowerCase().match(/test_(\d+)/);
       const num = match ? parseInt(match[1], 10) : sortOrder;
+      const quizId = `test-${num}`;
+
       topicStructure.practiceTests.push({
-        id: quizId, name: `Test ${num}`, storagePath: file.name,
-        _sortOrder: sortOrder, topicName: formatDisplayName(topicId),
+        id: quizId,
+        name: `Test ${num}`,
+        storagePath: file.name,
+        _sortOrder: sortOrder,
+        topicName: formatDisplayName(topicId),
       });
     } else if (sectionTypeFolder === "question-bank") {
+      const quizId = formatId(fileNameWithExt);
       const category = (parts.length > 4) ?
         formatDisplayName(parts[3]) : formatDisplayName(topicId);
       if (!topicStructure.questionBanks[category]) {
         topicStructure.questionBanks[category] = [];
       }
       topicStructure.questionBanks[category].push({
-        id: quizId, name: formatDisplayName(fileNameWithExt),
-        storagePath: file.name, _sortOrder: sortOrder, qbCategory: category,
+        id: quizId,
+        name: formatDisplayName(fileNameWithExt),
+        storagePath: file.name,
+        _sortOrder: sortOrder,
+        qbCategory: category,
       });
     }
   }
+
   topicStructure.practiceTests.sort((a, b) => a._sortOrder - b._sortOrder);
   const sortedCategories = Object.keys(topicStructure.questionBanks).sort();
   const sortedQuestionBanks = {};
@@ -140,25 +158,23 @@ exports.getTopicStructure = onRequest({cors: true}, async (request, response) =>
         category,
         banks: banks.map((b) => ({...b, sectionType: "qbank"})),
       }));
+
   topicStructure.practiceTests = topicStructure.practiceTests.map((pt) => ({
     ...pt, sectionType: "practice",
   }));
   topicStructure.questionBanks = banksArray;
+
   response.status(200).json(topicStructure);
 });
 
 
-// --- UPDATED getQuizData Function ---
-/**
- * [SECURE] Fetches quiz data based on the user's authentication and tier.
- */
+// --- getQuizData Function ---
 exports.getQuizData = onRequest({cors: true}, async (request, response) => {
   const {topicId, sectionType, quizId} = request.query;
   if (!topicId || !sectionType || !quizId) {
     return response.status(400).send("Bad Request: Missing parameters.");
   }
 
-  // --- Find the requested quiz's metadata and storage path ---
   const bucket = admin.storage().bucket();
   const prefix = `data/${topicId}/${sectionType === "practice" ? "practice-test" : "question-bank"}/`;
   const [files] = await bucket.getFiles({prefix});
@@ -166,11 +182,19 @@ exports.getQuizData = onRequest({cors: true}, async (request, response) => {
   let requestedQuizMeta = null;
   const allQuizzes = files
       .filter((file) => file.name.endsWith(".json"))
-      .map((file) => ({
-        id: formatId(file.name.split("/").pop()),
-        storagePath: file.name,
-        _sortOrder: getSortOrder(file.name.split("/").pop()),
-      }))
+      .map((file) => {
+        const fileNameWithExt = file.name.split("/").pop();
+        const sortOrder = getSortOrder(fileNameWithExt);
+        let id;
+        if (sectionType === "practice" && fileNameWithExt.toLowerCase().startsWith("test_")) {
+          const match = fileNameWithExt.toLowerCase().match(/test_(\d+)/);
+          const num = match ? parseInt(match[1], 10) : sortOrder;
+          id = `test-${num}`;
+        } else {
+          id = formatId(fileNameWithExt);
+        }
+        return {id, storagePath: file.name, _sortOrder: sortOrder};
+      })
       .sort((a, b) => a._sortOrder - b._sortOrder);
 
   if (allQuizzes.length > 0) {
@@ -181,7 +205,6 @@ exports.getQuizData = onRequest({cors: true}, async (request, response) => {
     return response.status(404).send("Not Found: Quiz data not found.");
   }
 
-  // --- Unregistered User Preview Logic ---
   const isBiologyTest1 = topicId === "biology" && sectionType === "practice" &&
                          allQuizzes[0] && requestedQuizMeta.id === allQuizzes[0].id;
 
@@ -190,7 +213,6 @@ exports.getQuizData = onRequest({cors: true}, async (request, response) => {
     try {
       const [data] = await bucket.file(requestedQuizMeta.storagePath).download();
       const quizData = JSON.parse(data.toString());
-      // Return only the first two questions for the preview
       return response.status(200).json(quizData.slice(0, 2));
     } catch (e) {
       logger.error("Error serving unregistered preview", e);
@@ -198,7 +220,6 @@ exports.getQuizData = onRequest({cors: true}, async (request, response) => {
     }
   }
 
-  // --- Authentication Gate: All other requests require a valid user ---
   if (!request.headers.authorization || !request.headers.authorization.startsWith("Bearer ")) {
     logger.error("Unauthorized: No Firebase ID token was provided.");
     return response.status(401).send("Unauthorized");
@@ -213,7 +234,6 @@ exports.getQuizData = onRequest({cors: true}, async (request, response) => {
     return response.status(403).send("Forbidden");
   }
 
-  // --- Tier-Based Permission Logic ---
   const uid = decodedToken.uid;
   const userDoc = await db.collection("users").doc(uid).get();
   if (!userDoc.exists) {
@@ -223,14 +243,12 @@ exports.getQuizData = onRequest({cors: true}, async (request, response) => {
 
   const userTier = userDoc.data().tier;
 
-  // Plus and Pro tiers get access to everything
   if (userTier === "plus" || userTier === "pro") {
     logger.info(`Access granted for tier '${userTier}' to ${requestedQuizMeta.storagePath}`);
     const [data] = await bucket.file(requestedQuizMeta.storagePath).download();
     return response.status(200).send(data);
   }
 
-  // Free tier logic
   if (userTier === "free") {
     const isFirstPracticeTest = sectionType === "practice" && allQuizzes[0] &&
                                 requestedQuizMeta.id === allQuizzes[0].id;
@@ -244,7 +262,6 @@ exports.getQuizData = onRequest({cors: true}, async (request, response) => {
     }
   }
 
-  // If none of the above conditions were met, deny access.
   logger.warn(`Access DENIED for tier '${userTier}' to ${requestedQuizMeta.storagePath}`);
   return response.status(403).json({
     error: "upgrade_required",

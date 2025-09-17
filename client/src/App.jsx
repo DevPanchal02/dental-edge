@@ -1,3 +1,5 @@
+// FILE: client/src/App.jsx
+
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
@@ -40,20 +42,28 @@ function App() {
     }
   }, [currentUser]);
 
-  if (loadingTopics) {
+  if (loadingTopics && currentUser) {
     return <div className="page-loading">Initializing Application...</div>;
   }
 
   return (
     <Routes>
-      {/* Public Routes */}
+      {/* --- Public Routes --- */}
       <Route path="/" element={<LandingPage />} />
       <Route path="/login" element={<LoginPage />} />
       <Route path="/register" element={<RegisterPage />} />
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/plans" element={<PlansPage />} />
 
-      {/* Protected Routes */}
+      {/* --- NEW: Public Preview Route for Unregistered Users --- */}
+      {/* This route renders QuizPage directly, without the protected Layout */}
+      <Route
+        path="/preview/quiz/:topicId/:sectionType/:quizId"
+        element={<QuizPage key={location.pathname} isPreviewMode={true} />}
+      />
+
+      {/* --- Protected Application Routes --- */}
+      {/* All routes within here require a logged-in user */}
       <Route path="/app" element={currentUser ? <Layout /> : <Navigate to="/login" />}>
         <Route index element={firstTopicId ? <Navigate to={`/app/topic/${firstTopicId}`} replace /> : <div>Loading...</div>} />
         <Route path="topic/:topicId" element={<TopicPage />} />
