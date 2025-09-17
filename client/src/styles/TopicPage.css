@@ -6,8 +6,7 @@
   height: 100%;
   overflow-y: auto;
   box-sizing: border-box;
-  position: relative; /* Added for potential stacking context or positioning children */
-  /* Transitions for when sidebar is pinned/unpinned */
+  position: relative;
   transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
@@ -60,59 +59,58 @@
   border: 1px solid var(--border-primary);
 }
 
-.list-item:not(.disabled):hover {
-  background-color: var(--bg-item-link-hover);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.07); 
-}
-
-.list-item.disabled {
-  opacity: 0.65; 
-  cursor: not-allowed;
-  background-color: var(--bg-secondary);
-  box-shadow: none;
-}
-
-.item-link, .item-link-disabled {
-  display: flex;
-  align-items: center;
-  padding: 12px 18px;
-  color: var(--text-item-link);
-  text-decoration: none;
-  font-size: 1em;
-}
-
-.item-link-disabled {
-  cursor: not-allowed;
-  color: var(--text-secondary);
-}
-
-.item-details {
-  font-size: 0.8em;
-  color: var(--text-secondary);
-  margin-left: 12px;
-  white-space: nowrap;
-}
-
-.item-arrow {
-  margin-left: auto;
-  color: var(--text-secondary);
-  font-size: 1.1em;
-  transition: transform 0.2s ease, color 0.2s ease;
-  padding-left: 8px;
-}
-
-.list-item:not(.disabled):hover .item-arrow {
-  transform: translateX(4px);
-  color: var(--text-accent);
-}
-.list-item.disabled .item-arrow {
-  display: none;
-}
-
 .no-items-message {
   color: var(--text-secondary);
   font-style: italic;
   margin-left: 10px;
   padding: 10px 0;
   font-size: 0.9em;
+}
+
+/* --- NEW & UPDATED STYLES FOR LIST ITEMS --- */
+.item-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This creates space between name and indicator */
+  padding: 12px 18px;
+  color: var(--text-item-link);
+  text-decoration: none;
+  font-size: 1em;
+  gap: 15px;
+}
+
+.item-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.item-indicator {
+  flex-shrink: 0; /* Prevents the indicator from shrinking */
+  color: var(--text-secondary);
+  font-size: 1em; /* Adjusted for better visual balance between icons */
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.item-indicator svg { /* Ensures both icons are aligned nicely */
+  vertical-align: middle;
+}
+
+.list-item:not(.locked):hover {
+  background-color: var(--bg-item-link-hover);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.07); 
+}
+
+.list-item:not(.locked):hover .item-indicator {
+  transform: translateX(4px);
+  color: var(--text-accent);
+}
+
+.list-item.locked .item-link {
+  color: var(--text-secondary);
+}
+
+.list-item.locked:hover {
+  background-color: var(--bg-item-link-hover);
+  cursor: pointer;
 }

@@ -1,12 +1,17 @@
+// FILE: client/src/pages/TopicPage.jsx
+
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { fetchTopicData } from '../services/loader.js';
+import { useAuth } from '../context/AuthContext';
 import { useLayout } from '../context/LayoutContext';
+import { FaLock, FaChevronRight } from 'react-icons/fa'; // Updated import
 import '../styles/TopicPage.css';
 
 function TopicPage() {
   const { topicId } = useParams();
   const { isSidebarEffectivelyPinned } = useLayout();
+  const { userProfile } = useAuth();
 
   const [topicData, setTopicData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -33,7 +38,7 @@ function TopicPage() {
         }
       } catch (err) {
          if (isMounted) {
-            setError(`Could not load data for topic: ${topicId}. Please check the network connection and backend function logs.`);
+            setError(`Could not load data for topic: ${topicId}.`);
          }
       } finally {
          if (isMounted) {
@@ -47,28 +52,50 @@ function TopicPage() {
 
   }, [topicId]);
 
+  const isLocked = (index) => {
+    if (!userProfile) {
+        return true; 
+    }
+    if (userProfile.tier === 'pro' || userProfile.tier === 'plus') {
+      return false;
+    }
+    if (userProfile.tier === 'free') {
+      return index > 0;
+    }
+    return true;
+  };
+
   const renderItemList = (items, sectionType) => {
     if (!items || items.length === 0) {
       return <p className="no-items-message">No {sectionType === 'practice' ? 'practice tests' : 'items'} available for this topic.</p>;
     }
     return (
       <ul className="item-list">
-        {items.map((item) => (
-          <li key={item.id} className="list-item">
-            {/* --- FIX: Added the '/app' prefix to generate the correct URL --- */}
-            <Link to={`/app/quiz/${topicId}/${sectionType}/${item.id}`} className="item-link">
-              {item.name}
-              <span className="item-arrow">→</span>
-            </Link>
-          </li>
-        ))}
+        {items.map((item, index) => {
+          const locked = isLocked(index);
+          const destination = locked ? '/plans' : `/app/quiz/${topicId}/${sectionType}/${item.id}`;
+
+          return (
+            <li key={item.id} className={`list-item ${locked ? 'locked' : ''}`}>
+              <Link to={destination} className="item-link">
+                {/* Section 1: Name (takes up available space) */}
+                <span className="item-name">{item.name}</span>
+
+                {/* Section 2: Indicator (Lock OR Chevron icon on the right) */}
+                <span className="item-indicator">
+                  {locked ? <FaLock /> : <FaChevronRight />}
+                </span>
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     );
   };
 
 
   if (isLoading) {
-    return <div className="page-loading">Loading Topic Details from Cloud...</div>;
+    return <div className="page-loading">Loading Topic Details...</div>;
   }
 
   if (error) {
@@ -81,7 +108,7 @@ function TopicPage() {
 
   const topicPageDynamicStyle = {
     marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
-    width: isSidebarEffectivelyPinned ? 'calc(100% - var(--sidebar-width))' : '100%',
+    width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
   };
 
   return (

@@ -1,3 +1,5 @@
+// FILE: client/src/context/AuthContext.jsx
+
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import {
   onAuthStateChanged,
@@ -7,82 +9,86 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from 'firebase/auth';
-import { auth } from '../firebase';
+import { auth, db } from '../firebase';
+import { doc, onSnapshot } from 'firebase/firestore';
 
-// Create the context with a default value.
 const AuthContext = createContext();
 
-/**
- * Custom hook to use the AuthContext.
- * This makes it easier to access the context from any component.
- * @returns {object} The authentication context value.
- */
 export const useAuth = () => {
   return useContext(AuthContext);
 };
 
-/**
- * The AuthProvider component wraps the application and provides the auth context.
- * It manages the user state and provides authentication functions.
- */
 export const AuthProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  /**
-   * Signs up a new user with email and password.
-   * @param {string} email - The user's email.
-   * @param {string} password - The user's password.
-   * @returns {Promise<UserCredential>}
-   */
+  // --- MODIFICATION: We now track the full user profile from Firestore ---
+  const [userProfile, setUserProfile] = useState(null);
+
   const signup = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  /**
-   * Logs in a user with email and password.
-   * @param {string} email - The user's email.
-   * @param {string} password - The user's password.
-   * @returns {Promise<UserCredential>}
-   */
   const login = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  /**
-   * Logs out the current user.
-   * @returns {Promise<void>}
-   */
   const logout = () => {
+    setUserProfile(null); // Clear the profile on logout
     return signOut(auth);
   };
 
-  /**
-   * Signs in a user with their Google account via a popup.
-   * @returns {Promise<UserCredential>}
-   */
   const signInWithGoogle = () => {
     const provider = new GoogleAuthProvider();
     return signInWithPopup(auth, provider);
   };
 
-  // This effect hook sets up a listener to Firebase's authentication state.
-  // It runs only once when the component mounts.
+  // This effect hook now manages both Auth state and Firestore profile state.
   useEffect(() => {
-    // onAuthStateChanged returns an 'unsubscribe' function.
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    let unsubscribeFromProfile = () => {};
+
+    const unsubscribeFromAuth = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
-      setLoading(false); // Set loading to false once we have a user or know there isn't one.
+
+      // If a user logs in, listen for their profile changes in real-time.
+      if (user) {
+        const userDocRef = doc(db, 'users', user.uid);
+        
+        // onSnapshot creates a real-time listener.
+        unsubscribeFromProfile = onSnapshot(userDocRef, (docSnap) => {
+          if (docSnap.exists()) {
+            setUserProfile({ uid: user.uid, ...docSnap.data() });
+          } else {
+            // This might happen briefly if the createUserDocument function is slow.
+            console.warn("User document not yet available in Firestore.");
+            setUserProfile(null);
+          }
+          setLoading(false);
+        }, (error) => {
+            console.error("Error listening to user profile:", error);
+            setUserProfile(null);
+            setLoading(false);
+        });
+
+      } else {
+        // If no user is logged in, clear everything.
+        unsubscribeFromProfile();
+        setUserProfile(null);
+        setLoading(false);
+      }
     });
 
-    // The returned function will be called on component unmount,
-    // which cleans up the listener and prevents memory leaks.
-    return unsubscribe;
-  }, []); // The empty dependency array ensures this effect runs only once.
+    // Cleanup listeners on component unmount
+    return () => {
+      unsubscribeFromAuth();
+      unsubscribeFromProfile();
+    };
+  }, []);
 
-  // The value provided to the context consumers.
+  // --- MODIFICATION: The provided value now includes the userProfile ---
   const value = {
-    currentUser,
+    currentUser, // This is the standard Firebase auth object
+    userProfile, // This is our rich profile object from Firestore with the tier
     loading,
     signup,
     login,
@@ -90,8 +96,6 @@ export const AuthProvider = ({ children }) => {
     signInWithGoogle,
   };
 
-  // Render the children components, but only when not loading to prevent
-  // rendering parts of the app in a weird intermediate state.
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}

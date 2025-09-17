@@ -1,3 +1,5 @@
+// FILE: client/src/components/Sidebar.jsx
+
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -5,7 +7,7 @@ import { useTheme } from '../context/ThemeContext';
 import { TbLayoutSidebarLeftExpandFilled, TbLayoutSidebarLeftCollapseFilled } from 'react-icons/tb';
 import { FaRegMoon, FaRegSun } from "react-icons/fa6";
 import { FiLogOut, FiUser, FiHelpCircle } from 'react-icons/fi';
-import appLogo from '../assets/logo.png'; // Import the logo
+import appLogo from '../assets/logo.png';
 import '../styles/Sidebar.css';
 
 function Sidebar({
@@ -18,11 +20,14 @@ function Sidebar({
     onPinToggle,
     isContentPage
 }) {
-    const { currentUser, logout } = useAuth();
+    const { currentUser, userProfile, logout } = useAuth(); // Get userProfile
     const { theme, toggleTheme } = useTheme();
-    const userName = currentUser?.displayName || currentUser?.email || 'User';
+    
+    // Use userProfile for display name if available, fallback to currentUser
+    const userName = userProfile?.displayName || currentUser?.displayName || currentUser?.email || 'User';
     const userProfilePic = currentUser?.photoURL;
     const userInitial = userName.charAt(0).toUpperCase();
+    const userTier = userProfile?.tier;
 
     const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0, opacity: 0 });
     const [isMenuOpen, setMenuOpen] = useState(false);
@@ -32,11 +37,9 @@ function Sidebar({
 
     useEffect(() => {
         const activeElement = navListRef.current?.querySelector('.topic-button.active');
-
         if (activeElement) {
             const top = activeElement.offsetTop;
             const height = activeElement.offsetHeight;
-
             setIndicatorStyle({ top, height, opacity: 1 });
         } else {
             setIndicatorStyle(prevStyle => ({ ...prevStyle, opacity: 0 }));
@@ -45,20 +48,14 @@ function Sidebar({
 
     useEffect(() => {
         const handleClickOutside = (event) => {
-            if (
-                menuRef.current &&
-                !menuRef.current.contains(event.target) &&
-                menuTriggerRef.current &&
-                !menuTriggerRef.current.contains(event.target)
-            ) {
+            if (menuRef.current && !menuRef.current.contains(event.target) &&
+                menuTriggerRef.current && !menuTriggerRef.current.contains(event.target)) {
                 setMenuOpen(false);
             }
         };
-
         if (isMenuOpen) {
             document.addEventListener('mousedown', handleClickOutside);
         }
-
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
@@ -84,18 +81,10 @@ function Sidebar({
                 </Link>
                 {isContentPage && isOpen && (
                     <div className="sidebar-header-actions">
-                        <button
-                            onClick={toggleTheme}
-                            className="theme-toggle-button"
-                            title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}
-                        >
+                        <button onClick={toggleTheme} className="theme-toggle-button" title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}>
                             {theme === 'light' ? <FaRegMoon /> : <FaRegSun />}
                         </button>
-                        <button
-                            onClick={onPinToggle}
-                            className="pin-toggle-button"
-                            title={isPinned ? "Unpin Sidebar" : "Pin Sidebar"}
-                        >
+                        <button onClick={onPinToggle} className="pin-toggle-button" title={isPinned ? "Unpin Sidebar" : "Pin Sidebar"}>
                             {isPinned ? <TbLayoutSidebarLeftCollapseFilled /> : <TbLayoutSidebarLeftExpandFilled />}
                         </button>
                     </div>
@@ -109,12 +98,7 @@ function Sidebar({
                     {topics && topics.length > 0 ? (
                         topics.map((topic) => (
                             <li key={topic.id}>
-                                <NavLink
-                                    to={`/app/topic/${topic.id}`}
-                                    className={({ isActive }) =>
-                                    `topic-button ${isActive || topic.id === activeTopicId ? 'active' : ''}`
-                                    }
-                                >
+                                <NavLink to={`/app/topic/${topic.id}`} className={({ isActive }) => `topic-button ${isActive || topic.id === activeTopicId ? 'active' : ''}`}>
                                     {topic.name}
                                 </NavLink>
                             </li>
@@ -153,12 +137,23 @@ function Sidebar({
                             ) : (
                                 <div className="profile-initial">{userInitial}</div>
                             )}
-                            <span className="user-name">{userName}</span>
+                            {/* --- MODIFICATION START --- */}
+                            <div className="user-info">
+                                <span className="user-name">{userName}</span>
+                                {userTier && <span className="user-tier">{userTier}</span>}
+                            </div>
+                            {/* --- MODIFICATION END --- */}
                         </div>
                     )}
-                    <Link to="/plans" className="upgrade-button" onClick={(e) => e.stopPropagation()}>
-                        Upgrade
-                    </Link>
+                    
+                    {/* --- MODIFICATION START --- */}
+                    {/* Conditionally render the button based on tier */}
+                    {userTier && userTier !== 'pro' && (
+                        <Link to="/plans" className="upgrade-button" onClick={(e) => e.stopPropagation()}>
+                            {userTier === 'plus' ? 'Go Pro' : 'Upgrade'}
+                        </Link>
+                    )}
+                    {/* --- MODIFICATION END --- */}
                 </div>
             </div>
         </aside>

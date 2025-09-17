@@ -1,3 +1,5 @@
+/* FILE: client/src/styles/Sidebar.css */
+
 /* General Sidebar Container */
 .sidebar {
   width: 345px;
@@ -179,6 +181,7 @@
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  flex-shrink: 0; /* Prevent image from shrinking */
 }
 
 .profile-picture {
@@ -194,6 +197,21 @@
   font-weight: 500;
   font-size: 1.2em;
 }
+
+/* --- NEW STYLES START HERE --- */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Allows text to truncate inside a flex container */
+}
+
+.user-tier {
+  font-size: 0.8em;
+  color: var(--text-secondary);
+  text-transform: capitalize; /* Makes "free" or "plus" look like "Free" or "Plus" */
+  opacity: 0.9;
+}
+/* --- NEW STYLES END HERE --- */
 
 .user-name {
   font-size: 1.05em;
