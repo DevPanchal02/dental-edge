@@ -1,20 +1,18 @@
+// FILE: client/src/services/loader.js
+
 import {
   fetchTopics as apiFetchTopics,
   fetchTopicStructure,
-  fetchQuizData as apiFetchQuizData,
+  fetchQuizPreview,
+  fetchFreeContent,
+  fetchPaidContent,
 } from './api.js';
+import { auth } from '../firebase';
 
-// A simple in-memory cache to avoid re-fetching the structure of a topic.
 const topicStructureCache = {};
 
-/**
- * Fetches the list of all topics.
- */
 export const fetchTopics = apiFetchTopics;
 
-/**
- * Fetches the detailed structure of a topic (its lists of tests and banks).
- */
 export const fetchTopicData = async (topicId) => {
   if (topicStructureCache[topicId]) {
     return topicStructureCache[topicId];
@@ -24,9 +22,6 @@ export const fetchTopicData = async (topicId) => {
   return structure;
 };
 
-/**
- * A helper function to find a specific quiz's metadata within a topic structure.
- */
 const findQuizInStructure = (topicData, sectionType, quizId) => {
   if (!topicData) return null;
   if (sectionType === 'practice') {
@@ -43,27 +38,41 @@ const findQuizInStructure = (topicData, sectionType, quizId) => {
   return null;
 };
 
-/**
- * Retrieves the full JSON data for a specific quiz.
- * This function now correctly passes the required IDs to the API service.
- */
 export const getQuizData = async (topicId, sectionType, quizId) => {
-  // This function no longer needs to find the storagePath.
-  // It simply validates that the quiz exists in the structure before calling the API.
+  const isPreview = !auth.currentUser && topicId === 'biology' && sectionType === 'practice' && quizId === 'test-1';
+
+  if (isPreview) {
+    return fetchQuizPreview();
+  }
+
   const topicData = await fetchTopicData(topicId);
   const quizMeta = findQuizInStructure(topicData, sectionType, quizId);
 
-  if (!quizMeta) {
+  if (!quizMeta || !quizMeta.storagePath) {
     throw new Error(`Quiz data could not be located for ${topicId}/${quizId}`);
   }
 
-  // --- THIS IS THE FIX ---
-  // Pass the correct arguments directly to the API function.
-  return apiFetchQuizData(topicId, sectionType, quizId);
+  let isFreeContent = false;
+  if (sectionType === 'practice' && topicData.practiceTests[0]?.id === quizId) {
+    isFreeContent = true;
+  } else if (sectionType === 'qbank') {
+      for(const category of topicData.questionBanks) {
+          if (category.banks[0]?.id === quizId) {
+              isFreeContent = true;
+              break;
+          }
+      }
+  }
+
+  if (isFreeContent) {
+    return fetchFreeContent(quizMeta.storagePath);
+  } else {
+    return fetchPaidContent(quizMeta.storagePath);
+  }
 };
 
 /**
- * Retrieves and formats metadata for the quiz page header and options modal.
+ * Retrieves METADATA ONLY. Does not fetch full quiz data.
  */
 export const getQuizMetadata = async (topicId, sectionType, quizId) => {
   const topicData = await fetchTopicData(topicId);
@@ -71,9 +80,9 @@ export const getQuizMetadata = async (topicId, sectionType, quizId) => {
 
   if (!quizMeta) return null;
 
-  // We fetch the quiz data to accurately get the question count.
-  const quizData = await getQuizData(topicId, sectionType, quizId);
-  const totalQuestions = Array.isArray(quizData) ? quizData.filter(q => q && !q.error).length : 0;
+  // --- THIS IS THE FIX ---
+  // We no longer fetch quizData here. We only return the metadata we have.
+  // The question count will be determined in the component.
 
   let fullNameForDisplay;
   let categoryForInstructions;
@@ -82,7 +91,7 @@ export const getQuizMetadata = async (topicId, sectionType, quizId) => {
   if (sectionType === 'practice') {
     fullNameForDisplay = `${quizMeta.topicName} ${quizMeta.name}`;
     categoryForInstructions = quizMeta.topicName;
-  } else { // QBank
+  } else {
     fullNameForDisplay = `${quizMeta.actualQbCategory} - ${quizMeta.name}`;
     if (quizMeta.actualQbCategory.toLowerCase() === quizMeta.name.toLowerCase()){
         fullNameForDisplay = quizMeta.name;
@@ -95,13 +104,10 @@ export const getQuizMetadata = async (topicId, sectionType, quizId) => {
     topicName: mainTopicName,
     fullNameForDisplay: fullNameForDisplay,
     categoryForInstructions: categoryForInstructions,
-    totalQuestions: totalQuestions,
+    // totalQuestions will be added by the QuizPage component.
   };
 };
 
-/**
- * A utility function for formatting display names.
- */
 export const formatDisplayName = (rawName) => {
     if (!rawName) return '';
     return rawName

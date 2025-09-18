@@ -26,7 +26,8 @@
     border-radius: 16px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 420px;
+    max-width: 500px;
+    min-height: 360px;
     padding: 32px;
     box-sizing: border-box;
     position: relative;
@@ -57,6 +58,8 @@
 
 .rpm-modal-header {
     margin-bottom: 24px;
+    max-width: 89%;
+    margin: auto;
 }
 
 .rpm-logo {
@@ -78,28 +81,37 @@ body.light-mode .rpm-logo {
 
 .rpm-subtitle {
     font-size: 0.95rem;
+    font-weight: 400;
     color: var(--text-secondary);
     line-height: 1.6;
-    margin: 0;
+    margin-bottom: 10%;
 }
 
 .rpm-modal-body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    /* --- MODIFICATION START: Define a consistent width for the action area --- */
+    width: 50%; /* Sets a consistent width for this container. */
+    margin: 0 auto; /* Horizontally centers the container itself. */
+    /* --- MODIFICATION END --- */
 }
 
 .rpm-signup-button {
+    /* --- MODIFICATION: The button now takes 100% of its parent's new width --- */
     width: 100%;
     background-color: var(--bg-button-primary);
     color: var(--text-on-button-primary);
     border: none;
-    padding: 14px 20px;
+    padding: 14px 10px;
     font-size: 1rem;
     font-weight: 500;
-    border-radius: 8px;
+    border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .rpm-signup-button:hover {
@@ -110,6 +122,7 @@ body.light-mode .rpm-logo {
     font-size: 0.9rem;
     color: var(--text-secondary);
     margin: 0;
+    /* This text will now wrap naturally within the 75% width of its parent */
 }
 
 .rpm-login-prompt a {

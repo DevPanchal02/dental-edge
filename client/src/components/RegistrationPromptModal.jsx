@@ -41,9 +41,11 @@ function RegistrationPromptModal({ isOpen, onClose }) {
                 <div className="rpm-modal-header">
                     <img src={appLogo} alt="Dental Edge Logo" className="rpm-logo" />
                     <h2 className="rpm-title">Create an account to continue</h2>
+                    {/* --- MODIFICATION START --- */}
                     <p className="rpm-subtitle">
-                        See how Dental Edge can help you ace the DAT. Save your progress, review detailed analytics, and unlock more content by signing up.
+                        Don't lose your momentum—sign up to finish the test. Save your results, track your progress, and get your edge.
                     </p>
+                    {/* --- MODIFICATION END --- */}
                 </div>
 
                 <div className="rpm-modal-body">

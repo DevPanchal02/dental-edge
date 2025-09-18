@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
+import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import { getQuizData, getQuizMetadata, formatDisplayName } from '../services/loader';
 import QuestionCard from '../components/QuestionCard';
 import QuizReviewSummary from '../components/QuizReviewSummary';
@@ -9,6 +9,7 @@ import { useLayout } from '../context/LayoutContext';
 import '../styles/QuizPage.css';
 import RegistrationPromptModal from '../components/RegistrationPromptModal';
 import { useAuth } from '../context/AuthContext';
+import { FaChevronLeft } from 'react-icons/fa';
 
 // --- Utility Functions (No changes) ---
 function debounce(func, delay) {
@@ -254,13 +255,12 @@ const { isSidebarEffectivelyPinned } = layout;
     }, []);
 
     // Main data loading effect - loop is now fixed.
-    useEffect(() => {
+       useEffect(() => {
         isMountedRef.current = true;
-
+    
         const loadQuizAndInitialize = async () => {
             setIsLoading(true);
             setError(null);
-            // ... (state resets are the same)
             setAllQuizQuestions([]);
             setQuizMetadata(null);
             setHasPracticeTestStarted(false);
@@ -269,31 +269,66 @@ const { isSidebarEffectivelyPinned } = layout;
             setUserAnswers({});
             setSubmittedAnswers({});
             setMarkedQuestions({});
-
+    
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
             activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
             activeNavTimeoutsRef.current.clear();
             setIsNavActionInProgress(false);
+    
+            // --- PREVIEW MODE LOGIC ---
+            if (isPreviewMode) {
+                try {
+                    const previewData = await getQuizData(topicId, sectionType, quizId);
+                    if (!isMountedRef.current) return;
+                    if (!previewData || previewData.length === 0) {
+                        throw new Error('Preview quiz data could not be loaded.');
+                    }
+                    
+                    // --- THIS IS THE FIX ---
+                    const previewMetadata = {
+                        fullNameForDisplay: 'Dental Aptitude Test 1',
+                        categoryForInstructions: 'Biology',
+                        totalQuestions: 210, // Display 210
+                        baseTimeLimitMinutes: 180,
+                    };
 
+                    setAllQuizQuestions(previewData); // But only load the 2 actual questions
+                    setQuizMetadata(previewMetadata);
+                    setIsPracticeOptionsModalOpen(true);
+                    setHasPracticeTestStarted(false);
+                } catch (err) {
+                    if (isMountedRef.current) setError(err.message);
+                } finally {
+                    if (isMountedRef.current) setIsLoading(false);
+                }
+                return;
+            }
+    
+            // --- REGISTERED USER LOGIC ---
             const currentReviewStatus = location.state?.review || false;
             const currentReviewIdx = location.state?.questionIndex ?? 0;
             setIsReviewMode(currentReviewStatus);
             setReviewQuestionIndex(currentReviewIdx);
-
+    
             try {
-                const [loadedQuizData, loadedQuizMetadata] = await Promise.all([
+                const [loadedQuizData, initialMetadata] = await Promise.all([
                     getQuizData(topicId, sectionType, quizId),
                     getQuizMetadata(topicId, sectionType, quizId)
                 ]);
-
+    
                 if (!isMountedRef.current) return;
-                if (!loadedQuizData || loadedQuizData.length === 0 || !loadedQuizMetadata) {
+                if (!loadedQuizData || loadedQuizData.length === 0 || !initialMetadata) {
                     throw new Error(`Essential quiz data or metadata not found.`);
                 }
-
+                
+                const finalMetadata = {
+                    ...initialMetadata,
+                    totalQuestions: loadedQuizData.filter(q => q && !q.error).length
+                };
+    
                 setAllQuizQuestions(loadedQuizData);
-                setQuizMetadata(loadedQuizMetadata);
-
+                setQuizMetadata(finalMetadata);
+    
                 if (currentReviewStatus) {
                     const resultsKey = `quizResults-${topicId}-${sectionType}-${quizId}`;
                     const savedResultsString = localStorage.getItem(resultsKey);
@@ -305,7 +340,6 @@ const { isSidebarEffectivelyPinned } = layout;
                         loadedQuizData.forEach((_, index) => { allSubmitted[index] = true; });
                         setSubmittedAnswers(allSubmitted);
                         setCurrentQuestionIndex(currentReviewIdx);
-                        setShowExplanation({ [currentReviewIdx]: true });
                         setPracticeTestSettings(parsedResults.practiceTestSettings || { prometricDelay: false, additionalTime: false });
                     }
                     setHasPracticeTestStarted(true);
@@ -322,61 +356,48 @@ const { isSidebarEffectivelyPinned } = layout;
                             setHasPracticeTestStarted(savedState.hasPracticeTestStarted || (sectionType !== 'practice'));
                             setCurrentQuestionIndex(savedState.currentQuestionIndex || 0);
                             setUserAnswers(savedState.userAnswers || {});
-                            const loadedCrossed = {};
-                            for (const qIdx in savedState.crossedOffOptions) {
-                                if (Array.isArray(savedState.crossedOffOptions[qIdx])) {
-                                    loadedCrossed[qIdx] = new Set(savedState.crossedOffOptions[qIdx]);
-                                }
-                            }
-                            setCrossedOffOptions(loadedCrossed || {});
+                            setCrossedOffOptions(savedState.crossedOffOptions ? Object.fromEntries(Object.entries(savedState.crossedOffOptions).map(([k, v]) => [k, new Set(v)])) : {});
                             setUserTimeSpent(savedState.userTimeSpent || {});
                             setMarkedQuestions(savedState.markedQuestions || {});
                             setTimerValue(savedState.timerValue !== undefined ? savedState.timerValue : 0);
                             setIsCountdown(savedState.isCountdown !== undefined ? savedState.isCountdown : false);
                             setInitialDuration(savedState.initialDuration || 0);
-                            if (!(savedState.isCountdown && savedState.timerValue <= 0) && (savedState.hasPracticeTestStarted || sectionType !== 'practice')) {
-                                setIsTimerActive(true);
-                            } else {
-                                setIsTimerActive(false);
-                            }
+                            setIsTimerActive(savedState.hasPracticeTestStarted || sectionType !== 'practice');
                         }
                     } else {
-                        // This is the part that caused the loop.
-                        // We now perform the logic directly inside the effect.
                         if (sectionType === 'practice') {
                             setIsPracticeOptionsModalOpen(true);
                             setHasPracticeTestStarted(false);
                         } else {
-                            // Logic from initializeNewQuizState is now inlined here
-                            setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
-                            setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
-                            setMarkedQuestions({}); setTempReveal({}); setIsReviewSummaryVisible(false);
-                            setTimerValue(0); setIsCountdown(false); setIsTimerActive(true);
-                            setInitialDuration(0);
-                            setHasPracticeTestStarted(true);
-                            setIsPracticeOptionsModalOpen(false);
+                            initializeNewQuizState();
                         }
                     }
                 }
             } catch (err) {
-                if (isMountedRef.current) setError(err.message);
+                if (isMountedRef.current) {
+                    if (err.code === 'upgrade_required') {
+                        navigate('/plans');
+                    } else {
+                        setError(err.message);
+                    }
+                }
             } finally {
                 if (isMountedRef.current) setIsLoading(false);
             }
         };
-
+    
         loadQuizAndInitialize();
-
+    
         return () => {
             isMountedRef.current = false;
-            saveStateRef.current();
+            if (!isPreviewMode) {
+              saveStateRef.current();
+            }
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
             activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
             activeNavTimeoutsRef.current.clear();
         };
-        // The dependency array is now stable and won't cause a loop.
-    }, [topicId, sectionType, quizId, location.state?.review, location.state?.questionIndex, getQuizStateKey]);
-
+    }, [topicId, sectionType, quizId, location.state?.review, location.state?.questionIndex, getQuizStateKey, navigate, isPreviewMode]);
        const handlePrevious = useCallback(() => {
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
@@ -457,11 +478,23 @@ const { isSidebarEffectivelyPinned } = layout;
 
     // This now correctly depends on quizMetadata from state, which is fine
     // because this is only called on a user interaction (clicking start).
-    const handleStartPracticeTest = useCallback((settings) => {
+const handleStartPracticeTest = useCallback((settings) => {
         setPracticeTestSettings(settings);
         setIsPracticeOptionsModalOpen(false);
+
+        if (isPreviewMode) {
+            const duration = 180 * 60; // 180 minutes for preview
+            setTimerValue(duration);
+            setInitialDuration(duration);
+            setIsCountdown(true);
+            setIsTimerActive(true);
+            setHasPracticeTestStarted(true);
+            return;
+        }
+        
+        // This is the original logic for registered users
         initializeNewQuizState(settings);
-    }, [initializeNewQuizState]);
+    }, [initializeNewQuizState, isPreviewMode]);
 
     // --- All remaining functions and the final JSX render block are unchanged. ---
     useEffect(() => {
@@ -846,11 +879,25 @@ const { isSidebarEffectivelyPinned } = layout;
     );
     if (isLoading) { return <div className="page-loading">Loading Quiz from Cloud...</div>; }
     if (error) { return (<div className="page-error"> Error: {error} <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>); }
-    if (isPracticeOptionsModalOpen && sectionType === 'practice' && !isReviewMode) {
+        if (isPracticeOptionsModalOpen && (sectionType === 'practice' || isPreviewMode) && !isReviewMode) {
         if (!quizMetadata) { return <div className="page-loading">Preparing Test Options... (Waiting for metadata)</div>; }
-        const topicKeyForDuration = quizMetadata.topicName?.toLowerCase().replace(/\s+/g, '-') || topicId.toLowerCase().replace(/\s+/g, '-');
-        const baseTime = PRACTICE_TEST_DURATIONS[topicKeyForDuration] || PRACTICE_TEST_DURATIONS.default;
-        return (<PracticeTestOptions isOpen={isPracticeOptionsModalOpen} onClose={handlePracticeTestOptionsClose} onStartTest={handleStartPracticeTest} fullNameForDisplay={quizMetadata.fullNameForDisplay} categoryForInstructions={quizMetadata.categoryForInstructions} baseTimeLimitMinutes={Math.floor(baseTime / 60)} numQuestions={quizMetadata.totalQuestions} />);
+        
+        // Determine the base time. Use preview-specific time if in preview mode.
+        const baseTimeMinutes = isPreviewMode 
+            ? quizMetadata.baseTimeLimitMinutes 
+            : Math.floor((PRACTICE_TEST_DURATIONS[quizMetadata.topicName?.toLowerCase().replace(/\s+/g, '-')] || PRACTICE_TEST_DURATIONS.default) / 60);
+
+        const totalQuestions = isPreviewMode ? quizMetadata.totalQuestions : (allQuizQuestions.filter(q => q && !q.error).length);
+
+        return (<PracticeTestOptions 
+            isOpen={isPracticeOptionsModalOpen} 
+            onClose={isPreviewMode ? () => navigate('/') : handlePracticeTestOptionsClose} 
+            onStartTest={handleStartPracticeTest} 
+            fullNameForDisplay={quizMetadata.fullNameForDisplay} 
+            categoryForInstructions={quizMetadata.categoryForInstructions} 
+            baseTimeLimitMinutes={baseTimeMinutes} 
+            numQuestions={totalQuestions} 
+        />);
     }
     if (sectionType === 'practice' && !hasPracticeTestStarted && !isPracticeOptionsModalOpen && !isReviewMode) { return <div className="page-loading">Preparing Practice Test...</div>; }
     if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { return <div className="page-info"> No questions found for this quiz. Please check data files. <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
@@ -891,28 +938,34 @@ const { isSidebarEffectivelyPinned } = layout;
                 />
             ) : (
                 <>
-                    {isPreviewMode ? (
-                        <div className="quiz-header preview-header">
-                            <div className="quiz-title-container">
-                                <h1 className="quiz-title">Welcome to Dental Edge</h1>
-                            </div>
-                            <p className="quiz-progress">Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay} (Preview)</p>
+                    <div className="quiz-header">
+                        <div className="header-left">
+                            {isPreviewMode ? (
+                                <Link to="/" className="back-button-quiz icon-button">
+                                    <FaChevronLeft /> Back to Home
+                                </Link>
+                            ) : (
+                                <button
+                                    onClick={() => {
+                                        if (isReviewMode) navigate(`/app/results/${topicId}/${sectionType}/${quizId}`);
+                                        else navigate(`/app/topic/${topicId}`);
+                                    }}
+                                    className="back-button-quiz icon-button"
+                                >
+                                    <FaChevronLeft /> 
+                                    {isReviewMode ? `Back to Results` : `Back to ${quizMetadata?.topicName || formatDisplayName(topicId)}`}
+                                </button>
+                            )}
                         </div>
-                    ) : (
-                        <div className="quiz-header">
-                            <button
-                                onClick={() => {
-                                    if (isReviewMode) navigate(`/app/results/${topicId}/${sectionType}/${quizId}`);
-                                    else navigate(`/app/topic/${topicId}`);
-                                }}
-                                className="back-button-quiz"
-                            >
-                                {isReviewMode ? `\u21A9 Back to Results` : `\u21A9 Back to ${quizMetadata?.topicName || formatDisplayName(topicId)}`}
-                            </button>
-                            <div className="quiz-title-container"><h1 className="quiz-title">{quizMetadata?.fullNameForDisplay || 'Quiz'}</h1></div>
-                            <p className="quiz-progress">Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay}</p>
+                        <div className="header-center">
+                            <h1 className="quiz-title">{quizMetadata?.fullNameForDisplay || 'Quiz'}</h1>
                         </div>
-                    )}
+                        <div className="header-right">
+                            <p className="quiz-progress">
+                                Question {currentQuestionIndex + 1} of {totalQuestionsForDisplay} {isPreviewMode && '(Preview)'}
+                            </p>
+                        </div>
+                    </div>
                     {passageHtml && topicId !== 'reading-comprehension' && (
                         <MemoizedPassage
                             html={passageContentKey && highlightedHtml[passageContentKey] !== undefined ? highlightedHtml[passageContentKey] : passageHtml}
