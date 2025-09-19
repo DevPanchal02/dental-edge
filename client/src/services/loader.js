@@ -3,16 +3,17 @@
 import {
   fetchTopics as apiFetchTopics,
   fetchTopicStructure,
-  fetchQuizPreview,
-  fetchFreeContent,
-  fetchPaidContent,
+  // We only import the new unified fetcher
+  fetchQuizData,
 } from './api.js';
 import { auth } from '../firebase';
 
 const topicStructureCache = {};
 
+// fetchTopics remains the same
 export const fetchTopics = apiFetchTopics;
 
+// fetchTopicData remains the same
 export const fetchTopicData = async (topicId) => {
   if (topicStructureCache[topicId]) {
     return topicStructureCache[topicId];
@@ -22,6 +23,7 @@ export const fetchTopicData = async (topicId) => {
   return structure;
 };
 
+// findQuizInStructure remains the same
 const findQuizInStructure = (topicData, sectionType, quizId) => {
   if (!topicData) return null;
   if (sectionType === 'practice') {
@@ -38,13 +40,14 @@ const findQuizInStructure = (topicData, sectionType, quizId) => {
   return null;
 };
 
+// --- REFACTORED getQuizData ---
+// This function is now much simpler. Its only job is to find the correct
+// storage path and then call the unified API endpoint.
 export const getQuizData = async (topicId, sectionType, quizId) => {
+  // Determine if this is an unregistered preview request on the client-side
   const isPreview = !auth.currentUser && topicId === 'biology' && sectionType === 'practice' && quizId === 'test-1';
 
-  if (isPreview) {
-    return fetchQuizPreview();
-  }
-
+  // Find the metadata, which contains the crucial `storagePath`
   const topicData = await fetchTopicData(topicId);
   const quizMeta = findQuizInStructure(topicData, sectionType, quizId);
 
@@ -52,37 +55,18 @@ export const getQuizData = async (topicId, sectionType, quizId) => {
     throw new Error(`Quiz data could not be located for ${topicId}/${quizId}`);
   }
 
-  let isFreeContent = false;
-  if (sectionType === 'practice' && topicData.practiceTests[0]?.id === quizId) {
-    isFreeContent = true;
-  } else if (sectionType === 'qbank') {
-      for(const category of topicData.questionBanks) {
-          if (category.banks[0]?.id === quizId) {
-              isFreeContent = true;
-              break;
-          }
-      }
-  }
-
-  if (isFreeContent) {
-    return fetchFreeContent(quizMeta.storagePath);
-  } else {
-    return fetchPaidContent(quizMeta.storagePath);
-  }
+  // Call the single, unified fetcher from api.js
+  // It will handle sending the token and the isPreview flag correctly.
+  return fetchQuizData(quizMeta.storagePath, isPreview);
 };
 
-/**
- * Retrieves METADATA ONLY. Does not fetch full quiz data.
- */
+
+// getQuizMetadata remains the same
 export const getQuizMetadata = async (topicId, sectionType, quizId) => {
   const topicData = await fetchTopicData(topicId);
   const quizMeta = findQuizInStructure(topicData, sectionType, quizId);
 
   if (!quizMeta) return null;
-
-  // --- THIS IS THE FIX ---
-  // We no longer fetch quizData here. We only return the metadata we have.
-  // The question count will be determined in the component.
 
   let fullNameForDisplay;
   let categoryForInstructions;
@@ -104,10 +88,10 @@ export const getQuizMetadata = async (topicId, sectionType, quizId) => {
     topicName: mainTopicName,
     fullNameForDisplay: fullNameForDisplay,
     categoryForInstructions: categoryForInstructions,
-    // totalQuestions will be added by the QuizPage component.
   };
 };
 
+// formatDisplayName remains the same
 export const formatDisplayName = (rawName) => {
     if (!rawName) return '';
     return rawName
