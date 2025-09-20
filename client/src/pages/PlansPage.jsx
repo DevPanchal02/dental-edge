@@ -1,10 +1,18 @@
 // FILE: client/src/pages/PlansPage.jsx
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FaCheck } from 'react-icons/fa';
 import '../styles/PlansPage.css';
+
+// --- NEW IMPORTS ---
+import { loadStripe } from '@stripe/stripe-js';
+import { createCheckoutSession } from '../services/api';
+
+// --- NEW: Load Stripe with your publishable key from the .env file ---
+// This must be outside the component to avoid being reloaded on every render.
+const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
 const plansData = [
   {
@@ -57,6 +65,10 @@ function PlansPage() {
   const { currentUser, userProfile } = useAuth();
   const userTier = userProfile?.tier || 'free';
 
+  // --- NEW: State to handle loading and errors ---
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState('');
+
   const handleClose = () => {
     if (location.key !== 'default') {
       navigate(-1);
@@ -65,24 +77,58 @@ function PlansPage() {
     }
   };
 
+  // --- NEW: This function handles the entire checkout process ---
+  const handleCheckout = async (planTierId) => {
+    // For now, we only allow purchasing the 'plus' plan
+    if (planTierId !== 'plus') {
+        alert("Only the Edge Plus plan is available for purchase at this time.");
+        return;
+    }
+    
+    setIsLoading(true);
+    setError('');
+
+    try {
+      // 1. Call our backend to create a checkout session
+      const sessionId = await createCheckoutSession();
+
+      // 2. Get an instance of Stripe.js
+      const stripe = await stripePromise;
+
+      // 3. Redirect the user to Stripe's hosted checkout page
+      const { error } = await stripe.redirectToCheckout({ sessionId });
+
+      if (error) {
+        // This error is usually a client-side issue (e.g., network error)
+        console.error("Stripe redirection error:", error);
+        setError("Could not redirect to payment page. Please try again.");
+      }
+    } catch (err) {
+      // This error comes from our backend function failing
+      console.error("Backend checkout error:", err);
+      setError("An error occurred on our server. Please try again later.");
+    } finally {
+      // This part might not be reached if redirection is successful,
+      // but it's good practice for handling errors.
+      setIsLoading(false);
+    }
+  };
+
+
   const getButtonState = (planTier) => {
     const planLevel = tierLevels[planTier];
     const userLevel = tierLevels[userTier];
 
-    // --- THIS IS THE FIX ---
     // Handle the state for a user who is NOT logged in.
     if (!currentUser) {
       if (planTier === 'free') {
-        return { text: 'Get Started', disabled: false, action: () => navigate('/register') };
+        return { text: 'Get Started', disabled: isLoading, action: () => navigate('/register') };
       }
-      // For other plans, the button should also lead to registration.
       const planName = plansData.find(p => p.tierId === planTier)?.name || '';
-      return { text: `Get ${planName.replace('Edge ', '')}`, disabled: false, action: () => navigate('/register') };
+      return { text: `Get ${planName.replace('Edge ', '')}`, disabled: isLoading, action: () => navigate('/register') };
     }
-    // --- END FIX ---
 
-
-    // Logic for a LOGGED-IN user remains the same.
+    // Logic for a LOGGED-IN user
     if (planLevel < userLevel) {
       return { text: 'Included', disabled: true, action: null };
     }
@@ -92,8 +138,13 @@ function PlansPage() {
     
     // Otherwise, it's an upgrade option for a logged-in user.
     const planName = plansData.find(p => p.tierId === planTier)?.name || '';
-    // The action will be to handle Stripe in the future. For now, it does nothing.
-    return { text: `Get ${planName.replace('Edge ', '')}`, disabled: false, action: () => {} };
+    
+    // --- UPDATE: The action now calls our new handleCheckout function ---
+    return { 
+        text: isLoading ? 'Processing...' : `Get ${planName.replace('Edge ', '')}`, 
+        disabled: isLoading, 
+        action: () => handleCheckout(planTier) 
+    };
   };
 
   return (
@@ -102,6 +153,8 @@ function PlansPage() {
 
       <div className="plans-header">
         <h1 className="plans-title">Upgrade your plan</h1>
+        {/* --- NEW: Display error messages --- */}
+        {error && <p className="plans-error-message">{error}</p>}
       </div>
 
       <div className="plans-grid">

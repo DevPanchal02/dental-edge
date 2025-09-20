@@ -316,3 +316,62 @@ mark.custom-highlight {
   opacity: 1;
   pointer-events: none;
 }
+/* --- ADD THE FOLLOWING CSS TO THE END OF THE FILE --- */
+
+/* --- NEW: Access Denied Styles --- */
+.access-denied-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  height: calc(100% - 100px); 
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.access-denied-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--text-accent) 15%, transparent);
+  color: var(--text-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+}
+
+.access-denied-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+}
+
+.access-denied-message {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 450px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.access-denied-button {
+  background-color: var(--bg-button-primary);
+  color: var(--text-on-button-primary);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none; /* For Link component */
+  transition: background-color 0.2s ease;
+}
+
+.access-denied-button:hover {
+  background-color: var(--bg-button-primary-hover);
+}

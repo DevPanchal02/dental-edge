@@ -1,3 +1,5 @@
+// FILE: client/src/pages/QuizPage.jsx
+
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { useParams, useNavigate, useLocation, Link } from 'react-router-dom';
 import { getQuizData, getQuizMetadata, formatDisplayName } from '../services/loader';
@@ -9,7 +11,7 @@ import { useLayout } from '../context/LayoutContext';
 import '../styles/QuizPage.css';
 import RegistrationPromptModal from '../components/RegistrationPromptModal';
 import { useAuth } from '../context/AuthContext';
-import { FaChevronLeft } from 'react-icons/fa';
+import { FaChevronLeft, FaCrown } from 'react-icons/fa';
 
 // --- Utility Functions (No changes) ---
 function debounce(func, delay) {
@@ -52,9 +54,9 @@ function QuizPage({ isPreviewMode = false }) {
     const { topicId, sectionType, quizId } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
-const { currentUser } = useAuth();
-const layout = !isPreviewMode ? useLayout() : { isSidebarEffectivelyPinned: false };
-const { isSidebarEffectivelyPinned } = layout;
+    const { currentUser } = useAuth();
+    const layout = !isPreviewMode ? useLayout() : { isSidebarEffectivelyPinned: false };
+    const { isSidebarEffectivelyPinned } = layout;
 
     const timerIntervalRef = useRef(null);
     const questionStartTimeRef = useRef(null);
@@ -71,6 +73,7 @@ const { isSidebarEffectivelyPinned } = layout;
     const [markedQuestions, setMarkedQuestions] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [accessDenied, setAccessDenied] = useState(false);
     const [timerValue, setTimerValue] = useState(0);
     const [isTimerActive, setIsTimerActive] = useState(false);
     const [isCountdown, setIsCountdown] = useState(false);
@@ -93,6 +96,7 @@ const { isSidebarEffectivelyPinned } = layout;
     const [highlightedHtml, setHighlightedHtml] = useState({});
     const [isRegistrationModalOpen, setIsRegistrationModalOpen] = useState(false);
     const latestStateRef = useRef({});
+    
     useEffect(() => {
         latestStateRef.current = {
             isReviewMode, hasPracticeTestStarted, isPracticeOptionsModalOpen, isNavActionInProgress,
@@ -105,6 +109,7 @@ const { isSidebarEffectivelyPinned } = layout;
         practiceTestSettings, currentQuestionIndex, allQuizQuestions.length, tempReveal,
         submittedAnswers, sectionType, isLoading, isExhibitVisible
     ]);
+
     const getQuizStateKey = useCallback(() => {
         return `quizState-${topicId}-${sectionType}-${quizId}`;
     }, [topicId, sectionType, quizId]);
@@ -197,8 +202,7 @@ const { isSidebarEffectivelyPinned } = layout;
     const handleFinishQuizRef = useRef(handleFinishQuiz);
     useEffect(() => { handleFinishQuizRef.current = handleFinishQuiz; }, [handleFinishQuiz]);
 
-    // This callback remains, but we will no longer use it in the main useEffect.
-    // It's still needed for handleStartPracticeTest.
+    // --- FIX: This function is still useful, but we will not call it from the main useEffect anymore. ---
     const initializeNewQuizState = useCallback((ptSettings) => {
         setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
         setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
@@ -254,13 +258,15 @@ const { isSidebarEffectivelyPinned } = layout;
         }
     }, []);
 
-    // Main data loading effect - loop is now fixed.
-       useEffect(() => {
+    // --- MAJOR FIX: This useEffect hook has been refactored to prevent the infinite loop ---
+    useEffect(() => {
         isMountedRef.current = true;
     
         const loadQuizAndInitialize = async () => {
+            // Reset all state at the beginning
             setIsLoading(true);
             setError(null);
+            setAccessDenied(false);
             setAllQuizQuestions([]);
             setQuizMetadata(null);
             setHasPracticeTestStarted(false);
@@ -275,24 +281,13 @@ const { isSidebarEffectivelyPinned } = layout;
             activeNavTimeoutsRef.current.clear();
             setIsNavActionInProgress(false);
     
-            // --- PREVIEW MODE LOGIC ---
             if (isPreviewMode) {
                 try {
                     const previewData = await getQuizData(topicId, sectionType, quizId);
                     if (!isMountedRef.current) return;
-                    if (!previewData || previewData.length === 0) {
-                        throw new Error('Preview quiz data could not be loaded.');
-                    }
-                    
-                    // --- THIS IS THE FIX ---
-                    const previewMetadata = {
-                        fullNameForDisplay: 'Dental Aptitude Test 1',
-                        categoryForInstructions: 'Biology',
-                        totalQuestions: 210, // Display 210
-                        baseTimeLimitMinutes: 180,
-                    };
-
-                    setAllQuizQuestions(previewData); // But only load the 2 actual questions
+                    if (!previewData || previewData.length === 0) throw new Error('Preview quiz data could not be loaded.');
+                    const previewMetadata = { fullNameForDisplay: 'Biology Practice Test 1', categoryForInstructions: 'Biology', totalQuestions: 2, baseTimeLimitMinutes: 180 };
+                    setAllQuizQuestions(previewData);
                     setQuizMetadata(previewMetadata);
                     setIsPracticeOptionsModalOpen(true);
                     setHasPracticeTestStarted(false);
@@ -304,7 +299,6 @@ const { isSidebarEffectivelyPinned } = layout;
                 return;
             }
     
-            // --- REGISTERED USER LOGIC ---
             const currentReviewStatus = location.state?.review || false;
             const currentReviewIdx = location.state?.questionIndex ?? 0;
             setIsReviewMode(currentReviewStatus);
@@ -317,15 +311,9 @@ const { isSidebarEffectivelyPinned } = layout;
                 ]);
     
                 if (!isMountedRef.current) return;
-                if (!loadedQuizData || loadedQuizData.length === 0 || !initialMetadata) {
-                    throw new Error(`Essential quiz data or metadata not found.`);
-                }
+                if (!loadedQuizData || loadedQuizData.length === 0 || !initialMetadata) throw new Error(`Essential quiz data or metadata not found.`);
                 
-                const finalMetadata = {
-                    ...initialMetadata,
-                    totalQuestions: loadedQuizData.filter(q => q && !q.error).length
-                };
-    
+                const finalMetadata = { ...initialMetadata, totalQuestions: loadedQuizData.filter(q => q && !q.error).length };
                 setAllQuizQuestions(loadedQuizData);
                 setQuizMetadata(finalMetadata);
     
@@ -369,14 +357,20 @@ const { isSidebarEffectivelyPinned } = layout;
                             setIsPracticeOptionsModalOpen(true);
                             setHasPracticeTestStarted(false);
                         } else {
-                            initializeNewQuizState();
+                            // This logic is moved directly from initializeNewQuizState to break the dependency loop
+                            setCurrentQuestionIndex(0); setUserAnswers({}); setSubmittedAnswers({});
+                            setShowExplanation({}); setCrossedOffOptions({}); setUserTimeSpent({});
+                            setMarkedQuestions({}); setTempReveal({}); setIsReviewSummaryVisible(false);
+                            setCurrentQuestionIndexBeforeReview(0); setHighlightedHtml({});
+                            setTimerValue(0); setIsCountdown(false); setIsTimerActive(true);
+                            setInitialDuration(0); setHasPracticeTestStarted(true);
                         }
                     }
                 }
             } catch (err) {
                 if (isMountedRef.current) {
                     if (err.code === 'upgrade_required') {
-                        navigate('/plans');
+                        setAccessDenied(true);
                     } else {
                         setError(err.message);
                     }
@@ -390,15 +384,16 @@ const { isSidebarEffectivelyPinned } = layout;
     
         return () => {
             isMountedRef.current = false;
-            if (!isPreviewMode) {
-              saveStateRef.current();
-            }
+            if (!isPreviewMode) saveStateRef.current();
             if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
             activeNavTimeoutsRef.current.forEach(timeoutId => clearTimeout(timeoutId));
             activeNavTimeoutsRef.current.clear();
         };
+    // The dependency array is now stable and does not cause a re-render loop.
     }, [topicId, sectionType, quizId, location.state?.review, location.state?.questionIndex, getQuizStateKey, navigate, isPreviewMode]);
-       const handlePrevious = useCallback(() => {
+    
+    // --- All other functions (handlePrevious, handleOpenReviewSummary, etc.) remain unchanged ---
+    const handlePrevious = useCallback(() => {
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
             if (latestStateRef.current.isExhibitVisible) {
@@ -421,23 +416,20 @@ const { isSidebarEffectivelyPinned } = layout;
             }
         };
         executeWithDelay(actionFn);
-    }, [executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation]);
-
+    }, [executeWithDelay]);
     const handleOpenReviewSummary = useCallback(() => {
         const actionFn = () => {
             setIsReviewSummaryVisible(true);
             setCurrentQuestionIndexBeforeReview(latestStateRef.current.currentQuestionIndex);
         };
         executeWithDelay(actionFn);
-    }, [executeWithDelay, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
-    
+    }, [executeWithDelay]);
     const handleCloseReviewSummary = useCallback(() => {
         const actionFn = () => {
             setIsReviewSummaryVisible(false);
         };
         executeWithDelay(actionFn, false);
     }, [executeWithDelay]);
-
     const handleJumpToQuestion = useCallback((index, fromSummaryTable = false) => {
         const actionFn = () => {
             const { allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers, currentQuestionIndex: cqIdx } = latestStateRef.current;
@@ -466,8 +458,7 @@ const { isSidebarEffectivelyPinned } = layout;
         } else {
             executeWithDelay(actionFn);
         }
-    }, [executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible]);
-
+    }, [executeWithDelay]);
     const handlePracticeTestOptionsClose = useCallback(() => {
         setIsPracticeOptionsModalOpen(false);
         if (!hasPracticeTestStarted) {
@@ -475,15 +466,11 @@ const { isSidebarEffectivelyPinned } = layout;
             navigate(`/app/topic/${topicId}`);
         }
     }, [navigate, topicId, hasPracticeTestStarted]);
-
-    // This now correctly depends on quizMetadata from state, which is fine
-    // because this is only called on a user interaction (clicking start).
-const handleStartPracticeTest = useCallback((settings) => {
+    const handleStartPracticeTest = useCallback((settings) => {
         setPracticeTestSettings(settings);
         setIsPracticeOptionsModalOpen(false);
-
         if (isPreviewMode) {
-            const duration = 180 * 60; // 180 minutes for preview
+            const duration = 180 * 60;
             setTimerValue(duration);
             setInitialDuration(duration);
             setIsCountdown(true);
@@ -491,12 +478,8 @@ const handleStartPracticeTest = useCallback((settings) => {
             setHasPracticeTestStarted(true);
             return;
         }
-        
-        // This is the original logic for registered users
         initializeNewQuizState(settings);
     }, [initializeNewQuizState, isPreviewMode]);
-
-    // --- All remaining functions and the final JSX render block are unchanged. ---
     useEffect(() => {
         if (allQuizQuestions && allQuizQuestions.length > 0 && currentQuestionIndex >= 0 && currentQuestionIndex < allQuizQuestions.length) {
             const currentQData = allQuizQuestions[currentQuestionIndex];
@@ -514,7 +497,7 @@ const handleStartPracticeTest = useCallback((settings) => {
         } else {
             setPassageHtml(null);
         }
-    }, [currentQuestionIndex, allQuizQuestions]);
+    }, [currentQuestionIndex, allQuizQuestions, passageHtml]);
     const updateHighlightedContent = useCallback((element) => {
         if (element && element.dataset && element.dataset.contentKey) {
             const key = element.dataset.contentKey;
@@ -702,7 +685,7 @@ const handleStartPracticeTest = useCallback((settings) => {
             });
             setShowExplanation(prevExp => ({ ...prevExp, [qIndex]: !tempReveal[qIndex] }));
         }
-    }, [allQuizQuestions, setUserTimeSpent, setShowExplanation]);
+    }, [allQuizQuestions]);
     useEffect(() => {
         const handleKeyPress = (event) => {
             const isChemistryQuiz = topicId === 'chemistry';
@@ -809,13 +792,10 @@ const handleStartPracticeTest = useCallback((settings) => {
         executeWithDelay(actionFn, true);
     }, [executeWithDelay]);
     const handleSubmitAndNavigate = useCallback(() => {
-        // --- THIS IS THE CORE PREVIEW LOGIC ---
         if (isPreviewMode && !currentUser && currentQuestionIndex === 1) {
             setIsRegistrationModalOpen(true);
-            return; // Stop execution here for preview users
+            return;
         }
-        // --- END PREVIEW LOGIC ---
-
         const actionFn = () => {
             const { currentQuestionIndex: cqIdx, allQuizQuestionsLength: aqLength, tempReveal: lTempReveal, isReviewMode: lIsReviewMode, sectionType: lSectionType, submittedAnswers: lSubmittedAnswers } = latestStateRef.current;
             if (latestStateRef.current.isExhibitVisible) {
@@ -857,10 +837,11 @@ const handleStartPracticeTest = useCallback((settings) => {
         } else {
             executeWithDelay(actionFn);
         }
-    }, [isPreviewMode, currentUser, currentQuestionIndex, allQuizQuestions, submitAnswerForIndex, executeWithDelay, setCurrentQuestionIndex, setTempReveal, setShowExplanation, setIsReviewSummaryVisible, setCurrentQuestionIndexBeforeReview]);
+    }, [isPreviewMode, currentUser, currentQuestionIndex, allQuizQuestions, submitAnswerForIndex, executeWithDelay]);
     const triggerFinishQuiz = useCallback(() => {
         executeWithDelay(() => handleFinishQuizRef.current(false));
     }, [executeWithDelay]);
+
     const quizPageContainerActiveStyle = {
         marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
         width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
@@ -877,18 +858,38 @@ const handleStartPracticeTest = useCallback((settings) => {
             {isCountdown && initialDuration > 0 && <span className="timer-total"> / {formatTime(initialDuration)}</span>}
         </>
     );
-    if (isLoading) { return <div className="page-loading">Loading Quiz from Cloud...</div>; }
-    if (error) { return (<div className="page-error"> Error: {error} <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>); }
-        if (isPracticeOptionsModalOpen && (sectionType === 'practice' || isPreviewMode) && !isReviewMode) {
-        if (!quizMetadata) { return <div className="page-loading">Preparing Test Options... (Waiting for metadata)</div>; }
-        
-        // Determine the base time. Use preview-specific time if in preview mode.
+
+    // --- RENDER LOGIC ---
+    if (isLoading) { return <div className="page-loading">Loading Quiz...</div>; }
+    
+    // --- UPDATED RENDER LOGIC FOR ACCESS DENIED ---
+    // The access denied message now renders *inside* the main container, but it will
+    // take up all the available space due to the new CSS.
+    if (accessDenied || error) {
+        return (
+            <div className="quiz-page-container" style={quizPageContainerActiveStyle}>
+                {accessDenied ? (
+                    <div className="access-denied-container">
+                        <div className="access-denied-icon"><FaCrown /></div>
+                        <h2 className="access-denied-title">Upgrade Required</h2>
+                        <p className="access-denied-message">
+                            This content is exclusive to our Edge Plus and Edge Pro members. Upgrade your plan to unlock all practice tests and question banks.
+                        </p>
+                        <Link to="/plans" className="access-denied-button">View Plans</Link>
+                    </div>
+                ) : (
+                    <div className="page-error"> Error: {error} <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>
+                )}
+            </div>
+        );
+    }
+    
+    if (isPracticeOptionsModalOpen && (sectionType === 'practice' || isPreviewMode) && !isReviewMode) {
+        if (!quizMetadata) { return <div className="page-loading">Preparing Test Options...</div>; }
         const baseTimeMinutes = isPreviewMode 
             ? quizMetadata.baseTimeLimitMinutes 
             : Math.floor((PRACTICE_TEST_DURATIONS[quizMetadata.topicName?.toLowerCase().replace(/\s+/g, '-')] || PRACTICE_TEST_DURATIONS.default) / 60);
-
         const totalQuestions = isPreviewMode ? quizMetadata.totalQuestions : (allQuizQuestions.filter(q => q && !q.error).length);
-
         return (<PracticeTestOptions 
             isOpen={isPracticeOptionsModalOpen} 
             onClose={isPreviewMode ? () => navigate('/') : handlePracticeTestOptionsClose} 
@@ -900,9 +901,11 @@ const handleStartPracticeTest = useCallback((settings) => {
         />);
     }
     if (sectionType === 'practice' && !hasPracticeTestStarted && !isPracticeOptionsModalOpen && !isReviewMode) { return <div className="page-loading">Preparing Practice Test...</div>; }
-    if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { return <div className="page-info"> No questions found for this quiz. Please check data files. <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
+    if ((hasPracticeTestStarted || isReviewMode) && (!allQuizQuestions || allQuizQuestions.length === 0)) { return <div className="page-info"> No questions found for this quiz. <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
+    
     const currentQuestionData = allQuizQuestions[currentQuestionIndex];
     if (!isReviewSummaryVisible && (hasPracticeTestStarted || isReviewMode) && !currentQuestionData && allQuizQuestions.length > 0) { return <div className="page-error">Error: Could not load current question data. <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button> </div>; }
+    
     const passageContentKey = passageHtml && currentQuestionData ? `passage_${currentQuestionData.category}` : null;
     const isPracticeTestActive = sectionType === 'practice' && !isReviewMode && hasPracticeTestStarted;
     const cardIsSubmittedState = (isPracticeTestActive && !!submittedAnswers[currentQuestionIndex]) || (!isPracticeTestActive && (!!submittedAnswers[currentQuestionIndex] || isReviewMode || !!tempReveal[currentQuestionIndex]));
@@ -913,19 +916,11 @@ const handleStartPracticeTest = useCallback((settings) => {
     const currentIsMarkedForCard = !!markedQuestions[currentQuestionIndex];
     const isCurrentQuestionError = !!(currentQuestionData && currentQuestionData.error);
     const totalQuestionsForDisplay = isPreviewMode ? allQuizQuestions.length : (quizMetadata?.totalQuestions || allQuizQuestions.length);
+
     return (
         <div className={`quiz-page-container ${isPreviewMode ? 'preview-mode' : ''}`} ref={quizPageContainerRef} onClick={handleContainerClick} style={quizPageContainerActiveStyle}>
-
-            <RegistrationPromptModal
-                isOpen={isRegistrationModalOpen}
-                onClose={() => setIsRegistrationModalOpen(false)}
-            />
-            {topicId === 'chemistry' && (
-                <Exhibit
-                    isVisible={isExhibitVisible}
-                    onClose={toggleExhibit}
-                />
-            )}
+            <RegistrationPromptModal isOpen={isRegistrationModalOpen} onClose={() => setIsRegistrationModalOpen(false)} />
+            {topicId === 'chemistry' && (<Exhibit isVisible={isExhibitVisible} onClose={toggleExhibit} />)}
             <button ref={highlightButtonRef} className="highlight-popup-button" style={{ display: 'none' }} onClick={toggleHighlight} onMouseDown={(e) => e.preventDefault()}> Highlight </button>
             {isReviewSummaryVisible ? (
                 <QuizReviewSummary
@@ -999,13 +994,12 @@ const handleStartPracticeTest = useCallback((settings) => {
                         </div>
                     )}
                     <div className="quiz-navigation" style={sharedFixedFooterStyle}>
-    <div className="nav-group-left">
-        <button onClick={handlePrevious} disabled={!hasPracticeTestStarted || currentQuestionIndex === 0} className="nav-button prev-button"> Previous </button>
-        {/* Hide Solution button in preview */}
-        {sectionType === 'qbank' && !isReviewMode && !isPreviewMode && !isCurrentQuestionError && hasPracticeTestStarted && (
-            <button onClick={toggleSolutionReveal} className="nav-button solution-toggle-button-bottom"> {tempReveal[currentQuestionIndex] ? "Hide Solution" : "'S' Solution"} </button>
-        )}
-    </div>
+                        <div className="nav-group-left">
+                            <button onClick={handlePrevious} disabled={!hasPracticeTestStarted || currentQuestionIndex === 0} className="nav-button prev-button"> Previous </button>
+                            {sectionType === 'qbank' && !isReviewMode && !isPreviewMode && !isCurrentQuestionError && hasPracticeTestStarted && (
+                                <button onClick={toggleSolutionReveal} className="nav-button solution-toggle-button-bottom"> {tempReveal[currentQuestionIndex] ? "Hide Solution" : "'S' Solution"} </button>
+                            )}
+                        </div>
                         <div className="nav-group-center">
                             {isReviewMode && isLastQuestion ? (
                                 <button onClick={triggerFinishQuiz} className="nav-button submit-quiz-button" disabled={!hasPracticeTestStarted}>
@@ -1017,27 +1011,26 @@ const handleStartPracticeTest = useCallback((settings) => {
                                 </button>
                             )}
                         </div>
-    <div className="nav-group-right">
-        {/* Hide right-side controls in preview */}
-        {!isReviewMode && !isPreviewMode && hasPracticeTestStarted && (
-            <>
-                {!isCurrentQuestionError && (
-                    <button onClick={() => handleToggleMark(currentQuestionIndex)} className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`} title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}>
-                        {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
-                    </button>
-                )}
-                {topicId === 'chemistry' && (
-                    <button onClick={() => executeWithDelay(toggleExhibit, true)} className="nav-button exhibit-button">
-                        Exhibit
-                    </button>
-                )}
-                <button onClick={handleOpenReviewSummary} className="nav-button review-button-bottom">
-                    Review
-                </button>
-            </>
-        )}
-    </div>
-</div>
+                        <div className="nav-group-right">
+                            {!isReviewMode && !isPreviewMode && hasPracticeTestStarted && (
+                                <>
+                                    {!isCurrentQuestionError && (
+                                        <button onClick={() => handleToggleMark(currentQuestionIndex)} className={`mark-button-nav ${currentIsMarkedForCard ? 'marked' : ''}`} title={currentIsMarkedForCard ? "Unmark this question" : "Mark for review"}>
+                                            {currentIsMarkedForCard ? '🚩 Unmark' : '🏳️ Mark'}
+                                        </button>
+                                    )}
+                                    {topicId === 'chemistry' && (
+                                        <button onClick={() => executeWithDelay(toggleExhibit, true)} className="nav-button exhibit-button">
+                                            Exhibit
+                                        </button>
+                                    )}
+                                    <button onClick={handleOpenReviewSummary} className="nav-button review-button-bottom">
+                                        Review
+                                    </button>
+                                </>
+                            )}
+                        </div>
+                    </div>
                 </>
             )}
         </div>
