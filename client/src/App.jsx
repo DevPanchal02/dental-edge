@@ -1,6 +1,6 @@
 // FILE: client/src/App.jsx
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import TopicPage from './pages/TopicPage';
@@ -11,38 +11,20 @@ import RegisterPage from './pages/RegisterPage';
 import LandingPage from './pages/LandingPage';
 import PlansPage from './pages/PlansPage';
 import ContactPage from './pages/ContactPage.jsx';
-import { fetchTopics } from './services/loader.js';
+// We no longer need fetchTopics here
 import { useAuth } from './context/AuthContext'; 
 
 function App() {
-  const [firstTopicId, setFirstTopicId] = useState(null);
-  const [loadingTopics, setLoadingTopics] = useState(true);
   const location = useLocation();
-  const { currentUser } = useAuth();
+  const { currentUser, loading } = useAuth();
 
-  useEffect(() => {
-    const getFirstTopic = async () => {
-      setLoadingTopics(true);
-      try {
-        const topics = await fetchTopics();
-        if (topics && topics.length > 0) {
-          setFirstTopicId(topics[0].id);
-        }
-      } catch (error) {
-        console.error("Error fetching initial topics in App.jsx:", error);
-        setFirstTopicId('no-topics');
-      } finally {
-        setLoadingTopics(false);
-      }
-    };
-    if (currentUser) {
-      getFirstTopic();
-    } else {
-      setLoadingTopics(false);
-    }
-  }, [currentUser]);
-
-  if (loadingTopics && currentUser) {
+  // --- THIS IS THE FIX ---
+  // We no longer need to fetch topics here. We will redirect to a default
+  // topic, and the Layout component will handle fetching the data.
+  // This avoids the "cold start storm" by separating navigation from data loading.
+  
+  // Show a loading screen while Firebase Auth is initializing
+  if (loading) {
     return <div className="page-loading">Initializing Application...</div>;
   }
 
@@ -55,24 +37,25 @@ function App() {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/plans" element={<PlansPage />} />
 
-      {/* --- NEW: Public Preview Route for Unregistered Users --- */}
-      {/* This route renders QuizPage directly, without the protected Layout */}
       <Route
         path="/preview/quiz/:topicId/:sectionType/:quizId"
         element={<QuizPage key={location.pathname} isPreviewMode={true} />}
       />
 
       {/* --- Protected Application Routes --- */}
-      {/* All routes within here require a logged-in user */}
       <Route path="/app" element={currentUser ? <Layout /> : <Navigate to="/login" />}>
-        <Route index element={firstTopicId ? <Navigate to={`/app/topic/${firstTopicId}`} replace /> : <div>Loading...</div>} />
+        {/*
+          Redirect to the first known topic by default. The Layout will handle
+          the actual data fetching. If 'biology' doesn't exist, the user
+          will still see the sidebar and can choose another topic.
+        */}
+        <Route index element={<Navigate to="/app/topic/biology" replace />} />
         <Route path="topic/:topicId" element={<TopicPage />} />
         <Route
             path="quiz/:topicId/:sectionType/:quizId"
             element={<QuizPage key={location.pathname} />}
         />
         <Route path="results/:topicId/:sectionType/:quizId" element={<ResultsPage />} />
-        <Route path="topic/no-topics" element={<div className="page-info">No topics found. Check backend function logs.</div>} />
       </Route>
     </Routes>
   );

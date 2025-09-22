@@ -1,4 +1,5 @@
 // FILE: client/src/components/Layout.jsx
+
 import React, { useState, useEffect } from 'react';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
@@ -13,11 +14,8 @@ function Layout() {
   const { topicId: currentUrlTopicId } = useParams();
   const location = useLocation();
 
-  // --- FIX: Set initial state to pinned, but do not reset it on navigation ---
   const [sidebarPinned, setSidebarPinned] = useState(true);
   const [sidebarHovered, setSidebarHovered] = useState(false);
-
-  // --- REMOVED: The faulty useEffect that was resetting the pin state ---
 
   const isContentPage = location.pathname.includes('/quiz/') || location.pathname.includes('/topic/');
   const actualSidebarIsOpen = sidebarPinned || (isContentPage && sidebarHovered);
@@ -43,6 +41,9 @@ function Layout() {
     }
   };
 
+  // --- THIS IS THE FIX ---
+  // This useEffect will run ONLY ONCE when the Layout component mounts.
+  // It will fetch the topics and store them in its state.
   useEffect(() => {
     const loadTopics = async () => {
       setIsLoading(true);
@@ -50,21 +51,26 @@ function Layout() {
       try {
         const fetchedTopics = await fetchTopics();
         setTopics(fetchedTopics);
-        if (fetchedTopics.length === 0) {
-            setError("No topics could be loaded.");
+        if (!fetchedTopics || fetchedTopics.length === 0) {
+            setError("No topics could be loaded from the server.");
         }
       } catch (err) {
-        console.error("Error fetching topics:", err);
-        setError("Could not load topics.");
+        console.error("Error fetching topics in Layout.jsx:", err);
+        setError("Could not load topics. Please check the network connection and function logs.");
       } finally {
         setIsLoading(false);
       }
     };
     loadTopics();
-  }, []);
+  }, []); // The empty dependency array [] ensures this runs only once.
 
   if (isLoading) {
     return <div className="page-loading">Loading Application...</div>;
+  }
+  
+  // If there's an error, we show it and stop rendering the rest of the app.
+  if (error) {
+    return <div className="page-error">{error}</div>;
   }
 
   return (
@@ -77,7 +83,7 @@ function Layout() {
           ></div>
         )}
         <Sidebar
-          topics={topics}
+          topics={topics} // Pass the fetched topics down to the Sidebar
           activeTopicId={currentUrlTopicId}
           isOpen={actualSidebarIsOpen}
           isPinned={sidebarPinned}
@@ -87,7 +93,7 @@ function Layout() {
           isContentPage={isContentPage}
         />
         <main className="main-content">
-           {error ? <div className="page-error">{error}</div> : <Outlet />}
+           <Outlet context={{ topics }} />
         </main>
       </div>
     </LayoutContext.Provider>
