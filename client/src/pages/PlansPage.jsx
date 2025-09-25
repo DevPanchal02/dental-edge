@@ -5,15 +5,13 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FaCheck } from 'react-icons/fa';
 import '../styles/PlansPage.css';
-
-// --- NEW IMPORTS ---
 import { loadStripe } from '@stripe/stripe-js';
 import { createCheckoutSession } from '../services/api';
 
-// --- NEW: Load Stripe with your publishable key from the .env file ---
 // This must be outside the component to avoid being reloaded on every render.
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
 
+// The data for our pricing plans, now with the updated Pro description.
 const plansData = [
   {
     tierId: 'free',
@@ -25,7 +23,6 @@ const plansData = [
       'Access to first question bank per topic',
       'Limited quiz history',
     ],
-
   },
   {
     tierId: 'plus',
@@ -43,9 +40,9 @@ const plansData = [
     tierId: 'pro',
     name: 'Edge Pro',
     price: '19.99',
-    description: 'Full access to the best of Dental Edge',
+    description: 'The ultimate DAT toolkit for top performers.', // Using your new description
     features: [
-      'Everything in Plus, plus:',
+      'All features from Edge Plus, plus:', // Updated for clarity
       'Full-length mock exams (Coming Soon)',
       'DAT Simulator mode (Coming Soon)',
       'Priority support',
@@ -53,6 +50,7 @@ const plansData = [
   },
 ];
 
+// A simple map to compare tier levels.
 const tierLevels = {
   free: 0,
   plus: 1,
@@ -65,7 +63,6 @@ function PlansPage() {
   const { currentUser, userProfile } = useAuth();
   const userTier = userProfile?.tier || 'free';
 
-  // --- NEW: State to handle loading and errors ---
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -77,11 +74,10 @@ function PlansPage() {
     }
   };
 
-  // --- NEW: This function handles the entire checkout process ---
-  const handleCheckout = async (planTierId) => {
-    // For now, we only allow purchasing the 'plus' plan
-    if (planTierId !== 'plus') {
-        alert("Only the Edge Plus plan is available for purchase at this time.");
+  // This function handles the entire checkout process for any paid tier.
+  const handleCheckout = async (tierId) => {
+    if (tierId !== 'plus' && tierId !== 'pro') {
+        alert("This plan is not available for purchase at this time.");
         return;
     }
     
@@ -89,46 +85,37 @@ function PlansPage() {
     setError('');
 
     try {
-      // 1. Call our backend to create a checkout session
-      const sessionId = await createCheckoutSession();
-
-      // 2. Get an instance of Stripe.js
+      // Pass the selected tierId to the backend function.
+      const sessionId = await createCheckoutSession(tierId);
       const stripe = await stripePromise;
-
-      // 3. Redirect the user to Stripe's hosted checkout page
       const { error } = await stripe.redirectToCheckout({ sessionId });
 
       if (error) {
-        // This error is usually a client-side issue (e.g., network error)
         console.error("Stripe redirection error:", error);
         setError("Could not redirect to payment page. Please try again.");
       }
     } catch (err) {
-      // This error comes from our backend function failing
       console.error("Backend checkout error:", err);
       setError("An error occurred on our server. Please try again later.");
     } finally {
-      // This part might not be reached if redirection is successful,
-      // but it's good practice for handling errors.
       setIsLoading(false);
     }
   };
 
-
-  const getButtonState = (planTier) => {
-    const planLevel = tierLevels[planTier];
+  // Determines the text, state, and action for each plan's button.
+  const getButtonState = (plan) => {
+    const planLevel = tierLevels[plan.tierId];
     const userLevel = tierLevels[userTier];
 
-    // Handle the state for a user who is NOT logged in.
+    // Logic for a user who is NOT logged in.
     if (!currentUser) {
-      if (planTier === 'free') {
+      if (plan.tierId === 'free') {
         return { text: 'Get Started', disabled: isLoading, action: () => navigate('/register') };
       }
-      const planName = plansData.find(p => p.tierId === planTier)?.name || '';
-      return { text: `Get ${planName.replace('Edge ', '')}`, disabled: isLoading, action: () => navigate('/register') };
+      return { text: `Get ${plan.name.replace('Edge ', '')}`, disabled: isLoading, action: () => navigate('/register') };
     }
 
-    // Logic for a LOGGED-IN user
+    // Logic for a LOGGED-IN user.
     if (planLevel < userLevel) {
       return { text: 'Included', disabled: true, action: null };
     }
@@ -136,14 +123,11 @@ function PlansPage() {
       return { text: 'Your Current Plan', disabled: true, action: null };
     }
     
-    // Otherwise, it's an upgrade option for a logged-in user.
-    const planName = plansData.find(p => p.tierId === planTier)?.name || '';
-    
-    // --- UPDATE: The action now calls our new handleCheckout function ---
+    // The action now calls handleCheckout with the specific plan's tierId.
     return { 
-        text: isLoading ? 'Processing...' : `Get ${planName.replace('Edge ', '')}`, 
+        text: isLoading ? 'Processing...' : `Get ${plan.name.replace('Edge ', '')}`, 
         disabled: isLoading, 
-        action: () => handleCheckout(planTier) 
+        action: () => handleCheckout(plan.tierId) 
     };
   };
 
@@ -153,13 +137,12 @@ function PlansPage() {
 
       <div className="plans-header">
         <h1 className="plans-title">Upgrade your plan</h1>
-        {/* --- NEW: Display error messages --- */}
         {error && <p className="plans-error-message">{error}</p>}
       </div>
 
       <div className="plans-grid">
         {plansData.map((plan) => {
-          const buttonState = getButtonState(plan.tierId);
+          const buttonState = getButtonState(plan);
           const isHighlighted = 
             (userTier === 'free' && plan.tierId === 'plus') ||
             (userTier === 'plus' && plan.tierId === 'pro') ||

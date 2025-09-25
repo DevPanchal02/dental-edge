@@ -123,7 +123,7 @@
 
 .upm-upgrade-button {
     width: 100%;
-    max-width: 300px; /* Match width of feature list */
+    max-width: 300px;
     margin: 0 auto;
     background-color: var(--bg-button-primary);
     color: var(--text-on-button-primary);
@@ -134,6 +134,9 @@
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .upm-upgrade-button:hover {

@@ -10,7 +10,8 @@ const stripe = require("stripe");
 
 // --- Secret Management ---
 const stripeSecretKey = defineSecret("STRIPE_SECRET_KEY");
-const stripePriceId = defineSecret("STRIPE_PRICE_ID");
+const stripePlusPriceId = defineSecret("STRIPE_PRICE_ID");
+const stripeProPriceId = defineSecret("STRIPE_PRO_PRICE_ID");
 const stripeWebhookSecret = defineSecret("STRIPE_WEBHOOK_SECRET");
 
 // --- Initialization ---
@@ -18,7 +19,7 @@ admin.initializeApp();
 const db = admin.firestore();
 const bucket = admin.storage().bucket();
 
-// --- Helper Functions (Full Implementation) ---
+// --- Helper Functions ---
 const formatDisplayName = (rawName) => {
   if (!rawName) return "";
   return rawName.replace(/[-_]/g, " ").replace(/\.json$/i, "").replace(/^\d+\s*/, "").trim().replace(/\b\w/g, (char) => char.toUpperCase());
@@ -57,8 +58,7 @@ exports.createUserDocument = functionsV1.auth.user().onCreate((user) => {
 });
 
 
-// --- v2 Public Data Functions (Corrected with CORS Wrappers) ---
-
+// --- v2 Public Data Functions ---
 exports.getTopics = onRequest(async (request, response) => {
   cors(request, response, async () => {
     logger.info("getTopics function triggered.");
@@ -106,27 +106,14 @@ exports.getTopicStructure = onRequest(async (request, response) => {
         const match = fileNameWithExt.toLowerCase().match(/test_(\d+)/);
         const num = match ? parseInt(match[1], 10) : sortOrder;
         const quizId = `test-${num}`;
-        topicStructure.practiceTests.push({
-          id: quizId,
-          name: `Test ${num}`,
-          storagePath: file.name,
-          _sortOrder: sortOrder,
-          topicName: formatDisplayName(topicId),
-        });
+        topicStructure.practiceTests.push({ id: quizId, name: `Test ${num}`, storagePath: file.name, _sortOrder: sortOrder, topicName: formatDisplayName(topicId) });
       } else if (sectionTypeFolder === "question-bank") {
         const quizId = formatId(fileNameWithExt);
-        const category = (parts.length > 4) ?
-          formatDisplayName(parts[3]) : formatDisplayName(topicId);
+        const category = (parts.length > 4) ? formatDisplayName(parts[3]) : formatDisplayName(topicId);
         if (!topicStructure.questionBanks[category]) {
           topicStructure.questionBanks[category] = [];
         }
-        topicStructure.questionBanks[category].push({
-          id: quizId,
-          name: formatDisplayName(fileNameWithExt),
-          storagePath: file.name,
-          _sortOrder: sortOrder,
-          qbCategory: category,
-        });
+        topicStructure.questionBanks[category].push({ id: quizId, name: formatDisplayName(fileNameWithExt), storagePath: file.name, _sortOrder: sortOrder, qbCategory: category });
       }
     }
     topicStructure.practiceTests.sort((a, b) => a._sortOrder - b._sortOrder);
@@ -136,14 +123,8 @@ exports.getTopicStructure = onRequest(async (request, response) => {
       topicStructure.questionBanks[category].sort((a, b) => a._sortOrder - b._sortOrder);
       sortedQuestionBanks[category] = topicStructure.questionBanks[category];
     }
-    const banksArray = Object.entries(sortedQuestionBanks).map(([category, banks]) => ({
-      category,
-      banks: banks.map((b) => ({ ...b, sectionType: "qbank" })),
-    }));
-    topicStructure.practiceTests = topicStructure.practiceTests.map((pt) => ({
-      ...pt,
-      sectionType: "practice",
-    }));
+    const banksArray = Object.entries(sortedQuestionBanks).map(([category, banks]) => ({ category, banks: banks.map((b) => ({ ...b, sectionType: "qbank" })) }));
+    topicStructure.practiceTests = topicStructure.practiceTests.map((pt) => ({ ...pt, sectionType: "practice" }));
     topicStructure.questionBanks = banksArray;
     response.status(200).json(topicStructure);
   });
@@ -203,78 +184,117 @@ exports.getQuizData = onRequest(async (request, response) => {
   });
 });
 
+
 // --- v2 STRIPE PAYMENT FUNCTIONS ---
-exports.createCheckoutSession = onCall({ secrets: [stripeSecretKey, stripePriceId], cors: true }, async (request) => {
-  if (!request.auth) {
-    logger.error("createCheckoutSession call is not authenticated.");
-    throw new HttpsError("unauthenticated", "You must be logged in to make a purchase.");
-  }
-  const uid = request.auth.uid;
-  try {
-    const userDoc = await db.collection("users").doc(uid).get();
-    if (!userDoc.exists) {
-      logger.error(`User document not found for authenticated user: ${uid}`);
-      throw new HttpsError("not-found", "User document not found.");
+exports.createCheckoutSession = onCall(
+  { secrets: [stripeSecretKey, stripePlusPriceId, stripeProPriceId], cors: true },
+  async (request) => {
+    if (!request.auth) {
+      throw new HttpsError("unauthenticated", "You must be logged in to make a purchase.");
     }
-    const stripeInstance = new stripe(stripeSecretKey.value());
-    const price = stripePriceId.value();
-    const liveAppUrl = "https://dental-edge-62624.web.app";
-    logger.info(`Creating checkout session for user: ${uid} for price: ${price}`);
-    const session = await stripeInstance.checkout.sessions.create({
-      payment_method_types: ["card"],
-      mode: "subscription",
-      success_url: `${liveAppUrl}/app?checkout=success`,
-      cancel_url: `${liveAppUrl}/plans?checkout=cancel`,
-      billing_address_collection: "required",
-      line_items: [{ price, quantity: 1 }],
-      metadata: { firebaseUID: uid },
-    });
-    return { id: session.id };
-  } catch (error) {
-    logger.error(`Stripe checkout session creation failed for user ${uid}:`, error);
-    throw new HttpsError("internal", "An error occurred while creating the checkout session.");
-  }
-});
+    const uid = request.auth.uid;
+    const tierId = request.data.tierId;
 
-exports.stripeWebhook = onRequest({ secrets: [stripeWebhookSecret] }, async (request, response) => {
-  let event;
-  try {
-    // 1. Verify the event came from Stripe using the webhook secret
-    event = stripe.webhooks.constructEvent(
-      request.rawBody,
-      request.headers["stripe-signature"],
-      stripeWebhookSecret.value()
-    );
-  } catch (err) {
-    logger.error("Webhook signature verification failed.", err);
-    return response.status(400).send(`Webhook Error: ${err.message}`);
-  }
+    if (!tierId) {
+      throw new HttpsError("invalid-argument", "The function must be called with a 'tierId' argument.");
+    }
 
-  // 2. Handle the specific event type
-  if (event.type === "checkout.session.completed") {
-    const session = event.data.object;
-    const firebaseUID = session.metadata.firebaseUID;
-    const stripeCustomerId = session.customer;
-
-    if (!firebaseUID) {
-      logger.error("Webhook received 'checkout.session.completed' with no firebaseUID in metadata.", { session_id: session.id });
-    } else {
-      logger.info(`Processing successful checkout for user: ${firebaseUID}`);
-      const userRef = db.collection("users").doc(firebaseUID);
-      try {
-        await userRef.update({
-          tier: "plus",
-          stripeCustomerId: stripeCustomerId,
-        });
-        logger.info(`Successfully updated user ${firebaseUID} to 'plus' tier.`);
-      } catch (err) {
-        logger.error(`Failed to update user ${firebaseUID} in Firestore.`, err);
+    try {
+      const userDoc = await db.collection("users").doc(uid).get();
+      if (!userDoc.exists) {
+        throw new HttpsError("not-found", "User document not found.");
       }
-    }
-  } else {
-    logger.info(`Unhandled Stripe event type: ${event.type}`);
-  }
 
-  // 3. Acknowledge receipt of the event to Stripe
-  response.status(200).send();
-});
+      const stripeInstance = new stripe(stripeSecretKey.value());
+      
+      let priceId;
+      if (tierId === 'plus') {
+        priceId = stripePlusPriceId.value();
+      } else if (tierId === 'pro') {
+        priceId = stripeProPriceId.value();
+      } else {
+        throw new HttpsError("invalid-argument", `Invalid tierId provided: ${tierId}`);
+      }
+
+      const liveAppUrl = "https://dental-edge-62624.web.app";
+      logger.info(`Creating checkout for user: ${uid}, tier: ${tierId}, price: ${priceId}`);
+      
+      const session = await stripeInstance.checkout.sessions.create({
+        payment_method_types: ["card"],
+        mode: "subscription",
+        success_url: `${liveAppUrl}/app?checkout=success`,
+        cancel_url: `${liveAppUrl}/plans?checkout=cancel`,
+        billing_address_collection: "required",
+        // --- THIS IS THE FIX: Tax is now disabled until you are ready to configure it. ---
+        // automatic_tax: { enabled: true },
+        line_items: [
+          {
+            price: priceId,
+            quantity: 1,
+          },
+        ],
+        metadata: { firebaseUID: uid },
+      });
+      return { id: session.id };
+
+    } catch (error) {
+      logger.error(`Stripe checkout session creation failed for user ${uid}:`, error);
+      if (error instanceof HttpsError) throw error;
+      throw new HttpsError("internal", "An error occurred while creating the checkout session.");
+    }
+  }
+);
+
+exports.stripeWebhook = onRequest(
+  { secrets: [stripeSecretKey, stripeWebhookSecret, stripePlusPriceId, stripeProPriceId] },
+  async (request, response) => {
+    let event;
+    try {
+      event = stripe.webhooks.constructEvent(
+        request.rawBody,
+        request.headers["stripe-signature"],
+        stripeWebhookSecret.value()
+      );
+    } catch (err) {
+      logger.error("Webhook signature verification failed.", err);
+      return response.status(400).send(`Webhook Error: ${err.message}`);
+    }
+
+    if (event.type === "checkout.session.completed") {
+      const session = event.data.object;
+      const firebaseUID = session.metadata.firebaseUID;
+      const stripeCustomerId = session.customer;
+      
+      const stripeInstance = new stripe(stripeSecretKey.value());
+      const sessionWithLineItems = await stripeInstance.checkout.sessions.retrieve(
+        session.id,
+        { expand: ['line_items'] }
+      );
+      const priceId = sessionWithLineItems.line_items.data[0].price.id;
+
+      let newTier = null;
+      if (priceId === stripePlusPriceId.value()) {
+        newTier = "plus";
+      } else if (priceId === stripeProPriceId.value()) {
+        newTier = "pro";
+      }
+
+      if (!firebaseUID || !newTier) {
+        logger.error("Webhook received with missing firebaseUID or unknown priceId.", { session_id: session.id, price_id: priceId });
+      } else {
+        logger.info(`Processing successful checkout for user: ${firebaseUID} for tier: ${newTier}`);
+        const userRef = db.collection("users").doc(firebaseUID);
+        try {
+          await userRef.update({ tier: newTier, stripeCustomerId });
+          logger.info(`Successfully updated user ${firebaseUID} to '${newTier}' tier.`);
+        } catch (err) {
+          logger.error(`Failed to update user ${firebaseUID} in Firestore.`, err);
+        }
+      }
+    } else {
+      logger.info(`Unhandled Stripe event type: ${event.type}`);
+    }
+
+    response.status(200).send();
+  }
+);
