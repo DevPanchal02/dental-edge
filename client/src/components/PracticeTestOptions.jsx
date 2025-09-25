@@ -54,7 +54,7 @@ function PracticeTestOptions({
                         <CloseIcon />
                     </button>
                     <div className="pto-header-title-group">
-                        <p className="pto-app-name">DATPrep</p>
+                        <p className="pto-app-name">Dental Edge</p>
                         {/* Use fullNameForDisplay for the main title */}
                         <p className="pto-quiz-name">{fullNameForDisplay || 'Practice Test Options'}</p>
                     </div>

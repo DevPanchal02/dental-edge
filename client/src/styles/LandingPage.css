@@ -1,0 +1,241 @@
+/* --- THIS IS THE FIX: New layout for seamless integration --- */
+.landing-page-body {
+    background-color: #030304;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    position: relative;
+}
+
+.three-canvas {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.ui-container {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+/* Re-enable pointer events for all interactive UI elements */
+.landing-nav,
+.landing-button {
+    pointer-events: auto;
+}
+
+/* Universal box-sizing */
+.landing-page-body *::after,
+.landing-page-body *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+/* Animations */
+.headline,
+.para,
+.landing-button {
+    animation: fadeup 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+.para {
+    animation-delay: 0.7s;
+}
+
+.landing-button {
+    animation-delay: 0.9s;
+}
+
+@keyframes fadeup {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+/* Font Styles */
+.Regular-18 {
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+.bold-76 {
+    font-size: 6rem;
+    line-height: 1.1;
+    font-weight: bold;
+    color: #FFFFFF;
+    margin-bottom: 0;
+}
+
+/* Navigation */
+.nav-button {
+    border: 1px solid #FFFFFF;
+    padding: 8px 22px;
+    border-radius: 20px;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+
+.nav-button:hover {
+    background-color: var(--text-accent);
+    border-color: var(--text-accent);
+    color: #FFFFFF;
+}
+
+/* UPDATED Logo styles for image */
+.logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+}
+
+.landing-logo-img {
+    height: 70px; /* Adjust the size of your logo */
+    width: auto;
+    transition: opacity 0.2s ease-in-out;
+    
+}
+
+.logo:hover .landing-logo-img {
+    opacity: 0.9;
+}
+
+
+/* --- FIX: Changed selector from 'nav' to '.landing-nav' --- */
+.landing-nav {
+    height: 100px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3rem;
+    align-items: center;
+}
+
+.navbar {
+    align-items: center;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-menu li {
+    padding: 0 2rem;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--text-accent);
+}
+
+/* Main Layout */
+.container-one {
+    height: calc(100vh - 100px);
+    width: 1600px;
+    max-width: 95%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.landing-page {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+
+.phase-two {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.decp {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    align-self: end;
+    margin-bottom: 10vh;
+    z-index: 2;
+    padding-left: 20%;
+}
+
+.bg-color,
+.bg-color-two {
+    display: none;
+}
+
+.landing-button {
+    margin-top: 42px;
+    padding-top: 18px;
+    border-top: 1px solid #FFFFFF;
+    width: fit-content;
+}
+
+.landing-link {
+    color: #FFFFFF;
+    font-size: 2.0rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.landing-button li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.landing-button:hover a,
+.landing-button:hover .landing-arrow-svg {
+    color: var(--text-accent);
+}
+
+.para {
+    border-left: 1px solid #FFFFFF;
+    padding-left: 15px;
+    color: #CCCCCC;
+    font-size: 1.5rem;
+}
+
+.landing-arrow-svg {
+    width: 2.2rem;
+    height: 2.2rem;
+    color: #FFFFFF;
+    margin-left: 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+.landing-button:hover .landing-arrow-svg {
+    transform: translateX(5px);
+}

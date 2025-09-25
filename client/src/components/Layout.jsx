@@ -1,4 +1,5 @@
 // FILE: client/src/components/Layout.jsx
+
 import React, { useState, useEffect } from 'react';
 import { Outlet, useParams, useLocation } from 'react-router-dom';
 import Sidebar from './Sidebar';
@@ -13,28 +14,12 @@ function Layout() {
   const { topicId: currentUrlTopicId } = useParams();
   const location = useLocation();
 
-  const [sidebarPinned, setSidebarPinned] = useState(false);
+  const [sidebarPinned, setSidebarPinned] = useState(true);
   const [sidebarHovered, setSidebarHovered] = useState(false);
 
-  useEffect(() => {
-    const onQuizPage = location.pathname.startsWith('/quiz/');
-    const onTopicPage = location.pathname.startsWith('/topic/');
-
-    if (onQuizPage) {
-      setSidebarPinned(false); // Default unpinned on quiz pages
-      setSidebarHovered(false);
-    } else if (onTopicPage) {
-      setSidebarPinned(true);  // Default pinned on topic (selection) pages
-      setSidebarHovered(false);
-    } else {
-      setSidebarPinned(false); // Default to unpinned for other general pages
-      setSidebarHovered(false);
-    }
-  }, [location.pathname]);
-
-  const isContentPage = location.pathname.startsWith('/quiz/') || location.pathname.startsWith('/topic/');
+  const isContentPage = location.pathname.includes('/quiz/') || location.pathname.includes('/topic/');
   const actualSidebarIsOpen = sidebarPinned || (isContentPage && sidebarHovered);
-  const isSidebarEffectivelyPinned = sidebarPinned && actualSidebarIsOpen; // True if pinned and thus should affect layout
+  const isSidebarEffectivelyPinned = sidebarPinned && actualSidebarIsOpen;
 
   const handleSidebarMouseEnter = () => {
     if (isContentPage && !sidebarPinned) {
@@ -56,6 +41,9 @@ function Layout() {
     }
   };
 
+  // --- THIS IS THE FIX ---
+  // This useEffect will run ONLY ONCE when the Layout component mounts.
+  // It will fetch the topics and store them in its state.
   useEffect(() => {
     const loadTopics = async () => {
       setIsLoading(true);
@@ -63,21 +51,26 @@ function Layout() {
       try {
         const fetchedTopics = await fetchTopics();
         setTopics(fetchedTopics);
-        if (fetchedTopics.length === 0) {
-            setError("No topics could be loaded.");
+        if (!fetchedTopics || fetchedTopics.length === 0) {
+            setError("No topics could be loaded from the server.");
         }
       } catch (err) {
-        console.error("Error fetching topics:", err);
-        setError("Could not load topics.");
+        console.error("Error fetching topics in Layout.jsx:", err);
+        setError("Could not load topics. Please check the network connection and function logs.");
       } finally {
         setIsLoading(false);
       }
     };
     loadTopics();
-  }, []);
+  }, []); // The empty dependency array [] ensures this runs only once.
 
   if (isLoading) {
     return <div className="page-loading">Loading Application...</div>;
+  }
+  
+  // If there's an error, we show it and stop rendering the rest of the app.
+  if (error) {
+    return <div className="page-error">{error}</div>;
   }
 
   return (
@@ -90,7 +83,7 @@ function Layout() {
           ></div>
         )}
         <Sidebar
-          topics={topics}
+          topics={topics} // Pass the fetched topics down to the Sidebar
           activeTopicId={currentUrlTopicId}
           isOpen={actualSidebarIsOpen}
           isPinned={sidebarPinned}
@@ -99,8 +92,8 @@ function Layout() {
           onPinToggle={toggleSidebarPin}
           isContentPage={isContentPage}
         />
-        <main className="main-content"> {/* main-content no longer gets margin from CSS class */}
-           {error ? <div className="page-error">{error}</div> : <Outlet />}
+        <main className="main-content">
+           <Outlet context={{ topics }} />
         </main>
       </div>
     </LayoutContext.Provider>

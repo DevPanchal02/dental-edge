@@ -1,3 +1,5 @@
+/* FILE: client/src/styles/QuizPage.css */
+
 .quiz-page-container {
   margin: 0 auto; 
   padding: 20px;
@@ -12,16 +14,38 @@
   transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
 }
 
+/* --- NEW HEADER STYLES --- */
 .quiz-header {
-  margin-bottom: 20px; 
-  padding-bottom: 15px;
-  border-bottom: 1px solid var(--border-primary);
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px; 
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-primary);
   min-height: 40px;
+  gap: 15px; /* Add gap for spacing */
 }
+
+.header-left, .header-right {
+  flex: 1; /* Assign equal space */
+  display: flex;
+  align-items: center;
+}
+
+.header-left {
+  justify-content: flex-start;
+}
+
+.header-right {
+  justify-content: flex-end;
+}
+
+.header-center {
+  flex: 2; /* Give title more space if needed, but it will center */
+  text-align: center;
+}
+/* --- END NEW HEADER STYLES --- */
+
 
 .back-button-quiz {
   background: none;
@@ -31,9 +55,16 @@
   font-size: 0.9em;
   padding: 5px 0;
   text-align: left;
+  white-space: nowrap; /* Prevent wrapping */
 }
 .back-button-quiz:hover {
   text-decoration: underline;
+}
+
+.back-button-quiz.icon-button {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between icon and text */
 }
 
 .quiz-title-container {
@@ -52,14 +83,12 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.2;
-  display: inline-block;
 }
 
 .quiz-progress {
   color: var(--text-secondary);
   font-size: 0.9em;
   margin: 0;
-  margin-left: 15px;
   white-space: nowrap;
   text-align: right;
 }
@@ -137,17 +166,16 @@ body.light-mode .passage-content img { background-color: #fff; }
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   position: fixed;
   bottom: 0;
   background-color: var(--bg-secondary);
   padding: 12px 25px;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.12);
-  z-index: 1000; /* Base z-index for quiz nav */
+  z-index: 1000;
   border-top: 1px solid var(--border-primary);
   box-sizing: border-box;
   transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
-  min-height: 70px;
+  min-height: 87px;
 }
 
 
@@ -163,15 +191,15 @@ body.light-mode .passage-content img { background-color: #fff; }
 .nav-group-center { flex-grow: 1; justify-content: center; flex: 1; }
 .nav-group-right { justify-content: flex-end; flex: 1; }
 
-.nav-button, .mark-button-nav {
+.quiz-navigation .nav-button, 
+.quiz-navigation .mark-button-nav {
   padding: 10px 18px; 
   font-size: 0.95em;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   white-space: nowrap;
-  /* margin: 0 6px; -- Replaced by gap on parent */
-  border: 1px solid transparent; 
+  border: 1px solid var(--border-button); 
   min-width: 85px;
   text-align: center;
 }
@@ -236,7 +264,6 @@ body.light-mode .passage-content img { background-color: #fff; }
 .solution-toggle-button-bottom-placeholder {
   min-width: 85px; 
   height: 40px;
-  /* margin: 0 6px; -- Replaced by gap */
   visibility: hidden;
   display: inline-block; 
 }
@@ -263,7 +290,7 @@ body.light-mode .passage-content img { background-color: #fff; }
   padding: 4px 8px;
   border-radius: 4px;
   cursor: pointer;
-  z-index: 1001; /* Above quiz nav if overlapping selection */
+  z-index: 1001;
   font-size: 12px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   transform: translateX(-50%); 
@@ -276,19 +303,75 @@ mark.custom-highlight {
   margin: 0;
 }
 .prometric-transition-overlay {
-  position: fixed; /* Cover the whole viewport */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: var(--bg-primary); /* Use page background to simulate content 'disappearing' then 'reappearing' */
-  /* For a more traditional overlay effect, you could use:
-  /* background-color: rgba(0, 0, 0, 0.3); */
-  /* backdrop-filter: blur(2px); */
+  background-color: var(--bg-primary);
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 10000; /* Ensure it's on top of everything */
-  opacity: 1; /* Start fully visible */
-  pointer-events: none; /* Allow clicks to pass through if needed, though usually not for a full overlay */
+  z-index: 10000;
+  opacity: 1;
+  pointer-events: none;
+}
+/* --- ADD THE FOLLOWING CSS TO THE END OF THE FILE --- */
+
+/* --- NEW: Access Denied Styles --- */
+.access-denied-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  height: calc(100% - 100px); 
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.access-denied-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: color-mix(in srgb, var(--text-accent) 15%, transparent);
+  color: var(--text-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  font-size: 2rem;
+}
+
+.access-denied-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+}
+
+.access-denied-message {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 450px;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.access-denied-button {
+  background-color: var(--bg-button-primary);
+  color: var(--text-on-button-primary);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none; /* For Link component */
+  transition: background-color 0.2s ease;
+}
+
+.access-denied-button:hover {
+  background-color: var(--bg-button-primary-hover);
 }

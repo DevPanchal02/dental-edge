@@ -1,166 +1,326 @@
 /* FILE: client/src/styles/Sidebar.css */
+
+/* General Sidebar Container */
 .sidebar {
-  width: 250px;
+  width: 345px;
   background-color: var(--bg-sidebar);
-  padding: 20px 0px;
-  border-right: 1px solid var(--border-primary);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
   height: 100vh;
-  box-sizing: border-box;
-  position: fixed; 
-  left: 0;
+  position: fixed;
+  z-index: 1050;
   top: 0;
-  z-index: 1050; /* Increased z-index: above quiz-nav (1000) but below modals (2000+) */
-  transform: translateX(-100%); 
+  left: 0;
+  border-right: 1px solid var(--border-primary);
+  flex-shrink: 0;
+  transform: translateX(-100%);
   transition: transform 0.3s ease-in-out;
+  overflow: hidden; 
 }
 
 .sidebar.open {
-  transform: translateX(0); 
+  transform: translateX(0);
 }
 
-
-.sidebar-header {
+/* --- Top Header (Logo + Pin) --- */
+.sidebar-top-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 15px;
-  margin-bottom: 15px;
+  padding: 20px 25px; /* Adjusted padding for new sizes */
   flex-shrink: 0;
 }
 
-.sidebar-title {
-  font-size: 0.8em;
-  color: var(--text-secondary);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin: 0;
+/* UPDATED Logo Link and Image styles */
+.sidebar-logo-link {
+  display: flex;
+  align-items: center;
 }
 
-.pin-toggle-button {
-  background: none;
-  border: 1px solid transparent;
-  color: var(--text-secondary);
+.sidebar-logo-img {
+  height: 55px; /* Increased logo height */
+  width: auto;
+  transition: opacity 0.2s ease;
+}
+
+.sidebar-logo-link:hover .sidebar-logo-img {
+  opacity: 0.85;
+}
+
+
+/* Wrapper for the header action buttons */
+.sidebar-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Increased gap */
+}
+
+/* Grouped styles for both buttons to ensure they are identical */
+.pin-toggle-button,
+.theme-toggle-button {
+  width: 40px;   /* Increased button size */
+  height: 40px;  /* Increased button size */
+  border-radius: 8px; /* Slightly larger radius */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--border-primary);
   cursor: pointer;
-  padding: 5px;
-  border-radius: 4px;
-  line-height: 1;
-  font-size: 1.1em; 
-}
-.pin-toggle-button:hover {
-  color: var(--text-accent);
-  border-color: var(--text-accent);
-  background-color: var(--bg-item-link-hover);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  color: var(--text-secondary);
 }
 
-.sidebar nav {
+.pin-toggle-button:hover,
+.theme-toggle-button:hover {
+  background-color: var(--bg-item-link-hover);
+  color: var(--text-primary);
+}
+
+/* Style the SVG icons within the buttons to be larger */
+.pin-toggle-button svg,
+.theme-toggle-button svg {
+  width: 26px; /* Increased icon size */
+  height: 26px;/* Increased icon size */
+}
+
+/* --- Main Content Area --- */
+.topics-nav {
   flex-grow: 1;
   overflow-y: auto;
-  padding: 0 10px;
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb-bg) var(--bg-sidebar);
+  padding: 15px 25px;
 }
-.sidebar nav::-webkit-scrollbar { width: 6px; }
-.sidebar nav::-webkit-scrollbar-track { background: var(--bg-sidebar); border-radius: 3px;}
-.sidebar nav::-webkit-scrollbar-thumb { background-color: var(--scrollbar-thumb-bg); border-radius: 3px; }
 
-.sidebar nav ul {
+.sidebar-title {
+  font-size: 1.3em;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 15px 0;
+}
+
+.topics-nav ul {
   list-style: none;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  position: relative;
 }
 
-.sidebar nav li {
-  margin-bottom: 5px;
+.topics-nav li {
+  margin-bottom: 0; 
 }
 
 .topic-button {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  padding: 10px 15px;
-  border-radius: 6px;
-  font-size: 0.95em;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  color: var(--text-item-link);
+  display: block;
+  padding: 14px 12px; 
+  color: var(--text-secondary);
   text-decoration: none;
-  box-sizing: border-box;
-  border: 1px solid transparent;
-  background-color: transparent;
+  font-size: 1.2em; 
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 6px;
 }
 
 .topic-button:hover {
   background-color: var(--bg-item-link-hover);
-  color: var(--text-accent);
+  color: var(--text-primary);
 }
 
 .topic-button.active {
-  background-color: var(--bg-button-primary);
-  color: var(--text-on-button-primary);
-  font-weight: 500;
-  border-color: var(--bg-button-primary);
-}
-.topic-button.active:hover {
-  background-color: var(--bg-button-primary-hover);
-  border-color: var(--bg-button-primary-hover);
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
-.topic-arrow {
-  margin-left: auto;
-  color: var(--text-secondary);
-  transition: color 0.2s ease;
+.active-topic-indicator {
+  position: absolute;
+  left: 0;
+  width: 3px;
+  background-color: var(--text-accent);
+  border-radius: 3px;
+  z-index: 2;
+  transition: top 0.35s cubic-bezier(0.65, 0, 0.35, 1), 
+              height 0.35s cubic-bezier(0.65, 0, 0.35, 1),
+              opacity 0.2s ease-in-out;
 }
-.topic-button.active .topic-arrow {
+
+/* --- Footer (User Profile + Upgrade) --- */
+.sidebar-footer {
+  padding: 12px;
+  border-top: 1px solid var(--border-primary);
+  flex-shrink: 0;
+  background-color: var(--bg-sidebar);
+  position: relative;
+}
+
+.sidebar-footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sidebar-footer-content:hover {
+  background-color: var(--bg-item-link-hover);
+}
+
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.profile-picture,
+.profile-initial {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0; /* Prevent image from shrinking */
+}
+
+.profile-picture {
+  object-fit: cover;
+}
+
+.profile-initial {
+  background-color: var(--bg-button-primary);
   color: var(--text-on-button-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+/* --- NEW STYLES START HERE --- */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0; /* Allows text to truncate inside a flex container */
+}
+
+.user-tier {
+  font-size: 0.8em;
+  color: var(--text-secondary);
+  text-transform: capitalize; /* Makes "free" or "plus" look like "Free" or "Plus" */
+  opacity: 0.9;
+}
+/* --- NEW STYLES END HERE --- */
+
+.user-name {
+  font-size: 1.05em;
+  font-weight: 500;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.upgrade-button {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-primary);
+  padding: 9px 20px;
+  border-radius: 999px;
+  font-size: 1.05em;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+
+.upgrade-button:hover {
+  background-color: var(--bg-item-link-hover);
+  border-color: var(--text-secondary);
 }
 
 .no-topics-sidebar {
   color: var(--text-secondary);
-  padding: 10px 15px;
+  font-size: 0.9em;
+  padding: 8px 10px;
   font-style: italic;
 }
 
-.sidebar-actions {
-  margin-top: auto;
-  padding: 15px 10px 10px 10px;
-  border-top: 1px solid var(--border-primary);
-  flex-shrink: 0;
+/* --- UPDATED User Menu Popup Styles --- */
+.user-menu-popup {
+  position: absolute;
+  bottom: calc(100% - 5px); /* Position above the footer with a small gap */
+  left: 12px;
+  right: 12px;
+  background-color: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-primary);
+  z-index: 1100;
+  padding: 8px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  animation: slideUp 0.2s ease-out;
 }
 
-.theme-toggle-button,
-.reset-button {
-  display: block;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Shared styles for all menu items */
+.user-menu-email-section,
+.user-menu-logout-button,
+.user-menu-help-button { /* Added help button to shared styles */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  font-size: 1.05em; /* Increased font size */
+  font-weight: 400; /* Regular font weight */
+  border-radius: 8px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-decoration: none; /* For the Link component */
+}
+
+/* Specific interactive styles */
+.user-menu-logout-button,
+.user-menu-help-button {
   width: 100%;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 0.9em;
-  cursor: pointer;
-  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-  box-sizing: border-box;
-  border: 1px solid var(--border-button);
+  transition: background-color 0.2s ease;
 }
 
-.theme-toggle-button {
-  background-color: var(--bg-button-secondary);
-  color: var(--text-on-button-secondary);
-  border-color: var(--bg-button-secondary);
-}
-.theme-toggle-button:hover {
-  background-color: var(--bg-button-secondary-hover);
-  border-color: var(--bg-button-secondary-hover);
+.user-menu-logout-button:hover,
+.user-menu-help-button:hover {
+  background-color: var(--bg-item-link-hover);
 }
 
-.reset-button {
-  background-color: var(--bg-button-danger);
-  color: var(--text-on-button-danger);
-  border-color: var(--bg-button-danger);
+/* Icon styles */
+.user-menu-email-section svg,
+.user-menu-logout-button svg,
+.user-menu-help-button svg { /* Added help button icon */
+  font-size: 1.2em;
+  color: var(--text-secondary);
+  flex-shrink: 0; /* Prevent icon from shrinking */
 }
-.reset-button:hover {
-  background-color: var(--bg-button-danger-hover);
-  border-color: var(--bg-button-danger-hover);
+
+.user-menu-separator {
+  height: 1px;
+  background-color: var(--border-primary);
+  margin: 4px 8px; /* Vertical and horizontal margin */
+}
+
+/* --- NEW: Rule for light mode logo --- */
+body.light-mode .sidebar-logo-img {
+  filter: invert(1);
 }

@@ -1,0 +1,144 @@
+/* FILE: client/src/styles/UpgradePromptModal.css */
+
+.upm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    animation: upm-fadeIn 0.2s ease-out;
+}
+
+@keyframes upm-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.upm-modal-container {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 480px;
+    padding: 32px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    animation: upm-scaleIn 0.2s ease-out;
+    border: 1px solid var(--border-primary);
+}
+
+@keyframes upm-scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.upm-close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.upm-close-button:hover {
+    color: var(--text-primary);
+}
+
+.upm-modal-header {
+    margin-bottom: 24px;
+}
+
+.upm-icon-container {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: color-mix(in srgb, var(--text-accent) 15%, transparent);
+    color: var(--text-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 1.5rem;
+}
+
+.upm-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+}
+
+.upm-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.upm-modal-body {
+    margin-bottom: 24px;
+}
+
+.upm-features-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto; /* Center the list */
+}
+
+.upm-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.upm-feature-icon {
+    color: var(--text-accent);
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.upm-modal-footer {
+    margin-top: 16px;
+}
+
+.upm-upgrade-button {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: var(--bg-button-primary);
+    color: var(--text-on-button-primary);
+    border: none;
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upm-upgrade-button:hover {
+    background-color: var(--bg-button-primary-hover);
+}

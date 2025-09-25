@@ -1,0 +1,136 @@
+/* FILE: client/src/styles/RegistrationPromptModal.css */
+
+.rpm-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    animation: rpm-fadeIn 0.2s ease-out;
+}
+
+@keyframes rpm-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.rpm-modal-container {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    min-height: 360px;
+    padding: 32px;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    animation: rpm-scaleIn 0.2s ease-out;
+}
+
+@keyframes rpm-scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.rpm-close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s ease;
+}
+
+.rpm-close-button:hover {
+    color: var(--text-primary);
+}
+
+.rpm-modal-header {
+    margin-bottom: 24px;
+    max-width: 89%;
+    margin: auto;
+}
+
+.rpm-logo {
+    height: 50px;
+    width: auto;
+    margin-bottom: 16px;
+}
+
+body.light-mode .rpm-logo {
+  filter: invert(1);
+}
+
+.rpm-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+}
+
+.rpm-subtitle {
+    font-size: 0.95rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10%;
+}
+
+.rpm-modal-body {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    /* --- MODIFICATION START: Define a consistent width for the action area --- */
+    width: 50%; /* Sets a consistent width for this container. */
+    margin: 0 auto; /* Horizontally centers the container itself. */
+    /* --- MODIFICATION END --- */
+}
+
+.rpm-signup-button {
+    /* --- MODIFICATION: The button now takes 100% of its parent's new width --- */
+    width: 100%;
+    background-color: var(--bg-button-primary);
+    color: var(--text-on-button-primary);
+    border: none;
+    padding: 14px 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rpm-signup-button:hover {
+    background-color: var(--bg-button-primary-hover);
+}
+
+.rpm-login-prompt {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    /* This text will now wrap naturally within the 75% width of its parent */
+}
+
+.rpm-login-prompt a {
+    color: var(--text-accent);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.rpm-login-prompt a:hover {
+    text-decoration: underline;
+}

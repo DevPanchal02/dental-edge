@@ -1,0 +1,155 @@
+/* FILE: client/src/styles/ContactPage.css */
+
+.contact-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px;
+  background-color: #030304;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* The corner glow effect - Final update for size and intensity */
+.contact-page-container::after {
+  content: '';
+  position: absolute;
+  width: 1800px; /* Made the element larger */
+  height: 1800px; /* Made the element larger */
+  right: -850px;  /* Repositioned to keep the center in the corner */
+  bottom: -850px; /* Repositioned to keep the center in the corner */
+  /* Brighter center (higher opacity) that fades more quickly for an intense hotspot */
+  background: radial-gradient(circle, rgba(90, 220, 180, 0.5) 0%, transparent 60%);
+  filter: blur(100px);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.close-button-contact {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    z-index: 3;
+}
+
+.close-button-contact:hover {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 0 15px var(--bg-button-primary);
+    text-decoration: none;
+}
+
+.contact-content-wrapper {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 550px;
+}
+
+.contact-header {
+  text-align: left;
+  margin-bottom: 50px;
+}
+
+.contact-title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--bg-button-primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.form-input,
+.form-textarea {
+  background-color: #1E1E1E;
+  border: 1px solid #333333;
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+  opacity: 1;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--bg-button-primary);
+  box-shadow: 0 0 0 2px rgba(87, 142, 126, 0.3);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 180px;
+}
+
+.form-footer {
+  margin-top: 15px;
+  align-self: flex-start;
+}
+
+.submit-button {
+  padding: 14px 28px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  background-color: #FFFFFF;
+  color: #111111;
+  transition: background-color 0.2s ease, box-shadow 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 18px 3px var(--bg-button-primary);
+}
+
+@media (max-width: 768px) {
+    .contact-page-container {
+        padding: 40px 20px;
+    }
+    .contact-header {
+        text-align: center;
+    }
+    .contact-title {
+        font-size: 2.5rem;
+    }
+    .form-footer {
+        align-self: stretch;
+    }
+    .submit-button {
+        width: 100%;
+    }
+}

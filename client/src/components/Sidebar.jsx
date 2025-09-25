@@ -1,102 +1,160 @@
 // FILE: client/src/components/Sidebar.jsx
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+
+import React, { useState, useRef, useEffect } from 'react';
+import { NavLink, Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
+import { TbLayoutSidebarLeftExpandFilled, TbLayoutSidebarLeftCollapseFilled } from 'react-icons/tb';
+import { FaRegMoon, FaRegSun } from "react-icons/fa6";
+import { FiLogOut, FiUser, FiHelpCircle } from 'react-icons/fi';
+import appLogo from '../assets/logo.png';
 import '../styles/Sidebar.css';
 
-const PinIcon = ({ pinned }) => (
-  <span style={{ marginRight: '8px', display: 'inline-block', fontSize: '1em' }}> {/* Adjusted font size if needed */}
-    {pinned ? '🔒' : '🔓'}
-  </span>
-);
-
-
-function Sidebar({ 
-    topics, 
-    activeTopicId, 
-    isOpen, 
-    isPinned, 
-    onMouseEnter, 
-    onMouseLeave, 
+function Sidebar({
+    topics,
+    activeTopicId,
+    isOpen,
+    isPinned,
+    onMouseEnter,
+    onMouseLeave,
     onPinToggle,
-    isContentPage 
+    isContentPage
 }) {
+    const { currentUser, userProfile, logout } = useAuth(); // Get userProfile
     const { theme, toggleTheme } = useTheme();
+    
+    // Use userProfile for display name if available, fallback to currentUser
+    const userName = userProfile?.displayName || currentUser?.displayName || currentUser?.email || 'User';
+    const userProfilePic = currentUser?.photoURL;
+    const userInitial = userName.charAt(0).toUpperCase();
+    const userTier = userProfile?.tier;
 
-    const handleResetProgress = () => {
-        const confirmation = window.confirm(
-            "Are you sure you want to reset ALL quiz progress?\n" +
-            "This will clear saved answers, times, and results for ALL topics and quizzes.\n" +
-            "This action cannot be undone."
-        );
+    const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0, opacity: 0 });
+    const [isMenuOpen, setMenuOpen] = useState(false);
+    const navListRef = useRef(null);
+    const menuRef = useRef(null);
+    const menuTriggerRef = useRef(null);
 
-        if (confirmation) {
-            console.log("Resetting all quiz progress...");
-            try {
-                Object.keys(localStorage).forEach(key => {
-                    if (key.startsWith('quizState-') || key.startsWith('quizResults-')) {
-                        localStorage.removeItem(key);
-                        console.log(`Removed item: ${key}`);
-                    }
-                });
-                alert("All quiz progress has been reset.");
-                window.location.reload();
-            } catch (error) {
-                console.error("Error resetting progress:", error);
-                alert("An error occurred while resetting progress.");
-            }
+    useEffect(() => {
+        const activeElement = navListRef.current?.querySelector('.topic-button.active');
+        if (activeElement) {
+            const top = activeElement.offsetTop;
+            const height = activeElement.offsetHeight;
+            setIndicatorStyle({ top, height, opacity: 1 });
         } else {
-            console.log("Progress reset cancelled.");
+            setIndicatorStyle(prevStyle => ({ ...prevStyle, opacity: 0 }));
+        }
+    }, [activeTopicId, topics, isOpen]);
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target) &&
+                menuTriggerRef.current && !menuTriggerRef.current.contains(event.target)) {
+                setMenuOpen(false);
+            }
+        };
+        if (isMenuOpen) {
+            document.addEventListener('mousedown', handleClickOutside);
+        }
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, [isMenuOpen]);
+
+    const handleLogout = async () => {
+        try {
+            await logout();
+        } catch (error) {
+            console.error("Failed to log out:", error);
         }
     };
 
     return (
-        <aside 
+        <aside
             className={`sidebar ${isOpen ? 'open' : 'closed'}`}
             onMouseEnter={onMouseEnter}
             onMouseLeave={onMouseLeave}
         >
-            <div className="sidebar-header">
-                <h2 className="sidebar-title">TOPICS</h2>
+            <div className="sidebar-top-header">
+                <Link to="/app" className="sidebar-logo-link" title="Home">
+                    <img src={appLogo} alt="Dental Edge Logo" className="sidebar-logo-img" />
+                </Link>
                 {isContentPage && isOpen && (
-                    <button 
-                        onClick={onPinToggle} 
-                        className="pin-toggle-button" 
-                        title={isPinned ? "Unpin Sidebar (allow overlay)" : "Pin Sidebar Open (push content)"}
-                    >
-                        <PinIcon pinned={isPinned} />
-                    </button>
+                    <div className="sidebar-header-actions">
+                        <button onClick={toggleTheme} className="theme-toggle-button" title={`Switch to ${theme === 'light' ? 'Dark' : 'Light'} Mode`}>
+                            {theme === 'light' ? <FaRegMoon /> : <FaRegSun />}
+                        </button>
+                        <button onClick={onPinToggle} className="pin-toggle-button" title={isPinned ? "Unpin Sidebar" : "Pin Sidebar"}>
+                            {isPinned ? <TbLayoutSidebarLeftCollapseFilled /> : <TbLayoutSidebarLeftExpandFilled />}
+                        </button>
+                    </div>
                 )}
             </div>
-            <nav>
-                <ul>
+
+            <nav className="topics-nav">
+                <h2 className="sidebar-title">Topics</h2>
+                <ul ref={navListRef}>
+                    <div className="active-topic-indicator" style={indicatorStyle} />
                     {topics && topics.length > 0 ? (
                         topics.map((topic) => (
                             <li key={topic.id}>
-                                <NavLink
-                                    to={`/topic/${topic.id}`}
-                                    className={({ isActive }) =>
-                                    `topic-button ${isActive || topic.id === activeTopicId ? 'active' : ''}`
-                                    }
-                                >
+                                <NavLink to={`/app/topic/${topic.id}`} className={({ isActive }) => `topic-button ${isActive || topic.id === activeTopicId ? 'active' : ''}`}>
                                     {topic.name}
-                                    <span className="topic-arrow">→</span>
                                 </NavLink>
                             </li>
                         ))
                     ) : (
-                         <li><p className="no-topics-sidebar">No topics loaded.</p></li>
+                        <li className="no-topics-sidebar">No topics loaded.</li>
                     )}
                 </ul>
             </nav>
 
-            <div className="sidebar-actions">
-                <button onClick={toggleTheme} className="theme-toggle-button">
-                    Switch to {theme === 'light' ? 'Dark' : 'Light'} Mode
-                </button>
-                <button onClick={handleResetProgress} className="reset-button">
-                    Reset All Progress
-                </button>
+            <div className="sidebar-footer">
+                {isMenuOpen && (
+                    <div ref={menuRef} className="user-menu-popup">
+                        <div className="user-menu-email-section">
+                           <FiUser /> <span>{currentUser?.email}</span>
+                        </div>
+                        <Link to="/contact" className="user-menu-help-button">
+                           <FiHelpCircle /> Help
+                        </Link>
+                        <div className="user-menu-separator" />
+                        <button onClick={handleLogout} className="user-menu-logout-button">
+                           <FiLogOut /> Log out
+                        </button>
+                    </div>
+                )}
+
+                <div
+                    className="sidebar-footer-content"
+                    ref={menuTriggerRef}
+                    onClick={() => setMenuOpen(!isMenuOpen)}
+                >
+                    {currentUser && (
+                        <div className="user-profile">
+                            {userProfilePic ? (
+                                <img src={userProfilePic} alt="Profile" className="profile-picture" />
+                            ) : (
+                                <div className="profile-initial">{userInitial}</div>
+                            )}
+                            {/* --- MODIFICATION START --- */}
+                            <div className="user-info">
+                                <span className="user-name">{userName}</span>
+                                {userTier && <span className="user-tier">{userTier}</span>}
+                            </div>
+                            {/* --- MODIFICATION END --- */}
+                        </div>
+                    )}
+                    
+                    {/* --- MODIFICATION START --- */}
+                    {/* Conditionally render the button based on tier */}
+                    {userTier && userTier !== 'pro' && (
+                        <Link to="/plans" className="upgrade-button" onClick={(e) => e.stopPropagation()}>
+                            {userTier === 'plus' ? 'Go Pro' : 'Upgrade'}
+                        </Link>
+                    )}
+                    {/* --- MODIFICATION END --- */}
+                </div>
             </div>
         </aside>
     );

@@ -156,7 +156,7 @@
     /* left and width will be set dynamically via inline styles from QuizPage */
     box-sizing: border-box;
     z-index: 1000; /* Ensure it's above general content, same as quiz-navigation */
-    min-height: 70px; /* Match quiz-navigation height */
+    min-height: 87px; /* Match quiz-navigation height */
     transition: left 0.3s ease-in-out, width 0.3s ease-in-out; /* Match quiz-navigation transition */
 }
 

@@ -1,0 +1,212 @@
+/* FILE: client/src/styles/PlansPage.css */
+
+.plans-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Aligns content to the top */
+  min-height: 100vh;
+  padding: 5rem 20px 4rem; /* Generous top padding */
+  background-color: #030304;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.close-button-plans {
+    position: absolute;
+    top: 25px;
+    right: 35px;
+    font-size: 2.5rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    z-index: 10;
+}
+
+.close-button-plans:hover {
+    color: rgba(255, 255, 255, 1);
+    text-shadow: 0 0 15px var(--bg-button-primary);
+}
+
+.plans-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.plans-title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 400;
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 1280px;
+  align-items: stretch;
+}
+
+.plan-card {
+  background-color: #191919;
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column; /* This is the key change */
+  border: 1px solid #333333;
+  min-height: 700px; /* Enforce tall cards */
+}
+
+.plan-card.highlighted {
+  border-color: var(--bg-button-primary);
+  background-color: rgba(87, 142, 126, 0.25);
+}
+
+.plan-card-header {
+  flex-shrink: 0; /* Header should not shrink */
+}
+
+.plan-name {
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  min-height: 60px;
+}
+
+.price-currency {
+  font-size: 1.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  align-self: flex-start;
+  margin-right: 4px;
+}
+
+.price-amount { 
+  font-size: 3rem;
+  line-height: 1; 
+}
+
+.price-decimal {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  margin-left: 2px;
+}
+
+.price-period {
+  font-size: 1rem;
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.plan-description {
+  font-size: 1rem;
+  min-height: 48px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.plan-card-action {
+  margin-bottom: 2.5rem;
+}
+
+.plan-button {
+  width: 100%;
+  padding: 16px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 9999px; /* This creates the pill shape */
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+  text-align: center;
+  
+}
+
+.plan-card.highlighted .plan-button.primary {
+  background-color: var(--bg-button-primary);
+  color: var(#FFFFFF);
+}
+
+.plan-card.highlighted .plan-button.primary:hover {
+  background-color: var(--bg-button-primary-hover);
+}
+
+.plan-button.secondary {
+  background-color: #333333;
+  color: #FFFFFF;
+  border: 1px solid #555;
+}
+
+.plan-button.secondary:hover:not(:disabled) {
+  background-color: #444444;
+}
+
+.plan-button:disabled {
+  background-color: #333333;
+  border-color: #555;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: not-allowed;
+}
+
+.plan-features {
+  flex-grow: 1; /* This is the most critical part - it pushes the footer down */
+}
+
+.plan-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.feature-item:first-child {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7); /* Match reference styling */
+}
+
+.feature-icon {
+  color: var(--bg-button-primary);
+  margin-top: 5px;
+  flex-shrink: 0;
+  font-size: 0.8rem;
+}
+
+.plan-card-footer {
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+  flex-shrink: 0; /* Footer should not shrink */
+}
+.plan-card-footer a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: underline;
+  margin-left: 4px;
+}
+
+@media (max-width: 960px) {
+  .plans-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    max-width: 450px;
+  }
+}
