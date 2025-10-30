@@ -225,8 +225,6 @@ exports.createCheckoutSession = onCall(
         success_url: `${liveAppUrl}/app?checkout=success`,
         cancel_url: `${liveAppUrl}/plans?checkout=cancel`,
         billing_address_collection: "required",
-        // --- THIS IS THE FIX: Tax is now disabled until you are ready to configure it. ---
-        // automatic_tax: { enabled: true },
         line_items: [
           {
             price: priceId,
@@ -298,3 +296,122 @@ exports.stripeWebhook = onRequest(
     response.status(200).send();
   }
 );
+
+// --- NEW v2 CALLABLE FUNCTIONS FOR QUIZ ATTEMPTS ---
+
+exports.saveInProgressAttempt = onCall({ cors: true }, async (request) => {
+    if (!request.auth) {
+        throw new HttpsError("unauthenticated", "You must be logged in to save progress.");
+    }
+    const { uid } = request.auth;
+    const { topicId, sectionType, quizId, ...attemptState } = request.data;
+
+    const collectionRef = db.collection("users").doc(uid).collection("quizAttempts");
+    const dataToSave = {
+        ...attemptState,
+        topicId,
+        sectionType,
+        quizId,
+        status: "in-progress",
+        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    };
+
+    if (attemptState.id) {
+        logger.info(`Updating in-progress attempt: ${attemptState.id} for user: ${uid}`);
+        await collectionRef.doc(attemptState.id).set(dataToSave, { merge: true });
+        return { attemptId: attemptState.id };
+    } else {
+        logger.info(`Creating new in-progress attempt for user: ${uid}`);
+        dataToSave.createdAt = admin.firestore.FieldValue.serverTimestamp();
+        const newDocRef = await collectionRef.add(dataToSave);
+        return { attemptId: newDocRef.id };
+    }
+});
+
+exports.getInProgressAttempt = onCall({ cors: true }, async (request) => {
+    if (!request.auth) {
+        throw new HttpsError("unauthenticated", "You must be logged in.");
+    }
+    const { uid } = request.auth;
+    const { topicId, sectionType, quizId } = request.data;
+
+    const querySnapshot = await db.collection("users").doc(uid).collection("quizAttempts")
+        .where("topicId", "==", topicId)
+        .where("sectionType", "==", sectionType)
+        .where("quizId", "==", quizId)
+        .where("status", "==", "in-progress")
+        .limit(1)
+        .get();
+
+    if (querySnapshot.empty) {
+        logger.info(`No in-progress attempt found for user ${uid} on quiz ${quizId}`);
+        return null;
+    }
+    
+    const doc = querySnapshot.docs[0];
+    logger.info(`Found in-progress attempt ${doc.id} for user ${uid}`);
+    return { id: doc.id, ...doc.data() };
+});
+
+exports.deleteInProgressAttempt = onCall({ cors: true }, async (request) => {
+    if (!request.auth) {
+        throw new HttpsError("unauthenticated", "You must be logged in.");
+    }
+    const { uid } = request.auth;
+    const { attemptId } = request.data;
+
+    if (!attemptId) {
+        throw new HttpsError("invalid-argument", "Function must be called with an 'attemptId'.");
+    }
+
+    logger.info(`Deleting in-progress attempt: ${attemptId} for user: ${uid}`);
+    await db.collection("users").doc(uid).collection("quizAttempts").doc(attemptId).delete();
+    return { success: true };
+});
+
+exports.finalizeQuizAttempt = onCall({ cors: true }, async (request) => {
+    if (!request.auth) {
+        throw new HttpsError("unauthenticated", "You must be logged in to submit a quiz.");
+    }
+    const { uid } = request.auth;
+    const { topicId, sectionType, quizId, ...attemptState } = request.data;
+
+    if (!attemptState.id) {
+        throw new HttpsError("invalid-argument", "Cannot finalize an attempt without an ID.");
+    }
+
+    // Find the storage path from the topic structure
+    const topicStructureFiles = await bucket.getFiles({ prefix: `data/${topicId}/` });
+    const quizFile = topicStructureFiles[0].find(file => file.name.includes(`${quizId}.json`) || file.name.includes(quizId.replace(/-/g, '_')));
+
+    if (!quizFile) {
+        throw new HttpsError("not-found", `Could not find quiz data file for ${quizId}.`);
+    }
+
+    const [quizDataBuffer] = await quizFile.download();
+    const quizData = JSON.parse(quizDataBuffer.toString());
+
+    let score = 0;
+    quizData.forEach((question, index) => {
+        const correctOption = question.options.find(opt => opt.is_correct);
+        if (correctOption && attemptState.userAnswers[index] === correctOption.label) {
+            score++;
+        }
+    });
+
+    const finalData = {
+        ...attemptState,
+        topicId,
+        sectionType,
+        quizId,
+        status: "completed",
+        score: score,
+        totalQuestions: quizData.length,
+        updatedAt: admin.firestore.FieldValue.serverTimestamp(),
+    };
+
+    logger.info(`Finalizing attempt ${attemptState.id} for user ${uid} with score ${score}/${quizData.length}`);
+    await db.collection("users").doc(uid).collection("quizAttempts").doc(attemptState.id).set(finalData, { merge: true });
+
+    return { attemptId: attemptState.id, score: score };
+});
