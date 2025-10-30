@@ -6,19 +6,15 @@ import { useQuizEngine } from '../hooks/useQuizEngine';
 import { useLayout } from '../context/LayoutContext';
 import { formatDisplayName } from '../services/loader.js';
 
-// Import our new, refactored UI components
 import QuizHeader from '../components/quiz/QuizHeader';
 import QuizFooter from '../components/quiz/QuizFooter';
 import QuizContentArea from '../components/quiz/QuizContentArea';
 import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorDisplay from '../components/ErrorDisplay';
-import ResumePromptModal from '../components/ResumePromptModal'; // <-- IMPORT THE NEW MODAL
-
-// Import existing components that are still needed
+import ResumePromptModal from '../components/ResumePromptModal';
 import QuizReviewSummary from '../components/QuizReviewSummary';
 import { FaCrown } from 'react-icons/fa';
 
-// Main QuizPage component, now acting as a "conductor"
 function QuizPage({ isPreviewMode = false }) {
     const { topicId, sectionType, quizId } = useParams();
     const location = useLocation();
@@ -90,7 +86,7 @@ function QuizPage({ isPreviewMode = false }) {
                 isFirstQuestion: currentIndex === 0,
                 isLastQuestion: currentIndex === state.quizContent.questions.length - 1,
                 isMarked: !!state.attempt.markedQuestions[currentIndex],
-                isSaving: state.uiState.isSaving,
+                isSaving: state.uiState.isSaving, // This prop is correct
                 isReviewMode: isReviewing,
                 hasStarted: state.status === 'active' || isReviewing,
                 showExhibitButton: topicId === 'chemistry',
@@ -100,8 +96,6 @@ function QuizPage({ isPreviewMode = false }) {
         };
     }, [state, actions, isSidebarEffectivelyPinned, topicId, sectionType, quizId, isPreviewMode, currentQuestion]);
 
-    // --- Render Logic ---
-    
     if (state.status === 'initializing' || state.status === 'loading') {
         return <LoadingSpinner message="Loading Quiz..." />;
     }
@@ -122,8 +116,6 @@ function QuizPage({ isPreviewMode = false }) {
         return <ErrorDisplay error={state.error?.message || 'An unknown error occurred.'} backLink={`/app/topic/${topicId}`} backLinkText="Back to Topic" />;
     }
     
-    // --- THIS IS THE CHANGE ---
-    // Instead of rendering a basic div, we now render our new, professional modal.
     if (state.status === 'prompting_resume') {
         return (
             <ResumePromptModal
@@ -152,10 +144,12 @@ function QuizPage({ isPreviewMode = false }) {
                     currentQuestionIndexBeforeReview={state.attempt.currentQuestionIndex}
                     topicId={topicId}
                     onCloseReviewSummary={actions.closeReviewSummary}
-                    onJumpToQuestionInQuiz={actions.navigateQuestion}
+                    onJumpToQuestionInQuiz={actions.jumpToQuestion}
                     onEndQuiz={actions.finalizeAttempt}
                     timerDisplayContent={`${state.timer.isCountdown ? 'Time Left' : 'Time Elapsed'}: ${formatTime(state.timer.value)}`}
                     dynamicFooterStyle={uiProps.footerStyle}
+                    // --- THE FIX IS HERE (Part 1) ---
+                    // The isSaving state needs to be passed to the summary page as well.
                     isNavActionInProgress={state.uiState.isSaving}
                 />
             ) : (
@@ -163,7 +157,13 @@ function QuizPage({ isPreviewMode = false }) {
                     <>
                         <QuizHeader {...uiProps.headerProps} />
                         <QuizContentArea {...uiProps.contentAreaProps} />
-                        <QuizFooter {...uiProps.footerProps} dynamicStyle={uiProps.footerStyle} />
+                        {/* --- THE FIX IS HERE (Part 2) --- */}
+                        {/* The `isSaving` prop from `uiProps.footerProps` was not being passed down. */}
+                        <QuizFooter 
+                            {...uiProps.footerProps} 
+                            isSaving={state.uiState.isSaving} 
+                            dynamicStyle={uiProps.footerStyle} 
+                        />
                     </>
                 )
             )}
