@@ -15,7 +15,14 @@ import { useAuth } from '../context/AuthContext';
 const getLocalAttemptKey = (topicId, sectionType, quizId) => `inProgress-${topicId}-${sectionType}-${quizId}`;
 const saveToLocalStorage = (key, data) => {
     try {
-        localStorage.setItem(key, JSON.stringify(data));
+        // We need to convert Sets to Arrays for JSON serialization
+        const serializedData = { ...data };
+        if (serializedData.crossedOffOptions) {
+            serializedData.crossedOffOptions = Object.fromEntries(
+                Object.entries(serializedData.crossedOffOptions).map(([key, value]) => [key, Array.from(value)])
+            );
+        }
+        localStorage.setItem(key, JSON.stringify(serializedData));
     } catch (e) {
         console.error("Error saving to localStorage", e);
     }
@@ -23,7 +30,14 @@ const saveToLocalStorage = (key, data) => {
 const loadFromLocalStorage = (key) => {
     try {
         const data = localStorage.getItem(key);
-        return data ? JSON.parse(data) : null;
+        const parsedData = data ? JSON.parse(data) : null;
+        // We need to convert Arrays back to Sets after loading
+        if (parsedData && parsedData.crossedOffOptions) {
+            parsedData.crossedOffOptions = Object.fromEntries(
+                Object.entries(parsedData.crossedOffOptions).map(([key, value]) => [key, new Set(value)])
+            );
+        }
+        return parsedData;
     } catch (e) {
         console.error("Error loading from localStorage", e);
         return null;
@@ -42,7 +56,7 @@ const initialState = {
         id: null,
         userAnswers: {},
         markedQuestions: {},
-        crossedOffOptions: {},
+        crossedOffOptions: {}, // This will now be an object of Sets
         userTimeSpent: {},
         currentQuestionIndex: 0,
         practiceTestSettings: { prometricDelay: false, additionalTime: false },
@@ -174,28 +188,31 @@ function quizReducer(state, action) {
             };
         }
 
+        // --- THE FIX IS HERE ---
+        // This logic now correctly uses Sets, matching the original component's expectation.
         case 'TOGGLE_CROSS_OFF': {
             const { questionIndex, optionLabel } = action.payload;
-            const currentCrossed = state.attempt.crossedOffOptions[questionIndex] || [];
-            const newCrossedSet = new Set(currentCrossed);
-            if (newCrossedSet.has(optionLabel)) {
-                newCrossedSet.delete(optionLabel);
+            const newCrossedOff = { ...state.attempt.crossedOffOptions };
+            const currentSet = newCrossedOff[questionIndex] ? new Set(newCrossedOff[questionIndex]) : new Set();
+
+            if (currentSet.has(optionLabel)) {
+                currentSet.delete(optionLabel);
             } else {
-                newCrossedSet.add(optionLabel);
+                currentSet.add(optionLabel);
             }
+            newCrossedOff[questionIndex] = currentSet;
+
             const newAnswers = { ...state.attempt.userAnswers };
-            if (newCrossedSet.has(newAnswers[questionIndex])) {
+            if (currentSet.has(newAnswers[questionIndex])) {
                 delete newAnswers[questionIndex];
             }
+
             return {
                 ...state,
                 attempt: {
                     ...state.attempt,
                     userAnswers: newAnswers,
-                    crossedOffOptions: {
-                        ...state.attempt.crossedOffOptions,
-                        [questionIndex]: Array.from(newCrossedSet),
-                    },
+                    crossedOffOptions: newCrossedOff,
                 },
             };
         }
@@ -261,39 +278,15 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     const navigate = useNavigate();
     
     const timerIntervalRef = useRef(null);
-
-    // --- THE FIX IS HERE (Part 1): STABILIZE THE SAVE FUNCTION ---
-    // We create a ref to hold the latest version of the save function.
-    // This allows the interval to call the latest function without needing to be reset.
     const saveProgressToServerRef = useRef();
+    const hasInitialized = useRef(false);
 
-    // This function will save the current state to the server.
-    const saveProgressToServer = useCallback(async () => {
-        // Guard clause to prevent saving if not in a valid state
-        if (!((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
+    useEffect(() => {
+        if (hasInitialized.current || (!currentUser && !isPreviewMode)) {
             return;
         }
-        
-        dispatch({ type: 'SET_IS_SAVING', payload: true });
-        await saveInProgressAttempt({ 
-            topicId, 
-            sectionType, 
-            quizId, 
-            ...state.attempt,
-            timer: state.timer
-        });
-        // Use a timeout so the "Saving..." indicator is visible for a moment
-        setTimeout(() => dispatch({ type: 'SET_IS_SAVING', payload: false }), 500);
+        hasInitialized.current = true;
 
-    }, [state.attempt, state.timer, topicId, sectionType, quizId, state.status]);
-
-    // This effect ensures the ref always has the most up-to-date version of the save function.
-    useEffect(() => {
-        saveProgressToServerRef.current = saveProgressToServer;
-    }, [saveProgressToServer]);
-
-
-    useEffect(() => {
         const initialize = async () => {
             dispatch({ type: 'INITIALIZE_ATTEMPT', payload: { topicId, sectionType, quizId, reviewAttemptId, isPreviewMode } });
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
@@ -328,28 +321,52 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
             }
         };
 
-        if (currentUser || isPreviewMode) {
-            initialize();
-        }
+        initialize();
 
         return () => {
             clearInterval(timerIntervalRef.current);
         };
     }, [topicId, sectionType, quizId, reviewAttemptId, currentUser, isPreviewMode]);
     
-    // --- THE FIX IS HERE (Part 2): STABILIZE THE INTERVAL EFFECT ---
-    // This effect now only runs when the quiz starts or stops. It will no longer reset every second.
+    const saveProgressToServer = useCallback(async () => {
+        if (!((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
+            return;
+        }
+        
+        dispatch({ type: 'SET_IS_SAVING', payload: true });
+        
+        // Convert Sets to Arrays before sending to Firestore
+        const serializableAttempt = { ...state.attempt };
+        if (serializableAttempt.crossedOffOptions) {
+            serializableAttempt.crossedOffOptions = Object.fromEntries(
+                Object.entries(serializableAttempt.crossedOffOptions).map(([key, value]) => [key, Array.from(value)])
+            );
+        }
+
+        await saveInProgressAttempt({ 
+            topicId, 
+            sectionType, 
+            quizId, 
+            ...serializableAttempt,
+            timer: state.timer
+        });
+        setTimeout(() => dispatch({ type: 'SET_IS_SAVING', payload: false }), 500);
+
+    }, [state.attempt, state.timer, topicId, sectionType, quizId, state.status]);
+
+    useEffect(() => {
+        saveProgressToServerRef.current = saveProgressToServer;
+    }, [saveProgressToServer]);
+
     useEffect(() => {
         let autoSaveInterval;
         if (state.status === 'active' && state.attempt.id) {
-            // The interval calls the function stored in the ref, which is always up-to-date.
             autoSaveInterval = setInterval(() => {
                 if (saveProgressToServerRef.current) {
                     saveProgressToServerRef.current();
                 }
-            }, 60000); // 60 seconds
+            }, 60000);
         }
-        // Cleanup function to clear the interval when the component unmounts or status changes.
         return () => clearInterval(autoSaveInterval);
     }, [state.status, state.attempt.id]);
 
@@ -391,6 +408,12 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         }
     }, [state.quizContent.questions.length]);
     
+    const openReviewSummary = useCallback(async () => {
+        dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
+        await saveProgressToServer();
+        dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
+    }, [saveProgressToServer]);
+    
     const nextQuestion = useCallback(() => {
         dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
         const newIndex = state.attempt.currentQuestionIndex + 1;
@@ -399,7 +422,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         } else {
             openReviewSummary();
         }
-    }, [state.attempt.currentQuestionIndex, state.quizContent.questions.length]);
+    }, [state.attempt.currentQuestionIndex, state.quizContent.questions.length, openReviewSummary]);
     
     const previousQuestion = useCallback(() => {
         dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
@@ -419,12 +442,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     const toggleMark = useCallback(() => {
         dispatch({ type: 'TOGGLE_MARK', payload: state.attempt.currentQuestionIndex });
     }, [state.attempt.currentQuestionIndex]);
-
-    const openReviewSummary = useCallback(async () => {
-        dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
-        await saveProgressToServer();
-        dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
-    }, [saveProgressToServer]);
 
     const closeReviewSummary = useCallback(() => dispatch({ type: 'CLOSE_REVIEW_SUMMARY' }), []);
     const toggleExhibit = useCallback(() => dispatch({ type: 'TOGGLE_EXHIBIT' }), []);
