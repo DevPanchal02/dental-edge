@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaChevronLeft } from 'react-icons/fa';
-import '../../styles/QuizPage.css'; // We can reuse some styles
+import '../../styles/QuizPage.css';
 
 function QuizHeader({ title, progressText, backLink, backText, isPreviewMode }) {
     return (
@@ -20,11 +20,13 @@ function QuizHeader({ title, progressText, backLink, backText, isPreviewMode }) 
                 )}
             </div>
             <div className="header-center">
+                {/* In preview mode, show "Dental Edge" branding above the title */}
+                {isPreviewMode && <p className="pto-app-name" style={{ margin: '0 0 3px 0' }}>Dental Edge</p>}
                 <h1 className="quiz-title">{title}</h1>
             </div>
             <div className="header-right">
                 <p className="quiz-progress">
-                    {progressText} {isPreviewMode && '(Preview)'}
+                    {progressText}
                 </p>
             </div>
         </div>

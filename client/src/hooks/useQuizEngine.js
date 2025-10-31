@@ -15,7 +15,6 @@ import { useAuth } from '../context/AuthContext';
 const getLocalAttemptKey = (topicId, sectionType, quizId) => `inProgress-${topicId}-${sectionType}-${quizId}`;
 const saveToLocalStorage = (key, data) => {
     try {
-        // We need to convert Sets to Arrays for JSON serialization
         const serializedData = { ...data };
         if (serializedData.crossedOffOptions) {
             serializedData.crossedOffOptions = Object.fromEntries(
@@ -31,7 +30,6 @@ const loadFromLocalStorage = (key) => {
     try {
         const data = localStorage.getItem(key);
         const parsedData = data ? JSON.parse(data) : null;
-        // We need to convert Arrays back to Sets after loading
         if (parsedData && parsedData.crossedOffOptions) {
             parsedData.crossedOffOptions = Object.fromEntries(
                 Object.entries(parsedData.crossedOffOptions).map(([key, value]) => [key, new Set(value)])
@@ -56,7 +54,7 @@ const initialState = {
         id: null,
         userAnswers: {},
         markedQuestions: {},
-        crossedOffOptions: {}, // This will now be an object of Sets
+        crossedOffOptions: {},
         userTimeSpent: {},
         currentQuestionIndex: 0,
         practiceTestSettings: { prometricDelay: false, additionalTime: false },
@@ -79,6 +77,7 @@ const initialState = {
 };
 
 function quizReducer(state, action) {
+    // Reducer logic remains unchanged...
     switch (action.type) {
         case 'INITIALIZE_ATTEMPT':
             return {
@@ -86,6 +85,44 @@ function quizReducer(state, action) {
                 status: 'loading',
                 quizIdentifiers: action.payload,
             };
+
+        case 'PROMPT_PREVIEW_OPTIONS':
+            return {
+                ...state,
+                status: 'prompting_options',
+                quizContent: {
+                    questions: action.payload.questions,
+                    metadata: action.payload.metadata,
+                },
+            };
+        case 'START_PREVIEW':
+            return {
+                ...state,
+                status: 'active',
+                attempt: {
+                    ...state.attempt,
+                    practiceTestSettings: action.payload.settings,
+                },
+                timer: {
+                    ...state.timer,
+                    isActive: true,
+                    isCountdown: true,
+                    value: action.payload.duration,
+                    initialDuration: action.payload.duration,
+                }
+            };
+        case 'PROMPT_REGISTRATION':
+            return {
+                ...state,
+                status: 'prompting_registration',
+                timer: { ...state.timer, isActive: false },
+            };
+        case 'CLOSE_REGISTRATION_PROMPT':
+             return {
+                ...state,
+                status: 'active',
+                timer: { ...state.timer, isActive: true },
+             };
 
         case 'PROMPT_RESUME':
             return {
@@ -188,8 +225,6 @@ function quizReducer(state, action) {
             };
         }
 
-        // --- THE FIX IS HERE ---
-        // This logic now correctly uses Sets, matching the original component's expectation.
         case 'TOGGLE_CROSS_OFF': {
             const { questionIndex, optionLabel } = action.payload;
             const newCrossedOff = { ...state.attempt.crossedOffOptions };
@@ -282,24 +317,36 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     const hasInitialized = useRef(false);
 
     useEffect(() => {
-        if (hasInitialized.current || (!currentUser && !isPreviewMode)) {
+        if (hasInitialized.current) {
             return;
         }
         hasInitialized.current = true;
 
         const initialize = async () => {
             dispatch({ type: 'INITIALIZE_ATTEMPT', payload: { topicId, sectionType, quizId, reviewAttemptId, isPreviewMode } });
-            const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
             
             try {
                 const [questions, metadata] = await Promise.all([
-                    getQuizData(topicId, sectionType, quizId),
+                    getQuizData(topicId, sectionType, quizId, isPreviewMode),
                     getQuizMetadata(topicId, sectionType, quizId)
                 ]);
+
+                if (isPreviewMode) {
+                    const previewMetadata = {
+                        ...metadata,
+                        fullNameForDisplay: 'Dental Aptitude Test 1',
+                        categoryForInstructions: 'DAT',
+                    };
+                    dispatch({ type: 'PROMPT_PREVIEW_OPTIONS', payload: { questions, metadata: previewMetadata } });
+                    return;
+                }
+                
+                if (!currentUser) return;
 
                 if (reviewAttemptId) {
                     // Review mode logic
                 } else {
+                    const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
                     let inProgressAttempt = loadFromLocalStorage(localKey);
 
                     if (!inProgressAttempt) {
@@ -329,13 +376,12 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     }, [topicId, sectionType, quizId, reviewAttemptId, currentUser, isPreviewMode]);
     
     const saveProgressToServer = useCallback(async () => {
-        if (!((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
+        if (isPreviewMode || !((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
             return;
         }
         
         dispatch({ type: 'SET_IS_SAVING', payload: true });
         
-        // Convert Sets to Arrays before sending to Firestore
         const serializableAttempt = { ...state.attempt };
         if (serializableAttempt.crossedOffOptions) {
             serializableAttempt.crossedOffOptions = Object.fromEntries(
@@ -352,7 +398,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         });
         setTimeout(() => dispatch({ type: 'SET_IS_SAVING', payload: false }), 500);
 
-    }, [state.attempt, state.timer, topicId, sectionType, quizId, state.status]);
+    }, [state.attempt, state.timer, topicId, sectionType, quizId, state.status, isPreviewMode]);
 
     useEffect(() => {
         saveProgressToServerRef.current = saveProgressToServer;
@@ -360,7 +406,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
 
     useEffect(() => {
         let autoSaveInterval;
-        if (state.status === 'active' && state.attempt.id) {
+        if (state.status === 'active' && state.attempt.id && !isPreviewMode) {
             autoSaveInterval = setInterval(() => {
                 if (saveProgressToServerRef.current) {
                     saveProgressToServerRef.current();
@@ -368,18 +414,15 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
             }, 60000);
         }
         return () => clearInterval(autoSaveInterval);
-    }, [state.status, state.attempt.id]);
+    }, [state.status, state.attempt.id, isPreviewMode]);
 
     useEffect(() => {
-        if ((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id) {
+        if ((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id && !isPreviewMode) {
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
-            const dataToSave = {
-                ...state.attempt,
-                timer: state.timer
-            };
+            const dataToSave = { ...state.attempt, timer: state.timer };
             saveToLocalStorage(localKey, dataToSave);
         }
-    }, [state.attempt, state.timer, state.status, topicId, sectionType, quizId]);
+    }, [state.attempt, state.timer, state.status, topicId, sectionType, quizId, isPreviewMode]);
 
     useEffect(() => {
         if (state.timer.isActive && (state.status === 'active' || state.status === 'reviewing_summary')) {
@@ -408,13 +451,25 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         }
     }, [state.quizContent.questions.length]);
     
+    // --- THIS IS THE FIX (Part 1) ---
+    // The openReviewSummary action now checks for preview mode.
     const openReviewSummary = useCallback(async () => {
+        if (isPreviewMode) {
+            dispatch({ type: 'PROMPT_REGISTRATION' });
+            return;
+        }
+
         dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
         await saveProgressToServer();
         dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
-    }, [saveProgressToServer]);
+    }, [saveProgressToServer, isPreviewMode]);
     
     const nextQuestion = useCallback(() => {
+        if (isPreviewMode && state.attempt.currentQuestionIndex === 1) {
+            dispatch({ type: 'PROMPT_REGISTRATION' });
+            return;
+        }
+
         dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
         const newIndex = state.attempt.currentQuestionIndex + 1;
         if (newIndex < state.quizContent.questions.length) {
@@ -422,7 +477,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         } else {
             openReviewSummary();
         }
-    }, [state.attempt.currentQuestionIndex, state.quizContent.questions.length, openReviewSummary]);
+    }, [state.attempt.currentQuestionIndex, state.quizContent.questions.length, openReviewSummary, isPreviewMode]);
     
     const previousQuestion = useCallback(() => {
         dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
@@ -440,8 +495,10 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     }, [state.quizContent.questions.length]);
 
     const toggleMark = useCallback(() => {
+        // Disable marking in preview mode
+        if (isPreviewMode) return;
         dispatch({ type: 'TOGGLE_MARK', payload: state.attempt.currentQuestionIndex });
-    }, [state.attempt.currentQuestionIndex]);
+    }, [state.attempt.currentQuestionIndex, isPreviewMode]);
 
     const closeReviewSummary = useCallback(() => dispatch({ type: 'CLOSE_REVIEW_SUMMARY' }), []);
     const toggleExhibit = useCallback(() => dispatch({ type: 'TOGGLE_EXHIBIT' }), []);
@@ -451,6 +508,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     const resumeAttempt = useCallback(() => dispatch({ type: 'RESUME_ATTEMPT' }), []);
     
     const startNewAttempt = useCallback(async () => {
+        if (isPreviewMode) return;
         const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
         clearLocalStorage(localKey);
         await deleteInProgressAttempt(state.attempt.id);
@@ -458,9 +516,13 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         const newAttemptId = await saveInProgressAttempt({ topicId, sectionType, quizId, ...newAttemptData, timer: initialState.timer });
         saveToLocalStorage(localKey, { ...newAttemptData, id: newAttemptId, timer: initialState.timer });
         dispatch({ type: 'RESET_ATTEMPT', payload: { newAttemptId } });
-    }, [state.attempt.id, topicId, sectionType, quizId]);
+    }, [state.attempt.id, topicId, sectionType, quizId, isPreviewMode]);
 
     const finalizeAttempt = useCallback(async () => {
+        if (isPreviewMode) {
+            navigate('/');
+            return;
+        }
         try {
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
             clearLocalStorage(localKey);
@@ -472,7 +534,17 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         } catch (error) {
             dispatch({ type: 'SET_ERROR', payload: error });
         }
-    }, [state.attempt, state.timer, topicId, sectionType, quizId, navigate]);
+    }, [state.attempt, state.timer, topicId, sectionType, quizId, navigate, isPreviewMode]);
+
+    const startPreview = useCallback((settings) => {
+        const duration = 180 * 60; 
+        dispatch({ type: 'START_PREVIEW', payload: { settings, duration }});
+    }, []);
+
+    const closeRegistrationPrompt = useCallback(() => {
+        dispatch({ type: 'CLOSE_REGISTRATION_PROMPT' });
+    }, []);
+
 
     const actions = {
         selectOption, toggleCrossOff, nextQuestion,
@@ -480,6 +552,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         toggleMark, toggleExhibit, toggleSolution, 
         toggleExplanation, openReviewSummary, closeReviewSummary, 
         resumeAttempt, startNewAttempt, finalizeAttempt,
+        startPreview, closeRegistrationPrompt,
     };
 
     return { state, actions };

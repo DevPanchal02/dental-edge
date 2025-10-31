@@ -14,6 +14,8 @@ import ErrorDisplay from '../components/ErrorDisplay';
 import ResumePromptModal from '../components/ResumePromptModal';
 import QuizReviewSummary from '../components/QuizReviewSummary';
 import { FaCrown } from 'react-icons/fa';
+import PracticeTestOptions from '../components/PracticeTestOptions';
+import RegistrationPromptModal from '../components/RegistrationPromptModal';
 
 function QuizPage({ isPreviewMode = false }) {
     const { topicId, sectionType, quizId } = useParams();
@@ -24,7 +26,8 @@ function QuizPage({ isPreviewMode = false }) {
 
     const { state, actions } = useQuizEngine(topicId, sectionType, quizId, reviewAttemptId, isPreviewMode);
     
-    const { isSidebarEffectivelyPinned } = useLayout() || { isSidebarEffectivelyPinned: false };
+    const layout = !isPreviewMode ? useLayout() : { isSidebarEffectivelyPinned: false };
+    const { isSidebarEffectivelyPinned } = layout;
     
     const currentQuestion = useMemo(() => {
         return state.quizContent.questions[state.attempt.currentQuestionIndex] || null;
@@ -34,6 +37,10 @@ function QuizPage({ isPreviewMode = false }) {
         const isPractice = state.quizIdentifiers?.sectionType === 'practice';
         const isReviewing = state.status === 'reviewing_attempt';
         const currentIndex = state.attempt.currentQuestionIndex;
+
+        // --- THIS IS THE FIX (Part 2) ---
+        // Determine the question count to display. Default to 210 for previews.
+        const displayQuestionCount = isPreviewMode ? 210 : state.quizContent.questions.length;
 
         return {
             containerStyle: {
@@ -47,7 +54,7 @@ function QuizPage({ isPreviewMode = false }) {
             },
             headerProps: {
                 title: state.quizContent.metadata?.fullNameForDisplay || 'Loading Quiz...',
-                progressText: `Question ${currentIndex + 1} of ${state.quizContent.questions.length}`,
+                progressText: `Question ${currentIndex + 1} of ${displayQuestionCount}`,
                 backLink: isReviewing ? `/app/results/${topicId}/${sectionType}/${quizId}` : `/app/topic/${topicId}`,
                 backText: isReviewing ? 'Back to Results' : `Back to ${state.quizContent.metadata?.topicName || formatDisplayName(topicId)}`,
                 isPreviewMode: isPreviewMode,
@@ -86,7 +93,7 @@ function QuizPage({ isPreviewMode = false }) {
                 isFirstQuestion: currentIndex === 0,
                 isLastQuestion: currentIndex === state.quizContent.questions.length - 1,
                 isMarked: !!state.attempt.markedQuestions[currentIndex],
-                isSaving: state.uiState.isSaving, // This prop is correct
+                isSaving: state.uiState.isSaving,
                 isReviewMode: isReviewing,
                 hasStarted: state.status === 'active' || isReviewing,
                 showExhibitButton: topicId === 'chemistry',
@@ -101,22 +108,29 @@ function QuizPage({ isPreviewMode = false }) {
     }
 
     if (state.status === 'error') {
-        if (state.error?.code === 'upgrade_required') {
-            return (
-                <div className="quiz-page-container" style={uiProps.containerStyle}>
-                    <div className="access-denied-container">
-                        <div className="access-denied-icon"><FaCrown /></div>
-                        <h2 className="access-denied-title">Upgrade Required</h2>
-                        <p className="access-denied-message">This content requires a higher subscription tier.</p>
-                        <Link to="/plans" className="access-denied-button">View Plans</Link>
-                    </div>
-                </div>
-            );
-        }
-        return <ErrorDisplay error={state.error?.message || 'An unknown error occurred.'} backLink={`/app/topic/${topicId}`} backLinkText="Back to Topic" />;
+        return <ErrorDisplay error={state.error?.message || 'An unknown error occurred.'} backLink={isPreviewMode ? '/' : `/app/topic/${topicId}`} backLinkText={isPreviewMode ? 'Back to Home' : 'Back to Topic'} />;
     }
     
-    if (state.status === 'prompting_resume') {
+    if (state.status === 'prompting_options') {
+        return (
+            <PracticeTestOptions
+                isOpen={true}
+                onClose={() => navigate('/')}
+                onStartTest={actions.startPreview}
+                fullNameForDisplay={state.quizContent.metadata?.fullNameForDisplay}
+                categoryForInstructions={state.quizContent.metadata?.categoryForInstructions}
+                baseTimeLimitMinutes={180}
+                // --- THIS IS THE FIX (Part 3) ---
+                numQuestions={210} // Display the fake question count
+            />
+        );
+    }
+    
+    if (state.status === 'prompting_registration') {
+        return <RegistrationPromptModal isOpen={true} onClose={actions.closeRegistrationPrompt} />;
+    }
+
+    if (state.status === 'prompting_resume' && !isPreviewMode) {
         return (
             <ResumePromptModal
                 onResume={actions.resumeAttempt}
@@ -133,7 +147,7 @@ function QuizPage({ isPreviewMode = false }) {
     };
 
     return (
-        <div className="quiz-page-container" style={uiProps.containerStyle}>
+        <div className={`quiz-page-container ${isPreviewMode ? 'preview-mode' : ''}`} style={uiProps.containerStyle}>
             {state.status === 'reviewing_summary' ? (
                 <QuizReviewSummary
                     allQuizQuestions={state.quizContent.questions}
@@ -148,8 +162,6 @@ function QuizPage({ isPreviewMode = false }) {
                     onEndQuiz={actions.finalizeAttempt}
                     timerDisplayContent={`${state.timer.isCountdown ? 'Time Left' : 'Time Elapsed'}: ${formatTime(state.timer.value)}`}
                     dynamicFooterStyle={uiProps.footerStyle}
-                    // --- THE FIX IS HERE (Part 1) ---
-                    // The isSaving state needs to be passed to the summary page as well.
                     isNavActionInProgress={state.uiState.isSaving}
                 />
             ) : (
@@ -157,8 +169,6 @@ function QuizPage({ isPreviewMode = false }) {
                     <>
                         <QuizHeader {...uiProps.headerProps} />
                         <QuizContentArea {...uiProps.contentAreaProps} />
-                        {/* --- THE FIX IS HERE (Part 2) --- */}
-                        {/* The `isSaving` prop from `uiProps.footerProps` was not being passed down. */}
                         <QuizFooter 
                             {...uiProps.footerProps} 
                             isSaving={state.uiState.isSaving} 
