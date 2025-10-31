@@ -451,8 +451,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         }
     }, [state.quizContent.questions.length]);
     
-    // --- THIS IS THE FIX (Part 1) ---
-    // The openReviewSummary action now checks for preview mode.
     const openReviewSummary = useCallback(async () => {
         if (isPreviewMode) {
             dispatch({ type: 'PROMPT_REGISTRATION' });
@@ -495,7 +493,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     }, [state.quizContent.questions.length]);
 
     const toggleMark = useCallback(() => {
-        // Disable marking in preview mode
         if (isPreviewMode) return;
         dispatch({ type: 'TOGGLE_MARK', payload: state.attempt.currentQuestionIndex });
     }, [state.attempt.currentQuestionIndex, isPreviewMode]);
@@ -518,6 +515,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         dispatch({ type: 'RESET_ATTEMPT', payload: { newAttemptId } });
     }, [state.attempt.id, topicId, sectionType, quizId, isPreviewMode]);
 
+    // --- THIS IS THE FIX ---
     const finalizeAttempt = useCallback(async () => {
         if (isPreviewMode) {
             navigate('/');
@@ -525,16 +523,35 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         }
         try {
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
-            clearLocalStorage(localKey);
+            // This helper function was defined outside the hook's scope, causing the error.
+            // Move it inside or define it where it's accessible.
+            const getResultsKey = (tId, sType, qId) => `quizResults-${tId}-${sType}-${qId}`;
+            const resultsKey = getResultsKey(topicId, sectionType, quizId);
+
             dispatch({ type: 'STOP_TIMER' });
             dispatch({ type: 'SET_IS_SAVING', payload: true });
-            const result = await finalizeQuizAttempt({ topicId, sectionType, quizId, ...state.attempt, timer: state.timer });
-            dispatch({ type: 'FINALIZE_SUCCESS', payload: result });
-            navigate(`/app/results/${topicId}/${sectionType}/${quizId}`, { state: { attemptId: result.attemptId }, replace: true });
+
+            const { score } = await finalizeQuizAttempt({ topicId, sectionType, quizId, ...state.attempt, timer: state.timer });
+            
+            const results = {
+                score,
+                totalQuestions: state.quizContent.questions.length,
+                totalValidQuestions: state.quizContent.questions.length,
+                userAnswers: state.attempt.userAnswers,
+                timestamp: Date.now(),
+                quizName: state.quizContent.metadata?.fullNameForDisplay,
+            };
+
+            saveToLocalStorage(resultsKey, results);
+            
+            clearLocalStorage(localKey);
+            
+            dispatch({ type: 'FINALIZE_SUCCESS', payload: { attemptId: state.attempt.id } });
+            navigate(`/app/results/${topicId}/${sectionType}/${quizId}`, { replace: true });
         } catch (error) {
             dispatch({ type: 'SET_ERROR', payload: error });
         }
-    }, [state.attempt, state.timer, topicId, sectionType, quizId, navigate, isPreviewMode]);
+    }, [state.attempt, state.timer, state.quizContent, topicId, sectionType, quizId, navigate, isPreviewMode]);
 
     const startPreview = useCallback((settings) => {
         const duration = 180 * 60; 
@@ -544,7 +561,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     const closeRegistrationPrompt = useCallback(() => {
         dispatch({ type: 'CLOSE_REGISTRATION_PROMPT' });
     }, []);
-
 
     const actions = {
         selectOption, toggleCrossOff, nextQuestion,

@@ -297,7 +297,7 @@ exports.stripeWebhook = onRequest(
   }
 );
 
-// --- NEW v2 CALLABLE FUNCTIONS FOR QUIZ ATTEMPTS ---
+// --- v2 CALLABLE FUNCTIONS FOR QUIZ ATTEMPTS ---
 
 exports.saveInProgressAttempt = onCall({ cors: true }, async (request) => {
     if (!request.auth) {
@@ -306,7 +306,8 @@ exports.saveInProgressAttempt = onCall({ cors: true }, async (request) => {
     const { uid } = request.auth;
     const { topicId, sectionType, quizId, ...attemptState } = request.data;
 
-    const collectionRef = db.collection("users").doc(uid).collection("quizAttempts");
+    // Convert crossedOffOptions from arrays back to a format Firestore can handle if necessary
+    // (Firestore handles arrays of strings just fine, so this is mostly for consistency)
     const dataToSave = {
         ...attemptState,
         topicId,
@@ -316,6 +317,8 @@ exports.saveInProgressAttempt = onCall({ cors: true }, async (request) => {
         updatedAt: admin.firestore.FieldValue.serverTimestamp(),
     };
 
+    const collectionRef = db.collection("users").doc(uid).collection("quizAttempts");
+    
     if (attemptState.id) {
         logger.info(`Updating in-progress attempt: ${attemptState.id} for user: ${uid}`);
         await collectionRef.doc(attemptState.id).set(dataToSave, { merge: true });
@@ -369,6 +372,7 @@ exports.deleteInProgressAttempt = onCall({ cors: true }, async (request) => {
     return { success: true };
 });
 
+// --- THIS IS THE FULLY IMPLEMENTED FUNCTION ---
 exports.finalizeQuizAttempt = onCall({ cors: true }, async (request) => {
     if (!request.auth) {
         throw new HttpsError("unauthenticated", "You must be logged in to submit a quiz.");
@@ -380,15 +384,39 @@ exports.finalizeQuizAttempt = onCall({ cors: true }, async (request) => {
         throw new HttpsError("invalid-argument", "Cannot finalize an attempt without an ID.");
     }
 
-    // Find the storage path from the topic structure
-    const topicStructureFiles = await bucket.getFiles({ prefix: `data/${topicId}/` });
-    const quizFile = topicStructureFiles[0].find(file => file.name.includes(`${quizId}.json`) || file.name.includes(quizId.replace(/-/g, '_')));
+    // This logic fetches the entire topic structure to find the one file we need.
+    const [allFiles] = await bucket.getFiles({ prefix: `data/${topicId}/` });
+    
+    let targetStoragePath = null;
 
-    if (!quizFile) {
-        throw new HttpsError("not-found", `Could not find quiz data file for ${quizId}.`);
+    for (const file of allFiles) {
+        const parts = file.name.split("/").filter(Boolean);
+        if (parts.length < 4) continue;
+
+        let currentQuizId;
+        const fileName = parts[parts.length - 1];
+
+        if (parts[2] === "practice-test") {
+            const match = fileName.toLowerCase().match(/test_(\d+)/);
+            if (match) {
+                currentQuizId = `test-${match[1]}`;
+            }
+        } else if (parts[2] === "question-bank") {
+            currentQuizId = formatId(fileName);
+        }
+
+        if (currentQuizId === quizId) {
+            targetStoragePath = file.name;
+            break;
+        }
     }
 
-    const [quizDataBuffer] = await quizFile.download();
+    if (!targetStoragePath) {
+        logger.error("Could not find storage path for quiz.", { topicId, sectionType, quizId });
+        throw new HttpsError("not-found", `Could not find quiz data file for ${quizId}.`);
+    }
+    
+    const [quizDataBuffer] = await bucket.file(targetStoragePath).download();
     const quizData = JSON.parse(quizDataBuffer.toString());
 
     let score = 0;
@@ -399,8 +427,16 @@ exports.finalizeQuizAttempt = onCall({ cors: true }, async (request) => {
         }
     });
 
+    // We must ensure crossedOffOptions is serializable if it's still in Set format
+    const finalAttemptState = { ...attemptState };
+    if (finalAttemptState.crossedOffOptions) {
+         finalAttemptState.crossedOffOptions = Object.fromEntries(
+            Object.entries(finalAttemptState.crossedOffOptions).map(([key, value]) => [key, Array.from(value)])
+        );
+    }
+
     const finalData = {
-        ...attemptState,
+        ...finalAttemptState,
         topicId,
         sectionType,
         quizId,
