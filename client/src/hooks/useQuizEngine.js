@@ -77,7 +77,6 @@ const initialState = {
 };
 
 function quizReducer(state, action) {
-    // Reducer logic remains unchanged...
     switch (action.type) {
         case 'INITIALIZE_ATTEMPT':
             return {
@@ -210,6 +209,23 @@ function quizReducer(state, action) {
             }
             return state;
         }
+        
+        // --- THIS IS THE FIX (Part 1): Simplified Reducer Action ---
+        // This action now receives the PRE-CALCULATED time and simply updates the state.
+        case 'UPDATE_TIME_SPENT': {
+            const { questionIndex, time } = action.payload;
+            const existingTime = state.attempt.userTimeSpent[questionIndex] || 0;
+            return {
+                ...state,
+                attempt: {
+                    ...state.attempt,
+                    userTimeSpent: {
+                        ...state.attempt.userTimeSpent,
+                        [questionIndex]: existingTime + time,
+                    },
+                },
+            };
+        }
 
         case 'SELECT_OPTION': {
             const { questionIndex, optionLabel } = action.payload;
@@ -312,14 +328,13 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     const { currentUser } = useAuth();
     const navigate = useNavigate();
     
+    const questionStartTimeRef = useRef(null);
     const timerIntervalRef = useRef(null);
     const saveProgressToServerRef = useRef();
     const hasInitialized = useRef(false);
 
     useEffect(() => {
-        if (hasInitialized.current) {
-            return;
-        }
+        if (hasInitialized.current) return;
         hasInitialized.current = true;
 
         const initialize = async () => {
@@ -375,11 +390,17 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         };
     }, [topicId, sectionType, quizId, reviewAttemptId, currentUser, isPreviewMode]);
     
+    // This effect now ONLY resets the question start time when the quiz becomes active.
+    useEffect(() => {
+        if (state.status === 'active') {
+            questionStartTimeRef.current = Date.now();
+        }
+    }, [state.status, state.attempt.currentQuestionIndex]);
+    
     const saveProgressToServer = useCallback(async () => {
         if (isPreviewMode || !((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
             return;
         }
-        
         dispatch({ type: 'SET_IS_SAVING', payload: true });
         
         const serializableAttempt = { ...state.attempt };
@@ -390,11 +411,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         }
 
         await saveInProgressAttempt({ 
-            topicId, 
-            sectionType, 
-            quizId, 
-            ...serializableAttempt,
-            timer: state.timer
+            topicId, sectionType, quizId, ...serializableAttempt, timer: state.timer
         });
         setTimeout(() => dispatch({ type: 'SET_IS_SAVING', payload: false }), 500);
 
@@ -435,6 +452,26 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         return () => clearInterval(timerIntervalRef.current);
     }, [state.timer.isActive, state.status]);
     
+    // --- THIS IS THE FIX (Part 2): Navigation actions now handle time calculation ---
+    const recordTimeAndNavigate = useCallback((newIndex) => {
+        const totalQuestions = state.quizContent.questions.length;
+        if (newIndex >= 0 && newIndex < totalQuestions) {
+            // Calculate time spent on the current question
+            const timeNow = Date.now();
+            const startTime = questionStartTimeRef.current;
+            if (startTime) {
+                const elapsedSeconds = Math.round((timeNow - startTime) / 1000);
+                dispatch({ type: 'UPDATE_TIME_SPENT', payload: { questionIndex: state.attempt.currentQuestionIndex, time: elapsedSeconds }});
+            }
+            // Reset the timer for the new question
+            questionStartTimeRef.current = timeNow;
+
+            // Submit and navigate
+            dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
+            dispatch({ type: 'NAVIGATE_QUESTION', payload: newIndex });
+        }
+    }, [state.quizContent.questions.length, state.attempt.currentQuestionIndex]);
+
     const selectOption = useCallback((questionIndex, optionLabel) => {
         dispatch({ type: 'SELECT_OPTION', payload: { questionIndex, optionLabel } });
     }, []);
@@ -442,14 +479,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     const toggleCrossOff = useCallback((questionIndex, optionLabel) => {
         dispatch({ type: 'TOGGLE_CROSS_OFF', payload: { questionIndex, optionLabel } });
     }, []);
-
-    const navigateQuestion = useCallback((newIndex) => {
-        const totalQuestions = state.quizContent.questions.length;
-        if (newIndex >= 0 && newIndex < totalQuestions) {
-            dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
-            dispatch({ type: 'NAVIGATE_QUESTION', payload: newIndex });
-        }
-    }, [state.quizContent.questions.length]);
     
     const openReviewSummary = useCallback(async () => {
         if (isPreviewMode) {
@@ -457,40 +486,36 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
             return;
         }
 
+        // Record time for the final question before opening review
+        const timeNow = Date.now();
+        const startTime = questionStartTimeRef.current;
+        if (startTime) {
+            const elapsedSeconds = Math.round((timeNow - startTime) / 1000);
+            dispatch({ type: 'UPDATE_TIME_SPENT', payload: { questionIndex: state.attempt.currentQuestionIndex, time: elapsedSeconds }});
+        }
+        questionStartTimeRef.current = null; // Stop timer while in review
+
         dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
         await saveProgressToServer();
         dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
-    }, [saveProgressToServer, isPreviewMode]);
+    }, [saveProgressToServer, isPreviewMode, state.attempt.currentQuestionIndex]);
     
     const nextQuestion = useCallback(() => {
         if (isPreviewMode && state.attempt.currentQuestionIndex === 1) {
             dispatch({ type: 'PROMPT_REGISTRATION' });
             return;
         }
-
-        dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
-        const newIndex = state.attempt.currentQuestionIndex + 1;
-        if (newIndex < state.quizContent.questions.length) {
-            dispatch({ type: 'NAVIGATE_QUESTION', payload: newIndex });
-        } else {
-            openReviewSummary();
-        }
-    }, [state.attempt.currentQuestionIndex, state.quizContent.questions.length, openReviewSummary, isPreviewMode]);
+        recordTimeAndNavigate(state.attempt.currentQuestionIndex + 1);
+    }, [state.attempt.currentQuestionIndex, recordTimeAndNavigate, isPreviewMode]);
     
     const previousQuestion = useCallback(() => {
-        dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
-        const newIndex = state.attempt.currentQuestionIndex - 1;
-        if (newIndex >= 0) {
-            dispatch({ type: 'NAVIGATE_QUESTION', payload: newIndex });
-        }
-    }, [state.attempt.currentQuestionIndex]);
+        recordTimeAndNavigate(state.attempt.currentQuestionIndex - 1);
+    }, [state.attempt.currentQuestionIndex, recordTimeAndNavigate]);
     
     const jumpToQuestion = useCallback((index) => {
-        if (index >= 0 && index < state.quizContent.questions.length) {
-            dispatch({ type: 'NAVIGATE_QUESTION', payload: index });
-            dispatch({ type: 'CLOSE_REVIEW_SUMMARY' });
-        }
-    }, [state.quizContent.questions.length]);
+        recordTimeAndNavigate(index);
+        dispatch({ type: 'CLOSE_REVIEW_SUMMARY' });
+    }, [recordTimeAndNavigate]);
 
     const toggleMark = useCallback(() => {
         if (isPreviewMode) return;
@@ -515,7 +540,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         dispatch({ type: 'RESET_ATTEMPT', payload: { newAttemptId } });
     }, [state.attempt.id, topicId, sectionType, quizId, isPreviewMode]);
 
-    // --- THIS IS THE FIX ---
     const finalizeAttempt = useCallback(async () => {
         if (isPreviewMode) {
             navigate('/');
@@ -523,8 +547,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         }
         try {
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
-            // This helper function was defined outside the hook's scope, causing the error.
-            // Move it inside or define it where it's accessible.
             const getResultsKey = (tId, sType, qId) => `quizResults-${tId}-${sType}-${qId}`;
             const resultsKey = getResultsKey(topicId, sectionType, quizId);
 
@@ -564,7 +586,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
 
     const actions = {
         selectOption, toggleCrossOff, nextQuestion,
-        previousQuestion, navigateQuestion, jumpToQuestion,
+        previousQuestion, jumpToQuestion,
         toggleMark, toggleExhibit, toggleSolution, 
         toggleExplanation, openReviewSummary, closeReviewSummary, 
         resumeAttempt, startNewAttempt, finalizeAttempt,
