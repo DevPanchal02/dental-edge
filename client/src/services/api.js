@@ -9,20 +9,126 @@ const functions = getFunctions();
 // Callable function for creating Stripe checkout sessions
 const createCheckoutSessionCallable = httpsCallable(functions, 'createCheckoutSession');
 
+// --- NEW: Callable functions for quiz attempt management ---
+const saveInProgressAttemptCallable = httpsCallable(functions, 'saveInProgressAttempt');
+const getInProgressAttemptCallable = httpsCallable(functions, 'getInProgressAttempt');
+const finalizeQuizAttemptCallable = httpsCallable(functions, 'finalizeQuizAttempt');
+const deleteInProgressAttemptCallable = httpsCallable(functions, 'deleteInProgressAttempt'); // This was here
+const getQuizAttemptByIdCallable = httpsCallable(functions, 'getQuizAttemptById');
+const getCompletedAttemptsForQuizCallable = httpsCallable(functions, 'getCompletedAttemptsForQuiz');
+
+
 // --- Callable Function Exports ---
 
-// This function now accepts a tierId to create dynamic checkout sessions.
+/**
+ * Creates a Stripe checkout session for a given subscription tier.
+ * @param {string} tierId - The ID of the tier to purchase ('plus' or 'pro').
+ * @returns {Promise<string>} The Stripe session ID.
+ */
 export const createCheckoutSession = async (tierId) => {
   try {
-    // Pass the tierId in the data payload to the backend function
     const result = await createCheckoutSessionCallable({ tierId });
-    return result.data.id; // Returns the session ID from the backend
+    return result.data.id;
   } catch (error) {
     console.error("Error creating checkout session:", error);
-    // Pass a more useful error message up to the UI component
     throw new Error(error.message || "Could not create a checkout session.");
   }
 };
+
+// --- NEW: Quiz Attempt API Functions ---
+
+/**
+ * Saves the current state of a quiz as 'in-progress'.
+ * @param {object} attemptData - The current state of the quiz.
+ * @returns {Promise<string>} The attemptId of the saved document.
+ */
+export const saveInProgressAttempt = async (attemptData) => {
+  try {
+    const result = await saveInProgressAttemptCallable(attemptData);
+    return result.data.attemptId;
+  } catch (error) {
+    console.error("Error saving in-progress attempt:", error);
+    // Don't throw an error for background saves, just log it.
+    // Throwing could interrupt the user's flow.
+  }
+};
+
+/**
+ * Retrieves an 'in-progress' quiz attempt for the current user and a specific quiz.
+ * @param {object} quizIdentifiers - { topicId, sectionType, quizId }.
+ * @returns {Promise<object|null>} The attempt data if found, otherwise null.
+ */
+export const getInProgressAttempt = async ({ topicId, sectionType, quizId }) => {
+  try {
+    const result = await getInProgressAttemptCallable({ topicId, sectionType, quizId });
+    return result.data; // Will be null if not found, or the attempt object
+  } catch (error) {
+    console.error("Error getting in-progress attempt:", error);
+    throw new Error("Could not check for an existing quiz session.");
+  }
+};
+
+/**
+ * Finalizes and grades a quiz attempt.
+ * @param {object} attemptData - The final state of the quiz to be submitted.
+ * @returns {Promise<object>} An object containing the attemptId and the final score.
+ */
+export const finalizeQuizAttempt = async (attemptData) => {
+  try {
+    const result = await finalizeQuizAttemptCallable(attemptData);
+    return result.data; // { attemptId, score }
+  } catch (error) {
+    console.error("Error finalizing quiz attempt:", error);
+    throw new Error("There was an error submitting your quiz. Please try again.");
+  }
+};
+
+/**
+ * --- FIX: This is the missing function that caused the error. ---
+ * Deletes an 'in-progress' quiz attempt.
+ * @param {string} attemptId - The ID of the in-progress attempt document to delete.
+ * @returns {Promise<void>}
+ */
+export const deleteInProgressAttempt = async (attemptId) => {
+    try {
+        // The payload to the cloud function should be an object.
+        await deleteInProgressAttemptCallable({ attemptId });
+    } catch (error) {
+        console.error("Error deleting in-progress attempt:", error);
+        // We don't throw here as it's not a critical failure for the user experience.
+    }
+};
+
+/**
+ * Fetches a specific quiz attempt by its ID for review.
+ * @param {string} attemptId - The document ID of the quiz attempt.
+ * @returns {Promise<object>} The full quiz attempt data.
+ */
+export const getQuizAttemptById = async (attemptId) => {
+    try {
+        const result = await getQuizAttemptByIdCallable({ attemptId });
+        return result.data;
+    } catch (error) {
+        console.error(`Error fetching attempt ${attemptId}:`, error);
+        throw new Error("Could not load the specified quiz review.");
+    }
+};
+
+/**
+ * Fetches all completed attempts for a specific quiz.
+ * @param {object} quizIdentifiers - { topicId, sectionType, quizId }.
+ * @returns {Promise<Array>} A list of summarized completed attempts.
+ */
+export const getCompletedAttemptsForQuiz = async ({ topicId, sectionType, quizId }) => {
+    try {
+        const result = await getCompletedAttemptsForQuizCallable({ topicId, sectionType, quizId });
+        return result.data;
+    } catch (error) {
+        console.error(`Error fetching completed attempts for ${quizId}:`, error);
+        throw new Error("Could not load past results for this quiz.");
+    }
+};
+
 
 // --- HTTP Function Endpoints ---
 const API = {
@@ -37,7 +143,6 @@ const getAuthToken = async () => {
   if (!user) {
     return null;
   }
-  // Force refresh the token if it's about to expire to prevent auth errors.
   return await user.getIdToken(true);
 };
 
@@ -81,7 +186,6 @@ export const fetchQuizData = async (storagePath, isPreview = false) => {
     }
 
     const headers = {};
-    // Only add the Authorization header if the user is logged in (i.e., not a preview)
     if (!isPreview) {
       const token = await getAuthToken();
       if (!token) {
@@ -93,22 +197,19 @@ export const fetchQuizData = async (storagePath, isPreview = false) => {
     const response = await fetch(url.toString(), { headers });
 
     if (!response.ok) {
-      // Handle specific error codes from the backend
       if (response.status === 403) {
         const errorData = await response.json().catch(() => ({}));
         if (errorData.error === 'upgrade_required') {
           const upgradeError = new Error("Upgrade required to access this content.");
-          upgradeError.code = 'upgrade_required'; // Keep this code for the frontend to act on
+          upgradeError.code = 'upgrade_required';
           throw upgradeError;
         }
       }
-      // Throw a generic error for other issues
       throw new Error(`API Error (getQuizData): ${response.status} ${response.statusText}`);
     }
 
     return await response.json();
   } catch (error) {
-    // Log and re-throw the error to be handled by the calling component (e.g., QuizPage)
     console.error(`Failed to fetch quiz data for path ${storagePath}:`, error);
     throw error;
   }

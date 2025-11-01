@@ -1,0 +1,100 @@
+/* FILE: client/src/styles/ResumePromptModal.css */
+
+.rpm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3000;
+    animation: rpm-fadeIn 0.2s ease-out;
+}
+
+@keyframes rpm-fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.rpm-container {
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 520px;
+    padding: 32px;
+    box-sizing: border-box;
+    text-align: center;
+    animation: rpm-scaleIn 0.2s ease-out;
+}
+
+@keyframes rpm-scaleIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.rpm-header {
+    margin-bottom: 24px;
+}
+
+.rpm-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    color: var(--text-primary);
+}
+
+.rpm-subtitle {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+.rpm-actions {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+/* Base button style for both actions */
+.rpm-button {
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+/* Primary action button ("Yes, Resume") */
+.rpm-button.primary {
+    background-color: var(--bg-button-primary);
+    color: var(--text-on-button-primary);
+}
+
+.rpm-button.primary:hover {
+    background-color: var(--bg-button-primary-hover);
+}
+
+/* --- THIS IS THE FIX --- */
+/* New, clean style for the secondary action button ("Start Over") */
+.rpm-button.secondary {
+    background-color: transparent;
+    color: var(--text-accent);
+    border: 1px solid var(--border-primary);
+}
+
+.rpm-button.secondary:hover {
+    background-color: var(--bg-item-link-hover);
+    border-color: var(--text-accent);
+}
