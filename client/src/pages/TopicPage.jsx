@@ -1,164 +1,158 @@
 // FILE: client/src/pages/TopicPage.jsx
 
 import React, { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom'; // Import useNavigate
+import { useParams, useNavigate } from 'react-router-dom';
 import { fetchTopicData } from '../services/loader.js';
 import { useAuth } from '../context/AuthContext';
 import { useLayout } from '../context/LayoutContext';
-import UpgradePromptModal from '../components/UpgradePromptModal'; // Import the new modal
-import { FaLock, FaChevronRight } from 'react-icons/fa';
-import '../styles/TopicPage.css';
+
+import ContentSwitcher from '../components/topic/ContentSwitcher';
+import TestList from '../components/topic/TestList';
+import PerformanceGraph from '../components/topic/PerformanceGraph';
+import AnalyticsBreakdown from '../components/topic/AnalyticsBreakdown';
+import UpgradePromptModal from '../components/UpgradePromptModal';
+
+import '../styles/TopicPage.css'; 
 
 function TopicPage() {
-  const { topicId } = useParams();
-  const { isSidebarEffectivelyPinned } = useLayout();
-  const { userProfile } = useAuth();
-  const navigate = useNavigate(); // Hook for navigation
+    const { topicId } = useParams();
+    const { isSidebarEffectivelyPinned } = useLayout();
+    const { userProfile } = useAuth();
+    const navigate = useNavigate();
 
-  const [topicData, setTopicData] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-  
-  // --- NEW: State to control the upgrade modal ---
-  const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState(false);
+    const [topicData, setTopicData] = useState(null);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
+    const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState(false);
 
-  useEffect(() => {
-    let isMounted = true;
-    const loadData = async () => {
-      if (!topicId) {
-        setIsLoading(false);
-        return;
-      }
-      setIsLoading(true);
-      setError(null);
-      setTopicData(null);
-      
-      try {
-        const data = await fetchTopicData(topicId);
-        if (isMounted) {
-          setTopicData(data);
-          if (!data.practiceTests?.length && !data.questionBanks?.length) {
-              console.warn(`[TopicPage] No tests or banks found for ${topicId}`);
-          }
+    const [activeTab, setActiveTab] = useState('practice');
+    const [selectedItemId, setSelectedItemId] = useState(null);
+    const [selectedItemType, setSelectedItemType] = useState('practice');
+
+    useEffect(() => {
+        let isMounted = true;
+        const loadData = async () => {
+            if (!topicId) {
+                setIsLoading(false);
+                return;
+            }
+            setIsLoading(true);
+            setError(null);
+            setTopicData(null);
+            
+            try {
+                const data = await fetchTopicData(topicId);
+                if (isMounted) {
+                    setTopicData(data);
+                    if (data.practiceTests?.length > 0) {
+                        setSelectedItemId(data.practiceTests[0].id);
+                        setSelectedItemType('practice');
+                    }
+                }
+            } catch (err) {
+                if (isMounted) {
+                    setError(`Could not load data for topic: ${topicId}.`);
+                }
+            } finally {
+                if (isMounted) {
+                    setIsLoading(false);
+                }
+            }
+        };
+        loadData();
+
+        return () => { isMounted = false; };
+    }, [topicId]);
+
+    const handleTabChange = (tab) => {
+        setActiveTab(tab);
+        if (tab === 'practice' && topicData?.practiceTests?.length > 0) {
+            setSelectedItemId(topicData.practiceTests[0].id);
+            setSelectedItemType('practice');
+        } else if (tab === 'qbank' && topicData?.questionBanks?.[0]?.banks.length > 0) {
+            setSelectedItemId(topicData.questionBanks[0].banks[0].id);
+            setSelectedItemType('qbank');
+        } else {
+            setSelectedItemId(null);
+            setSelectedItemType(null);
         }
-      } catch (err) {
-         if (isMounted) {
-            setError(`Could not load data for topic: ${topicId}.`);
-         }
-      } finally {
-         if (isMounted) {
-            setIsLoading(false);
-         }
-      }
     };
-    loadData();
 
-    return () => { isMounted = false; };
+    const handleItemSelect = (itemId, itemType) => {
+        setSelectedItemId(itemId);
+        setSelectedItemType(itemType);
+    };
 
-  }, [topicId]);
+    // --- THIS IS THE FIX: New function to handle starting a quiz ---
+    const handleStartQuiz = (itemId, itemType) => {
+        navigate(`/app/quiz/${topicId}/${itemType}/${itemId}`);
+    };
 
-  const isLocked = (index) => {
-    if (!userProfile) {
-        return true; 
-    }
-    if (userProfile.tier === 'pro' || userProfile.tier === 'plus') {
-      return false;
-    }
-    // For a free user, only the first item (index 0) is unlocked.
-    if (userProfile.tier === 'free') {
-      return index > 0;
-    }
-    return true;
-  };
+    const handleLockedItemClick = () => {
+        setIsUpgradeModalOpen(true);
+    };
 
-  // --- NEW: Handler for clicking a locked item ---
-  const handleLockedItemClick = (e) => {
-    e.preventDefault(); // Prevent any default link behavior
-    setIsUpgradeModalOpen(true);
-  };
-
-  const renderItemList = (items, sectionType) => {
-    if (!items || items.length === 0) {
-      return <p className="no-items-message">No {sectionType === 'practice' ? 'practice tests' : 'items'} available for this topic.</p>;
-    }
-    return (
-      <ul className="item-list">
-        {items.map((item, index) => {
-          const locked = isLocked(index);
-          const destination = `/app/quiz/${topicId}/${sectionType}/${item.id}`;
-
-          // --- MODIFICATION: Render a Link for unlocked items, and a div with an onClick for locked items ---
-          const ItemComponent = locked ? 'div' : Link;
-          const props = locked 
-            ? { onClick: handleLockedItemClick, className: 'item-link' }
-            : { to: destination, className: 'item-link' };
-
-          return (
-            <li key={item.id} className={`list-item ${locked ? 'locked' : ''}`}>
-              <ItemComponent {...props}>
-                <span className="item-name">{item.name}</span>
-                <span className="item-indicator">
-                  {locked ? <FaLock /> : <FaChevronRight />}
-                </span>
-              </ItemComponent>
-            </li>
+    const topicPageDynamicStyle = {
+        marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
+        width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
+        padding: '20px 30px'
+    };
+    
+    // Combine and add sectionType to each item for easier handling
+    const itemsToShow = activeTab === 'practice' 
+        ? topicData?.practiceTests?.map(item => ({ ...item, sectionType: 'practice' }))
+        : topicData?.questionBanks?.flatMap(group => 
+            group.banks.map(bank => ({ ...bank, sectionType: 'qbank' }))
           );
-        })}
-      </ul>
+
+
+    if (isLoading) {
+        return <div className="page-loading">Loading Topic Details...</div>;
+    }
+
+    if (error) {
+        return <div className="page-error">{error}</div>;
+    }
+
+    if (!topicData) {
+        return <div className="page-info">Select a topic to begin.</div>;
+    }
+
+    return (
+        <>
+            <div className="topic-page-container" style={topicPageDynamicStyle}>
+                <h1 className="topic-title">{topicData.name}</h1>
+                
+                <div className="topic-page-grid">
+                    <div className="topic-list-panel">
+                        <ContentSwitcher activeTab={activeTab} onTabChange={handleTabChange} />
+                        <TestList
+                            items={itemsToShow}
+                            selectedItemId={selectedItemId}
+                            onItemSelect={handleItemSelect}
+                            onStartQuiz={handleStartQuiz} // Pass the new handler
+                            onLockedItemClick={handleLockedItemClick}
+                            userProfile={userProfile}
+                        />
+                    </div>
+                    <div className="topic-analytics-panel">
+                        {/* Add new class for consistent spacing */}
+                        <div className="analytics-component">
+                            <PerformanceGraph />
+                        </div>
+                        <div className="analytics-component">
+                            <AnalyticsBreakdown />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <UpgradePromptModal 
+                isOpen={isUpgradeModalOpen} 
+                onClose={() => setIsUpgradeModalOpen(false)} 
+            />
+        </>
     );
-  };
-
-
-  if (isLoading) {
-    return <div className="page-loading">Loading Topic Details...</div>;
-  }
-
-  if (error) {
-    return <div className="page-error">{error}</div>;
-  }
-
-  if (!topicData) {
-    return <div className="page-info">Select a topic to begin.</div>;
-  }
-
-  const topicPageDynamicStyle = {
-    marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
-    width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
-  };
-
-  return (
-    <>
-      <div className="topic-page-container" style={topicPageDynamicStyle}>
-        <h1 className="topic-title">{topicData.name}</h1>
-        {error && <div className="page-error" style={{marginBottom: '20px', maxWidth:'800px'}}>{error}</div>}
-
-        <section className="topic-section">
-          <h2 className="section-title">Practice Tests</h2>
-          {renderItemList(topicData.practiceTests, 'practice')}
-        </section>
-
-        <section className="topic-section">
-          <h2 className="section-title">Question Banks</h2>
-          {topicData.questionBanks && topicData.questionBanks.length > 0 ? (
-            topicData.questionBanks.map((categoryGroup) => (
-              <div key={categoryGroup.category} className="qbank-category">
-                <h3 className="category-title">{categoryGroup.category}</h3>
-                {renderItemList(categoryGroup.banks, 'qbank')}
-              </div>
-            ))
-          ) : (
-            <p className="no-items-message">No question banks found for this topic.</p>
-          )}
-        </section>
-      </div>
-
-      {/* --- NEW: Render the modal conditionally --- */}
-      <UpgradePromptModal 
-        isOpen={isUpgradeModalOpen} 
-        onClose={() => setIsUpgradeModalOpen(false)} 
-      />
-    </>
-  );
 }
 
 export default TopicPage;

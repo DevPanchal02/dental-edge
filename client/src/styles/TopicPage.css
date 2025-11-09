@@ -1,116 +1,187 @@
 /* FILE: client/src/styles/TopicPage.css */
+
+/* --- Main Container --- */
+/* Uses Flexbox to control the vertical layout and spacing */
 .topic-page-container {
-  padding: 20px 30px;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
   height: 100%;
-  overflow-y: auto;
   box-sizing: border-box;
-  position: relative;
   transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
 }
 
+/* --- Title Styles --- */
+/* Reduced bottom margin to tighten the layout */
 .topic-title {
   color: var(--text-accent);
-  margin-bottom: 25px;
+  margin-bottom: 15px; /* Reduced from 25px */
   border-bottom: 1px solid var(--border-primary);
   padding-bottom: 15px;
   font-weight: 500;
   font-size: 1.8em;
+  flex-shrink: 0;
 }
 
-.topic-section {
-  margin-bottom: 35px;
+/* --- Grid Layout Styles --- */
+.topic-page-grid {
+    display: grid;
+    grid-template-columns: 420px 1fr; 
+    gap: 25px;
+    flex-grow: 1; 
+    overflow: hidden;
 }
 
-.section-title {
-  color: var(--text-primary);
-  font-size: 1.4em;
-  margin-bottom: 15px;
-  font-weight: 500;
+.topic-list-panel {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
 }
 
-.qbank-category {
-  margin-bottom: 20px;
-  padding-left: 20px;
-  border-left: 3px solid var(--border-primary);
+.topic-analytics-panel {
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 15px 5px 5px; /* Removed top padding */
 }
 
-.category-title {
-  color: var(--text-secondary);
-  font-size: 1.2em;
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-weight: 500;
+/* Scrollbar styling */
+.topic-analytics-panel::-webkit-scrollbar { width: 8px; }
+.topic-analytics-panel::-webkit-scrollbar-track { background: transparent; }
+.topic-analytics-panel::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 4px;
+  border: 2px solid var(--bg-primary);
+}
+.topic-analytics-panel { 
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-bg) var(--bg-primary);
 }
 
+/* --- Content Switcher Styles --- */
+.content-switcher {
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid var(--border-primary);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.content-switcher-button {
+    flex: 1;
+    padding: 10px 15px;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-align: center;
+}
+
+.content-switcher-button.active { color: var(--text-primary); }
+.content-switcher-button:hover:not(.active) { color: var(--text-primary); }
+
+.content-switcher-indicator {
+    position: absolute;
+    bottom: 0;
+    height: 3px;
+    background-color: var(--text-accent);
+    border-radius: 3px;
+    transition: left 0.3s cubic-bezier(0.65, 0, 0.35, 1), 
+                width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+/* --- List & Item Styles --- */
 .item-list {
   list-style: none;
-  padding: 0;
+  padding: 10px; /* Add padding around the entire list */
   margin: 0;
+  overflow-y: auto; /* Allow this list to scroll internally */
+  flex-grow: 1; /* Make list take up remaining vertical space */
 }
 
 .list-item {
   margin-bottom: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  border: 1px solid transparent;
   background-color: var(--bg-item-link);
-  border-radius: 5px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--border-primary);
 }
 
 .no-items-message {
   color: var(--text-secondary);
   font-style: italic;
-  margin-left: 10px;
-  padding: 10px 0;
+  padding: 20px;
+  text-align: center;
   font-size: 0.9em;
 }
 
-/* --- NEW & UPDATED STYLES FOR LIST ITEMS --- */
 .item-link {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* This creates space between name and indicator */
-  padding: 12px 18px;
-  color: var(--text-item-link);
+  justify-content: space-between;
+  padding: 14px 18px;
+  color: var(--text-primary);
   text-decoration: none;
   font-size: 1em;
   gap: 15px;
+  cursor: pointer;
 }
 
 .item-name {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-weight: 500;
 }
 
 .item-indicator {
-  flex-shrink: 0; /* Prevents the indicator from shrinking */
+  flex-shrink: 0;
   color: var(--text-secondary);
-  font-size: 1em; /* Adjusted for better visual balance between icons */
+  font-size: 1em;
   transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.item-indicator svg { /* Ensures both icons are aligned nicely */
-  vertical-align: middle;
+  padding: 4px; /* Make the arrow a larger click target */
 }
 
 .list-item:not(.locked):hover {
   background-color: var(--bg-item-link-hover);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.07); 
 }
 
-.list-item:not(.locked):hover .item-indicator {
-  transform: translateX(4px);
-  color: var(--text-accent);
+/* --- THIS IS THE FIX: New Hover States --- */
+/* State 1: Hovering over any non-selected, unlocked item */
+.list-item:not(.selected):not(.locked):hover {
+    border-color: var(--border-primary);
+}
+
+/* State 2: A selected item gets a persistent, stronger border */
+.list-item.selected {
+    border-color: var(--text-accent);
+}
+
+/* State 3: Hovering over an *already selected* item */
+.list-item.selected:not(.locked):hover {
+    background-color: color-mix(in srgb, var(--text-accent) 10%, var(--bg-item-link-hover));
+}
+
+.item-indicator:hover {
+    color: var(--text-accent);
+    transform: translateX(4px);
 }
 
 .list-item.locked .item-link {
   color: var(--text-secondary);
+  cursor: not-allowed;
 }
 
 .list-item.locked:hover {
   background-color: var(--bg-item-link-hover);
-  cursor: pointer;
+}
+
+/* NEW: Reduced margin for analytics components */
+.analytics-component {
+    margin-bottom: 25px;
 }
