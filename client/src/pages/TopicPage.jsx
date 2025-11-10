@@ -1,9 +1,9 @@
 // FILE: client/src/pages/TopicPage.jsx
 
-import React, { useState, useEffect, useMemo } from 'react'; // Import useMemo
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchTopicData, getQuizData } from '../services/loader.js';
-import { getCompletedAttemptsForQuiz } from '../services/api.js';
+import { fetchTopicData } from '../services/loader.js';
+import { getCompletedAttemptsForQuiz, getQuizAnalytics } from '../services/api.js';
 import { useAuth } from '../context/AuthContext';
 import { useLayout } from '../context/LayoutContext';
 
@@ -34,8 +34,6 @@ function TopicPage() {
     const [analyticsData, setAnalyticsData] = useState({ questions: [], attempts: [] });
     const [isAnalyticsLoading, setIsAnalyticsLoading] = useState(false);
 
-    // --- THIS IS THE FIX ---
-    // We create the dynamic style object, just like in QuizPage.jsx
     const topicPageDynamicStyle = useMemo(() => ({
         marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
         width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
@@ -83,8 +81,10 @@ function TopicPage() {
         const loadAnalytics = async () => {
             setIsAnalyticsLoading(true);
             try {
+                // --- THIS IS THE FIX ---
+                // We now call our new, fast getQuizAnalytics function instead of the slow getQuizData.
                 const [questions, attempts] = await Promise.all([
-                    getQuizData(topicId, selectedItemType, selectedItemId),
+                    getQuizAnalytics({ topicId, sectionType: selectedItemType, quizId: selectedItemId }),
                     getCompletedAttemptsForQuiz({ topicId, sectionType: selectedItemType, quizId: selectedItemId })
                 ]);
                 setAnalyticsData({ questions, attempts });
@@ -152,8 +152,6 @@ function TopicPage() {
 
     return (
         <>
-            {/* --- THIS IS THE FIX --- */}
-            {/* The dynamic style is applied here, to the top-level container */}
             <div className="topic-page-container" style={topicPageDynamicStyle}>
                 <h1 className="topic-title">{topicData.name}</h1>
                 

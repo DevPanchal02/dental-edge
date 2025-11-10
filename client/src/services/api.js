@@ -6,16 +6,14 @@ import { getFunctions, httpsCallable } from 'firebase/functions';
 // --- Firebase Cloud Functions Setup ---
 const functions = getFunctions();
 
-// Callable function for creating Stripe checkout sessions
 const createCheckoutSessionCallable = httpsCallable(functions, 'createCheckoutSession');
-
-// --- NEW: Callable functions for quiz attempt management ---
 const saveInProgressAttemptCallable = httpsCallable(functions, 'saveInProgressAttempt');
 const getInProgressAttemptCallable = httpsCallable(functions, 'getInProgressAttempt');
 const finalizeQuizAttemptCallable = httpsCallable(functions, 'finalizeQuizAttempt');
-const deleteInProgressAttemptCallable = httpsCallable(functions, 'deleteInProgressAttempt'); // This was here
+const deleteInProgressAttemptCallable = httpsCallable(functions, 'deleteInProgressAttempt');
 const getQuizAttemptByIdCallable = httpsCallable(functions, 'getQuizAttemptById');
 const getCompletedAttemptsForQuizCallable = httpsCallable(functions, 'getCompletedAttemptsForQuiz');
+const getQuizAnalyticsCallable = httpsCallable(functions, 'getQuizAnalytics');
 
 
 // --- Callable Function Exports ---
@@ -35,8 +33,6 @@ export const createCheckoutSession = async (tierId) => {
   }
 };
 
-// --- NEW: Quiz Attempt API Functions ---
-
 /**
  * Saves the current state of a quiz as 'in-progress'.
  * @param {object} attemptData - The current state of the quiz.
@@ -48,8 +44,6 @@ export const saveInProgressAttempt = async (attemptData) => {
     return result.data.attemptId;
   } catch (error) {
     console.error("Error saving in-progress attempt:", error);
-    // Don't throw an error for background saves, just log it.
-    // Throwing could interrupt the user's flow.
   }
 };
 
@@ -61,7 +55,7 @@ export const saveInProgressAttempt = async (attemptData) => {
 export const getInProgressAttempt = async ({ topicId, sectionType, quizId }) => {
   try {
     const result = await getInProgressAttemptCallable({ topicId, sectionType, quizId });
-    return result.data; // Will be null if not found, or the attempt object
+    return result.data;
   } catch (error) {
     console.error("Error getting in-progress attempt:", error);
     throw new Error("Could not check for an existing quiz session.");
@@ -76,7 +70,7 @@ export const getInProgressAttempt = async ({ topicId, sectionType, quizId }) => 
 export const finalizeQuizAttempt = async (attemptData) => {
   try {
     const result = await finalizeQuizAttemptCallable(attemptData);
-    return result.data; // { attemptId, score }
+    return result.data;
   } catch (error) {
     console.error("Error finalizing quiz attempt:", error);
     throw new Error("There was an error submitting your quiz. Please try again.");
@@ -84,18 +78,15 @@ export const finalizeQuizAttempt = async (attemptData) => {
 };
 
 /**
- * --- FIX: This is the missing function that caused the error. ---
  * Deletes an 'in-progress' quiz attempt.
  * @param {string} attemptId - The ID of the in-progress attempt document to delete.
  * @returns {Promise<void>}
  */
 export const deleteInProgressAttempt = async (attemptId) => {
     try {
-        // The payload to the cloud function should be an object.
         await deleteInProgressAttemptCallable({ attemptId });
     } catch (error) {
         console.error("Error deleting in-progress attempt:", error);
-        // We don't throw here as it's not a critical failure for the user experience.
     }
 };
 
@@ -126,6 +117,21 @@ export const getCompletedAttemptsForQuiz = async ({ topicId, sectionType, quizId
     } catch (error) {
         console.error(`Error fetching completed attempts for ${quizId}:`, error);
         throw new Error("Could not load past results for this quiz.");
+    }
+};
+
+/**
+ * Fetches lightweight analytics data for a quiz.
+ * @param {object} quizIdentifiers - { topicId, sectionType, quizId }.
+ * @returns {Promise<Array>} An array of question analytics objects.
+ */
+export const getQuizAnalytics = async ({ topicId, sectionType, quizId }) => {
+    try {
+        const result = await getQuizAnalyticsCallable({ topicId, sectionType, quizId });
+        return result.data;
+    } catch (error) {
+        console.error(`Error fetching analytics for ${quizId}:`, error);
+        throw new Error("Could not load quiz analytics.");
     }
 };
 

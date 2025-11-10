@@ -473,9 +473,6 @@ exports.getCompletedAttemptsForQuiz = onCall({ cors: true }, async (request) => 
 
         const attempts = querySnapshot.docs.map(doc => {
             const data = doc.data();
-            
-            // --- THIS IS THE FIX ---
-            // Safely access the timestamp and fall back to createdAt if updatedAt doesn't exist.
             const timestamp = data.updatedAt || data.createdAt;
             const completedAt = timestamp ? timestamp._seconds * 1000 : Date.now();
             
@@ -496,5 +493,57 @@ exports.getCompletedAttemptsForQuiz = onCall({ cors: true }, async (request) => 
     } catch (error) {
         logger.error("Error fetching completed attempts:", { uid, quizId, error: error.message });
         throw new HttpsError("internal", "An unexpected error occurred while fetching attempts.");
+    }
+});
+
+// --- THIS IS THE NEW FUNCTION ---
+exports.getQuizAnalytics = onCall({ cors: true }, async (request) => {
+    if (!request.auth) {
+        throw new HttpsError("unauthenticated", "You must be logged in to view analytics.");
+    }
+
+    const { topicId, sectionType, quizId } = request.data;
+    if (!topicId || !sectionType || !quizId) {
+        throw new HttpsError("invalid-argument", "Missing required quiz identifiers.");
+    }
+
+    const [allFiles] = await bucket.getFiles({ prefix: `data/${topicId}/` });
+    let targetStoragePath = null;
+    for (const file of allFiles) {
+        const parts = file.name.split("/").filter(Boolean);
+        if (parts.length < 4) continue;
+        let currentQuizId;
+        const fileName = parts[parts.length - 1];
+        if (parts[2] === "practice-test") {
+            const match = fileName.toLowerCase().match(/test_(\d+)/);
+            if (match) currentQuizId = `test-${match[1]}`;
+        } else if (parts[2] === "question-bank") {
+            currentQuizId = formatId(fileName);
+        }
+        if (currentQuizId === quizId) {
+            targetStoragePath = file.name;
+            break;
+        }
+    }
+
+    if (!targetStoragePath) {
+        logger.error("Could not find storage path for analytics.", { topicId, sectionType, quizId });
+        throw new HttpsError("not-found", `Could not find quiz data file for ${quizId}.`);
+    }
+
+    try {
+        const [quizDataBuffer] = await bucket.file(targetStoragePath).download();
+        const fullQuizData = JSON.parse(quizDataBuffer.toString());
+
+        const analyticsData = fullQuizData.map(q => ({
+            analytics: q.analytics,
+            category: q.category,
+            options: q.options.map(opt => ({ label: opt.label, is_correct: opt.is_correct }))
+        }));
+
+        return analyticsData;
+    } catch (error) {
+        logger.error("Error reading or processing quiz data for analytics", { error: error.message });
+        throw new HttpsError("internal", "Failed to retrieve quiz analytics.");
     }
 });
