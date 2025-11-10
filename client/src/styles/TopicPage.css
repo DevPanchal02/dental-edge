@@ -1,25 +1,28 @@
 /* FILE: client/src/styles/TopicPage.css */
 
 /* --- Main Container --- */
-/* Uses Flexbox to control the vertical layout and spacing */
 .topic-page-container {
   height: 100%;
   box-sizing: border-box;
   transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
+  padding: 0; 
 }
 
 /* --- Title Styles --- */
-/* Reduced bottom margin to tighten the layout */
 .topic-title {
   color: var(--text-accent);
-  margin-bottom: 15px; /* Reduced from 25px */
+  margin-top: 0;
+  margin-bottom: 15px;
   border-bottom: 1px solid var(--border-primary);
   padding-bottom: 15px;
   font-weight: 500;
   font-size: 1.8em;
   flex-shrink: 0;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* --- Grid Layout Styles --- */
@@ -29,44 +32,40 @@
     gap: 25px;
     flex-grow: 1; 
     overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
 }
 
+/* --- List Panel --- */
 .topic-list-panel {
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    background-color: var(--bg-secondary);
-    border-radius: 8px;
-    border: 1px solid var(--border-primary);
 }
 
+/* --- Analytics Panel --- */
 .topic-analytics-panel {
     height: 100%;
     overflow-y: auto;
-    padding: 0 15px 5px 5px; /* Removed top padding */
+    padding-right: 5px;
 }
 
-/* Scrollbar styling */
 .topic-analytics-panel::-webkit-scrollbar { width: 8px; }
 .topic-analytics-panel::-webkit-scrollbar-track { background: transparent; }
 .topic-analytics-panel::-webkit-scrollbar-thumb {
   background-color: var(--scrollbar-thumb-bg);
   border-radius: 4px;
-  border: 2px solid var(--bg-primary);
-}
-.topic-analytics-panel { 
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb-bg) var(--bg-primary);
 }
 
 /* --- Content Switcher Styles --- */
 .content-switcher {
     display: flex;
-    padding: 10px;
-    border-bottom: 1px solid var(--border-primary);
     position: relative;
     flex-shrink: 0;
+    border-bottom: 1px solid var(--border-primary);
+    margin-bottom: 15px;
 }
 
 .content-switcher-button {
@@ -87,7 +86,7 @@
 
 .content-switcher-indicator {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     height: 3px;
     background-color: var(--text-accent);
     border-radius: 3px;
@@ -98,18 +97,35 @@
 /* --- List & Item Styles --- */
 .item-list {
   list-style: none;
-  padding: 10px; /* Add padding around the entire list */
+  padding: 0;
   margin: 0;
-  overflow-y: auto; /* Allow this list to scroll internally */
-  flex-grow: 1; /* Make list take up remaining vertical space */
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 12px;
+}
+
+.item-list::-webkit-scrollbar {
+  width: 3px;
+}
+.item-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.item-list::-webkit-scrollbar-thumb {
+  background-color: var(--border-primary);
+  border-radius: 3px;
+}
+.item-list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-primary) transparent;
 }
 
 .list-item {
   margin-bottom: 8px;
   border-radius: 6px;
   transition: background-color 0.2s ease, border-color 0.2s ease;
-  border: 1px solid transparent;
-  background-color: var(--bg-item-link);
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-secondary);
+  cursor: pointer;
 }
 
 .no-items-message {
@@ -129,7 +145,6 @@
   text-decoration: none;
   font-size: 1em;
   gap: 15px;
-  cursor: pointer;
 }
 
 .item-name {
@@ -144,44 +159,54 @@
   color: var(--text-secondary);
   font-size: 1em;
   transition: transform 0.2s ease, color 0.2s ease;
-  padding: 4px; /* Make the arrow a larger click target */
+  padding: 4px;
 }
 
-.list-item:not(.locked):hover {
-  background-color: var(--bg-item-link-hover);
-}
+/* --- THIS IS THE NEW, SUBTLE DESIGN --- */
 
-/* --- THIS IS THE FIX: New Hover States --- */
-/* State 1: Hovering over any non-selected, unlocked item */
+/* State 1: Hovering over an UNSELECTED item */
 .list-item:not(.selected):not(.locked):hover {
-    border-color: var(--border-primary);
+    background-color: var(--bg-item-link-hover);
+    border-color: var(--border-primary); /* Keep border subtle */
 }
 
-/* State 2: A selected item gets a persistent, stronger border */
+/* State 2: The item is SELECTED (no hover) */
 .list-item.selected {
     border-color: var(--text-accent);
+    background-color: var(--bg-item-link-hover);
 }
 
-/* State 3: Hovering over an *already selected* item */
+/* State 3: Hovering over an ALREADY SELECTED item */
+/* We apply a subtle inner shadow to indicate it's "pressable" again */
 .list-item.selected:not(.locked):hover {
-    background-color: color-mix(in srgb, var(--text-accent) 10%, var(--bg-item-link-hover));
+    box-shadow: inset 0 0 0 1px var(--text-accent);
 }
 
+/* State 4: The arrow on a SELECTED item turns green */
+.list-item.selected .item-indicator {
+    color: var(--text-accent);
+}
+
+/* State 5: Independent hover effect for ANY arrow */
 .item-indicator:hover {
     color: var(--text-accent);
-    transform: translateX(4px);
+    transform: translateX(3px); /* A more subtle transform */
+}
+
+/* Locked item styles */
+.list-item.locked {
+  cursor: not-allowed;
 }
 
 .list-item.locked .item-link {
   color: var(--text-secondary);
-  cursor: not-allowed;
 }
 
+/* On hover, a locked item just gets a simple background change */
 .list-item.locked:hover {
   background-color: var(--bg-item-link-hover);
 }
 
-/* NEW: Reduced margin for analytics components */
 .analytics-component {
     margin-bottom: 25px;
 }

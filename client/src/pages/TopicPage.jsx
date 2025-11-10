@@ -83,7 +83,6 @@ function TopicPage() {
         setSelectedItemType(itemType);
     };
 
-    // --- THIS IS THE FIX: New function to handle starting a quiz ---
     const handleStartQuiz = (itemId, itemType) => {
         navigate(`/app/quiz/${topicId}/${itemType}/${itemId}`);
     };
@@ -95,10 +94,9 @@ function TopicPage() {
     const topicPageDynamicStyle = {
         marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
         width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
-        padding: '20px 30px'
+        
     };
     
-    // Combine and add sectionType to each item for easier handling
     const itemsToShow = activeTab === 'practice' 
         ? topicData?.practiceTests?.map(item => ({ ...item, sectionType: 'practice' }))
         : topicData?.questionBanks?.flatMap(group => 
@@ -124,19 +122,21 @@ function TopicPage() {
                 <h1 className="topic-title">{topicData.name}</h1>
                 
                 <div className="topic-page-grid">
+                    {/* --- THIS IS THE FIX --- */}
+                    {/* The `topic-list-panel` div no longer has styling; it's just a container. */}
+                    {/* The Switcher and List are now distinct, floating elements. */}
                     <div className="topic-list-panel">
                         <ContentSwitcher activeTab={activeTab} onTabChange={handleTabChange} />
                         <TestList
                             items={itemsToShow}
                             selectedItemId={selectedItemId}
                             onItemSelect={handleItemSelect}
-                            onStartQuiz={handleStartQuiz} // Pass the new handler
+                            onStartQuiz={handleStartQuiz}
                             onLockedItemClick={handleLockedItemClick}
                             userProfile={userProfile}
                         />
                     </div>
                     <div className="topic-analytics-panel">
-                        {/* Add new class for consistent spacing */}
                         <div className="analytics-component">
                             <PerformanceGraph />
                         </div>

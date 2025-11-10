@@ -4,27 +4,27 @@
   height: 100vh;
   position: relative;
   background-color: var(--bg-primary);
-  display: flex; /* Add flex to layout sidebar and main content */
+  display: flex;
 }
 
 .main-content {
   flex-grow: 1;
-  padding: 30px 40px;
+  /* --- THIS IS THE FIX --- */
+  /* The padding is reduced from 20px 30px to 10px 20px */
+  padding: 10px 20px;
   overflow-y: auto;
   height: 100vh;
   box-sizing: border-box;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  /* No margin-left here; QuizPage will handle its own shift */
-  position: relative; /* For potential absolute children within main content, if any */
-  /* transition: margin-left 0.3s ease-in-out; */ /* Not needed if QuizPage handles its margin */
+  position: relative;
 }
-
 
 .main-content > .page-loading,
 .main-content > .page-error,
 .main-content > .page-info {
-    height: calc(100% - 60px); 
+    /* Adjust height calculation to account for new padding */
+    height: calc(100% - 20px); 
     display: flex;
     justify-content: center;
     align-items: center;
