@@ -305,9 +305,7 @@ exports.saveInProgressAttempt = onCall({ cors: true }, async (request) => {
     }
     const { uid } = request.auth;
     const { topicId, sectionType, quizId, ...attemptState } = request.data;
-
-    // Convert crossedOffOptions from arrays back to a format Firestore can handle if necessary
-    // (Firestore handles arrays of strings just fine, so this is mostly for consistency)
+    
     const dataToSave = {
         ...attemptState,
         topicId,
@@ -372,7 +370,6 @@ exports.deleteInProgressAttempt = onCall({ cors: true }, async (request) => {
     return { success: true };
 });
 
-// --- THIS IS THE FULLY IMPLEMENTED FUNCTION ---
 exports.finalizeQuizAttempt = onCall({ cors: true }, async (request) => {
     if (!request.auth) {
         throw new HttpsError("unauthenticated", "You must be logged in to submit a quiz.");
@@ -383,8 +380,7 @@ exports.finalizeQuizAttempt = onCall({ cors: true }, async (request) => {
     if (!attemptState.id) {
         throw new HttpsError("invalid-argument", "Cannot finalize an attempt without an ID.");
     }
-
-    // This logic fetches the entire topic structure to find the one file we need.
+    
     const [allFiles] = await bucket.getFiles({ prefix: `data/${topicId}/` });
     
     let targetStoragePath = null;
@@ -427,7 +423,6 @@ exports.finalizeQuizAttempt = onCall({ cors: true }, async (request) => {
         }
     });
 
-    // We must ensure crossedOffOptions is serializable if it's still in Set format
     const finalAttemptState = { ...attemptState };
     if (finalAttemptState.crossedOffOptions) {
          finalAttemptState.crossedOffOptions = Object.fromEntries(
@@ -450,4 +445,56 @@ exports.finalizeQuizAttempt = onCall({ cors: true }, async (request) => {
     await db.collection("users").doc(uid).collection("quizAttempts").doc(attemptState.id).set(finalData, { merge: true });
 
     return { attemptId: attemptState.id, score: score };
+});
+
+exports.getCompletedAttemptsForQuiz = onCall({ cors: true }, async (request) => {
+    if (!request.auth) {
+        throw new HttpsError("unauthenticated", "You must be logged in to view attempts.");
+    }
+    const { uid } = request.auth;
+    const { topicId, sectionType, quizId } = request.data;
+
+    if (!topicId || !sectionType || !quizId) {
+        throw new HttpsError("invalid-argument", "Missing required quiz identifiers.");
+    }
+
+    try {
+        const querySnapshot = await db.collection("users").doc(uid).collection("quizAttempts")
+            .where("topicId", "==", topicId)
+            .where("sectionType", "==", sectionType)
+            .where("quizId", "==", quizId)
+            .where("status", "==", "completed")
+            .orderBy("updatedAt", "desc")
+            .get();
+
+        if (querySnapshot.empty) {
+            return [];
+        }
+
+        const attempts = querySnapshot.docs.map(doc => {
+            const data = doc.data();
+            
+            // --- THIS IS THE FIX ---
+            // Safely access the timestamp and fall back to createdAt if updatedAt doesn't exist.
+            const timestamp = data.updatedAt || data.createdAt;
+            const completedAt = timestamp ? timestamp._seconds * 1000 : Date.now();
+            
+            return {
+                id: doc.id,
+                score: data.score,
+                totalQuestions: data.totalQuestions,
+                completedAt: completedAt,
+                userAnswers: data.userAnswers,
+                topicId: data.topicId,
+                sectionType: data.sectionType,
+                quizId: data.quizId,
+            };
+        });
+
+        return attempts;
+
+    } catch (error) {
+        logger.error("Error fetching completed attempts:", { uid, quizId, error: error.message });
+        throw new HttpsError("internal", "An unexpected error occurred while fetching attempts.");
+    }
 });

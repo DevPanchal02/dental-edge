@@ -1,8 +1,9 @@
 // FILE: client/src/pages/TopicPage.jsx
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react'; // Import useMemo
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchTopicData } from '../services/loader.js';
+import { fetchTopicData, getQuizData } from '../services/loader.js';
+import { getCompletedAttemptsForQuiz } from '../services/api.js';
 import { useAuth } from '../context/AuthContext';
 import { useLayout } from '../context/LayoutContext';
 
@@ -11,6 +12,7 @@ import TestList from '../components/topic/TestList';
 import PerformanceGraph from '../components/topic/PerformanceGraph';
 import AnalyticsBreakdown from '../components/topic/AnalyticsBreakdown';
 import UpgradePromptModal from '../components/UpgradePromptModal';
+import LoadingSpinner from '../components/LoadingSpinner';
 
 import '../styles/TopicPage.css'; 
 
@@ -28,6 +30,16 @@ function TopicPage() {
     const [activeTab, setActiveTab] = useState('practice');
     const [selectedItemId, setSelectedItemId] = useState(null);
     const [selectedItemType, setSelectedItemType] = useState('practice');
+    
+    const [analyticsData, setAnalyticsData] = useState({ questions: [], attempts: [] });
+    const [isAnalyticsLoading, setIsAnalyticsLoading] = useState(false);
+
+    // --- THIS IS THE FIX ---
+    // We create the dynamic style object, just like in QuizPage.jsx
+    const topicPageDynamicStyle = useMemo(() => ({
+        marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
+        width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
+    }), [isSidebarEffectivelyPinned]);
 
     useEffect(() => {
         let isMounted = true;
@@ -47,22 +59,47 @@ function TopicPage() {
                     if (data.practiceTests?.length > 0) {
                         setSelectedItemId(data.practiceTests[0].id);
                         setSelectedItemType('practice');
+                    } else {
+                        setIsLoading(false);
                     }
                 }
             } catch (err) {
-                if (isMounted) {
-                    setError(`Could not load data for topic: ${topicId}.`);
-                }
+                if (isMounted) setError(`Could not load data for topic: ${topicId}.`);
             } finally {
-                if (isMounted) {
-                    setIsLoading(false);
-                }
+                if (isMounted) setIsLoading(false);
             }
         };
         loadData();
 
         return () => { isMounted = false; };
     }, [topicId]);
+
+    useEffect(() => {
+        if (!selectedItemId || !selectedItemType) {
+            setAnalyticsData({ questions: [], attempts: [] });
+            return;
+        }
+
+        const loadAnalytics = async () => {
+            setIsAnalyticsLoading(true);
+            try {
+                const [questions, attempts] = await Promise.all([
+                    getQuizData(topicId, selectedItemType, selectedItemId),
+                    getCompletedAttemptsForQuiz({ topicId, sectionType: selectedItemType, quizId: selectedItemId })
+                ]);
+                setAnalyticsData({ questions, attempts });
+            } catch (err) {
+                console.error("Error fetching analytics data:", err);
+                setError("Could not load analytics for the selected item.");
+                setAnalyticsData({ questions: [], attempts: [] });
+            } finally {
+                setIsAnalyticsLoading(false);
+            }
+        };
+
+        loadAnalytics();
+    }, [selectedItemId, selectedItemType, topicId]);
+
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
@@ -91,21 +128,18 @@ function TopicPage() {
         setIsUpgradeModalOpen(true);
     };
 
-    const topicPageDynamicStyle = {
-        marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
-        width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
-        
-    };
-    
     const itemsToShow = activeTab === 'practice' 
         ? topicData?.practiceTests?.map(item => ({ ...item, sectionType: 'practice' }))
         : topicData?.questionBanks?.flatMap(group => 
             group.banks.map(bank => ({ ...bank, sectionType: 'qbank' }))
           );
-
+    
+    const mostRecentAttempt = analyticsData.attempts?.length > 0 
+        ? analyticsData.attempts.sort((a, b) => b.completedAt - a.completedAt)[0] 
+        : null;
 
     if (isLoading) {
-        return <div className="page-loading">Loading Topic Details...</div>;
+        return <LoadingSpinner message="Loading Topic Details..." />;
     }
 
     if (error) {
@@ -118,13 +152,12 @@ function TopicPage() {
 
     return (
         <>
+            {/* --- THIS IS THE FIX --- */}
+            {/* The dynamic style is applied here, to the top-level container */}
             <div className="topic-page-container" style={topicPageDynamicStyle}>
                 <h1 className="topic-title">{topicData.name}</h1>
                 
                 <div className="topic-page-grid">
-                    {/* --- THIS IS THE FIX --- */}
-                    {/* The `topic-list-panel` div no longer has styling; it's just a container. */}
-                    {/* The Switcher and List are now distinct, floating elements. */}
                     <div className="topic-list-panel">
                         <ContentSwitcher activeTab={activeTab} onTabChange={handleTabChange} />
                         <TestList
@@ -137,12 +170,23 @@ function TopicPage() {
                         />
                     </div>
                     <div className="topic-analytics-panel">
-                        <div className="analytics-component">
-                            <PerformanceGraph />
-                        </div>
-                        <div className="analytics-component">
-                            <AnalyticsBreakdown />
-                        </div>
+                        {isAnalyticsLoading ? (
+                            <LoadingSpinner message="Loading Analytics..." />
+                        ) : (
+                            <>
+                                <div className="analytics-component graph">
+                                    <PerformanceGraph 
+                                        questions={analyticsData.questions}
+                                        userAttempt={mostRecentAttempt}
+                                    />
+                                </div>
+                                <div className="analytics-component breakdown">
+                                    <AnalyticsBreakdown 
+                                        userAttempt={mostRecentAttempt}
+                                    />
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>
