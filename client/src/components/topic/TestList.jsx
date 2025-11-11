@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { FaLock, FaChevronRight } from 'react-icons/fa';
-import '../../styles/TopicPage.css';
+import '../../styles/TestList.css'; // <-- Import the new stylesheet
 
 function TestList({ items, selectedItemId, onItemSelect, onStartQuiz, onLockedItemClick, userProfile }) {
     
@@ -22,7 +22,6 @@ function TestList({ items, selectedItemId, onItemSelect, onStartQuiz, onLockedIt
             onLockedItemClick();
             return;
         }
-        // If the item is already selected, start the quiz. Otherwise, select it.
         if (item.id === selectedItemId) {
             onStartQuiz(item.id, item.sectionType);
         } else {
@@ -35,12 +34,11 @@ function TestList({ items, selectedItemId, onItemSelect, onStartQuiz, onLockedIt
             onLockedItemClick();
             return;
         }
-        // Double click always starts the quiz
         onStartQuiz(item.id, item.sectionType);
     };
 
     const handleArrowClick = (e, item, isLocked) => {
-        e.stopPropagation(); // Prevent the main item click from firing
+        e.stopPropagation();
         if (isLocked) {
             onLockedItemClick();
             return;

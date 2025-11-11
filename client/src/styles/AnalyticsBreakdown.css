@@ -1,0 +1,49 @@
+/* FILE: client/src/styles/AnalyticsBreakdown.css */
+
+.breakdown-container {
+    padding: 20px 25px;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+}
+
+.breakdown-header {
+    margin-bottom: 20px;
+}
+
+.breakdown-title {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.breakdown-placeholder {
+    color: var(--text-secondary);
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.view-attempt-button-container {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-primary);
+    text-align: center;
+}
+
+.view-attempt-button {
+    padding: 10px 20px;
+    background-color: var(--bg-button-primary);
+    color: var(--text-on-button-primary);
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+}
+
+.view-attempt-button:hover {
+    background-color: var(--bg-button-primary-hover);
+}

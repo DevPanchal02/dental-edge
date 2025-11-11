@@ -1,0 +1,103 @@
+/* FILE: client/src/styles/TestList.css */
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow-y: auto;
+  flex-grow: 1;
+  padding-right: 12px;
+}
+
+.item-list::-webkit-scrollbar {
+  width: 3px;
+}
+.item-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+.item-list::-webkit-scrollbar-thumb {
+  background-color: var(--border-primary);
+  border-radius: 3px;
+}
+.item-list {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-primary) transparent;
+}
+
+.list-item {
+  margin-bottom: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid var(--border-primary);
+  background-color: var(--bg-secondary);
+  cursor: pointer;
+}
+
+.no-items-message {
+  color: var(--text-secondary);
+  font-style: italic;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.item-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1em;
+  gap: 15px;
+}
+
+.item-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+
+.item-indicator {
+  flex-shrink: 0;
+  color: var(--text-secondary);
+  font-size: 1em;
+  transition: transform 0.2s ease, color 0.2s ease;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.list-item:not(.selected):not(.locked):hover {
+    background-color: var(--bg-item-link-hover);
+}
+
+.list-item.selected {
+    border-color: var(--text-accent);
+    background-color: var(--bg-item-link-hover);
+}
+
+.list-item.selected:not(.locked):hover {
+    box-shadow: inset 0 0 0 1px var(--text-accent);
+}
+
+.list-item.selected .item-indicator {
+    color: var(--text-accent);
+}
+
+.item-indicator:hover {
+    color: var(--text-accent);
+    transform: translateX(3px);
+}
+
+.list-item.locked {
+  cursor: not-allowed;
+}
+
+.list-item.locked .item-link {
+  color: var(--text-secondary);
+}
+
+.list-item.locked:hover {
+  background-color: var(--bg-item-link-hover);
+}

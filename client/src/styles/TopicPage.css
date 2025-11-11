@@ -25,37 +25,39 @@
   padding-right: 20px;
 }
 
-/* --- THIS IS THE FIX (Part 1): Constrain the Grid Height --- */
+/* --- Grid Layout Styles --- */
 .topic-page-grid {
-    display: grid;
-    grid-template-columns: 420px 1fr; 
+    display: flex;
     gap: 25px;
     flex-grow: 1; 
     overflow: hidden;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
-    /* This prevents the grid from becoming taller than its container */
     min-height: 0; 
 }
 
-/* --- List Panel --- */
+/* --- Left Column --- */
 .topic-list-panel {
+    width: 420px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     height: 100%;
     overflow: hidden;
-    min-height: 0; /* Add for flexbox stability */
+    min-height: 0;
 }
 
-/* --- Analytics Panel --- */
+/* --- Right Column --- */
 .topic-analytics-panel {
+    flex-grow: 1;
     height: 100%;
     overflow-y: auto;
     padding-right: 5px;
     display: flex;
     flex-direction: column;
-    min-height: 0; /* Add for flexbox stability */
+    min-height: 0;
+    min-width: 0; 
 }
 
 .topic-analytics-panel::-webkit-scrollbar { width: 8px; }
@@ -65,156 +67,8 @@
   border-radius: 4px;
 }
 
-/* --- THIS IS THE FIX (Part 2): Constrain the Flex Children --- */
+/* This is the only remaining style for the child components */
 .analytics-component {
     margin-bottom: 25px;
-    flex-shrink: 0; /* Prevent both components from shrinking by default */
-}
-
-.analytics-component.graph {
-    /* No specific rules needed, it will take its natural height */
-}
-
-.analytics-component.breakdown {
-    /* This component can grow if there's extra space, but it won't force the layout to expand */
-    flex-grow: 1; 
-}
-
-
-/* --- Content Switcher Styles --- */
-.content-switcher {
-    display: flex;
-    position: relative;
     flex-shrink: 0;
-    border-bottom: 1px solid var(--border-primary);
-    margin-bottom: 15px;
-}
-
-.content-switcher-button {
-    flex: 1;
-    padding: 10px 15px;
-    font-size: 1.1em;
-    font-weight: 500;
-    color: var(--text-secondary);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    transition: color 0.2s ease;
-    text-align: center;
-}
-
-.content-switcher-button.active { color: var(--text-primary); }
-.content-switcher-button:hover:not(.active) { color: var(--text-primary); }
-
-.content-switcher-indicator {
-    position: absolute;
-    bottom: -1px;
-    height: 3px;
-    background-color: var(--text-accent);
-    border-radius: 3px;
-    transition: left 0.3s cubic-bezier(0.65, 0, 0.35, 1), 
-                width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-}
-
-/* --- List & Item Styles --- */
-.item-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  overflow-y: auto;
-  flex-grow: 1;
-  padding-right: 12px;
-}
-
-.item-list::-webkit-scrollbar {
-  width: 3px;
-}
-.item-list::-webkit-scrollbar-track {
-  background: transparent;
-}
-.item-list::-webkit-scrollbar-thumb {
-  background-color: var(--border-primary);
-  border-radius: 3px;
-}
-.item-list {
-  scrollbar-width: thin;
-  scrollbar-color: var(--border-primary) transparent;
-}
-
-.list-item {
-  margin-bottom: 8px;
-  border-radius: 6px;
-  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-  border: 1px solid var(--border-primary);
-  background-color: var(--bg-secondary);
-  cursor: pointer;
-}
-
-.no-items-message {
-  color: var(--text-secondary);
-  font-style: italic;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.9em;
-}
-
-.item-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 14px 18px;
-  color: var(--text-primary);
-  text-decoration: none;
-  font-size: 1em;
-  gap: 15px;
-}
-
-.item-name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-weight: 500;
-}
-
-.item-indicator {
-  flex-shrink: 0;
-  color: var(--text-secondary);
-  font-size: 1em;
-  transition: transform 0.2s ease, color 0.2s ease;
-  padding: 4px;
-  border-radius: 4px;
-}
-
-.list-item:not(.selected):not(.locked):hover {
-    background-color: var(--bg-item-link-hover);
-}
-
-.list-item.selected {
-    border-color: var(--text-accent);
-    background-color: var(--bg-item-link-hover);
-}
-
-.list-item.selected:not(.locked):hover {
-    box-shadow: inset 0 0 0 1px var(--text-accent);
-}
-
-.list-item.selected .item-indicator {
-    color: var(--text-accent);
-}
-
-.item-indicator:hover {
-    color: var(--text-accent);
-    transform: translateX(3px);
-}
-
-.list-item.locked {
-  cursor: not-allowed;
-}
-
-.list-item.locked .item-link {
-  color: var(--text-secondary);
-}
-
-.list-item.locked:hover {
-  background-color: var(--bg-item-link-hover);
 }

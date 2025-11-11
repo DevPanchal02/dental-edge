@@ -1,7 +1,7 @@
 // FILE: client/src/components/topic/ContentSwitcher.jsx
 
 import React, { useState, useEffect, useRef } from 'react';
-import '../../styles/TopicPage.css'; // Now uses the main TopicPage stylesheet
+import '../../styles/ContentSwitcher.css'; // <-- Import the new stylesheet
 
 function ContentSwitcher({ activeTab, onTabChange }) {
     const practiceTabRef = useRef(null);

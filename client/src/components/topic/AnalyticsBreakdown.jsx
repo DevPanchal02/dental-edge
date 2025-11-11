@@ -1,35 +1,31 @@
+// FILE: client/src/components/topic/AnalyticsBreakdown.jsx
+
 import React from 'react';
 import { Link } from 'react-router-dom';
+import '../../styles/AnalyticsBreakdown.css'; // <-- Import the new stylesheet
 
 function AnalyticsBreakdown({ userAttempt }) {
     return (
-        <div style={{
-            padding: '20px',
-            backgroundColor: 'var(--bg-secondary)',
-            borderRadius: '8px',
-            border: '1px solid var(--border-primary)'
-        }}>
-            <h3 style={{ marginTop: 0 }}>Analytics Breakdown</h3>
-            <div style={{ color: 'var(--text-secondary)' }}>
-                <p>Detailed stats will be rendered here.</p>
-                {userAttempt && (
-                    <div style={{ marginTop: '20px' }}>
-                        <Link 
-                            to={`/app/quiz/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
-                            state={{ attemptId: userAttempt.id, review: true }}
-                            style={{
-                                padding: '10px 15px',
-                                backgroundColor: 'var(--bg-button-primary)',
-                                color: 'var(--text-on-button-primary)',
-                                borderRadius: '6px',
-                                textDecoration: 'none'
-                            }}
-                        >
-                            View Attempt
-                        </Link>
-                    </div>
-                )}
+        <div className="breakdown-container">
+            <div className="breakdown-header">
+                <h3 className="breakdown-title">Analytics Breakdown</h3>
             </div>
+            
+            <div className="breakdown-placeholder">
+                <p>Detailed stats will be rendered here.</p>
+            </div>
+
+            {userAttempt && (
+                <div className="view-attempt-button-container">
+                    <Link 
+                        to={`/app/quiz/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
+                        state={{ attemptId: userAttempt.id }} // Pass attemptId for review mode
+                        className="view-attempt-button"
+                    >
+                        View Attempt
+                    </Link>
+                </div>
+            )}
         </div>
     );
 }
