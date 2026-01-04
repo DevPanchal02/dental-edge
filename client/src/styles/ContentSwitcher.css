@@ -1,0 +1,40 @@
+/* FILE: client/src/styles/ContentSwitcher.css */
+
+.content-switcher {
+    display: flex;
+    position: relative;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--border-primary);
+    margin-bottom: 15px;
+}
+
+.content-switcher-button {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 1.05em;
+    font-weight: 500;
+    color: var(--text-secondary);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    text-align: center;
+}
+
+.content-switcher-button.active {
+    color: var(--text-primary);
+}
+
+.content-switcher-button:hover:not(.active) {
+    color: var(--text-primary);
+}
+
+.content-switcher-indicator {
+    position: absolute;
+    bottom: -1px;
+    height: 3px;
+    background-color: var(--text-accent);
+    border-radius: 3px;
+    transition: left 0.3s cubic-bezier(0.65, 0, 0.35, 1), 
+                width 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+}

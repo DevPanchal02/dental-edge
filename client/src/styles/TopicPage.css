@@ -1,116 +1,74 @@
 /* FILE: client/src/styles/TopicPage.css */
+
+/* --- Main Container --- */
 .topic-page-container {
-  padding: 20px 30px;
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
   height: 100%;
-  overflow-y: auto;
   box-sizing: border-box;
-  position: relative;
   transition: margin-left 0.3s ease-in-out, width 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  padding: 0; 
 }
 
+/* --- Title Styles --- */
 .topic-title {
   color: var(--text-accent);
-  margin-bottom: 25px;
+  margin-top: 0;
+  margin-bottom: 15px;
   border-bottom: 1px solid var(--border-primary);
   padding-bottom: 15px;
   font-weight: 500;
   font-size: 1.8em;
-}
-
-.topic-section {
-  margin-bottom: 35px;
-}
-
-.section-title {
-  color: var(--text-primary);
-  font-size: 1.4em;
-  margin-bottom: 15px;
-  font-weight: 500;
-}
-
-.qbank-category {
-  margin-bottom: 20px;
+  flex-shrink: 0;
+  padding-top: 10px;
   padding-left: 20px;
-  border-left: 3px solid var(--border-primary);
+  padding-right: 20px;
 }
 
-.category-title {
-  color: var(--text-secondary);
-  font-size: 1.2em;
-  margin-top: 0;
-  margin-bottom: 12px;
-  font-weight: 500;
+/* --- Grid Layout Styles --- */
+.topic-page-grid {
+    display: flex;
+    gap: 25px;
+    flex-grow: 1; 
+    overflow: hidden;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    min-height: 0; 
 }
 
-.item-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* --- Left Column --- */
+.topic-list-panel {
+    width: 420px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+    min-height: 0;
 }
 
-.list-item {
-  margin-bottom: 8px;
-  background-color: var(--bg-item-link);
-  border-radius: 5px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: var(--shadow-card);
-  border: 1px solid var(--border-primary);
+/* --- Right Column --- */
+.topic-analytics-panel {
+    flex-grow: 1;
+    height: 100%;
+    overflow-y: auto;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0; 
 }
 
-.no-items-message {
-  color: var(--text-secondary);
-  font-style: italic;
-  margin-left: 10px;
-  padding: 10px 0;
-  font-size: 0.9em;
+.topic-analytics-panel::-webkit-scrollbar { width: 8px; }
+.topic-analytics-panel::-webkit-scrollbar-track { background: transparent; }
+.topic-analytics-panel::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-bg);
+  border-radius: 4px;
 }
 
-/* --- NEW & UPDATED STYLES FOR LIST ITEMS --- */
-.item-link {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* This creates space between name and indicator */
-  padding: 12px 18px;
-  color: var(--text-item-link);
-  text-decoration: none;
-  font-size: 1em;
-  gap: 15px;
-}
-
-.item-name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.item-indicator {
-  flex-shrink: 0; /* Prevents the indicator from shrinking */
-  color: var(--text-secondary);
-  font-size: 1em; /* Adjusted for better visual balance between icons */
-  transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.item-indicator svg { /* Ensures both icons are aligned nicely */
-  vertical-align: middle;
-}
-
-.list-item:not(.locked):hover {
-  background-color: var(--bg-item-link-hover);
-  box-shadow: 0 3px 6px rgba(0,0,0,0.07); 
-}
-
-.list-item:not(.locked):hover .item-indicator {
-  transform: translateX(4px);
-  color: var(--text-accent);
-}
-
-.list-item.locked .item-link {
-  color: var(--text-secondary);
-}
-
-.list-item.locked:hover {
-  background-color: var(--bg-item-link-hover);
-  cursor: pointer;
+/* This is the only remaining style for the child components */
+.analytics-component {
+    margin-bottom: 25px;
+    flex-shrink: 0;
 }

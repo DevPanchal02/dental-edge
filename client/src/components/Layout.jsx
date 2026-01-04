@@ -41,9 +41,6 @@ function Layout() {
     }
   };
 
-  // --- THIS IS THE FIX ---
-  // This useEffect will run ONLY ONCE when the Layout component mounts.
-  // It will fetch the topics and store them in its state.
   useEffect(() => {
     const loadTopics = async () => {
       setIsLoading(true);
@@ -62,13 +59,12 @@ function Layout() {
       }
     };
     loadTopics();
-  }, []); // The empty dependency array [] ensures this runs only once.
+  }, []);
 
   if (isLoading) {
     return <div className="page-loading">Loading Application...</div>;
   }
   
-  // If there's an error, we show it and stop rendering the rest of the app.
   if (error) {
     return <div className="page-error">{error}</div>;
   }
@@ -83,10 +79,11 @@ function Layout() {
           ></div>
         )}
         <Sidebar
-          topics={topics} // Pass the fetched topics down to the Sidebar
+          topics={topics}
           activeTopicId={currentUrlTopicId}
           isOpen={actualSidebarIsOpen}
-          isPinned={sidebarPinned}
+          // --- THIS IS THE FIX ---
+          isPinned={sidebarPinned} // Corrected variable name
           onMouseEnter={handleSidebarMouseEnter}
           onMouseLeave={handleSidebarMouseLeave}
           onPinToggle={toggleSidebarPin}
