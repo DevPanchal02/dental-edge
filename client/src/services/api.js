@@ -3,7 +3,25 @@
 import { auth } from '../firebase';
 import { getFunctions, httpsCallable } from 'firebase/functions';
 
-// --- Firebase Cloud Functions Setup ---
+// --- Configuration & Environment Setup ---
+
+// Extract API URLs from environment variables using Vite's import.meta.env
+const API_URLS = {
+  GET_TOPICS: import.meta.env.VITE_FUNC_GET_TOPICS,
+  GET_TOPIC_STRUCTURE: import.meta.env.VITE_FUNC_GET_TOPIC_STRUCTURE,
+  GET_QUIZ_DATA: import.meta.env.VITE_FUNC_GET_QUIZ_DATA,
+};
+
+// Validation: Ensure environment variables are loaded correctly.
+// This is critical for CI/CD pipelines where secrets might be missing.
+Object.entries(API_URLS).forEach(([key, value]) => {
+  if (!value) {
+    console.error(`CRITICAL ERROR: Missing Environment Variable for ${key}. Check your .env file or CI/CD secrets.`);
+  }
+});
+
+// --- Firebase Cloud Functions (Callable) Setup ---
+// These functions are called using the Firebase SDK, which handles Auth tokens automatically.
 const functions = getFunctions();
 
 const createCheckoutSessionCallable = httpsCallable(functions, 'createCheckoutSession');
@@ -44,6 +62,7 @@ export const saveInProgressAttempt = async (attemptData) => {
     return result.data.attemptId;
   } catch (error) {
     console.error("Error saving in-progress attempt:", error);
+    // We don't throw here to avoid interrupting the user's quiz flow if auto-save fails
   }
 };
 
@@ -83,11 +102,11 @@ export const finalizeQuizAttempt = async (attemptData) => {
  * @returns {Promise<void>}
  */
 export const deleteInProgressAttempt = async (attemptId) => {
-    try {
-        await deleteInProgressAttemptCallable({ attemptId });
-    } catch (error) {
-        console.error("Error deleting in-progress attempt:", error);
-    }
+  try {
+    await deleteInProgressAttemptCallable({ attemptId });
+  } catch (error) {
+    console.error("Error deleting in-progress attempt:", error);
+  }
 };
 
 /**
@@ -96,13 +115,13 @@ export const deleteInProgressAttempt = async (attemptId) => {
  * @returns {Promise<object>} The full quiz attempt data.
  */
 export const getQuizAttemptById = async (attemptId) => {
-    try {
-        const result = await getQuizAttemptByIdCallable({ attemptId });
-        return result.data;
-    } catch (error) {
-        console.error(`Error fetching attempt ${attemptId}:`, error);
-        throw new Error("Could not load the specified quiz review.");
-    }
+  try {
+    const result = await getQuizAttemptByIdCallable({ attemptId });
+    return result.data;
+  } catch (error) {
+    console.error(`Error fetching attempt ${attemptId}:`, error);
+    throw new Error("Could not load the specified quiz review.");
+  }
 };
 
 /**
@@ -111,13 +130,13 @@ export const getQuizAttemptById = async (attemptId) => {
  * @returns {Promise<Array>} A list of summarized completed attempts.
  */
 export const getCompletedAttemptsForQuiz = async ({ topicId, sectionType, quizId }) => {
-    try {
-        const result = await getCompletedAttemptsForQuizCallable({ topicId, sectionType, quizId });
-        return result.data;
-    } catch (error) {
-        console.error(`Error fetching completed attempts for ${quizId}:`, error);
-        throw new Error("Could not load past results for this quiz.");
-    }
+  try {
+    const result = await getCompletedAttemptsForQuizCallable({ topicId, sectionType, quizId });
+    return result.data;
+  } catch (error) {
+    console.error(`Error fetching completed attempts for ${quizId}:`, error);
+    throw new Error("Could not load past results for this quiz.");
+  }
 };
 
 /**
@@ -126,24 +145,22 @@ export const getCompletedAttemptsForQuiz = async ({ topicId, sectionType, quizId
  * @returns {Promise<Array>} An array of question analytics objects.
  */
 export const getQuizAnalytics = async ({ topicId, sectionType, quizId }) => {
-    try {
-        const result = await getQuizAnalyticsCallable({ topicId, sectionType, quizId });
-        return result.data;
-    } catch (error) {
-        console.error(`Error fetching analytics for ${quizId}:`, error);
-        throw new Error("Could not load quiz analytics.");
-    }
+  try {
+    const result = await getQuizAnalyticsCallable({ topicId, sectionType, quizId });
+    return result.data;
+  } catch (error) {
+    console.error(`Error fetching analytics for ${quizId}:`, error);
+    throw new Error("Could not load quiz analytics.");
+  }
 };
 
 
-// --- HTTP Function Endpoints ---
-const API = {
-  GET_TOPICS: "https://gettopics-7ukimtpi4a-uc.a.run.app",
-  GET_TOPIC_STRUCTURE: "https://gettopicstructure-7ukimtpi4a-uc.a.run.app",
-  GET_QUIZ_DATA: "https://getquizdata-7ukimtpi4a-uc.a.run.app",
-};
+// --- HTTP Function Helpers ---
 
-// Helper to get the current user's auth token for HTTP functions
+/**
+ * Helper to get the current user's auth token for HTTP functions.
+ * Returns null if no user is logged in.
+ */
 const getAuthToken = async () => {
   const user = auth.currentUser;
   if (!user) {
@@ -152,11 +169,14 @@ const getAuthToken = async () => {
   return await user.getIdToken(true);
 };
 
-// --- HTTP Function Exports ---
+
+// --- HTTP Function Exports (Using Fetch API) ---
 
 export const fetchTopics = async () => {
   try {
-    const response = await fetch(API.GET_TOPICS);
+    // Using the Environment Variable URL
+    const response = await fetch(API_URLS.GET_TOPICS);
+    
     if (!response.ok) {
       throw new Error(`API Error (getTopics): ${response.status} ${response.statusText}`);
     }
@@ -168,25 +188,28 @@ export const fetchTopics = async () => {
 };
 
 export const fetchTopicStructure = async (topicId) => {
-    try {
-        const url = new URL(API.GET_TOPIC_STRUCTURE);
-        url.searchParams.append("topicId", topicId);
+  try {
+    // Using the Environment Variable URL
+    const url = new URL(API_URLS.GET_TOPIC_STRUCTURE);
+    url.searchParams.append("topicId", topicId);
 
-        const response = await fetch(url.toString());
-        if (!response.ok) {
-            throw new Error(`API Error (getTopicStructure): ${response.status} ${response.statusText}`);
-        }
-        return await response.json();
-    } catch (error) {
-        console.error(`Failed to fetch structure for topic ${topicId}:`, error);
-        throw error;
+    const response = await fetch(url.toString());
+    if (!response.ok) {
+      throw new Error(`API Error (getTopicStructure): ${response.status} ${response.statusText}`);
     }
+    return await response.json();
+  } catch (error) {
+    console.error(`Failed to fetch structure for topic ${topicId}:`, error);
+    throw error;
+  }
 };
 
 export const fetchQuizData = async (storagePath, isPreview = false) => {
   try {
-    const url = new URL(API.GET_QUIZ_DATA);
+    // Using the Environment Variable URL
+    const url = new URL(API_URLS.GET_QUIZ_DATA);
     url.searchParams.append("storagePath", storagePath);
+    
     if (isPreview) {
       url.searchParams.append("isPreview", "true");
     }
@@ -204,6 +227,7 @@ export const fetchQuizData = async (storagePath, isPreview = false) => {
 
     if (!response.ok) {
       if (response.status === 403) {
+        // Attempt to parse specific error message from backend
         const errorData = await response.json().catch(() => ({}));
         if (errorData.error === 'upgrade_required') {
           const upgradeError = new Error("Upgrade required to access this content.");
