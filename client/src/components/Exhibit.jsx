@@ -1,18 +1,25 @@
-
 import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Exhibit.css';
 import periodicTableImage from '../assets/periodic_table.png';
 
 const Exhibit = ({ isVisible, onClose }) => {
     const [position, setPosition] = useState(null);
+    const [size, setSize] = useState({ width: 510 }); // Default width
+    
+    // Dragging State
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
+    
+    // Resizing State
+    const [isResizing, setIsResizing] = useState(false);
+    const [resizeStart, setResizeStart] = useState({ x: 0, width: 0 });
+
     const exhibitRef = useRef(null);
     const initialPositionSetRef = useRef(false);
 
     // Helper to convert rem to pixels based on the root font size
     const getRemInPx = (rem) => {
-        if (typeof window === 'undefined') return rem * 16; // Fallback for server-side rendering
+        if (typeof window === 'undefined') return rem * 16;
         return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
     };
 
@@ -20,21 +27,21 @@ const Exhibit = ({ isVisible, onClose }) => {
         if (!isVisible) {
             setPosition(null);
             initialPositionSetRef.current = false;
+            // Reset size on close if desired, or keep it persistent
+            // setSize({ width: 510 }); 
         }
     }, [isVisible]);
 
     const handleImageLoad = () => {
         if (exhibitRef.current && !initialPositionSetRef.current) {
-            const boundaryPx = getRemInPx(0.5); // The small boundary for dragging
-            const spawnGapPx = getRemInPx(1.0);  // The larger gap for initial spawn
+            const boundaryPx = getRemInPx(0.5);
+            const spawnGapPx = getRemInPx(1.0);
             const elemRect = exhibitRef.current.getBoundingClientRect();
             
             if (elemRect.width > 0 && elemRect.height > 0) {
-                // Use the larger gap for the initial spawn position
                 let initialX = window.innerWidth - elemRect.width - spawnGapPx;
                 let initialY = window.innerHeight - elemRect.height - spawnGapPx;
 
-                // Clamp the position to ensure it's still within the *actual* smaller boundary
                 const minX = boundaryPx;
                 const minY = boundaryPx;
                 initialX = Math.max(minX, initialX);
@@ -46,10 +53,16 @@ const Exhibit = ({ isVisible, onClose }) => {
         }
     };
 
+    // --- Drag Logic ---
     const handleMouseDown = (e) => {
-        if (e.target.classList.contains('exhibit-close-btn-img')) {
+        // Prevent drag if clicking close button, resizer, or inside content if needed
+        if (
+            e.target.classList.contains('exhibit-close-btn-img') || 
+            e.target.classList.contains('exhibit-resizer')
+        ) {
             return;
         }
+        
         setIsDragging(true);
         const exhibitRect = exhibitRef.current.getBoundingClientRect();
         setDragStart({
@@ -59,13 +72,25 @@ const Exhibit = ({ isVisible, onClose }) => {
         e.preventDefault();
     };
 
+    // --- Resize Logic ---
+    const handleResizeMouseDown = (e) => {
+        e.stopPropagation(); // Prevent triggering the drag
+        e.preventDefault();
+        setIsResizing(true);
+        setResizeStart({
+            x: e.clientX,
+            width: size.width
+        });
+    };
+
     const handleMouseUp = () => {
         setIsDragging(false);
+        setIsResizing(false);
     };
 
     const handleMouseMove = (e) => {
         if (isDragging && exhibitRef.current) {
-            const boundaryPx = getRemInPx(0.5); // Use the smaller 0.5rem for dragging
+            const boundaryPx = getRemInPx(0.5);
             const { width, height } = exhibitRef.current.getBoundingClientRect();
 
             let newX = e.clientX - dragStart.x;
@@ -81,10 +106,18 @@ const Exhibit = ({ isVisible, onClose }) => {
 
             setPosition({ x: clampedX, y: clampedY });
         }
+
+        if (isResizing) {
+            const deltaX = e.clientX - resizeStart.x;
+            const newWidth = Math.max(200, resizeStart.width + deltaX); // Min width 200px
+            const maxWidth = window.innerWidth - 50; // Prevent making it wider than screen
+            
+            setSize({ width: Math.min(newWidth, maxWidth) });
+        }
     };
 
     useEffect(() => {
-        if (isDragging) {
+        if (isDragging || isResizing) {
             window.addEventListener('mousemove', handleMouseMove);
             window.addEventListener('mouseup', handleMouseUp);
         } else {
@@ -95,15 +128,15 @@ const Exhibit = ({ isVisible, onClose }) => {
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseup', handleMouseUp);
         };
-    }, [isDragging, dragStart]);
+    }, [isDragging, isResizing, dragStart, resizeStart]);
 
     if (!isVisible) {
         return null;
     }
 
     const style = position
-        ? { top: `${position.y}px`, left: `${position.x}px` }
-        : { top: '-9999px', left: '-9999px', visibility: 'hidden' };
+        ? { top: `${position.y}px`, left: `${position.x}px`, width: `${size.width}px` }
+        : { top: '-9999px', left: '-9999px', visibility: 'hidden', width: `${size.width}px` };
 
     return (
         <div
@@ -120,11 +153,18 @@ const Exhibit = ({ isVisible, onClose }) => {
             >
                 ×
             </button>
+            
             <img 
                 src={periodicTableImage} 
                 alt="Periodic Table of Elements" 
                 onLoad={handleImageLoad}
             />
+
+            {/* Resize Handle */}
+            <div 
+                className="exhibit-resizer"
+                onMouseDown={handleResizeMouseDown}
+            ></div>
         </div>
     );
 };

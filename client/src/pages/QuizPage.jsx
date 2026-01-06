@@ -16,6 +16,7 @@ import QuizReviewSummary from '../components/QuizReviewSummary';
 import { FaCrown } from 'react-icons/fa';
 import PracticeTestOptions from '../components/PracticeTestOptions';
 import RegistrationPromptModal from '../components/RegistrationPromptModal';
+import Exhibit from '../components/Exhibit'; // <--- ADDED IMPORT
 
 function QuizPage({ isPreviewMode = false }) {
     const { topicId, sectionType, quizId } = useParams();
@@ -38,7 +39,6 @@ function QuizPage({ isPreviewMode = false }) {
         const isReviewing = state.status === 'reviewing_attempt';
         const currentIndex = state.attempt.currentQuestionIndex;
 
-        // --- THIS IS THE FIX (Part 2) ---
         // Determine the question count to display. Default to 210 for previews.
         const displayQuestionCount = isPreviewMode ? 210 : state.quizContent.questions.length;
 
@@ -120,8 +120,7 @@ function QuizPage({ isPreviewMode = false }) {
                 fullNameForDisplay={state.quizContent.metadata?.fullNameForDisplay}
                 categoryForInstructions={state.quizContent.metadata?.categoryForInstructions}
                 baseTimeLimitMinutes={180}
-                // --- THIS IS THE FIX (Part 3) ---
-                numQuestions={210} // Display the fake question count
+                numQuestions={210} 
             />
         );
     }
@@ -173,6 +172,11 @@ function QuizPage({ isPreviewMode = false }) {
                             {...uiProps.footerProps} 
                             isSaving={state.uiState.isSaving} 
                             dynamicStyle={uiProps.footerStyle} 
+                        />
+                        {/* --- ADDED EXHIBIT COMPONENT HERE --- */}
+                        <Exhibit 
+                            isVisible={state.uiState.isExhibitVisible} 
+                            onClose={actions.toggleExhibit} 
                         />
                     </>
                 )
