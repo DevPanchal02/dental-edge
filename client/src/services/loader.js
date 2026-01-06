@@ -3,12 +3,30 @@
 import {
   fetchTopics as apiFetchTopics,
   fetchTopicStructure,
-  // We only import the new unified fetcher
   fetchQuizData,
 } from './api.js';
 import { auth } from '../firebase';
 
 const topicStructureCache = {};
+
+// --- Utility: Clean Highlights from Raw Data ---
+export const cleanPassageHtml = (htmlString) => {
+    if (!htmlString || typeof htmlString !== 'string') return '';
+    
+    // 1. Remove raw data highlights (class="highlighted")
+    let cleanedHtml = htmlString.replace(/<mark\s+[^>]*class="[^"]*highlighted[^"]*"[^>]*>([\s\S]*?)<\/mark>/gi, '$1');
+    
+    // 2. Remove the MUI button artifacts if present in raw data
+    const MuiButtonRegex = /<button\s+class="MuiButtonBase-root[^"]*"[^>]*data-testid="highlighter-button-id"[^>]*>[\s\S]*?<\/button>/gi;
+    cleanedHtml = cleanedHtml.replace(MuiButtonRegex, '');
+    
+    // 3. Remove any remaining generic mark tags to be safe
+    // Note: We perform this cleaning ONCE when loading raw data. 
+    // We do NOT perform this on user-saved states (which contain custom-highlight).
+    cleanedHtml = cleanedHtml.replace(/<mark[^>]*>/gi, '').replace(/<\/mark>/gi, '');
+    
+    return cleanedHtml;
+};
 
 // fetchTopics remains the same
 export const fetchTopics = apiFetchTopics;
@@ -41,13 +59,10 @@ const findQuizInStructure = (topicData, sectionType, quizId) => {
 };
 
 // --- REFACTORED getQuizData ---
-// This function is now much simpler. Its only job is to find the correct
-// storage path and then call the unified API endpoint.
 export const getQuizData = async (topicId, sectionType, quizId) => {
   // Determine if this is an unregistered preview request on the client-side
   const isPreview = !auth.currentUser && topicId === 'biology' && sectionType === 'practice' && quizId === 'test-1';
 
-  // Find the metadata, which contains the crucial `storagePath`
   const topicData = await fetchTopicData(topicId);
   const quizMeta = findQuizInStructure(topicData, sectionType, quizId);
 
@@ -55,9 +70,26 @@ export const getQuizData = async (topicId, sectionType, quizId) => {
     throw new Error(`Quiz data could not be located for ${topicId}/${quizId}`);
   }
 
-  // Call the single, unified fetcher from api.js
-  // It will handle sending the token and the isPreview flag correctly.
-  return fetchQuizData(quizMeta.storagePath, isPreview);
+  const rawData = await fetchQuizData(quizMeta.storagePath, isPreview);
+
+  // --- CLEANING STEP ---
+  // We clean the passage HTML immediately upon load to remove raw-data highlights.
+  if (Array.isArray(rawData)) {
+      return rawData.map(q => {
+          if (q.passage && q.passage.html_content) {
+              return {
+                  ...q,
+                  passage: {
+                      ...q.passage,
+                      html_content: cleanPassageHtml(q.passage.html_content)
+                  }
+              };
+          }
+          return q;
+      });
+  }
+  
+  return rawData;
 };
 
 

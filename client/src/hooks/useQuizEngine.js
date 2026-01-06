@@ -59,6 +59,7 @@ const initialState = {
         currentQuestionIndex: 0,
         practiceTestSettings: { prometricDelay: false, additionalTime: false },
         submittedAnswers: {},
+        highlightedHtml: {}, // Moved here for persistence
     },
     timer: {
         value: 0,
@@ -71,7 +72,7 @@ const initialState = {
         tempReveal: {},
         isExhibitVisible: false,
         isSaving: false,
-        highlightedHtml: {},
+        // highlightedHtml removed from here
     },
     error: null,
 };
@@ -127,7 +128,11 @@ function quizReducer(state, action) {
             return {
                 ...state,
                 status: 'prompting_resume',
-                attempt: action.payload.attempt,
+                attempt: {
+                    ...state.attempt, // Ensure defaults
+                    ...action.payload.attempt,
+                    highlightedHtml: action.payload.attempt.highlightedHtml || {}, // Load highlights
+                },
                 timer: action.payload.attempt.timer || initialState.timer,
                 quizContent: {
                     questions: action.payload.questions,
@@ -210,8 +215,6 @@ function quizReducer(state, action) {
             return state;
         }
         
-        // --- THIS IS THE FIX (Part 1): Simplified Reducer Action ---
-        // This action now receives the PRE-CALCULATED time and simply updates the state.
         case 'UPDATE_TIME_SPENT': {
             const { questionIndex, time } = action.payload;
             const existingTime = state.attempt.userTimeSpent[questionIndex] || 0;
@@ -303,6 +306,21 @@ function quizReducer(state, action) {
             return { ...state, uiState: { ...state.uiState, showExplanation: { ...state.uiState.showExplanation, [qIndex]: !state.uiState.showExplanation[qIndex]}}};
         }
 
+        // --- NEW ACTION: UPDATE HIGHLIGHT ---
+        case 'UPDATE_HIGHLIGHT': {
+            const { contentKey, html } = action.payload;
+            return {
+                ...state,
+                attempt: {
+                    ...state.attempt,
+                    highlightedHtml: {
+                        ...state.attempt.highlightedHtml,
+                        [contentKey]: html
+                    }
+                }
+            };
+        }
+
         case 'OPEN_REVIEW_SUMMARY':
             return { ...state, status: 'reviewing_summary' };
         
@@ -366,9 +384,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
                 if (!currentUser) return;
 
                 if (reviewAttemptId) {
-                    // Review Logic: Directly fetch the specific attempt
                     const reviewData = await getQuizAttemptById(reviewAttemptId);
-                    // Hijack the resume prompt to load data, then immediately signal resumption
                     dispatch({ type: 'PROMPT_RESUME', payload: { attempt: reviewData, questions, metadata } });
                     dispatch({ type: 'RESUME_ATTEMPT' }); 
                 } else {
@@ -376,12 +392,10 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
                     let inProgressAttempt = loadFromLocalStorage(localKey);
 
                     if (!inProgressAttempt) {
-                        // We use standard await here; if it hangs, the user can refresh, but the critical path is the quiz data above.
                         inProgressAttempt = await getInProgressAttempt({ topicId, sectionType, quizId });
                     }
 
                     if (inProgressAttempt) {
-                        // Sanitization: Convert stored arrays back to Sets to prevent React crashes
                         let sanitizedCrossedOff = {};
                         if (inProgressAttempt.crossedOffOptions && typeof inProgressAttempt.crossedOffOptions === 'object') {
                             try {
@@ -418,7 +432,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         };
     }, [topicId, sectionType, quizId, reviewAttemptId, currentUser, isPreviewMode]);
     
-    // This effect now ONLY resets the question start time when the quiz becomes active.
     useEffect(() => {
         if (state.status === 'active') {
             questionStartTimeRef.current = Date.now();
@@ -480,21 +493,17 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         return () => clearInterval(timerIntervalRef.current);
     }, [state.timer.isActive, state.status]);
     
-    // --- THIS IS THE FIX (Part 2): Navigation actions now handle time calculation ---
     const recordTimeAndNavigate = useCallback((newIndex) => {
         const totalQuestions = state.quizContent.questions.length;
         if (newIndex >= 0 && newIndex < totalQuestions) {
-            // Calculate time spent on the current question
             const timeNow = Date.now();
             const startTime = questionStartTimeRef.current;
             if (startTime) {
                 const elapsedSeconds = Math.round((timeNow - startTime) / 1000);
                 dispatch({ type: 'UPDATE_TIME_SPENT', payload: { questionIndex: state.attempt.currentQuestionIndex, time: elapsedSeconds }});
             }
-            // Reset the timer for the new question
             questionStartTimeRef.current = timeNow;
 
-            // Submit and navigate
             dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
             dispatch({ type: 'NAVIGATE_QUESTION', payload: newIndex });
         }
@@ -508,20 +517,23 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         dispatch({ type: 'TOGGLE_CROSS_OFF', payload: { questionIndex, optionLabel } });
     }, []);
     
+    const updateHighlight = useCallback((contentKey, html) => {
+        dispatch({ type: 'UPDATE_HIGHLIGHT', payload: { contentKey, html }});
+    }, []);
+
     const openReviewSummary = useCallback(async () => {
         if (isPreviewMode) {
             dispatch({ type: 'PROMPT_REGISTRATION' });
             return;
         }
 
-        // Record time for the final question before opening review
         const timeNow = Date.now();
         const startTime = questionStartTimeRef.current;
         if (startTime) {
             const elapsedSeconds = Math.round((timeNow - startTime) / 1000);
             dispatch({ type: 'UPDATE_TIME_SPENT', payload: { questionIndex: state.attempt.currentQuestionIndex, time: elapsedSeconds }});
         }
-        questionStartTimeRef.current = null; // Stop timer while in review
+        questionStartTimeRef.current = null; 
 
         dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
         await saveProgressToServer();
@@ -619,6 +631,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         toggleExplanation, openReviewSummary, closeReviewSummary, 
         resumeAttempt, startNewAttempt, finalizeAttempt,
         startPreview, closeRegistrationPrompt,
+        updateHighlight 
     };
 
     return { state, actions };
