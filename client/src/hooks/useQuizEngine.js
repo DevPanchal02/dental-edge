@@ -341,10 +341,17 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
             dispatch({ type: 'INITIALIZE_ATTEMPT', payload: { topicId, sectionType, quizId, reviewAttemptId, isPreviewMode } });
             
             try {
-                const [questions, metadata] = await Promise.all([
+                // Timeout promise to prevent infinite loading state
+                const fetchData = Promise.all([
                     getQuizData(topicId, sectionType, quizId, isPreviewMode),
                     getQuizMetadata(topicId, sectionType, quizId)
                 ]);
+
+                const timeout = new Promise((_, reject) => 
+                    setTimeout(() => reject(new Error("Request timed out. Please check your connection.")), 15000)
+                );
+
+                const [questions, metadata] = await Promise.race([fetchData, timeout]);
 
                 if (isPreviewMode) {
                     const previewMetadata = {
@@ -359,16 +366,36 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
                 if (!currentUser) return;
 
                 if (reviewAttemptId) {
-                    // Review mode logic
+                    // Review Logic: Directly fetch the specific attempt
+                    const reviewData = await getQuizAttemptById(reviewAttemptId);
+                    // Hijack the resume prompt to load data, then immediately signal resumption
+                    dispatch({ type: 'PROMPT_RESUME', payload: { attempt: reviewData, questions, metadata } });
+                    dispatch({ type: 'RESUME_ATTEMPT' }); 
                 } else {
                     const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
                     let inProgressAttempt = loadFromLocalStorage(localKey);
 
                     if (!inProgressAttempt) {
+                        // We use standard await here; if it hangs, the user can refresh, but the critical path is the quiz data above.
                         inProgressAttempt = await getInProgressAttempt({ topicId, sectionType, quizId });
                     }
 
                     if (inProgressAttempt) {
+                        // Sanitization: Convert stored arrays back to Sets to prevent React crashes
+                        let sanitizedCrossedOff = {};
+                        if (inProgressAttempt.crossedOffOptions && typeof inProgressAttempt.crossedOffOptions === 'object') {
+                            try {
+                                sanitizedCrossedOff = Object.fromEntries(
+                                    Object.entries(inProgressAttempt.crossedOffOptions).map(([key, value]) => {
+                                        return [key, new Set(Array.isArray(value) ? value : [])];
+                                    })
+                                );
+                            } catch (e) {
+                                console.warn("Failed to sanitize crossedOffOptions", e);
+                            }
+                        }
+                        inProgressAttempt.crossedOffOptions = sanitizedCrossedOff;
+
                         dispatch({ type: 'PROMPT_RESUME', payload: { attempt: inProgressAttempt, questions, metadata } });
                     } else {
                         const newAttemptData = { ...initialState.attempt };
@@ -379,6 +406,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
                     }
                 }
             } catch (error) {
+                console.error("Initialization Error:", error);
                 dispatch({ type: 'SET_ERROR', payload: error });
             }
         };
