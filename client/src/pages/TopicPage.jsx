@@ -39,6 +39,16 @@ function TopicPage() {
         width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
     }), [isSidebarEffectivelyPinned]);
 
+    // --- FIX 1: Reset selection immediately when topic changes ---
+    // This prevents the "Race Condition" where the app tries to load 
+    // the OLD quiz ID with the NEW topic ID, causing a 500 error.
+    useEffect(() => {
+        setSelectedItemId(null);
+        setSelectedItemType(null);
+        setAnalyticsData({ questions: [], attempts: [] });
+        setError(null);
+    }, [topicId]);
+
     useEffect(() => {
         let isMounted = true;
         const loadData = async () => {
@@ -47,18 +57,43 @@ function TopicPage() {
                 return;
             }
             setIsLoading(true);
-            setError(null);
+            // Don't clear error here, let the reset effect handle it
             setTopicData(null);
             
             try {
                 const data = await fetchTopicData(topicId);
                 if (isMounted) {
                     setTopicData(data);
-                    if (data.practiceTests?.length > 0) {
-                        setSelectedItemId(data.practiceTests[0].id);
-                        setSelectedItemType('practice');
+                    
+                    // --- FIX 2: Smarter Default Selection ---
+                    // Try to respect the user's current tab (Practice vs QBank)
+                    let newId = null;
+                    let newType = null;
+
+                    if (activeTab === 'qbank' && data.questionBanks?.length > 0) {
+                        // Try to find the first available QBank
+                        const firstGroup = data.questionBanks[0];
+                        if (firstGroup && firstGroup.banks && firstGroup.banks.length > 0) {
+                            newId = firstGroup.banks[0].id;
+                            newType = 'qbank';
+                        }
+                    }
+
+                    // Fallback to Practice Test if QBank selection failed or tab is 'practice'
+                    if (!newId && data.practiceTests?.length > 0) {
+                        newId = data.practiceTests[0].id;
+                        newType = 'practice';
+                        // If we were on QBank tab but found no QBanks, switch tab to avoid confusion
+                        if (activeTab === 'qbank') {
+                            setActiveTab('practice');
+                        }
+                    }
+
+                    if (newId) {
+                        setSelectedItemId(newId);
+                        setSelectedItemType(newType);
                     } else {
-                        setIsLoading(false);
+                        setIsLoading(false); // No content to select
                     }
                 }
             } catch (err) {
@@ -70,10 +105,11 @@ function TopicPage() {
         loadData();
 
         return () => { isMounted = false; };
-    }, [topicId]);
+    }, [topicId, activeTab]); // Added activeTab to dependency to ensure correct logic
 
     useEffect(() => {
-        if (!selectedItemId || !selectedItemType) {
+        // Safe check: Don't fetch if IDs are missing or mismatch
+        if (!selectedItemId || !selectedItemType || !topicId) {
             setAnalyticsData({ questions: [], attempts: [] });
             return;
         }
@@ -81,8 +117,6 @@ function TopicPage() {
         const loadAnalytics = async () => {
             setIsAnalyticsLoading(true);
             try {
-                // --- THIS IS THE FIX ---
-                // We now call our new, fast getQuizAnalytics function instead of the slow getQuizData.
                 const [questions, attempts] = await Promise.all([
                     getQuizAnalytics({ topicId, sectionType: selectedItemType, quizId: selectedItemId }),
                     getCompletedAttemptsForQuiz({ topicId, sectionType: selectedItemType, quizId: selectedItemId })
@@ -90,7 +124,8 @@ function TopicPage() {
                 setAnalyticsData({ questions, attempts });
             } catch (err) {
                 console.error("Error fetching analytics data:", err);
-                setError("Could not load analytics for the selected item.");
+                // Don't show a full page error for analytics failure, just log it
+                // setError("Could not load analytics for the selected item."); 
                 setAnalyticsData({ questions: [], attempts: [] });
             } finally {
                 setIsAnalyticsLoading(false);
