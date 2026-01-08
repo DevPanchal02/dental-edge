@@ -59,7 +59,7 @@ const initialState = {
         currentQuestionIndex: 0,
         practiceTestSettings: { prometricDelay: false, additionalTime: false },
         submittedAnswers: {},
-        highlightedHtml: {}, // Moved here for persistence
+        highlightedHtml: {}, 
     },
     timer: {
         value: 0,
@@ -72,7 +72,6 @@ const initialState = {
         tempReveal: {},
         isExhibitVisible: false,
         isSaving: false,
-        // highlightedHtml removed from here
     },
     error: null,
 };
@@ -129,9 +128,9 @@ function quizReducer(state, action) {
                 ...state,
                 status: 'prompting_resume',
                 attempt: {
-                    ...state.attempt, // Ensure defaults
+                    ...state.attempt, 
                     ...action.payload.attempt,
-                    highlightedHtml: action.payload.attempt.highlightedHtml || {}, // Load highlights
+                    highlightedHtml: action.payload.attempt.highlightedHtml || {},
                 },
                 timer: action.payload.attempt.timer || initialState.timer,
                 quizContent: {
@@ -306,7 +305,6 @@ function quizReducer(state, action) {
             return { ...state, uiState: { ...state.uiState, showExplanation: { ...state.uiState.showExplanation, [qIndex]: !state.uiState.showExplanation[qIndex]}}};
         }
 
-        // --- NEW ACTION: UPDATE HIGHLIGHT ---
         case 'UPDATE_HIGHLIGHT': {
             const { contentKey, html } = action.payload;
             return {
@@ -343,7 +341,10 @@ function quizReducer(state, action) {
 
 export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isPreviewMode) => {
     const [state, dispatch] = useReducer(quizReducer, initialState);
-    const { currentUser } = useAuth();
+    
+    // --- UPDATE 1: Get User Profile to check Tier ---
+    const { currentUser, userProfile } = useAuth();
+    
     const navigate = useNavigate();
     
     const questionStartTimeRef = useRef(null);
@@ -359,7 +360,6 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
             dispatch({ type: 'INITIALIZE_ATTEMPT', payload: { topicId, sectionType, quizId, reviewAttemptId, isPreviewMode } });
             
             try {
-                // Timeout promise to prevent infinite loading state
                 const fetchData = Promise.all([
                     getQuizData(topicId, sectionType, quizId, isPreviewMode),
                     getQuizMetadata(topicId, sectionType, quizId)
@@ -391,7 +391,11 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
                     const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
                     let inProgressAttempt = loadFromLocalStorage(localKey);
 
-                    if (!inProgressAttempt) {
+                    // --- UPDATE 2: Logic Branch for Free vs Paid ---
+                    const isFreeUser = userProfile?.tier === 'free';
+
+                    if (!inProgressAttempt && !isFreeUser) {
+                        // Only fetch from server if Paid User
                         inProgressAttempt = await getInProgressAttempt({ topicId, sectionType, quizId });
                     }
 
@@ -412,9 +416,19 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
 
                         dispatch({ type: 'PROMPT_RESUME', payload: { attempt: inProgressAttempt, questions, metadata } });
                     } else {
+                        // Create New Attempt
                         const newAttemptData = { ...initialState.attempt };
                         const timerData = { ...initialState.timer };
-                        const attemptId = await saveInProgressAttempt({ topicId, sectionType, quizId, ...newAttemptData, timer: timerData });
+                        let attemptId;
+
+                        if (isFreeUser) {
+                            // Free User: Generate Local ID, DO NOT save to server
+                            attemptId = `local-${Date.now()}`;
+                        } else {
+                            // Paid User: Save to server
+                            attemptId = await saveInProgressAttempt({ topicId, sectionType, quizId, ...newAttemptData, timer: timerData });
+                        }
+                        
                         saveToLocalStorage(localKey, { ...newAttemptData, id: attemptId, timer: timerData });
                         dispatch({ type: 'SET_DATA_AND_START', payload: { questions, metadata, attemptId } });
                     }
@@ -430,7 +444,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         return () => {
             clearInterval(timerIntervalRef.current);
         };
-    }, [topicId, sectionType, quizId, reviewAttemptId, currentUser, isPreviewMode]);
+    }, [topicId, sectionType, quizId, reviewAttemptId, currentUser, isPreviewMode, userProfile]);
     
     useEffect(() => {
         if (state.status === 'active') {
@@ -438,8 +452,12 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         }
     }, [state.status, state.attempt.currentQuestionIndex]);
     
+    // --- UPDATE 3: Restrict Server Saving ---
     const saveProgressToServer = useCallback(async () => {
-        if (isPreviewMode || !((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
+        const isFreeUser = userProfile?.tier === 'free';
+        
+        // If Free User, abort immediately. No Cloud Function calls.
+        if (isPreviewMode || isFreeUser || !((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
             return;
         }
         dispatch({ type: 'SET_IS_SAVING', payload: true });
@@ -456,7 +474,7 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
         });
         setTimeout(() => dispatch({ type: 'SET_IS_SAVING', payload: false }), 500);
 
-    }, [state.attempt, state.timer, topicId, sectionType, quizId, state.status, isPreviewMode]);
+    }, [state.attempt, state.timer, topicId, sectionType, quizId, state.status, isPreviewMode, userProfile]);
 
     useEffect(() => {
         saveProgressToServerRef.current = saveProgressToServer;
@@ -571,14 +589,29 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
     
     const startNewAttempt = useCallback(async () => {
         if (isPreviewMode) return;
+        
+        // --- UPDATE 4: Clean up server only if Paid ---
+        const isFreeUser = userProfile?.tier === 'free';
         const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
+        
         clearLocalStorage(localKey);
-        await deleteInProgressAttempt(state.attempt.id);
+        
+        if (!isFreeUser) {
+            await deleteInProgressAttempt(state.attempt.id);
+        }
+
         const newAttemptData = { ...initialState.attempt };
-        const newAttemptId = await saveInProgressAttempt({ topicId, sectionType, quizId, ...newAttemptData, timer: initialState.timer });
+        
+        let newAttemptId;
+        if (isFreeUser) {
+            newAttemptId = `local-${Date.now()}`;
+        } else {
+            newAttemptId = await saveInProgressAttempt({ topicId, sectionType, quizId, ...newAttemptData, timer: initialState.timer });
+        }
+
         saveToLocalStorage(localKey, { ...newAttemptData, id: newAttemptId, timer: initialState.timer });
         dispatch({ type: 'RESET_ATTEMPT', payload: { newAttemptId } });
-    }, [state.attempt.id, topicId, sectionType, quizId, isPreviewMode]);
+    }, [state.attempt.id, topicId, sectionType, quizId, isPreviewMode, userProfile]);
 
     const finalizeAttempt = useCallback(async () => {
         if (isPreviewMode) {
@@ -593,6 +626,8 @@ export const useQuizEngine = (topicId, sectionType, quizId, reviewAttemptId, isP
             dispatch({ type: 'STOP_TIMER' });
             dispatch({ type: 'SET_IS_SAVING', payload: true });
 
+            // We continue to call finalizeQuizAttempt even for free users
+            // to save the final score to history (Monetization loop: "See your progress")
             const { score } = await finalizeQuizAttempt({ topicId, sectionType, quizId, ...state.attempt, timer: state.timer });
             
             const results = {
