@@ -27,6 +27,22 @@
     ],
     "rewrites": [
       {
+        "source": "/api/getTopics",
+        "function": "getTopics"
+      },
+      {
+        "source": "/api/getTopicStructure",
+        "function": "getTopicStructure"
+      },
+      {
+        "source": "/api/getQuizData",
+        "function": "getQuizData"
+      },
+      {
+        "source": "/api/stripeWebhook",
+        "function": "stripeWebhook"
+      },
+      {
         "source": "**",
         "destination": "/index.html"
       }
