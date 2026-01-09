@@ -1,11 +1,12 @@
+// FILE: client/src/components/QuestionCard.jsx
+
 import React from 'react';
 import '../styles/QuestionCard.css';
 
-// Memoized component for rendering HTML content, updated to pass through extra props
+// Memoized component for rendering HTML content
 const HtmlRenderer = React.memo(function HtmlRenderer({ htmlString, className, ...rest }) {
   return <div className={className} dangerouslySetInnerHTML={{ __html: htmlString || '<p>Content missing.</p>' }} {...rest} />;
 });
-
 
 function QuestionCard({
   questionData,
@@ -18,7 +19,6 @@ function QuestionCard({
   isReviewMode,        // True if the entire quiz is in review mode (e.g., from results page)
   isMarked,
   onOptionSelect,
-  // onViewAnswer, // This was for QBank's "S" key, handled by tempReveal now
   onToggleExplanation,
   onToggleCrossOff,
   onToggleMark,
@@ -48,13 +48,19 @@ function QuestionCard({
       : originalHtml;
   };
 
-  const handleSelect = (optionLabel) => {
+  // --- HANDLER UPDATE START ---
+  // Ensure the function signature accepts 'e' (event) as the first argument
+  const handleSelect = (e, optionLabel) => {
+    // Prevent default browser behavior to stop double-firing events (once on label, once on input)
+    if (e && e.preventDefault) e.preventDefault();
+
     const trulySubmitted = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
 
     if (!trulySubmitted && !isReviewMode && !isTemporarilyRevealed && !crossedOffOptions.has(optionLabel)) {
       onOptionSelect(questionIndex, optionLabel);
     }
   };
+  // --- HANDLER UPDATE END ---
 
   const handleContextMenu = (event, optionLabel) => {
       event.preventDefault();
@@ -98,7 +104,6 @@ function QuestionCard({
 
   const shouldRenderExplanationContent = canShowExplanationButton && showExplanation;
 
-
   return (
     <div className={`question-card ${isErrorQuestion ? 'error-card' : ''}`}>
       {!isErrorQuestion ? (
@@ -118,7 +123,8 @@ function QuestionCard({
                 key={option.label}
                 className={getOptionClassName(option)}
                 onContextMenu={(e) => handleContextMenu(e, option.label)}
-                onClick={() => handleSelect(option.label)}
+                // --- JSX UPDATE: Pass 'e' explicitly ---
+                onClick={(e) => handleSelect(e, option.label)}
               >
                 <input
                   type="radio"

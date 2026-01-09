@@ -49,3 +49,11 @@ client/src/data/perceptual-ability/
 client/src/data/reading-comprehension/
 client/src/new-data/
 client/src/old-data/
+
+
+# Playwright
+client/test-results/
+client/playwright-report/
+client/blob-report/
+client/playwright/.cache/
+client/playwright/.auth/
