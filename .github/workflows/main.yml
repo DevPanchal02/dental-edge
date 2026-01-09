@@ -1,0 +1,82 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  #Verification
+  verification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Setup Node.js Environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: client/package-lock.json
+
+      # Install Dependencies
+      - name: Install Client Dependencies
+        working-directory: ./client
+        run: npm ci
+
+      # 1. Linting Check (Code Style)
+      - name: Run Linter
+        working-directory: ./client
+        run: npm run lint
+
+      # 2. Unit Testing Check (Logic)
+      - name: Run Unit Tests
+        working-directory: ./client
+        run: npm run test -- --run
+
+      # 3. Build Check (Compilation)
+      - name: Build Application
+        working-directory: ./client
+        run: npm run build
+
+  # JOB 2: DEPLOYMENT (Only happens if Verification passes)
+  deploy:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    needs: verification # Waits for verification to finish successfully
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+
+      # We need to rebuild in the deploy job because jobs run on different machines
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: '**/package-lock.json'
+
+      - name: Install Client Deps
+        working-directory: ./client
+        run: npm ci
+
+      - name: Build Client
+        working-directory: ./client
+        run: npm run build
+
+      - name: Install Functions Deps
+        working-directory: ./functions
+        run: npm ci
+
+      # Deployment
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DENTAL_EDGE }}'
+          channelId: live
+          projectId: dental-edge-62624
+          # Ensures we deploy both Hosting and Functions
+          target: hosting,functions

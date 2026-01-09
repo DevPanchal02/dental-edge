@@ -1,11 +1,10 @@
-// FILE: client/src/services/api.js
-
 import { auth } from '../firebase';
 import { getFunctions, httpsCallable } from 'firebase/functions';
 
 // --- Firebase Cloud Functions Setup ---
 const functions = getFunctions();
 
+// These use the Firebase SDK (httpsCallable), so they automatically find the correct URL.
 const createCheckoutSessionCallable = httpsCallable(functions, 'createCheckoutSession');
 const saveInProgressAttemptCallable = httpsCallable(functions, 'saveInProgressAttempt');
 const getInProgressAttemptCallable = httpsCallable(functions, 'getInProgressAttempt');
@@ -18,11 +17,6 @@ const getQuizAnalyticsCallable = httpsCallable(functions, 'getQuizAnalytics');
 
 // --- Callable Function Exports ---
 
-/**
- * Creates a Stripe checkout session for a given subscription tier.
- * @param {string} tierId - The ID of the tier to purchase ('plus' or 'pro').
- * @returns {Promise<string>} The Stripe session ID.
- */
 export const createCheckoutSession = async (tierId) => {
   try {
     const result = await createCheckoutSessionCallable({ tierId });
@@ -33,11 +27,6 @@ export const createCheckoutSession = async (tierId) => {
   }
 };
 
-/**
- * Saves the current state of a quiz as 'in-progress'.
- * @param {object} attemptData - The current state of the quiz.
- * @returns {Promise<string>} The attemptId of the saved document.
- */
 export const saveInProgressAttempt = async (attemptData) => {
   try {
     const result = await saveInProgressAttemptCallable(attemptData);
@@ -47,11 +36,6 @@ export const saveInProgressAttempt = async (attemptData) => {
   }
 };
 
-/**
- * Retrieves an 'in-progress' quiz attempt for the current user and a specific quiz.
- * @param {object} quizIdentifiers - { topicId, sectionType, quizId }.
- * @returns {Promise<object|null>} The attempt data if found, otherwise null.
- */
 export const getInProgressAttempt = async ({ topicId, sectionType, quizId }) => {
   try {
     const result = await getInProgressAttemptCallable({ topicId, sectionType, quizId });
@@ -62,11 +46,6 @@ export const getInProgressAttempt = async ({ topicId, sectionType, quizId }) => 
   }
 };
 
-/**
- * Finalizes and grades a quiz attempt.
- * @param {object} attemptData - The final state of the quiz to be submitted.
- * @returns {Promise<object>} An object containing the attemptId and the final score.
- */
 export const finalizeQuizAttempt = async (attemptData) => {
   try {
     const result = await finalizeQuizAttemptCallable(attemptData);
@@ -77,11 +56,6 @@ export const finalizeQuizAttempt = async (attemptData) => {
   }
 };
 
-/**
- * Deletes an 'in-progress' quiz attempt.
- * @param {string} attemptId - The ID of the in-progress attempt document to delete.
- * @returns {Promise<void>}
- */
 export const deleteInProgressAttempt = async (attemptId) => {
     try {
         await deleteInProgressAttemptCallable({ attemptId });
@@ -90,11 +64,6 @@ export const deleteInProgressAttempt = async (attemptId) => {
     }
 };
 
-/**
- * Fetches a specific quiz attempt by its ID for review.
- * @param {string} attemptId - The document ID of the quiz attempt.
- * @returns {Promise<object>} The full quiz attempt data.
- */
 export const getQuizAttemptById = async (attemptId) => {
     try {
         const result = await getQuizAttemptByIdCallable({ attemptId });
@@ -105,11 +74,6 @@ export const getQuizAttemptById = async (attemptId) => {
     }
 };
 
-/**
- * Fetches all completed attempts for a specific quiz.
- * @param {object} quizIdentifiers - { topicId, sectionType, quizId }.
- * @returns {Promise<Array>} A list of summarized completed attempts.
- */
 export const getCompletedAttemptsForQuiz = async ({ topicId, sectionType, quizId }) => {
     try {
         const result = await getCompletedAttemptsForQuizCallable({ topicId, sectionType, quizId });
@@ -120,11 +84,6 @@ export const getCompletedAttemptsForQuiz = async ({ topicId, sectionType, quizId
     }
 };
 
-/**
- * Fetches lightweight analytics data for a quiz.
- * @param {object} quizIdentifiers - { topicId, sectionType, quizId }.
- * @returns {Promise<Array>} An array of question analytics objects.
- */
 export const getQuizAnalytics = async ({ topicId, sectionType, quizId }) => {
     try {
         const result = await getQuizAnalyticsCallable({ topicId, sectionType, quizId });
@@ -136,11 +95,11 @@ export const getQuizAnalytics = async ({ topicId, sectionType, quizId }) => {
 };
 
 
-// --- HTTP Function Endpoints ---
+// --- HTTP Function Endpoints (Refactored to Relative Paths) ---
 const API = {
-  GET_TOPICS: "https://gettopics-7ukimtpi4a-uc.a.run.app",
-  GET_TOPIC_STRUCTURE: "https://gettopicstructure-7ukimtpi4a-uc.a.run.app",
-  GET_QUIZ_DATA: "https://getquizdata-7ukimtpi4a-uc.a.run.app",
+  GET_TOPICS: "/api/getTopics",
+  GET_TOPIC_STRUCTURE: "/api/getTopicStructure",
+  GET_QUIZ_DATA: "/api/getQuizData",
 };
 
 // Helper to get the current user's auth token for HTTP functions
@@ -153,7 +112,6 @@ const getAuthToken = async () => {
     return await user.getIdToken(true);
   } catch (error) {
     console.error("Auth Token Error:", error);
-    // Explicitly throw so the caller knows the connection failed
     throw new Error("Connection blocked. Please check your internet or disable AdBlockers.");
   }
 };
@@ -175,7 +133,7 @@ export const fetchTopics = async () => {
 
 export const fetchTopicStructure = async (topicId) => {
     try {
-        const url = new URL(API.GET_TOPIC_STRUCTURE);
+        const url = new URL(API.GET_TOPIC_STRUCTURE, window.location.origin);
         url.searchParams.append("topicId", topicId);
 
         const response = await fetch(url.toString());
@@ -191,7 +149,7 @@ export const fetchTopicStructure = async (topicId) => {
 
 export const fetchQuizData = async (storagePath, isPreview = false) => {
   try {
-    const url = new URL(API.GET_QUIZ_DATA);
+    const url = new URL(API.GET_QUIZ_DATA, window.location.origin);
     url.searchParams.append("storagePath", storagePath);
     if (isPreview) {
       url.searchParams.append("isPreview", "true");
