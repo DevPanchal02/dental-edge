@@ -1,5 +1,8 @@
-name: CI/CD Pipeline
+name: Production CI/CD Pipeline
 
+# Strategy:
+# 1. Pull Requests trigger the CI job (Lint/Test/Build) to ensure code quality before merging.
+# 2. Pushes to 'main' trigger the full pipeline (CI -> CD) to deploy to production.
 on:
   push:
     branches: [ main ]
@@ -7,72 +10,109 @@ on:
     branches: [ main ]
 
 jobs:
+  # ------------------------------------------------------------------
+  # JOB 1: Continuous Integration (CI)
+  # Validates code stability, enforces style standards, and verifies logic.
+  # ------------------------------------------------------------------
   build_and_test:
+    name: Verify & Build
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Configure Node.js Environment
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
           cache-dependency-path: client/package-lock.json
 
-      - name: Install Dependencies (Client)
+      - name: Install Frontend Dependencies
         working-directory: ./client
         run: npm ci
 
-      - name: Run Linter
+      # Enforce code style consistency to prevent technical debt
+      - name: Run Static Code Analysis (Linting)
         working-directory: ./client
         run: npm run lint
 
-      - name: Run Unit Tests
+      # Verify business logic using Vitest
+      - name: Run Unit Test Suite
         working-directory: ./client
         run: npm run test -- --run
 
-      - name: Build Application
+      # Compile the React application to ensure no build errors exist.
+      # Note: We inject secrets here because Vite embeds them into the build artifacts.
+      - name: Compile Application (Build)
         working-directory: ./client
         run: npm run build
+        env:
+          VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
+          VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+          VITE_STRIPE_PUBLISHABLE_KEY: ${{ secrets.VITE_STRIPE_PUBLISHABLE_KEY }}
 
+  # ------------------------------------------------------------------
+  # JOB 2: Continuous Deployment (CD)
+  # Deploys the verified code to the Firebase production environment.
+  # ------------------------------------------------------------------
   deploy:
-    # Only deploy if we are pushing to main, not on PRs
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    name: Deploy to Production
+    # Dependency: Only runs if the 'build_and_test' job passes successfully.
     needs: build_and_test
+    # Guard: Only deploy from the 'main' branch, never from Pull Requests.
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Configure Node.js Environment
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
           cache-dependency-path: client/package-lock.json
 
+      # --- Prepare Client ---
       - name: Install Client Dependencies
         working-directory: ./client
         run: npm ci
 
-      - name: Build Client
+      # Re-build the client for production deployment.
+      # Secrets are injected again to ensure the production build has valid API keys.
+      - name: Build Production Client
         working-directory: ./client
         run: npm run build
+        env:
+          VITE_FIREBASE_API_KEY: ${{ secrets.VITE_FIREBASE_API_KEY }}
+          VITE_FIREBASE_AUTH_DOMAIN: ${{ secrets.VITE_FIREBASE_AUTH_DOMAIN }}
+          VITE_FIREBASE_PROJECT_ID: ${{ secrets.VITE_FIREBASE_PROJECT_ID }}
+          VITE_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_FIREBASE_STORAGE_BUCKET }}
+          VITE_FIREBASE_MESSAGING_SENDER_ID: ${{ secrets.VITE_FIREBASE_MESSAGING_SENDER_ID }}
+          VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
+          VITE_STRIPE_PUBLISHABLE_KEY: ${{ secrets.VITE_STRIPE_PUBLISHABLE_KEY }}
 
-      - name: Install Functions Dependencies
+      # --- Prepare Serverless Functions ---
+      - name: Install Cloud Functions Dependencies
         working-directory: ./functions
         run: npm ci
 
-      # --- DEPLOYMENT STEPS ---
+      # --- Deployment ---
       
-      # 1. Create a temporary file containing your secret key
-      - name: Create Service Account Key
+      # Securely generate the Service Account key file from GitHub Secrets.
+      # This enables authentication without committing sensitive keys to the repo.
+      - name: Authenticate with Google Cloud
         run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DENTAL_EDGE }}' > service-account.json
 
-      # 2. Run the standard deploy command using that key
-      - name: Deploy to Live Production
+      # Deploy both Hosting assets and Cloud Functions using the Firebase CLI.
+      - name: Deploy to Firebase Live
         run: npx firebase-tools deploy --project dental-edge --force
         env:
-          # Tells Firebase to use the key file for authentication
           GOOGLE_APPLICATION_CREDENTIALS: service-account.json
