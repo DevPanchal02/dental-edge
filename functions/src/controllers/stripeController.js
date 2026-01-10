@@ -6,11 +6,6 @@ const admin = require("firebase-admin");
 
 const db = admin.firestore();
 
-/**
- * Creates a checkout session.
- * @param {object} request - The callable request object.
- * @param {object} config - Contains { stripe, prices }.
- */
 const createCheckoutSession = async (request, config) => {
   if (!request.auth) {
     throw new HttpsError("unauthenticated", "You must be logged in to make a purchase.");
@@ -25,7 +20,6 @@ const createCheckoutSession = async (request, config) => {
   }
 
   try {
-    // Verify user exists
     const userDoc = await db.collection("users").doc(uid).get();
     if (!userDoc.exists) {
       throw new HttpsError("not-found", "User document not found.");
@@ -36,7 +30,9 @@ const createCheckoutSession = async (request, config) => {
     else if (tierId === 'pro') priceId = prices.pro;
     else throw new HttpsError("invalid-argument", `Invalid tierId: ${tierId}`);
 
-    const liveAppUrl = "https://dental-edge-62624.web.app";
+    // --- FIX: Updated URL to match your actual Project ID ---
+    const liveAppUrl = "https://dental-edge.web.app"; 
+    
     logger.info(`Creating checkout for user: ${uid}, tier: ${tierId}`);
 
     const session = await stripe.checkout.sessions.create({
@@ -58,12 +54,6 @@ const createCheckoutSession = async (request, config) => {
   }
 };
 
-/**
- * Handles Stripe Webhooks.
- * @param {object} request - The HTTP request.
- * @param {object} response - The HTTP response.
- * @param {object} config - Contains { stripe, endpointSecret, prices }.
- */
 const handleWebhook = async (request, response, config) => {
   const { stripe, endpointSecret, prices } = config;
   let event;
@@ -84,7 +74,6 @@ const handleWebhook = async (request, response, config) => {
     const firebaseUID = session.metadata.firebaseUID;
     const stripeCustomerId = session.customer;
 
-    // Retrieve line items to verify which price was bought
     const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
       session.id, { expand: ['line_items'] }
     );
