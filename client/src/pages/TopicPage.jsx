@@ -39,9 +39,6 @@ function TopicPage() {
         width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
     }), [isSidebarEffectivelyPinned]);
 
-    // --- FIX 1: Reset selection immediately when topic changes ---
-    // This prevents the "Race Condition" where the app tries to load 
-    // the OLD quiz ID with the NEW topic ID, causing a 500 error.
     useEffect(() => {
         setSelectedItemId(null);
         setSelectedItemType(null);
@@ -57,7 +54,6 @@ function TopicPage() {
                 return;
             }
             setIsLoading(true);
-            // Don't clear error here, let the reset effect handle it
             setTopicData(null);
             
             try {
@@ -65,13 +61,10 @@ function TopicPage() {
                 if (isMounted) {
                     setTopicData(data);
                     
-                    // --- FIX 2: Smarter Default Selection ---
-                    // Try to respect the user's current tab (Practice vs QBank)
                     let newId = null;
                     let newType = null;
 
                     if (activeTab === 'qbank' && data.questionBanks?.length > 0) {
-                        // Try to find the first available QBank
                         const firstGroup = data.questionBanks[0];
                         if (firstGroup && firstGroup.banks && firstGroup.banks.length > 0) {
                             newId = firstGroup.banks[0].id;
@@ -79,11 +72,9 @@ function TopicPage() {
                         }
                     }
 
-                    // Fallback to Practice Test if QBank selection failed or tab is 'practice'
                     if (!newId && data.practiceTests?.length > 0) {
                         newId = data.practiceTests[0].id;
                         newType = 'practice';
-                        // If we were on QBank tab but found no QBanks, switch tab to avoid confusion
                         if (activeTab === 'qbank') {
                             setActiveTab('practice');
                         }
@@ -93,10 +84,10 @@ function TopicPage() {
                         setSelectedItemId(newId);
                         setSelectedItemType(newType);
                     } else {
-                        setIsLoading(false); // No content to select
+                        setIsLoading(false); 
                     }
                 }
-            } catch (err) {
+            } catch {
                 if (isMounted) setError(`Could not load data for topic: ${topicId}.`);
             } finally {
                 if (isMounted) setIsLoading(false);
@@ -105,10 +96,9 @@ function TopicPage() {
         loadData();
 
         return () => { isMounted = false; };
-    }, [topicId, activeTab]); // Added activeTab to dependency to ensure correct logic
+    }, [topicId, activeTab]); 
 
     useEffect(() => {
-        // Safe check: Don't fetch if IDs are missing or mismatch
         if (!selectedItemId || !selectedItemType || !topicId) {
             setAnalyticsData({ questions: [], attempts: [] });
             return;
@@ -124,8 +114,6 @@ function TopicPage() {
                 setAnalyticsData({ questions, attempts });
             } catch (err) {
                 console.error("Error fetching analytics data:", err);
-                // Don't show a full page error for analytics failure, just log it
-                // setError("Could not load analytics for the selected item."); 
                 setAnalyticsData({ questions: [], attempts: [] });
             } finally {
                 setIsAnalyticsLoading(false);

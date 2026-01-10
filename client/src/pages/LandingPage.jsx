@@ -1,7 +1,7 @@
 // FILE: client/src/pages/LandingPage.jsx
 
 import React, { Suspense, useEffect, useRef } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { useGLTF, MeshReflectorMaterial, Stage } from '@react-three/drei';
 import '../styles/LandingPage.css';

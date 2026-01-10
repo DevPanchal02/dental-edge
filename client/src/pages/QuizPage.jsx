@@ -1,5 +1,3 @@
-// FILE: client/src/pages/QuizPage.jsx
-
 import React, { useMemo, useEffect, useRef, useCallback } from 'react';
 import { useParams, useLocation, useNavigate, Link } from 'react-router-dom';
 import { useQuizEngine } from '../hooks/useQuizEngine';
@@ -13,7 +11,6 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import ErrorDisplay from '../components/ErrorDisplay';
 import ResumePromptModal from '../components/ResumePromptModal';
 import QuizReviewSummary from '../components/QuizReviewSummary';
-import { FaCrown } from 'react-icons/fa';
 import PracticeTestOptions from '../components/PracticeTestOptions';
 import RegistrationPromptModal from '../components/RegistrationPromptModal';
 import Exhibit from '../components/Exhibit';
@@ -37,8 +34,10 @@ function QuizPage({ isPreviewMode = false }) {
 
     const { state, actions } = useQuizEngine(topicId, sectionType, quizId, reviewAttemptId, isPreviewMode);
     
-    const layout = !isPreviewMode ? useLayout() : { isSidebarEffectivelyPinned: false };
-    const { isSidebarEffectivelyPinned } = layout;
+    // --- FIX: Unconditional Hook Call ---
+    // This is now safe because App.jsx wraps this component in a Provider
+    // even during preview mode.
+    const { isSidebarEffectivelyPinned } = useLayout();
     
     // --- HIGHLIGHTER REFS & LOGIC ---
     const quizPageContainerRef = useRef(null);
@@ -295,7 +294,6 @@ function QuizPage({ isPreviewMode = false }) {
             contentAreaProps: {
                 currentQuestion: currentQuestion,
                 passageHtml: currentQuestion?.passage?.html_content,
-                // Pass the highlighted HTML from attempt state
                 highlightedHtml: state.attempt.highlightedHtml, 
                 topicId: topicId,
                 questionIndex: currentIndex,
