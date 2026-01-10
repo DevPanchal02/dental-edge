@@ -1,23 +1,20 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import '../styles/Exhibit.css';
 import periodicTableImage from '../assets/periodic_table.png';
 
 const Exhibit = ({ isVisible, onClose }) => {
     const [position, setPosition] = useState(null);
-    const [size, setSize] = useState({ width: 510 }); // Default width
+    const [size, setSize] = useState({ width: 510 }); 
     
-    // Dragging State
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
     
-    // Resizing State
     const [isResizing, setIsResizing] = useState(false);
     const [resizeStart, setResizeStart] = useState({ x: 0, width: 0 });
 
     const exhibitRef = useRef(null);
     const initialPositionSetRef = useRef(false);
 
-    // Helper to convert rem to pixels based on the root font size
     const getRemInPx = (rem) => {
         if (typeof window === 'undefined') return rem * 16;
         return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
@@ -27,8 +24,6 @@ const Exhibit = ({ isVisible, onClose }) => {
         if (!isVisible) {
             setPosition(null);
             initialPositionSetRef.current = false;
-            // Reset size on close if desired, or keep it persistent
-            // setSize({ width: 510 }); 
         }
     }, [isVisible]);
 
@@ -53,9 +48,7 @@ const Exhibit = ({ isVisible, onClose }) => {
         }
     };
 
-    // --- Drag Logic ---
     const handleMouseDown = (e) => {
-        // Prevent drag if clicking close button, resizer, or inside content if needed
         if (
             e.target.classList.contains('exhibit-close-btn-img') || 
             e.target.classList.contains('exhibit-resizer')
@@ -72,9 +65,8 @@ const Exhibit = ({ isVisible, onClose }) => {
         e.preventDefault();
     };
 
-    // --- Resize Logic ---
     const handleResizeMouseDown = (e) => {
-        e.stopPropagation(); // Prevent triggering the drag
+        e.stopPropagation();
         e.preventDefault();
         setIsResizing(true);
         setResizeStart({
@@ -83,12 +75,14 @@ const Exhibit = ({ isVisible, onClose }) => {
         });
     };
 
-    const handleMouseUp = () => {
+    // --- FIX: Wrapped in useCallback ---
+    const handleMouseUp = useCallback(() => {
         setIsDragging(false);
         setIsResizing(false);
-    };
+    }, []);
 
-    const handleMouseMove = (e) => {
+    // --- FIX: Wrapped in useCallback ---
+    const handleMouseMove = useCallback((e) => {
         if (isDragging && exhibitRef.current) {
             const boundaryPx = getRemInPx(0.5);
             const { width, height } = exhibitRef.current.getBoundingClientRect();
@@ -109,12 +103,12 @@ const Exhibit = ({ isVisible, onClose }) => {
 
         if (isResizing) {
             const deltaX = e.clientX - resizeStart.x;
-            const newWidth = Math.max(200, resizeStart.width + deltaX); // Min width 200px
-            const maxWidth = window.innerWidth - 50; // Prevent making it wider than screen
+            const newWidth = Math.max(200, resizeStart.width + deltaX); 
+            const maxWidth = window.innerWidth - 50; 
             
             setSize({ width: Math.min(newWidth, maxWidth) });
         }
-    };
+    }, [isDragging, isResizing, dragStart, resizeStart, size.width]); // Added dependencies
 
     useEffect(() => {
         if (isDragging || isResizing) {
@@ -128,7 +122,7 @@ const Exhibit = ({ isVisible, onClose }) => {
             window.removeEventListener('mousemove', handleMouseMove);
             window.removeEventListener('mouseup', handleMouseUp);
         };
-    }, [isDragging, isResizing, dragStart, resizeStart]);
+    }, [isDragging, isResizing, handleMouseMove, handleMouseUp]);
 
     if (!isVisible) {
         return null;
@@ -160,7 +154,6 @@ const Exhibit = ({ isVisible, onClose }) => {
                 onLoad={handleImageLoad}
             />
 
-            {/* Resize Handle */}
             <div 
                 className="exhibit-resizer"
                 onMouseDown={handleResizeMouseDown}

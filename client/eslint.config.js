@@ -30,4 +30,11 @@ export default [
       ],
     },
   },
+  //Allow Node.js globals for E2E tests and Config files ---
+  {
+    files: ['e2e/**/*.js', 'playwright.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    }
+  }
 ]

@@ -15,7 +15,6 @@ function QuizFooter({
     isMarked,
     isSaving,
     isReviewMode,
-    isPracticeTest,
     hasStarted,
     showExhibitButton,
     showSolutionButton,

@@ -1,6 +1,4 @@
-// FILE: client/src/components/QuizReviewSummary.jsx
 import React from 'react';
-import { formatDisplayName } from '../services/loader'; // Assuming this is still needed elsewhere or can be removed if not
 import '../styles/QuizReviewSummary.css';
 
 function QuizReviewSummary({
@@ -8,20 +6,17 @@ function QuizReviewSummary({
     quizMetadata,
     markedQuestions,
     submittedAnswers,
-    userAnswers,
     currentQuestionIndexBeforeReview,
-    topicId, // Not directly used here but good for context if needed later
     onCloseReviewSummary,
     onJumpToQuestionInQuiz,
     onEndQuiz,
     timerDisplayContent,
     dynamicFooterStyle,
     isNavActionInProgress,
-    // executeActionWithDelay, // This prop might become unused
 }) {
 
     const handleJumpFromTable = (index) => {
-        onJumpToQuestionInQuiz(index, true); // true indicates from table (no delay override by QuizPage)
+        onJumpToQuestionInQuiz(index, true); 
     };
 
     const handleReviewMarked = () => {
@@ -29,19 +24,18 @@ function QuizReviewSummary({
         const markedIndices = Object.keys(markedQuestions)
                                 .filter(idx => markedQuestions[idx])
                                 .map(Number)
-                                .sort((a,b) => a - b); // Ensure sorted order
+                                .sort((a,b) => a - b); 
 
         if (markedIndices.length === 0) {
             alert("No questions are marked for review.");
             return;
         }
-        // Try to find first marked that is not submitted (incomplete)
+        
         targetIndex = markedIndices.find(idx => !submittedAnswers[idx]);
         if (targetIndex === undefined) {
-            // If all marked are submitted, just go to the first marked one
             targetIndex = markedIndices[0];
         }
-        onJumpToQuestionInQuiz(targetIndex, false); // false for fromSummaryTable means QuizPage's logic will apply delay
+        onJumpToQuestionInQuiz(targetIndex, false); 
     };
 
     const handleReviewAll = () => {
@@ -165,7 +159,7 @@ function QuizReviewSummary({
                 </div>
                 <div className="qrs-footer-group-right">
                     <button
-                        onClick={onEndQuiz} // This is already wrapped by QuizPage
+                        onClick={onEndQuiz} 
                         className="qrs-footer-button end-quiz"
                         disabled={isNavActionInProgress}
                     >

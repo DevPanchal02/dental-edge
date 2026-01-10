@@ -1,5 +1,3 @@
-// FILE: client/src/App.jsx
-
 import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
@@ -11,22 +9,22 @@ import RegisterPage from './pages/RegisterPage';
 import LandingPage from './pages/LandingPage';
 import PlansPage from './pages/PlansPage';
 import ContactPage from './pages/ContactPage.jsx';
-// We no longer need fetchTopics here
-import { useAuth } from './context/AuthContext'; 
+import { useAuth } from './context/AuthContext';
+import { LayoutContext } from './context/LayoutContext';
 
 function App() {
   const location = useLocation();
   const { currentUser, loading } = useAuth();
 
-  // --- THIS IS THE FIX ---
-  // We no longer need to fetch topics here. We will redirect to a default
-  // topic, and the Layout component will handle fetching the data.
-  // This avoids the "cold start storm" by separating navigation from data loading.
-  
-  // Show a loading screen while Firebase Auth is initializing
   if (loading) {
     return <div className="page-loading">Initializing Application...</div>;
   }
+
+  // Default context value for Preview Mode (Sidebar is hidden/not pinned)
+  const previewLayoutContext = { 
+    isSidebarOpen: false, 
+    isSidebarEffectivelyPinned: false 
+  };
 
   return (
     <Routes>
@@ -37,18 +35,18 @@ function App() {
       <Route path="/contact" element={<ContactPage />} />
       <Route path="/plans" element={<PlansPage />} />
 
+      {/* --- Wrap Preview Route in Context Provider --- */}
       <Route
         path="/preview/quiz/:topicId/:sectionType/:quizId"
-        element={<QuizPage key={location.pathname} isPreviewMode={true} />}
+        element={
+          <LayoutContext.Provider value={previewLayoutContext}>
+            <QuizPage key={location.pathname} isPreviewMode={true} />
+          </LayoutContext.Provider>
+        }
       />
 
       {/* --- Protected Application Routes --- */}
       <Route path="/app" element={currentUser ? <Layout /> : <Navigate to="/login" />}>
-        {/*
-          Redirect to the first known topic by default. The Layout will handle
-          the actual data fetching. If 'biology' doesn't exist, the user
-          will still see the sidebar and can choose another topic.
-        */}
         <Route index element={<Navigate to="/app/topic/biology" replace />} />
         <Route path="topic/:topicId" element={<TopicPage />} />
         <Route

@@ -1,9 +1,6 @@
-// FILE: client/src/components/QuestionCard.jsx
-
 import React from 'react';
 import '../styles/QuestionCard.css';
 
-// Memoized component for rendering HTML content
 const HtmlRenderer = React.memo(function HtmlRenderer({ htmlString, className, ...rest }) {
   return <div className={className} dangerouslySetInnerHTML={{ __html: htmlString || '<p>Content missing.</p>' }} {...rest} />;
 });
@@ -12,19 +9,17 @@ function QuestionCard({
   questionData,
   questionIndex,
   selectedOption,
-  isSubmitted,         // True if the answer for this question is submitted OR if in review/tempReveal
-  showExplanation,     // Boolean flag from QuizPage to show explanation area
+  isSubmitted,
+  showExplanation,
   crossedOffOptions,
   userTimeSpentOnQuestion,
-  isReviewMode,        // True if the entire quiz is in review mode (e.g., from results page)
-  isMarked,
+  isReviewMode,
   onOptionSelect,
   onToggleExplanation,
   onToggleCrossOff,
-  onToggleMark,
-  isTemporarilyRevealed, // For QBank "Show Solution"
-  isPracticeTestActive,  // New prop: true if it's an active (not review) practice test
-  highlightedHtml,       // New prop for persistent highlights
+  isTemporarilyRevealed,
+  isPracticeTestActive,
+  highlightedHtml,
 }) {
 
    if (!questionData || typeof questionData !== 'object' || questionData === null) {
@@ -48,10 +43,7 @@ function QuestionCard({
       : originalHtml;
   };
 
-  // --- HANDLER UPDATE START ---
-  // Ensure the function signature accepts 'e' (event) as the first argument
   const handleSelect = (e, optionLabel) => {
-    // Prevent default browser behavior to stop double-firing events (once on label, once on input)
     if (e && e.preventDefault) e.preventDefault();
 
     const trulySubmitted = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
@@ -60,7 +52,6 @@ function QuestionCard({
       onOptionSelect(questionIndex, optionLabel);
     }
   };
-  // --- HANDLER UPDATE END ---
 
   const handleContextMenu = (event, optionLabel) => {
       event.preventDefault();
@@ -123,7 +114,6 @@ function QuestionCard({
                 key={option.label}
                 className={getOptionClassName(option)}
                 onContextMenu={(e) => handleContextMenu(e, option.label)}
-                // --- JSX UPDATE: Pass 'e' explicitly ---
                 onClick={(e) => handleSelect(e, option.label)}
               >
                 <input

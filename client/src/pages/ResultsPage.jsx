@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import { getQuizData, getQuizMetadata, fetchTopicData, formatDisplayName } from '../services/loader';
+import { getQuizData, fetchTopicData, formatDisplayName } from '../services/loader';
 import '../styles/ResultsPage.css';
 
 const extractTextFromHtml = (htmlString) => {
