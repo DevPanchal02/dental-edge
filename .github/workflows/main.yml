@@ -77,6 +77,6 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DENTAL_EDGE }}'
           channelId: live
-          projectId: dental-edge-62624
+          projectId: dental-edge
           # Ensures we deploy both Hosting and Functions
           target: hosting,functions
