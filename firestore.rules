@@ -1,17 +1,15 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-
-    // Users can only read their own profile data based on their UID.
-    // They are also allowed to write (create/update) their own profile data,
-    // which is needed if we add client-side profile editing later.
+    
+    // Allow users to read/write their own user document
     match /users/{userId} {
       allow read, write: if request.auth != null && request.auth.uid == userId;
-    }
-    
-    // Optional: Deny access to all other collections unless explicitly allowed.
-    match /{document=**} {
-      allow read, write: if false; 
+
+      // Allow users to read/write their own quiz attempts (subcollection)
+      match /quizAttempts/{attemptId} {
+        allow read, write: if request.auth != null && request.auth.uid == userId;
+      }
     }
   }
 }
