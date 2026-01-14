@@ -6,7 +6,7 @@ import { ThemeProvider } from './context/ThemeContext'; // Import ThemeProvider
 import { AuthProvider } from './context/AuthContext';
 import './styles/App.css'; // Keep global styles
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <ThemeProvider> 
       <AuthProvider>
