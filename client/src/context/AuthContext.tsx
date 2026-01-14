@@ -1,5 +1,3 @@
-// FILE: client/src/context/AuthContext.jsx
-
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import {
   onAuthStateChanged,
@@ -8,26 +6,48 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithPopup,
+  User as FirebaseUser,
+  UserCredential
 } from 'firebase/auth';
 import { auth, db } from '../firebase';
 import { doc, onSnapshot } from 'firebase/firestore';
+import { UserProfile } from '../types/user.types';
 
-const AuthContext = createContext();
+// Define the shape of the Context Value
+interface AuthContextType {
+  currentUser: FirebaseUser | null;
+  userProfile: UserProfile | null;
+  loading: boolean;
+  signup: (email: string, password: string) => Promise<UserCredential>;
+  login: (email: string, password: string) => Promise<UserCredential>;
+  logout: () => Promise<void>;
+  signInWithGoogle: () => Promise<UserCredential>;
+}
 
-export const useAuth = () => {
-  return useContext(AuthContext);
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export const useAuth = (): AuthContextType => {
+  const context = useContext(AuthContext);
+  if (context === undefined) {
+    throw new Error('useAuth must be used within an AuthProvider');
+  }
+  return context;
 };
 
-export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [userProfile, setUserProfile] = useState(null);
+interface AuthProviderProps {
+  children: React.ReactNode;
+}
 
-  const signup = (email, password) => {
+export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState<FirebaseUser | null>(null);
+  const [loading, setLoading] = useState<boolean>(true);
+  const [userProfile, setUserProfile] = useState<UserProfile | null>(null);
+
+  const signup = (email: string, password: string) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  const login = (email, password) => {
+  const login = (email: string, password: string) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -47,8 +67,7 @@ export const AuthProvider = ({ children }) => {
     const unsubscribeFromAuth = onAuthStateChanged(auth, (user) => {
       setCurrentUser(user);
       
-      // --- THIS IS THE FIX ---
-      // When auth state changes, immediately reset the profile and enter a loading state.
+      // Reset profile and start loading when auth state changes
       setUserProfile(null);
       setLoading(true);
 
@@ -57,13 +76,11 @@ export const AuthProvider = ({ children }) => {
         
         unsubscribeFromProfile = onSnapshot(userDocRef, (docSnap) => {
           if (docSnap.exists()) {
-            setUserProfile({ uid: user.uid, ...docSnap.data() });
+            // We cast the data to UserProfile, adding the uid from the auth user
+            setUserProfile({ uid: user.uid, ...docSnap.data() } as UserProfile);
           } else {
-            // This case handles the brief delay for new signups. We'll keep
-            // the profile as null, and our UI will wait.
             console.warn("User document not yet available in Firestore for new user.");
           }
-          // We only set loading to false AFTER we've received the first snapshot.
           setLoading(false);
         }, (error) => {
             console.error("Error listening to user profile:", error);
@@ -83,17 +100,17 @@ export const AuthProvider = ({ children }) => {
     };
   }, []);
 
-  const value = {
+  const value: AuthContextType = {
     currentUser,
     userProfile,
-    loading, // This `loading` state is now more accurate.
+    loading,
     signup,
     login,
     logout,
     signInWithGoogle,
   };
 
-  // We now render children ONLY when loading is false, preventing the UI flicker.
+  // Only render children when loading is complete to prevent redirects/flickers
   return (
     <AuthContext.Provider value={value}>
       {!loading && children}
