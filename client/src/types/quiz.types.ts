@@ -1,3 +1,5 @@
+// FILE: client/src/types/quiz.types.ts
+
 import { SectionType } from './content.types';
 
 /**
@@ -116,6 +118,8 @@ export interface QuizAttempt {
     createdAt?: number;
     /** Timestamp (ms) of last update. */
     updatedAt?: number;
+    /** Timestamp (ms) of completion (Present on completed attempts). */
+    completedAt?: number;
     
     /** 
      * User-generated highlights mapped by content key.

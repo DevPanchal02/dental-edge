@@ -1,5 +1,3 @@
-// FILE: client/src/components/Sidebar.jsx
-
 import React, { useState, useRef, useEffect } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -9,8 +7,20 @@ import { FaRegMoon, FaRegSun } from "react-icons/fa6";
 import { FiLogOut, FiUser, FiHelpCircle } from 'react-icons/fi';
 import appLogo from '../assets/logo.png';
 import '../styles/Sidebar.css';
+import { TopicSummary } from '../types/content.types';
 
-function Sidebar({
+interface SidebarProps {
+    topics: TopicSummary[];
+    activeTopicId?: string;
+    isOpen: boolean;
+    isPinned: boolean;
+    onMouseEnter: () => void;
+    onMouseLeave: () => void;
+    onPinToggle: () => void;
+    isContentPage: boolean;
+}
+
+const Sidebar: React.FC<SidebarProps> = ({
     topics,
     activeTopicId,
     isOpen,
@@ -19,24 +29,24 @@ function Sidebar({
     onMouseLeave,
     onPinToggle,
     isContentPage
-}) {
-    const { currentUser, userProfile, logout } = useAuth(); // Get userProfile
+}) => {
+    const { currentUser, userProfile, logout } = useAuth();
     const { theme, toggleTheme } = useTheme();
     
-    // Use userProfile for display name if available, fallback to currentUser
     const userName = userProfile?.displayName || currentUser?.displayName || currentUser?.email || 'User';
     const userProfilePic = currentUser?.photoURL;
     const userInitial = userName.charAt(0).toUpperCase();
     const userTier = userProfile?.tier;
 
-    const [indicatorStyle, setIndicatorStyle] = useState({ top: 0, height: 0, opacity: 0 });
+    const [indicatorStyle, setIndicatorStyle] = useState<React.CSSProperties>({ top: 0, height: 0, opacity: 0 });
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const navListRef = useRef(null);
-    const menuRef = useRef(null);
-    const menuTriggerRef = useRef(null);
+    
+    const navListRef = useRef<HTMLUListElement>(null);
+    const menuRef = useRef<HTMLDivElement>(null);
+    const menuTriggerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const activeElement = navListRef.current?.querySelector('.topic-button.active');
+        const activeElement = navListRef.current?.querySelector<HTMLElement>('.topic-button.active');
         if (activeElement) {
             const top = activeElement.offsetTop;
             const height = activeElement.offsetHeight;
@@ -47,9 +57,11 @@ function Sidebar({
     }, [activeTopicId, topics, isOpen]);
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (menuRef.current && !menuRef.current.contains(event.target) &&
-                menuTriggerRef.current && !menuTriggerRef.current.contains(event.target)) {
+        const handleClickOutside = (event: MouseEvent) => {
+            if (
+                menuRef.current && !menuRef.current.contains(event.target as Node) &&
+                menuTriggerRef.current && !menuTriggerRef.current.contains(event.target as Node)
+            ) {
                 setMenuOpen(false);
             }
         };
@@ -137,27 +149,23 @@ function Sidebar({
                             ) : (
                                 <div className="profile-initial">{userInitial}</div>
                             )}
-                            {/* --- MODIFICATION START --- */}
                             <div className="user-info">
                                 <span className="user-name">{userName}</span>
                                 {userTier && <span className="user-tier">{userTier}</span>}
                             </div>
-                            {/* --- MODIFICATION END --- */}
                         </div>
                     )}
                     
-                    {/* --- MODIFICATION START --- */}
-                    {/* Conditionally render the button based on tier */}
                     {userTier && userTier !== 'pro' && (
                         <Link to="/plans" className="upgrade-button" onClick={(e) => e.stopPropagation()}>
                             {userTier === 'plus' ? 'Go Pro' : 'Upgrade'}
                         </Link>
                     )}
-                    {/* --- MODIFICATION END --- */}
                 </div>
             </div>
         </aside>
     );
 }
 
-export default Sidebar;
+// --- OPTIMIZATION: Memoize component to prevent re-renders when parent state changes but props don't ---
+export default React.memo(Sidebar);

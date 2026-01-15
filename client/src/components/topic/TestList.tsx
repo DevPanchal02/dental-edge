@@ -1,12 +1,28 @@
-// FILE: client/src/components/topic/TestList.jsx
-
 import React from 'react';
 import { FaLock, FaChevronRight } from 'react-icons/fa';
-import '../../styles/TestList.css'; // <-- Import the new stylesheet
+import '../../styles/TestList.css';
+import { QuizItem, SectionType } from '../../types/content.types';
+import { UserProfile } from '../../types/user.types';
 
-function TestList({ items, selectedItemId, onItemSelect, onStartQuiz, onLockedItemClick, userProfile }) {
+interface TestListProps {
+    items: QuizItem[] | undefined;
+    selectedItemId: string | null;
+    onItemSelect: (id: string, type: SectionType) => void;
+    onStartQuiz: (id: string, type: SectionType) => void;
+    onLockedItemClick: () => void;
+    userProfile: UserProfile | null;
+}
+
+const TestList: React.FC<TestListProps> = ({ 
+    items, 
+    selectedItemId, 
+    onItemSelect, 
+    onStartQuiz, 
+    onLockedItemClick, 
+    userProfile 
+}) => {
     
-    const isLocked = (index) => {
+    const isLocked = (index: number) => {
         if (!userProfile) return true;
         if (userProfile.tier === 'pro' || userProfile.tier === 'plus') return false;
         if (userProfile.tier === 'free') return index > 0;
@@ -17,8 +33,8 @@ function TestList({ items, selectedItemId, onItemSelect, onStartQuiz, onLockedIt
         return <p className="no-items-message">No items available for this section.</p>;
     }
 
-    const handleItemClick = (item, isLocked) => {
-        if (isLocked) {
+    const handleItemClick = (item: QuizItem, locked: boolean) => {
+        if (locked) {
             onLockedItemClick();
             return;
         }
@@ -29,17 +45,17 @@ function TestList({ items, selectedItemId, onItemSelect, onStartQuiz, onLockedIt
         }
     };
 
-    const handleItemDoubleClick = (item, isLocked) => {
-        if (isLocked) {
+    const handleItemDoubleClick = (item: QuizItem, locked: boolean) => {
+        if (locked) {
             onLockedItemClick();
             return;
         }
         onStartQuiz(item.id, item.sectionType);
     };
 
-    const handleArrowClick = (e, item, isLocked) => {
+    const handleArrowClick = (e: React.MouseEvent, item: QuizItem, locked: boolean) => {
         e.stopPropagation();
-        if (isLocked) {
+        if (locked) {
             onLockedItemClick();
             return;
         }
@@ -73,6 +89,6 @@ function TestList({ items, selectedItemId, onItemSelect, onStartQuiz, onLockedIt
             })}
         </div>
     );
-}
+};
 
-export default TestList;
+export default React.memo(TestList);

@@ -1,12 +1,15 @@
-// FILE: client/src/components/topic/ContentSwitcher.jsx
-
 import React, { useState, useEffect, useRef } from 'react';
-import '../../styles/ContentSwitcher.css'; // <-- Import the new stylesheet
+import '../../styles/ContentSwitcher.css';
 
-function ContentSwitcher({ activeTab, onTabChange }) {
-    const practiceTabRef = useRef(null);
-    const qbankTabRef = useRef(null);
-    const [indicatorStyle, setIndicatorStyle] = useState({});
+interface ContentSwitcherProps {
+    activeTab: 'practice' | 'qbank';
+    onTabChange: (tab: 'practice' | 'qbank') => void;
+}
+
+const ContentSwitcher: React.FC<ContentSwitcherProps> = ({ activeTab, onTabChange }) => {
+    const practiceTabRef = useRef<HTMLButtonElement>(null);
+    const qbankTabRef = useRef<HTMLButtonElement>(null);
+    const [indicatorStyle, setIndicatorStyle] = useState<React.CSSProperties>({});
 
     useEffect(() => {
         const activeRef = activeTab === 'practice' ? practiceTabRef : qbankTabRef;
@@ -37,6 +40,6 @@ function ContentSwitcher({ activeTab, onTabChange }) {
             <div className="content-switcher-indicator" style={indicatorStyle} />
         </div>
     );
-}
+};
 
-export default ContentSwitcher;
+export default React.memo(ContentSwitcher);

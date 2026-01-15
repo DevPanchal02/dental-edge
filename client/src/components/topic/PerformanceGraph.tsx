@@ -1,27 +1,41 @@
-// FILE: client/src/components/topic/PerformanceGraph.jsx
-
 import React, { useMemo } from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Area, CartesianGrid, ReferenceLine, Dot } from 'recharts';
 import '../../styles/PerformanceGraph.css';
 import { useTheme } from '../../context/ThemeContext';
+import { Question, QuizAttempt } from '../../types/quiz.types';
 
-// --- THIS IS THE FIX (Part 1): Restore the PerformanceDot component ---
-const PerformanceDot = (props) => {
+// Custom Dot Component Props
+interface PerformanceDotProps {
+    cx?: number;
+    cy?: number;
+    payload?: {
+        userCorrect?: boolean;
+    };
+}
+
+const PerformanceDot: React.FC<PerformanceDotProps> = (props) => {
     const { cx, cy, payload } = props;
     
     // Only render a dot if there is a user result for this question
-    if (payload.userCorrect === undefined) {
+    if (payload?.userCorrect === undefined || cx === undefined || cy === undefined) {
         return null;
     }
 
-    const color = payload.userCorrect ? 'var(--text-accent)' : '#e74c3c'; // Use themed green, refined red
-    const dotBorderColor = getComputedStyle(document.documentElement).getPropertyValue('--bg-secondary').trim();
+    const color = payload.userCorrect ? 'var(--text-accent)' : '#e74c3c'; 
+    const dotBorderColor = typeof document !== 'undefined' 
+        ? getComputedStyle(document.documentElement).getPropertyValue('--bg-secondary').trim() 
+        : '#ffffff';
 
     return <Dot cx={cx} cy={cy} r={5} fill={color} stroke={dotBorderColor} strokeWidth={2} />;
 };
 
+interface TooltipProps {
+    active?: boolean;
+    payload?: any[];
+    label?: string;
+}
 
-const CustomTooltip = ({ active, payload, label }) => {
+const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
         const data = payload[0].payload;
         return (
@@ -45,7 +59,12 @@ const CustomTooltip = ({ active, payload, label }) => {
     return null;
 };
 
-function PerformanceGraph({ questions, userAttempt }) {
+interface PerformanceGraphProps {
+    questions: Question[];
+    userAttempt: QuizAttempt | null | undefined;
+}
+
+const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ questions, userAttempt }) => {
     const { theme } = useTheme();
     const PRIMING_N = 0.5;
 
@@ -58,17 +77,21 @@ function PerformanceGraph({ questions, userAttempt }) {
         return questions.map((q, index) => {
             const questionsAnswered = index + 1;
             
-            const avgPercent = (parseFloat(q.analytics?.percent_correct) / 100) || 0.5;
+            const analyticsPercent = q.analytics?.percent_correct 
+                ? parseFloat(q.analytics.percent_correct) 
+                : 50; // Default to 50% if missing
+            
+            const avgPercent = (analyticsPercent / 100) || 0.5;
             cumulativeAverageCorrect += avgPercent;
 
             let userScore = null;
-            let userCorrect; // Keep track of correctness for the dot color
+            let userCorrect: boolean | undefined;
 
             if (userAttempt?.userAnswers) {
                 const userAnswer = userAttempt.userAnswers[index];
                 const correctOption = q.options.find(opt => opt.is_correct);
                 
-                userCorrect = (userAnswer && correctOption && userAnswer === correctOption.label);
+                userCorrect = (!!userAnswer && !!correctOption && userAnswer === correctOption.label);
                 if (userCorrect) {
                     cumulativeUserCorrect++;
                 }
@@ -82,7 +105,7 @@ function PerformanceGraph({ questions, userAttempt }) {
                 questionNumber: questionsAnswered,
                 averageScore: averageScore,
                 userScore: userScore,
-                userCorrect: userCorrect, // Pass correctness data to the dot
+                userCorrect: userCorrect,
             };
         });
     }, [questions, userAttempt]);
@@ -91,7 +114,6 @@ function PerformanceGraph({ questions, userAttempt }) {
         axis: theme === 'dark' ? 'var(--text-secondary)' : '#a0a0a0',
         grid: theme === 'dark' ? 'rgba(255, 255, 255, 0.07)' : 'rgba(0, 0, 0, 0.07)',
         averageLine: theme === 'dark' ? '#666' : '#ccc',
-        // --- THIS IS THE FIX (Part 2): Use the themed accent color ---
         userLine: theme === 'dark' ? 'var(--text-accent)' : 'var(--bg-button-primary)',
         deltaGreen: 'rgba(40, 167, 69, 0.15)',
         deltaRed: 'rgba(220, 53, 69, 0.15)',
@@ -111,7 +133,12 @@ function PerformanceGraph({ questions, userAttempt }) {
         <>
             <div className="graph-header"><h3 className="graph-title">Performance Graph</h3></div>
             <div style={{ position: 'relative', width: '100%', height: '300px' }}>
-                <ResponsiveContainer width="100%" height="100%">
+                {/* 
+                    OPTIMIZATION: debounce={300}
+                    This stops the chart from trying to redraw on every single frame 
+                    of the sidebar animation (which takes 300ms).
+                */}
+                <ResponsiveContainer width="100%" height="100%" debounce={300}>
                     <LineChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 20 }}>
                         <defs>
                             <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
@@ -141,7 +168,6 @@ function PerformanceGraph({ questions, userAttempt }) {
                         {userAttempt && (
                             <>
                                 <ReferenceLine y={0.5} stroke={themeColors.grid} strokeDasharray="3 3" />
-                                {/* --- THIS IS THE FIX (Part 3): Add the custom dot back to the user line --- */}
                                 <Line 
                                     type="monotone" 
                                     dataKey="userScore" 
@@ -153,9 +179,9 @@ function PerformanceGraph({ questions, userAttempt }) {
                                 <Area 
                                     type="monotone" 
                                     dataKey="userScore" 
-                                    stroke={false} 
+                                    stroke="none"
                                     fill="url(#splitColor)"
-                                    baseValue="averageScore"
+                                    baseValue={"averageScore" as any}
                                 />
                             </>
                         )}
@@ -164,6 +190,6 @@ function PerformanceGraph({ questions, userAttempt }) {
             </div>
         </>
     );
-}
+};
 
-export default PerformanceGraph;
+export default React.memo(PerformanceGraph);

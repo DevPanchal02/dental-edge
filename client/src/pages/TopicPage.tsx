@@ -1,9 +1,7 @@
-// FILE: client/src/pages/TopicPage.jsx
-
-import React, { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { fetchTopicData } from '../services/loader.js';
-import { getCompletedAttemptsForQuiz, getQuizAnalytics } from '../services/api.js';
+import { fetchTopicData } from '../services/loader';
+import { getCompletedAttemptsForQuiz, getQuizAnalytics } from '../services/api';
 import { useAuth } from '../context/AuthContext';
 import { useLayout } from '../context/LayoutContext';
 
@@ -15,30 +13,39 @@ import UpgradePromptModal from '../components/UpgradePromptModal';
 import LoadingSpinner from '../components/LoadingSpinner';
 
 import '../styles/TopicPage.css'; 
+import { TopicStructure, SectionType } from '../types/content.types';
+import { Question, QuizAttempt } from '../types/quiz.types';
+
+interface AnalyticsState {
+    questions: Question[];
+    attempts: QuizAttempt[];
+}
 
 function TopicPage() {
-    const { topicId } = useParams();
+    const { topicId } = useParams<{ topicId: string }>();
     const { isSidebarEffectivelyPinned } = useLayout();
     const { userProfile } = useAuth();
     const navigate = useNavigate();
 
-    const [topicData, setTopicData] = useState(null);
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
-    const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState(false);
+    const [topicData, setTopicData] = useState<TopicStructure | null>(null);
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
+    const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState<boolean>(false);
 
-    const [activeTab, setActiveTab] = useState('practice');
-    const [selectedItemId, setSelectedItemId] = useState(null);
-    const [selectedItemType, setSelectedItemType] = useState('practice');
+    const [activeTab, setActiveTab] = useState<'practice' | 'qbank'>('practice');
+    const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+    const [selectedItemType, setSelectedItemType] = useState<SectionType | null>('practice');
     
-    const [analyticsData, setAnalyticsData] = useState({ questions: [], attempts: [] });
-    const [isAnalyticsLoading, setIsAnalyticsLoading] = useState(false);
+    const [analyticsData, setAnalyticsData] = useState<AnalyticsState>({ questions: [], attempts: [] });
+    const [isAnalyticsLoading, setIsAnalyticsLoading] = useState<boolean>(false);
 
+    // This style object is stable unless pinning changes
     const topicPageDynamicStyle = useMemo(() => ({
         marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
         width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
     }), [isSidebarEffectivelyPinned]);
 
+    // Reset selection on topic change
     useEffect(() => {
         setSelectedItemId(null);
         setSelectedItemType(null);
@@ -46,6 +53,7 @@ function TopicPage() {
         setError(null);
     }, [topicId]);
 
+    // Load Topic Data
     useEffect(() => {
         let isMounted = true;
         const loadData = async () => {
@@ -61,9 +69,10 @@ function TopicPage() {
                 if (isMounted) {
                     setTopicData(data);
                     
-                    let newId = null;
-                    let newType = null;
+                    let newId: string | null = null;
+                    let newType: SectionType | null = null;
 
+                    // Logic to auto-select the first item if nothing is selected
                     if (activeTab === 'qbank' && data.questionBanks?.length > 0) {
                         const firstGroup = data.questionBanks[0];
                         if (firstGroup && firstGroup.banks && firstGroup.banks.length > 0) {
@@ -98,6 +107,7 @@ function TopicPage() {
         return () => { isMounted = false; };
     }, [topicId, activeTab]); 
 
+    // Load Analytics
     useEffect(() => {
         if (!selectedItemId || !selectedItemType || !topicId) {
             setAnalyticsData({ questions: [], attempts: [] });
@@ -124,42 +134,66 @@ function TopicPage() {
     }, [selectedItemId, selectedItemType, topicId]);
 
 
-    const handleTabChange = (tab) => {
+    // Handlers wrapped in useCallback to prevent child re-renders
+    const handleTabChange = useCallback((tab: 'practice' | 'qbank') => {
         setActiveTab(tab);
-        if (tab === 'practice' && topicData?.practiceTests?.length > 0) {
-            setSelectedItemId(topicData.practiceTests[0].id);
-            setSelectedItemType('practice');
-        } else if (tab === 'qbank' && topicData?.questionBanks?.[0]?.banks.length > 0) {
-            setSelectedItemId(topicData.questionBanks[0].banks[0].id);
-            setSelectedItemType('qbank');
-        } else {
-            setSelectedItemId(null);
-            setSelectedItemType(null);
-        }
-    };
+        // We need topicData to set the default item, but topicData is in state.
+        // We can't easily avoid the dependency on topicData, but since topicData is stable after load, it's fine.
+        setTopicData(currentTopicData => {
+            if (!currentTopicData) return null;
+            
+            let newId = null;
+            let newType: SectionType | null = null;
 
-    const handleItemSelect = (itemId, itemType) => {
+            if (tab === 'practice' && currentTopicData.practiceTests?.length > 0) {
+                newId = currentTopicData.practiceTests[0].id;
+                newType = 'practice';
+            } else if (tab === 'qbank' && currentTopicData.questionBanks?.[0]?.banks.length > 0) {
+                newId = currentTopicData.questionBanks[0].banks[0].id;
+                newType = 'qbank';
+            }
+
+            if (newId && newType) {
+                setSelectedItemId(newId);
+                setSelectedItemType(newType);
+            } else {
+                setSelectedItemId(null);
+                setSelectedItemType(null);
+            }
+            return currentTopicData;
+        });
+    }, []);
+
+    const handleItemSelect = useCallback((itemId: string, itemType: SectionType) => {
         setSelectedItemId(itemId);
         setSelectedItemType(itemType);
-    };
+    }, []);
 
-    const handleStartQuiz = (itemId, itemType) => {
-        navigate(`/app/quiz/${topicId}/${itemType}/${itemId}`);
-    };
+    const handleStartQuiz = useCallback((itemId: string, itemType: SectionType) => {
+        // We need topicId from closure, which is fine as it's a route param
+        if (topicId) {
+            navigate(`/app/quiz/${topicId}/${itemType}/${itemId}`);
+        }
+    }, [topicId, navigate]);
 
-    const handleLockedItemClick = () => {
+    const handleLockedItemClick = useCallback(() => {
         setIsUpgradeModalOpen(true);
-    };
+    }, []);
 
-    const itemsToShow = activeTab === 'practice' 
-        ? topicData?.practiceTests?.map(item => ({ ...item, sectionType: 'practice' }))
-        : topicData?.questionBanks?.flatMap(group => 
-            group.banks.map(bank => ({ ...bank, sectionType: 'qbank' }))
-          );
+    // Memoize the items list to prevent TestList from re-rendering unnecessarily
+    const itemsToShow = useMemo(() => {
+        return activeTab === 'practice' 
+            ? topicData?.practiceTests?.map(item => ({ ...item, sectionType: 'practice' as SectionType }))
+            : topicData?.questionBanks?.flatMap(group => 
+                group.banks.map(bank => ({ ...bank, sectionType: 'qbank' as SectionType }))
+              );
+    }, [activeTab, topicData]);
     
-    const mostRecentAttempt = analyticsData.attempts?.length > 0 
-        ? analyticsData.attempts.sort((a, b) => b.completedAt - a.completedAt)[0] 
-        : null;
+    const mostRecentAttempt = useMemo(() => {
+        return analyticsData.attempts?.length > 0 
+            ? [...analyticsData.attempts].sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0))[0] 
+            : null;
+    }, [analyticsData.attempts]);
 
     if (isLoading) {
         return <LoadingSpinner message="Loading Topic Details..." />;

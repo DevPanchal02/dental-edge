@@ -1,10 +1,13 @@
-// FILE: client/src/components/topic/AnalyticsBreakdown.jsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../../styles/AnalyticsBreakdown.css'; // <-- Import the new stylesheet
+import '../../styles/AnalyticsBreakdown.css';
+import { QuizAttempt } from '../../types/quiz.types';
 
-function AnalyticsBreakdown({ userAttempt }) {
+interface AnalyticsBreakdownProps {
+    userAttempt: QuizAttempt | null | undefined;
+}
+
+const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({ userAttempt }) => {
     return (
         <div className="breakdown-container">
             <div className="breakdown-header">
@@ -15,11 +18,11 @@ function AnalyticsBreakdown({ userAttempt }) {
                 <p>Detailed stats will be rendered here.</p>
             </div>
 
-            {userAttempt && (
+            {userAttempt && userAttempt.id && (
                 <div className="view-attempt-button-container">
                     <Link 
                         to={`/app/quiz/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
-                        state={{ attemptId: userAttempt.id }} // Pass attemptId for review mode
+                        state={{ attemptId: userAttempt.id }}
                         className="view-attempt-button"
                     >
                         View Attempt
@@ -28,6 +31,6 @@ function AnalyticsBreakdown({ userAttempt }) {
             )}
         </div>
     );
-}
+};
 
-export default AnalyticsBreakdown;
+export default React.memo(AnalyticsBreakdown);

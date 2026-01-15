@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Layout from './components/Layout';
 import TopicPage from './pages/TopicPage';
@@ -8,7 +7,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import LandingPage from './pages/LandingPage';
 import PlansPage from './pages/PlansPage';
-import ContactPage from './pages/ContactPage.jsx';
+import ContactPage from './pages/ContactPage';
 import { useAuth } from './context/AuthContext';
 import { LayoutContext } from './context/LayoutContext';
 
