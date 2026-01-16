@@ -1,5 +1,3 @@
-// FILE: client/src/types/quiz.types.ts
-
 import { SectionType } from './content.types';
 
 /**
@@ -71,6 +69,8 @@ export interface Question {
 /**
  * Represents the persistent state of a user's quiz session.
  * This structure is serialized to Firestore and LocalStorage.
+ * 
+ * NOTE: This uses Arrays for 'crossedOffOptions' for JSON compatibility.
  */
 export interface QuizAttempt {
     /** Unique identifier for the attempt (null if not yet persisted to server). */
@@ -134,4 +134,28 @@ export interface QuizAttempt {
         isCountdown: boolean;
         initialDuration: number;
     };
+}
+
+/**
+ * The "Internal/Runtime" shape (Sets).
+ * Used for React State and Hooks for performance (O(1) lookups).
+ * It mirrors QuizAttempt exactly, but overrides 'crossedOffOptions' to use Sets.
+ */
+export interface QuizAttemptState extends Omit<QuizAttempt, 'crossedOffOptions'> {
+    crossedOffOptions: Record<number, Set<string>>;
+}
+
+/**
+ * Represents the final summary object stored in LocalStorage after a quiz is completed.
+ * This is distinct from QuizAttempt because it contains derived data like `correctIndices`.
+ */
+export interface QuizResult {
+    score: number;
+    totalQuestions: number;
+    totalValidQuestions: number;
+    userAnswers: Record<number, string>;
+    timestamp: number;
+    quizName?: string;
+    correctIndices: number[];
+    incorrectIndices: number[];
 }

@@ -1,9 +1,12 @@
-// FILE: client/src/components/RegistrationPromptModal.jsx
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/RegistrationPromptModal.css';
 import appLogo from '../assets/logo.png';
+
+interface RegistrationPromptModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
 
 const CloseIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +14,7 @@ const CloseIcon = () => (
     </svg>
 );
 
-function RegistrationPromptModal({ isOpen, onClose }) {
+const RegistrationPromptModal: React.FC<RegistrationPromptModalProps> = ({ isOpen, onClose }) => {
     const navigate = useNavigate();
 
     if (!isOpen) {
@@ -27,7 +30,7 @@ function RegistrationPromptModal({ isOpen, onClose }) {
     };
 
     // Stop propagation to prevent clicks inside the modal from closing it.
-    const handleModalContentClick = (e) => {
+    const handleModalContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
     };
 
@@ -41,11 +44,9 @@ function RegistrationPromptModal({ isOpen, onClose }) {
                 <div className="rpm-modal-header">
                     <img src={appLogo} alt="Dental Edge Logo" className="rpm-logo" />
                     <h2 className="rpm-title">Create an account to continue</h2>
-                    {/* --- MODIFICATION START --- */}
                     <p className="rpm-subtitle">
                         Don't lose your momentum—sign up to finish the test. Save your results, track your progress, and get your edge.
                     </p>
-                    {/* --- MODIFICATION END --- */}
                 </div>
 
                 <div className="rpm-modal-body">
@@ -59,6 +60,6 @@ function RegistrationPromptModal({ isOpen, onClose }) {
             </div>
         </div>
     );
-}
+};
 
 export default RegistrationPromptModal;

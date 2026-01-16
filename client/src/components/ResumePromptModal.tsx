@@ -1,11 +1,14 @@
-// FILE: client/src/components/ResumePromptModal.jsx
-
 import React from 'react';
-import '../styles/ResumePromptModal.css'; // <-- Import the new dedicated stylesheet
+import '../styles/ResumePromptModal.css';
 
-function ResumePromptModal({ onResume, onStartNew }) {
+interface ResumePromptModalProps {
+    onResume: () => void;
+    onStartNew: () => void;
+}
+
+const ResumePromptModal: React.FC<ResumePromptModalProps> = ({ onResume, onStartNew }) => {
     // This modal is not closable; the user must make a choice.
-    const handleModalContentClick = (e) => {
+    const handleModalContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
     };
 
@@ -20,11 +23,9 @@ function ResumePromptModal({ onResume, onStartNew }) {
                 </div>
 
                 <div className="rpm-actions">
-                    {/* The "Start Over" button now has the 'secondary' class */}
                     <button onClick={onStartNew} className="rpm-button secondary">
                         Start Over
                     </button>
-                    {/* The "Resume" button now has the 'primary' class */}
                     <button onClick={onResume} className="rpm-button primary">
                         Yes, Resume
                     </button>
@@ -32,6 +33,6 @@ function ResumePromptModal({ onResume, onStartNew }) {
             </div>
         </div>
     );
-}
+};
 
 export default ResumePromptModal;

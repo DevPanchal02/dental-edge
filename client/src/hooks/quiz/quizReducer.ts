@@ -1,14 +1,12 @@
 import { SectionType } from '../../types/content.types';
-import { Question, QuizMetadata, QuizAttempt } from '../../types/quiz.types';
+import { Question, QuizMetadata, QuizAttemptState } from '../../types/quiz.types';
 
-// --- STATE TYPES ---
-
-export interface QuizAttemptState extends Omit<QuizAttempt, 'crossedOffOptions'> {
-    crossedOffOptions: Record<number, Set<string>>;
-}
+// --- STATE DEFINITIONS ---
 
 export interface QuizState {
     status: 'initializing' | 'loading' | 'prompting_options' | 'prompting_registration' | 'prompting_resume' | 'active' | 'reviewing_summary' | 'completed' | 'error' | 'reviewing_attempt';
+    
+    // Identifiers for the current quiz context
     quizIdentifiers: {
         topicId: string;
         sectionType: SectionType;
@@ -16,23 +14,32 @@ export interface QuizState {
         reviewAttemptId?: string | null;
         isPreviewMode: boolean;
     } | null;
+
+    // Static content loaded from the server
     quizContent: {
         metadata: QuizMetadata | null;
         questions: Question[];
     };
+
+    // Dynamic user progress (uses Sets for O(1) lookup performance)
     attempt: QuizAttemptState;
+
     timer: {
         value: number;
         isActive: boolean;
         isCountdown: boolean;
         initialDuration: number;
     };
+
+    // Ephemeral UI state (not persisted to DB)
     uiState: {
         showExplanation: Record<number, boolean>;
         tempReveal: Record<number, boolean>;
         isExhibitVisible: boolean;
         isSaving: boolean;
+        isNavActionInProgress?: boolean; 
     };
+
     error: Error | null;
 }
 
@@ -40,7 +47,6 @@ export interface QuizState {
 
 export type QuizAction =
     | { type: 'INITIALIZE_ATTEMPT'; payload: NonNullable<QuizState['quizIdentifiers']> }
-    // RENAMED: Generic PROMPT_OPTIONS instead of PREVIEW specific
     | { type: 'PROMPT_OPTIONS'; payload: { questions: Question[]; metadata: QuizMetadata } }
     | { type: 'START_PREVIEW'; payload: { settings: { prometricDelay: boolean; additionalTime: boolean }; duration: number } }
     | { type: 'PROMPT_REGISTRATION' }
@@ -67,7 +73,7 @@ export type QuizAction =
     | { type: 'FINALIZE_SUCCESS'; payload: { attemptId: string | null } }
     | { type: 'SET_ERROR'; payload: any };
 
-// --- HELPER ---
+// --- INITIALIZATION HELPERS ---
 
 export const createInitialAttempt = (topicId: string = '', sectionType: SectionType = 'practice', quizId: string = ''): QuizAttemptState => ({
     id: null,
@@ -76,7 +82,7 @@ export const createInitialAttempt = (topicId: string = '', sectionType: SectionT
     quizId,
     userAnswers: {},
     markedQuestions: {},
-    crossedOffOptions: {},
+    crossedOffOptions: {}, // Initialized as empty Record<number, Set<string>>
     userTimeSpent: {},
     currentQuestionIndex: 0,
     status: 'initializing',
@@ -97,6 +103,7 @@ export const initialState: QuizState = {
         tempReveal: {},
         isExhibitVisible: false,
         isSaving: false,
+        isNavActionInProgress: false
     },
     error: null,
 };
@@ -155,6 +162,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
              };
 
         case 'PROMPT_RESUME': {
+            // Ensure timer has valid defaults if missing from loaded data
             const loadedTimer = action.payload.attempt.timer || initialState.timer;
             return {
                 ...state,
@@ -172,8 +180,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             };
         }
 
-        case 'SET_DATA_AND_START':
-            // Logic to determine initial timer state based on payload or defaults
+        case 'SET_DATA_AND_START': {
             const startTimerValue = action.payload.initialDuration || 0;
             const isCountdown = startTimerValue > 0;
 
@@ -200,6 +207,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     initialDuration: startTimerValue 
                 }
             };
+        }
 
         case 'RESUME_ATTEMPT':
             return {
@@ -289,7 +297,11 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'TOGGLE_CROSS_OFF': {
             const { questionIndex, optionLabel } = action.payload;
             const newCrossedOff = { ...state.attempt.crossedOffOptions };
-            const currentSet = newCrossedOff[questionIndex] ? new Set(newCrossedOff[questionIndex]) : new Set<string>();
+            
+            // Ensure Set exists for this index before modification
+            const currentSet = newCrossedOff[questionIndex] 
+                ? new Set(newCrossedOff[questionIndex]) 
+                : new Set<string>();
 
             if (currentSet.has(optionLabel)) {
                 currentSet.delete(optionLabel);
@@ -298,6 +310,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             }
             newCrossedOff[questionIndex] = currentSet;
 
+            // If user crosses off their selected answer, deselect it
             const newAnswers = { ...state.attempt.userAnswers };
             if (currentSet.has(newAnswers[questionIndex])) {
                 delete newAnswers[questionIndex];
@@ -336,16 +349,40 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
         }
         
         case 'TOGGLE_EXHIBIT':
-            return { ...state, uiState: { ...state.uiState, isExhibitVisible: !state.uiState.isExhibitVisible }};
+            return { 
+                ...state, 
+                uiState: { 
+                    ...state.uiState, 
+                    isExhibitVisible: !state.uiState.isExhibitVisible 
+                }
+            };
         
         case 'TOGGLE_SOLUTION': {
             const qIndex = state.attempt.currentQuestionIndex;
-            return { ...state, uiState: { ...state.uiState, tempReveal: { ...state.uiState.tempReveal, [qIndex]: !state.uiState.tempReveal[qIndex] }}};
+            return { 
+                ...state, 
+                uiState: { 
+                    ...state.uiState, 
+                    tempReveal: { 
+                        ...state.uiState.tempReveal, 
+                        [qIndex]: !state.uiState.tempReveal[qIndex] 
+                    }
+                }
+            };
         }
 
         case 'TOGGLE_EXPLANATION': {
             const qIndex = state.attempt.currentQuestionIndex;
-            return { ...state, uiState: { ...state.uiState, showExplanation: { ...state.uiState.showExplanation, [qIndex]: !state.uiState.showExplanation[qIndex]}}};
+            return { 
+                ...state, 
+                uiState: { 
+                    ...state.uiState, 
+                    showExplanation: { 
+                        ...state.uiState.showExplanation, 
+                        [qIndex]: !state.uiState.showExplanation[qIndex]
+                    }
+                }
+            };
         }
 
         case 'UPDATE_HIGHLIGHT': {
@@ -366,13 +403,24 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             return { ...state, status: 'reviewing_summary' };
         
         case 'CLOSE_REVIEW_SUMMARY':
-            return { ...state, status: 'active', timer: { ...state.timer, isActive: true } };
+            return { 
+                ...state, 
+                status: 'active', 
+                timer: { ...state.timer, isActive: true } 
+            };
 
         case 'SET_IS_SAVING':
-            return { ...state, uiState: { ...state.uiState, isSaving: action.payload } };
+            return { 
+                ...state, 
+                uiState: { ...state.uiState, isSaving: action.payload } 
+            };
         
         case 'FINALIZE_SUCCESS':
-            return { ...state, status: 'completed', attempt: { ...state.attempt, id: action.payload.attemptId }};
+            return { 
+                ...state, 
+                status: 'completed', 
+                attempt: { ...state.attempt, id: action.payload.attemptId }
+            };
 
         case 'SET_ERROR':
             return { ...state, status: 'error', error: action.payload };

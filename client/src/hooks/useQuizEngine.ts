@@ -17,6 +17,7 @@ import {
 // Types
 import { SectionType } from '../types/content.types';
 import { PracticeTestSettings } from '../components/PracticeTestOptions';
+import { QuizResult } from '../types/quiz.types';
 
 export const useQuizEngine = (
     topicId: string, 
@@ -67,13 +68,13 @@ export const useQuizEngine = (
 
         dispatch({ type: 'SET_IS_SAVING', payload: true });
         
+        // NO 'as any' needed! 
+        // state.attempt matches the flexible QuizAttemptInput type.
+        // serializableAttempt is strictly typed as QuizAttempt (Arrays).
         const serializableAttempt = serializeAttemptForApi(state.attempt);
 
         try {
             await saveInProgressAttempt({ 
-                topicId, 
-                sectionType, 
-                quizId, 
                 ...serializableAttempt, 
                 timer: state.timer 
             });
@@ -83,7 +84,7 @@ export const useQuizEngine = (
             setTimeout(() => dispatch({ type: 'SET_IS_SAVING', payload: false }), 500);
         }
 
-    }, [state.attempt, state.timer, topicId, sectionType, quizId, state.status, isPreviewMode, userProfile]);
+    }, [state.attempt, state.timer, state.status, isPreviewMode, userProfile]);
 
     useEffect(() => {
         saveProgressToServerRef.current = saveProgressToServer;
@@ -157,8 +158,6 @@ export const useQuizEngine = (
 
         // --- Handle Start with Options ---
         startAttemptWithOptions: useCallback(async (settings: PracticeTestSettings) => {
-            // 1. Calculate Duration
-            // Default to 60 mins if not specified, then apply 1.5x modifier if requested
             const baseMinutes = 60; 
             const modifier = settings.additionalTime ? 1.5 : 1.0;
             const durationSeconds = Math.round(baseMinutes * 60 * modifier);
@@ -168,7 +167,6 @@ export const useQuizEngine = (
                 return;
             }
 
-            // 2. Initialize Attempt (Server or Local)
             const isFreeUser = userProfile?.tier === 'free';
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
             const timerData = { value: durationSeconds, isActive: true, isCountdown: true, initialDuration: durationSeconds };
@@ -186,7 +184,6 @@ export const useQuizEngine = (
                         status: 'active',
                         practiceTestSettings: settings,
                         timer: timerData,
-                        // Initialize empty maps
                         userAnswers: {}, markedQuestions: {}, crossedOffOptions: {}, userTimeSpent: {}
                     });
                 } catch (e) {
@@ -195,7 +192,6 @@ export const useQuizEngine = (
             }
 
             if (attemptId && state.quizContent.metadata) {
-                // Save to local storage for redundancy/offline support
                 const initialAttemptState = { 
                     ...createInitialAttempt(topicId, sectionType, quizId), 
                     id: attemptId, 
@@ -203,7 +199,6 @@ export const useQuizEngine = (
                 };
                 saveToLocalStorage(localKey, { ...initialAttemptState, timer: timerData });
 
-                // 3. Dispatch Start
                 dispatch({ 
                     type: 'SET_DATA_AND_START', 
                     payload: { 
@@ -257,11 +252,9 @@ export const useQuizEngine = (
             dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
         }, [isPreviewMode, state.attempt.currentQuestionIndex]),
         
-        // --- UPDATED: Start New Attempt (Reset Logic) ---
         startNewAttempt: useCallback(async () => {
             if (isPreviewMode) return;
 
-            // 1. Cleanup Old Attempt Data (Local & Server)
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
             clearLocalStorage(localKey);
             
@@ -271,10 +264,7 @@ export const useQuizEngine = (
                 await deleteInProgressAttempt(state.attempt.id);
             }
             
-            // 2. Branch Logic based on Section Type
             if (sectionType === 'practice' && state.quizContent.metadata) {
-                // For Practice Tests, send user back to Options Screen
-                // We reuse the loaded questions and metadata
                 dispatch({
                     type: 'PROMPT_OPTIONS',
                     payload: {
@@ -283,7 +273,6 @@ export const useQuizEngine = (
                     }
                 });
             } else {
-                // For Question Banks (or if metadata missing), start immediately (Original Logic)
                 const timerData = { value: 0, isActive: false, isCountdown: false, initialDuration: 0 };
                 let newAttemptId: string | undefined;
 
@@ -320,7 +309,7 @@ export const useQuizEngine = (
 
                 const { score } = await finalizeQuizAttempt({ ...serializableAttempt, timer: state.timer });
                 
-                const results = {
+                const results: QuizResult = {
                     score,
                     totalQuestions: state.quizContent.questions.length,
                     totalValidQuestions: state.quizContent.questions.length,

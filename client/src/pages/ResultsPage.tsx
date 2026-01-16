@@ -1,29 +1,38 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getQuizData, fetchTopicData, formatDisplayName } from '../services/loader';
 import '../styles/ResultsPage.css';
+import { Question, QuizResult } from '../types/quiz.types'; // Import strict types
+import { SectionType } from '../types/content.types';
 
-const extractTextFromHtml = (htmlString) => {
+const extractTextFromHtml = (htmlString: string | undefined): string => {
     if (!htmlString || typeof htmlString !== 'string') return '';
     const tempDiv = document.createElement('div');
     tempDiv.innerHTML = htmlString;
-    let text = tempDiv.textContent || tempDiv.innerText || '';
-    text = text.replace(/\s+/g, ' ').trim();
-    return text;
+    const text = tempDiv.textContent || tempDiv.innerText || '';
+    return text.replace(/\s+/g, ' ').trim();
 };
 
 function ResultsPage() {
-    const { topicId, sectionType, quizId } = useParams();
+    // Cast params to ensure we have strings. 
+    const { topicId = '', sectionType = 'practice', quizId = '' } = useParams<{ 
+        topicId: string; 
+        sectionType: string; 
+        quizId: string; 
+    }>();
+    
     const navigate = useNavigate();
 
-    const [results, setResults] = useState(null);
-    const [quizQuestions, setQuizQuestions] = useState([]);
-    const [topicName, setTopicName] = useState('');
-    const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState(null);
+    // Strictly typed state
+    const [results, setResults] = useState<QuizResult | null>(null);
+    const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
+    const [topicName, setTopicName] = useState<string>('');
+    const [isLoading, setIsLoading] = useState<boolean>(true);
+    const [error, setError] = useState<string | null>(null);
 
-    // This useEffect hook is now properly async.
     useEffect(() => {
+        let isMounted = true;
+
         const loadResultsData = async () => {
             setIsLoading(true);
             setError(null);
@@ -32,36 +41,44 @@ function ResultsPage() {
             const savedResultsString = localStorage.getItem(resultsKey);
 
             if (!savedResultsString) {
-                setError('No results found for this quiz. Please complete the quiz first.');
-                setIsLoading(false);
+                if (isMounted) {
+                    setError('No results found for this quiz. Please complete the quiz first.');
+                    setIsLoading(false);
+                }
                 return;
             }
 
             try {
-                const parsedResults = JSON.parse(savedResultsString);
-                setResults(parsedResults);
-
-                // Fetch topic and quiz data asynchronously
+                // Parse and cast to our shared QuizResult type
+                const parsedResults = JSON.parse(savedResultsString) as QuizResult;
+                
                 const [topicData, allQuizData] = await Promise.all([
                     fetchTopicData(topicId),
                     getQuizData(topicId, sectionType, quizId)
                 ]);
 
-                setTopicName(topicData.name);
-                setQuizQuestions(allQuizData || []);
+                if (isMounted) {
+                    setResults(parsedResults);
+                    setTopicName(topicData.name);
+                    setQuizQuestions(allQuizData || []);
+                }
 
             } catch (e) {
                 console.error("Error loading results page data:", e);
-                setError('Could not load results. Data might be corrupted or failed to fetch.');
+                if (isMounted) {
+                    setError('Could not load results. Data might be corrupted or failed to fetch.');
+                }
             } finally {
-                setIsLoading(false);
+                if (isMounted) setIsLoading(false);
             }
         };
 
         loadResultsData();
+
+        return () => { isMounted = false; };
     }, [topicId, sectionType, quizId]);
 
-    const getQuestionPreviewText = (index) => {
+    const getQuestionPreviewText = (index: number): string => {
         if (quizQuestions && quizQuestions.length > index && quizQuestions[index]) {
             const questionItem = quizQuestions[index];
             if (questionItem.question && questionItem.question.html_content) {
@@ -73,27 +90,37 @@ function ResultsPage() {
     };
 
     if (isLoading) return <div className="page-loading">Loading Results...</div>;
+    
     if (error && !results) return (
-        <div className="page-error"> {error}
-            <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button>
+        <div className="page-error"> 
+            {error}
+            <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> 
+                Back to Topic 
+            </button>
         </div>
     );
-     if (error && results) {
+
+    if (error && results) {
          console.warn("Results page error:", error);
-     }
+    }
+
     if (!results) return (
-        <div className="page-info"> No results available.
-            <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> Back to Topic </button>
+        <div className="page-info"> 
+            No results available.
+            <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-button"> 
+                Back to Topic 
+            </button>
         </div>
     );
 
     const totalForPercentage = results.totalValidQuestions > 0 ? results.totalValidQuestions : results.totalQuestions;
     const scorePercentage = totalForPercentage > 0
         ? ((results.score / totalForPercentage) * 100).toFixed(1)
-        : 0;
+        : "0.0";
     
-    // Use the quizName from the stored results object
     const quizTitle = results.quizName || 'Quiz Results';
+
+    const currentSectionType = sectionType as SectionType;
 
     return (
         <div className="results-page-container">
@@ -125,7 +152,7 @@ function ResultsPage() {
                         <ul>
                             {results.correctIndices.map(index => (
                                 <li key={`correct-${index}`}>
-                                    <Link to={`/quiz/${topicId}/${sectionType}/${quizId}`}
+                                    <Link to={`/app/quiz/${topicId}/${currentSectionType}/${quizId}`}
                                           state={{ review: true, questionIndex: index }}>
                                         Q{index + 1}: {getQuestionPreviewText(index)}
                                     </Link>
@@ -141,7 +168,7 @@ function ResultsPage() {
                         <ul>
                             {results.incorrectIndices.map(index => (
                                 <li key={`incorrect-${index}`}>
-                                    <Link to={`/quiz/${topicId}/${sectionType}/${quizId}`}
+                                    <Link to={`/app/quiz/${topicId}/${currentSectionType}/${quizId}`}
                                           state={{ review: true, questionIndex: index }}>
                                          Q{index + 1}: {getQuestionPreviewText(index)}
                                     </Link>
@@ -156,7 +183,10 @@ function ResultsPage() {
             </div>
 
              <div className="results-actions">
-                <button onClick={() => navigate(`/app/quiz/${topicId}/${sectionType}/${quizId}`, { state: { review: true, questionIndex: 0 } })} className="review-button">
+                <button 
+                    onClick={() => navigate(`/app/quiz/${topicId}/${currentSectionType}/${quizId}`, { state: { review: true, questionIndex: 0 } })} 
+                    className="review-button"
+                >
                     Review All Questions
                 </button>
                  <button onClick={() => navigate(`/app/topic/${topicId}`)} className="back-to-topic-button">

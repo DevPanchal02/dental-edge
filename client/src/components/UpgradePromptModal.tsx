@@ -1,9 +1,12 @@
-// FILE: client/src/components/UpgradePromptModal.jsx
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/UpgradePromptModal.css';
 import { FaLock, FaCheckCircle } from 'react-icons/fa';
+
+interface UpgradePromptModalProps {
+    isOpen: boolean;
+    onClose: () => void;
+}
 
 const CloseIcon = () => (
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -11,7 +14,7 @@ const CloseIcon = () => (
     </svg>
 );
 
-function UpgradePromptModal({ isOpen, onClose }) {
+const UpgradePromptModal: React.FC<UpgradePromptModalProps> = ({ isOpen, onClose }) => {
     const navigate = useNavigate();
 
     if (!isOpen) {
@@ -23,7 +26,7 @@ function UpgradePromptModal({ isOpen, onClose }) {
     };
 
     // Stop propagation to prevent clicks inside the modal from closing it.
-    const handleModalContentClick = (e) => {
+    const handleModalContentClick = (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
     };
 
@@ -61,6 +64,6 @@ function UpgradePromptModal({ isOpen, onClose }) {
             </div>
         </div>
     );
-}
+};
 
 export default UpgradePromptModal;

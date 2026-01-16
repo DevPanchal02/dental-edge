@@ -2,20 +2,44 @@ import React, { useState, useEffect, useRef, useCallback } from 'react';
 import '../styles/Exhibit.css';
 import periodicTableImage from '../assets/periodic_table.png';
 
-const Exhibit = ({ isVisible, onClose }) => {
-    const [position, setPosition] = useState(null);
-    const [size, setSize] = useState({ width: 510 }); 
-    
-    const [isDragging, setIsDragging] = useState(false);
-    const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
-    
-    const [isResizing, setIsResizing] = useState(false);
-    const [resizeStart, setResizeStart] = useState({ x: 0, width: 0 });
+interface ExhibitProps {
+    isVisible: boolean;
+    onClose: () => void;
+}
 
-    const exhibitRef = useRef(null);
-    const initialPositionSetRef = useRef(false);
+interface Position {
+    x: number;
+    y: number;
+}
 
-    const getRemInPx = (rem) => {
+interface Size {
+    width: number;
+}
+
+interface DragStart {
+    x: number;
+    y: number;
+}
+
+interface ResizeStart {
+    x: number;
+    width: number;
+}
+
+const Exhibit: React.FC<ExhibitProps> = ({ isVisible, onClose }) => {
+    const [position, setPosition] = useState<Position | null>(null);
+    const [size, setSize] = useState<Size>({ width: 510 }); 
+    
+    const [isDragging, setIsDragging] = useState<boolean>(false);
+    const [dragStart, setDragStart] = useState<DragStart>({ x: 0, y: 0 });
+    
+    const [isResizing, setIsResizing] = useState<boolean>(false);
+    const [resizeStart, setResizeStart] = useState<ResizeStart>({ x: 0, width: 0 });
+
+    const exhibitRef = useRef<HTMLDivElement>(null);
+    const initialPositionSetRef = useRef<boolean>(false);
+
+    const getRemInPx = (rem: number): number => {
         if (typeof window === 'undefined') return rem * 16;
         return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
     };
@@ -48,24 +72,29 @@ const Exhibit = ({ isVisible, onClose }) => {
         }
     };
 
-    const handleMouseDown = (e) => {
+    const handleMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+        const target = e.target as HTMLElement;
+        
+        // Check if the click target is the close button or resizer
         if (
-            e.target.classList.contains('exhibit-close-btn-img') || 
-            e.target.classList.contains('exhibit-resizer')
+            target.classList.contains('exhibit-close-btn-img') || 
+            target.classList.contains('exhibit-resizer')
         ) {
             return;
         }
         
-        setIsDragging(true);
-        const exhibitRect = exhibitRef.current.getBoundingClientRect();
-        setDragStart({
-            x: e.clientX - exhibitRect.left,
-            y: e.clientY - exhibitRect.top,
-        });
-        e.preventDefault();
+        if (exhibitRef.current) {
+            setIsDragging(true);
+            const exhibitRect = exhibitRef.current.getBoundingClientRect();
+            setDragStart({
+                x: e.clientX - exhibitRect.left,
+                y: e.clientY - exhibitRect.top,
+            });
+            e.preventDefault();
+        }
     };
 
-    const handleResizeMouseDown = (e) => {
+    const handleResizeMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
         e.stopPropagation();
         e.preventDefault();
         setIsResizing(true);
@@ -75,21 +104,22 @@ const Exhibit = ({ isVisible, onClose }) => {
         });
     };
 
-    // --- FIX: Wrapped in useCallback ---
+    // Note: These are Native DOM Event Listeners (window), not React Synthetic Events
     const handleMouseUp = useCallback(() => {
         setIsDragging(false);
         setIsResizing(false);
     }, []);
 
-    // --- FIX: Wrapped in useCallback ---
-    const handleMouseMove = useCallback((e) => {
+    const handleMouseMove = useCallback((e: MouseEvent) => {
         if (isDragging && exhibitRef.current) {
             const boundaryPx = getRemInPx(0.5);
             const { width, height } = exhibitRef.current.getBoundingClientRect();
 
-            let newX = e.clientX - dragStart.x;
-            let newY = e.clientY - dragStart.y;
+            // Calculate raw new position
+            const newX = e.clientX - dragStart.x;
+            const newY = e.clientY - dragStart.y;
 
+            // Constrain to window boundaries
             const minX = boundaryPx;
             const minY = boundaryPx;
             const maxX = window.innerWidth - width - boundaryPx;
@@ -108,7 +138,7 @@ const Exhibit = ({ isVisible, onClose }) => {
             
             setSize({ width: Math.min(newWidth, maxWidth) });
         }
-    }, [isDragging, isResizing, dragStart, resizeStart, size.width]); // Added dependencies
+    }, [isDragging, isResizing, dragStart, resizeStart]); 
 
     useEffect(() => {
         if (isDragging || isResizing) {
@@ -128,7 +158,7 @@ const Exhibit = ({ isVisible, onClose }) => {
         return null;
     }
 
-    const style = position
+    const style: React.CSSProperties = position
         ? { top: `${position.y}px`, left: `${position.x}px`, width: `${size.width}px` }
         : { top: '-9999px', left: '-9999px', visibility: 'hidden', width: `${size.width}px` };
 

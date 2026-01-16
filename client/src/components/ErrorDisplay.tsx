@@ -1,11 +1,20 @@
-// FILE: client/src/components/ErrorDisplay.jsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/App.css'; // Reusing global styles
+import '../styles/App.css';
 
-function ErrorDisplay({ error, backLink = '/app', backLinkText = 'Go Home' }) {
-    const errorMessage = typeof error === 'string' ? error : 'An unexpected error occurred.';
+interface ErrorDisplayProps {
+    error: string | Error;
+    backLink?: string;
+    backLinkText?: string;
+}
+
+const ErrorDisplay: React.FC<ErrorDisplayProps> = ({ 
+    error, 
+    backLink = '/app', 
+    backLinkText = 'Go Home' 
+}) => {
+    const errorMessage = typeof error === 'string' ? error : (error?.message || 'An unexpected error occurred.');
+    
     return (
         <div className="page-error" style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
             <span>Error: {errorMessage}</span>
@@ -14,6 +23,6 @@ function ErrorDisplay({ error, backLink = '/app', backLinkText = 'Go Home' }) {
             </Link>
         </div>
     );
-}
+};
 
 export default ErrorDisplay;

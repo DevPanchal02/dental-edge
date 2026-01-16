@@ -1,23 +1,28 @@
 import { auth } from '../firebase';
 import { getFunctions, httpsCallable } from 'firebase/functions';
-import { QuizAttempt } from '../types/quiz.types';
+import { QuizAttempt, Question, Option, QuestionAnalytics } from '../types/quiz.types';
 import { TopicSummary, TopicStructure } from '../types/content.types';
 
 // --- Firebase Cloud Functions Setup ---
 const functions = getFunctions();
 
 // --- Types for Cloud Function Responses ---
-// We define what the backend *should* return.
 interface CheckoutSessionResponse { id: string; }
 interface SaveAttemptResponse { attemptId: string; }
 interface FinalizeAttemptResponse { attemptId: string; score: number; }
 interface EmptyResponse { success: boolean; }
 
+// Type for the Analytics Data returned by the backend
+export interface AnalyticsDataPoint {
+    analytics: QuestionAnalytics;
+    category: string;
+    options: Pick<Option, 'label' | 'is_correct'>[];
+}
+
 // --- Callable Function Exports ---
 
 export const createCheckoutSession = async (tierId: string): Promise<string> => {
   try {
-    // We explicitly tell TS that this callable returns a CheckoutSessionResponse
     const callable = httpsCallable<{ tierId: string }, CheckoutSessionResponse>(functions, 'createCheckoutSession');
     const result = await callable({ tierId });
     return result.data.id;
@@ -27,7 +32,6 @@ export const createCheckoutSession = async (tierId: string): Promise<string> => 
   }
 };
 
-// We use Partial<QuizAttempt> because we might not send the full object every time (though usually we do)
 export const saveInProgressAttempt = async (attemptData: Partial<QuizAttempt>): Promise<string | undefined> => {
   try {
     const callable = httpsCallable<Partial<QuizAttempt>, SaveAttemptResponse>(functions, 'saveInProgressAttempt');
@@ -35,7 +39,6 @@ export const saveInProgressAttempt = async (attemptData: Partial<QuizAttempt>): 
     return result.data.attemptId;
   } catch (error) {
     console.error("Error saving in-progress attempt:", error);
-    // Returning undefined is allowed by the signature, but ideally we'd throw or handle it.
     return undefined; 
   }
 };
@@ -47,7 +50,6 @@ export const getInProgressAttempt = async (identifiers: { topicId: string; secti
     return result.data;
   } catch (error) {
     console.error("Error getting in-progress attempt:", error);
-    // We throw here because failing to get the attempt when one exists is a critical error
     throw new Error("Could not check for an existing quiz session.");
   }
 };
@@ -94,10 +96,11 @@ export const getCompletedAttemptsForQuiz = async (identifiers: { topicId: string
     }
 };
 
-export const getQuizAnalytics = async (identifiers: { topicId: string; sectionType: string; quizId: string }): Promise<any> => {
+// STRICTLY TYPED ANALYTICS RESPONSE
+export const getQuizAnalytics = async (identifiers: { topicId: string; sectionType: string; quizId: string }): Promise<Question[]> => {
     try {
-        // TODO: Define a specific Analytics type in quiz.types.ts if you want strict typing here
-        const callable = httpsCallable<typeof identifiers, any>(functions, 'getQuizAnalytics');
+        // The backend returns a lightweight Question object structure for analytics
+        const callable = httpsCallable<typeof identifiers, Question[]>(functions, 'getQuizAnalytics');
         const result = await callable(identifiers);
         return result.data;
     } catch (error) {
@@ -159,7 +162,7 @@ export const fetchTopicStructure = async (topicId: string): Promise<TopicStructu
     }
 };
 
-export const fetchQuizData = async (storagePath: string, isPreview: boolean = false): Promise<any[]> => {
+export const fetchQuizData = async (storagePath: string, isPreview: boolean = false): Promise<Question[]> => {
   try {
     const url = new URL(API.GET_QUIZ_DATA, window.location.origin);
     url.searchParams.append("storagePath", storagePath);
@@ -180,12 +183,9 @@ export const fetchQuizData = async (storagePath: string, isPreview: boolean = fa
 
     if (!response.ok) {
       if (response.status === 403) {
-        // We type the error response safely
         const errorData = await response.json().catch(() => ({})) as { error?: string };
         if (errorData.error === 'upgrade_required') {
           const upgradeError = new Error("Upgrade required to access this content.");
-          // We attach a custom property, but in TS Error is strict. 
-          // We cast to any to allow the custom code property or extend the Error class.
           (upgradeError as any).code = 'upgrade_required';
           throw upgradeError;
         }
@@ -193,6 +193,7 @@ export const fetchQuizData = async (storagePath: string, isPreview: boolean = fa
       throw new Error(`API Error (getQuizData): ${response.status} ${response.statusText}`);
     }
 
+    // Return strictly typed Question[]
     return await response.json();
   } catch (error) {
     console.error(`Failed to fetch quiz data for path ${storagePath}:`, error);
