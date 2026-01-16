@@ -1,7 +1,26 @@
 import React from 'react';
 import '../styles/QuizReviewSummary.css';
+import { Question, QuizMetadata } from '../types/quiz.types';
 
-function QuizReviewSummary({
+interface QuizReviewSummaryProps {
+    allQuizQuestions: Question[];
+    quizMetadata: QuizMetadata | null;
+    markedQuestions: Record<number, boolean>;
+    submittedAnswers: Record<number, boolean>;
+    // FIX: Added missing props that QuizPage passes to this component
+    userAnswers: Record<number, string>; 
+    topicId: string; 
+    
+    currentQuestionIndexBeforeReview: number;
+    onCloseReviewSummary: () => void;
+    onJumpToQuestionInQuiz: (index: number) => void;
+    onEndQuiz: () => void;
+    timerDisplayContent: React.ReactNode;
+    dynamicFooterStyle: React.CSSProperties;
+    isNavActionInProgress: boolean;
+}
+
+const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
     allQuizQuestions,
     quizMetadata,
     markedQuestions,
@@ -13,16 +32,16 @@ function QuizReviewSummary({
     timerDisplayContent,
     dynamicFooterStyle,
     isNavActionInProgress,
-}) {
+}) => {
 
-    const handleJumpFromTable = (index) => {
-        onJumpToQuestionInQuiz(index, true); 
+    const handleJumpFromTable = (index: number) => {
+        onJumpToQuestionInQuiz(index); 
     };
 
     const handleReviewMarked = () => {
-        let targetIndex = -1;
+        // Filter and sort marked question indices
         const markedIndices = Object.keys(markedQuestions)
-                                .filter(idx => markedQuestions[idx])
+                                .filter(idx => markedQuestions[Number(idx)])
                                 .map(Number)
                                 .sort((a,b) => a - b); 
 
@@ -31,21 +50,25 @@ function QuizReviewSummary({
             return;
         }
         
-        targetIndex = markedIndices.find(idx => !submittedAnswers[idx]);
+        // UX: Find first marked question that hasn't been submitted/completed yet
+        let targetIndex = markedIndices.find(idx => !submittedAnswers[idx]);
+        
+        // If all marked are completed, just go to the first marked one
         if (targetIndex === undefined) {
             targetIndex = markedIndices[0];
         }
-        onJumpToQuestionInQuiz(targetIndex, false); 
+        onJumpToQuestionInQuiz(targetIndex); 
     };
 
     const handleReviewAll = () => {
-        onJumpToQuestionInQuiz(0, false);
+        onJumpToQuestionInQuiz(0);
     };
 
     const handleReviewIncomplete = () => {
+        // Find the first question index that has no submitted answer
         const firstIncompleteIndex = allQuizQuestions.findIndex((q, idx) => !q.error && !submittedAnswers[idx]);
         if (firstIncompleteIndex !== -1) {
-            onJumpToQuestionInQuiz(firstIncompleteIndex, false);
+            onJumpToQuestionInQuiz(firstIncompleteIndex);
         } else {
             alert("All questions have been completed or attempted.");
         }
@@ -85,7 +108,7 @@ function QuizReviewSummary({
                             if (!q || q.error) return (
                                 <tr key={`error-${index}`} className="qrs-row-error">
                                     <td>Question {index + 1}</td>
-                                    <td colSpan="3">Error loading question</td>
+                                    <td colSpan={3}>Error loading question</td>
                                 </tr>
                             );
 

@@ -3,7 +3,6 @@ import { Question, QuizMetadata, QuizAttempt } from '../../types/quiz.types';
 
 // --- STATE TYPES ---
 
-// Internal state uses Sets for crossedOffOptions for O(1) lookups in the UI
 export interface QuizAttemptState extends Omit<QuizAttempt, 'crossedOffOptions'> {
     crossedOffOptions: Record<number, Set<string>>;
 }
@@ -41,12 +40,13 @@ export interface QuizState {
 
 export type QuizAction =
     | { type: 'INITIALIZE_ATTEMPT'; payload: NonNullable<QuizState['quizIdentifiers']> }
-    | { type: 'PROMPT_PREVIEW_OPTIONS'; payload: { questions: Question[]; metadata: QuizMetadata } }
+    // RENAMED: Generic PROMPT_OPTIONS instead of PREVIEW specific
+    | { type: 'PROMPT_OPTIONS'; payload: { questions: Question[]; metadata: QuizMetadata } }
     | { type: 'START_PREVIEW'; payload: { settings: { prometricDelay: boolean; additionalTime: boolean }; duration: number } }
     | { type: 'PROMPT_REGISTRATION' }
     | { type: 'CLOSE_REGISTRATION_PROMPT' }
     | { type: 'PROMPT_RESUME'; payload: { attempt: any; questions: Question[]; metadata: QuizMetadata } }
-    | { type: 'SET_DATA_AND_START'; payload: { questions: Question[]; metadata: QuizMetadata; attemptId: string } }
+    | { type: 'SET_DATA_AND_START'; payload: { questions: Question[]; metadata: QuizMetadata; attemptId: string; settings?: { prometricDelay: boolean; additionalTime: boolean }; initialDuration?: number } }
     | { type: 'RESUME_ATTEMPT' }
     | { type: 'RESET_ATTEMPT'; payload: { newAttemptId: string } }
     | { type: 'TIMER_TICK' }
@@ -83,7 +83,6 @@ export const createInitialAttempt = (topicId: string = '', sectionType: SectionT
     highlightedHtml: {},
     practiceTestSettings: { prometricDelay: false, additionalTime: false },
     submittedAnswers: {},
-    // Timer placeholder (actual timer state is managed in root state for ease of access)
     timer: { value: 0, isActive: false, isCountdown: false, initialDuration: 0 }
 });
 
@@ -113,7 +112,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 quizIdentifiers: action.payload,
             };
 
-        case 'PROMPT_PREVIEW_OPTIONS':
+        case 'PROMPT_OPTIONS':
             return {
                 ...state,
                 status: 'prompting_options',
@@ -174,6 +173,10 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
         }
 
         case 'SET_DATA_AND_START':
+            // Logic to determine initial timer state based on payload or defaults
+            const startTimerValue = action.payload.initialDuration || 0;
+            const isCountdown = startTimerValue > 0;
+
             return {
                 ...state,
                 status: 'active',
@@ -188,8 +191,14 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     topicId: state.quizIdentifiers?.topicId || '',
                     sectionType: state.quizIdentifiers?.sectionType || 'practice',
                     quizId: state.quizIdentifiers?.quizId || '',
+                    practiceTestSettings: action.payload.settings || { prometricDelay: false, additionalTime: false },
                 },
-                timer: { ...initialState.timer, isActive: true }
+                timer: { 
+                    value: startTimerValue, 
+                    isActive: true, 
+                    isCountdown, 
+                    initialDuration: startTimerValue 
+                }
             };
 
         case 'RESUME_ATTEMPT':

@@ -61,7 +61,8 @@ export const useQuizInitialization = ({
                         fullNameForDisplay: 'Dental Aptitude Test 1',
                         categoryForInstructions: 'DAT',
                     };
-                    dispatch({ type: 'PROMPT_PREVIEW_OPTIONS', payload: { questions, metadata: previewMetadata } });
+                    // Use new generic PROMPT_OPTIONS action
+                    dispatch({ type: 'PROMPT_OPTIONS', payload: { questions, metadata: previewMetadata } });
                     return;
                 }
                 
@@ -110,13 +111,21 @@ export const useQuizInitialization = ({
                 if (inProgressAttempt) {
                     dispatch({ type: 'PROMPT_RESUME', payload: { attempt: inProgressAttempt, questions, metadata } });
                 } else {
-                    // Create New
+                    // --- NEW LOGIC: Branch based on Section Type ---
+                    
+                    // If it's a Practice Test, show options modal first
+                    if (sectionType === 'practice') {
+                        dispatch({ type: 'PROMPT_OPTIONS', payload: { questions, metadata } });
+                        return;
+                    }
+
+                    // If it's a Question Bank, create attempt immediately (Standard Mode)
                     let attemptId: string | undefined;
                     
                     if (isFreeUser) {
                         attemptId = `local-${Date.now()}`;
                     } else {
-                         // Default timer state for new attempt
+                         // Default timer state for new attempt (Count up for QBanks)
                         const timerData = { value: 0, isActive: false, isCountdown: false, initialDuration: 0 };
                         attemptId = await saveInProgressAttempt({ 
                             topicId, 

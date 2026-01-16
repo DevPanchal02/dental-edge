@@ -7,22 +7,36 @@ const CloseIcon = () => (
     </svg>
 );
 
-function PracticeTestOptions({
+export interface PracticeTestSettings {
+    prometricDelay: boolean;
+    additionalTime: boolean;
+}
+
+interface PracticeTestOptionsProps {
+    isOpen: boolean;
+    onClose: () => void;
+    onStartTest: (settings: PracticeTestSettings) => void;
+    fullNameForDisplay?: string;
+    categoryForInstructions?: string;
+    baseTimeLimitMinutes?: number;
+    numQuestions?: number | string;
+}
+
+const PracticeTestOptions: React.FC<PracticeTestOptionsProps> = ({
     isOpen,
     onClose,
     onStartTest,
-    fullNameForDisplay,      // e.g., "Biology Practice Test 1" - from quizMetadata.fullNameForDisplay
-    categoryForInstructions, // e.g., "Biology" - from quizMetadata.categoryForInstructions
-    baseTimeLimitMinutes,    // e.g., 30 - calculated in QuizPage before passing
-    numQuestions,            // e.g., 40 - from quizMetadata.totalQuestions
-}) {
+    fullNameForDisplay,
+    categoryForInstructions,
+    baseTimeLimitMinutes,
+    numQuestions,
+}) => {
     const [prometricDelayEnabled, setPrometricDelayEnabled] = useState(false);
     const [additionalTimeEnabled, setAdditionalTimeEnabled] = useState(false);
 
     useEffect(() => {
         if (!isOpen) {
-            // setPrometricDelayEnabled(false); // Optionally reset on close
-            // setAdditionalTimeEnabled(false);
+            // Optional: reset state on close if needed
         }
     }, [isOpen]);
 
@@ -55,7 +69,6 @@ function PracticeTestOptions({
                     </button>
                     <div className="pto-header-title-group">
                         <p className="pto-app-name">Dental Edge</p>
-                        {/* Use fullNameForDisplay for the main title */}
                         <p className="pto-quiz-name">{fullNameForDisplay || 'Practice Test Options'}</p>
                     </div>
                     <div className="pto-header-spacer"></div>
@@ -65,7 +78,6 @@ function PracticeTestOptions({
                     <div className="pto-instructions-section">
                         <p>Please read the following instructions carefully.</p>
                         <ul>
-                            {/* Updated instruction line */}
                             <li>You will have {displayTime} minutes to complete {displayNumQuestions} {displayCategory} questions.</li>
                             <li>Your test score will be shown at the end, along with answers and explanations.</li>
                             <li>The test cannot be paused once started to simulate the real exam experience.</li>

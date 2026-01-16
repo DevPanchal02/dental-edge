@@ -1,15 +1,25 @@
-// FILE: client/src/components/quiz/QuizContentArea.jsx
-
 import React from 'react';
 import QuestionCard from '../QuestionCard';
-import '../../styles/QuizPage.css'; // Reusing styles
+import '../../styles/QuizPage.css'; 
+import { Question } from '../../types/quiz.types';
 
-// A memoized component for the passage to prevent re-renders when only question state changes.
-const MemoizedPassage = React.memo(function MemoizedPassage({ html, passageRef, contentKey, highlightedHtml }) {
+interface MemoizedPassageProps {
+    html: string | undefined;
+    // FIX: Allow null in the RefObject to match useRef(null) behavior in parent
+    passageRef: React.RefObject<HTMLDivElement | null>;
+    contentKey: string | null;
+    highlightedHtml?: Record<string, string>;
+}
+
+// Optimization: The passage is heavy HTML. We use React.memo to ensure it doesn't 
+// re-parse/re-render when the user selects a radio button in the question area.
+const MemoizedPassage = React.memo<MemoizedPassageProps>(function MemoizedPassage({ html, passageRef, contentKey, highlightedHtml }) {
     if (!html) {
         return null;
     }
-    const displayHtml = highlightedHtml?.[contentKey] ?? html;
+    // Check if we have a highlighted version of this passage in the state
+    const displayHtml = (contentKey && highlightedHtml && highlightedHtml[contentKey]) ? highlightedHtml[contentKey] : html;
+    
     return (
         <div 
             className="passage-container" 
@@ -20,51 +30,77 @@ const MemoizedPassage = React.memo(function MemoizedPassage({ html, passageRef, 
     );
 });
 
-// Utility to format time from seconds into MM:SS format.
-const formatTime = (totalSeconds) => {
+const formatTime = (totalSeconds: number): string => {
     if (totalSeconds < 0) totalSeconds = 0;
     const minutes = Math.floor(totalSeconds / 60);
     const seconds = totalSeconds % 60;
     return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
 };
 
-function QuizContentArea({
-    // Data props
+interface QuizContentAreaProps {
+    currentQuestion: Question | null;
+    passageHtml?: string;
+    highlightedHtml?: Record<string, string>;
+    topicId: string;
+
+    // State passed from useQuizEngine
+    questionIndex: number;
+    userAnswer: string | null | undefined;
+    crossedOffOptions: Record<number, Set<string>>;
+    timeSpent?: number;
+    isMarked: boolean;
+    isSubmitted: boolean;
+    isReviewMode: boolean;
+    isTemporarilyRevealed: boolean;
+    isPracticeTestActive: boolean;
+    showExplanation: boolean;
+
+    // Timer State
+    timerValue: number;
+    isCountdown: boolean;
+    initialDuration: number;
+    hasStarted: boolean;
+
+    // Actions
+    onOptionSelect: (index: number, label: string) => void;
+    onToggleExplanation: (index: number) => void;
+    onToggleCrossOff: (index: number, label: string) => void;
+    onToggleMark: (index: number) => void;
+
+    // FIX: Match the Ref definition in MemoizedPassageProps (allow null)
+    passageContainerRef: React.RefObject<HTMLDivElement | null>;
+}
+
+const QuizContentArea: React.FC<QuizContentAreaProps> = ({
     currentQuestion,
     passageHtml,
     highlightedHtml,
     topicId,
 
-    // State props from the engine
     questionIndex,
     userAnswer,
     crossedOffOptions,
     timeSpent,
-    isMarked,
     isSubmitted,
     isReviewMode,
     isTemporarilyRevealed,
     isPracticeTestActive,
     showExplanation,
 
-    // Timer props
     timerValue,
     isCountdown,
     initialDuration,
     hasStarted,
 
-    // Action/handler props
     onOptionSelect,
     onToggleExplanation,
     onToggleCrossOff,
     onToggleMark,
 
-    // Ref props
     passageContainerRef
-}) {
+}) => {
 
     if (!hasStarted) {
-        // Render a placeholder or loading state before the practice test officially begins
         return <div className="page-loading">Preparing Practice Test...</div>;
     }
 
@@ -72,9 +108,11 @@ function QuizContentArea({
         return <div className="page-error">Error: Could not load the current question.</div>;
     }
 
-    // Determine the content key for the passage for highlighting purposes
-    const passageContentKey = passageHtml && currentQuestion ? `passage_${currentQuestion.category}` : null;
-    const EMPTY_SET = new Set();
+    // Determine key for passage highlighting persistence
+    const passageContentKey = passageHtml && currentQuestion.category ? `passage_${currentQuestion.category}` : null;
+    
+    // Default empty set for safety if state is missing
+    const EMPTY_SET = new Set<string>();
     const currentCrossedOffForCard = crossedOffOptions[questionIndex] || EMPTY_SET;
 
     const timerDisplayComponent = (
@@ -91,7 +129,7 @@ function QuizContentArea({
 
     return (
         <>
-            {/* Renders the passage above the question if it's not Reading Comp */}
+            {/* Standard Layout: Passage Top, Question Bottom */}
             {passageHtml && topicId !== 'reading-comprehension' && (
                 <MemoizedPassage
                     html={passageHtml}
@@ -102,7 +140,7 @@ function QuizContentArea({
             )}
 
             <div className="quiz-controls-top">
-                {/* The timer is only visible during an active quiz, not in review mode */}
+                {/* Timer is hidden in review mode */}
                 {!isReviewMode ? (
                     <div className="timer-display">{timerDisplayComponent}</div>
                 ) : (
@@ -118,7 +156,7 @@ function QuizContentArea({
                     crossedOffOptions={currentCrossedOffForCard}
                     isSubmitted={isSubmitted}
                     isReviewMode={isReviewMode}
-                    isMarked={isMarked}
+                    // FIX: Removed 'isMarked={isMarked}' prop. Visual marking is handled by the footer, not the card content.
                     isTemporarilyRevealed={isTemporarilyRevealed}
                     isPracticeTestActive={isPracticeTestActive}
                     showExplanation={showExplanation}
@@ -131,7 +169,7 @@ function QuizContentArea({
                 />
             </div>
             
-            {/* Renders the passage below the question specifically for Reading Comp */}
+            {/* Reading Comp Layout: Question Top, Passage Bottom */}
             {passageHtml && topicId === 'reading-comprehension' && (
                 <div className="passage-wrapper-below" style={{ marginTop: '20px' }}>
                     <MemoizedPassage
@@ -144,6 +182,6 @@ function QuizContentArea({
             )}
         </>
     );
-}
+};
 
 export default QuizContentArea;

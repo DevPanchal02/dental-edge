@@ -1,9 +1,33 @@
-// FILE: client/src/components/quiz/QuizFooter.jsx
-
 import React from 'react';
-import '../../styles/QuizPage.css'; // Reusing styles
+import '../../styles/QuizPage.css';
 
-function QuizFooter({
+interface QuizFooterProps {
+    // Action Handlers - Strictly typed as void functions to indicate side-effects
+    onNext: () => void;
+    onPrevious: () => void;
+    onMark: () => void;
+    onReview: () => void;
+    onToggleExhibit: () => void;
+    onToggleSolution: () => void;
+
+    // State Flags - Boolean flags control the visual state machine
+    isFirstQuestion: boolean;
+    isLastQuestion: boolean;
+    isMarked: boolean;
+    isSaving: boolean;
+    isReviewMode: boolean;
+    hasStarted: boolean;
+    
+    // Feature Flags - derived from Topic/Quiz metadata
+    showExhibitButton: boolean;
+    showSolutionButton: boolean;
+    solutionVisible: boolean;
+
+    // Layout - React.CSSProperties ensures type safety for inline styles (e.g., 'left' must be string/number)
+    dynamicStyle: React.CSSProperties;
+}
+
+const QuizFooter: React.FC<QuizFooterProps> = ({
     onNext,
     onPrevious,
     onMark,
@@ -19,21 +43,22 @@ function QuizFooter({
     showExhibitButton,
     showSolutionButton,
     solutionVisible,
-    dynamicStyle, // For sidebar adjustment
-}) {
-    // In review mode, the main button should navigate back to the results page
+    dynamicStyle,
+}) => {
+    
+    // Abstraction for the primary action button.
+    // In Review Mode, "Next" contextually becomes "Return to Results".
     const handleMainAction = () => {
-        if (isReviewMode) {
-            // This would be a navigate function passed from the parent
-            onNext(); 
-        } else {
-            onNext();
-        }
+        onNext();
     };
 
     return (
         <div className="quiz-navigation" style={dynamicStyle}>
             <div className="nav-group-left">
+                {/* 
+                    We disable controls during 'isSaving' to prevent race conditions 
+                    where a user might navigate before the previous answer is persisted.
+                */}
                 <button
                     onClick={onPrevious}
                     disabled={isFirstQuestion || !hasStarted || isSaving}
@@ -82,6 +107,6 @@ function QuizFooter({
             </div>
         </div>
     );
-}
+};
 
 export default QuizFooter;

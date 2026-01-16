@@ -4,7 +4,7 @@ import { saveInProgressAttempt, deleteInProgressAttempt, finalizeQuizAttempt } f
 import { useAuth } from '../context/AuthContext';
 
 // Logic imports
-import { quizReducer, initialState } from './quiz/quizReducer';
+import { quizReducer, initialState, createInitialAttempt } from './quiz/quizReducer';
 import { useQuizInitialization } from './quiz/useQuizInitialization';
 import { 
     getLocalAttemptKey, 
@@ -16,6 +16,7 @@ import {
 
 // Types
 import { SectionType } from '../types/content.types';
+import { PracticeTestSettings } from '../components/PracticeTestOptions';
 
 export const useQuizEngine = (
     topicId: string, 
@@ -31,8 +32,6 @@ export const useQuizEngine = (
     // Refs for Timing and Autosave
     const questionStartTimeRef = useRef<number | null>(null);
     const timerIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-    
-    // FIX 1: Provide 'undefined' as the initial value for the generic useRef
     const saveProgressToServerRef = useRef<(() => Promise<void>) | undefined>(undefined);
 
     // 1. Initialize Data (Delegated to sub-hook)
@@ -62,14 +61,12 @@ export const useQuizEngine = (
     const saveProgressToServer = useCallback(async () => {
         const isFreeUser = userProfile?.tier === 'free';
         
-        // Conditions to ABORT save
         if (isPreviewMode || isFreeUser || !((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
             return;
         }
 
         dispatch({ type: 'SET_IS_SAVING', payload: true });
         
-        // Serialize Sets to Arrays for API
         const serializableAttempt = serializeAttemptForApi(state.attempt);
 
         try {
@@ -83,18 +80,15 @@ export const useQuizEngine = (
         } catch (e) {
             console.error("Auto-save failed", e);
         } finally {
-            // Artificial delay to show "Saving..." briefly
             setTimeout(() => dispatch({ type: 'SET_IS_SAVING', payload: false }), 500);
         }
 
     }, [state.attempt, state.timer, topicId, sectionType, quizId, state.status, isPreviewMode, userProfile]);
 
-    // Keep ref updated
     useEffect(() => {
         saveProgressToServerRef.current = saveProgressToServer;
     }, [saveProgressToServer]);
 
-    // Interval for Auto-Save (Every 1 minute)
     useEffect(() => {
         let autoSaveInterval: ReturnType<typeof setInterval>;
         if (state.status === 'active' && state.attempt.id && !isPreviewMode) {
@@ -107,8 +101,7 @@ export const useQuizEngine = (
         return () => clearInterval(autoSaveInterval);
     }, [state.status, state.attempt.id, isPreviewMode]);
 
-
-    // 4. Local Storage Sync (Always runs)
+    // 4. Local Storage Sync
     useEffect(() => {
         if ((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id && !isPreviewMode) {
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
@@ -156,18 +149,73 @@ export const useQuizEngine = (
 
         toggleExhibit: useCallback(() => dispatch({ type: 'TOGGLE_EXHIBIT' }), []),
         toggleSolution: useCallback(() => dispatch({ type: 'TOGGLE_SOLUTION' }), []),
-        
-        // FIX 2: Removed unused 'index' parameter. The reducer uses currentQuestionIndex from state.
         toggleExplanation: useCallback(() => dispatch({ type: 'TOGGLE_EXPLANATION' }), []),
         
         closeReviewSummary: useCallback(() => dispatch({ type: 'CLOSE_REVIEW_SUMMARY' }), []),
         resumeAttempt: useCallback(() => dispatch({ type: 'RESUME_ATTEMPT' }), []),
         closeRegistrationPrompt: useCallback(() => dispatch({ type: 'CLOSE_REGISTRATION_PROMPT' }), []),
 
-        startPreview: useCallback((settings: { prometricDelay: boolean; additionalTime: boolean }) => { 
-            const duration = 180 * 60; 
-            dispatch({ type: 'START_PREVIEW', payload: { settings, duration } });
-        }, []),
+        // --- Handle Start with Options ---
+        startAttemptWithOptions: useCallback(async (settings: PracticeTestSettings) => {
+            // 1. Calculate Duration
+            // Default to 60 mins if not specified, then apply 1.5x modifier if requested
+            const baseMinutes = 60; 
+            const modifier = settings.additionalTime ? 1.5 : 1.0;
+            const durationSeconds = Math.round(baseMinutes * 60 * modifier);
+
+            if (isPreviewMode) {
+                dispatch({ type: 'START_PREVIEW', payload: { settings, duration: durationSeconds } });
+                return;
+            }
+
+            // 2. Initialize Attempt (Server or Local)
+            const isFreeUser = userProfile?.tier === 'free';
+            const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
+            const timerData = { value: durationSeconds, isActive: true, isCountdown: true, initialDuration: durationSeconds };
+            
+            let attemptId: string | undefined;
+
+            if (isFreeUser) {
+                attemptId = `local-${Date.now()}`;
+            } else {
+                try {
+                    attemptId = await saveInProgressAttempt({ 
+                        topicId, 
+                        sectionType, 
+                        quizId, 
+                        status: 'active',
+                        practiceTestSettings: settings,
+                        timer: timerData,
+                        // Initialize empty maps
+                        userAnswers: {}, markedQuestions: {}, crossedOffOptions: {}, userTimeSpent: {}
+                    });
+                } catch (e) {
+                    console.error("Failed to create attempt on server", e);
+                }
+            }
+
+            if (attemptId && state.quizContent.metadata) {
+                // Save to local storage for redundancy/offline support
+                const initialAttemptState = { 
+                    ...createInitialAttempt(topicId, sectionType, quizId), 
+                    id: attemptId, 
+                    practiceTestSettings: settings 
+                };
+                saveToLocalStorage(localKey, { ...initialAttemptState, timer: timerData });
+
+                // 3. Dispatch Start
+                dispatch({ 
+                    type: 'SET_DATA_AND_START', 
+                    payload: { 
+                        questions: state.quizContent.questions, 
+                        metadata: state.quizContent.metadata, 
+                        attemptId,
+                        settings,
+                        initialDuration: durationSeconds
+                    } 
+                });
+            }
+        }, [isPreviewMode, topicId, sectionType, quizId, userProfile, state.quizContent]),
 
         nextQuestion: useCallback(() => {
             if (isPreviewMode && state.attempt.currentQuestionIndex === 1) {
@@ -192,7 +240,6 @@ export const useQuizEngine = (
                 return;
             }
 
-            // Record time for current question before opening summary
             const timeNow = Date.now();
             const startTime = questionStartTimeRef.current;
             if (startTime) {
@@ -203,7 +250,6 @@ export const useQuizEngine = (
 
             dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
             
-            // Trigger server save
             if (saveProgressToServerRef.current) {
                 await saveProgressToServerRef.current();
             }
@@ -211,9 +257,11 @@ export const useQuizEngine = (
             dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
         }, [isPreviewMode, state.attempt.currentQuestionIndex]),
         
+        // --- UPDATED: Start New Attempt (Reset Logic) ---
         startNewAttempt: useCallback(async () => {
             if (isPreviewMode) return;
 
+            // 1. Cleanup Old Attempt Data (Local & Server)
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
             clearLocalStorage(localKey);
             
@@ -223,25 +271,37 @@ export const useQuizEngine = (
                 await deleteInProgressAttempt(state.attempt.id);
             }
             
-            // Create fresh attempt
-            const timerData = { value: 0, isActive: false, isCountdown: false, initialDuration: 0 };
-            let newAttemptId: string | undefined;
-
-            if (isFreeUser) {
-                newAttemptId = `local-${Date.now()}`;
+            // 2. Branch Logic based on Section Type
+            if (sectionType === 'practice' && state.quizContent.metadata) {
+                // For Practice Tests, send user back to Options Screen
+                // We reuse the loaded questions and metadata
+                dispatch({
+                    type: 'PROMPT_OPTIONS',
+                    payload: {
+                        questions: state.quizContent.questions,
+                        metadata: state.quizContent.metadata
+                    }
+                });
             } else {
-                 newAttemptId = await saveInProgressAttempt({ 
-                     topicId, sectionType, quizId, status: 'active', timer: timerData,
-                     userAnswers: {}, markedQuestions: {}, crossedOffOptions: {}, userTimeSpent: {}
-                 });
+                // For Question Banks (or if metadata missing), start immediately (Original Logic)
+                const timerData = { value: 0, isActive: false, isCountdown: false, initialDuration: 0 };
+                let newAttemptId: string | undefined;
+
+                if (isFreeUser) {
+                    newAttemptId = `local-${Date.now()}`;
+                } else {
+                     newAttemptId = await saveInProgressAttempt({ 
+                         topicId, sectionType, quizId, status: 'active', timer: timerData,
+                         userAnswers: {}, markedQuestions: {}, crossedOffOptions: {}, userTimeSpent: {}
+                     });
+                }
+
+                const initialAttemptState = { ...createInitialAttempt(topicId, sectionType, quizId), id: newAttemptId };
+                saveToLocalStorage(localKey, { ...initialAttemptState, timer: timerData });
+
+                dispatch({ type: 'RESET_ATTEMPT', payload: { newAttemptId: newAttemptId! } });
             }
-
-            // Save fresh state to LocalStorage
-            const initialAttemptState = { ...initialState.attempt, id: newAttemptId };
-            saveToLocalStorage(localKey, { ...initialAttemptState, timer: timerData });
-
-            dispatch({ type: 'RESET_ATTEMPT', payload: { newAttemptId: newAttemptId! } });
-        }, [state.attempt.id, topicId, sectionType, quizId, isPreviewMode, userProfile]),
+        }, [state.attempt.id, topicId, sectionType, quizId, isPreviewMode, userProfile, state.quizContent]),
 
         finalizeAttempt: useCallback(async () => {
             if (isPreviewMode) {
@@ -258,10 +318,8 @@ export const useQuizEngine = (
 
                 const serializableAttempt = serializeAttemptForApi(state.attempt);
 
-                // Call API
                 const { score } = await finalizeQuizAttempt({ ...serializableAttempt, timer: state.timer });
                 
-                // SAVE RESULTS FOR RESULTS PAGE
                 const results = {
                     score,
                     totalQuestions: state.quizContent.questions.length,

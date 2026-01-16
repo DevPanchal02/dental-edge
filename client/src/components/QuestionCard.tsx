@@ -1,9 +1,48 @@
 import React from 'react';
 import '../styles/QuestionCard.css';
+import { Question, Option } from '../types/quiz.types';
 
-const HtmlRenderer = React.memo(function HtmlRenderer({ htmlString, className, ...rest }) {
+// Interface for the HTML Renderer.
+// We allow [key: string]: any to support data attributes like 'data-content-key' needed for the highlighter.
+interface HtmlRendererProps {
+    htmlString: string;
+    className?: string;
+    [key: string]: any; 
+}
+
+/**
+ * Optimization: Memoized HTML Renderer.
+ * Injecting HTML via dangerouslySetInnerHTML is expensive for the browser's layout engine.
+ * React.memo ensures we only touch the DOM if the htmlString actually changes.
+ */
+const HtmlRenderer = React.memo<HtmlRendererProps>(function HtmlRenderer({ htmlString, className, ...rest }) {
   return <div className={className} dangerouslySetInnerHTML={{ __html: htmlString || '<p>Content missing.</p>' }} {...rest} />;
 });
+
+interface QuestionCardProps {
+    questionData: Question | null;
+    questionIndex: number;
+    // Explicitly handle nullable selection (user hasn't answered yet)
+    selectedOption: string | null | undefined; 
+    isSubmitted: boolean;
+    showExplanation: boolean;
+    
+    // Performance: Set allows O(1) lookup complexity.
+    crossedOffOptions: Set<string>;
+    
+    userTimeSpentOnQuestion?: number;
+    isReviewMode: boolean;
+    
+    // Strict callback signatures ensure we pass exactly the data the parent expects
+    onOptionSelect: (index: number, label: string) => void;
+    onToggleExplanation: (index: number) => void;
+    onToggleCrossOff: (index: number, label: string) => void;
+    onToggleMark: (index: number) => void;
+    
+    isTemporarilyRevealed: boolean;
+    isPracticeTestActive: boolean;
+    highlightedHtml?: Record<string, string>;
+}
 
 function QuestionCard({
   questionData,
@@ -20,15 +59,17 @@ function QuestionCard({
   isTemporarilyRevealed,
   isPracticeTestActive,
   highlightedHtml,
-}) {
+}: QuestionCardProps) {
 
-   if (!questionData || typeof questionData !== 'object' || questionData === null) {
+   // Guard Clause: Fail gracefully if data is malformed or missing.
+   if (!questionData || typeof questionData !== 'object') {
      return ( <div className="question-card error-card"><p className="error-message">Error displaying Question {questionIndex + 1}: Invalid data format.</p></div> );
    }
    if (questionData.error) {
     return ( <div className="question-card error-card"><p className="error-message">Error loading Question {questionIndex + 1}:<br /><span className="error-details">{questionData.error}</span></p></div> );
   }
 
+  // Destructure with default values to ensure UI stability even if fields are missing
   const {
       question = { html_content: '<p>Question content missing.</p>' },
       options = [],
@@ -37,15 +78,17 @@ function QuestionCard({
       analytics = { percent_correct: 'N/A', time_spent: 'N/A' }
   } = questionData;
 
-  const getDisplayHtml = (originalHtml, contentKey) => {
+  // Helper: Check if there is a highlighted version of the text in the user's attempt state.
+  const getDisplayHtml = (originalHtml: string, contentKey: string) => {
     return highlightedHtml && highlightedHtml[contentKey] !== undefined
       ? highlightedHtml[contentKey]
       : originalHtml;
   };
 
-  const handleSelect = (e, optionLabel) => {
+  const handleSelect = (e: React.MouseEvent, optionLabel: string) => {
     if (e && e.preventDefault) e.preventDefault();
 
+    // Logic: Block selection if the quiz is in "Read Only" mode (Review/Submitted)
     const trulySubmitted = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
 
     if (!trulySubmitted && !isReviewMode && !isTemporarilyRevealed && !crossedOffOptions.has(optionLabel)) {
@@ -53,20 +96,24 @@ function QuestionCard({
     }
   };
 
-  const handleContextMenu = (event, optionLabel) => {
-      event.preventDefault();
+  const handleContextMenu = (event: React.MouseEvent, optionLabel: string) => {
+      event.preventDefault(); // Prevent native browser context menu
       const trulySubmittedForCrossOff = isPracticeTestActive ? false : (isSubmitted && !isReviewMode && !isTemporarilyRevealed);
+      
+      // Allow crossing off only if the question isn't finalized
       if (!trulySubmittedForCrossOff && !isReviewMode && !isTemporarilyRevealed) {
         onToggleCrossOff(questionIndex, optionLabel);
       }
   };
 
-  const getOptionClassName = (option) => {
+  // Logic to determine visual state (Correct/Incorrect/Selected/Crossed)
+  const getOptionClassName = (option: Option) => {
     let className = 'option-label';
     if (crossedOffOptions.has(option.label)) { className += ' crossed-off'; }
 
     const isThisOptionSelected = option.label === selectedOption && !crossedOffOptions.has(option.label);
     
+    // If we are showing results (Review/Submitted/Revealed), we apply grading styles
     const showGradingStyles = isReviewMode || isTemporarilyRevealed || (!isPracticeTestActive && isSubmitted);
 
     if (showGradingStyles) {
@@ -77,6 +124,7 @@ function QuestionCard({
             className += ' incorrect';
         }
     } else {
+        // Standard interactive state
         if (isThisOptionSelected) {
             className += ' selected';
         }
@@ -101,6 +149,7 @@ function QuestionCard({
         <>
           <div className="question-content">
             <p className="question-number">Question {questionIndex + 1}</p>
+            {/* Render Question Text with potential Highlights */}
             <HtmlRenderer
               className="question-html-content"
               htmlString={getDisplayHtml(question.html_content, `question_${questionIndex}`)}
@@ -138,6 +187,7 @@ function QuestionCard({
                       data-content-key={`option_${questionIndex}_${option.label}`}
                     />
                 </span>
+                {/* Show peer analytics statistics if available and in review mode */}
                 {isSubmitted && (!isPracticeTestActive || isTemporarilyRevealed || isReviewMode) && option.percentage_selected && (
                      <span className="option-percentage">{option.percentage_selected}</span>
                 )}

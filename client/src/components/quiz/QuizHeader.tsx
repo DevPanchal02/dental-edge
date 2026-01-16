@@ -1,14 +1,35 @@
-// FILE: client/src/components/quiz/QuizHeader.jsx
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaChevronLeft } from 'react-icons/fa';
 import '../../styles/QuizPage.css';
 
-function QuizHeader({ title, progressText, backLink, backText, isPreviewMode }) {
+/**
+ * Defines the strict contract for the Header.
+ * We avoid optional props (?) here to ensure the UI is always deterministic.
+ */
+interface QuizHeaderProps {
+    title: string;
+    progressText: string;
+    backLink: string;
+    backText: string;
+    isPreviewMode: boolean;
+}
+
+const QuizHeader: React.FC<QuizHeaderProps> = ({ 
+    title, 
+    progressText, 
+    backLink, 
+    backText, 
+    isPreviewMode 
+}) => {
     return (
         <div className="quiz-header">
             <div className="header-left">
+                {/* 
+                   Conditional rendering based on 'isPreviewMode' flag.
+                   In a larger app, we might separate 'GuestHeader' and 'UserHeader' 
+                   into different components, but for this complexity, a ternary is efficient.
+                */}
                 {isPreviewMode ? (
                     <Link to="/" className="back-button-quiz icon-button">
                         <FaChevronLeft /> Back to Home
@@ -20,7 +41,6 @@ function QuizHeader({ title, progressText, backLink, backText, isPreviewMode }) 
                 )}
             </div>
             <div className="header-center">
-                {/* In preview mode, show "Dental Edge" branding above the title */}
                 {isPreviewMode && <p className="pto-app-name" style={{ margin: '0 0 3px 0' }}>Dental Edge</p>}
                 <h1 className="quiz-title">{title}</h1>
             </div>
@@ -31,6 +51,6 @@ function QuizHeader({ title, progressText, backLink, backText, isPreviewMode }) 
             </div>
         </div>
     );
-}
+};
 
 export default QuizHeader;
