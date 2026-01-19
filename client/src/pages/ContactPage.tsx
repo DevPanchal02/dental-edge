@@ -3,11 +3,17 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import '../styles/ContactPage.css';
 
+interface ContactFormData {
+    name: string;
+    email: string;
+    message: string;
+}
+
 /**
  * Renders the contact page with a form for user inquiries.
  */
 function ContactPage() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     message: '',
@@ -17,7 +23,8 @@ function ContactPage() {
   const location = useLocation();
   const { currentUser } = useAuth();
 
-  const handleChange = (e) => {
+  // Handle changes for both Input and Textarea elements
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prevState => ({
       ...prevState,
@@ -25,8 +32,9 @@ function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // In a real app, you would send this to an API endpoint
     alert(`Thank you, ${formData.name}. Your message has been sent.`);
     setFormData({ name: '', email: '', message: '' });
   };
@@ -84,7 +92,7 @@ function ContactPage() {
               id="message"
               name="message"
               className="form-textarea"
-              rows="6"
+              rows={6}
               value={formData.message}
               onChange={handleChange}
               placeholder="Let us know how we can help"

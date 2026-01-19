@@ -1,12 +1,25 @@
 import React, { Suspense, useEffect, useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { useGLTF, MeshReflectorMaterial } from '@react-three/drei';
-import { Box3, Vector3 } from 'three';
+import { Box3, Vector3, Group, SpotLight, Object3D, Mesh } from 'three';
+import { GLTF } from 'three-stdlib';
+
+// Type definition for the GLTF result
+type GLTFResult = GLTF & {
+  nodes: Record<string, Object3D>;
+  materials: Record<string, any>;
+};
+
+// We allow any props to be spread to the primitive, as R3F handles this dynamically.
+interface ModelProps {
+    [key: string]: any;
+}
 
 // This component now handles its own rotation
-function Model(props) {
-    const modelRef = useRef();
-    const { scene } = useGLTF('/Models/Tooth.glb'); 
+function Model(props: ModelProps) {
+    // We type the ref as a THREE.Group because the GLTF scene is a Group
+    const modelRef = useRef<Group>(null);
+    const { scene } = useGLTF('/Models/Tooth.glb') as GLTFResult; 
     
     useEffect(() => {
         const targetSize = 2.5;
@@ -22,7 +35,7 @@ function Model(props) {
         scene.position.sub(center.multiplyScalar(scaleFactor));
 
         scene.traverse((child) => {
-            if (child.isMesh) {
+            if ((child as Mesh).isMesh) {
                 child.castShadow = true;
                 child.receiveShadow = true;
             }
@@ -41,14 +54,18 @@ function Model(props) {
 
 // This new component creates the flashing, diffused green lights
 function DynamicLights() {
-    const light1Ref = useRef();
-    const light2Ref = useRef();
+    // Explicitly type the SpotLight refs
+    const light1Ref = useRef<SpotLight>(null);
+    const light2Ref = useRef<SpotLight>(null);
 
     useFrame(({ clock }) => {
         const elapsedTime = clock.getElapsedTime();
-        // Use a sine wave to create a smooth, pulsing effect for the lights
-        light1Ref.current.intensity = 1 + Math.sin(elapsedTime * 0.7) * 0.5;
-        light2Ref.current.intensity = 1 + Math.sin(elapsedTime * 0.7 + Math.PI) * 0.5; // Phase-shifted
+        // Guard clauses to ensure refs exist before accessing properties
+        if (light1Ref.current && light2Ref.current) {
+            // Use a sine wave to create a smooth, pulsing effect for the lights
+            light1Ref.current.intensity = 1 + Math.sin(elapsedTime * 0.7) * 0.5;
+            light2Ref.current.intensity = 1 + Math.sin(elapsedTime * 0.7 + Math.PI) * 0.5; // Phase-shifted
+        }
     });
 
     return (
@@ -76,7 +93,7 @@ function DynamicLights() {
 }
 
 // Main component that sets up the now-static scene
-const ToothModel = () => {
+const ToothModel: React.FC = () => {
     return (
         <Suspense fallback={null}>
             {/* A soft ambient light to fill the scene */}
@@ -87,6 +104,9 @@ const ToothModel = () => {
               position={[8, 10, 5]} 
               intensity={2.0} 
               castShadow 
+              // R3F allows passing shadow-mapSize props via specialized syntax or args, 
+              // but standard props usually work for primitives. 
+              // We keep the original props for exact functionality.
               shadow-mapSize-width={2048} 
               shadow-mapSize-height={2048}
               shadow-bias={-0.0001}
@@ -108,7 +128,7 @@ const ToothModel = () => {
                     maxDepthThreshold={1.4}
                     color="#050505"
                     metalness={0.6}
-                    receiveShadow
+                    mirror={0} // Required prop for MeshReflectorMaterial types in some versions
                 />
             </mesh>
         </Suspense>

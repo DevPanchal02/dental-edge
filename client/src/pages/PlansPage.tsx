@@ -1,18 +1,30 @@
-// FILE: client/src/pages/PlansPage.jsx
-
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { FaCheck } from 'react-icons/fa';
 import '../styles/PlansPage.css';
-import { loadStripe } from '@stripe/stripe-js';
+import { loadStripe} from '@stripe/stripe-js';
 import { createCheckoutSession } from '../services/api';
+import { UserTier } from '../types/user.types';
 
-// This must be outside the component to avoid being reloaded on every render.
-const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+// Strict check for environment variable to prevent silent failures in production
+const STRIPE_KEY = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY;
+if (!STRIPE_KEY) {
+    console.error("Missing VITE_STRIPE_PUBLISHABLE_KEY in environment variables.");
+}
 
-// The data for our pricing plans, now with the updated Pro description.
-const plansData = [
+// Initialize Stripe outside component to avoid re-initialization on render
+const stripePromise = loadStripe(STRIPE_KEY);
+
+interface Plan {
+    tierId: UserTier;
+    name: string;
+    price: string;
+    description: string;
+    features: string[];
+}
+
+const plansData: Plan[] = [
   {
     tierId: 'free',
     name: 'Free',
@@ -40,9 +52,9 @@ const plansData = [
     tierId: 'pro',
     name: 'Edge Pro',
     price: '19.99',
-    description: 'The ultimate DAT toolkit for top performers.', // Using your new description
+    description: 'The ultimate DAT toolkit for top performers.',
     features: [
-      'All features from Edge Plus, plus:', // Updated for clarity
+      'All features from Edge Plus, plus:',
       'Full-length mock exams (Coming Soon)',
       'DAT Simulator mode (Coming Soon)',
       'Priority support',
@@ -50,8 +62,8 @@ const plansData = [
   },
 ];
 
-// A simple map to compare tier levels.
-const tierLevels = {
+// Record<UserTier, number> ensures we handle every tier defined in our types
+const tierLevels: Record<UserTier, number> = {
   free: 0,
   plus: 1,
   pro: 2,
@@ -61,10 +73,12 @@ function PlansPage() {
   const navigate = useNavigate();
   const location = useLocation();
   const { currentUser, userProfile } = useAuth();
-  const userTier = userProfile?.tier || 'free';
+  
+  // Default to 'free' if profile hasn't loaded yet, though AuthContext usually handles this
+  const userTier: UserTier = userProfile?.tier || 'free';
 
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
 
   const handleClose = () => {
     if (location.key !== 'default') {
@@ -74,8 +88,7 @@ function PlansPage() {
     }
   };
 
-  // This function handles the entire checkout process for any paid tier.
-  const handleCheckout = async (tierId) => {
+  const handleCheckout = async (tierId: UserTier) => {
     if (tierId !== 'plus' && tierId !== 'pro') {
         alert("This plan is not available for purchase at this time.");
         return;
@@ -85,25 +98,37 @@ function PlansPage() {
     setError('');
 
     try {
-      // Pass the selected tierId to the backend function.
+      // 1. Create Session on Backend
       const sessionId = await createCheckoutSession(tierId);
+      
+      // 2. Load Stripe Instance
       const stripe = await stripePromise;
-      const { error } = await stripe.redirectToCheckout({ sessionId });
-
-      if (error) {
-        console.error("Stripe redirection error:", error);
-        setError("Could not redirect to payment page. Please try again.");
+      if (!stripe) {
+          throw new Error("Stripe failed to initialize.");
       }
-    } catch (err) {
+
+      // 3. Redirect to Checkout
+      const result = await stripe.redirectToCheckout({ sessionId });
+
+      if (result.error) {
+        console.error("Stripe redirection error:", result.error);
+        setError(result.error.message || "Could not redirect to payment page.");
+      }
+    } catch (err: any) {
       console.error("Backend checkout error:", err);
-      setError("An error occurred on our server. Please try again later.");
+      setError(err.message || "An error occurred on our server. Please try again later.");
     } finally {
       setIsLoading(false);
     }
   };
 
-  // Determines the text, state, and action for each plan's button.
-  const getButtonState = (plan) => {
+  interface ButtonState {
+      text: string;
+      disabled: boolean;
+      action: (() => void) | null;
+  }
+
+  const getButtonState = (plan: Plan): ButtonState => {
     const planLevel = tierLevels[plan.tierId];
     const userLevel = tierLevels[userTier];
 
@@ -123,7 +148,7 @@ function PlansPage() {
       return { text: 'Your Current Plan', disabled: true, action: null };
     }
     
-    // The action now calls handleCheckout with the specific plan's tierId.
+    // Upgrade path
     return { 
         text: isLoading ? 'Processing...' : `Get ${plan.name.replace('Edge ', '')}`, 
         disabled: isLoading, 
@@ -147,6 +172,10 @@ function PlansPage() {
             (userTier === 'free' && plan.tierId === 'plus') ||
             (userTier === 'plus' && plan.tierId === 'pro') ||
             (userTier === 'pro' && plan.tierId === 'pro');
+          
+          const priceParts = plan.price.split('.');
+          const priceMain = priceParts[0];
+          const priceDecimal = priceParts[1] || '';
 
           return (
             <div key={plan.tierId} className={`plan-card ${isHighlighted ? 'highlighted' : ''}`}>
@@ -155,9 +184,9 @@ function PlansPage() {
                   <h2 className="plan-name">{plan.name}</h2>
                   <div className="plan-price">
                     <span className="price-currency">$</span>
-                    <span className="price-amount">{plan.price.split('.')[0]}</span>
-                    {plan.price.split('.')[1] && (
-                        <span className="price-decimal">.{plan.price.split('.')[1]}</span>
+                    <span className="price-amount">{priceMain}</span>
+                    {priceDecimal && (
+                        <span className="price-decimal">.{priceDecimal}</span>
                     )}
                     <span className="price-period">/ month</span>
                   </div>
@@ -168,7 +197,8 @@ function PlansPage() {
                   <button 
                     className={`plan-button ${isHighlighted && !buttonState.disabled ? 'primary' : 'secondary'}`}
                     disabled={buttonState.disabled}
-                    onClick={buttonState.action}
+                    // Only attach onClick if action exists
+                    onClick={buttonState.action ? buttonState.action : undefined}
                   >
                     {buttonState.text}
                   </button>

@@ -1,5 +1,3 @@
-// FILE: client/src/pages/LandingPage.jsx
-
 import React, { Suspense, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Canvas, useFrame } from '@react-three/fiber';
@@ -8,38 +6,83 @@ import '../styles/LandingPage.css';
 import { CiLocationArrow1 } from "react-icons/ci";
 import { useAuth } from '../context/AuthContext';
 import appLogo from '../assets/logo.png';
+import { Group, Mesh } from 'three';
+import { GLTF } from 'three-stdlib';
 
-// Model and Scene components remain unchanged.
+// Type definition for the GLTF result
+type GLTFResult = GLTF & {
+    nodes: Record<string, any>;
+    materials: Record<string, any>;
+};
+
+// Model and Scene components remain unchanged in logic, just typed.
 function Model() {
-    const modelRef = useRef();
-    const { scene } = useGLTF('/Models/Tooth.glb'); 
-    useEffect(() => { scene.traverse((child) => { if (child.isMesh) { child.castShadow = true; child.receiveShadow = true; } }); }, [scene]);
-    useFrame(() => { if (modelRef.current) { modelRef.current.rotation.y += 0.004; } });
+    const modelRef = useRef<Group>(null);
+    const { scene } = useGLTF('/Models/Tooth.glb') as GLTFResult; 
+    
+    useEffect(() => { 
+        scene.traverse((child) => { 
+            if ((child as Mesh).isMesh) { 
+                child.castShadow = true; 
+                child.receiveShadow = true; 
+            } 
+        }); 
+    }, [scene]);
+    
+    useFrame(() => { 
+        if (modelRef.current) { 
+            modelRef.current.rotation.y += 0.004; 
+        } 
+    });
+    
     return <primitive ref={modelRef} object={scene} />;
 }
+
 function Scene() {
     return (
         <Suspense fallback={null}>
             <group position={[0, -0.1, 0]} rotation={[-0.05, 0, 0]}>
-                <Stage environment={"city"} intensity={0.6} contactShadow={{ opacity: 0.5, blur: 2 }} preset="rembrandt">
+                {/* 
+                    FIX: Changed 'contactShadow' to 'shadows'. 
+                    In TS/Drei, you configure shadows via the 'shadows' prop object.
+                    We explicitly set type: 'contact' to satisfy the union type.
+                */}
+                <Stage 
+                    environment={"city"} 
+                    intensity={0.6} 
+                    shadows={{ type: 'contact', opacity: 0.5, blur: 2 }} 
+                    preset="rembrandt"
+                >
                     <mesh visible={false} scale={[2.8, 2.8, 2.8]}><boxGeometry /></mesh>
                     <group position={[0, -0.9, 0]}><Model /></group>
                 </Stage>
                 <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.75, 0]}>
                     <planeGeometry args={[170, 170]} />
-                    <MeshReflectorMaterial blur={[256, 100]} resolution={2048} mixBlur={1} mixStrength={50} roughness={1} depthScale={1.2} minDepthThreshold={0.4} maxDepthThreshold={1.4} color="#101010" metalness={0.8} />
+                    <MeshReflectorMaterial 
+                        blur={[256, 100]} 
+                        resolution={2048} 
+                        mixBlur={1} 
+                        mixStrength={50} 
+                        roughness={1} 
+                        depthScale={1.2} 
+                        minDepthThreshold={0.4} 
+                        maxDepthThreshold={1.4} 
+                        color="#101010" 
+                        metalness={0.8} 
+                        mirror={0} 
+                    />
                 </mesh>
             </group>
         </Suspense>
     );
 }
 
-const LandingPage = () => {
+const LandingPage: React.FC = () => {
   const { currentUser } = useAuth();
   
   // Determine the correct destination for the "Get Started" button.
   // If logged in, go to the main app. If not, go to the quiz preview.
-const getStartedLink = currentUser ? "/app" : "/preview/quiz/biology/practice/test-1";
+  const getStartedLink = currentUser ? "/app" : "/preview/quiz/biology/practice/test-1";
 
   return (
     <div className="landing-page-body">
@@ -65,7 +108,6 @@ const getStartedLink = currentUser ? "/app" : "/preview/quiz/biology/practice/te
             <div className="phase-two upword">
               <h1 className="bold-76 headline">Gain the Edge<br />With Our<br />DAT Simulator.</h1>
               <ul className="landing-button">
-                {/* --- MODIFICATION: The link now points to our new destination --- */}
                 <li><Link to={getStartedLink} className="landing-link">Get Started <CiLocationArrow1 /></Link></li>
               </ul>
             </div>
@@ -78,4 +120,5 @@ const getStartedLink = currentUser ? "/app" : "/preview/quiz/biology/practice/te
     </div>
   );
 };
+
 export default LandingPage;

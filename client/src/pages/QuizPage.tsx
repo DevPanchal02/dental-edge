@@ -25,15 +25,15 @@ interface QuizPageProps {
     isPreviewMode?: boolean;
 }
 
-// Extending the native HTMLButtonElement to support the custom property '_selectionRange'
-// used in the highlighter logic. This avoids using 'any' on the ref.
+// Extending HTMLButtonElement to support the custom property '_selectionRange'
+// This prevents the need for 'any' casting on the ref.
 interface HighlightButtonElement extends HTMLButtonElement {
     _selectionRange?: Range | null;
 }
 
 /**
  * Typed Debounce Utility
- * Ensures the returned function matches the signature of the input function.
+ * Prevents rapid-fire execution of expensive DOM operations like selection calculation.
  */
 function debounce<T extends (...args: any[]) => void>(func: T, delay: number) {
     let timeoutId: ReturnType<typeof setTimeout>;
@@ -45,9 +45,9 @@ function debounce<T extends (...args: any[]) => void>(func: T, delay: number) {
     };
 }
 
-function QuizPage({ isPreviewMode = false }: QuizPageProps) {
-    // We cast sectionType to SectionType because useParams always returns string | undefined.
-    // In a production app, we might want to validate this matches 'practice' | 'qbank'.
+const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
+    // We cast sectionType to SectionType because useParams returns string.
+    // Ideally, we would validate this against a Zod schema or a guard function.
     const { topicId = '', sectionType = 'practice', quizId = '' } = useParams<{ 
         topicId: string; 
         sectionType: string; 
@@ -68,7 +68,7 @@ function QuizPage({ isPreviewMode = false }: QuizPageProps) {
         isPreviewMode
     );
     
-    // Access Layout Context to adjust margins based on sidebar state
+    // Access Layout Context to adjust margins based on sidebar state (pinned vs floating)
     const { isSidebarEffectivelyPinned } = useLayout();
     
     // --- HIGHLIGHTER REFS & LOGIC ---
@@ -87,10 +87,12 @@ function QuizPage({ isPreviewMode = false }: QuizPageProps) {
      * Uses requestAnimationFrame for performance during layout recalculations.
      */
     const handleActualSelectionChange = useCallback(() => {
-        // Guard Clause: Don't show highlight button if dragging exhibit, saving, or refs are missing
+        // Guard Clause: Don't show highlight button if:
+        // 1. We are currently saving (prevents UI jitter)
+        // 2. We are navigating (state is unstable)
+        // 3. Refs are not yet attached
         if (state.uiState.isSaving || 
-            // We cast to boolean because isNavActionInProgress might technically be undefined in some reducer states
-            (state.uiState as any).isNavActionInProgress || 
+            state.uiState.isNavActionInProgress || 
             !highlightButtonRef.current || 
             !quizPageContainerRef.current) {
              if (highlightButtonRef.current) highlightButtonRef.current.style.display = 'none';
@@ -150,7 +152,7 @@ function QuizPage({ isPreviewMode = false }: QuizPageProps) {
                 }
             }
         });
-    }, [state.uiState.isSaving]); 
+    }, [state.uiState.isSaving, state.uiState.isNavActionInProgress]); 
 
     // Setup and Teardown of the Selection Event Listener
     useEffect(() => {
@@ -192,7 +194,6 @@ function QuizPage({ isPreviewMode = false }: QuizPageProps) {
         const nodesToWrap: Node[] = [];
 
         // CASE 1: Simple selection (Single Text Node)
-        // TreeWalker fails here because it looks for children, and TextNodes have none.
         if (range.commonAncestorContainer.nodeType === Node.TEXT_NODE) {
             nodesToWrap.push(range.commonAncestorContainer);
         } 
@@ -370,6 +371,7 @@ function QuizPage({ isPreviewMode = false }: QuizPageProps) {
                 questionIndex: currentIndex,
                 userAnswer: state.attempt.userAnswers[currentIndex],
                 crossedOffOptions: state.attempt.crossedOffOptions,
+                // --- FIX: Added isMarked back to satisfy QuizContentAreaProps ---
                 isMarked: !!state.attempt.markedQuestions[currentIndex],
                 // Logic: Show submitted state if it's practice and submitted, OR if qbank/review and submitted/revealed
                 isSubmitted: (isPractice && !!state.attempt.submittedAnswers?.[currentIndex]) || (!isPractice && (!!state.attempt.submittedAnswers?.[currentIndex] || isReviewing || !!state.uiState.tempReveal[currentIndex])),
@@ -494,7 +496,6 @@ function QuizPage({ isPreviewMode = false }: QuizPageProps) {
                 (state.status === 'active' || state.status === 'reviewing_attempt') && (
                     <>
                         <QuizHeader {...uiProps.headerProps} />
-                        {/* Remove the manual null override, let spread handle the ref */}
                         <QuizContentArea {...uiProps.contentAreaProps} />
                         <QuizFooter 
                             {...uiProps.footerProps} 

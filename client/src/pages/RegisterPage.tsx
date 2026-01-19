@@ -3,18 +3,18 @@ import { useNavigate, Link } from "react-router-dom";
 import "../styles/userLogin.css";
 import registerImage from "../assets/registerImage.jpg";
 import googleLogo from "../assets/google-logo.svg";
-import appLogo from "../assets/logo.png"; // Import the logo
+import appLogo from "../assets/logo.png";
 import { useAuth } from "../context/AuthContext"; 
 import { updateProfile, sendEmailVerification } from "firebase/auth"; 
 
 function RegisterPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
-  const [error, setError] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
+  const [username, setUsername] = useState<string>("");
+  const [error, setError] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(false);
+  
   const navigate = useNavigate();
-
   const { signup, signInWithGoogle, currentUser } = useAuth();
 
   useEffect(() => {
@@ -24,35 +24,40 @@ function RegisterPage() {
     }
   }, [currentUser, navigate]);
 
-  const handleSignup = async (event) => {
+  const handleSignup = async (event: React.FormEvent) => {
     event.preventDefault();
     setError("");
     setLoading(true);
 
     try {
       const userCredential = await signup(email, password);
+      
+      // Update the user's display name immediately after creation
       await updateProfile(userCredential.user, { displayName: username });
       await sendEmailVerification(userCredential.user);
       
+      // Navigate to login with a success message in state
       navigate("/login", {
         state: { message: "Registration successful! Please check your email to verify your account before logging in." }
       });
 
-    } catch (err) {
-      setError(err.message);
+    } catch (err: any) {
+      const errorMessage = err?.message || "Failed to create account.";
+      setError(errorMessage);
     }
     setLoading(false);
   };
 
-  const handleGoogleSignUp = async (event) => {
+  const handleGoogleSignUp = async (event: React.MouseEvent) => {
     event.preventDefault();
     setError("");
     setLoading(true);
     try {
       await signInWithGoogle();
       // Navigation is now handled by the useEffect hook.
-    } catch (err) {
-      setError(err.message);
+    } catch (err: any) {
+      const errorMessage = err?.message || "Failed to sign up with Google.";
+      setError(errorMessage);
       setLoading(false);
     }
   };
