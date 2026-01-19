@@ -1,30 +1,27 @@
+import DOMPurify from 'dompurify';
 import {
   fetchTopics as apiFetchTopics,
   fetchTopicStructure,
   fetchQuizData,
 } from './api';
 import { auth } from '../firebase';
-import { TopicStructure, QuizItem} from '../types/content.types';
+import { TopicStructure, QuizItem } from '../types/content.types';
 import { Question, QuizMetadata } from '../types/quiz.types';
 
 // We explicitly type the cache dictionary
 const topicStructureCache: Record<string, TopicStructure> = {};
 
-// --- Utility: Clean Highlights from Raw Data ---
-export const cleanPassageHtml = (htmlString: string | undefined): string => {
-    if (!htmlString || typeof htmlString !== 'string') return '';
-    
-    // 1. Remove raw data highlights (class="highlighted")
-    let cleanedHtml = htmlString.replace(/<mark\s+[^>]*class="[^"]*highlighted[^"]*"[^>]*>([\s\S]*?)<\/mark>/gi, '$1');
-    
-    // 2. Remove the MUI button artifacts if present in raw data
-    const MuiButtonRegex = /<button\s+class="MuiButtonBase-root[^"]*"[^>]*data-testid="highlighter-button-id"[^>]*>[\s\S]*?<\/button>/gi;
-    cleanedHtml = cleanedHtml.replace(MuiButtonRegex, '');
-    
-    // 3. Remove any remaining generic mark tags to be safe
-    cleanedHtml = cleanedHtml.replace(/<mark[^>]*>/gi, '').replace(/<\/mark>/gi, '');
-    
-    return cleanedHtml;
+// --- SECURITY: Configure DOMPurify ---
+// We allow specific tags and attributes to ensure quiz formatting stays intact
+// while stripping scripts, iframes (unless specifically allowed), and event handlers.
+const sanitizeHtml = (dirty: string | undefined): string => {
+    if (!dirty || typeof dirty !== 'string') return '';
+
+    return DOMPurify.sanitize(dirty, {
+        USE_PROFILES: { html: true }, // Only allow HTML, no SVG/MathML to reduce surface area
+        ADD_TAGS: ['img', 'table', 'tbody', 'tr', 'td', 'th', 'mark'], // Ensure these key tags are kept
+        ADD_ATTR: ['src', 'alt', 'class', 'style', 'data-content-key'], // Allow styling and your highlighter keys
+    });
 };
 
 // Re-export fetchTopics with its type
@@ -58,10 +55,9 @@ const findQuizInStructure = (topicData: TopicStructure | null, sectionType: stri
   return null;
 };
 
-// --- REFACTORED getQuizData ---
+// --- REFACTORED getQuizData with SECURITY LAYER ---
 export const getQuizData = async (topicId: string, sectionType: string, quizId: string, isPreviewMode: boolean = false): Promise<Question[]> => {
   // Determine if this is an unregistered preview request on the client-side
-  // We use explicit strict equality checks
   const isPreview = isPreviewMode || (!auth.currentUser && topicId === 'biology' && sectionType === 'practice' && quizId === 'test-1');
 
   const topicData = await fetchTopicData(topicId);
@@ -82,16 +78,47 @@ export const getQuizData = async (topicId: string, sectionType: string, quizId: 
       questionsArray = (rawData as any).questions;
   }
 
-  // Clean the data and cast to Question type
+  // Clean the data, SANITIZE HTML, and cast to Question type
   return questionsArray.map((q: any) => {
-      const question: Question = { ...q }; // Shallow copy
-      
-      if (question.passage && question.passage.html_content) {
-          question.passage = {
-              ...question.passage,
-              html_content: cleanPassageHtml(question.passage.html_content)
+      // 1. Sanitize the Question Text
+      const sanitizedQuestionHtml = sanitizeHtml(q.question?.html_content);
+
+      // 2. Sanitize Options
+      const sanitizedOptions = Array.isArray(q.options) 
+        ? q.options.map((opt: any) => ({
+            ...opt,
+            html_content: sanitizeHtml(opt.html_content)
+        }))
+        : [];
+
+      // 3. Sanitize Explanation
+      const sanitizedExplanationHtml = sanitizeHtml(q.explanation?.html_content);
+
+      // 4. Sanitize Passage (if exists)
+      let sanitizedPassage = undefined;
+      if (q.passage && q.passage.html_content) {
+          // We also remove the specific artifacts you were targeting with regex before
+          let cleanHtml = sanitizeHtml(q.passage.html_content);
+          
+          // Remove legacy highlighter artifacts if they survived sanitization (class="highlighted")
+          // Note: DOMPurify might strip classes depending on config, but this regex is a safe double-check
+          cleanHtml = cleanHtml.replace(/<mark\s+[^>]*class="[^"]*highlighted[^"]*"[^>]*>([\s\S]*?)<\/mark>/gi, '$1');
+          
+          sanitizedPassage = {
+              ...q.passage,
+              html_content: cleanHtml
           };
       }
+
+      // Construct the safe Question object
+      const question: Question = { 
+          ...q,
+          question: { ...q.question, html_content: sanitizedQuestionHtml },
+          options: sanitizedOptions,
+          explanation: { ...q.explanation, html_content: sanitizedExplanationHtml },
+          passage: sanitizedPassage
+      };
+      
       return question;
   });
 };
@@ -108,11 +135,9 @@ export const getQuizMetadata = async (topicId: string, sectionType: string, quiz
   const mainTopicName = topicData.name;
 
   if (sectionType === 'practice') {
-    // We assume quizMeta.name exists based on QuizItem type
     fullNameForDisplay = `${mainTopicName} ${quizMeta.name}`;
     categoryForInstructions = mainTopicName;
   } else {
-    // qbCategory is optional in QuizItem, so we fallback to name if missing (though logic ensures it exists)
     const category = quizMeta.qbCategory || quizMeta.name;
     fullNameForDisplay = `${category} - ${quizMeta.name}`;
     

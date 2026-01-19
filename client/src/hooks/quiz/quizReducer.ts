@@ -51,7 +51,8 @@ export type QuizAction =
     | { type: 'START_PREVIEW'; payload: { settings: { prometricDelay: boolean; additionalTime: boolean }; duration: number } }
     | { type: 'PROMPT_REGISTRATION' }
     | { type: 'CLOSE_REGISTRATION_PROMPT' }
-    | { type: 'PROMPT_RESUME'; payload: { attempt: any; questions: Question[]; metadata: QuizMetadata } }
+    // FIX: Replaced 'attempt: any' with 'attempt: Partial<QuizAttemptState>'
+    | { type: 'PROMPT_RESUME'; payload: { attempt: Partial<QuizAttemptState>; questions: Question[]; metadata: QuizMetadata } }
     | { type: 'SET_DATA_AND_START'; payload: { questions: Question[]; metadata: QuizMetadata; attemptId: string; settings?: { prometricDelay: boolean; additionalTime: boolean }; initialDuration?: number } }
     | { type: 'RESUME_ATTEMPT' }
     | { type: 'RESET_ATTEMPT'; payload: { newAttemptId: string } }
@@ -170,6 +171,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 attempt: {
                     ...state.attempt, 
                     ...action.payload.attempt,
+                    // Ensure highlightedHtml is at least an empty object if undefined
                     highlightedHtml: action.payload.attempt.highlightedHtml || {},
                 },
                 timer: loadedTimer,
