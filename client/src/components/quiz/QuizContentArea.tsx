@@ -1,23 +1,20 @@
 import React from 'react';
 import QuestionCard from '../QuestionCard';
+import TimerDisplay from './TimerDisplay';
 import '../../styles/QuizPage.css'; 
 import { Question } from '../../types/quiz.types';
 
 interface MemoizedPassageProps {
     html: string | undefined;
-    // FIX: Allow null in the RefObject to match useRef(null) behavior in parent
     passageRef: React.RefObject<HTMLDivElement | null>;
     contentKey: string | null;
     highlightedHtml?: Record<string, string>;
 }
 
-// Optimization: The passage is heavy HTML. We use React.memo to ensure it doesn't 
-// re-parse/re-render when the user selects a radio button in the question area.
 const MemoizedPassage = React.memo<MemoizedPassageProps>(function MemoizedPassage({ html, passageRef, contentKey, highlightedHtml }) {
     if (!html) {
         return null;
     }
-    // Check if we have a highlighted version of this passage in the state
     const displayHtml = (contentKey && highlightedHtml && highlightedHtml[contentKey]) ? highlightedHtml[contentKey] : html;
     
     return (
@@ -29,13 +26,6 @@ const MemoizedPassage = React.memo<MemoizedPassageProps>(function MemoizedPassag
         />
     );
 });
-
-const formatTime = (totalSeconds: number): string => {
-    if (totalSeconds < 0) totalSeconds = 0;
-    const minutes = Math.floor(totalSeconds / 60);
-    const seconds = totalSeconds % 60;
-    return `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
-};
 
 interface QuizContentAreaProps {
     currentQuestion: Question | null;
@@ -55,10 +45,7 @@ interface QuizContentAreaProps {
     isPracticeTestActive: boolean;
     showExplanation: boolean;
 
-    // Timer State
-    timerValue: number;
-    isCountdown: boolean;
-    initialDuration: number;
+    // Timer Props REMOVED - Now handled by Context/TimerDisplay
     hasStarted: boolean;
 
     // Actions
@@ -67,7 +54,6 @@ interface QuizContentAreaProps {
     onToggleCrossOff: (index: number, label: string) => void;
     onToggleMark: (index: number) => void;
 
-    // FIX: Match the Ref definition in MemoizedPassageProps (allow null)
     passageContainerRef: React.RefObject<HTMLDivElement | null>;
 }
 
@@ -87,9 +73,6 @@ const QuizContentArea: React.FC<QuizContentAreaProps> = ({
     isPracticeTestActive,
     showExplanation,
 
-    timerValue,
-    isCountdown,
-    initialDuration,
     hasStarted,
 
     onOptionSelect,
@@ -108,24 +91,9 @@ const QuizContentArea: React.FC<QuizContentAreaProps> = ({
         return <div className="page-error">Error: Could not load the current question.</div>;
     }
 
-    // Determine key for passage highlighting persistence
     const passageContentKey = passageHtml && currentQuestion.category ? `passage_${currentQuestion.category}` : null;
-    
-    // Default empty set for safety if state is missing
     const EMPTY_SET = new Set<string>();
     const currentCrossedOffForCard = crossedOffOptions[questionIndex] || EMPTY_SET;
-
-    const timerDisplayComponent = (
-        <>
-            {isCountdown ? 'Time Left: ' : 'Time Elapsed: '}
-            <span className={isCountdown && timerValue < 60 && timerValue > 0 ? 'timer-low' : ''}>
-                {formatTime(timerValue)}
-            </span>
-            {isCountdown && initialDuration > 0 && (
-                <span className="timer-total"> / {formatTime(initialDuration)}</span>
-            )}
-        </>
-    );
 
     return (
         <>
@@ -142,7 +110,7 @@ const QuizContentArea: React.FC<QuizContentAreaProps> = ({
             <div className="quiz-controls-top">
                 {/* Timer is hidden in review mode */}
                 {!isReviewMode ? (
-                    <div className="timer-display">{timerDisplayComponent}</div>
+                    <TimerDisplay />
                 ) : (
                     <div className="timer-display-placeholder"></div>
                 )}
@@ -156,7 +124,6 @@ const QuizContentArea: React.FC<QuizContentAreaProps> = ({
                     crossedOffOptions={currentCrossedOffForCard}
                     isSubmitted={isSubmitted}
                     isReviewMode={isReviewMode}
-                    // FIX: Removed 'isMarked={isMarked}' prop. Visual marking is handled by the footer, not the card content.
                     isTemporarilyRevealed={isTemporarilyRevealed}
                     isPracticeTestActive={isPracticeTestActive}
                     showExplanation={showExplanation}

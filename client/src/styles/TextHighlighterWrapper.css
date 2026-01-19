@@ -1,0 +1,42 @@
+.text-highlighter-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.highlight-popup-button {
+    position: absolute;
+    display: none;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border-primary);
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2000;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transform: translateX(-50%);
+    transition: background-color 0.2s ease;
+}
+
+.highlight-popup-button:hover {
+    background-color: var(--bg-item-link-hover);
+}
+
+/* 
+  Styles for the <mark> tags injected into the HTML.
+  These must be global or deep enough to affect innerHTML content.
+*/
+mark.custom-highlight {
+    background-color: var(--highlight-bg);
+    color: var(--highlight-text);
+    padding: 2px 0;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+mark.custom-highlight:hover {
+    filter: brightness(0.95);
+}

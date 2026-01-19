@@ -1,13 +1,13 @@
 import React from 'react';
 import '../styles/QuizReviewSummary.css';
 import { Question, QuizMetadata } from '../types/quiz.types';
+import TimerDisplay from './quiz/TimerDisplay'; 
 
 interface QuizReviewSummaryProps {
     allQuizQuestions: Question[];
     quizMetadata: QuizMetadata | null;
     markedQuestions: Record<number, boolean>;
     submittedAnswers: Record<number, boolean>;
-    // FIX: Added missing props that QuizPage passes to this component
     userAnswers: Record<number, string>; 
     topicId: string; 
     
@@ -15,7 +15,7 @@ interface QuizReviewSummaryProps {
     onCloseReviewSummary: () => void;
     onJumpToQuestionInQuiz: (index: number) => void;
     onEndQuiz: () => void;
-    timerDisplayContent: React.ReactNode;
+    
     dynamicFooterStyle: React.CSSProperties;
     isNavActionInProgress: boolean;
 }
@@ -29,7 +29,6 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
     onCloseReviewSummary,
     onJumpToQuestionInQuiz,
     onEndQuiz,
-    timerDisplayContent,
     dynamicFooterStyle,
     isNavActionInProgress,
 }) => {
@@ -39,7 +38,6 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
     };
 
     const handleReviewMarked = () => {
-        // Filter and sort marked question indices
         const markedIndices = Object.keys(markedQuestions)
                                 .filter(idx => markedQuestions[Number(idx)])
                                 .map(Number)
@@ -50,10 +48,7 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
             return;
         }
         
-        // UX: Find first marked question that hasn't been submitted/completed yet
         let targetIndex = markedIndices.find(idx => !submittedAnswers[idx]);
-        
-        // If all marked are completed, just go to the first marked one
         if (targetIndex === undefined) {
             targetIndex = markedIndices[0];
         }
@@ -65,7 +60,6 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
     };
 
     const handleReviewIncomplete = () => {
-        // Find the first question index that has no submitted answer
         const firstIncompleteIndex = allQuizQuestions.findIndex((q, idx) => !q.error && !submittedAnswers[idx]);
         if (firstIncompleteIndex !== -1) {
             onJumpToQuestionInQuiz(firstIncompleteIndex);
@@ -88,8 +82,9 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
                 <div className="qrs-title-container">
                     <h1 className="qrs-title">{quizMetadata?.fullNameForDisplay || quizMetadata?.name || 'Review Quiz'}</h1>
                 </div>
-                <div className="qrs-timer-display">
-                    {timerDisplayContent}
+                <div className="qrs-timer-wrapper">
+                    {/* Render the context-aware timer directly */}
+                    <TimerDisplay className="qrs-timer-display" />
                 </div>
             </div>
 
