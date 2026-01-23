@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useRef, useMemo } from 'react';
 import QuestionCard from '../QuestionCard';
 import TimerDisplay from './TimerDisplay';
+import { useQuiz } from '../../context/QuizContext';
 import '../../styles/QuizPage.css'; 
-import { Question } from '../../types/quiz.types';
 
+// --- Helper Component: MemoizedPassage ---
+// Keeps the heavy HTML passage from re-rendering unnecessarily
 interface MemoizedPassageProps {
     html: string | undefined;
     passageRef: React.RefObject<HTMLDivElement | null>;
@@ -12,9 +14,9 @@ interface MemoizedPassageProps {
 }
 
 const MemoizedPassage = React.memo<MemoizedPassageProps>(function MemoizedPassage({ html, passageRef, contentKey, highlightedHtml }) {
-    if (!html) {
-        return null;
-    }
+    if (!html) return null;
+    
+    // Check if we have a highlighted version of this passage in the state
     const displayHtml = (contentKey && highlightedHtml && highlightedHtml[contentKey]) ? highlightedHtml[contentKey] : html;
     
     return (
@@ -27,73 +29,51 @@ const MemoizedPassage = React.memo<MemoizedPassageProps>(function MemoizedPassag
     );
 });
 
-interface QuizContentAreaProps {
-    currentQuestion: Question | null;
-    passageHtml?: string;
-    highlightedHtml?: Record<string, string>;
-    topicId: string;
+/**
+ * Smart Component: QuizContentArea
+ * 
+ * Responsibilities:
+ * 1. Consumes QuizContext to get current question data.
+ * 2. Determines visual states (review mode, submitted, etc.).
+ * 3. Renders the Passage and QuestionCard.
+ * 4. Manages the Passage DOM ref internally.
+ */
+const QuizContentArea: React.FC = () => {
+    const { state, actions } = useQuiz();
+    const { attempt, quizContent, uiState, status, quizIdentifiers } = state;
 
-    // State passed from useQuizEngine
-    questionIndex: number;
-    userAnswer: string | null | undefined;
-    crossedOffOptions: Record<number, Set<string>>;
-    timeSpent?: number;
-    isMarked: boolean;
-    isSubmitted: boolean;
-    isReviewMode: boolean;
-    isTemporarilyRevealed: boolean;
-    isPracticeTestActive: boolean;
-    showExplanation: boolean;
+    // Internal Ref for the passage (owned here, not in QuizPage)
+    const passageContainerRef = useRef<HTMLDivElement>(null);
 
-    // Timer Props REMOVED - Now handled by Context/TimerDisplay
-    hasStarted: boolean;
+    // --- Derived State ---
+    const questionIndex = attempt.currentQuestionIndex;
+    const currentQuestion = useMemo(() => quizContent.questions[questionIndex] || null, [quizContent.questions, questionIndex]);
+    
+    // Guard: Loading or Error states
+    const hasStarted = status === 'active' || status === 'reviewing_attempt';
+    if (!hasStarted) return <div className="page-loading">Preparing Practice Test...</div>;
+    if (!currentQuestion) return <div className="page-error">Error: Could not load the current question.</div>;
 
-    // Actions
-    onOptionSelect: (index: number, label: string) => void;
-    onToggleExplanation: (index: number) => void;
-    onToggleCrossOff: (index: number, label: string) => void;
-    onToggleMark: (index: number) => void;
-
-    passageContainerRef: React.RefObject<HTMLDivElement | null>;
-}
-
-const QuizContentArea: React.FC<QuizContentAreaProps> = ({
-    currentQuestion,
-    passageHtml,
-    highlightedHtml,
-    topicId,
-
-    questionIndex,
-    userAnswer,
-    crossedOffOptions,
-    timeSpent,
-    isSubmitted,
-    isReviewMode,
-    isTemporarilyRevealed,
-    isPracticeTestActive,
-    showExplanation,
-
-    hasStarted,
-
-    onOptionSelect,
-    onToggleExplanation,
-    onToggleCrossOff,
-    onToggleMark,
-
-    passageContainerRef
-}) => {
-
-    if (!hasStarted) {
-        return <div className="page-loading">Preparing Practice Test...</div>;
-    }
-
-    if (!currentQuestion) {
-        return <div className="page-error">Error: Could not load the current question.</div>;
-    }
-
+    // Logic extraction
+    const topicId = quizIdentifiers?.topicId || '';
+    const sectionType = quizIdentifiers?.sectionType || 'practice';
+    const isPractice = sectionType === 'practice';
+    const isReviewMode = status === 'reviewing_attempt';
+    
+    // Visual Flags
+    const isSubmitted = (isPractice && !!attempt.submittedAnswers?.[questionIndex]) || 
+                        (!isPractice && (!!attempt.submittedAnswers?.[questionIndex] || isReviewMode || !!uiState.tempReveal[questionIndex]));
+    const isTemporarilyRevealed = !!uiState.tempReveal[questionIndex];
+    const isPracticeTestActive = isPractice && !isReviewMode;
+    const showExplanation = !!uiState.showExplanation[questionIndex];
+    
+    // Data extraction
+    const passageHtml = currentQuestion.passage?.html_content;
     const passageContentKey = passageHtml && currentQuestion.category ? `passage_${currentQuestion.category}` : null;
-    const EMPTY_SET = new Set<string>();
-    const currentCrossedOffForCard = crossedOffOptions[questionIndex] || EMPTY_SET;
+    const userAnswer = attempt.userAnswers[questionIndex];
+    const currentCrossedOffForCard = attempt.crossedOffOptions[questionIndex] || new Set<string>();
+    const timeSpent = attempt.userTimeSpent[questionIndex];
+    const highlightedHtml = attempt.highlightedHtml;
 
     return (
         <>
@@ -129,10 +109,12 @@ const QuizContentArea: React.FC<QuizContentAreaProps> = ({
                     showExplanation={showExplanation}
                     userTimeSpentOnQuestion={timeSpent}
                     highlightedHtml={highlightedHtml}
-                    onOptionSelect={onOptionSelect}
-                    onToggleExplanation={onToggleExplanation}
-                    onToggleCrossOff={onToggleCrossOff}
-                    onToggleMark={onToggleMark}
+                    
+                    // Actions mapped directly from Context
+                    onOptionSelect={actions.selectOption}
+                    onToggleExplanation={actions.toggleExplanation}
+                    onToggleCrossOff={actions.toggleCrossOff}
+                    onToggleMark={actions.toggleMark}
                 />
             </div>
             

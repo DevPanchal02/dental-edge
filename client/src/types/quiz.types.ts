@@ -69,8 +69,6 @@ export interface Question {
 /**
  * Represents the persistent state of a user's quiz session.
  * This structure is serialized to Firestore and LocalStorage.
- * 
- * NOTE: This uses Arrays for 'crossedOffOptions' for JSON compatibility.
  */
 export interface QuizAttempt {
     /** Unique identifier for the attempt (null if not yet persisted to server). */
@@ -130,7 +128,7 @@ export interface QuizAttempt {
     /** Snapshot of the timer state for persistence. */
     timer: {
         value: number;
-        isActive: boolean;
+        // REMOVED: isActive is a runtime state, not a persistence state.
         isCountdown: boolean;
         initialDuration: number;
     };
@@ -139,7 +137,6 @@ export interface QuizAttempt {
 /**
  * The "Internal/Runtime" shape (Sets).
  * Used for React State and Hooks for performance (O(1) lookups).
- * It mirrors QuizAttempt exactly, but overrides 'crossedOffOptions' to use Sets.
  */
 export interface QuizAttemptState extends Omit<QuizAttempt, 'crossedOffOptions'> {
     crossedOffOptions: Record<number, Set<string>>;
@@ -147,7 +144,6 @@ export interface QuizAttemptState extends Omit<QuizAttempt, 'crossedOffOptions'>
 
 /**
  * Represents the final summary object stored in LocalStorage after a quiz is completed.
- * This is distinct from QuizAttempt because it contains derived data like `correctIndices`.
  */
 export interface QuizResult {
     score: number;

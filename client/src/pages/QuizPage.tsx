@@ -2,7 +2,8 @@ import React, { useMemo, useRef, useEffect } from 'react';
 import { useParams, useLocation, useNavigate } from 'react-router-dom';
 import { useQuizEngine } from '../hooks/useQuizEngine';
 import { useLayout } from '../context/LayoutContext';
-import { QuizTimerProvider, useQuizTimer } from '../context/QuizTimerContext'; // New Context
+import { QuizTimerProvider, useQuizTimer } from '../context/QuizTimerContext';
+import { QuizProvider } from '../context/QuizContext';
 import { formatDisplayName } from '../services/loader';
 
 // Components
@@ -17,6 +18,7 @@ import PracticeTestOptions from '../components/PracticeTestOptions';
 import RegistrationPromptModal from '../components/RegistrationPromptModal';
 import Exhibit from '../components/Exhibit';
 import TextHighlighterWrapper from '../components/TextHighlighterWrapper';
+import QuizPersistence from '../components/quiz/QuizPersistence'; // NEW Import
 
 // Types
 import { SectionType } from '../types/content.types';
@@ -25,8 +27,7 @@ import { SectionType } from '../types/content.types';
  * Headless Component: QuizTimerSync
  * 
  * Acts as a bridge between the 'QuizEngine' (Data Source) and 'QuizTimerContext' (UI State).
- * It ensures the timer initializes correctly when a quiz is loaded or resumed, 
- * without forcing the parent to manage context logic imperatively.
+ * It ensures the timer initializes correctly when a quiz is loaded or resumed.
  */
 const QuizTimerSync: React.FC<{
     status: string;
@@ -38,39 +39,22 @@ const QuizTimerSync: React.FC<{
     const hasInitialized = useRef(false);
 
     useEffect(() => {
-        // Trigger initialization only when the engine signals 'active' state for the first time
         if ((status === 'active' || status === 'reviewing_attempt') && !hasInitialized.current) {
             const mode = isCountdown ? 'countdown' : 'countup';
-            
-            // 1. Configure the timer parameters
             initializeTimer(initialDuration, mode);
-
-            // 2. Sync to the exact current value (crucial for resuming attempts)
-            //    For countdown: remaining = timerValue
-            //    For countup: elapsed = timerValue
             if (isCountdown) {
                 syncTimer(timerValue, initialDuration - timerValue);
             } else {
                 syncTimer(initialDuration - timerValue, timerValue);
             }
-
-            // 3. Begin the independent tick cycle
-            if (status === 'active') {
-                startTimer();
-            }
-            
+            if (status === 'active') startTimer();
             hasInitialized.current = true;
         }
-
-        // Halt the timer if the quiz ends or errors out
-        if (status === 'completed' || status === 'error') {
-            stopTimer();
-        }
+        if (status === 'completed' || status === 'error') stopTimer();
     }, [status, timerValue, initialDuration, isCountdown, initializeTimer, startTimer, stopTimer, syncTimer]);
 
-    return null; // This component renders nothing visible
+    return null;
 };
-
 
 interface QuizPageProps {
     isPreviewMode?: boolean;
@@ -78,11 +62,6 @@ interface QuizPageProps {
 
 /**
  * The Root Orchestrator for the Quiz Experience.
- * 
- * Architecture Note:
- * This component wraps the experience in the QuizTimerProvider to isolate high-frequency 
- * timer updates. It delegates DOM interactions to TextHighlighterWrapper and 
- * business logic to useQuizEngine.
  */
 const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     const { topicId = '', sectionType = 'practice', quizId = '' } = useParams<{ 
@@ -97,27 +76,19 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     const reviewAttemptId = (location.state as { attemptId?: string })?.attemptId;
 
     // Initialize the Business Logic Engine
-    const { state, actions } = useQuizEngine(
+    const quizEngine = useQuizEngine(
         topicId, 
         sectionType as SectionType, 
         quizId, 
         reviewAttemptId, 
         isPreviewMode
     );
+    const { state, actions } = quizEngine;
     
     const { isSidebarEffectivelyPinned } = useLayout();
 
-    // Stable Ref: Prevents Passage re-renders during parent updates
-    const passageRef = useRef<HTMLDivElement>(null);
-    
-    // Memoized Data: Isolates the heavy question object
-    const currentQuestion = useMemo(() => {
-        return state.quizContent.questions[state.attempt.currentQuestionIndex] || null;
-    }, [state.quizContent.questions, state.attempt.currentQuestionIndex]);
-
-    // Computed Props: Ensures referential stability for child components
+    // Computed Props Strategy
     const uiProps = useMemo(() => {
-        const isPractice = state.quizIdentifiers?.sectionType === 'practice';
         const isReviewing = state.status === 'reviewing_attempt';
         const currentIndex = state.attempt.currentQuestionIndex;
         const displayQuestionCount = isPreviewMode ? 210 : state.quizContent.questions.length;
@@ -142,49 +113,10 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                 isPreviewMode: isPreviewMode,
             },
             
-            contentAreaProps: {
-                currentQuestion: currentQuestion,
-                passageHtml: currentQuestion?.passage?.html_content,
-                highlightedHtml: state.attempt.highlightedHtml, 
-                topicId: topicId,
-                questionIndex: currentIndex,
-                userAnswer: state.attempt.userAnswers[currentIndex],
-                crossedOffOptions: state.attempt.crossedOffOptions,
-                isMarked: !!state.attempt.markedQuestions[currentIndex],
-                isSubmitted: (isPractice && !!state.attempt.submittedAnswers?.[currentIndex]) || (!isPractice && (!!state.attempt.submittedAnswers?.[currentIndex] || isReviewing || !!state.uiState.tempReveal[currentIndex])),
-                isReviewMode: isReviewing,
-                isTemporarilyRevealed: !!state.uiState.tempReveal[currentIndex],
-                isPracticeTestActive: isPractice && !isReviewing,
-                showExplanation: !!state.uiState.showExplanation[currentIndex],
-                timeSpent: state.attempt.userTimeSpent[currentIndex],
-                // Timer props removed; handled by Context/TimerDisplay
-                hasStarted: state.status === 'active' || isReviewing,
-                onOptionSelect: actions.selectOption,
-                onToggleExplanation: actions.toggleExplanation,
-                onToggleCrossOff: actions.toggleCrossOff,
-                onToggleMark: actions.toggleMark,
-                passageContainerRef: passageRef,
-            },
-            
-            footerProps: {
-                onNext: actions.nextQuestion,
-                onPrevious: actions.previousQuestion,
-                onMark: actions.toggleMark,
-                onReview: actions.openReviewSummary,
-                onToggleExhibit: actions.toggleExhibit,
-                onToggleSolution: actions.toggleSolution,
-                isFirstQuestion: currentIndex === 0,
-                isLastQuestion: currentIndex === state.quizContent.questions.length - 1,
-                isMarked: !!state.attempt.markedQuestions[currentIndex],
-                isSaving: state.uiState.isSaving,
-                isReviewMode: isReviewing,
-                hasStarted: state.status === 'active' || isReviewing,
-                showExhibitButton: topicId === 'chemistry',
-                showSolutionButton: state.quizIdentifiers?.sectionType === 'qbank',
-                solutionVisible: !!state.uiState.tempReveal[currentIndex],
-            },
+            showExhibitButton: topicId === 'chemistry',
+            showSolutionButton: state.quizIdentifiers?.sectionType === 'qbank',
         };
-    }, [state, actions, isSidebarEffectivelyPinned, topicId, sectionType, quizId, isPreviewMode, currentQuestion]);
+    }, [state.status, state.attempt.currentQuestionIndex, state.quizContent.questions.length, state.quizContent.metadata, state.quizIdentifiers, isSidebarEffectivelyPinned, topicId, sectionType, quizId, isPreviewMode]);
 
     // --- Loading & Error States ---
 
@@ -200,8 +132,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
         />;
     }
     
-    // --- Modal States (Pre-Context) ---
-    // These block the main UI, so we render them before the Provider setup
+    // --- Modals ---
     
     if (state.status === 'prompting_options') {
         return (
@@ -230,65 +161,70 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
         );
     }
     
-    // --- Main Render (Protected by Timer Context) ---
+    // --- Main Render ---
 
     return (
-        <QuizTimerProvider>
-            {/* The Sync component bridges the Engine state to the Timer Context */}
-            <QuizTimerSync 
-                status={state.status}
-                timerValue={state.timer.value}
-                initialDuration={state.timer.initialDuration}
-                isCountdown={state.timer.isCountdown}
-            />
+        <QuizProvider value={quizEngine}>
+            <QuizTimerProvider>
+                {/* 1. Sync Engine -> Timer Context */}
+                <QuizTimerSync 
+                    status={state.status}
+                    timerValue={state.timerSnapshot.value}
+                    initialDuration={state.timerSnapshot.initialDuration}
+                    isCountdown={state.timerSnapshot.isCountdown}
+                />
 
-            <TextHighlighterWrapper
-                className={`quiz-page-container ${isPreviewMode ? 'preview-mode' : ''}`}
-                onHighlightUpdate={actions.updateHighlight}
-                isEnabled={!state.uiState.isSaving && !state.uiState.isNavActionInProgress}
-            >
-                <div style={uiProps.containerStyle}>
-                    
-                    {state.status === 'reviewing_summary' ? (
-                        <QuizReviewSummary
-                            allQuizQuestions={state.quizContent.questions}
-                            quizMetadata={state.quizContent.metadata}
-                            markedQuestions={state.attempt.markedQuestions}
-                            submittedAnswers={state.attempt.submittedAnswers || {}}
-                            userAnswers={state.attempt.userAnswers}
-                            currentQuestionIndexBeforeReview={state.attempt.currentQuestionIndex}
-                            topicId={topicId}
-                            onCloseReviewSummary={actions.closeReviewSummary}
-                            onJumpToQuestionInQuiz={actions.jumpToQuestion}
-                            onEndQuiz={actions.finalizeAttempt}
-                            dynamicFooterStyle={uiProps.footerStyle}
-                            isNavActionInProgress={state.uiState.isSaving}
-                        />
-                    ) : (
-                        (state.status === 'active' || state.status === 'reviewing_attempt') && (
-                            <>
-                                <QuizHeader {...uiProps.headerProps} />
-                                
-                                <QuizContentArea 
-                                    {...uiProps.contentAreaProps} 
-                                    passageContainerRef={passageRef}
-                                />
-                                
-                                <QuizFooter 
-                                    {...uiProps.footerProps} 
-                                    dynamicStyle={uiProps.footerStyle} 
-                                />
-                                
-                                <Exhibit 
-                                    isVisible={state.uiState.isExhibitVisible} 
-                                    onClose={actions.toggleExhibit} 
-                                />
-                            </>
-                        )
-                    )}
-                </div>
-            </TextHighlighterWrapper>
-        </QuizTimerProvider>
+                {/* 2. Sync Timer Context -> Database (Auto-Save) */}
+                <QuizPersistence />
+
+                {/* 3. Render UI */}
+                <TextHighlighterWrapper
+                    className={`quiz-page-container ${isPreviewMode ? 'preview-mode' : ''}`}
+                    onHighlightUpdate={actions.updateHighlight}
+                    isEnabled={!state.uiState.isSaving && !state.uiState.isNavActionInProgress}
+                >
+                    <div style={uiProps.containerStyle}>
+                        
+                        {state.status === 'reviewing_summary' ? (
+                            <QuizReviewSummary
+                                allQuizQuestions={state.quizContent.questions}
+                                quizMetadata={state.quizContent.metadata}
+                                markedQuestions={state.attempt.markedQuestions}
+                                submittedAnswers={state.attempt.submittedAnswers || {}}
+                                userAnswers={state.attempt.userAnswers}
+                                currentQuestionIndexBeforeReview={state.attempt.currentQuestionIndex}
+                                topicId={topicId}
+                                onCloseReviewSummary={actions.closeReviewSummary}
+                                onJumpToQuestionInQuiz={actions.jumpToQuestion}
+                                onEndQuiz={actions.finalizeAttempt}
+                                dynamicFooterStyle={uiProps.footerStyle}
+                                isNavActionInProgress={state.uiState.isSaving}
+                            />
+                        ) : (
+                            (state.status === 'active' || state.status === 'reviewing_attempt') && (
+                                <>
+                                    <QuizHeader {...uiProps.headerProps} />
+                                    
+                                    <QuizContentArea 
+                                    />
+                                    
+                                    <QuizFooter 
+                                        dynamicStyle={uiProps.footerStyle}
+                                        showExhibitButton={uiProps.showExhibitButton}
+                                        showSolutionButton={uiProps.showSolutionButton}
+                                    />
+                                    
+                                    <Exhibit 
+                                        isVisible={state.uiState.isExhibitVisible} 
+                                        onClose={actions.toggleExhibit} 
+                                    />
+                                </>
+                            )
+                        )}
+                    </div>
+                </TextHighlighterWrapper>
+            </QuizTimerProvider>
+        </QuizProvider>
     );
 }
 

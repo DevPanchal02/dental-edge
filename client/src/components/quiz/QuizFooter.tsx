@@ -1,73 +1,51 @@
 import React from 'react';
+import { useQuiz } from '../../context/QuizContext';
 import '../../styles/QuizPage.css';
 
 interface QuizFooterProps {
-    // Action Handlers - Strictly typed as void functions to indicate side-effects
-    onNext: () => void;
-    onPrevious: () => void;
-    onMark: () => void;
-    onReview: () => void;
-    onToggleExhibit: () => void;
-    onToggleSolution: () => void;
-
-    // State Flags - Boolean flags control the visual state machine
-    isFirstQuestion: boolean;
-    isLastQuestion: boolean;
-    isMarked: boolean;
-    isSaving: boolean;
-    isReviewMode: boolean;
-    hasStarted: boolean;
+    dynamicStyle: React.CSSProperties;
     
-    // Feature Flags - derived from Topic/Quiz metadata
+    // Feature flags can still be passed if they are purely presentational overrides,
+    // but typically we can derive them from state too. For now, we keep them to match
+    // the specific logic in QuizPage's useMemo until we refactor that logic into the Context.
     showExhibitButton: boolean;
     showSolutionButton: boolean;
-    solutionVisible: boolean;
-
-    // Layout - React.CSSProperties ensures type safety for inline styles (e.g., 'left' must be string/number)
-    dynamicStyle: React.CSSProperties;
 }
 
 const QuizFooter: React.FC<QuizFooterProps> = ({
-    onNext,
-    onPrevious,
-    onMark,
-    onReview,
-    onToggleExhibit,
-    onToggleSolution,
-    isFirstQuestion,
-    isLastQuestion,
-    isMarked,
-    isSaving,
-    isReviewMode,
-    hasStarted,
+    dynamicStyle,
     showExhibitButton,
     showSolutionButton,
-    solutionVisible,
-    dynamicStyle,
 }) => {
-    
+    const { state, actions } = useQuiz();
+    const { attempt, uiState, quizContent, status } = state;
+
+    const currentIndex = attempt.currentQuestionIndex;
+    const isFirstQuestion = currentIndex === 0;
+    const isLastQuestion = currentIndex === (quizContent.questions.length - 1);
+    const isMarked = !!attempt.markedQuestions[currentIndex];
+    const isReviewMode = status === 'reviewing_attempt';
+    const hasStarted = status === 'active' || isReviewMode;
+    const isSaving = uiState.isSaving;
+    const solutionVisible = !!uiState.tempReveal[currentIndex];
+
     // Abstraction for the primary action button.
-    // In Review Mode, "Next" contextually becomes "Return to Results".
     const handleMainAction = () => {
-        onNext();
+        actions.nextQuestion();
     };
 
     return (
         <div className="quiz-navigation" style={dynamicStyle}>
             <div className="nav-group-left">
-                {/* 
-                    We disable controls during 'isSaving' to prevent race conditions 
-                    where a user might navigate before the previous answer is persisted.
-                */}
                 <button
-                    onClick={onPrevious}
+                    onClick={actions.previousQuestion}
                     disabled={isFirstQuestion || !hasStarted || isSaving}
                     className="nav-button prev-button"
                 >
                     Previous
                 </button>
                 {showSolutionButton && !isReviewMode && (
-                    <button onClick={onToggleSolution} className="nav-button solution-toggle-button-bottom">
+                    <button onClick={actions.toggleSolution} className="nav-button solution-toggle-button-bottom">
                         {solutionVisible ? "Hide Solution" : "'S' Solution"}
                     </button>
                 )}
@@ -85,7 +63,7 @@ const QuizFooter: React.FC<QuizFooterProps> = ({
                 {!isReviewMode && hasStarted && (
                     <>
                         <button
-                            onClick={onMark}
+                            onClick={actions.toggleMark}
                             className={`mark-button-nav ${isMarked ? 'marked' : ''}`}
                             title={isMarked ? "Unmark this question" : "Mark for review"}
                             disabled={isSaving}
@@ -94,12 +72,12 @@ const QuizFooter: React.FC<QuizFooterProps> = ({
                         </button>
                         
                         {showExhibitButton && (
-                            <button onClick={onToggleExhibit} className="nav-button exhibit-button">
+                            <button onClick={actions.toggleExhibit} className="nav-button exhibit-button">
                                 Exhibit
                             </button>
                         )}
 
-                        <button onClick={onReview} className="nav-button review-button-bottom" disabled={isSaving}>
+                        <button onClick={actions.openReviewSummary} className="nav-button review-button-bottom" disabled={isSaving}>
                             {isSaving ? 'Saving...' : 'Review'}
                         </button>
                     </>

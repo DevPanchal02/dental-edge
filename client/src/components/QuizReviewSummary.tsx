@@ -1,7 +1,8 @@
 import React from 'react';
 import '../styles/QuizReviewSummary.css';
 import { Question, QuizMetadata } from '../types/quiz.types';
-import TimerDisplay from './quiz/TimerDisplay'; 
+import TimerDisplay from './quiz/TimerDisplay';
+import { useQuizTimer } from '../context/QuizTimerContext'; // Import Hook
 
 interface QuizReviewSummaryProps {
     allQuizQuestions: Question[];
@@ -14,7 +15,9 @@ interface QuizReviewSummaryProps {
     currentQuestionIndexBeforeReview: number;
     onCloseReviewSummary: () => void;
     onJumpToQuestionInQuiz: (index: number) => void;
-    onEndQuiz: () => void;
+    
+    // UPDATED: Now expects the timer value to be passed back
+    onEndQuiz: (finalTime: number) => void;
     
     dynamicFooterStyle: React.CSSProperties;
     isNavActionInProgress: boolean;
@@ -32,6 +35,8 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
     dynamicFooterStyle,
     isNavActionInProgress,
 }) => {
+    // Access the Timer Context directly
+    const { timerState } = useQuizTimer();
 
     const handleJumpFromTable = (index: number) => {
         onJumpToQuestionInQuiz(index); 
@@ -68,6 +73,14 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
         }
     };
 
+    // NEW: Wrapper handler to inject the timer value
+    const handleEndQuizClick = () => {
+        const value = timerState.mode === 'countdown' 
+            ? timerState.secondsRemaining 
+            : timerState.secondsElapsed;
+        
+        onEndQuiz(value);
+    };
 
     return (
         <div className="quiz-review-summary-container">
@@ -83,7 +96,6 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
                     <h1 className="qrs-title">{quizMetadata?.fullNameForDisplay || quizMetadata?.name || 'Review Quiz'}</h1>
                 </div>
                 <div className="qrs-timer-wrapper">
-                    {/* Render the context-aware timer directly */}
                     <TimerDisplay className="qrs-timer-display" />
                 </div>
             </div>
@@ -177,7 +189,7 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
                 </div>
                 <div className="qrs-footer-group-right">
                     <button
-                        onClick={onEndQuiz} 
+                        onClick={handleEndQuizClick} 
                         className="qrs-footer-button end-quiz"
                         disabled={isNavActionInProgress}
                     >

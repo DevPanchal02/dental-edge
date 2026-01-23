@@ -24,9 +24,10 @@ export interface QuizState {
     // Dynamic user progress (uses Sets for O(1) lookup performance)
     attempt: QuizAttemptState;
 
-    timer: {
+    // This now represents the "Snapshot" of the timer for persistence/initialization.
+    // It does NOT update every second.
+    timerSnapshot: {
         value: number;
-        isActive: boolean;
         isCountdown: boolean;
         initialDuration: number;
     };
@@ -51,13 +52,14 @@ export type QuizAction =
     | { type: 'START_PREVIEW'; payload: { settings: { prometricDelay: boolean; additionalTime: boolean }; duration: number } }
     | { type: 'PROMPT_REGISTRATION' }
     | { type: 'CLOSE_REGISTRATION_PROMPT' }
-    // FIX: Replaced 'attempt: any' with 'attempt: Partial<QuizAttemptState>'
     | { type: 'PROMPT_RESUME'; payload: { attempt: Partial<QuizAttemptState>; questions: Question[]; metadata: QuizMetadata } }
     | { type: 'SET_DATA_AND_START'; payload: { questions: Question[]; metadata: QuizMetadata; attemptId: string; settings?: { prometricDelay: boolean; additionalTime: boolean }; initialDuration?: number } }
     | { type: 'RESUME_ATTEMPT' }
     | { type: 'RESET_ATTEMPT'; payload: { newAttemptId: string } }
-    | { type: 'TIMER_TICK' }
-    | { type: 'STOP_TIMER' }
+    
+    // NEW: Updates the snapshot for saving, does not drive UI
+    | { type: 'SYNC_TIMER_SNAPSHOT'; payload: { value: number } }
+    
     | { type: 'SUBMIT_CURRENT_ANSWER' }
     | { type: 'UPDATE_TIME_SPENT'; payload: { questionIndex: number; time: number } }
     | { type: 'SELECT_OPTION'; payload: { questionIndex: number; optionLabel: string } }
@@ -90,7 +92,8 @@ export const createInitialAttempt = (topicId: string = '', sectionType: SectionT
     highlightedHtml: {},
     practiceTestSettings: { prometricDelay: false, additionalTime: false },
     submittedAnswers: {},
-    timer: { value: 0, isActive: false, isCountdown: false, initialDuration: 0 }
+    // Timer is not stored in attempt state directly anymore, but handled via snapshot in root state
+    timer: { value: 0, isCountdown: false, initialDuration: 0 }
 });
 
 export const initialState: QuizState = {
@@ -98,7 +101,7 @@ export const initialState: QuizState = {
     quizIdentifiers: null,
     quizContent: { metadata: null, questions: [] },
     attempt: createInitialAttempt(),
-    timer: { value: 0, isActive: false, isCountdown: false, initialDuration: 0 },
+    timerSnapshot: { value: 0, isCountdown: false, initialDuration: 0 },
     uiState: {
         showExplanation: {},
         tempReveal: {},
@@ -139,11 +142,9 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     id: `preview-${Date.now()}`,
                     practiceTestSettings: action.payload.settings,
                 },
-                timer: {
-                    ...state.timer,
-                    isActive: true,
-                    isCountdown: true,
+                timerSnapshot: {
                     value: action.payload.duration,
+                    isCountdown: true,
                     initialDuration: action.payload.duration,
                 }
             };
@@ -152,19 +153,17 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             return {
                 ...state,
                 status: 'prompting_registration',
-                timer: { ...state.timer, isActive: false },
             };
 
         case 'CLOSE_REGISTRATION_PROMPT':
              return {
                 ...state,
                 status: 'active',
-                timer: { ...state.timer, isActive: true },
              };
 
         case 'PROMPT_RESUME': {
             // Ensure timer has valid defaults if missing from loaded data
-            const loadedTimer = action.payload.attempt.timer || initialState.timer;
+            const loadedTimer = action.payload.attempt.timer || initialState.timerSnapshot;
             return {
                 ...state,
                 status: 'prompting_resume',
@@ -174,7 +173,11 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     // Ensure highlightedHtml is at least an empty object if undefined
                     highlightedHtml: action.payload.attempt.highlightedHtml || {},
                 },
-                timer: loadedTimer,
+                timerSnapshot: {
+                    value: loadedTimer.value,
+                    isCountdown: loadedTimer.isCountdown,
+                    initialDuration: loadedTimer.initialDuration
+                },
                 quizContent: {
                     questions: action.payload.questions,
                     metadata: action.payload.metadata,
@@ -202,9 +205,8 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     quizId: state.quizIdentifiers?.quizId || '',
                     practiceTestSettings: action.payload.settings || { prometricDelay: false, additionalTime: false },
                 },
-                timer: { 
+                timerSnapshot: { 
                     value: startTimerValue, 
-                    isActive: true, 
                     isCountdown, 
                     initialDuration: startTimerValue 
                 }
@@ -215,10 +217,6 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             return {
                 ...state,
                 status: state.quizIdentifiers?.reviewAttemptId ? 'reviewing_attempt' : 'active',
-                timer: { 
-                    ...state.timer, 
-                    isActive: !state.quizIdentifiers?.reviewAttemptId 
-                }
             };
 
         case 'RESET_ATTEMPT':
@@ -232,22 +230,16 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     sectionType: state.quizIdentifiers?.sectionType || 'practice',
                     quizId: state.quizIdentifiers?.quizId || '',
                 },
-                timer: { ...initialState.timer, isActive: true }
+                timerSnapshot: { ...initialState.timerSnapshot }
             };
             
-        case 'TIMER_TICK':
+        case 'SYNC_TIMER_SNAPSHOT':
             return {
                 ...state,
-                timer: {
-                    ...state.timer,
-                    value: state.timer.isCountdown ? state.timer.value - 1 : state.timer.value + 1,
-                },
-            };
-            
-        case 'STOP_TIMER':
-            return {
-                ...state,
-                timer: { ...state.timer, isActive: false },
+                timerSnapshot: {
+                    ...state.timerSnapshot,
+                    value: action.payload.value
+                }
             };
 
         case 'SUBMIT_CURRENT_ANSWER': {
@@ -407,8 +399,7 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
         case 'CLOSE_REVIEW_SUMMARY':
             return { 
                 ...state, 
-                status: 'active', 
-                timer: { ...state.timer, isActive: true } 
+                status: 'active'
             };
 
         case 'SET_IS_SAVING':

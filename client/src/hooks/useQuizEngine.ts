@@ -30,86 +30,57 @@ export const useQuizEngine = (
     const { userProfile } = useAuth();
     const navigate = useNavigate();
     
-    // Refs for Timing and Autosave
     const questionStartTimeRef = useRef<number | null>(null);
-    const timerIntervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
-    const saveProgressToServerRef = useRef<(() => Promise<void>) | undefined>(undefined);
 
-    // 1. Initialize Data (Delegated to sub-hook)
+    // 1. Initialize Data
     useQuizInitialization({
         topicId, sectionType, quizId, reviewAttemptId, isPreviewMode, dispatch, currentUser: userProfile, userProfile
     });
 
-    // 2. Timer Logic
+    // 2. Question Timing (Time spent per question, NOT global timer)
     useEffect(() => {
         if (state.status === 'active') {
             questionStartTimeRef.current = Date.now();
         }
     }, [state.status, state.attempt.currentQuestionIndex]);
 
-    useEffect(() => {
-        if (state.timer.isActive && (state.status === 'active' || state.status === 'reviewing_summary')) {
-            timerIntervalRef.current = setInterval(() => {
-                dispatch({ type: 'TIMER_TICK' });
-            }, 1000);
-        } else {
-            if (timerIntervalRef.current) clearInterval(timerIntervalRef.current);
-        }
-        return () => { if (timerIntervalRef.current) clearInterval(timerIntervalRef.current); };
-    }, [state.timer.isActive, state.status]);
-
-    // 3. Server Auto-Save Logic (Critical for Paid Users)
-    const saveProgressToServer = useCallback(async () => {
+    // 3. Persistence Actions (Now require timerValue injection)
+    
+    const saveProgress = useCallback(async (currentTimerValue: number) => {
         const isFreeUser = userProfile?.tier === 'free';
         
-        if (isPreviewMode || isFreeUser || !((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id)) {
-            return;
-        }
+        // Don't save if preview, free user, or no attempt ID
+        if (isPreviewMode || isFreeUser || !state.attempt.id) return;
 
         dispatch({ type: 'SET_IS_SAVING', payload: true });
         
-        // NO 'as any' needed! 
-        // state.attempt matches the flexible QuizAttemptInput type.
-        // serializableAttempt is strictly typed as QuizAttempt (Arrays).
-        const serializableAttempt = serializeAttemptForApi(state.attempt);
+        // Sync the snapshot first
+        const timerData = { 
+            ...state.timerSnapshot, 
+            value: currentTimerValue
+            // isActive removed from type definition
+        };
 
+        const serializableAttempt = serializeAttemptForApi(state.attempt);
+        const fullDataToSave = { 
+            ...serializableAttempt, 
+            timer: timerData 
+        };
+
+        // Save to Local Storage
+        const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
+        saveToLocalStorage(localKey, fullDataToSave);
+
+        // Save to Server
         try {
-            await saveInProgressAttempt({ 
-                ...serializableAttempt, 
-                timer: state.timer 
-            });
+            await saveInProgressAttempt(fullDataToSave);
         } catch (e) {
             console.error("Auto-save failed", e);
         } finally {
             setTimeout(() => dispatch({ type: 'SET_IS_SAVING', payload: false }), 500);
         }
 
-    }, [state.attempt, state.timer, state.status, isPreviewMode, userProfile]);
-
-    useEffect(() => {
-        saveProgressToServerRef.current = saveProgressToServer;
-    }, [saveProgressToServer]);
-
-    useEffect(() => {
-        let autoSaveInterval: ReturnType<typeof setInterval>;
-        if (state.status === 'active' && state.attempt.id && !isPreviewMode) {
-            autoSaveInterval = setInterval(() => {
-                if (saveProgressToServerRef.current) {
-                    saveProgressToServerRef.current();
-                }
-            }, 60000);
-        }
-        return () => clearInterval(autoSaveInterval);
-    }, [state.status, state.attempt.id, isPreviewMode]);
-
-    // 4. Local Storage Sync
-    useEffect(() => {
-        if ((state.status === 'active' || state.status === 'reviewing_summary') && state.attempt.id && !isPreviewMode) {
-            const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
-            const dataToSave = { ...state.attempt, timer: state.timer };
-            saveToLocalStorage(localKey, dataToSave);
-        }
-    }, [state.attempt, state.timer, state.status, topicId, sectionType, quizId, isPreviewMode]);
+    }, [state.attempt, state.timerSnapshot, isPreviewMode, userProfile, topicId, sectionType, quizId]);
 
 
     // --- HELPER ACTIONS ---
@@ -156,7 +127,6 @@ export const useQuizEngine = (
         resumeAttempt: useCallback(() => dispatch({ type: 'RESUME_ATTEMPT' }), []),
         closeRegistrationPrompt: useCallback(() => dispatch({ type: 'CLOSE_REGISTRATION_PROMPT' }), []),
 
-        // --- Handle Start with Options ---
         startAttemptWithOptions: useCallback(async (settings: PracticeTestSettings) => {
             const baseMinutes = 60; 
             const modifier = settings.additionalTime ? 1.5 : 1.0;
@@ -169,7 +139,7 @@ export const useQuizEngine = (
 
             const isFreeUser = userProfile?.tier === 'free';
             const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
-            const timerData = { value: durationSeconds, isActive: true, isCountdown: true, initialDuration: durationSeconds };
+            const timerData = { value: durationSeconds, isCountdown: true, initialDuration: durationSeconds };
             
             let attemptId: string | undefined;
 
@@ -178,10 +148,7 @@ export const useQuizEngine = (
             } else {
                 try {
                     attemptId = await saveInProgressAttempt({ 
-                        topicId, 
-                        sectionType, 
-                        quizId, 
-                        status: 'active',
+                        topicId, sectionType, quizId, status: 'active',
                         practiceTestSettings: settings,
                         timer: timerData,
                         userAnswers: {}, markedQuestions: {}, crossedOffOptions: {}, userTimeSpent: {}
@@ -234,7 +201,6 @@ export const useQuizEngine = (
                 dispatch({ type: 'PROMPT_REGISTRATION' });
                 return;
             }
-
             const timeNow = Date.now();
             const startTime = questionStartTimeRef.current;
             if (startTime) {
@@ -242,13 +208,8 @@ export const useQuizEngine = (
                 dispatch({ type: 'UPDATE_TIME_SPENT', payload: { questionIndex: state.attempt.currentQuestionIndex, time: elapsedSeconds }});
             }
             questionStartTimeRef.current = null; 
-
             dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
             
-            if (saveProgressToServerRef.current) {
-                await saveProgressToServerRef.current();
-            }
-
             dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
         }, [isPreviewMode, state.attempt.currentQuestionIndex]),
         
@@ -273,7 +234,7 @@ export const useQuizEngine = (
                     }
                 });
             } else {
-                const timerData = { value: 0, isActive: false, isCountdown: false, initialDuration: 0 };
+                const timerData = { value: 0, isCountdown: false, initialDuration: 0 };
                 let newAttemptId: string | undefined;
 
                 if (isFreeUser) {
@@ -292,7 +253,7 @@ export const useQuizEngine = (
             }
         }, [state.attempt.id, topicId, sectionType, quizId, isPreviewMode, userProfile, state.quizContent]),
 
-        finalizeAttempt: useCallback(async () => {
+        finalizeAttempt: useCallback(async (finalTimerValue: number) => {
             if (isPreviewMode) {
                 navigate('/');
                 return;
@@ -302,12 +263,13 @@ export const useQuizEngine = (
                 const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
                 const resultsKey = getResultsKey(topicId, sectionType, quizId);
 
-                dispatch({ type: 'STOP_TIMER' });
                 dispatch({ type: 'SET_IS_SAVING', payload: true });
 
                 const serializableAttempt = serializeAttemptForApi(state.attempt);
+                // isActive removed from type, so we don't need to pass it
+                const timerData = { ...state.timerSnapshot, value: finalTimerValue };
 
-                const { score } = await finalizeQuizAttempt({ ...serializableAttempt, timer: state.timer });
+                const { score } = await finalizeQuizAttempt({ ...serializableAttempt, timer: timerData });
                 
                 const results: QuizResult = {
                     score,
@@ -337,7 +299,10 @@ export const useQuizEngine = (
             } catch (error) {
                 dispatch({ type: 'SET_ERROR', payload: error });
             }
-        }, [state.attempt, state.timer, state.quizContent, topicId, sectionType, quizId, navigate, isPreviewMode])
+        }, [state.attempt, state.timerSnapshot, state.quizContent, topicId, sectionType, quizId, navigate, isPreviewMode]),
+
+        // Expose save for the orchestrator
+        saveProgress
     };
 
     return { state, actions };
