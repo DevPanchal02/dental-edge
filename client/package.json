@@ -18,6 +18,7 @@
     "axios": "^1.8.4",
     "dompurify": "^3.3.1",
     "firebase": "^11.9.1",
+    "html-react-parser": "^5.2.12",
     "leva": "^0.10.0",
     "playwright": "^1.57.0",
     "react": "^19.0.0",

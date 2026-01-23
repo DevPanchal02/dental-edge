@@ -1,23 +1,7 @@
 import React from 'react';
 import '../styles/QuestionCard.css';
 import { Question, Option } from '../types/quiz.types';
-
-// Interface for the HTML Renderer.
-// We allow [key: string]: any to support data attributes like 'data-content-key' needed for the highlighter.
-interface HtmlRendererProps {
-    htmlString: string;
-    className?: string;
-    [key: string]: any; 
-}
-
-/**
- * Optimization: Memoized HTML Renderer.
- * Injecting HTML via dangerouslySetInnerHTML is expensive for the browser's layout engine.
- * React.memo ensures we only touch the DOM if the htmlString actually changes.
- */
-const HtmlRenderer = React.memo<HtmlRendererProps>(function HtmlRenderer({ htmlString, className, ...rest }) {
-  return <div className={className} dangerouslySetInnerHTML={{ __html: htmlString || '<p>Content missing.</p>' }} {...rest} />;
-});
+import SafeHtml from './SafeHtml';
 
 interface QuestionCardProps {
     questionData: Question | null;
@@ -150,9 +134,9 @@ function QuestionCard({
           <div className="question-content">
             <p className="question-number">Question {questionIndex + 1}</p>
             {/* Render Question Text with potential Highlights */}
-            <HtmlRenderer
+            <SafeHtml
               className="question-html-content"
-              htmlString={getDisplayHtml(question.html_content, `question_${questionIndex}`)}
+              html={getDisplayHtml(question.html_content, `question_${questionIndex}`)}
               data-content-key={`question_${questionIndex}`}
             />
           </div>
@@ -181,9 +165,9 @@ function QuestionCard({
                 />
                 <span className="option-label-text">
                     <span className="option-letter">{option.label}</span>
-                    <HtmlRenderer
+                    <SafeHtml
                       className="option-html-content"
-                      htmlString={getDisplayHtml(option.html_content, `option_${questionIndex}_${option.label}`)}
+                      html={getDisplayHtml(option.html_content, `option_${questionIndex}_${option.label}`)}
                       data-content-key={`option_${questionIndex}_${option.label}`}
                     />
                 </span>
@@ -208,9 +192,9 @@ function QuestionCard({
               <h3 className="explanation-title">Explanation</h3>
               <div className="explanation-content">
                 <p><strong>Correct Answer:</strong> {correct_answer_original_text}</p>
-                <HtmlRenderer
+                <SafeHtml
                   className="explanation-html-content"
-                  htmlString={getDisplayHtml(explanation.html_content, `explanation_${questionIndex}`)}
+                  html={getDisplayHtml(explanation.html_content, `explanation_${questionIndex}`)}
                   data-content-key={`explanation_${questionIndex}`}
                 />
               </div>

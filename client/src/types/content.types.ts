@@ -1,18 +1,12 @@
-export type SectionType = 'practice' | 'qbank';
+import { z } from 'zod';
+import { SectionTypeSchema, QuizItemSchema } from '../schemas/quiz.schemas';
+
+export type SectionType = z.infer<typeof SectionTypeSchema>;
 
 /**
  * Represents a specific test or question bank within a topic.
  */
-export interface QuizItem {
-    id: string;
-    name: string;
-    sectionType: SectionType;
-    storagePath?: string; // Optional: Only needed for internal loading logic
-    _sortOrder?: number;
-    
-    // For QBanks, they belong to a sub-category (e.g., "Gen Chem" inside Chemistry)
-    qbCategory?: string; 
-}
+export type QuizItem = z.infer<typeof QuizItemSchema>;
 
 /**
  * Represents the grouping of question banks (e.g., "General Chemistry").

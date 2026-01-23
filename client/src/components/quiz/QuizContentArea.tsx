@@ -3,9 +3,9 @@ import QuestionCard from '../QuestionCard';
 import TimerDisplay from './TimerDisplay';
 import { useQuiz } from '../../context/QuizContext';
 import '../../styles/QuizPage.css'; 
+import SafeHtml from '../SafeHtml';
 
 // --- Helper Component: MemoizedPassage ---
-// Keeps the heavy HTML passage from re-rendering unnecessarily
 interface MemoizedPassageProps {
     html: string | undefined;
     passageRef: React.RefObject<HTMLDivElement | null>;
@@ -20,18 +20,16 @@ const MemoizedPassage = React.memo<MemoizedPassageProps>(function MemoizedPassag
     const displayHtml = (contentKey && highlightedHtml && highlightedHtml[contentKey]) ? highlightedHtml[contentKey] : html;
     
     return (
-        <div 
+        <SafeHtml 
             className="passage-container" 
             ref={passageRef} 
-            dangerouslySetInnerHTML={{ __html: displayHtml }} 
+            html={displayHtml}
             data-content-key={contentKey}
         />
     );
 });
 
 /**
- * Smart Component: QuizContentArea
- * 
  * Responsibilities:
  * 1. Consumes QuizContext to get current question data.
  * 2. Determines visual states (review mode, submitted, etc.).
