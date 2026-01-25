@@ -1,6 +1,6 @@
 import { auth } from '../firebase';
 import { getFunctions, httpsCallable } from 'firebase/functions';
-import { QuizAttempt, Question, Option, QuestionAnalytics } from '../types/quiz.types';
+import { QuizAttempt, Question } from '../types/quiz.types';
 import { TopicSummary, TopicStructure } from '../types/content.types';
 
 // --- Firebase Cloud Functions Setup ---
@@ -11,13 +11,6 @@ interface CheckoutSessionResponse { id: string; }
 interface SaveAttemptResponse { attemptId: string; }
 interface FinalizeAttemptResponse { attemptId: string; score: number; }
 interface EmptyResponse { success: boolean; }
-
-// Type for the Analytics Data returned by the backend
-export interface AnalyticsDataPoint {
-    analytics: QuestionAnalytics;
-    category: string;
-    options: Pick<Option, 'label' | 'is_correct'>[];
-}
 
 // --- Callable Function Exports ---
 
@@ -162,7 +155,11 @@ export const fetchTopicStructure = async (topicId: string): Promise<TopicStructu
     }
 };
 
-export const fetchQuizData = async (storagePath: string, isPreview: boolean = false): Promise<Question[]> => {
+/**
+ * Fetches raw quiz data from the server.
+ * Returns 'unknown' because validation happens in the loader layer (Zod).
+ */
+export const fetchQuizData = async (storagePath: string, isPreview: boolean = false): Promise<unknown> => {
   try {
     const url = new URL(API.GET_QUIZ_DATA, window.location.origin);
     url.searchParams.append("storagePath", storagePath);
@@ -193,7 +190,6 @@ export const fetchQuizData = async (storagePath: string, isPreview: boolean = fa
       throw new Error(`API Error (getQuizData): ${response.status} ${response.statusText}`);
     }
 
-    // Return strictly typed Question[]
     return await response.json();
   } catch (error) {
     console.error(`Failed to fetch quiz data for path ${storagePath}:`, error);

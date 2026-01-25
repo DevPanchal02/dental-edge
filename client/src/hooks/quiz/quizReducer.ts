@@ -74,7 +74,8 @@ export type QuizAction =
     | { type: 'CLOSE_REVIEW_SUMMARY' }
     | { type: 'SET_IS_SAVING'; payload: boolean }
     | { type: 'FINALIZE_SUCCESS'; payload: { attemptId: string | null } }
-    | { type: 'SET_ERROR'; payload: any };
+    // STRICT TYPING: Payload is unknown to accommodate catch blocks, but normalized in reducer
+    | { type: 'SET_ERROR'; payload: unknown };
 
 // --- INITIALIZATION HELPERS ---
 
@@ -415,8 +416,16 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                 attempt: { ...state.attempt, id: action.payload.attemptId }
             };
 
-        case 'SET_ERROR':
-            return { ...state, status: 'error', error: action.payload };
+        case 'SET_ERROR': {
+            // Normalize unknown error to strictly Error object
+            const normalizedError = action.payload instanceof Error 
+                ? action.payload 
+                : typeof action.payload === 'string'
+                    ? new Error(action.payload)
+                    : new Error(String(action.payload) || 'An unknown error occurred');
+
+            return { ...state, status: 'error', error: normalizedError };
+        }
 
         default:
             return state;

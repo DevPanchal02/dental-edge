@@ -1,4 +1,5 @@
 import DOMPurify from 'dompurify';
+import { z } from 'zod';
 import {
   fetchTopics as apiFetchTopics,
   fetchTopicStructure,
@@ -7,26 +8,59 @@ import {
 import { auth } from '../firebase';
 import { TopicStructure, QuizItem } from '../types/content.types';
 import { Question, QuizMetadata } from '../types/quiz.types';
+import { QuestionSchema } from '../schemas/quiz.schemas';
 
-// We explicitly type the cache dictionary
+// --- Cache Definitions ---
 const topicStructureCache: Record<string, TopicStructure> = {};
 
+// --- Types for Incoming JSON Data ---
+// These interfaces describe the "loose" shape of data before it is sanitized and validated.
+// We use 'unknown' for fields to force strict checks before access.
+interface IncomingOption {
+    label?: unknown;
+    html_content?: unknown;
+    is_correct?: unknown;
+    percentage_selected?: unknown;
+}
+
+interface IncomingPassage {
+    html_content?: unknown;
+    id?: unknown;
+}
+
+interface IncomingExplanation {
+    html_content?: unknown;
+}
+
+interface IncomingQuestionItem {
+    id?: unknown;
+    question?: { html_content?: unknown };
+    options?: unknown; // Needs to be checked if array
+    explanation?: IncomingExplanation;
+    passage?: IncomingPassage;
+    analytics?: unknown;
+    category?: unknown;
+    correct_answer_original_text?: unknown;
+    error?: unknown;
+}
+
 // --- SECURITY: Configure DOMPurify ---
-// We allow specific tags and attributes to ensure quiz formatting stays intact
-// while stripping scripts, iframes (unless specifically allowed), and event handlers.
-const sanitizeHtml = (dirty: string | undefined): string => {
+const sanitizeHtml = (dirty: unknown): string => {
     if (!dirty || typeof dirty !== 'string') return '';
 
     return DOMPurify.sanitize(dirty, {
-        USE_PROFILES: { html: true }, // Only allow HTML, no SVG/MathML to reduce surface area
-        ADD_TAGS: ['img', 'table', 'tbody', 'tr', 'td', 'th', 'mark'], // Ensure these key tags are kept
-        ADD_ATTR: ['src', 'alt', 'class', 'style', 'data-content-key'], // Allow styling and your highlighter keys
+        USE_PROFILES: { html: true },
+        ADD_TAGS: ['img', 'table', 'tbody', 'tr', 'td', 'th', 'mark'],
+        ADD_ATTR: ['src', 'alt', 'class', 'style', 'data-content-key'],
     });
 };
 
-// Re-export fetchTopics with its type
+// Re-export fetchTopics
 export const fetchTopics = apiFetchTopics;
 
+/**
+ * Fetches and caches the hierarchical structure of a topic.
+ */
 export const fetchTopicData = async (topicId: string): Promise<TopicStructure> => {
   if (topicStructureCache[topicId]) {
     return topicStructureCache[topicId];
@@ -36,6 +70,9 @@ export const fetchTopicData = async (topicId: string): Promise<TopicStructure> =
   return structure;
 };
 
+/**
+ * Helper to traverse the TopicStructure and find a specific quiz.
+ */
 const findQuizInStructure = (topicData: TopicStructure | null, sectionType: string, quizId: string): QuizItem | null => {
   if (!topicData) return null;
   
@@ -47,7 +84,6 @@ const findQuizInStructure = (topicData: TopicStructure | null, sectionType: stri
     for (const categoryGroup of topicData.questionBanks) {
       const bank = categoryGroup.banks.find(b => b.id === quizId);
       if (bank) {
-        // We inject the category for display purposes, ensuring it fits the QuizItem type
         return { ...bank, qbCategory: categoryGroup.category };
       }
     }
@@ -55,9 +91,12 @@ const findQuizInStructure = (topicData: TopicStructure | null, sectionType: stri
   return null;
 };
 
-// --- REFACTORED getQuizData with SECURITY LAYER ---
+/**
+ * Main Data Loader
+ * strictly typed to avoid 'any' leakage.
+ */
 export const getQuizData = async (topicId: string, sectionType: string, quizId: string, isPreviewMode: boolean = false): Promise<Question[]> => {
-  // Determine if this is an unregistered preview request on the client-side
+  // Determine if this is an unregistered preview request
   const isPreview = isPreviewMode || (!auth.currentUser && topicId === 'biology' && sectionType === 'practice' && quizId === 'test-1');
 
   const topicData = await fetchTopicData(topicId);
@@ -67,60 +106,84 @@ export const getQuizData = async (topicId: string, sectionType: string, quizId: 
     throw new Error(`Quiz data could not be located for ${topicId}/${quizId}`);
   }
 
-  // fetchQuizData returns any[], so we cast/map it to strict Question[]
+  // Fetch raw data (unknown shape)
   const rawData = await fetchQuizData(quizMeta.storagePath, isPreview);
 
-  // Helper to ensure data format
-  let questionsArray: any[] = [];
+  // Normalize data: Ensure we have an array
+  let questionsArray: unknown[] = [];
+  
   if (Array.isArray(rawData)) {
       questionsArray = rawData;
-  } else if (rawData && typeof rawData === 'object' && 'questions' in rawData && Array.isArray((rawData as any).questions)) {
-      questionsArray = (rawData as any).questions;
+  } else if (rawData && typeof rawData === 'object' && 'questions' in rawData) {
+      // Safe cast because we checked 'questions' in rawData
+      const wrapper = rawData as { questions: unknown };
+      if (Array.isArray(wrapper.questions)) {
+          questionsArray = wrapper.questions;
+      }
   }
 
-  // Clean the data, SANITIZE HTML, and cast to Question type
-  return questionsArray.map((q: any) => {
-      // 1. Sanitize the Question Text
+  // Transformation & Sanitization Phase
+  const sanitizedQuestions = questionsArray.map((item: unknown) => {
+      // Type Guard: Ensure item is an object
+      if (!item || typeof item !== 'object') {
+          return {}; // Zod will catch this as invalid later
+      }
+
+      // Cast to our loose Incoming interface to allow safe property access
+      const q = item as IncomingQuestionItem;
+
+      // 1. Sanitize Question Text
       const sanitizedQuestionHtml = sanitizeHtml(q.question?.html_content);
 
       // 2. Sanitize Options
-      const sanitizedOptions = Array.isArray(q.options) 
-        ? q.options.map((opt: any) => ({
-            ...opt,
-            html_content: sanitizeHtml(opt.html_content)
-        }))
-        : [];
+      // We strictly check if options is an array before mapping
+      let sanitizedOptions: unknown[] = [];
+      
+      if (Array.isArray(q.options)) {
+          sanitizedOptions = q.options.map((opt: unknown) => {
+              if (!opt || typeof opt !== 'object') return {};
+              const incomingOpt = opt as IncomingOption;
+              return {
+                  ...incomingOpt,
+                  html_content: sanitizeHtml(incomingOpt.html_content)
+              };
+          });
+      }
 
       // 3. Sanitize Explanation
       const sanitizedExplanationHtml = sanitizeHtml(q.explanation?.html_content);
 
       // 4. Sanitize Passage (if exists)
       let sanitizedPassage = undefined;
-      if (q.passage && q.passage.html_content) {
-          // We also remove the specific artifacts you were targeting with regex before
-          let cleanHtml = sanitizeHtml(q.passage.html_content);
-          
-          // Remove legacy highlighter artifacts if they survived sanitization (class="highlighted")
-          // Note: DOMPurify might strip classes depending on config, but this regex is a safe double-check
-          cleanHtml = cleanHtml.replace(/<mark\s+[^>]*class="[^"]*highlighted[^"]*"[^>]*>([\s\S]*?)<\/mark>/gi, '$1');
-          
-          sanitizedPassage = {
-              ...q.passage,
-              html_content: cleanHtml
-          };
+      if (q.passage && typeof q.passage === 'object') {
+          const rawHtml = q.passage.html_content;
+          if (rawHtml) {
+              let cleanHtml = sanitizeHtml(rawHtml);
+              // Remove legacy highlighter artifacts
+              cleanHtml = cleanHtml.replace(/<mark\s+[^>]*class="[^"]*highlighted[^"]*"[^>]*>([\s\S]*?)<\/mark>/gi, '$1');
+              
+              sanitizedPassage = {
+                  ...q.passage,
+                  html_content: cleanHtml
+              };
+          }
       }
 
-      // Construct the safe Question object
-      const question: Question = { 
+      // Construct object for Zod validation
+      // We preserve properties like 'analytics' and 'category' if they exist
+      return { 
           ...q,
           question: { ...q.question, html_content: sanitizedQuestionHtml },
           options: sanitizedOptions,
           explanation: { ...q.explanation, html_content: sanitizedExplanationHtml },
           passage: sanitizedPassage
       };
-      
-      return question;
   });
+
+  // Validation Phase
+  // Zod parses the sanitized structure. If any required fields are missing 
+  // (e.g. if we returned {} above), Zod throws a detailed error.
+  return z.array(QuestionSchema).parse(sanitizedQuestions);
 };
 
 
