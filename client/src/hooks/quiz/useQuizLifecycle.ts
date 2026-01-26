@@ -1,6 +1,8 @@
 import { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { QuizState, QuizAction, createInitialAttempt } from './quizReducer';
+import { QuizState, QuizAction } from '../../types/quiz.reducer.types';
+import { Question, QuizResult, PracticeTestSettings } from '../../types/quiz.types';
+import { createInitialAttempt } from './quizReducer';
 import { 
     saveInProgressAttempt, 
     deleteInProgressAttempt, 
@@ -15,8 +17,6 @@ import {
 } from './quizStorageUtils';
 import { UserProfile } from '../../types/user.types';
 import { SectionType } from '../../types/content.types';
-import { PracticeTestSettings } from '../../components/PracticeTestOptions';
-import { QuizResult } from '../../types/quiz.types';
 
 interface UseQuizLifecycleProps {
     state: QuizState;
@@ -51,6 +51,7 @@ export const useQuizLifecycle = ({
         dispatch({ type: 'SET_IS_SAVING', payload: true });
         
         // Update the snapshot with the current timer value provided by the UI component
+        // Note: The reducer state uses 'timerSnapshot', but API/Storage expects 'timer'
         const timerData = { 
             ...state.timerSnapshot, 
             value: currentTimerValue
@@ -58,6 +59,7 @@ export const useQuizLifecycle = ({
 
         // Serialize Sets to Arrays for storage
         const serializableAttempt = serializeAttemptForApi(state.attempt);
+        
         const fullDataToSave = { 
             ...serializableAttempt, 
             timer: timerData 
@@ -69,6 +71,7 @@ export const useQuizLifecycle = ({
 
         // 2. Server (Async)
         try {
+            // We cast fullDataToSave because the API expects a partial QuizAttempt which includes 'timer'
             await saveInProgressAttempt(fullDataToSave);
         } catch (e) {
             console.error("Auto-save failed", e);
@@ -97,6 +100,8 @@ export const useQuizLifecycle = ({
 
         const isFreeUser = userProfile?.tier === 'free';
         const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
+        
+        // Create initial timer configuration
         const timerData = { value: durationSeconds, isCountdown: true, initialDuration: durationSeconds };
         
         let attemptId: string | undefined;
@@ -213,7 +218,7 @@ export const useQuizLifecycle = ({
             };
             
             // Calculate indices for review
-            state.quizContent.questions.forEach((q, idx) => {
+            state.quizContent.questions.forEach((q: Question, idx: number) => {
                 const correctOpt = q.options.find(o => o.is_correct);
                 if (correctOpt && state.attempt.userAnswers[idx] === correctOpt.label) {
                     results.correctIndices.push(idx);

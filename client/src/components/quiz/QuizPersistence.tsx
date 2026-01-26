@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { useQuiz } from '../../context/QuizContext';
 import { useQuizTimer } from '../../context/QuizTimerContext';
+import { QuizStatus } from '../../types/quiz.types';
 
 /**
  * Headless Component: QuizPersistence
@@ -22,7 +23,10 @@ const QuizPersistence: React.FC = () => {
     // Refs to hold mutable values without triggering re-renders of the effect
     const timerStateRef = useRef(timerState);
     const saveActionRef = useRef(actions.saveProgress);
-    const statusRef = useRef(state.status);
+    
+    // Explicitly type the ref to match the Domain State
+    const statusRef = useRef<QuizStatus>(state.status);
+    
     const isPreviewMode = state.quizIdentifiers?.isPreviewMode;
 
     // Keep refs synchronized with latest props/context

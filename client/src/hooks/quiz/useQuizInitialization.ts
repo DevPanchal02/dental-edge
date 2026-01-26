@@ -1,11 +1,12 @@
 import { useEffect, useRef } from 'react';
-import { QuizAction } from './quizReducer';
+import { QuizAction } from '../../types/quiz.reducer.types';
+import { QuizAttempt, QuizAttemptState, QuizIdentifiers } from '../../types/quiz.types';
 import { SectionType } from '../../types/content.types';
 import { getQuizData, getQuizMetadata } from '../../services/loader';
 import { getInProgressAttempt, saveInProgressAttempt, getQuizAttemptById } from '../../services/api';
 import { UserProfile } from '../../types/user.types';
 import { getLocalAttemptKey, loadFromLocalStorage, saveToLocalStorage } from './quizStorageUtils';
-import { initialState } from './quizReducer';
+import { initialState, createInitialAttempt } from './quizReducer';
 
 interface UseQuizInitializationProps {
     topicId: string;
@@ -17,6 +18,35 @@ interface UseQuizInitializationProps {
     currentUser: any;
     userProfile: UserProfile | null;
 }
+
+/**
+ * Helper to convert Serialized Data (Arrays) -> Runtime State (Sets).
+ * Handles data from API (JSON) or LocalStorage.
+ */
+const deserializeAttempt = (data: QuizAttempt | Partial<QuizAttempt>): Partial<QuizAttemptState> => {
+    // 1. Extract crossedOffOptions to handle separately
+    const { crossedOffOptions, ...rest } = data;
+    
+    // 2. Convert Record<string, string[]> -> Record<number, Set<string>>
+    let convertedCrossedOff: Record<number, Set<string>> = {};
+
+    if (crossedOffOptions) {
+        convertedCrossedOff = Object.fromEntries(
+            Object.entries(crossedOffOptions).map(([key, value]) => {
+                // Ensure value is treated as an iterable array before making a Set
+                const valueAsArray = Array.isArray(value) ? value : [];
+                return [Number(key), new Set(valueAsArray)];
+            })
+        );
+    }
+
+    // 3. Return the State-compatible object
+    return {
+        ...rest,
+        // Ensure we cast to the correct type for the Reducer
+        crossedOffOptions: convertedCrossedOff
+    } as Partial<QuizAttemptState>;
+};
 
 export const useQuizInitialization = ({
     topicId,
@@ -36,7 +66,16 @@ export const useQuizInitialization = ({
         hasInitialized.current = true;
 
         const initialize = async () => {
-            dispatch({ type: 'INITIALIZE_ATTEMPT', payload: { topicId, sectionType, quizId, reviewAttemptId, isPreviewMode } });
+            // Construct QuizIdentifiers payload
+            const identifiers: QuizIdentifiers = { 
+                topicId, 
+                sectionType, 
+                quizId, 
+                reviewAttemptId, 
+                isPreviewMode 
+            };
+
+            dispatch({ type: 'INITIALIZE_ATTEMPT', payload: identifiers });
             
             try {
                 // Fetch data
@@ -61,7 +100,6 @@ export const useQuizInitialization = ({
                         fullNameForDisplay: 'Dental Aptitude Test 1',
                         categoryForInstructions: 'DAT',
                     };
-                    // Use new generic PROMPT_OPTIONS action
                     dispatch({ type: 'PROMPT_OPTIONS', payload: { questions, metadata: previewMetadata } });
                     return;
                 }
@@ -70,48 +108,35 @@ export const useQuizInitialization = ({
 
                 // Case 2: Review Mode (Past Attempt)
                 if (reviewAttemptId) {
-                    const reviewData = await getQuizAttemptById(reviewAttemptId);
+                    const rawReviewData = await getQuizAttemptById(reviewAttemptId);
+                    const stateReadyReviewData = deserializeAttempt(rawReviewData);
                     
-                    // Deserialize crossedOffOptions (Arrays -> Sets)
-                    if (reviewData.crossedOffOptions && !Array.isArray(reviewData.crossedOffOptions)) {
-                         const convertedReviewData = {
-                             ...reviewData,
-                             crossedOffOptions: Object.fromEntries(
-                                Object.entries(reviewData.crossedOffOptions).map(([k, v]) => [k, new Set(v as string[])])
-                             )
-                         };
-                         dispatch({ type: 'PROMPT_RESUME', payload: { attempt: convertedReviewData, questions, metadata } });
-                    } else {
-                        dispatch({ type: 'PROMPT_RESUME', payload: { attempt: reviewData, questions, metadata } });
-                    }
-                    
+                    dispatch({ type: 'PROMPT_RESUME', payload: { attempt: stateReadyReviewData, questions, metadata } });
                     dispatch({ type: 'RESUME_ATTEMPT' }); 
                     return;
                 } 
 
                 // Case 3: Active/New Attempt
                 const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
-                let inProgressAttempt = loadFromLocalStorage(localKey);
+                
+                // Load and deserialize local data
+                const rawLocalData = loadFromLocalStorage<QuizAttempt>(localKey);
+                let inProgressAttempt = rawLocalData ? deserializeAttempt(rawLocalData) : null;
+                
                 const isFreeUser = userProfile?.tier === 'free';
 
                 // If Paid User and no local data, check Server
                 if (!inProgressAttempt && !isFreeUser) {
-                    const serverAttempt = await getInProgressAttempt({ topicId, sectionType, quizId });
-                    if (serverAttempt) {
-                        // Deserialize Arrays -> Sets
-                        inProgressAttempt = {
-                            ...serverAttempt,
-                            crossedOffOptions: Object.fromEntries(
-                                Object.entries(serverAttempt.crossedOffOptions).map(([k, v]) => [k, new Set(v as string[])])
-                            )
-                        };
+                    const rawServerAttempt = await getInProgressAttempt({ topicId, sectionType, quizId });
+                    if (rawServerAttempt) {
+                        inProgressAttempt = deserializeAttempt(rawServerAttempt);
                     }
                 }
 
                 if (inProgressAttempt) {
                     dispatch({ type: 'PROMPT_RESUME', payload: { attempt: inProgressAttempt, questions, metadata } });
                 } else {
-                    // --- NEW LOGIC: Branch based on Section Type ---
+                    // Logic: Branch based on Section Type
                     
                     // If it's a Practice Test, show options modal first
                     if (sectionType === 'practice') {
@@ -122,11 +147,12 @@ export const useQuizInitialization = ({
                     // If it's a Question Bank, create attempt immediately (Standard Mode)
                     let attemptId: string | undefined;
                     
+                    // Use the snapshot from initialState
+                    const timerData = initialState.timerSnapshot;
+
                     if (isFreeUser) {
                         attemptId = `local-${Date.now()}`;
                     } else {
-                         // Default timer state for new attempt (Count up for QBanks)
-                        const timerData = { value: 0, isActive: false, isCountdown: false, initialDuration: 0 };
                         attemptId = await saveInProgressAttempt({ 
                             topicId, 
                             sectionType, 
@@ -134,7 +160,7 @@ export const useQuizInitialization = ({
                             status: 'active',
                             userAnswers: {},
                             markedQuestions: {},
-                            crossedOffOptions: {}, // Send empty object
+                            crossedOffOptions: {}, 
                             userTimeSpent: {},
                             currentQuestionIndex: 0,
                             timer: timerData
@@ -144,8 +170,10 @@ export const useQuizInitialization = ({
                     if (!attemptId) throw new Error("Failed to create attempt ID");
 
                     // Save initial state to local storage
-                    const initialAttemptState = { ...initialState.attempt, id: attemptId };
-                    saveToLocalStorage(localKey, { ...initialAttemptState, timer: initialState.timer });
+                    const initialAttemptState = { ...createInitialAttempt(topicId, sectionType, quizId), id: attemptId };
+                    
+                    // Note: We map 'timerSnapshot' to 'timer' to match the QuizAttempt storage schema
+                    saveToLocalStorage(localKey, { ...initialAttemptState, timer: timerData });
 
                     dispatch({ type: 'SET_DATA_AND_START', payload: { questions, metadata, attemptId } });
                 }

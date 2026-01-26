@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react';
-import { QuizState } from '../hooks/quiz/quizReducer';
+import { QuizState } from '../types/quiz.reducer.types';
 import { useQuizEngine } from '../hooks/useQuizEngine';
 
 // Infer the return type of the hook so we don't have to manually type the actions interface

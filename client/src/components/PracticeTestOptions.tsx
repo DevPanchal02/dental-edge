@@ -1,16 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/PracticeTestOptions.css';
+import { PracticeTestSettings } from '../types/quiz.types';
 
 const CloseIcon = () => (
     <svg width="15" height="16" viewBox="0 0 15 16" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M1.042 1.542 7.5 8m0 0L1.042 14.46M7.5 8l6.458-6.458M7.5 8l6.458 6.459" stroke="currentColor" strokeWidth="2.067" strokeLinecap="round" strokeLinejoin="round"></path>
     </svg>
 );
-
-export interface PracticeTestSettings {
-    prometricDelay: boolean;
-    additionalTime: boolean;
-}
 
 interface PracticeTestOptionsProps {
     isOpen: boolean;

@@ -1,5 +1,5 @@
 import { useRef, useEffect, useCallback } from 'react';
-import { QuizState, QuizAction } from './quizReducer';
+import { QuizState, QuizAction } from '../../types/quiz.reducer.types';
 
 interface UseQuizNavigationProps {
     state: QuizState;
