@@ -23,8 +23,9 @@
     /* Migration Settings */
     "allowJs": true,
     "checkJs": false,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["node", "vite/client", "vitest/globals"]
   },
-  "include": ["src"],
+  "include": ["src", "e2e"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

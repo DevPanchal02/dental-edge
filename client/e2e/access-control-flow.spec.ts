@@ -1,14 +1,13 @@
-// FILE: client/e2e/access-control-flow.spec.js
 import { test, expect } from '@playwright/test';
 
-// Use Environment Variables
+// Use Environment Variables with Type Assertion
 const FREE_USER = { 
-  email: process.env.E2E_USER_FREE_EMAIL, 
-  password: process.env.E2E_USER_FREE_PASSWORD 
+  email: process.env.E2E_USER_FREE_EMAIL as string, 
+  password: process.env.E2E_USER_FREE_PASSWORD as string
 };
 const PRO_USER = { 
-  email: process.env.E2E_USER_PRO_EMAIL, 
-  password: process.env.E2E_USER_PRO_PASSWORD 
+  email: process.env.E2E_USER_PRO_EMAIL as string, 
+  password: process.env.E2E_USER_PRO_PASSWORD as string
 };
 
 test.describe('Flow 3: Access Control & Monetization (RBAC)', () => {
@@ -73,6 +72,21 @@ test.describe('Flow 3: Access Control & Monetization (RBAC)', () => {
     
     await unlockedTest.dblclick();
 
+    // --- HANDLE MODALS (Practice Test) ---
+    // FIX: Using exact: true for 'Start' to avoid matching 'Start Over' in the Resume Modal
+    const startButton = page.getByRole('button', { name: 'Start', exact: true });
+    const resumeButton = page.getByRole('button', { name: 'Yes, Resume' });
+    const questionCard = page.locator('.question-card');
+
+    // Wait for any of the expected UI states
+    await expect(startButton.or(resumeButton).or(questionCard)).toBeVisible({ timeout: 15000 });
+
+    if (await startButton.isVisible()) {
+        await startButton.click();
+    } else if (await resumeButton.isVisible()) {
+        await resumeButton.click();
+    }
+
     // 4. Verify Quiz Loads
     await expect(page.getByText('What is pinocytosis?')).toBeVisible({ timeout: 30000 });
     
@@ -83,6 +97,16 @@ test.describe('Flow 3: Access Control & Monetization (RBAC)', () => {
     await page.getByRole('button', { name: 'Question Banks' }).click();
     const unlockedQB = page.locator('.list-item').filter({ hasText: 'Cells' }).first();
     await unlockedQB.dblclick();
+
+    // --- HANDLE MODALS (Question Bank) ---
+    const qbResumeButton = page.getByRole('button', { name: 'Yes, Resume' });
+    const qbContent = page.getByText('phospholipid membrane');
+    
+    await expect(qbContent.or(qbResumeButton)).toBeVisible({ timeout: 15000 });
+
+    if (await qbResumeButton.isVisible()) {
+        await qbResumeButton.click();
+    }
 
     // 6. Verify QB Loads
     await expect(page.getByText('phospholipid membrane')).toBeVisible({ timeout: 30000 });

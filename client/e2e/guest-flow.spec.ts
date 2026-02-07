@@ -1,4 +1,3 @@
-// FILE: client/e2e/guest-flow.spec.js
 import { test, expect } from '@playwright/test';
 
 test.describe('Flow 1: Guest Experience', () => {
@@ -10,6 +9,7 @@ test.describe('Flow 1: Guest Experience', () => {
 
     // 2. Enter Preview Mode
     await page.getByRole('link', { name: 'Get Started' }).click();
+    // Use regex for flexible matching of URL params
     await expect(page).toHaveURL(/.*preview\/quiz\/biology\/practice\/test-1/);
     
     // Wait for the modal (with cold start timeout)
@@ -37,7 +37,7 @@ test.describe('Flow 1: Guest Experience', () => {
     // 7. Verify Registration Modal
     await expect(page.getByText('Create an account to continue')).toBeVisible();
     
-    // 8. Verify Navigation Blocked
+    // 8. Verify Navigation Blocked by checking element existence
     await expect(page.locator('.question-number')).not.toBeVisible();
   });
 

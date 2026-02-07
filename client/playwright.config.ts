@@ -1,11 +1,9 @@
-// FILE: client/playwright.config.js
 import { defineConfig, devices } from '@playwright/test';
 import dotenv from 'dotenv';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
 // --- LOAD ENV VARIABLES ---
-// We explicitly load .env.local so Playwright can see the passwords
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 dotenv.config({ path: path.resolve(__dirname, '.env.local') });
