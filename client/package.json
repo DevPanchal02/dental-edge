@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest"
   },
@@ -16,7 +16,9 @@
     "@stripe/react-stripe-js": "^4.0.2",
     "@stripe/stripe-js": "^7.9.0",
     "axios": "^1.8.4",
+    "dompurify": "^3.3.1",
     "firebase": "^11.9.1",
+    "html-react-parser": "^5.2.12",
     "leva": "^0.10.0",
     "playwright": "^1.57.0",
     "react": "^19.0.0",
@@ -24,7 +26,8 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.5.1",
     "recharts": "^3.3.0",
-    "three": "^0.179.1"
+    "three": "^0.179.1",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",
@@ -32,9 +35,9 @@
     "@testing-library/dom": "^10.4.1",
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^14.6.1",
-    "@types/node": "^25.0.3",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
+    "@types/node": "^25.0.8",
+    "@types/react": "^19.2.8",
+    "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^4.3.4",
     "dotenv": "^17.2.3",
     "eslint": "^9.21.0",
@@ -42,6 +45,7 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^15.15.0",
     "happy-dom": "^20.1.0",
+    "typescript": "^5.9.3",
     "vite": "^6.2.0",
     "vitest": "^4.0.16"
   }

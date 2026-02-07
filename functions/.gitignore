@@ -6,5 +6,8 @@ firebase-debug.*.log
 # Dependencies
 node_modules
 
+# TypeScript compiled output (CRITICAL)
+lib/
+
 # Ignore all environment files
 .env*
