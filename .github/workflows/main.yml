@@ -1,8 +1,5 @@
 name: Production CI/CD Pipeline
 
-# Strategy:
-# 1. Pull Requests trigger the CI job (Lint/Test/Build) to ensure code quality before merging.
-# 2. Pushes to 'main' trigger the full pipeline (CI -> CD) to deploy to production.
 on:
   push:
     branches: [ main ]
@@ -11,8 +8,7 @@ on:
 
 jobs:
   # ------------------------------------------------------------------
-  # JOB 1: Continuous Integration (CI)
-  # Validates code stability, enforces style standards, and verifies logic.
+  # JOB 1: Continuous Integration
   # ------------------------------------------------------------------
   build_and_test:
     name: Verify & Build
@@ -27,25 +23,25 @@ jobs:
         with:
           node-version: '20'
           cache: 'npm'
-          cache-dependency-path: client/package-lock.json
+          # Cache both client and functions locks
+          cache-dependency-path: |
+            client/package-lock.json
+            functions/package-lock.json
 
+      # --- Frontend Verification ---
       - name: Install Frontend Dependencies
         working-directory: ./client
         run: npm ci
 
-      # Enforce code style consistency to prevent technical debt
-      - name: Run Static Code Analysis (Linting)
+      - name: Run Frontend Linting
         working-directory: ./client
         run: npm run lint
 
-      # Verify business logic using Vitest
-      - name: Run Unit Test Suite
+      - name: Run Frontend Unit Tests
         working-directory: ./client
         run: npm run test -- --run
 
-      # Compile the React application to ensure no build errors exist.
-      # Note: We inject secrets here because Vite embeds them into the build artifacts.
-      - name: Compile Application (Build)
+      - name: Compile Frontend (Build)
         working-directory: ./client
         run: npm run build
         env:
@@ -57,15 +53,21 @@ jobs:
           VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
           VITE_STRIPE_PUBLISHABLE_KEY: ${{ secrets.VITE_STRIPE_PUBLISHABLE_KEY }}
 
+      # --- Backend Verification (NEW) ---
+      - name: Install Backend Dependencies
+        working-directory: ./functions
+        run: npm ci
+
+      - name: Compile Backend (Verify Types)
+        working-directory: ./functions
+        run: npm run build
+
   # ------------------------------------------------------------------
-  # JOB 2: Continuous Deployment (CD)
-  # Deploys the verified code to the Firebase production environment.
+  # JOB 2: Continuous Deployment
   # ------------------------------------------------------------------
   deploy:
     name: Deploy to Production
-    # Dependency: Only runs if the 'build_and_test' job passes successfully.
     needs: build_and_test
-    # Guard: Only deploy from the 'main' branch, never from Pull Requests.
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     runs-on: ubuntu-latest
     
@@ -77,16 +79,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: client/package-lock.json
 
       # --- Prepare Client ---
       - name: Install Client Dependencies
         working-directory: ./client
         run: npm ci
 
-      # Re-build the client for production deployment.
-      # Secrets are injected again to ensure the production build has valid API keys.
       - name: Build Production Client
         working-directory: ./client
         run: npm run build
@@ -99,19 +97,19 @@ jobs:
           VITE_FIREBASE_APP_ID: ${{ secrets.VITE_FIREBASE_APP_ID }}
           VITE_STRIPE_PUBLISHABLE_KEY: ${{ secrets.VITE_STRIPE_PUBLISHABLE_KEY }}
 
-      # --- Prepare Serverless Functions ---
-      - name: Install Cloud Functions Dependencies
+      # --- Prepare Backend (UPDATED) ---
+      - name: Install Backend Dependencies
         working-directory: ./functions
         run: npm ci
 
+      - name: Build Backend (Generate lib/ folder)
+        working-directory: ./functions
+        run: npm run build
+
       # --- Deployment ---
-      
-      # Securely generate the Service Account key file from GitHub Secrets.
-      # This enables authentication without committing sensitive keys to the repo.
       - name: Authenticate with Google Cloud
         run: echo '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DENTAL_EDGE }}' > service-account.json
 
-      # Deploy both Hosting assets and Cloud Functions using the Firebase CLI.
       - name: Deploy to Firebase Live
         run: npx firebase-tools deploy --project dental-edge --force
         env:
