@@ -1,10 +1,9 @@
-// FILE: client/e2e/free-user-flow.spec.js
 import { test, expect } from '@playwright/test';
 
-// Use Environment Variables
+// Use Environment Variables with Type Assertion
 const FREE_USER = {
-  email: process.env.E2E_USER_FREE_EMAIL,
-  password: process.env.E2E_USER_FREE_PASSWORD
+  email: process.env.E2E_USER_FREE_EMAIL as string,
+  password: process.env.E2E_USER_FREE_PASSWORD as string
 };
 
 test.describe('Flow 2: Free User Experience', () => {
@@ -13,7 +12,7 @@ test.describe('Flow 2: Free User Experience', () => {
 
   test('Free user can login, complete Biology Test 1, and view results', async ({ page }) => {
     
-    // Ensure env vars are loaded
+    // Guard clause for type safety
     if (!FREE_USER.email || !FREE_USER.password) {
       throw new Error("E2E Credentials missing. Check .env.local");
     }
@@ -25,7 +24,9 @@ test.describe('Flow 2: Free User Experience', () => {
     await page.getByRole('button', { name: 'Sign-In' }).click();
 
     await expect(page).toHaveURL(/\/app/, { timeout: 30000 });
-    await expect(page.getByText('Biology')).toBeVisible({ timeout: 30000 });
+    
+    // FIX: Use specific role to avoid "Strict Mode" violation (Sidebar vs Header)
+    await expect(page.getByRole('heading', { name: 'Biology' })).toBeVisible({ timeout: 30000 });
 
 
     // --- STEP 2: NAVIGATE TO QUIZ ---
@@ -40,8 +41,13 @@ test.describe('Flow 2: Free User Experience', () => {
 
     await expect(page).toHaveURL(/.*quiz\/biology\/practice\/test-1/, { timeout: 30000 });
 
+    // --- HANDLE OPTIONS MODAL ---
+    // Wait for the modal container first to ensure stability
+    await expect(page.locator('.pto-modal-container')).toBeVisible({ timeout: 15000 });
+    await page.getByRole('button', { name: 'Start' }).click();
 
     // --- STEP 3: TAKE QUIZ ---
+    // Now we wait for the actual question content
     await expect(page.getByText('red blood cell is placed in a dish')).toBeVisible({ timeout: 30000 });
 
     // Answer Q1
