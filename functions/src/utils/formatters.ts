@@ -1,11 +1,7 @@
-// FILE: functions/src/utils/formatters.js
-
 /**
  * Formats a raw ID string (e.g., 'biology-of-the-cell') into a human-readable name.
- * @param {string} rawName The input string.
- * @returns {string} The formatted display name (e.g., 'Biology Of The Cell').
  */
-const formatDisplayName = (rawName) => {
+export const formatDisplayName = (rawName: string | undefined): string => {
   if (!rawName) return "";
   return rawName
     .replace(/[-_]/g, " ")
@@ -17,10 +13,9 @@ const formatDisplayName = (rawName) => {
 
 /**
  * Formats a raw filename into a URL-friendly ID.
- * @param {string} rawName The input string.
- * @returns {string} The sanitized ID (e.g., 'mitosis_and_meiosis' -> 'mitosis-and-meiosis').
+ * Example: 'mitosis_and_meiosis' -> 'mitosis-and-meiosis'
  */
-const formatId = (rawName) => {
+export const formatId = (rawName: string | undefined): string => {
   if (!rawName) return "";
   const baseName = rawName.replace(/\.json$/i, "");
   return baseName
@@ -34,10 +29,9 @@ const formatId = (rawName) => {
 
 /**
  * Extracts a numeric sort order from a filename.
- * @param {string} fileName The name of the file.
- * @returns {number} The extracted number, or Infinity if no number is found.
+ * Returns Infinity if no number is found.
  */
-const getSortOrder = (fileName) => {
+export const getSortOrder = (fileName: string): number => {
   const matchTest = fileName.match(/^(?:Test_)?(\d+)/i);
   if (matchTest) return parseInt(matchTest[1], 10);
 
@@ -45,10 +39,4 @@ const getSortOrder = (fileName) => {
   if (generalNumberMatch) return parseInt(generalNumberMatch[1], 10);
 
   return Infinity;
-};
-
-module.exports = {
-  formatDisplayName,
-  formatId,
-  getSortOrder,
 };

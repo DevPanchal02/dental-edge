@@ -1,18 +1,28 @@
-// FILE: functions/src/controllers/stripeController.js
+import { CallableRequest, HttpsError, Request } from 'firebase-functions/v2/https';
+import { Response } from 'express';
+import * as logger from 'firebase-functions/logger';
+import * as admin from 'firebase-admin';
+import Stripe from 'stripe';
+import { db } from '../firebase';
+import { UserTier } from '../types/models.types';
 
-const { HttpsError } = require("firebase-functions/v2/https");
-const logger = require("firebase-functions/logger");
-const admin = require("firebase-admin");
+export interface StripeConfig {
+    stripe: Stripe;
+    prices: {
+        plus: string;
+        pro: string;
+    };
+    endpointSecret?: string;
+}
 
-const db = admin.firestore();
-
-const createCheckoutSession = async (request, config) => {
+export const createCheckoutSession = async (request: CallableRequest, config: StripeConfig): Promise<{ id: string }> => {
   if (!request.auth) {
     throw new HttpsError("unauthenticated", "You must be logged in to make a purchase.");
   }
   
   const uid = request.auth.uid;
-  const tierId = request.data.tierId;
+  // Type cast request data
+  const tierId = (request.data as { tierId?: string }).tierId as UserTier;
   const { stripe, prices } = config;
 
   if (!tierId) {
@@ -25,12 +35,11 @@ const createCheckoutSession = async (request, config) => {
       throw new HttpsError("not-found", "User document not found.");
     }
 
-    let priceId;
+    let priceId: string;
     if (tierId === 'plus') priceId = prices.plus;
     else if (tierId === 'pro') priceId = prices.pro;
     else throw new HttpsError("invalid-argument", `Invalid tierId: ${tierId}`);
 
-    // --- FIX: Updated URL to match your actual Project ID ---
     const liveAppUrl = "https://dental-edge.web.app"; 
     
     logger.info(`Creating checkout for user: ${uid}, tier: ${tierId}`);
@@ -47,43 +56,60 @@ const createCheckoutSession = async (request, config) => {
 
     return { id: session.id };
 
-  } catch (error) {
+  } catch (error: any) {
     logger.error(`Stripe checkout failed for user ${uid}:`, error);
     if (error instanceof HttpsError) throw error;
     throw new HttpsError("internal", "An error occurred while creating the checkout session.");
   }
 };
 
-const handleWebhook = async (request, response, config) => {
+export const handleWebhook = async (request: Request, response: Response, config: StripeConfig): Promise<void> => {
   const { stripe, endpointSecret, prices } = config;
-  let event;
+  
+  if (!endpointSecret) {
+      logger.error("Endpoint secret missing");
+      response.status(500).send("Webhook configuration error");
+      return;
+  }
+
+  const sig = request.headers["stripe-signature"];
+  let event: Stripe.Event;
 
   try {
     event = stripe.webhooks.constructEvent(
       request.rawBody,
-      request.headers["stripe-signature"],
+      sig as string,
       endpointSecret
     );
-  } catch (err) {
+  } catch (err: any) {
     logger.error("Webhook signature verification failed.", err);
-    return response.status(400).send(`Webhook Error: ${err.message}`);
+    response.status(400).send(`Webhook Error: ${err.message}`);
+    return;
   }
 
   if (event.type === "checkout.session.completed") {
-    const session = event.data.object;
-    const firebaseUID = session.metadata.firebaseUID;
-    const stripeCustomerId = session.customer;
+    const session = event.data.object as Stripe.Checkout.Session;
+    const firebaseUID = session.metadata?.firebaseUID;
+    const stripeCustomerId = session.customer as string;
 
+    if (!firebaseUID) {
+        logger.warn("No firebaseUID in session metadata");
+        response.status(200).send();
+        return;
+    }
+
+    // Retrieve line items to determine which price was purchased
     const sessionWithLineItems = await stripe.checkout.sessions.retrieve(
       session.id, { expand: ['line_items'] }
     );
-    const priceId = sessionWithLineItems.line_items.data[0].price.id;
+    
+    const priceId = sessionWithLineItems.line_items?.data[0]?.price?.id;
 
-    let newTier = null;
+    let newTier: UserTier | null = null;
     if (priceId === prices.plus) newTier = "plus";
     else if (priceId === prices.pro) newTier = "pro";
 
-    if (firebaseUID && newTier) {
+    if (newTier) {
       logger.info(`Processing successful checkout for user: ${firebaseUID} -> ${newTier}`);
       await db.collection("users").doc(firebaseUID).update({ 
         tier: newTier, 
@@ -93,9 +119,4 @@ const handleWebhook = async (request, response, config) => {
   }
 
   response.status(200).send();
-};
-
-module.exports = {
-  createCheckoutSession,
-  handleWebhook
 };

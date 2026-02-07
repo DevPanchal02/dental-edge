@@ -8,6 +8,7 @@ node_modules/
 # This will ignore ALL dist and .vite folders
 dist/
 .vite/
+lib/
 
 # Log files
 *.log
@@ -36,19 +37,16 @@ Thumbs.db
 *_combined_gitignore_filtered.txt
 *_txt_full_structure_manifest/
 
+# TypeScript build cache
+*.tsbuildinfo
+
+# Vite/Temp files
+hosting.*.cache
+
 #~~~~~~~~~~~~~~~~~ Editor/IDE Ignores ~~~~~~~~~~~~~~~~~#
 .idea/
 .vscode/
 *.sw?
-
-#~~~~~~~~~~~~~~~~~ Data Files to Ignore ~~~~~~~~~~~~~~~~~#
-# This section seems correct for your project, so it remains unchanged.
-client/src/data/biology/
-client/src/data/chemistry/
-client/src/data/perceptual-ability/
-client/src/data/reading-comprehension/
-client/src/new-data/
-client/src/old-data/
 
 
 # Playwright
