@@ -2,6 +2,8 @@ import { auth } from '../firebase';
 import { getFunctions, httpsCallable } from 'firebase/functions';
 import { QuizAttempt, Question } from '../types/quiz.types';
 import { TopicSummary, TopicStructure } from '../types/content.types';
+import { UserTier } from '../types/user.types';
+import { getErrorMessage } from '../utils/error.utils';
 
 // --- Firebase Cloud Functions Setup ---
 const functions = getFunctions();
@@ -14,14 +16,14 @@ interface EmptyResponse { success: boolean; }
 
 // --- Callable Function Exports ---
 
-export const createCheckoutSession = async (tierId: string): Promise<string> => {
+export const createCheckoutSession = async (tierId: UserTier): Promise<string> => {
   try {
     const callable = httpsCallable<{ tierId: string }, CheckoutSessionResponse>(functions, 'createCheckoutSession');
     const result = await callable({ tierId });
     return result.data.id;
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Error creating checkout session:", error);
-    throw new Error(error.message || "Could not create a checkout session.");
+    throw new Error(getErrorMessage(error, "Could not create a checkout session."));
   }
 };
 
@@ -30,7 +32,7 @@ export const saveInProgressAttempt = async (attemptData: Partial<QuizAttempt>): 
     const callable = httpsCallable<Partial<QuizAttempt>, SaveAttemptResponse>(functions, 'saveInProgressAttempt');
     const result = await callable(attemptData);
     return result.data.attemptId;
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Error saving in-progress attempt:", error);
     return undefined; 
   }
@@ -41,7 +43,7 @@ export const getInProgressAttempt = async (identifiers: { topicId: string; secti
     const callable = httpsCallable<typeof identifiers, QuizAttempt>(functions, 'getInProgressAttempt');
     const result = await callable(identifiers);
     return result.data;
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Error getting in-progress attempt:", error);
     throw new Error("Could not check for an existing quiz session.");
   }
@@ -52,7 +54,7 @@ export const finalizeQuizAttempt = async (attemptData: QuizAttempt): Promise<Fin
     const callable = httpsCallable<QuizAttempt, FinalizeAttemptResponse>(functions, 'finalizeQuizAttempt');
     const result = await callable(attemptData);
     return result.data;
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Error finalizing quiz attempt:", error);
     throw new Error("There was an error submitting your quiz. Please try again.");
   }
@@ -62,7 +64,7 @@ export const deleteInProgressAttempt = async (attemptId: string): Promise<void> 
     try {
         const callable = httpsCallable<{ attemptId: string }, EmptyResponse>(functions, 'deleteInProgressAttempt');
         await callable({ attemptId });
-    } catch (error) {
+    } catch (error: unknown) {
         console.error("Error deleting in-progress attempt:", error);
     }
 };
@@ -72,7 +74,7 @@ export const getQuizAttemptById = async (attemptId: string): Promise<QuizAttempt
         const callable = httpsCallable<{ attemptId: string }, QuizAttempt>(functions, 'getQuizAttemptById');
         const result = await callable({ attemptId });
         return result.data;
-    } catch (error) {
+    } catch (error: unknown) {
         console.error(`Error fetching attempt ${attemptId}:`, error);
         throw new Error("Could not load the specified quiz review.");
     }
@@ -83,7 +85,7 @@ export const getCompletedAttemptsForQuiz = async (identifiers: { topicId: string
         const callable = httpsCallable<typeof identifiers, QuizAttempt[]>(functions, 'getCompletedAttemptsForQuiz');
         const result = await callable(identifiers);
         return result.data;
-    } catch (error) {
+    } catch (error: unknown) {
         console.error(`Error fetching completed attempts for ${identifiers.quizId}:`, error);
         throw new Error("Could not load past results for this quiz.");
     }
@@ -92,11 +94,10 @@ export const getCompletedAttemptsForQuiz = async (identifiers: { topicId: string
 // STRICTLY TYPED ANALYTICS RESPONSE
 export const getQuizAnalytics = async (identifiers: { topicId: string; sectionType: string; quizId: string }): Promise<Question[]> => {
     try {
-        // The backend returns a lightweight Question object structure for analytics
         const callable = httpsCallable<typeof identifiers, Question[]>(functions, 'getQuizAnalytics');
         const result = await callable(identifiers);
         return result.data;
-    } catch (error) {
+    } catch (error: unknown) {
         console.error(`Error fetching analytics for ${identifiers.quizId}:`, error);
         throw new Error("Could not load quiz analytics.");
     }
@@ -118,7 +119,7 @@ const getAuthToken = async (): Promise<string | null> => {
   }
   try {
     return await user.getIdToken(true);
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Auth Token Error:", error);
     throw new Error("Connection blocked. Please check your internet or disable AdBlockers.");
   }
@@ -133,7 +134,7 @@ export const fetchTopics = async (): Promise<TopicSummary[]> => {
       throw new Error(`API Error (getTopics): ${response.status} ${response.statusText}`);
     }
     return await response.json();
-  } catch (error) {
+  } catch (error: unknown) {
     console.error("Failed to fetch topics:", error);
     throw error;
   }
@@ -149,16 +150,12 @@ export const fetchTopicStructure = async (topicId: string): Promise<TopicStructu
             throw new Error(`API Error (getTopicStructure): ${response.status} ${response.statusText}`);
         }
         return await response.json();
-    } catch (error) {
+    } catch (error: unknown) {
         console.error(`Failed to fetch structure for topic ${topicId}:`, error);
         throw error;
     }
 };
 
-/**
- * Fetches raw quiz data from the server.
- * Returns 'unknown' because validation happens in the loader layer (Zod).
- */
 export const fetchQuizData = async (storagePath: string, isPreview: boolean = false): Promise<unknown> => {
   try {
     const url = new URL(API.GET_QUIZ_DATA, window.location.origin);
@@ -180,10 +177,11 @@ export const fetchQuizData = async (storagePath: string, isPreview: boolean = fa
 
     if (!response.ok) {
       if (response.status === 403) {
+        // Safe check for error response body
         const errorData = await response.json().catch(() => ({})) as { error?: string };
         if (errorData.error === 'upgrade_required') {
           const upgradeError = new Error("Upgrade required to access this content.");
-          (upgradeError as any).code = 'upgrade_required';
+          Object.assign(upgradeError, { code: 'upgrade_required' });
           throw upgradeError;
         }
       }
@@ -191,7 +189,7 @@ export const fetchQuizData = async (storagePath: string, isPreview: boolean = fa
     }
 
     return await response.json();
-  } catch (error) {
+  } catch (error: unknown) {
     console.error(`Failed to fetch quiz data for path ${storagePath}:`, error);
     throw error;
   }

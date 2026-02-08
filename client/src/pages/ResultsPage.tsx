@@ -2,9 +2,13 @@ import { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getQuizData, fetchTopicData, formatDisplayName } from '../services/loader';
 import '../styles/ResultsPage.css';
-import { Question, QuizResult } from '../types/quiz.types'; // Import strict types
+import { Question, QuizResult } from '../types/quiz.types'; 
 import { SectionType } from '../types/content.types';
+import { getErrorMessage } from '../utils/error.utils';
 
+/**
+ * Helper to strip HTML tags for plain-text previews.
+ */
 const extractTextFromHtml = (htmlString: string | undefined): string => {
     if (!htmlString || typeof htmlString !== 'string') return '';
     const tempDiv = document.createElement('div');
@@ -14,7 +18,6 @@ const extractTextFromHtml = (htmlString: string | undefined): string => {
 };
 
 function ResultsPage() {
-    // Cast params to ensure we have strings. 
     const { topicId = '', sectionType = 'practice', quizId = '' } = useParams<{ 
         topicId: string; 
         sectionType: string; 
@@ -23,7 +26,6 @@ function ResultsPage() {
     
     const navigate = useNavigate();
 
-    // Strictly typed state
     const [results, setResults] = useState<QuizResult | null>(null);
     const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
     const [topicName, setTopicName] = useState<string>('');
@@ -49,7 +51,6 @@ function ResultsPage() {
             }
 
             try {
-                // Parse and cast to our shared QuizResult type
                 const parsedResults = JSON.parse(savedResultsString) as QuizResult;
                 
                 const [topicData, allQuizData] = await Promise.all([
@@ -63,10 +64,11 @@ function ResultsPage() {
                     setQuizQuestions(allQuizData || []);
                 }
 
-            } catch (e) {
-                console.error("Error loading results page data:", e);
+            } catch (err: unknown) {
+                // Handle parsing errors or fetch failures
+                const msg = getErrorMessage(err, "Could not load results. Data might be corrupted or failed to fetch.");
                 if (isMounted) {
-                    setError('Could not load results. Data might be corrupted or failed to fetch.');
+                    setError(msg);
                 }
             } finally {
                 if (isMounted) setIsLoading(false);
@@ -100,10 +102,6 @@ function ResultsPage() {
         </div>
     );
 
-    if (error && results) {
-         console.warn("Results page error:", error);
-    }
-
     if (!results) return (
         <div className="page-info"> 
             No results available.
@@ -119,7 +117,6 @@ function ResultsPage() {
         : "0.0";
     
     const quizTitle = results.quizName || 'Quiz Results';
-
     const currentSectionType = sectionType as SectionType;
 
     return (

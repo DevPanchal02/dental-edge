@@ -5,6 +5,7 @@ import loginImage from "../assets/login.jpg";
 import googleLogo from "../assets/google-logo.svg";
 import appLogo from "../assets/logo.png";
 import { useAuth } from "../context/AuthContext";
+import { getErrorMessage } from "../utils/error.utils";
 
 interface LocationState {
   message?: string;
@@ -44,24 +45,23 @@ function LoginPage() {
         return;
       }
       // Navigation is handled by the useEffect hook reacting to currentUser change.
-    } catch (err: any) {
-      // Firebase errors often have a 'message' property
-      const errorMessage = err?.message || "Failed to sign in.";
-      setError(errorMessage);
+    } catch (err: unknown) {
+      const msg = getErrorMessage(err, "Failed to sign in.");
+      setError(msg);
       setLoading(false);
     }
   };
 
   const handleGoogleSignIn = async (event: React.MouseEvent) => {
-    event.preventDefault(); // Prevent form submission if button is inside form
+    event.preventDefault(); 
     setError("");
     setLoading(true);
     try {
       await signInWithGoogle();
       // Navigation is handled by the useEffect hook.
-    } catch (err: any) {
-      const errorMessage = err?.message || "Failed to sign in with Google.";
-      setError(errorMessage);
+    } catch (err: unknown) {
+      const msg = getErrorMessage(err, "Failed to sign in with Google.");
+      setError(msg);
       setLoading(false);
     }
   };
@@ -112,7 +112,8 @@ function LoginPage() {
               Don't have an account? <Link to="/register">Sign up for free</Link>
             </p>
           </div>
-          {error && <p className="error-message">{error.replace('Firebase: ', '')}</p>}
+          {/* UI is now dumb: it just displays the string given to it */}
+          {error && <p className="error-message">{error}</p>}
         </form>
       </div>
     </div>
