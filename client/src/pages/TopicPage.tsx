@@ -15,6 +15,7 @@ import LoadingSpinner from '../components/LoadingSpinner';
 import '../styles/TopicPage.css'; 
 import { TopicStructure, SectionType } from '../types/content.types';
 import { Question, QuizAttempt } from '../types/quiz.types';
+import { getErrorMessage } from '../utils/error.utils';
 
 interface AnalyticsState {
     questions: Question[];
@@ -45,7 +46,7 @@ function TopicPage() {
         width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
     }), [isSidebarEffectivelyPinned]);
 
-    // Reset selection on topic change
+    // Reset selection on topic change to prevent "ghost" data from previous topics
     useEffect(() => {
         setSelectedItemId(null);
         setSelectedItemType(null);
@@ -72,7 +73,7 @@ function TopicPage() {
                     let newId: string | null = null;
                     let newType: SectionType | null = null;
 
-                    // Logic to auto-select the first item if nothing is selected
+                    // Auto-select logic: Prioritize the active tab's first item
                     if (activeTab === 'qbank' && data.questionBanks?.length > 0) {
                         const firstGroup = data.questionBanks[0];
                         if (firstGroup && firstGroup.banks && firstGroup.banks.length > 0) {
@@ -96,8 +97,11 @@ function TopicPage() {
                         setIsLoading(false); 
                     }
                 }
-            } catch {
-                if (isMounted) setError(`Could not load data for topic: ${topicId}.`);
+            } catch (err: unknown) {
+                if (isMounted) {
+                    const msg = getErrorMessage(err, `Could not load data for topic: ${topicId}.`);
+                    setError(msg);
+                }
             } finally {
                 if (isMounted) setIsLoading(false);
             }
@@ -122,8 +126,11 @@ function TopicPage() {
                     getCompletedAttemptsForQuiz({ topicId, sectionType: selectedItemType, quizId: selectedItemId })
                 ]);
                 setAnalyticsData({ questions, attempts });
-            } catch (err) {
-                console.error("Error fetching analytics data:", err);
+            } catch (err: unknown) {
+                // We log analytics errors but don't necessarily break the whole page.
+                // This allows the user to still start a quiz even if the graph fails.
+                const msg = getErrorMessage(err, "Failed to load performance analytics.");
+                console.error("Analytics Load Error:", msg);
                 setAnalyticsData({ questions: [], attempts: [] });
             } finally {
                 setIsAnalyticsLoading(false);
@@ -137,8 +144,6 @@ function TopicPage() {
     // Handlers wrapped in useCallback to prevent child re-renders
     const handleTabChange = useCallback((tab: 'practice' | 'qbank') => {
         setActiveTab(tab);
-        // We need topicData to set the default item, but topicData is in state.
-        // We can't easily avoid the dependency on topicData, but since topicData is stable after load, it's fine.
         setTopicData(currentTopicData => {
             if (!currentTopicData) return null;
             
@@ -170,7 +175,6 @@ function TopicPage() {
     }, []);
 
     const handleStartQuiz = useCallback((itemId: string, itemType: SectionType) => {
-        // We need topicId from closure, which is fine as it's a route param
         if (topicId) {
             navigate(`/app/quiz/${topicId}/${itemType}/${itemId}`);
         }

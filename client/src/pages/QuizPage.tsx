@@ -6,7 +6,6 @@ import { QuizTimerProvider, useQuizTimer } from '../context/QuizTimerContext';
 import { QuizProvider } from '../context/QuizContext';
 import { formatDisplayName } from '../services/loader';
 
-// Components
 import QuizHeader from '../components/quiz/QuizHeader';
 import QuizFooter from '../components/quiz/QuizFooter';
 import QuizContentArea from '../components/quiz/QuizContentArea';
@@ -18,39 +17,54 @@ import PracticeTestOptions from '../components/PracticeTestOptions';
 import RegistrationPromptModal from '../components/RegistrationPromptModal';
 import Exhibit from '../components/Exhibit';
 import TextHighlighterWrapper from '../components/TextHighlighterWrapper';
-import QuizPersistence from '../components/quiz/QuizPersistence'; // NEW Import
+import QuizPersistence from '../components/quiz/QuizPersistence';
 
-// Types
 import { SectionType } from '../types/content.types';
+import { QuizStatus } from '../types/quiz.types';
+import { getErrorMessage } from '../utils/error.utils';
 
 /**
  * Headless Component: QuizTimerSync
  * 
- * Acts as a bridge between the 'QuizEngine' (Data Source) and 'QuizTimerContext' (UI State).
- * It ensures the timer initializes correctly when a quiz is loaded or resumed.
+ * Synchronizes the Domain State (QuizEngine) with the UI State (QuizTimerContext).
+ * This ensures the timer starts/stops precisely when the quiz status transitions.
  */
-const QuizTimerSync: React.FC<{
-    status: string;
+interface QuizTimerSyncProps {
+    status: QuizStatus;
     timerValue: number;
     initialDuration: number;
     isCountdown: boolean;
-}> = ({ status, timerValue, initialDuration, isCountdown }) => {
+}
+
+const QuizTimerSync: React.FC<QuizTimerSyncProps> = ({ 
+    status, 
+    timerValue, 
+    initialDuration, 
+    isCountdown 
+}) => {
     const { initializeTimer, startTimer, stopTimer, syncTimer } = useQuizTimer();
     const hasInitialized = useRef(false);
 
     useEffect(() => {
+        // Only initialize once per quiz mount to prevent timer resets on re-renders
         if ((status === 'active' || status === 'reviewing_attempt') && !hasInitialized.current) {
             const mode = isCountdown ? 'countdown' : 'countup';
             initializeTimer(initialDuration, mode);
+            
             if (isCountdown) {
                 syncTimer(timerValue, initialDuration - timerValue);
             } else {
                 syncTimer(initialDuration - timerValue, timerValue);
             }
+            
             if (status === 'active') startTimer();
             hasInitialized.current = true;
         }
-        if (status === 'completed' || status === 'error') stopTimer();
+
+        // Cleanup: Stop the clock if the quiz hits a terminal or error state
+        if (status === 'completed' || status === 'error') {
+            stopTimer();
+        }
     }, [status, timerValue, initialDuration, isCountdown, initializeTimer, startTimer, stopTimer, syncTimer]);
 
     return null;
@@ -61,7 +75,7 @@ interface QuizPageProps {
 }
 
 /**
- * The Root Orchestrator for the Quiz Experience.
+ * QuizPage: The root container for the testing experience.
  */
 const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     const { topicId = '', sectionType = 'practice', quizId = '' } = useParams<{ 
@@ -73,9 +87,10 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const reviewAttemptId = (location.state as { attemptId?: string })?.attemptId;
+    // Extract attempt ID if navigating to a specific review session
+    const reviewAttemptId = (location.state as { attemptId?: string } | null)?.attemptId;
 
-    // Initialize the Business Logic Engine
+    // The Engine handles all business logic, networking, and state transitions
     const quizEngine = useQuizEngine(
         topicId, 
         sectionType as SectionType, 
@@ -87,10 +102,11 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     
     const { isSidebarEffectivelyPinned } = useLayout();
 
-    // Computed Props Strategy
+    // UI Configuration: Memoized to prevent unnecessary re-calculations
     const uiProps = useMemo(() => {
         const isReviewing = state.status === 'reviewing_attempt';
         const currentIndex = state.attempt.currentQuestionIndex;
+        // In preview mode, we show a fake high number to simulate the real DAT scale
         const displayQuestionCount = isPreviewMode ? 210 : state.quizContent.questions.length;
 
         return {
@@ -116,9 +132,20 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
             showExhibitButton: topicId === 'chemistry',
             showSolutionButton: state.quizIdentifiers?.sectionType === 'qbank',
         };
-    }, [state.status, state.attempt.currentQuestionIndex, state.quizContent.questions.length, state.quizContent.metadata, state.quizIdentifiers, isSidebarEffectivelyPinned, topicId, sectionType, quizId, isPreviewMode]);
+    }, [
+        state.status, 
+        state.attempt.currentQuestionIndex, 
+        state.quizContent.questions.length, 
+        state.quizContent.metadata, 
+        state.quizIdentifiers, 
+        isSidebarEffectivelyPinned, 
+        topicId, 
+        sectionType, 
+        quizId, 
+        isPreviewMode
+    ]);
 
-    // --- Loading & Error States ---
+    // --- VIEW STATES ---
 
     if (state.status === 'initializing' || state.status === 'loading') {
         return <LoadingSpinner message="Loading Quiz..." />;
@@ -126,13 +153,13 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
 
     if (state.status === 'error') {
         return <ErrorDisplay 
-            error={state.error?.message || 'An unknown error occurred.'} 
+            error={getErrorMessage(state.error, 'An unknown error occurred.')} 
             backLink={isPreviewMode ? '/' : `/app/topic/${topicId}`} 
             backLinkText={isPreviewMode ? 'Back to Home' : 'Back to Topic'} 
         />;
     }
     
-    // --- Modals ---
+    // --- MODAL STATES ---
     
     if (state.status === 'prompting_options') {
         return (
@@ -161,12 +188,12 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
         );
     }
     
-    // --- Main Render ---
+    // --- MAIN APPLICATION VIEW ---
 
     return (
         <QuizProvider value={quizEngine}>
             <QuizTimerProvider>
-                {/* 1. Sync Engine -> Timer Context */}
+                {/* Side-Effect: Bridge Engine State to Timer Context */}
                 <QuizTimerSync 
                     status={state.status}
                     timerValue={state.timerSnapshot.value}
@@ -174,10 +201,9 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                     isCountdown={state.timerSnapshot.isCountdown}
                 />
 
-                {/* 2. Sync Timer Context -> Database (Auto-Save) */}
+                {/* Side-Effect: Heartbeat to persist timer to DB */}
                 <QuizPersistence />
 
-                {/* 3. Render UI */}
                 <TextHighlighterWrapper
                     className={`quiz-page-container ${isPreviewMode ? 'preview-mode' : ''}`}
                     onHighlightUpdate={actions.updateHighlight}
@@ -205,8 +231,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                                 <>
                                     <QuizHeader {...uiProps.headerProps} />
                                     
-                                    <QuizContentArea 
-                                    />
+                                    <QuizContentArea />
                                     
                                     <QuizFooter 
                                         dynamicStyle={uiProps.footerStyle}

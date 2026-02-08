@@ -6,6 +6,7 @@ import googleLogo from "../assets/google-logo.svg";
 import appLogo from "../assets/logo.png";
 import { useAuth } from "../context/AuthContext"; 
 import { updateProfile, sendEmailVerification } from "firebase/auth"; 
+import { getErrorMessage } from "../utils/error.utils";
 
 function RegisterPage() {
   const [email, setEmail] = useState<string>("");
@@ -18,7 +19,7 @@ function RegisterPage() {
   const { signup, signInWithGoogle, currentUser } = useAuth();
 
   useEffect(() => {
-    // If the user is already logged in, redirect them to the app.
+    // Redirect authenticated users away from registration
     if (currentUser) {
       navigate("/app", { replace: true });
     }
@@ -32,20 +33,21 @@ function RegisterPage() {
     try {
       const userCredential = await signup(email, password);
       
-      // Update the user's display name immediately after creation
+      // Update profile and trigger verification email immediately
       await updateProfile(userCredential.user, { displayName: username });
       await sendEmailVerification(userCredential.user);
       
-      // Navigate to login with a success message in state
+      // Pass success state to login page to trigger the verification notification
       navigate("/login", {
         state: { message: "Registration successful! Please check your email to verify your account before logging in." }
       });
 
-    } catch (err: any) {
-      const errorMessage = err?.message || "Failed to create account.";
-      setError(errorMessage);
+    } catch (err: unknown) {
+      const msg = getErrorMessage(err, "Failed to create account.");
+      setError(msg);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   const handleGoogleSignUp = async (event: React.MouseEvent) => {
@@ -54,15 +56,15 @@ function RegisterPage() {
     setLoading(true);
     try {
       await signInWithGoogle();
-      // Navigation is now handled by the useEffect hook.
-    } catch (err: any) {
-      const errorMessage = err?.message || "Failed to sign up with Google.";
-      setError(errorMessage);
+      // Navigation is handled by the auth state observer in useEffect
+    } catch (err: unknown) {
+      const msg = getErrorMessage(err, "Failed to sign up with Google.");
+      setError(msg);
       setLoading(false);
     }
   };
 
-  // Render nothing while checking for currentUser.
+  // Prevent UI flicker while auth state is resolving
   if (currentUser) {
     return null;
   }
@@ -115,7 +117,7 @@ function RegisterPage() {
               Already have an account? <Link to="/login">Log in</Link>
             </p>
           </div>
-          {error && <p className="error-message">{error.replace('Firebase: ', '')}</p>}
+          {error && <p className="error-message">{error}</p>}
         </form>
       </div>
     </div>

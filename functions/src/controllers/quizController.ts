@@ -29,8 +29,10 @@ export const getQuizData = async (request: Request, response: Response): Promise
       const fullData = await quizService.getFullQuizData(storagePath);
       // Only return first 2 questions for preview
       response.status(200).json(fullData.slice(0, 2));
-    } catch (e: any) {
-      logger.error("Error serving quiz preview", { error: e.message, storagePath });
+    } catch (error: unknown) {
+      // Type-safe error handling without 'any'
+      const errorMessage = error instanceof Error ? error.message : "Unknown error";
+      logger.error("Error serving quiz preview", { error: errorMessage, storagePath });
       response.status(500).send("Internal Server Error");
     }
     return;
@@ -82,25 +84,29 @@ export const getQuizData = async (request: Request, response: Response): Promise
     const data = await quizService.getFullQuizData(storagePath);
     response.status(200).json(data);
 
-  } catch (error: any) {
-    if (error.code === "auth/id-token-expired") {
+  } catch (error: unknown) {
+    // Check for specific Firebase auth error codes if possible, otherwise generic
+    // We cast to 'any' strictly for checking the 'code' property which implies a FirebaseError
+    if ((error as any).code === "auth/id-token-expired") {
       response.status(403).send("Forbidden: Auth token has expired.");
       return;
     }
-    logger.error("Error in getQuizData controller", { error: error.message });
+    
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    logger.error("Error in getQuizData controller", { error: errorMessage });
     response.status(500).send("Internal Server Error");
   }
 };
 
 // --- Callable: Save In-Progress ---
-// We use 'any' for the generic here because we manually validate with Zod inside
-export const saveInProgressAttempt = async (request: CallableRequest<any>): Promise<{ attemptId: string }> => {
+// Strict Type: We expect a Partial QuizAttempt.
+export const saveInProgressAttempt = async (request: CallableRequest<Partial<QuizAttempt>>): Promise<{ attemptId: string }> => {
   if (!request.auth) {
     throw new HttpsError("unauthenticated", "You must be logged in to save progress.");
   }
   
-  // Zod Validation: Ensure input matches the Partial<QuizAttempt> shape
-  // Note: We use .partial() because we might be saving an incomplete attempt
+  // Runtime Validation: Even though we typed the request, we must validate the payload 
+  // because the client can technically send anything.
   const validation = QuizAttemptSchema.partial().safeParse(request.data);
   
   if (!validation.success) {
@@ -108,7 +114,7 @@ export const saveInProgressAttempt = async (request: CallableRequest<any>): Prom
       throw new HttpsError("invalid-argument", "Invalid attempt data format.");
   }
   
-  const attemptData = validation.data as Partial<QuizAttempt>;
+  const attemptData = validation.data;
   const { uid } = request.auth;
 
   // Delegate to service
@@ -121,7 +127,8 @@ export const saveInProgressAttempt = async (request: CallableRequest<any>): Prom
 };
 
 // --- Callable: Get In-Progress ---
-export const getInProgressAttempt = async (request: CallableRequest<any>): Promise<QuizAttempt | null> => {
+// Strict Type: We expect QuizIdentifiers to locate the attempt.
+export const getInProgressAttempt = async (request: CallableRequest<QuizIdentifiers>): Promise<QuizAttempt | null> => {
   if (!request.auth) throw new HttpsError("unauthenticated", "You must be logged in.");
   
   const validation = QuizIdentifiersSchema.safeParse(request.data);
@@ -154,7 +161,8 @@ export const deleteInProgressAttempt = async (request: CallableRequest<{ attempt
 };
 
 // --- Callable: Finalize (Submit) ---
-export const finalizeQuizAttempt = async (request: CallableRequest<any>): Promise<{ attemptId: string; score: number }> => {
+// Strict Type: Expecting a full QuizAttempt object.
+export const finalizeQuizAttempt = async (request: CallableRequest<QuizAttempt>): Promise<{ attemptId: string; score: number }> => {
   if (!request.auth) throw new HttpsError("unauthenticated", "You must be logged in.");
   
   // Validate full attempt structure
@@ -186,7 +194,8 @@ export const finalizeQuizAttempt = async (request: CallableRequest<any>): Promis
 };
 
 // --- Callable: Analytics ---
-export const getQuizAnalytics = async (request: CallableRequest<any>) => {
+// Strict Type: Analytics retrieval needs identifiers.
+export const getQuizAnalytics = async (request: CallableRequest<QuizIdentifiers>) => {
   if (!request.auth) throw new HttpsError("unauthenticated", "You must be logged in.");
   
   // We only need topicId and quizId
@@ -200,7 +209,7 @@ export const getQuizAnalytics = async (request: CallableRequest<any>) => {
 };
 
 // --- Callable: Get Completed History ---
-export const getCompletedAttempts = async (request: CallableRequest<any>) => {
+export const getCompletedAttempts = async (request: CallableRequest<QuizIdentifiers>) => {
   if (!request.auth) throw new HttpsError("unauthenticated", "You must be logged in.");
   
   const validation = QuizIdentifiersSchema.safeParse(request.data);
