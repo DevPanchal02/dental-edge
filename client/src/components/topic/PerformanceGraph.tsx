@@ -1,10 +1,13 @@
 import React, { useMemo } from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Area, CartesianGrid, ReferenceLine, Dot } from 'recharts';
+import { FaChevronLeft, FaChevronRight, FaEye } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import '../../styles/PerformanceGraph.css';
 import { useTheme } from '../../context/ThemeContext';
 import { Question, QuizAttempt } from '../../types/quiz.types';
 
-// Custom Dot Component Props
+// --- Helper Components ---
+
 interface PerformanceDotProps {
     cx?: number;
     cy?: number;
@@ -16,7 +19,6 @@ interface PerformanceDotProps {
 const PerformanceDot: React.FC<PerformanceDotProps> = (props) => {
     const { cx, cy, payload } = props;
     
-    // Only render a dot if there is a user result for this question
     if (payload?.userCorrect === undefined || cx === undefined || cy === undefined) {
         return null;
     }
@@ -59,15 +61,29 @@ const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
     return null;
 };
 
+// --- Main Component ---
+
 interface PerformanceGraphProps {
     questions: Question[];
     userAttempt: QuizAttempt | null | undefined;
+    attemptIndex?: number;
+    totalAttempts?: number;
+    onPrev?: () => void;
+    onNext?: () => void;
 }
 
-const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ questions, userAttempt }) => {
+const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ 
+    questions, 
+    userAttempt,
+    attemptIndex = 0,
+    totalAttempts = 0,
+    onPrev,
+    onNext
+}) => {
     const { theme } = useTheme();
     const PRIMING_N = 0.5;
 
+    // --- Data Processing ---
     const chartData = useMemo(() => {
         if (!questions || questions.length === 0) return [];
         
@@ -79,7 +95,7 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ questions, userAtte
             
             const analyticsPercent = q.analytics?.percent_correct 
                 ? parseFloat(q.analytics.percent_correct) 
-                : 50; // Default to 50% if missing
+                : 50; 
             
             const avgPercent = (analyticsPercent / 100) || 0.5;
             cumulativeAverageCorrect += avgPercent;
@@ -120,6 +136,18 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ questions, userAtte
         cursor: theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
     }), [theme]);
 
+    const dateString = useMemo(() => {
+        if (!userAttempt) return '';
+        const timestamp = userAttempt.completedAt || userAttempt.createdAt || Date.now();
+        return new Date(timestamp).toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+        });
+    }, [userAttempt]);
+
+    const attemptNumber = totalAttempts - attemptIndex;
+
     if (!questions || questions.length === 0) {
         return (
             <div>
@@ -131,15 +159,50 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ questions, userAtte
 
     return (
         <>
-            <div className="graph-header"><h3 className="graph-title">Performance Graph</h3></div>
+            <div className="graph-header-container">
+                <h3 className="graph-title">Performance Graph</h3>
+                
+                {userAttempt && totalAttempts > 0 && (
+                    <div className="graph-navigation-controls">
+                        <button 
+                            className="graph-nav-button" 
+                            onClick={onPrev}
+                            disabled={attemptIndex >= totalAttempts - 1}
+                            title="Older Attempt"
+                        >
+                            <FaChevronLeft />
+                        </button>
+                        
+                        <div className="graph-attempt-info">
+                            <span className="attempt-label">Attempt #{attemptNumber}</span>
+                            <span className="attempt-date">{dateString}</span>
+                        </div>
+
+                        {/* Link to view this specific attempt */}
+                        <Link 
+                            to={`/app/quiz/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
+                            state={{ attemptId: userAttempt.id }}
+                            className="graph-view-button"
+                            title="View Full Attempt"
+                        >
+                            <FaEye />
+                        </Link>
+
+                        <button 
+                            className="graph-nav-button" 
+                            onClick={onNext}
+                            disabled={attemptIndex <= 0}
+                            title="Newer Attempt"
+                        >
+                            <FaChevronRight />
+                        </button>
+                    </div>
+                )}
+            </div>
+
             <div style={{ position: 'relative', width: '100%', height: '300px' }}>
-                {/* 
-                    OPTIMIZATION: debounce={300}
-                    This stops the chart from trying to redraw on every single frame 
-                    of the sidebar animation (which takes 300ms).
-                */}
                 <ResponsiveContainer width="100%" height="100%" debounce={300}>
-                    <LineChart data={chartData} margin={{ top: 10, right: 30, left: 0, bottom: 20 }}>
+                    <LineChart data={chartData} margin={{ top: 10, right: 10, left: -20, bottom: 20 }}>
                         <defs>
                             <linearGradient id="splitColor" x1="0" y1="0" x2="0" y2="1">
                                 <stop offset="50%" stopColor={themeColors.deltaGreen} stopOpacity={1} />

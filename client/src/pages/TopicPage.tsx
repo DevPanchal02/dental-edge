@@ -37,8 +37,12 @@ function TopicPage() {
     const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
     const [selectedItemType, setSelectedItemType] = useState<SectionType | null>('practice');
     
+    // Analytics Data State
     const [analyticsData, setAnalyticsData] = useState<AnalyticsState>({ questions: [], attempts: [] });
     const [isAnalyticsLoading, setIsAnalyticsLoading] = useState<boolean>(false);
+
+    // Attempt Navigation State
+    const [selectedAttemptIndex, setSelectedAttemptIndex] = useState<number>(0);
 
     // This style object is stable unless pinning changes
     const topicPageDynamicStyle = useMemo(() => ({
@@ -46,13 +50,19 @@ function TopicPage() {
         width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
     }), [isSidebarEffectivelyPinned]);
 
-    // Reset selection on topic change to prevent "ghost" data from previous topics
+    // Reset selection on topic change
     useEffect(() => {
         setSelectedItemId(null);
         setSelectedItemType(null);
         setAnalyticsData({ questions: [], attempts: [] });
+        setSelectedAttemptIndex(0);
         setError(null);
     }, [topicId]);
+
+    // Reset attempt index when selecting a new quiz item
+    useEffect(() => {
+        setSelectedAttemptIndex(0);
+    }, [selectedItemId, selectedItemType]);
 
     // Load Topic Data
     useEffect(() => {
@@ -73,7 +83,7 @@ function TopicPage() {
                     let newId: string | null = null;
                     let newType: SectionType | null = null;
 
-                    // Auto-select logic: Prioritize the active tab's first item
+                    // Auto-select logic
                     if (activeTab === 'qbank' && data.questionBanks?.length > 0) {
                         const firstGroup = data.questionBanks[0];
                         if (firstGroup && firstGroup.banks && firstGroup.banks.length > 0) {
@@ -127,8 +137,6 @@ function TopicPage() {
                 ]);
                 setAnalyticsData({ questions, attempts });
             } catch (err: unknown) {
-                // We log analytics errors but don't necessarily break the whole page.
-                // This allows the user to still start a quiz even if the graph fails.
                 const msg = getErrorMessage(err, "Failed to load performance analytics.");
                 console.error("Analytics Load Error:", msg);
                 setAnalyticsData({ questions: [], attempts: [] });
@@ -140,8 +148,7 @@ function TopicPage() {
         loadAnalytics();
     }, [selectedItemId, selectedItemType, topicId]);
 
-
-    // Handlers wrapped in useCallback to prevent child re-renders
+    // Handlers
     const handleTabChange = useCallback((tab: 'practice' | 'qbank') => {
         setActiveTab(tab);
         setTopicData(currentTopicData => {
@@ -184,7 +191,6 @@ function TopicPage() {
         setIsUpgradeModalOpen(true);
     }, []);
 
-    // Memoize the items list to prevent TestList from re-rendering unnecessarily
     const itemsToShow = useMemo(() => {
         return activeTab === 'practice' 
             ? topicData?.practiceTests?.map(item => ({ ...item, sectionType: 'practice' as SectionType }))
@@ -193,11 +199,27 @@ function TopicPage() {
               );
     }, [activeTab, topicData]);
     
-    const mostRecentAttempt = useMemo(() => {
+    // --- Attempt Logic ---
+    // Sort attempts by date descending (Newest first)
+    const sortedAttempts = useMemo(() => {
         return analyticsData.attempts?.length > 0 
-            ? [...analyticsData.attempts].sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0))[0] 
-            : null;
+            ? [...analyticsData.attempts].sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0)) 
+            : [];
     }, [analyticsData.attempts]);
+
+    const currentAttempt = sortedAttempts[selectedAttemptIndex] || null;
+
+    const handlePrevAttempt = useCallback(() => {
+        if (selectedAttemptIndex < sortedAttempts.length - 1) {
+            setSelectedAttemptIndex(prev => prev + 1);
+        }
+    }, [selectedAttemptIndex, sortedAttempts.length]);
+
+    const handleNextAttempt = useCallback(() => {
+        if (selectedAttemptIndex > 0) {
+            setSelectedAttemptIndex(prev => prev - 1);
+        }
+    }, [selectedAttemptIndex]);
 
     if (isLoading) {
         return <LoadingSpinner message="Loading Topic Details..." />;
@@ -236,12 +258,17 @@ function TopicPage() {
                                 <div className="analytics-component graph">
                                     <PerformanceGraph 
                                         questions={analyticsData.questions}
-                                        userAttempt={mostRecentAttempt}
+                                        userAttempt={currentAttempt}
+                                        attemptIndex={selectedAttemptIndex}
+                                        totalAttempts={sortedAttempts.length}
+                                        onPrev={handlePrevAttempt}
+                                        onNext={handleNextAttempt}
                                     />
                                 </div>
                                 <div className="analytics-component breakdown">
                                     <AnalyticsBreakdown 
-                                        userAttempt={mostRecentAttempt}
+                                        userAttempt={currentAttempt}
+                                        questions={analyticsData.questions}
                                     />
                                 </div>
                             </>
