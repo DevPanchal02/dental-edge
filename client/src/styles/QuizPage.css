@@ -175,7 +175,7 @@ body.light-mode .passage-content img { background-color: #fff; }
   border-top: 1px solid var(--border-primary);
   box-sizing: border-box;
   transition: left 0.3s ease-in-out, width 0.3s ease-in-out;
-  min-height: 87px;
+  min-height: 85px;
 }
 
 
