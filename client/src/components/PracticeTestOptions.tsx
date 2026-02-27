@@ -27,12 +27,14 @@ const PracticeTestOptions: React.FC<PracticeTestOptionsProps> = ({
     baseTimeLimitMinutes,
     numQuestions,
 }) => {
-    const [prometricDelayEnabled, setPrometricDelayEnabled] = useState(false);
+    const[prometricDelayEnabled, setPrometricDelayEnabled] = useState(false);
     const [additionalTimeEnabled, setAdditionalTimeEnabled] = useState(false);
+    // Give immediate UI feedback while Firestore provisions the attempt doc
+    const[isStarting, setIsStarting] = useState(false);
 
     useEffect(() => {
         if (!isOpen) {
-            // Optional: reset state on close if needed
+            setIsStarting(false);
         }
     }, [isOpen]);
 
@@ -41,6 +43,7 @@ const PracticeTestOptions: React.FC<PracticeTestOptionsProps> = ({
     }
 
     const handleStartClick = () => {
+        setIsStarting(true);
         onStartTest({
             prometricDelay: prometricDelayEnabled,
             additionalTime: additionalTimeEnabled,
@@ -60,7 +63,7 @@ const PracticeTestOptions: React.FC<PracticeTestOptionsProps> = ({
         <div className="pto-modal-overlay">
             <div className="pto-modal-container">
                 <div className="pto-modal-header">
-                    <button onClick={onClose} className="pto-close-button" aria-label="Close">
+                    <button onClick={onClose} className="pto-close-button" aria-label="Close" disabled={isStarting}>
                         <CloseIcon />
                     </button>
                     <div className="pto-header-title-group">
@@ -89,6 +92,7 @@ const PracticeTestOptions: React.FC<PracticeTestOptionsProps> = ({
                                     type="checkbox"
                                     checked={prometricDelayEnabled}
                                     onChange={() => setPrometricDelayEnabled(!prometricDelayEnabled)}
+                                    disabled={isStarting}
                                 />
                                 <span className="pto-slider"></span>
                             </label>
@@ -102,6 +106,7 @@ const PracticeTestOptions: React.FC<PracticeTestOptionsProps> = ({
                                     type="checkbox"
                                     checked={additionalTimeEnabled}
                                     onChange={() => setAdditionalTimeEnabled(!additionalTimeEnabled)}
+                                    disabled={isStarting}
                                 />
                                 <span className="pto-slider"></span>
                             </label>
@@ -113,8 +118,8 @@ const PracticeTestOptions: React.FC<PracticeTestOptionsProps> = ({
                 </div>
 
                 <div className="pto-modal-footer">
-                    <button onClick={handleStartClick} className="pto-start-button">
-                        Start
+                    <button onClick={handleStartClick} className="pto-start-button" disabled={isStarting}>
+                        {isStarting ? 'Starting...' : 'Start'}
                     </button>
                 </div>
             </div>

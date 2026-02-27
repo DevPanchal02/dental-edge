@@ -92,7 +92,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
 
     // The Engine handles all business logic, networking, and state transitions
     const quizEngine = useQuizEngine(
-        topicId, 
+    topicId, 
         sectionType as SectionType, 
         quizId, 
         reviewAttemptId, 
@@ -132,7 +132,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
             showExhibitButton: topicId === 'chemistry',
             showSolutionButton: state.quizIdentifiers?.sectionType === 'qbank',
         };
-    }, [
+    },[
         state.status, 
         state.attempt.currentQuestionIndex, 
         state.quizContent.questions.length, 
@@ -204,6 +204,11 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                 {/* Side-Effect: Heartbeat to persist timer to DB */}
                 <QuizPersistence />
 
+                {/* Prometric Delay Overlay */}
+                {state.uiState.prometricOverlayVisible && (
+                    <div className="prometric-transition-overlay"></div>
+                )}
+
                 <TextHighlighterWrapper
                     className={`quiz-page-container ${isPreviewMode ? 'preview-mode' : ''}`}
                     onHighlightUpdate={actions.updateHighlight}
@@ -222,6 +227,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                                 topicId={topicId}
                                 onCloseReviewSummary={actions.closeReviewSummary}
                                 onJumpToQuestionInQuiz={actions.jumpToQuestion}
+                                onStartTargetedReview={actions.startTargetedReview}
                                 onEndQuiz={actions.finalizeAttempt}
                                 dynamicFooterStyle={uiProps.footerStyle}
                                 isNavActionInProgress={state.uiState.isSaving}

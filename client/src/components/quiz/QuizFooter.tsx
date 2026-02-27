@@ -4,10 +4,6 @@ import '../../styles/QuizPage.css';
 
 interface QuizFooterProps {
     dynamicStyle: React.CSSProperties;
-    
-    // Feature flags can still be passed if they are purely presentational overrides,
-    // but typically we can derive them from state too. For now, we keep them to match
-    // the specific logic in QuizPage's useMemo until we refactor that logic into the Context.
     showExhibitButton: boolean;
     showSolutionButton: boolean;
 }
@@ -21,15 +17,31 @@ const QuizFooter: React.FC<QuizFooterProps> = ({
     const { attempt, uiState, quizContent, status } = state;
 
     const currentIndex = attempt.currentQuestionIndex;
-    const isFirstQuestion = currentIndex === 0;
-    const isLastQuestion = currentIndex === (quizContent.questions.length - 1);
     const isMarked = !!attempt.markedQuestions[currentIndex];
     const isReviewMode = status === 'reviewing_attempt';
     const hasStarted = status === 'active' || isReviewMode;
     const isSaving = uiState.isSaving;
     const solutionVisible = !!uiState.tempReveal[currentIndex];
+    
+    const targetedSequence = uiState.targetedReviewSequence;
+    const isTargetedReview = targetedSequence && targetedSequence.length > 0;
 
-    // Abstraction for the primary action button.
+    let isFirstQuestion = false;
+    let isLastQuestion = false;
+    let nextButtonText = 'Next';
+
+    // Calculate boundary states based on the active navigation mode (Linear vs Targeted Sequence)
+    if (isTargetedReview && targetedSequence) {
+        const seqIndex = targetedSequence.indexOf(currentIndex);
+        isFirstQuestion = seqIndex === 0;
+        isLastQuestion = seqIndex === targetedSequence.length - 1;
+        nextButtonText = isLastQuestion ? 'Finish Review' : 'Next';
+    } else {
+        isFirstQuestion = currentIndex === 0;
+        isLastQuestion = currentIndex === (quizContent.questions.length - 1);
+        nextButtonText = (isReviewMode && isLastQuestion) ? 'Back to Results' : 'Next';
+    }
+
     const handleMainAction = () => {
         actions.nextQuestion();
     };
@@ -56,7 +68,7 @@ const QuizFooter: React.FC<QuizFooterProps> = ({
                     className="nav-button next-button"
                     disabled={!hasStarted || isSaving}
                 >
-                    {isReviewMode && isLastQuestion ? 'Back to Results' : 'Next'}
+                    {nextButtonText}
                 </button>
             </div>
             <div className="nav-group-right">

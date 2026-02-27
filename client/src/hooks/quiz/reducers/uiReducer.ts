@@ -22,8 +22,7 @@ export function uiReducer(state: QuizUIState, action: QuizUIAction, currentQuest
             return {
                 ...state,
                 tempReveal: {
-                    ...state.tempReveal,
-                    [currentQuestionIndex]: !isCurrentlyRevealed
+                    ...state.tempReveal,[currentQuestionIndex]: !isCurrentlyRevealed
                 }
             };
         }
@@ -46,8 +45,30 @@ export function uiReducer(state: QuizUIState, action: QuizUIAction, currentQuest
                 isSaving: action.payload
             };
 
-        // These actions primarily affect root status, but are included here 
-        // in case UI cleanup (like closing modals) is required in the future.
+        case 'SET_NAV_ACTION_IN_PROGRESS':
+            return {
+                ...state,
+                isNavActionInProgress: action.payload
+            };
+
+        case 'SET_PROMETRIC_OVERLAY':
+            return {
+                ...state,
+                prometricOverlayVisible: action.payload
+            };
+
+        case 'START_TARGETED_REVIEW':
+            return {
+                ...state,
+                targetedReviewSequence: action.payload
+            };
+
+        case 'CLEAR_TARGETED_REVIEW':
+            return {
+                ...state,
+                targetedReviewSequence: null
+            };
+
         case 'OPEN_REVIEW_SUMMARY':
         case 'CLOSE_REVIEW_SUMMARY':
             return state;
