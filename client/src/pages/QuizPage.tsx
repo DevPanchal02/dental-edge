@@ -75,6 +75,17 @@ interface QuizPageProps {
 }
 
 /**
+ * Helper: Determine time limits for display in Options Modal.
+ * Duplicated logic from useQuizLifecycle to keep components atomic for now.
+ */
+const getBaseTimeLimit = (topicId: string): number => {
+    const t = topicId.toLowerCase();
+    if (t.includes('perceptual') || t.includes('reading')) return 60;
+    if (t.includes('quantitative')) return 45;
+    return 30; // Bio, Gen Chem, Orgo
+};
+
+/**
  * QuizPage: The root container for the testing experience.
  */
 const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
@@ -162,6 +173,10 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     // --- MODAL STATES ---
     
     if (state.status === 'prompting_options') {
+        // Dynamic Calculation for Modal Display
+        const modalBaseTime = isPreviewMode ? 180 : getBaseTimeLimit(topicId);
+        const modalNumQuestions = isPreviewMode ? 210 : state.quizContent.questions.length;
+
         return (
             <PracticeTestOptions
                 isOpen={true}
@@ -169,8 +184,8 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                 onStartTest={actions.startAttemptWithOptions}
                 fullNameForDisplay={state.quizContent.metadata?.fullNameForDisplay}
                 categoryForInstructions={state.quizContent.metadata?.categoryForInstructions}
-                baseTimeLimitMinutes={180}
-                numQuestions={210} 
+                baseTimeLimitMinutes={modalBaseTime}
+                numQuestions={modalNumQuestions} 
             />
         );
     }
