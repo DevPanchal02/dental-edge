@@ -74,11 +74,12 @@ const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
 
                     <div className="compact-row">
                         <span className="compact-label">Time:</span>
-                        <span className="compact-value">
-                            <span className={isGoodTime ? 'time-good' : 'time-bad'}>
+                        {/* Flex container to separate user time badge and target text */}
+                        <span className="compact-value time-group">
+                            <span className={`time-badge ${isGoodTime ? 'good' : 'bad'}`}>
                                 {data.timeSpent}s
                             </span>
-                            <span className="compact-subtext">    (Target Pace: {data.maintenancePace}s)</span>
+                            <span className="compact-subtext">Target Pace: {data.maintenancePace}s</span>
                         </span>
                     </div>
 
