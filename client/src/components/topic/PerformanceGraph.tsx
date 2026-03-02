@@ -6,6 +6,14 @@ import '../../styles/PerformanceGraph.css';
 import { useTheme } from '../../context/ThemeContext';
 import { Question, QuizAttempt } from '../../types/quiz.types';
 
+// --- Helper: Time Limit Logic ---
+const getBaseTimeLimitMinutes = (topicId: string = ''): number => {
+    const t = topicId.toLowerCase();
+    if (t.includes('perceptual') || t.includes('reading')) return 60;
+    if (t.includes('quantitative')) return 45;
+    return 30; // Bio, Gen Chem, Orgo
+};
+
 // --- Helper Components ---
 
 interface PerformanceDotProps {
@@ -16,6 +24,7 @@ interface PerformanceDotProps {
     };
 }
 
+// Hardcode bright hexes so points pop against both light/dark backgrounds.
 const PerformanceDot: React.FC<PerformanceDotProps> = (props) => {
     const { cx, cy, payload } = props;
     
@@ -23,7 +32,7 @@ const PerformanceDot: React.FC<PerformanceDotProps> = (props) => {
         return null;
     }
 
-    const color = payload.userCorrect ? 'var(--text-accent)' : '#e74c3c'; 
+    const color = payload.userCorrect ? '#10b981' : '#ef4444'; // Bright Emerald / Bright Red
     const dotBorderColor = typeof document !== 'undefined' 
         ? getComputedStyle(document.documentElement).getPropertyValue('--bg-secondary').trim() 
         : '#ffffff';
@@ -40,21 +49,49 @@ interface TooltipProps {
 const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
         const data = payload[0].payload;
+        const isCorrect = data.userCorrect;
+        
+        // Explicitly color the left border based on correctness
+        const borderColor = isCorrect ? '#10b981' : '#ef4444';
+        
+        // Evaluate if user met the target time
+        const isGoodTime = data.timeSpent <= data.maintenancePace;
+
         return (
-            <div className="graph-tooltip">
-                <p className="tooltip-label">{`After Question ${label}`}</p>
-                <div className="tooltip-item">
-                    <span className="tooltip-color-box" style={{ backgroundColor: '#aaa' }}></span>
-                    <span className="tooltip-item-name">Avg. Score:</span>
-                    <span className="tooltip-item-value">{`${(data.averageScore * 100).toFixed(1)}%`}</span>
+            <div className="compact-tooltip" style={{ borderLeftColor: borderColor }}>
+                <div className="compact-tooltip-header">
+                    <span className="compact-tooltip-title">Question {label}</span>
+                    <span className={`compact-badge ${isCorrect ? 'correct' : 'incorrect'}`}>
+                        {isCorrect ? 'Correct' : 'Incorrect'}
+                    </span>
                 </div>
-                {data.userScore !== null && (
-                     <div className="tooltip-item">
-                        <span className="tooltip-color-box" style={{ backgroundColor: data.userCorrect ? 'var(--text-accent)' : '#e74c3c' }}></span>
-                        <span className="tooltip-item-name">Your Score:</span>
-                        <span className="tooltip-item-value">{`${(data.userScore * 100).toFixed(1)}%`}</span>
+                
+                <div className="compact-tooltip-body">
+                    <div className="compact-row">
+                        <span className="compact-label">Category:</span>
+                        <span className="compact-value">{data.category || 'General'}</span>
                     </div>
-                )}
+
+                    <div className="compact-row">
+                        <span className="compact-label">Time:</span>
+                        <span className="compact-value">
+                            <span className={isGoodTime ? 'time-good' : 'time-bad'}>
+                                {data.timeSpent}s
+                            </span>
+                            <span className="compact-subtext">    (Target Pace: {data.maintenancePace}s)</span>
+                        </span>
+                    </div>
+
+                    <div className="compact-row">
+                        <span className="compact-label">% Answered Correctly:</span>
+                        <span className="compact-value">{data.percentCorrect}%</span>
+                    </div>
+                </div>
+
+                <div className="compact-tooltip-footer">
+                    <span>Cumulative Score:</span>
+                    <strong>{(data.userScore * 100).toFixed(1)}%</strong>
+                </div>
             </div>
         );
     }
@@ -68,6 +105,7 @@ interface PerformanceGraphProps {
     userAttempt: QuizAttempt | null | undefined;
     attemptIndex?: number;
     totalAttempts?: number;
+    topicId?: string; 
     onPrev?: () => void;
     onNext?: () => void;
 }
@@ -77,6 +115,7 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
     userAttempt,
     attemptIndex = 0,
     totalAttempts = 0,
+    topicId = '',
     onPrev,
     onNext
 }) => {
@@ -85,10 +124,17 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
 
     // --- Data Processing ---
     const chartData = useMemo(() => {
-        if (!questions || questions.length === 0) return [];
+        if (!questions || questions.length === 0) return[];
         
         let cumulativeUserCorrect = 0;
         let cumulativeAverageCorrect = 0;
+
+        // Calculate Target Pace
+        const timeLimitMinutes = getBaseTimeLimitMinutes(topicId);
+        const totalSeconds = timeLimitMinutes * 60;
+        const maintenancePace = questions.length > 0 
+            ? Math.round(totalSeconds / questions.length) 
+            : 0;
 
         return questions.map((q, index) => {
             const questionsAnswered = index + 1;
@@ -102,17 +148,21 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
 
             let userScore = null;
             let userCorrect: boolean | undefined;
+            let timeSpent = 0;
 
-            if (userAttempt?.userAnswers) {
+            if (userAttempt) {
+                // Correctness
                 const userAnswer = userAttempt.userAnswers[index];
                 const correctOption = q.options.find(opt => opt.is_correct);
-                
                 userCorrect = (!!userAnswer && !!correctOption && userAnswer === correctOption.label);
+                
                 if (userCorrect) {
                     cumulativeUserCorrect++;
                 }
-
                 userScore = (cumulativeUserCorrect + PRIMING_N) / (questionsAnswered + 2 * PRIMING_N);
+
+                // Time Spent
+                timeSpent = userAttempt.userTimeSpent?.[index] || 0;
             }
 
             const averageScore = (cumulativeAverageCorrect + PRIMING_N) / (questionsAnswered + 2 * PRIMING_N);
@@ -122,15 +172,21 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                 averageScore: averageScore,
                 userScore: userScore,
                 userCorrect: userCorrect,
+                
+                category: q.category || 'General',
+                percentCorrect: analyticsPercent, 
+                timeSpent: timeSpent,
+                maintenancePace: maintenancePace
             };
         });
-    }, [questions, userAttempt]);
+    }, [questions, userAttempt, topicId]);
 
     const themeColors = useMemo(() => ({
         axis: theme === 'dark' ? 'var(--text-secondary)' : '#a0a0a0',
         grid: theme === 'dark' ? 'rgba(255, 255, 255, 0.07)' : 'rgba(0, 0, 0, 0.07)',
         averageLine: theme === 'dark' ? '#666' : '#ccc',
-        userLine: theme === 'dark' ? 'var(--text-accent)' : 'var(--bg-button-primary)',
+        // Use a subtle, semi-transparent teal so the bright red/green dots stand out
+        userLine: theme === 'dark' ? 'rgba(87, 142, 126, 0.6)' : 'rgba(87, 142, 126, 0.4)',
         deltaGreen: 'rgba(40, 167, 69, 0.15)',
         deltaRed: 'rgba(220, 53, 69, 0.15)',
         cursor: theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
@@ -178,7 +234,6 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                             <span className="attempt-date">{dateString}</span>
                         </div>
 
-                        {/* Link to view this specific attempt */}
                         <Link 
                             to={`/app/quiz/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
                             state={{ attemptId: userAttempt.id }}

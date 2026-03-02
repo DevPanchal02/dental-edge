@@ -261,6 +261,7 @@ function TopicPage() {
                                         userAttempt={currentAttempt}
                                         attemptIndex={selectedAttemptIndex}
                                         totalAttempts={sortedAttempts.length}
+                                        topicId={topicId} // Pass topicId for pace calculation
                                         onPrev={handlePrevAttempt}
                                         onNext={handleNextAttempt}
                                     />

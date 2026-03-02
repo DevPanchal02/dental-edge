@@ -14,14 +14,13 @@
     color: var(--text-primary);
 }
 
-/* --- New Navigation Controls --- */
+/* --- Navigation Controls --- */
 .graph-navigation-controls {
     display: flex;
     align-items: center;
     gap: 12px;
     background-color: var(--bg-secondary);
     padding: 6px 12px;
-    /* UPDATE: Squarish look as requested */
     border-radius: 8px; 
     border: 1px solid var(--border-primary);
 }
@@ -108,50 +107,118 @@
     border: 1px solid var(--border-primary);
 }
 
-/* --- Tooltip Styling --- */
+/* --- Compact Tooltip Styling --- */
 .recharts-tooltip-wrapper {
     outline: none !important;
 }
 
-.graph-tooltip {
-    background-color: var(--bg-primary) !important;
-    border: 1px solid var(--border-primary) !important;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    padding: 12px 14px !important;
-    font-size: 0.9rem;
-}
-
-body.dark-mode .graph-tooltip {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.tooltip-label {
-    font-weight: 600;
+.compact-tooltip {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-primary);
+    /* Left border color is injected inline by the React component */
+    border-left-width: 4px;
+    border-left-style: solid;
+    border-radius: 4px; /* Sharper corners for a smaller box */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12); /* Tighter shadow */
+    padding: 8px 12px; /* Scaled down padding */
+    min-width: 180px; /* Scaled down width */
     color: var(--text-primary);
-    margin-bottom: 8px;
+    font-family: inherit;
+}
+
+body.dark-mode .compact-tooltip {
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    border-color: #333;
+}
+
+.compact-tooltip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     border-bottom: 1px solid var(--border-primary);
     padding-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-.tooltip-item {
+.compact-tooltip-title {
+    font-weight: 600;
+    font-size: 0.85rem; /* Scaled down */
+    color: var(--text-primary);
+}
+
+.compact-badge {
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-size: 0.65rem; /* Scaled down */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Hardcoded high-contrast signaling colors */
+.compact-badge.correct {
+    background-color: rgba(16, 185, 129, 0.15);
+    color: #10b981;
+}
+
+.compact-badge.incorrect {
+    background-color: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+.compact-tooltip-body {
     display: flex;
+    flex-direction: column;
+    gap: 6px; /* Tighter row spacing */
+}
+
+.compact-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 0.8rem; /* Scaled down base font */
+}
+
+.compact-label {
+    color: var(--text-secondary);
+    margin-right: 12px;
+}
+
+.compact-value {
+    color: var(--text-primary);
+    font-weight: 500;
+    text-align: right;
+}
+
+.compact-subtext {
+    font-size: 0.7rem; /* Scaled down */
+    color: var(--text-secondary);
+    font-weight: normal;
+}
+
+.time-good {
+    color: #10b981; /* Emerald */
+    font-weight: 600;
+}
+
+.time-bad {
+    color: #ef4444; /* Red */
+    font-weight: 600;
+}
+
+.compact-tooltip-footer {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-}
-
-.tooltip-color-box {
-    width: 10px;
-    height: 10px;
-    border-radius: 3px;
-}
-
-.tooltip-item-name {
+    border-top: 1px solid var(--border-primary);
+    padding-top: 8px;
+    margin-top: 10px;
+    font-size: 0.8rem;
     color: var(--text-secondary);
 }
 
-.tooltip-item-value {
-    font-weight: 500;
+.compact-tooltip-footer strong {
     color: var(--text-primary);
+    font-size: 0.9rem;
 }
