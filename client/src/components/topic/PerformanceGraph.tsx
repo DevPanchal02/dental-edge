@@ -235,11 +235,12 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                             <span className="attempt-date">{dateString}</span>
                         </div>
 
+                        {/* FIX: Link to ResultsPage, not QuizPage */}
                         <Link 
-                            to={`/app/quiz/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
+                            to={`/app/results/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
                             state={{ attemptId: userAttempt.id }}
                             className="graph-view-button"
-                            title="View Full Attempt"
+                            title="View Results"
                         >
                             <FaEye />
                         </Link>

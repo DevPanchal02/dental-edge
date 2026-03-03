@@ -20,7 +20,7 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
             questionStartTimeRef.current = Date.now();
         }
         pendingIndexRef.current = state.attempt.currentQuestionIndex;
-    }, [state.status, state.attempt.currentQuestionIndex]);
+    },[state.status, state.attempt.currentQuestionIndex]);
 
     /**
      * Executes an action with a 2-second delay if Prometric mode is on.
@@ -41,37 +41,35 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
         } else {
             actionFn();
         }
-    }, [state.attempt.practiceTestSettings?.prometricDelay, dispatch]);
+    },[state.attempt.practiceTestSettings?.prometricDelay, dispatch]);
 
     /**
      * Internal helper: Calculates time spent, submits answer, and dispatches navigation.
-     * Note: We pass `indexToNavigateTo` explicitly because by the time the delay finishes,
-     * `state.attempt.currentQuestionIndex` might be stale in a closure, but the target 
-     * was determined at the moment of the click.
      */
     const performNavigation = useCallback((targetIndex: number) => {
-        // 1. Calculate Time Spent (approximate based on when we *left* the question)
-        const timeNow = Date.now();
-        const startTime = questionStartTimeRef.current;
-        
-        if (startTime) {
-            // We use the ref time, but we don't reset it here. 
-            // It resets in the useEffect when the state actually updates.
-            const elapsedSeconds = Math.round((timeNow - startTime) / 1000);
+        // FIX: Freeze mutation if we are strictly reviewing a completed attempt
+        if (state.status !== 'reviewing_attempt') {
+            // 1. Calculate Time Spent (approximate based on when we *left* the question)
+            const timeNow = Date.now();
+            const startTime = questionStartTimeRef.current;
             
-            dispatch({ 
-                type: 'UPDATE_TIME_SPENT', 
-                payload: { 
-                    questionIndex: state.attempt.currentQuestionIndex, 
-                    time: elapsedSeconds 
-                }
-            });
+            if (startTime) {
+                const elapsedSeconds = Math.round((timeNow - startTime) / 1000);
+                dispatch({ 
+                    type: 'UPDATE_TIME_SPENT', 
+                    payload: { 
+                        questionIndex: state.attempt.currentQuestionIndex, 
+                        time: elapsedSeconds 
+                    }
+                });
+            }
+            
+            questionStartTimeRef.current = timeNow; // Reset for the next segment
+            dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
         }
-        
-        questionStartTimeRef.current = timeNow; // Reset for the next segment
-        dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
+
         dispatch({ type: 'NAVIGATE_QUESTION', payload: targetIndex });
-    }, [state.attempt.currentQuestionIndex, dispatch]);
+    },[state.status, state.attempt.currentQuestionIndex, dispatch]);
 
 
     // --- Public Actions ---
@@ -82,6 +80,9 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
             return;
         }
         
+        // FIX: Prevent opening review summary if already in Review Mode
+        if (state.status === 'reviewing_attempt') return;
+
         executeWithPrometricDelay(() => {
             // Finalize time for current question
             const timeNow = Date.now();
@@ -102,7 +103,7 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
             dispatch({ type: 'CLEAR_TARGETED_REVIEW' });
             dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
         });
-    }, [isPreviewMode, state.attempt.currentQuestionIndex, dispatch, executeWithPrometricDelay]);
+    },[isPreviewMode, state.status, state.attempt.currentQuestionIndex, dispatch, executeWithPrometricDelay]);
 
     const nextQuestion = useCallback(() => {
         if (isPreviewMode && state.attempt.currentQuestionIndex === 1) {
@@ -130,7 +131,6 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
                 });
             } else {
                 // End of sequence -> Go to Summary
-                // We don't update pendingIndexRef here as we are leaving the quiz flow
                 openReviewSummary();
             }
             return;
@@ -149,7 +149,7 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
                 performNavigation(nextTarget);
             });
         }
-    }, [state.attempt.currentQuestionIndex, state.quizContent.questions.length, isPreviewMode, state.uiState.targetedReviewSequence, dispatch, performNavigation, executeWithPrometricDelay, openReviewSummary]);
+    },[state.attempt.currentQuestionIndex, state.quizContent.questions.length, isPreviewMode, state.uiState.targetedReviewSequence, dispatch, performNavigation, executeWithPrometricDelay, openReviewSummary]);
 
     const previousQuestion = useCallback(() => {
         const currentIndexForCalculation = pendingIndexRef.current;
@@ -179,7 +179,7 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
                 performNavigation(prevTarget);
             });
         }
-    }, [state.attempt.currentQuestionIndex, state.uiState.targetedReviewSequence, performNavigation, executeWithPrometricDelay]);
+    },[state.attempt.currentQuestionIndex, state.uiState.targetedReviewSequence, performNavigation, executeWithPrometricDelay]);
 
     const jumpToQuestion = useCallback((index: number) => {
         dispatch({ type: 'CLEAR_TARGETED_REVIEW' });

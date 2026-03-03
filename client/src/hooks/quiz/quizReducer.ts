@@ -30,7 +30,7 @@ export const createInitialAttempt = (
 export const initialState: QuizState = {
     status: 'initializing',
     quizIdentifiers: null,
-    quizContent: { metadata: null, questions:[] },
+    quizContent: { metadata: null, questions: [] },
     attempt: createInitialAttempt(),
     timerSnapshot: { value: 0, isCountdown: false, initialDuration: 0 },
     uiState: {
@@ -144,11 +144,21 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             };
         }
 
-        case 'RESUME_ATTEMPT':
+        // FIX: Added logic to respect a 'forceReviewMode' payload if present.
+        // This prevents the reducer from guessing 'active' if state is stale.
+        case 'RESUME_ATTEMPT': {
+            // Check if the action payload has the force flag (casting required as TypeScript union is loose here)
+            const forceReview = (action as any).payload?.forceReviewMode;
+            
+            const nextStatus = forceReview 
+                ? 'reviewing_attempt' 
+                : (state.quizIdentifiers?.reviewAttemptId ? 'reviewing_attempt' : 'active');
+
             return {
                 ...state,
-                status: state.quizIdentifiers?.reviewAttemptId ? 'reviewing_attempt' : 'active',
+                status: nextStatus,
             };
+        }
 
         case 'RESET_ATTEMPT':
             return {
@@ -194,7 +204,6 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             return { 
                 ...state, 
                 status: 'reviewing_summary',
-                // Wipe targeted review state when returning to summary to prevent UI sequence bleed
                 uiState: {
                     ...state.uiState,
                     targetedReviewSequence: null
@@ -202,7 +211,12 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             };
         
         case 'CLOSE_REVIEW_SUMMARY':
-            return { ...state, status: 'active' };
+            // If we are in review mode (based on identifiers), we stay in review mode.
+            // If we are active, we stay active.
+            return { 
+                ...state, 
+                status: state.quizIdentifiers?.reviewAttemptId ? 'reviewing_attempt' : 'active' 
+            };
 
         default:
             return {

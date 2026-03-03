@@ -1,11 +1,11 @@
 import { useEffect, useRef } from 'react';
 import { QuizAction } from '../../types/quiz.reducer.types';
-import { QuizAttempt, QuizAttemptState, QuizIdentifiers } from '../../types/quiz.types';
+import { QuizAttempt, QuizAttemptState, QuizIdentifiers, QuizResult } from '../../types/quiz.types';
 import { SectionType } from '../../types/content.types';
 import { getQuizData, getQuizMetadata } from '../../services/loader';
 import { getInProgressAttempt, saveInProgressAttempt, getQuizAttemptById } from '../../services/api';
 import { UserProfile } from '../../types/user.types';
-import { getLocalAttemptKey, loadFromLocalStorage, saveToLocalStorage } from './quizStorageUtils';
+import { getLocalAttemptKey, getResultsKey, loadFromLocalStorage, saveToLocalStorage } from './quizStorageUtils';
 import { initialState, createInitialAttempt } from './quizReducer';
 
 interface UseQuizInitializationProps {
@@ -19,31 +19,21 @@ interface UseQuizInitializationProps {
     userProfile: UserProfile | null;
 }
 
-/**
- * Helper to convert Serialized Data (Arrays) -> Runtime State (Sets).
- * Handles data from API (JSON) or LocalStorage.
- */
 const deserializeAttempt = (data: QuizAttempt | Partial<QuizAttempt>): Partial<QuizAttemptState> => {
-    // 1. Extract crossedOffOptions to handle separately
     const { crossedOffOptions, ...rest } = data;
-    
-    // 2. Convert Record<string, string[]> -> Record<number, Set<string>>
     let convertedCrossedOff: Record<number, Set<string>> = {};
 
     if (crossedOffOptions) {
         convertedCrossedOff = Object.fromEntries(
             Object.entries(crossedOffOptions).map(([key, value]) => {
-                // Ensure value is treated as an iterable array before making a Set
                 const valueAsArray = Array.isArray(value) ? value : [];
                 return [Number(key), new Set(valueAsArray)];
             })
         );
     }
 
-    // 3. Return the State-compatible object
     return {
         ...rest,
-        // Ensure we cast to the correct type for the Reducer
         crossedOffOptions: convertedCrossedOff
     } as Partial<QuizAttemptState>;
 };
@@ -66,7 +56,6 @@ export const useQuizInitialization = ({
         hasInitialized.current = true;
 
         const initialize = async () => {
-            // Construct QuizIdentifiers payload
             const identifiers: QuizIdentifiers = { 
                 topicId, 
                 sectionType, 
@@ -78,13 +67,11 @@ export const useQuizInitialization = ({
             dispatch({ type: 'INITIALIZE_ATTEMPT', payload: identifiers });
             
             try {
-                // Fetch data
                 const fetchData = Promise.all([
                     getQuizData(topicId, sectionType, quizId, isPreviewMode),
                     getQuizMetadata(topicId, sectionType, quizId)
                 ]);
 
-                // Timeout safety
                 const timeout = new Promise<never>((_, reject) => 
                     setTimeout(() => reject(new Error("Request timed out. Please check your connection.")), 15000)
                 );
@@ -93,7 +80,6 @@ export const useQuizInitialization = ({
 
                 if (!metadata) throw new Error("Quiz metadata not found.");
 
-                // Case 1: Preview Mode (Guest)
                 if (isPreviewMode) {
                     const previewMetadata = {
                         ...metadata,
@@ -106,26 +92,56 @@ export const useQuizInitialization = ({
                 
                 if (!currentUser) return;
 
-                // Case 2: Review Mode (Past Attempt)
+                // --- REVIEW MODE LOGIC ---
                 if (reviewAttemptId) {
-                    const rawReviewData = await getQuizAttemptById(reviewAttemptId);
-                    const stateReadyReviewData = deserializeAttempt(rawReviewData);
-                    
-                    dispatch({ type: 'PROMPT_RESUME', payload: { attempt: stateReadyReviewData, questions, metadata } });
-                    dispatch({ type: 'RESUME_ATTEMPT' }); 
-                    return;
+                    // Scenario A: Local Result Review (Free Tier / Unsynced)
+                    if (reviewAttemptId === 'local-preview') {
+                        const resultsKey = getResultsKey(topicId, sectionType, quizId);
+                        const localResult = loadFromLocalStorage<QuizResult>(resultsKey);
+                        
+                        if (localResult) {
+                            const mockReviewData: Partial<QuizAttemptState> = {
+                                id: 'local-preview',
+                                topicId,
+                                sectionType,
+                                quizId,
+                                userAnswers: localResult.userAnswers,
+                                markedQuestions: {},
+                                crossedOffOptions: {},
+                                userTimeSpent: {}, // Local results might not save detailed time per question, so default empty
+                                currentQuestionIndex: 0,
+                                status: 'completed',
+                                timer: { value: 0, isCountdown: false, initialDuration: 0 }
+                            };
+                            
+                            dispatch({ type: 'PROMPT_RESUME', payload: { attempt: mockReviewData, questions, metadata } });
+                            // FIX: Force the reducer to enter Review Mode explicitly
+                            // @ts-expect-error - Custom payload property handled in reducer
+                            dispatch({ type: 'RESUME_ATTEMPT', payload: { forceReviewMode: true } }); 
+                            return;
+                        } else {
+                            throw new Error("Local results not found.");
+                        }
+                    } else {
+                        // Scenario B: Backend Result Review (Pro Tier)
+                        const rawReviewData = await getQuizAttemptById(reviewAttemptId);
+                        const stateReadyReviewData = deserializeAttempt(rawReviewData);
+                        
+                        dispatch({ type: 'PROMPT_RESUME', payload: { attempt: stateReadyReviewData, questions, metadata } });
+                        // FIX: Force the reducer to enter Review Mode explicitly
+                        // @ts-expect-error - Custom payload property handled in reducer
+                        dispatch({ type: 'RESUME_ATTEMPT', payload: { forceReviewMode: true } }); 
+                        return;
+                    }
                 } 
 
-                // Case 3: Active/New Attempt
+                // --- ACTIVE ATTEMPT LOGIC ---
                 const localKey = getLocalAttemptKey(topicId, sectionType, quizId);
-                
-                // Load and deserialize local data
                 const rawLocalData = loadFromLocalStorage<QuizAttempt>(localKey);
                 let inProgressAttempt = rawLocalData ? deserializeAttempt(rawLocalData) : null;
                 
                 const isFreeUser = userProfile?.tier === 'free';
 
-                // If Paid User and no local data, check Server
                 if (!inProgressAttempt && !isFreeUser) {
                     const rawServerAttempt = await getInProgressAttempt({ topicId, sectionType, quizId });
                     if (rawServerAttempt) {
@@ -136,19 +152,13 @@ export const useQuizInitialization = ({
                 if (inProgressAttempt) {
                     dispatch({ type: 'PROMPT_RESUME', payload: { attempt: inProgressAttempt, questions, metadata } });
                 } else {
-                    // Logic: Branch based on Section Type
-                    
-                    // If it's a Practice Test, show options modal first
                     if (sectionType === 'practice') {
                         dispatch({ type: 'PROMPT_OPTIONS', payload: { questions, metadata } });
                         return;
                     }
 
-                    // If it's a Question Bank, create attempt immediately (Standard Mode)
-                    let attemptId: string | undefined;
-                    
-                    // Use the snapshot from initialState
                     const timerData = initialState.timerSnapshot;
+                    let attemptId: string | undefined;
 
                     if (isFreeUser) {
                         attemptId = `local-${Date.now()}`;
@@ -169,10 +179,7 @@ export const useQuizInitialization = ({
 
                     if (!attemptId) throw new Error("Failed to create attempt ID");
 
-                    // Save initial state to local storage
                     const initialAttemptState = { ...createInitialAttempt(topicId, sectionType, quizId), id: attemptId };
-                    
-                    // Note: We map 'timerSnapshot' to 'timer' to match the QuizAttempt storage schema
                     saveToLocalStorage(localKey, { ...initialAttemptState, timer: timerData });
 
                     dispatch({ type: 'SET_DATA_AND_START', payload: { questions, metadata, attemptId } });
@@ -186,5 +193,5 @@ export const useQuizInitialization = ({
 
         initialize();
 
-    }, [topicId, sectionType, quizId, reviewAttemptId, currentUser, isPreviewMode, userProfile, dispatch]);
+    },[topicId, sectionType, quizId, reviewAttemptId, currentUser, isPreviewMode, userProfile, dispatch]);
 };

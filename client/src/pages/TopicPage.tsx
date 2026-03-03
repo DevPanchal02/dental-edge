@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { fetchTopicData } from '../services/loader';
 import { getCompletedAttemptsForQuiz, getQuizAnalytics } from '../services/api';
 import { useAuth } from '../context/AuthContext';
-import { useLayout } from '../context/LayoutContext';
 
 import ContentSwitcher from '../components/topic/ContentSwitcher';
 import TestList from '../components/topic/TestList';
@@ -24,7 +23,6 @@ interface AnalyticsState {
 
 function TopicPage() {
     const { topicId } = useParams<{ topicId: string }>();
-    const { isSidebarEffectivelyPinned } = useLayout();
     const { userProfile } = useAuth();
     const navigate = useNavigate();
 
@@ -44,17 +42,11 @@ function TopicPage() {
     // Attempt Navigation State
     const [selectedAttemptIndex, setSelectedAttemptIndex] = useState<number>(0);
 
-    // This style object is stable unless pinning changes
-    const topicPageDynamicStyle = useMemo(() => ({
-        marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
-        width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
-    }), [isSidebarEffectivelyPinned]);
-
     // Reset selection on topic change
     useEffect(() => {
         setSelectedItemId(null);
         setSelectedItemType(null);
-        setAnalyticsData({ questions: [], attempts: [] });
+        setAnalyticsData({ questions: [], attempts:[] });
         setSelectedAttemptIndex(0);
         setError(null);
     }, [topicId]);
@@ -62,7 +54,7 @@ function TopicPage() {
     // Reset attempt index when selecting a new quiz item
     useEffect(() => {
         setSelectedAttemptIndex(0);
-    }, [selectedItemId, selectedItemType]);
+    },[selectedItemId, selectedItemType]);
 
     // Load Topic Data
     useEffect(() => {
@@ -119,12 +111,12 @@ function TopicPage() {
         loadData();
 
         return () => { isMounted = false; };
-    }, [topicId, activeTab]); 
+    },[topicId, activeTab]); 
 
     // Load Analytics
     useEffect(() => {
         if (!selectedItemId || !selectedItemType || !topicId) {
-            setAnalyticsData({ questions: [], attempts: [] });
+            setAnalyticsData({ questions: [], attempts:[] });
             return;
         }
 
@@ -139,7 +131,7 @@ function TopicPage() {
             } catch (err: unknown) {
                 const msg = getErrorMessage(err, "Failed to load performance analytics.");
                 console.error("Analytics Load Error:", msg);
-                setAnalyticsData({ questions: [], attempts: [] });
+                setAnalyticsData({ questions: [], attempts:[] });
             } finally {
                 setIsAnalyticsLoading(false);
             }
@@ -174,12 +166,12 @@ function TopicPage() {
             }
             return currentTopicData;
         });
-    }, []);
+    },[]);
 
     const handleItemSelect = useCallback((itemId: string, itemType: SectionType) => {
         setSelectedItemId(itemId);
         setSelectedItemType(itemType);
-    }, []);
+    },[]);
 
     const handleStartQuiz = useCallback((itemId: string, itemType: SectionType) => {
         if (topicId) {
@@ -189,7 +181,7 @@ function TopicPage() {
 
     const handleLockedItemClick = useCallback(() => {
         setIsUpgradeModalOpen(true);
-    }, []);
+    },[]);
 
     const itemsToShow = useMemo(() => {
         return activeTab === 'practice' 
@@ -203,7 +195,7 @@ function TopicPage() {
     // Sort attempts by date descending (Newest first)
     const sortedAttempts = useMemo(() => {
         return analyticsData.attempts?.length > 0 
-            ? [...analyticsData.attempts].sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0)) 
+            ?[...analyticsData.attempts].sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0)) 
             : [];
     }, [analyticsData.attempts]);
 
@@ -233,9 +225,10 @@ function TopicPage() {
         return <div className="page-info">Select a topic to begin.</div>;
     }
 
+    // Strip out the inline style parameter. The parent `<main>` container in Layout.tsx controls the layout.
     return (
         <>
-            <div className="topic-page-container" style={topicPageDynamicStyle}>
+            <div className="topic-page-container">
                 <h1 className="topic-title">{topicData.name}</h1>
                 
                 <div className="topic-page-grid">
@@ -261,7 +254,7 @@ function TopicPage() {
                                         userAttempt={currentAttempt}
                                         attemptIndex={selectedAttemptIndex}
                                         totalAttempts={sortedAttempts.length}
-                                        topicId={topicId} // Pass topicId for pace calculation
+                                        topicId={topicId} 
                                         onPrev={handlePrevAttempt}
                                         onNext={handleNextAttempt}
                                     />

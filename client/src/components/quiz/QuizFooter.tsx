@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useQuiz } from '../../context/QuizContext';
 import '../../styles/QuizPage.css';
 
@@ -14,7 +15,8 @@ const QuizFooter: React.FC<QuizFooterProps> = ({
     showSolutionButton,
 }) => {
     const { state, actions } = useQuiz();
-    const { attempt, uiState, quizContent, status } = state;
+    const navigate = useNavigate();
+    const { attempt, uiState, quizContent, status, quizIdentifiers } = state;
 
     const currentIndex = attempt.currentQuestionIndex;
     const isMarked = !!attempt.markedQuestions[currentIndex];
@@ -43,7 +45,16 @@ const QuizFooter: React.FC<QuizFooterProps> = ({
     }
 
     const handleMainAction = () => {
-        actions.nextQuestion();
+        // FIX: If we are on the last question in review mode, route back to Results
+        if (isReviewMode && isLastQuestion) {
+            const { topicId, sectionType, quizId } = quizIdentifiers || {};
+            navigate(`/app/results/${topicId}/${sectionType}/${quizId}`, {
+                state: { attemptId: attempt.id },
+                replace: true
+            });
+        } else {
+            actions.nextQuestion();
+        }
     };
 
     return (

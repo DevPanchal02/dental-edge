@@ -45,7 +45,7 @@ const ResultsPage: React.FC = () => {
 
     const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
     const[topicName, setTopicName] = useState<string>('');
-    const [quizName, setQuizName] = useState<string>('');
+    const[quizName, setQuizName] = useState<string>('');
     
     const [localResult, setLocalResult] = useState<QuizResult | null>(null);
     const [fullAttempt, setFullAttempt] = useState<QuizAttempt | null>(null);
@@ -128,7 +128,7 @@ const ResultsPage: React.FC = () => {
 
         loadResultsData();
         return () => { isMounted = false; };
-    }, [topicId, sectionType, quizId, currentUser, targetAttemptId]);
+    },[topicId, sectionType, quizId, currentUser, targetAttemptId]);
 
     const unifiedAttempt = useMemo((): QuizAttempt | null => {
         if (fullAttempt) return fullAttempt;
@@ -148,7 +148,7 @@ const ResultsPage: React.FC = () => {
             score: localResult.score,
             timer: { value: 0, isCountdown: false, initialDuration: 0 }
         };
-    }, [fullAttempt, localResult, topicId, sectionType, quizId]);
+    },[fullAttempt, localResult, topicId, sectionType, quizId]);
 
     const metrics = useMemo(() => {
         if (!quizQuestions.length) return null;
@@ -179,13 +179,15 @@ const ResultsPage: React.FC = () => {
     },[quizQuestions, localResult, fullAttempt, topicId]);
 
     const handleQuestionClick = useCallback((index: number) => {
+        // FIX: We now pass unifiedAttempt?.id so local results pass 'local-preview'
+        // instead of undefined. This prevents the quiz from falling back to Active mode.
         navigate(`/app/quiz/${topicId}/${sectionType}/${quizId}`, { 
             state: { 
-                reviewAttemptId: fullAttempt?.id, 
+                reviewAttemptId: unifiedAttempt?.id, 
                 questionIndex: index 
             } 
         });
-    },[navigate, topicId, sectionType, quizId, fullAttempt?.id]);
+    },[navigate, topicId, sectionType, quizId, unifiedAttempt?.id]);
 
     if (isLoading) return <LoadingSpinner message="Analyzing Results..." />;
     

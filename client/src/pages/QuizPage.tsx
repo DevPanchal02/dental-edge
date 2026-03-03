@@ -57,7 +57,13 @@ const QuizTimerSync: React.FC<QuizTimerSyncProps> = ({
                 syncTimer(initialDuration - timerValue, timerValue);
             }
             
-            if (status === 'active') startTimer();
+            // FIX: Only start the timer if specifically in Active mode.
+            // If reviewing, we sync it (so it shows 00:00 or final time) but DO NOT start it.
+            // This prevents the timer from ticking when looking at past results.
+            if (status === 'active') {
+                startTimer();
+            }
+            
             hasInitialized.current = true;
         }
 
@@ -98,20 +104,35 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Extract attempt ID if navigating to a specific review session
-    const reviewAttemptId = (location.state as { attemptId?: string } | null)?.attemptId;
+    // Extract attempt ID and target question from router state
+    // We check both 'reviewAttemptId' (from ResultsGrid) and 'attemptId' (from PerformanceGraph)
+    const locationState = location.state as { attemptId?: string; reviewAttemptId?: string; questionIndex?: number } | null;
+    const targetAttemptId = locationState?.reviewAttemptId || locationState?.attemptId;
+    const targetQuestionIndex = locationState?.questionIndex;
 
     // The Engine handles all business logic, networking, and state transitions
     const quizEngine = useQuizEngine(
-    topicId, 
+        topicId, 
         sectionType as SectionType, 
         quizId, 
-        reviewAttemptId, 
+        targetAttemptId, 
         isPreviewMode
     );
     const { state, actions } = quizEngine;
     
     const { isSidebarEffectivelyPinned } = useLayout();
+
+    // Ref to ensure we only auto-jump to the target question once upon loading
+    const hasJumpedRef = useRef(false);
+
+    // Auto-Jump Logic for Results Grid Navigation
+    // If the user clicked a specific question bubble in Results, we jump them there immediately.
+    useEffect(() => {
+        if (state.status === 'reviewing_attempt' && targetQuestionIndex !== undefined && !hasJumpedRef.current) {
+            actions.jumpToQuestion(targetQuestionIndex);
+            hasJumpedRef.current = true;
+        }
+    }, [state.status, targetQuestionIndex, actions]);
 
     // UI Configuration: Memoized to prevent unnecessary re-calculations
     const uiProps = useMemo(() => {
@@ -121,12 +142,8 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
         const displayQuestionCount = isPreviewMode ? 210 : state.quizContent.questions.length;
 
         return {
-            containerStyle: {
-                marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
-                width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
-                paddingBottom: '90px',
-            } as React.CSSProperties,
-            
+            // Strip containerStyle because the parent layout handles standard page margins.
+            // Keep footerStyle because fixed elements escape the document flow.
             footerStyle: {
                 left: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
                 width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
@@ -138,6 +155,8 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                 backLink: isReviewing ? `/app/results/${topicId}/${sectionType}/${quizId}` : `/app/topic/${topicId}`,
                 backText: isReviewing ? 'Back to Results' : `Back to ${state.quizContent.metadata?.topicName || formatDisplayName(topicId)}`,
                 isPreviewMode: isPreviewMode,
+                // Pass the attempt ID back so the Results Page loads the correct history!
+                backState: isReviewing ? { attemptId: state.attempt.id || undefined } : undefined,
             },
             
             showExhibitButton: topicId === 'chemistry',
@@ -146,6 +165,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     },[
         state.status, 
         state.attempt.currentQuestionIndex, 
+        state.attempt.id,
         state.quizContent.questions.length, 
         state.quizContent.metadata, 
         state.quizIdentifiers, 
@@ -229,7 +249,11 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                     onHighlightUpdate={actions.updateHighlight}
                     isEnabled={!state.uiState.isSaving && !state.uiState.isNavActionInProgress}
                 >
-                    <div style={uiProps.containerStyle}>
+                    {/* 
+                       Removed the redundant containerStyle that was causing the "Double Shift" bug.
+                       The parent Layout component now handles the main content area geometry.
+                    */}
+                    <div>
                         
                         {state.status === 'reviewing_summary' ? (
                             <QuizReviewSummary
