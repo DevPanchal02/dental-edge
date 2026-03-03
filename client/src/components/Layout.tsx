@@ -17,7 +17,11 @@ function Layout() {
   const [sidebarPinned, setSidebarPinned] = useState<boolean>(true);
   const [sidebarHovered, setSidebarHovered] = useState<boolean>(false);
 
-  const isContentPage = location.pathname.includes('/quiz/') || location.pathname.includes('/topic/');
+  // Ensure sidebar logic applies to all content pages including results
+  const isContentPage = location.pathname.includes('/quiz/') || 
+                        location.pathname.includes('/topic/') || 
+                        location.pathname.includes('/results/');
+
   const actualSidebarIsOpen = sidebarPinned || (isContentPage && sidebarHovered);
   const isSidebarEffectivelyPinned = sidebarPinned && actualSidebarIsOpen;
 
@@ -69,16 +73,17 @@ function Layout() {
     return <div className="page-error">{error}</div>;
   }
 
-  // --- OPTIMIZATION: CSS Variable Strategy ---
-  // We define the width here. Children will consume var(--layout-sidebar-offset) via CSS.
-  // We cast to React.CSSProperties because TS doesn't know about custom vars by default.
-  const layoutStyle = {
-      '--layout-sidebar-offset': isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0px',
-  } as React.CSSProperties;
+  // --- STYLE FIX: Directly control the main content geometry ---
+  // This ensures the content pushes over and shrinks, preventing overlap or hidden right margins.
+  const mainContentStyle: React.CSSProperties = {
+      marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
+      width: isSidebarEffectivelyPinned ? 'calc(100% - var(--sidebar-width))' : '100%',
+      transition: 'margin-left 0.3s ease-in-out, width 0.3s ease-in-out',
+  };
 
   return (
     <LayoutContext.Provider value={{ isSidebarOpen: actualSidebarIsOpen, isSidebarEffectivelyPinned }}>
-      <div className="layout-container-wrapper" style={layoutStyle}>
+      <div className="layout-container-wrapper">
         {isContentPage && !actualSidebarIsOpen && (
           <div
             className="sidebar-hover-trigger-zone"
@@ -95,7 +100,7 @@ function Layout() {
           onPinToggle={toggleSidebarPin}
           isContentPage={isContentPage}
         />
-        <main className="main-content">
+        <main className="main-content" style={mainContentStyle}>
            <Outlet context={{ topics }} />
         </main>
       </div>
