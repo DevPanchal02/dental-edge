@@ -1,4 +1,3 @@
-
 .results-page-wrapper {
     width: 100%;
     margin: 0 auto;
@@ -194,9 +193,27 @@
     border-radius: 3px;
 }
 
-.legend-box.correct { background-color: var(--bg-option-correct); border: 1px solid var(--border-option-correct); }
-.legend-box.incorrect { background-color: var(--bg-option-incorrect); border: 1px solid var(--border-option-incorrect); }
-.legend-box.skipped { background-color: var(--bg-primary); border: 1px solid var(--border-primary); }
+.legend-box.correct { 
+    background-color: var(--bg-option-correct); 
+    border: 1px solid var(--border-option-correct); 
+}
+.legend-box.incorrect { 
+    background-color: var(--bg-option-incorrect); 
+    border: 1px solid var(--border-option-incorrect); 
+}
+
+/* Updated Legend Box for Skipped */
+.legend-box.skipped { 
+    background-color: var(--bg-primary); 
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 3px,
+        var(--border-primary) 3px,
+        var(--border-primary) 5px
+    );
+    border: 1px solid var(--border-primary); 
+}
 
 .results-grid-layout {
     display: grid;
@@ -243,9 +260,17 @@
     border: 1px solid var(--border-option-incorrect);
 }
 
+/* Updated Grid Cell for Skipped */
 .results-grid-cell.skipped {
     background-color: var(--bg-primary);
-    color: var(--text-secondary);
+    background-image: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 6px,
+        var(--border-primary) 6px,
+        var(--border-primary) 8px
+    );
+    color: var(--text-primary);
     border: 1px solid var(--border-primary);
 }
 

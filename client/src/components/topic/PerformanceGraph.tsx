@@ -19,6 +19,7 @@ const getBaseTimeLimitMinutes = (topicId: string = ''): number => {
 interface PerformanceDotProps {
     cx?: number;
     cy?: number;
+    r?: number; // Added radius prop to allow dynamic sizing
     payload?: {
         userCorrect?: boolean;
     };
@@ -26,7 +27,7 @@ interface PerformanceDotProps {
 
 // Hardcode bright hexes so points pop against both light/dark backgrounds.
 const PerformanceDot: React.FC<PerformanceDotProps> = (props) => {
-    const { cx, cy, payload } = props;
+    const { cx, cy, payload, r = 5 } = props; // Default to 5 if not provided
     
     if (payload?.userCorrect === undefined || cx === undefined || cy === undefined) {
         return null;
@@ -37,7 +38,7 @@ const PerformanceDot: React.FC<PerformanceDotProps> = (props) => {
         ? getComputedStyle(document.documentElement).getPropertyValue('--bg-secondary').trim() 
         : '#ffffff';
 
-    return <Dot cx={cx} cy={cy} r={5} fill={color} stroke={dotBorderColor} strokeWidth={2} />;
+    return <Dot cx={cx} cy={cy} r={r} fill={color} stroke={dotBorderColor} strokeWidth={2} />;
 };
 
 interface TooltipProps {
@@ -109,6 +110,8 @@ interface PerformanceGraphProps {
     topicId?: string; 
     onPrev?: () => void;
     onNext?: () => void;
+    dotRadius?: number;       // Added to control dot size externally
+    activeDotRadius?: number; // Added to control hover dot size externally
 }
 
 const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ 
@@ -118,7 +121,9 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
     totalAttempts = 0,
     topicId = '',
     onPrev,
-    onNext
+    onNext,
+    dotRadius = 5,       // Default size for Topic Page
+    activeDotRadius = 6  // Default hover size for Topic Page
 }) => {
     const { theme } = useTheme();
     const PRIMING_N = 0.5;
@@ -201,7 +206,7 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
             day: 'numeric',
             year: 'numeric'
         });
-    }, [userAttempt]);
+    },[userAttempt]);
 
     const attemptNumber = totalAttempts - attemptIndex;
 
@@ -293,8 +298,8 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                                     dataKey="userScore" 
                                     stroke={themeColors.userLine} 
                                     strokeWidth={2} 
-                                    activeDot={{ r: 6, fill: themeColors.userLine, stroke: 'none' }}
-                                    dot={<PerformanceDot />}
+                                    activeDot={{ r: activeDotRadius, fill: themeColors.userLine, stroke: 'none' }}
+                                    dot={<PerformanceDot r={dotRadius} />}
                                 />
                                 <Area 
                                     type="monotone" 

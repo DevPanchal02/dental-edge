@@ -48,10 +48,10 @@ const PaceDot = (props: any) => {
         <circle 
             cx={cx} 
             cy={cy} 
-            r={5} 
+            r={3} /* Reduced from 5 to make points smaller */
             fill={fill} 
             stroke={strokeColor} 
-            strokeWidth={2} 
+            strokeWidth={1.5} 
         />
     );
 };
@@ -116,7 +116,8 @@ const PaceGraph: React.FC<PaceGraphProps> = ({
     // Flatten dictionary into Recharts-compatible array.
     const chartData: ChartDataPoint[] = useMemo(() => {
         return Array.from({ length: totalQuestions }, (_, i) => {
-            const time = userTimeSpent[i] || 0;
+            // Force Number casting to prevent string concatenation bugs on the Y-Axis
+            const time = Number(userTimeSpent[i]) || 0;
             return {
                 questionNumber: i + 1,
                 time: time,
@@ -174,8 +175,13 @@ const PaceGraph: React.FC<PaceGraphProps> = ({
                             tick={{ fontSize: 12, fill: themeColors.axis }}
                             tickLine={false} 
                             axisLine={false}
-                            tickFormatter={(value) => `${value}s`}
-                            domain={[0, (dataMax: number) => Math.max(dataMax * 1.1, targetPace * 1.1)]} 
+                            allowDecimals={false}
+                            tickFormatter={(value) => `${Math.round(value)}s`}
+                            domain={[0, (dataMax: number) => {
+                                // Clean Math limits to prevent floating point domain string issues
+                                const max = Math.max(Number(dataMax) || 0, targetPace);
+                                return Math.ceil(max * 1.2);
+                            }]} 
                         />
                         <Tooltip 
                             content={<CustomPaceTooltip />} 
@@ -201,7 +207,7 @@ const PaceGraph: React.FC<PaceGraphProps> = ({
                             dataKey="time" 
                             stroke={themeColors.line} 
                             strokeWidth={3} 
-                            activeDot={{ r: 7, fill: themeColors.targetLine, stroke: 'none' }}
+                            activeDot={{ r: 5, fill: themeColors.targetLine, stroke: 'none' }} /* Reduced from 7 */
                             dot={<PaceDot />}
                             isAnimationActive={false}
                         />

@@ -52,7 +52,7 @@ const ResultsPage: React.FC = () => {
     const[attemptMeta, setAttemptMeta] = useState<{ number: number; date: string } | null>(null);
     
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const[error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         let isMounted = true;
@@ -151,32 +151,54 @@ const ResultsPage: React.FC = () => {
     },[fullAttempt, localResult, topicId, sectionType, quizId]);
 
     const metrics = useMemo(() => {
-        if (!quizQuestions.length) return null;
+        if (!quizQuestions.length || !unifiedAttempt) return null;
 
         const totalQ = quizQuestions.length;
-        const correctIndices = localResult?.correctIndices || [];
-        const incorrectIndices = localResult?.incorrectIndices ||[];
-        const score = localResult?.score || fullAttempt?.score || 0;
+        
+        // Dynamically calculate accuracy indices to prevent cache bugs where skipped == incorrect
+        const dynamicCorrectIndices: number[] =[];
+        const dynamicIncorrectIndices: number[] =[];
+        let calculatedScore = 0;
+
+        quizQuestions.forEach((q, index) => {
+            const userAnswer = unifiedAttempt.userAnswers[index];
+            
+            // If the user actually provided an answer
+            if (userAnswer) {
+                const correctOption = q.options.find(o => o.is_correct);
+                if (correctOption && userAnswer === correctOption.label) {
+                    dynamicCorrectIndices.push(index);
+                    calculatedScore++;
+                } else {
+                    dynamicIncorrectIndices.push(index);
+                }
+            }
+            // Note: If !userAnswer, it is a skip. It goes into neither array,
+            // allowing ResultsGrid to correctly render it as 'skipped'.
+        });
+
+        // Use dynamically calculated score if possible, fallback to stored score
+        const finalScore = calculatedScore > 0 ? calculatedScore : (unifiedAttempt.score || 0);
         
         const targetPaceSeconds = Math.round((getBaseTimeLimit(topicId) * 60) / totalQ);
-        const timeSpentDict = fullAttempt?.userTimeSpent || {};
+        const timeSpentDict = unifiedAttempt.userTimeSpent || {};
         const totalTimeSeconds = Object.values(timeSpentDict).reduce((acc, curr) => acc + curr, 0);
         const avgPaceSeconds = totalTimeSeconds > 0 ? Math.round(totalTimeSeconds / totalQ) : 0;
         
         return {
             totalQ,
-            score,
-            scorePercent: ((score / totalQ) * 100).toFixed(1),
-            correctIndices,
-            incorrectIndices,
-            markedQuestions: fullAttempt?.markedQuestions || {},
+            score: finalScore,
+            scorePercent: ((finalScore / totalQ) * 100).toFixed(1),
+            correctIndices: dynamicCorrectIndices,
+            incorrectIndices: dynamicIncorrectIndices,
+            markedQuestions: unifiedAttempt.markedQuestions || {},
             timeSpentDict,
             totalTimeSeconds,
             avgPaceSeconds,
             targetPaceSeconds,
             isPaceGood: avgPaceSeconds > 0 && avgPaceSeconds <= targetPaceSeconds
         };
-    },[quizQuestions, localResult, fullAttempt, topicId]);
+    },[quizQuestions, unifiedAttempt, topicId]);
 
     const handleQuestionClick = useCallback((index: number) => {
         // FIX: We now pass unifiedAttempt?.id so local results pass 'local-preview'
@@ -284,6 +306,8 @@ const ResultsPage: React.FC = () => {
                             questions={quizQuestions}
                             userAttempt={unifiedAttempt}
                             topicId={topicId}
+                            dotRadius={3}
+                            activeDotRadius={4}
                         />
                     </div>
                 </section>
