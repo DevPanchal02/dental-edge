@@ -5,37 +5,69 @@ interface ResultsGridProps {
     totalQuestions: number;
     correctIndices: number[];
     incorrectIndices: number[];
+    skippedIndices: number[];
+    markedIndicesArray: number[];
     markedQuestions: Record<number, boolean>;
     onQuestionClick: (index: number) => void;
+    onReviewSequence: (indices: number[]) => void;
 }
 
 /**
  * Interactive map for spotting error clusters and jumping directly to review.
+ * Legend now acts as a quick-filter to launch targeted review sequences.
  */
 const ResultsGrid: React.FC<ResultsGridProps> = ({
     totalQuestions,
     correctIndices,
     incorrectIndices,
+    skippedIndices,
+    markedIndicesArray,
     markedQuestions,
-    onQuestionClick
+    onQuestionClick,
+    onReviewSequence
 }) => {
-    //lookups to prevent render blocking on 100+ question tests.
+    // Lookups to prevent render blocking on 100+ question tests.
     const { correctSet, incorrectSet } = useMemo(() => ({
         correctSet: new Set(correctIndices),
         incorrectSet: new Set(incorrectIndices)
-    }), [correctIndices, incorrectIndices]);
+    }),[correctIndices, incorrectIndices]);
 
     const gridCells = Array.from({ length: totalQuestions }, (_, i) => i);
+
+    // Helper to render interactive legend buttons with unified disabled/hover logic
+    const renderLegendButton = (label: string, typeClass: string, indices: number[], markerText: string = '') => {
+        const isEmpty = indices.length === 0;
+        const hoverText = isEmpty 
+            ? `No ${label.toLowerCase()} questions in this attempt.` 
+            : `Review all ${indices.length} ${label.toLowerCase()} questions`;
+
+        return (
+            <button 
+                className={`legend-item interactive-legend ${isEmpty ? 'disabled' : ''}`}
+                onClick={() => !isEmpty && onReviewSequence(indices)}
+                disabled={isEmpty}
+                title={hoverText}
+                aria-label={hoverText}
+            >
+                {markerText ? (
+                    <span className="legend-marker">{markerText}</span>
+                ) : (
+                    <span className={`legend-box ${typeClass}`}></span>
+                )}
+                {label} ({indices.length})
+            </button>
+        );
+    };
 
     return (
         <div className="results-grid-container">
             <div className="results-grid-header">
                 <h3>Question Breakdown</h3>
                 <div className="results-grid-legend">
-                    <span className="legend-item"><span className="legend-box correct"></span> Correct</span>
-                    <span className="legend-item"><span className="legend-box incorrect"></span> Incorrect</span>
-                    <span className="legend-item"><span className="legend-box skipped"></span> Skipped</span>
-                    <span className="legend-item">🚩 Marked</span>
+                    {renderLegendButton('Correct', 'correct', correctIndices)}
+                    {renderLegendButton('Incorrect', 'incorrect', incorrectIndices)}
+                    {renderLegendButton('Skipped', 'skipped', skippedIndices)}
+                    {renderLegendButton('Marked', '', markedIndicesArray, '🚩')}
                 </div>
             </div>
 

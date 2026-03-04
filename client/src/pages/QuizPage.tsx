@@ -71,7 +71,7 @@ const QuizTimerSync: React.FC<QuizTimerSyncProps> = ({
         if (status === 'completed' || status === 'error') {
             stopTimer();
         }
-    }, [status, timerValue, initialDuration, isCountdown, initializeTimer, startTimer, stopTimer, syncTimer]);
+    },[status, timerValue, initialDuration, isCountdown, initializeTimer, startTimer, stopTimer, syncTimer]);
 
     return null;
 };
@@ -104,11 +104,11 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Extract attempt ID and target question from router state
-    // We check both 'reviewAttemptId' (from ResultsGrid) and 'attemptId' (from PerformanceGraph)
-    const locationState = location.state as { attemptId?: string; reviewAttemptId?: string; questionIndex?: number } | null;
+    // Extract attempt ID, target question, AND target sequence from router state
+    const locationState = location.state as { attemptId?: string; reviewAttemptId?: string; questionIndex?: number; targetSequence?: number[] } | null;
     const targetAttemptId = locationState?.reviewAttemptId || locationState?.attemptId;
     const targetQuestionIndex = locationState?.questionIndex;
+    const targetSequence = locationState?.targetSequence;
 
     // The Engine handles all business logic, networking, and state transitions
     const quizEngine = useQuizEngine(
@@ -122,17 +122,24 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     
     const { isSidebarEffectivelyPinned } = useLayout();
 
-    // Ref to ensure we only auto-jump to the target question once upon loading
+    // Ref to ensure we only auto-jump to the target question/sequence once upon loading
     const hasJumpedRef = useRef(false);
 
-    // Auto-Jump Logic for Results Grid Navigation
-    // If the user clicked a specific question bubble in Results, we jump them there immediately.
+    // Auto-Jump Logic for Results Grid & Legend Navigation
     useEffect(() => {
-        if (state.status === 'reviewing_attempt' && targetQuestionIndex !== undefined && !hasJumpedRef.current) {
-            actions.jumpToQuestion(targetQuestionIndex);
-            hasJumpedRef.current = true;
+        if (state.status === 'reviewing_attempt' && !hasJumpedRef.current) {
+            // Prioritize a full sequence review if provided (e.g., clicking "Incorrect" legend)
+            if (targetSequence && targetSequence.length > 0) {
+                actions.startTargetedReview(targetSequence);
+                hasJumpedRef.current = true;
+            } 
+            // Fallback to a single question jump (e.g., clicking a specific bubble)
+            else if (targetQuestionIndex !== undefined) {
+                actions.jumpToQuestion(targetQuestionIndex);
+                hasJumpedRef.current = true;
+            }
         }
-    }, [state.status, targetQuestionIndex, actions]);
+    }, [state.status, targetSequence, targetQuestionIndex, actions]);
 
     // UI Configuration: Memoized to prevent unnecessary re-calculations
     const uiProps = useMemo(() => {

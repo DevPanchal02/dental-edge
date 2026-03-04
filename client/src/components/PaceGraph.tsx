@@ -17,6 +17,9 @@ interface PaceGraphProps {
     totalQuestions: number;
     targetPace: number; // in seconds
     correctIndices: number[];
+    onPaceIndices: number[];
+    overPaceIndices: number[];
+    onReviewSequence: (indices: number[]) => void;
 }
 
 interface ChartDataPoint {
@@ -48,7 +51,7 @@ const PaceDot = (props: any) => {
         <circle 
             cx={cx} 
             cy={cy} 
-            r={3} /* Reduced from 5 to make points smaller */
+            r={3} 
             fill={fill} 
             stroke={strokeColor} 
             strokeWidth={1.5} 
@@ -107,11 +110,14 @@ const PaceGraph: React.FC<PaceGraphProps> = ({
     userTimeSpent,
     totalQuestions,
     targetPace,
-    correctIndices
+    correctIndices,
+    onPaceIndices,
+    overPaceIndices,
+    onReviewSequence
 }) => {
     const { theme } = useTheme();
 
-    const correctSet = useMemo(() => new Set(correctIndices), [correctIndices]);
+    const correctSet = useMemo(() => new Set(correctIndices),[correctIndices]);
 
     // Flatten dictionary into Recharts-compatible array.
     const chartData: ChartDataPoint[] = useMemo(() => {
@@ -139,6 +145,27 @@ const PaceGraph: React.FC<PaceGraphProps> = ({
         badPace: '#ef4444'   
     }), [theme]);
 
+    // Helper to render interactive legend buttons with unified disabled/hover logic
+    const renderLegendButton = (label: string, color: string, indices: number[]) => {
+        const isEmpty = indices.length === 0;
+        const hoverText = isEmpty 
+            ? `No ${label.toLowerCase()} questions in this attempt.` 
+            : `Review all ${indices.length} ${label.toLowerCase()} questions`;
+
+        return (
+            <button 
+                className={`legend-item interactive-legend ${isEmpty ? 'disabled' : ''}`}
+                onClick={() => !isEmpty && onReviewSequence(indices)}
+                disabled={isEmpty}
+                title={hoverText}
+                aria-label={hoverText}
+            >
+                <span className="legend-box" style={{ backgroundColor: color, borderRadius: '50%' }}></span>
+                {label} ({indices.length})
+            </button>
+        );
+    };
+
     if (!totalQuestions) return null;
 
     return (
@@ -146,13 +173,9 @@ const PaceGraph: React.FC<PaceGraphProps> = ({
             <div className="pace-graph-header">
                 <h3>Pacing Analysis</h3>
                 <div className="pace-graph-legend">
-                    <span className="legend-item">
-                        <span className="legend-box" style={{ backgroundColor: themeColors.goodPace, borderRadius: '50%' }}></span> On Pace
-                    </span>
-                    <span className="legend-item">
-                        <span className="legend-box" style={{ backgroundColor: themeColors.badPace, borderRadius: '50%' }}></span> Over Time
-                    </span>
-                    <span className="legend-item">
+                    {renderLegendButton('On Pace', themeColors.goodPace, onPaceIndices)}
+                    {renderLegendButton('Over Time', themeColors.badPace, overPaceIndices)}
+                    <span className="legend-item non-interactive">
                         <span className="legend-line" style={{ borderBottom: `2px dashed ${themeColors.targetLine}` }}></span> Target Pace ({targetPace}s)
                     </span>
                 </div>
@@ -207,7 +230,7 @@ const PaceGraph: React.FC<PaceGraphProps> = ({
                             dataKey="time" 
                             stroke={themeColors.line} 
                             strokeWidth={3} 
-                            activeDot={{ r: 5, fill: themeColors.targetLine, stroke: 'none' }} /* Reduced from 7 */
+                            activeDot={{ r: 5, fill: themeColors.targetLine, stroke: 'none' }} 
                             dot={<PaceDot />}
                             isAnimationActive={false}
                         />

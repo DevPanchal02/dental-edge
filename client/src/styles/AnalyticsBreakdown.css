@@ -55,6 +55,32 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    width: 100%; /* Ensure it fills the grid cell */
+}
+
+/* --- INTERACTIVE ROW STYLES --- */
+.category-row.interactive {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-row.interactive:hover:not(.disabled) {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.category-row.disabled {
+    opacity: 0.6;
+    filter: grayscale(0.8);
+    cursor: not-allowed;
 }
 
 .category-label {
@@ -68,6 +94,7 @@
     flex-direction: column;
     /* UPDATE: Tighten space between You and Average bars */
     gap: 6px; 
+    width: 100%;
 }
 
 .bar-group {
@@ -100,6 +127,11 @@
     background-color: var(--bg-secondary); 
     border-radius: 2px; 
     overflow: hidden;
+}
+
+/* Ensure track background is visible on hover inside the button */
+.category-row.interactive:hover .progress-track {
+    background-color: var(--bg-primary);
 }
 
 .progress-fill {

@@ -19,21 +19,20 @@ const getBaseTimeLimitMinutes = (topicId: string = ''): number => {
 interface PerformanceDotProps {
     cx?: number;
     cy?: number;
-    r?: number; // Added radius prop to allow dynamic sizing
+    r?: number; 
     payload?: {
         userCorrect?: boolean;
     };
 }
 
-// Hardcode bright hexes so points pop against both light/dark backgrounds.
 const PerformanceDot: React.FC<PerformanceDotProps> = (props) => {
-    const { cx, cy, payload, r = 5 } = props; // Default to 5 if not provided
+    const { cx, cy, payload, r = 5 } = props; 
     
     if (payload?.userCorrect === undefined || cx === undefined || cy === undefined) {
         return null;
     }
 
-    const color = payload.userCorrect ? '#10b981' : '#ef4444'; // Bright Emerald / Bright Red
+    const color = payload.userCorrect ? '#10b981' : '#ef4444'; 
     const dotBorderColor = typeof document !== 'undefined' 
         ? getComputedStyle(document.documentElement).getPropertyValue('--bg-secondary').trim() 
         : '#ffffff';
@@ -52,10 +51,7 @@ const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
         const data = payload[0].payload;
         const isCorrect = data.userCorrect;
         
-        // Explicitly color the left border based on correctness
         const borderColor = isCorrect ? '#10b981' : '#ef4444';
-        
-        // Evaluate if user met the target time
         const isGoodTime = data.timeSpent <= data.maintenancePace;
 
         return (
@@ -75,7 +71,6 @@ const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
 
                     <div className="compact-row">
                         <span className="compact-label">Time:</span>
-                        {/* Flex container to separate user time badge and target text */}
                         <span className="compact-value time-group">
                             <span className={`time-badge ${isGoodTime ? 'good' : 'bad'}`}>
                                 {data.timeSpent}s
@@ -110,8 +105,11 @@ interface PerformanceGraphProps {
     topicId?: string; 
     onPrev?: () => void;
     onNext?: () => void;
-    dotRadius?: number;       // Added to control dot size externally
-    activeDotRadius?: number; // Added to control hover dot size externally
+    dotRadius?: number;       
+    activeDotRadius?: number; 
+    correctIndices?: number[];
+    incorrectIndices?: number[];
+    onReviewSequence?: (indices: number[]) => void;
 }
 
 const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ 
@@ -122,8 +120,11 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
     topicId = '',
     onPrev,
     onNext,
-    dotRadius = 5,       // Default size for Topic Page
-    activeDotRadius = 6  // Default hover size for Topic Page
+    dotRadius = 5,       
+    activeDotRadius = 6,
+    correctIndices,
+    incorrectIndices,
+    onReviewSequence
 }) => {
     const { theme } = useTheme();
     const PRIMING_N = 0.5;
@@ -135,7 +136,6 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
         let cumulativeUserCorrect = 0;
         let cumulativeAverageCorrect = 0;
 
-        // Calculate Target Pace
         const timeLimitMinutes = getBaseTimeLimitMinutes(topicId);
         const totalSeconds = timeLimitMinutes * 60;
         const maintenancePace = questions.length > 0 
@@ -157,7 +157,6 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
             let timeSpent = 0;
 
             if (userAttempt) {
-                // Correctness
                 const userAnswer = userAttempt.userAnswers[index];
                 const correctOption = q.options.find(opt => opt.is_correct);
                 userCorrect = (!!userAnswer && !!correctOption && userAnswer === correctOption.label);
@@ -166,8 +165,6 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                     cumulativeUserCorrect++;
                 }
                 userScore = (cumulativeUserCorrect + PRIMING_N) / (questionsAnswered + 2 * PRIMING_N);
-
-                // Time Spent
                 timeSpent = userAttempt.userTimeSpent?.[index] || 0;
             }
 
@@ -178,7 +175,6 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                 averageScore: averageScore,
                 userScore: userScore,
                 userCorrect: userCorrect,
-                
                 category: q.category || 'General',
                 percentCorrect: analyticsPercent, 
                 timeSpent: timeSpent,
@@ -191,11 +187,11 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
         axis: theme === 'dark' ? 'var(--text-secondary)' : '#a0a0a0',
         grid: theme === 'dark' ? 'rgba(255, 255, 255, 0.07)' : 'rgba(0, 0, 0, 0.07)',
         averageLine: theme === 'dark' ? '#666' : '#ccc',
-        // Use a subtle, semi-transparent teal so the bright red/green dots stand out
         userLine: theme === 'dark' ? 'rgba(87, 142, 126, 0.6)' : 'rgba(87, 142, 126, 0.4)',
         deltaGreen: 'rgba(40, 167, 69, 0.15)',
         deltaRed: 'rgba(220, 53, 69, 0.15)',
         cursor: theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
+        targetLine: theme === 'dark' ? '#F5ECD5' : '#3D3D3D',
     }), [theme]);
 
     const dateString = useMemo(() => {
@@ -210,6 +206,26 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
 
     const attemptNumber = totalAttempts - attemptIndex;
 
+    const renderLegendButton = (label: string, color: string, indices: number[]) => {
+        const isEmpty = indices.length === 0;
+        const hoverText = isEmpty 
+            ? `No ${label.toLowerCase()} questions in this attempt.` 
+            : `Review all ${indices.length} ${label.toLowerCase()} questions`;
+
+        return (
+            <button 
+                className={`legend-item interactive-legend ${isEmpty ? 'disabled' : ''}`}
+                onClick={() => !isEmpty && onReviewSequence && onReviewSequence(indices)}
+                disabled={isEmpty}
+                title={hoverText}
+                aria-label={hoverText}
+            >
+                <span className="legend-box" style={{ backgroundColor: color, borderRadius: '50%' }}></span>
+                {label} ({indices.length})
+            </button>
+        );
+    };
+
     if (!questions || questions.length === 0) {
         return (
             <div>
@@ -221,45 +237,87 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
 
     return (
         <>
-            <div className="graph-header-container">
-                <h3 className="graph-title">Performance Graph</h3>
+            <div className="graph-header-container" style={{ 
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center', 
+                borderBottom: '1px solid var(--border-primary)', 
+                paddingBottom: '15px',
+                marginBottom: '25px',
+                minHeight: '40px' // Ensure consistent height with PaceGraph
+            }}>
+                {/* Left: Title */}
+                <h3 className="graph-title" style={{ margin: 0 }}>Performance Graph</h3>
                 
-                {userAttempt && totalAttempts > 0 && (
-                    <div className="graph-navigation-controls">
-                        <button 
-                            className="graph-nav-button" 
-                            onClick={onPrev}
-                            disabled={attemptIndex >= totalAttempts - 1}
-                            title="Older Attempt"
-                        >
-                            <FaChevronLeft />
-                        </button>
-                        
-                        <div className="graph-attempt-info">
-                            <span className="attempt-label">Attempt #{attemptNumber}</span>
-                            <span className="attempt-date">{dateString}</span>
-                        </div>
+                {/* Right: Legend + Nav Controls Grouped */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+                    
+                    {/* LEGEND */}
+                    <div className="pace-graph-legend" style={{ display: 'flex', gap: '15px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+                        {onReviewSequence && correctIndices && incorrectIndices ? (
+                            <>
+                                {renderLegendButton('Correct', '#10b981', correctIndices)}
+                                {renderLegendButton('Incorrect', '#ef4444', incorrectIndices)}
+                            </>
+                        ) : (
+                            <>
+                                <span className="legend-item non-interactive">
+                                    <span className="legend-box" style={{ backgroundColor: '#10b981', borderRadius: '50%' }}></span> Correct
+                                </span>
+                                <span className="legend-item non-interactive">
+                                    <span className="legend-box" style={{ backgroundColor: '#ef4444', borderRadius: '50%' }}></span> Incorrect
+                                </span>
+                            </>
+                        )}
 
-                        {/* FIX: Link to ResultsPage, not QuizPage */}
-                        <Link 
-                            to={`/app/results/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
-                            state={{ attemptId: userAttempt.id }}
-                            className="graph-view-button"
-                            title="View Results"
-                        >
-                            <FaEye />
-                        </Link>
-
-                        <button 
-                            className="graph-nav-button" 
-                            onClick={onNext}
-                            disabled={attemptIndex <= 0}
-                            title="Newer Attempt"
-                        >
-                            <FaChevronRight />
-                        </button>
+                        <span className="legend-item non-interactive" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                            <span style={{ 
+                                width: '25px', 
+                                height: '2px', 
+                                backgroundColor: themeColors.averageLine, 
+                                display: 'inline-block' 
+                            }}></span> 
+                            Average
+                        </span>
                     </div>
-                )}
+
+                    {/* NAV CONTROLS (Only on Topic Page) */}
+                    {userAttempt && totalAttempts > 0 && (
+                        <div className="graph-navigation-controls" style={{ marginLeft: '10px' }}>
+                            <button 
+                                className="graph-nav-button" 
+                                onClick={onPrev}
+                                disabled={attemptIndex >= totalAttempts - 1}
+                                title="Older Attempt"
+                            >
+                                <FaChevronLeft />
+                            </button>
+                            
+                            <div className="graph-attempt-info">
+                                <span className="attempt-label">Attempt #{attemptNumber}</span>
+                                <span className="attempt-date">{dateString}</span>
+                            </div>
+
+                            <Link 
+                                to={`/app/results/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
+                                state={{ attemptId: userAttempt.id }}
+                                className="graph-view-button"
+                                title="View Results"
+                            >
+                                <FaEye />
+                            </Link>
+
+                            <button 
+                                className="graph-nav-button" 
+                                onClick={onNext}
+                                disabled={attemptIndex <= 0}
+                                title="Newer Attempt"
+                            >
+                                <FaChevronRight />
+                            </button>
+                        </div>
+                    )}
+                </div>
             </div>
 
             <div style={{ position: 'relative', width: '100%', height: '300px' }}>

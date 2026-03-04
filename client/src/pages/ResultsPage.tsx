@@ -44,15 +44,15 @@ const ResultsPage: React.FC = () => {
     const targetAttemptId = (location.state as { attemptId?: string } | null)?.attemptId;
 
     const [quizQuestions, setQuizQuestions] = useState<Question[]>([]);
-    const[topicName, setTopicName] = useState<string>('');
-    const[quizName, setQuizName] = useState<string>('');
+    const [topicName, setTopicName] = useState<string>('');
+    const [quizName, setQuizName] = useState<string>('');
     
     const [localResult, setLocalResult] = useState<QuizResult | null>(null);
     const [fullAttempt, setFullAttempt] = useState<QuizAttempt | null>(null);
     const[attemptMeta, setAttemptMeta] = useState<{ number: number; date: string } | null>(null);
     
     const [isLoading, setIsLoading] = useState<boolean>(true);
-    const[error, setError] = useState<string | null>(null);
+    const [error, setError] = useState<string | null>(null);
 
     useEffect(() => {
         let isMounted = true;
@@ -75,7 +75,7 @@ const ResultsPage: React.FC = () => {
             }
 
             try {
-                const[topicData, allQuizData] = await Promise.all([
+                const [topicData, allQuizData] = await Promise.all([
                     fetchTopicData(topicId),
                     getQuizData(topicId, sectionType, quizId)
                 ]);
@@ -150,20 +150,50 @@ const ResultsPage: React.FC = () => {
         };
     },[fullAttempt, localResult, topicId, sectionType, quizId]);
 
+    // Construct arrays of indices for targeted review sequences
     const metrics = useMemo(() => {
         if (!quizQuestions.length || !unifiedAttempt) return null;
 
         const totalQ = quizQuestions.length;
+        const targetPaceSeconds = Math.round((getBaseTimeLimit(topicId) * 60) / totalQ);
+        const timeSpentDict = unifiedAttempt.userTimeSpent || {};
+        const totalTimeSeconds = Object.values(timeSpentDict).reduce((acc, curr) => acc + curr, 0);
+        const avgPaceSeconds = totalTimeSeconds > 0 ? Math.round(totalTimeSeconds / totalQ) : 0;
         
-        // Dynamically calculate accuracy indices to prevent cache bugs where skipped == incorrect
         const dynamicCorrectIndices: number[] =[];
-        const dynamicIncorrectIndices: number[] =[];
+        const dynamicIncorrectIndices: number[] = [];
+        const skippedIndices: number[] =[];
+        const markedIndicesArray: number[] = [];
+        const onPaceIndices: number[] =[];
+        const overPaceIndices: number[] = [];
+        const categoryIndices: Record<string, number[]> = {};
+
         let calculatedScore = 0;
 
         quizQuestions.forEach((q, index) => {
             const userAnswer = unifiedAttempt.userAnswers[index];
+            const category = q.category ? q.category.trim() : 'General';
             
-            // If the user actually provided an answer
+            // Group by Category
+            if (!categoryIndices[category]) {
+                categoryIndices[category] = [];
+            }
+            categoryIndices[category].push(index);
+
+            // Group by Marked
+            if (unifiedAttempt.markedQuestions?.[index]) {
+                markedIndicesArray.push(index);
+            }
+
+            // Group by Pace
+            const timeSpent = timeSpentDict[index] || 0;
+            if (timeSpent > targetPaceSeconds) {
+                overPaceIndices.push(index);
+            } else {
+                onPaceIndices.push(index);
+            }
+            
+            // Group by Accuracy & Completion
             if (userAnswer) {
                 const correctOption = q.options.find(o => o.is_correct);
                 if (correctOption && userAnswer === correctOption.label) {
@@ -172,18 +202,12 @@ const ResultsPage: React.FC = () => {
                 } else {
                     dynamicIncorrectIndices.push(index);
                 }
+            } else {
+                skippedIndices.push(index);
             }
-            // Note: If !userAnswer, it is a skip. It goes into neither array,
-            // allowing ResultsGrid to correctly render it as 'skipped'.
         });
 
-        // Use dynamically calculated score if possible, fallback to stored score
         const finalScore = calculatedScore > 0 ? calculatedScore : (unifiedAttempt.score || 0);
-        
-        const targetPaceSeconds = Math.round((getBaseTimeLimit(topicId) * 60) / totalQ);
-        const timeSpentDict = unifiedAttempt.userTimeSpent || {};
-        const totalTimeSeconds = Object.values(timeSpentDict).reduce((acc, curr) => acc + curr, 0);
-        const avgPaceSeconds = totalTimeSeconds > 0 ? Math.round(totalTimeSeconds / totalQ) : 0;
         
         return {
             totalQ,
@@ -191,6 +215,11 @@ const ResultsPage: React.FC = () => {
             scorePercent: ((finalScore / totalQ) * 100).toFixed(1),
             correctIndices: dynamicCorrectIndices,
             incorrectIndices: dynamicIncorrectIndices,
+            skippedIndices,
+            markedIndicesArray,
+            onPaceIndices,
+            overPaceIndices,
+            categoryIndices,
             markedQuestions: unifiedAttempt.markedQuestions || {},
             timeSpentDict,
             totalTimeSeconds,
@@ -200,9 +229,8 @@ const ResultsPage: React.FC = () => {
         };
     },[quizQuestions, unifiedAttempt, topicId]);
 
+    // Single Question Jump (Existing)
     const handleQuestionClick = useCallback((index: number) => {
-        // FIX: We now pass unifiedAttempt?.id so local results pass 'local-preview'
-        // instead of undefined. This prevents the quiz from falling back to Active mode.
         navigate(`/app/quiz/${topicId}/${sectionType}/${quizId}`, { 
             state: { 
                 reviewAttemptId: unifiedAttempt?.id, 
@@ -210,6 +238,17 @@ const ResultsPage: React.FC = () => {
             } 
         });
     },[navigate, topicId, sectionType, quizId, unifiedAttempt?.id]);
+
+    // Targeted Sequence Jump (New)
+    const handleTargetedReview = useCallback((indices: number[]) => {
+        if (!indices || indices.length === 0) return;
+        navigate(`/app/quiz/${topicId}/${sectionType}/${quizId}`, { 
+            state: { 
+                reviewAttemptId: unifiedAttempt?.id, 
+                targetSequence: indices 
+            } 
+        });
+    }, [navigate, topicId, sectionType, quizId, unifiedAttempt?.id]);
 
     if (isLoading) return <LoadingSpinner message="Analyzing Results..." />;
     
@@ -284,8 +323,11 @@ const ResultsPage: React.FC = () => {
                         totalQuestions={metrics.totalQ}
                         correctIndices={metrics.correctIndices}
                         incorrectIndices={metrics.incorrectIndices}
+                        skippedIndices={metrics.skippedIndices}
+                        markedIndicesArray={metrics.markedIndicesArray}
                         markedQuestions={metrics.markedQuestions}
                         onQuestionClick={handleQuestionClick}
+                        onReviewSequence={handleTargetedReview}
                     />
                 </div>
             </section>
@@ -299,6 +341,9 @@ const ResultsPage: React.FC = () => {
                             totalQuestions={metrics.totalQ}
                             targetPace={metrics.targetPaceSeconds}
                             correctIndices={metrics.correctIndices}
+                            onPaceIndices={metrics.onPaceIndices}
+                            overPaceIndices={metrics.overPaceIndices}
+                            onReviewSequence={handleTargetedReview}
                         />
                     </div>
                     <div className="graph-panel transparent-card">
@@ -308,6 +353,9 @@ const ResultsPage: React.FC = () => {
                             topicId={topicId}
                             dotRadius={3}
                             activeDotRadius={4}
+                            correctIndices={metrics.correctIndices}
+                            incorrectIndices={metrics.incorrectIndices}
+                            onReviewSequence={handleTargetedReview}
                         />
                     </div>
                 </section>
@@ -319,6 +367,8 @@ const ResultsPage: React.FC = () => {
                     <AnalyticsBreakdown 
                         userAttempt={unifiedAttempt}
                         questions={quizQuestions}
+                        categoryIndices={metrics.categoryIndices}
+                        onReviewSequence={handleTargetedReview}
                     />
                 </div>
             </section>

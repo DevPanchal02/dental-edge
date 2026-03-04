@@ -5,9 +5,17 @@ import { QuizAttempt, Question } from '../../types/quiz.types';
 interface AnalyticsBreakdownProps {
     userAttempt: QuizAttempt | null | undefined;
     questions: Question[];
+    // Optional because TopicPage uses this component without these props
+    categoryIndices?: Record<string, number[]>;
+    onReviewSequence?: (indices: number[]) => void;
 }
 
-const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({ userAttempt, questions }) => {
+const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({ 
+    userAttempt, 
+    questions,
+    categoryIndices,
+    onReviewSequence
+}) => {
     
     // --- Data Processing ---
     const categoryStats = useMemo(() => {
@@ -65,41 +73,72 @@ const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({ userAttempt, qu
             </div>
             
             <div className="breakdown-content">
-                {categoryStats.map((stat) => (
-                    <div key={stat.category} className="category-row">
-                        <div className="category-label">{stat.category}</div>
-                        
-                        <div className="bar-container">
-                            {/* User Score Bar */}
-                            <div className="bar-group">
-                                <div className="bar-info">
-                                    <span className="bar-label">You</span>
-                                    <span className="bar-percent">{stat.userPercent.toFixed(0)}%</span>
-                                </div>
-                                <div className="progress-track">
-                                    <div 
-                                        className="progress-fill user-fill" 
-                                        style={{ width: `${stat.userPercent}%` }}
-                                    ></div>
-                                </div>
-                            </div>
+                {categoryStats.map((stat) => {
+                    // Determine interactivity
+                    const indices = categoryIndices ? (categoryIndices[stat.category] || []) : [];
+                    const isInteractive = !!onReviewSequence && !!categoryIndices;
+                    const isDisabled = isInteractive && indices.length === 0;
+                    
+                    const hoverTitle = isInteractive
+                        ? (isDisabled 
+                            ? `No questions found for ${stat.category}` 
+                            : `Review ${indices.length} questions in ${stat.category}`)
+                        : undefined;
 
-                            {/* Average Score Bar */}
-                            <div className="bar-group">
-                                <div className="bar-info">
-                                    <span className="bar-label">Average</span>
-                                    <span className="bar-percent">{stat.avgPercent.toFixed(0)}%</span>
+                    // Common content for the row
+                    const RowContent = (
+                        <>
+                            <div className="category-label">{stat.category}</div>
+                            <div className="bar-container">
+                                {/* User Score Bar */}
+                                <div className="bar-group">
+                                    <div className="bar-info">
+                                        <span className="bar-label">You</span>
+                                        <span className="bar-percent">{stat.userPercent.toFixed(0)}%</span>
+                                    </div>
+                                    <div className="progress-track">
+                                        <div 
+                                            className="progress-fill user-fill" 
+                                            style={{ width: `${stat.userPercent}%` }}
+                                        ></div>
+                                    </div>
                                 </div>
-                                <div className="progress-track">
-                                    <div 
-                                        className="progress-fill avg-fill" 
-                                        style={{ width: `${stat.avgPercent}%` }}
-                                    ></div>
+
+                                {/* Average Score Bar */}
+                                <div className="bar-group">
+                                    <div className="bar-info">
+                                        <span className="bar-label">Average</span>
+                                        <span className="bar-percent">{stat.avgPercent.toFixed(0)}%</span>
+                                    </div>
+                                    <div className="progress-track">
+                                        <div 
+                                            className="progress-fill avg-fill" 
+                                            style={{ width: `${stat.avgPercent}%` }}
+                                        ></div>
+                                    </div>
                                 </div>
                             </div>
+                        </>
+                    );
+
+                    // Render as Button if interactive, Div if not
+                    return isInteractive ? (
+                        <button 
+                            key={stat.category}
+                            className={`category-row interactive ${isDisabled ? 'disabled' : ''}`}
+                            onClick={() => !isDisabled && onReviewSequence && onReviewSequence(indices)}
+                            disabled={isDisabled}
+                            title={hoverTitle}
+                            aria-label={hoverTitle}
+                        >
+                            {RowContent}
+                        </button>
+                    ) : (
+                        <div key={stat.category} className="category-row">
+                            {RowContent}
                         </div>
-                    </div>
-                ))}
+                    );
+                })}
             </div>
         </div>
     );
