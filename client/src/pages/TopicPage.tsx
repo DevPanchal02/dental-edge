@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
+import { FaChevronLeft, FaChevronRight, FaEye } from 'react-icons/fa';
 import { fetchTopicData } from '../services/loader';
 import { getCompletedAttemptsForQuiz, getQuizAnalytics } from '../services/api';
 import { useAuth } from '../context/AuthContext';
@@ -26,21 +27,21 @@ function TopicPage() {
     const { userProfile } = useAuth();
     const navigate = useNavigate();
 
-    const [topicData, setTopicData] = useState<TopicStructure | null>(null);
+    const[topicData, setTopicData] = useState<TopicStructure | null>(null);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
-    const [isUpgradeModalOpen, setIsUpgradeModalOpen] = useState<boolean>(false);
+    const[isUpgradeModalOpen, setIsUpgradeModalOpen] = useState<boolean>(false);
 
-    const [activeTab, setActiveTab] = useState<'practice' | 'qbank'>('practice');
-    const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
+    const[activeTab, setActiveTab] = useState<'practice' | 'qbank'>('practice');
+    const[selectedItemId, setSelectedItemId] = useState<string | null>(null);
     const [selectedItemType, setSelectedItemType] = useState<SectionType | null>('practice');
     
     // Analytics Data State
-    const [analyticsData, setAnalyticsData] = useState<AnalyticsState>({ questions: [], attempts: [] });
-    const [isAnalyticsLoading, setIsAnalyticsLoading] = useState<boolean>(false);
+    const[analyticsData, setAnalyticsData] = useState<AnalyticsState>({ questions: [], attempts: [] });
+    const[isAnalyticsLoading, setIsAnalyticsLoading] = useState<boolean>(false);
 
     // Attempt Navigation State
-    const [selectedAttemptIndex, setSelectedAttemptIndex] = useState<number>(0);
+    const[selectedAttemptIndex, setSelectedAttemptIndex] = useState<number>(0);
 
     // Reset selection on topic change
     useEffect(() => {
@@ -54,7 +55,7 @@ function TopicPage() {
     // Reset attempt index when selecting a new quiz item
     useEffect(() => {
         setSelectedAttemptIndex(0);
-    },[selectedItemId, selectedItemType]);
+    }, [selectedItemId, selectedItemType]);
 
     // Load Topic Data
     useEffect(() => {
@@ -111,7 +112,7 @@ function TopicPage() {
         loadData();
 
         return () => { isMounted = false; };
-    },[topicId, activeTab]); 
+    }, [topicId, activeTab]); 
 
     // Load Analytics
     useEffect(() => {
@@ -123,7 +124,7 @@ function TopicPage() {
         const loadAnalytics = async () => {
             setIsAnalyticsLoading(true);
             try {
-                const [questions, attempts] = await Promise.all([
+                const[questions, attempts] = await Promise.all([
                     getQuizAnalytics({ topicId, sectionType: selectedItemType, quizId: selectedItemId }),
                     getCompletedAttemptsForQuiz({ topicId, sectionType: selectedItemType, quizId: selectedItemId })
                 ]);
@@ -177,7 +178,7 @@ function TopicPage() {
         if (topicId) {
             navigate(`/app/quiz/${topicId}/${itemType}/${itemId}`);
         }
-    }, [topicId, navigate]);
+    },[topicId, navigate]);
 
     const handleLockedItemClick = useCallback(() => {
         setIsUpgradeModalOpen(true);
@@ -195,8 +196,8 @@ function TopicPage() {
     // Sort attempts by date descending (Newest first)
     const sortedAttempts = useMemo(() => {
         return analyticsData.attempts?.length > 0 
-            ?[...analyticsData.attempts].sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0)) 
-            : [];
+            ? [...analyticsData.attempts].sort((a, b) => (b.completedAt || 0) - (a.completedAt || 0)) 
+            :[];
     }, [analyticsData.attempts]);
 
     const currentAttempt = sortedAttempts[selectedAttemptIndex] || null;
@@ -205,7 +206,7 @@ function TopicPage() {
         if (selectedAttemptIndex < sortedAttempts.length - 1) {
             setSelectedAttemptIndex(prev => prev + 1);
         }
-    }, [selectedAttemptIndex, sortedAttempts.length]);
+    },[selectedAttemptIndex, sortedAttempts.length]);
 
     const handleNextAttempt = useCallback(() => {
         if (selectedAttemptIndex > 0) {
@@ -225,7 +226,6 @@ function TopicPage() {
         return <div className="page-info">Select a topic to begin.</div>;
     }
 
-    // Strip out the inline style parameter. The parent `<main>` container in Layout.tsx controls the layout.
     return (
         <>
             <div className="topic-page-container">
@@ -248,15 +248,56 @@ function TopicPage() {
                             <LoadingSpinner message="Loading Analytics..." />
                         ) : (
                             <>
+                                {/* MASTER CONTROLLER: Simplified - No Title, Just Controls */}
+                                {sortedAttempts.length > 0 && currentAttempt && (
+                                    <div className="analytics-master-control">
+                                        <div className="attempt-navigation-controls">
+                                            <button 
+                                                className="attempt-nav-button" 
+                                                onClick={handlePrevAttempt}
+                                                disabled={selectedAttemptIndex >= sortedAttempts.length - 1}
+                                                title="Older Attempt"
+                                            >
+                                                <FaChevronLeft />
+                                            </button>
+                                            
+                                            <div className="attempt-info">
+                                                <span className="attempt-label">Attempt #{sortedAttempts.length - selectedAttemptIndex}</span>
+                                                <span className="attempt-date">
+                                                    {new Date(currentAttempt.completedAt || currentAttempt.createdAt || Date.now()).toLocaleDateString('en-US', {
+                                                        month: 'short',
+                                                        day: 'numeric',
+                                                        year: 'numeric'
+                                                    })}
+                                                </span>
+                                            </div>
+
+                                            <Link 
+                                                to={`/app/results/${currentAttempt.topicId}/${currentAttempt.sectionType}/${currentAttempt.quizId}`}
+                                                state={{ attemptId: currentAttempt.id }}
+                                                className="attempt-view-button"
+                                                title="View Full Results"
+                                            >
+                                                <FaEye />
+                                            </Link>
+
+                                            <button 
+                                                className="attempt-nav-button" 
+                                                onClick={handleNextAttempt}
+                                                disabled={selectedAttemptIndex <= 0}
+                                                title="Newer Attempt"
+                                            >
+                                                <FaChevronRight />
+                                            </button>
+                                        </div>
+                                    </div>
+                                )}
+
                                 <div className="analytics-component graph">
                                     <PerformanceGraph 
                                         questions={analyticsData.questions}
                                         userAttempt={currentAttempt}
-                                        attemptIndex={selectedAttemptIndex}
-                                        totalAttempts={sortedAttempts.length}
                                         topicId={topicId} 
-                                        onPrev={handlePrevAttempt}
-                                        onNext={handleNextAttempt}
                                     />
                                 </div>
                                 <div className="analytics-component breakdown">

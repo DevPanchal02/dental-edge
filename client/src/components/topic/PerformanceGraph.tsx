@@ -1,7 +1,5 @@
 import React, { useMemo } from 'react';
 import { ResponsiveContainer, LineChart, Line, XAxis, YAxis, Tooltip, Area, CartesianGrid, ReferenceLine, Dot } from 'recharts';
-import { FaChevronLeft, FaChevronRight, FaEye } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
 import '../../styles/PerformanceGraph.css';
 import { useTheme } from '../../context/ThemeContext';
 import { Question, QuizAttempt } from '../../types/quiz.types';
@@ -100,11 +98,7 @@ const CustomTooltip: React.FC<TooltipProps> = ({ active, payload, label }) => {
 interface PerformanceGraphProps {
     questions: Question[];
     userAttempt: QuizAttempt | null | undefined;
-    attemptIndex?: number;
-    totalAttempts?: number;
     topicId?: string; 
-    onPrev?: () => void;
-    onNext?: () => void;
     dotRadius?: number;       
     activeDotRadius?: number; 
     correctIndices?: number[];
@@ -115,11 +109,7 @@ interface PerformanceGraphProps {
 const PerformanceGraph: React.FC<PerformanceGraphProps> = ({ 
     questions, 
     userAttempt,
-    attemptIndex = 0,
-    totalAttempts = 0,
     topicId = '',
-    onPrev,
-    onNext,
     dotRadius = 5,       
     activeDotRadius = 6,
     correctIndices,
@@ -181,7 +171,7 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                 maintenancePace: maintenancePace
             };
         });
-    }, [questions, userAttempt, topicId]);
+    },[questions, userAttempt, topicId]);
 
     const themeColors = useMemo(() => ({
         axis: theme === 'dark' ? 'var(--text-secondary)' : '#a0a0a0',
@@ -193,18 +183,6 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
         cursor: theme === 'dark' ? 'rgba(255, 255, 255, 0.1)' : 'rgba(0, 0, 0, 0.1)',
         targetLine: theme === 'dark' ? '#F5ECD5' : '#3D3D3D',
     }), [theme]);
-
-    const dateString = useMemo(() => {
-        if (!userAttempt) return '';
-        const timestamp = userAttempt.completedAt || userAttempt.createdAt || Date.now();
-        return new Date(timestamp).toLocaleDateString('en-US', {
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric'
-        });
-    },[userAttempt]);
-
-    const attemptNumber = totalAttempts - attemptIndex;
 
     const renderLegendButton = (label: string, color: string, indices: number[]) => {
         const isEmpty = indices.length === 0;
@@ -228,95 +206,50 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
 
     if (!questions || questions.length === 0) {
         return (
-            <div>
-                 <div className="graph-header"><h3 className="graph-title">Performance Graph</h3></div>
+            <div className="performance-graph-container">
+                 <div className="performance-graph-header">
+                     <h3>Performance Graph</h3>
+                 </div>
                  <div className="graph-loading-placeholder"><p>No data to display.</p></div>
             </div>
         );
     }
 
     return (
-        <>
-            <div className="graph-header-container" style={{ 
-                display: 'flex',
-                justifyContent: 'space-between',
-                alignItems: 'center', 
-                borderBottom: '1px solid var(--border-primary)', 
-                paddingBottom: '15px',
-                marginBottom: '25px',
-                minHeight: '40px' // Ensure consistent height with PaceGraph
-            }}>
-                {/* Left: Title */}
-                <h3 className="graph-title" style={{ margin: 0 }}>Performance Graph</h3>
+        <div className="performance-graph-container">
+            {/* 
+              Reusing the clean structure from PaceGraph to ensure perfect 
+              alignment when placed side-by-side on the Results Page 
+            */}
+            <div className="performance-graph-header">
+                <h3>Performance Graph</h3>
                 
-                {/* Right: Legend + Nav Controls Grouped */}
-                <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
-                    
-                    {/* LEGEND */}
-                    <div className="pace-graph-legend" style={{ display: 'flex', gap: '15px', fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
-                        {onReviewSequence && correctIndices && incorrectIndices ? (
-                            <>
-                                {renderLegendButton('Correct', '#10b981', correctIndices)}
-                                {renderLegendButton('Incorrect', '#ef4444', incorrectIndices)}
-                            </>
-                        ) : (
-                            <>
-                                <span className="legend-item non-interactive">
-                                    <span className="legend-box" style={{ backgroundColor: '#10b981', borderRadius: '50%' }}></span> Correct
-                                </span>
-                                <span className="legend-item non-interactive">
-                                    <span className="legend-box" style={{ backgroundColor: '#ef4444', borderRadius: '50%' }}></span> Incorrect
-                                </span>
-                            </>
-                        )}
-
-                        <span className="legend-item non-interactive" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                            <span style={{ 
-                                width: '25px', 
-                                height: '2px', 
-                                backgroundColor: themeColors.averageLine, 
-                                display: 'inline-block' 
-                            }}></span> 
-                            Average
-                        </span>
-                    </div>
-
-                    {/* NAV CONTROLS (Only on Topic Page) */}
-                    {userAttempt && totalAttempts > 0 && (
-                        <div className="graph-navigation-controls" style={{ marginLeft: '10px' }}>
-                            <button 
-                                className="graph-nav-button" 
-                                onClick={onPrev}
-                                disabled={attemptIndex >= totalAttempts - 1}
-                                title="Older Attempt"
-                            >
-                                <FaChevronLeft />
-                            </button>
-                            
-                            <div className="graph-attempt-info">
-                                <span className="attempt-label">Attempt #{attemptNumber}</span>
-                                <span className="attempt-date">{dateString}</span>
-                            </div>
-
-                            <Link 
-                                to={`/app/results/${userAttempt.topicId}/${userAttempt.sectionType}/${userAttempt.quizId}`}
-                                state={{ attemptId: userAttempt.id }}
-                                className="graph-view-button"
-                                title="View Results"
-                            >
-                                <FaEye />
-                            </Link>
-
-                            <button 
-                                className="graph-nav-button" 
-                                onClick={onNext}
-                                disabled={attemptIndex <= 0}
-                                title="Newer Attempt"
-                            >
-                                <FaChevronRight />
-                            </button>
-                        </div>
+                <div className="performance-graph-legend">
+                    {onReviewSequence && correctIndices && incorrectIndices ? (
+                        <>
+                            {renderLegendButton('Correct', '#10b981', correctIndices)}
+                            {renderLegendButton('Incorrect', '#ef4444', incorrectIndices)}
+                        </>
+                    ) : (
+                        <>
+                            <span className="legend-item non-interactive">
+                                <span className="legend-box" style={{ backgroundColor: '#10b981', borderRadius: '50%' }}></span> Correct
+                            </span>
+                            <span className="legend-item non-interactive">
+                                <span className="legend-box" style={{ backgroundColor: '#ef4444', borderRadius: '50%' }}></span> Incorrect
+                            </span>
+                        </>
                     )}
+
+                    <span className="legend-item non-interactive" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                        <span style={{ 
+                            width: '25px', 
+                            height: '2px', 
+                            backgroundColor: themeColors.averageLine, 
+                            display: 'inline-block' 
+                        }}></span> 
+                        Average
+                    </span>
                 </div>
             </div>
 
@@ -329,7 +262,7 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                                 <stop offset="50%" stopColor={themeColors.deltaRed} stopOpacity={1} />
                             </linearGradient>
                         </defs>
-                        <CartesianGrid stroke={themeColors.grid} strokeDasharray="3 3" />
+                        <CartesianGrid stroke={themeColors.grid} strokeDasharray="3 3" vertical={false} />
                         <XAxis 
                             dataKey="questionNumber" 
                             stroke={themeColors.axis}
@@ -371,7 +304,7 @@ const PerformanceGraph: React.FC<PerformanceGraphProps> = ({
                     </LineChart>
                 </ResponsiveContainer>
             </div>
-        </>
+        </div>
     );
 };
 
