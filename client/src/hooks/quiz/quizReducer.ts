@@ -6,10 +6,6 @@ import { uiReducer } from './reducers/uiReducer';
 
 // --- INITIALIZATION HELPERS ---
 
-/**
- * Generates a fresh attempt state object.
- * Used during initialization and reset workflows.
- */
 export const createInitialAttempt = (
     topicId: string = '', 
     sectionType: SectionType = 'practice', 
@@ -28,7 +24,6 @@ export const createInitialAttempt = (
     highlightedHtml: {},
     practiceTestSettings: { prometricDelay: false, additionalTime: false },
     submittedAnswers: {},
-    // Timer is managed via root snapshot, but we initialize defaults here for consistency
     timer: { value: 0, isCountdown: false, initialDuration: 0 }
 });
 
@@ -43,26 +38,16 @@ export const initialState: QuizState = {
         tempReveal: {},
         isExhibitVisible: false,
         isSaving: false,
-        isNavActionInProgress: false
+        isNavActionInProgress: false,
+        prometricOverlayVisible: false,
+        targetedReviewSequence: null,
     },
     error: null,
 };
 
 // --- ROOT REDUCER ---
 
-/**
- * The Root Reducer for the Quiz Engine.
- * 
- * Responsibilities:
- * 1. Manages Global Lifecycle (Status transitions, Data loading).
- * 2. Manages State Replacement (Resetting attempts, Loading new data).
- * 3. Delegates granular updates to sub-reducers (Attempt, UI).
- */
 export function quizReducer(state: QuizState, action: QuizAction): QuizState {
-    
-    // --- Phase 1: Handle Lifecycle & Root State Changes ---
-    // These actions typically affect 'status', 'quizContent', or replace 'attempt' entirely.
-
     switch (action.type) {
         case 'INITIALIZE_ATTEMPT':
             return {
@@ -143,7 +128,6 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
                     questions: action.payload.questions,
                     metadata: action.payload.metadata,
                 },
-                // Full replacement of the attempt slice
                 attempt: {
                     ...initialState.attempt,
                     id: action.payload.attemptId,
@@ -160,17 +144,26 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
             };
         }
 
-        case 'RESUME_ATTEMPT':
+        // FIX: Added logic to respect a 'forceReviewMode' payload if present.
+        // This prevents the reducer from guessing 'active' if state is stale.
+        case 'RESUME_ATTEMPT': {
+            // Check if the action payload has the force flag (casting required as TypeScript union is loose here)
+            const forceReview = (action as any).payload?.forceReviewMode;
+            
+            const nextStatus = forceReview 
+                ? 'reviewing_attempt' 
+                : (state.quizIdentifiers?.reviewAttemptId ? 'reviewing_attempt' : 'active');
+
             return {
                 ...state,
-                status: state.quizIdentifiers?.reviewAttemptId ? 'reviewing_attempt' : 'active',
+                status: nextStatus,
             };
+        }
 
         case 'RESET_ATTEMPT':
             return {
                 ...state,
                 status: 'active',
-                // Full replacement of the attempt slice
                 attempt: {
                     ...initialState.attempt,
                     id: action.payload.newAttemptId,
@@ -208,12 +201,23 @@ export function quizReducer(state: QuizState, action: QuizAction): QuizState {
         }
 
         case 'OPEN_REVIEW_SUMMARY':
-            return { ...state, status: 'reviewing_summary' };
+            return { 
+                ...state, 
+                status: 'reviewing_summary',
+                uiState: {
+                    ...state.uiState,
+                    targetedReviewSequence: null
+                }
+            };
         
         case 'CLOSE_REVIEW_SUMMARY':
-            return { ...state, status: 'active' };
+            // If we are in review mode (based on identifiers), we stay in review mode.
+            // If we are active, we stay active.
+            return { 
+                ...state, 
+                status: state.quizIdentifiers?.reviewAttemptId ? 'reviewing_attempt' : 'active' 
+            };
 
-        // --- Phase 2: Delegate to Sub-Reducers ---
         default:
             return {
                 ...state,

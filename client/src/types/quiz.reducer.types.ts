@@ -21,6 +21,8 @@ export interface QuizUIState {
     isExhibitVisible: boolean;
     isSaving: boolean;
     isNavActionInProgress: boolean;
+    prometricOverlayVisible: boolean;
+    targetedReviewSequence: number[] | null;
 }
 
 export interface QuizState {
@@ -69,7 +71,11 @@ export type QuizUIAction =
     | { type: 'TOGGLE_EXPLANATION' }
     | { type: 'OPEN_REVIEW_SUMMARY' }
     | { type: 'CLOSE_REVIEW_SUMMARY' }
-    | { type: 'SET_IS_SAVING'; payload: boolean };
+    | { type: 'SET_IS_SAVING'; payload: boolean }
+    | { type: 'SET_NAV_ACTION_IN_PROGRESS'; payload: boolean }
+    | { type: 'SET_PROMETRIC_OVERLAY'; payload: boolean }
+    | { type: 'START_TARGETED_REVIEW'; payload: number[] }
+    | { type: 'CLEAR_TARGETED_REVIEW' };
 
 /**
  * Actions that affect the entire lifecycle or root state

@@ -57,7 +57,13 @@ const QuizTimerSync: React.FC<QuizTimerSyncProps> = ({
                 syncTimer(initialDuration - timerValue, timerValue);
             }
             
-            if (status === 'active') startTimer();
+            // FIX: Only start the timer if specifically in Active mode.
+            // If reviewing, we sync it (so it shows 00:00 or final time) but DO NOT start it.
+            // This prevents the timer from ticking when looking at past results.
+            if (status === 'active') {
+                startTimer();
+            }
+            
             hasInitialized.current = true;
         }
 
@@ -65,7 +71,7 @@ const QuizTimerSync: React.FC<QuizTimerSyncProps> = ({
         if (status === 'completed' || status === 'error') {
             stopTimer();
         }
-    }, [status, timerValue, initialDuration, isCountdown, initializeTimer, startTimer, stopTimer, syncTimer]);
+    },[status, timerValue, initialDuration, isCountdown, initializeTimer, startTimer, stopTimer, syncTimer]);
 
     return null;
 };
@@ -73,6 +79,17 @@ const QuizTimerSync: React.FC<QuizTimerSyncProps> = ({
 interface QuizPageProps {
     isPreviewMode?: boolean;
 }
+
+/**
+ * Helper: Determine time limits for display in Options Modal.
+ * Duplicated logic from useQuizLifecycle to keep components atomic for now.
+ */
+const getBaseTimeLimit = (topicId: string): number => {
+    const t = topicId.toLowerCase();
+    if (t.includes('perceptual') || t.includes('reading')) return 60;
+    if (t.includes('quantitative')) return 45;
+    return 30; // Bio, Gen Chem, Orgo
+};
 
 /**
  * QuizPage: The root container for the testing experience.
@@ -87,20 +104,42 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Extract attempt ID if navigating to a specific review session
-    const reviewAttemptId = (location.state as { attemptId?: string } | null)?.attemptId;
+    // Extract attempt ID, target question, AND target sequence from router state
+    const locationState = location.state as { attemptId?: string; reviewAttemptId?: string; questionIndex?: number; targetSequence?: number[] } | null;
+    const targetAttemptId = locationState?.reviewAttemptId || locationState?.attemptId;
+    const targetQuestionIndex = locationState?.questionIndex;
+    const targetSequence = locationState?.targetSequence;
 
     // The Engine handles all business logic, networking, and state transitions
     const quizEngine = useQuizEngine(
         topicId, 
         sectionType as SectionType, 
         quizId, 
-        reviewAttemptId, 
+        targetAttemptId, 
         isPreviewMode
     );
     const { state, actions } = quizEngine;
     
     const { isSidebarEffectivelyPinned } = useLayout();
+
+    // Ref to ensure we only auto-jump to the target question/sequence once upon loading
+    const hasJumpedRef = useRef(false);
+
+    // Auto-Jump Logic for Results Grid & Legend Navigation
+    useEffect(() => {
+        if (state.status === 'reviewing_attempt' && !hasJumpedRef.current) {
+            // Prioritize a full sequence review if provided (e.g., clicking "Incorrect" legend)
+            if (targetSequence && targetSequence.length > 0) {
+                actions.startTargetedReview(targetSequence);
+                hasJumpedRef.current = true;
+            } 
+            // Fallback to a single question jump (e.g., clicking a specific bubble)
+            else if (targetQuestionIndex !== undefined) {
+                actions.jumpToQuestion(targetQuestionIndex);
+                hasJumpedRef.current = true;
+            }
+        }
+    }, [state.status, targetSequence, targetQuestionIndex, actions]);
 
     // UI Configuration: Memoized to prevent unnecessary re-calculations
     const uiProps = useMemo(() => {
@@ -110,12 +149,8 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
         const displayQuestionCount = isPreviewMode ? 210 : state.quizContent.questions.length;
 
         return {
-            containerStyle: {
-                marginLeft: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
-                width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
-                paddingBottom: '90px',
-            } as React.CSSProperties,
-            
+            // Strip containerStyle because the parent layout handles standard page margins.
+            // Keep footerStyle because fixed elements escape the document flow.
             footerStyle: {
                 left: isSidebarEffectivelyPinned ? 'var(--sidebar-width)' : '0',
                 width: isSidebarEffectivelyPinned ? `calc(100% - var(--sidebar-width))` : '100%',
@@ -127,14 +162,17 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                 backLink: isReviewing ? `/app/results/${topicId}/${sectionType}/${quizId}` : `/app/topic/${topicId}`,
                 backText: isReviewing ? 'Back to Results' : `Back to ${state.quizContent.metadata?.topicName || formatDisplayName(topicId)}`,
                 isPreviewMode: isPreviewMode,
+                // Pass the attempt ID back so the Results Page loads the correct history!
+                backState: isReviewing ? { attemptId: state.attempt.id || undefined } : undefined,
             },
             
             showExhibitButton: topicId === 'chemistry',
             showSolutionButton: state.quizIdentifiers?.sectionType === 'qbank',
         };
-    }, [
+    },[
         state.status, 
         state.attempt.currentQuestionIndex, 
+        state.attempt.id,
         state.quizContent.questions.length, 
         state.quizContent.metadata, 
         state.quizIdentifiers, 
@@ -162,6 +200,10 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
     // --- MODAL STATES ---
     
     if (state.status === 'prompting_options') {
+        // Dynamic Calculation for Modal Display
+        const modalBaseTime = isPreviewMode ? 180 : getBaseTimeLimit(topicId);
+        const modalNumQuestions = isPreviewMode ? 210 : state.quizContent.questions.length;
+
         return (
             <PracticeTestOptions
                 isOpen={true}
@@ -169,8 +211,8 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                 onStartTest={actions.startAttemptWithOptions}
                 fullNameForDisplay={state.quizContent.metadata?.fullNameForDisplay}
                 categoryForInstructions={state.quizContent.metadata?.categoryForInstructions}
-                baseTimeLimitMinutes={180}
-                numQuestions={210} 
+                baseTimeLimitMinutes={modalBaseTime}
+                numQuestions={modalNumQuestions} 
             />
         );
     }
@@ -204,12 +246,21 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                 {/* Side-Effect: Heartbeat to persist timer to DB */}
                 <QuizPersistence />
 
+                {/* Prometric Delay Overlay */}
+                {state.uiState.prometricOverlayVisible && (
+                    <div className="prometric-transition-overlay"></div>
+                )}
+
                 <TextHighlighterWrapper
                     className={`quiz-page-container ${isPreviewMode ? 'preview-mode' : ''}`}
                     onHighlightUpdate={actions.updateHighlight}
                     isEnabled={!state.uiState.isSaving && !state.uiState.isNavActionInProgress}
                 >
-                    <div style={uiProps.containerStyle}>
+                    {/* 
+                       Removed the redundant containerStyle that was causing the "Double Shift" bug.
+                       The parent Layout component now handles the main content area geometry.
+                    */}
+                    <div>
                         
                         {state.status === 'reviewing_summary' ? (
                             <QuizReviewSummary
@@ -222,6 +273,7 @@ const QuizPage: React.FC<QuizPageProps> = ({ isPreviewMode = false }) => {
                                 topicId={topicId}
                                 onCloseReviewSummary={actions.closeReviewSummary}
                                 onJumpToQuestionInQuiz={actions.jumpToQuestion}
+                                onStartTargetedReview={actions.startTargetedReview}
                                 onEndQuiz={actions.finalizeAttempt}
                                 dynamicFooterStyle={uiProps.footerStyle}
                                 isNavActionInProgress={state.uiState.isSaving}

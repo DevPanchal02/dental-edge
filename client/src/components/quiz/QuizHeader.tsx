@@ -13,6 +13,7 @@ interface QuizHeaderProps {
     backLink: string;
     backText: string;
     isPreviewMode: boolean;
+    backState?: { attemptId?: string }; // <-- Added to carry context back to ResultsPage
 }
 
 const QuizHeader: React.FC<QuizHeaderProps> = ({ 
@@ -20,7 +21,8 @@ const QuizHeader: React.FC<QuizHeaderProps> = ({
     progressText, 
     backLink, 
     backText, 
-    isPreviewMode 
+    isPreviewMode,
+    backState
 }) => {
     return (
         <div className="quiz-header">
@@ -35,7 +37,7 @@ const QuizHeader: React.FC<QuizHeaderProps> = ({
                         <FaChevronLeft /> Back to Home
                     </Link>
                 ) : (
-                    <Link to={backLink} className="back-button-quiz icon-button">
+                    <Link to={backLink} state={backState} className="back-button-quiz icon-button">
                         <FaChevronLeft /> {backText}
                     </Link>
                 )}

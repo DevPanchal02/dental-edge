@@ -1,20 +1,27 @@
-/* FILE: client/src/styles/AnalyticsBreakdown.css */
-
-.breakdown-container {
-    padding: 20px 25px;
-    background-color: var(--bg-secondary);
-    border-radius: 8px;
-    border: 1px solid var(--border-primary);
+.breakdown-container-transparent {
+    padding: 0; 
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-.breakdown-header {
-    margin-bottom: 20px;
+.breakdown-header-simple {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 25px; 
+    /* MATCHING PERFORMANCE GRAPH HEADER STYLE */
+    border-bottom: 1px solid var(--border-primary);
+    padding-bottom: 15px;
 }
 
 .breakdown-title {
     margin: 0;
     font-size: 1.3rem;
-    font-weight: 500;
+    font-weight: 600; /* Increased to 600 to match Performance Graph */
     color: var(--text-primary);
 }
 
@@ -24,26 +31,122 @@
     font-size: 0.9em;
     text-align: center;
     padding: 20px 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.view-attempt-button-container {
-    margin-top: 25px;
-    padding-top: 15px;
-    border-top: 1px solid var(--border-primary);
-    text-align: center;
+/* --- Content Layout --- */
+.breakdown-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Space between different categories */
+    overflow-y: auto;
+    padding-right: 5px; 
 }
 
-.view-attempt-button {
-    padding: 10px 20px;
-    background-color: var(--bg-button-primary);
-    color: var(--text-on-button-primary);
-    border-radius: 6px;
-    text-decoration: none;
+.breakdown-content::-webkit-scrollbar { width: 6px; }
+.breakdown-content::-webkit-scrollbar-track { background: transparent; }
+.breakdown-content::-webkit-scrollbar-thumb { 
+    background-color: var(--scrollbar-thumb-bg); 
+    border-radius: 3px; 
+}
+
+.category-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%; /* Ensure it fills the grid cell */
+}
+
+/* --- INTERACTIVE ROW STYLES --- */
+.category-row.interactive {
+    background: transparent;
+    border: 1px solid transparent;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    font-family: inherit;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.category-row.interactive:hover:not(.disabled) {
+    background-color: var(--bg-secondary);
+    border-color: var(--border-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.category-row.disabled {
+    opacity: 0.6;
+    filter: grayscale(0.8);
+    cursor: not-allowed;
+}
+
+.category-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.bar-container {
+    display: flex;
+    flex-direction: column;
+    /* UPDATE: Tighten space between You and Average bars */
+    gap: 6px; 
+    width: 100%;
+}
+
+.bar-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bar-info {
+    display: flex;
+    justify-content: space-between;
+    width: 90px; 
+    flex-shrink: 0;
+    font-size: 0.8rem;
+}
+
+.bar-label {
+    color: var(--text-secondary);
     font-weight: 500;
-    transition: background-color 0.2s ease;
-    display: inline-block;
 }
 
-.view-attempt-button:hover {
-    background-color: var(--bg-button-primary-hover);
+.bar-percent {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.progress-track {
+    flex-grow: 1;
+    height: 8px;
+    background-color: var(--bg-secondary); 
+    border-radius: 2px; 
+    overflow: hidden;
+}
+
+/* Ensure track background is visible on hover inside the button */
+.category-row.interactive:hover .progress-track {
+    background-color: var(--bg-primary);
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 2px; 
+    transition: width 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+}
+
+.user-fill {
+    background-color: var(--bg-button-primary); 
+}
+
+.avg-fill {
+    background-color: var(--text-secondary);
+    opacity: 0.5;
 }

@@ -1,4 +1,3 @@
-/* FILE: client/src/styles/QuestionCard.css */
 .question-card {
   background-color: var(--bg-question-card);
   border-radius: 6px;
@@ -158,7 +157,41 @@ body.dark-mode .option-percentage { background-color: rgba(255,255,255,0.05); }
 .explanation-title { color: var(--text-accent); font-size: 1.1em; margin-bottom: 10px; }
 .explanation-html-content { line-height: 1.6; }
 .explanation-html-content p { margin-bottom: 0.8em; }
-.explanation-html-content h4 { font-weight: 500; margin-top: 1.2em; margin-bottom: 0.4em;}
+
+/* --- NEW: Explanation Section Headers --- */
+/* These target the <h4> tags we injected via loader.ts */
+.explanation-header { 
+    background-color: var(--bg-secondary);
+    color: var(--text-accent);
+    padding: 8px 12px;
+    border-left: 4px solid var(--text-accent);
+    border-radius: 0 4px 4px 0;
+    margin-top: 2em; /* More space above headers */
+    margin-bottom: 1em;
+    font-weight: 600;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+/* Specific styling for the Correct Answer Box */
+.correct-answer-box {
+    background-color: rgba(16, 185, 129, 0.1); /* Very light green hint */
+    border: 1px solid var(--border-option-correct);
+    color: var(--text-primary);
+    padding: 10px 15px;
+    border-radius: 4px;
+    margin-bottom: 1.5em;
+    font-weight: 500;
+}
+
+/* Ensure the "Correct Answer:" label inside the box pops */
+.correct-answer-box strong {
+    color: var(--text-option-correct);
+    margin-right: 5px;
+}
+
 .explanation-html-content strong { font-weight: bold; }
 
 .explanation-html-content figure.table,

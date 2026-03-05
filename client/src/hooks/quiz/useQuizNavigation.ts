@@ -8,27 +8,48 @@ interface UseQuizNavigationProps {
 }
 
 export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNavigationProps) => {
-    // This ref tracks when the user started looking at the current question.
-    // We use a ref so it doesn't trigger re-renders, but persists across renders.
+    // Tracks when the user entered the *current* question (for analytics)
     const questionStartTimeRef = useRef<number | null>(null);
+    
+    // If the user clicks "Next" twice rapidly, this ref updates instantly
+    const pendingIndexRef = useRef<number>(state.attempt.currentQuestionIndex);
 
-    // Effect: Reset the start time whenever the question index changes or the quiz becomes active.
+    // Sync the pending index whenever the *actual* state settles (navigation completes)
     useEffect(() => {
         if (state.status === 'active') {
             questionStartTimeRef.current = Date.now();
         }
-    }, [state.status, state.attempt.currentQuestionIndex]);
+        pendingIndexRef.current = state.attempt.currentQuestionIndex;
+    },[state.status, state.attempt.currentQuestionIndex]);
 
     /**
-     * Internal helper: Calculates time spent on the current question, 
-     * submits the current answer (if any), and moves to the target index.
+     * Executes an action with a 2-second delay if Prometric mode is on.
+     * Does NOT block the UI. Allows multiple actions to be queued.
      */
-    const recordTimeAndNavigate = useCallback((newIndex: number) => {
-        const totalQuestions = state.quizContent.questions.length;
+    const executeWithPrometricDelay = useCallback((actionFn: () => void) => {
+        const isPrometricEnabled = state.attempt.practiceTestSettings?.prometricDelay;
         
-        // Boundary check
-        if (newIndex >= 0 && newIndex < totalQuestions) {
-            // 1. Calculate Time Spent
+        if (isPrometricEnabled) {
+            dispatch({ type: 'SET_PROMETRIC_OVERLAY', payload: true });
+            
+            setTimeout(() => {
+                actionFn();
+                // We turn off the overlay flag, but since multiple timers might be running,
+                // this is just a state signal. The overlay itself is non-blocking via CSS.
+                dispatch({ type: 'SET_PROMETRIC_OVERLAY', payload: false });
+            }, 2000);
+        } else {
+            actionFn();
+        }
+    },[state.attempt.practiceTestSettings?.prometricDelay, dispatch]);
+
+    /**
+     * Internal helper: Calculates time spent, submits answer, and dispatches navigation.
+     */
+    const performNavigation = useCallback((targetIndex: number) => {
+        // FIX: Freeze mutation if we are strictly reviewing a completed attempt
+        if (state.status !== 'reviewing_attempt') {
+            // 1. Calculate Time Spent (approximate based on when we *left* the question)
             const timeNow = Date.now();
             const startTime = questionStartTimeRef.current;
             
@@ -43,40 +64,15 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
                 });
             }
             
-            // Reset start time for the next question
-            questionStartTimeRef.current = timeNow;
-
-            // 2. Lock in the answer (Visual state update)
+            questionStartTimeRef.current = timeNow; // Reset for the next segment
             dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
-
-            // 3. Move
-            dispatch({ type: 'NAVIGATE_QUESTION', payload: newIndex });
         }
-    }, [
-        state.quizContent.questions.length, 
-        state.attempt.currentQuestionIndex, 
-        dispatch
-    ]);
+
+        dispatch({ type: 'NAVIGATE_QUESTION', payload: targetIndex });
+    },[state.status, state.attempt.currentQuestionIndex, dispatch]);
+
 
     // --- Public Actions ---
-
-    const nextQuestion = useCallback(() => {
-        // Gate: In Preview Mode, block navigation after Question 2 (Index 1)
-        if (isPreviewMode && state.attempt.currentQuestionIndex === 1) {
-            dispatch({ type: 'PROMPT_REGISTRATION' });
-            return;
-        }
-        recordTimeAndNavigate(state.attempt.currentQuestionIndex + 1);
-    }, [state.attempt.currentQuestionIndex, isPreviewMode, dispatch, recordTimeAndNavigate]);
-
-    const previousQuestion = useCallback(() => {
-        recordTimeAndNavigate(state.attempt.currentQuestionIndex - 1);
-    }, [state.attempt.currentQuestionIndex, recordTimeAndNavigate]);
-
-    const jumpToQuestion = useCallback((index: number) => {
-        recordTimeAndNavigate(index);
-        dispatch({ type: 'CLOSE_REVIEW_SUMMARY' });
-    }, [recordTimeAndNavigate, dispatch]);
 
     const openReviewSummary = useCallback(() => {
         if (isPreviewMode) {
@@ -84,29 +80,134 @@ export const useQuizNavigation = ({ state, dispatch, isPreviewMode }: UseQuizNav
             return;
         }
         
-        // We must also record time when leaving the quiz flow to go to the summary
-        const timeNow = Date.now();
-        const startTime = questionStartTimeRef.current;
-        if (startTime) {
-            const elapsedSeconds = Math.round((timeNow - startTime) / 1000);
-            dispatch({ 
-                type: 'UPDATE_TIME_SPENT', 
-                payload: { 
-                    questionIndex: state.attempt.currentQuestionIndex, 
-                    time: elapsedSeconds 
-                }
+        // FIX: Prevent opening review summary if already in Review Mode
+        if (state.status === 'reviewing_attempt') return;
+
+        executeWithPrometricDelay(() => {
+            // Finalize time for current question
+            const timeNow = Date.now();
+            const startTime = questionStartTimeRef.current;
+            if (startTime) {
+                const elapsedSeconds = Math.round((timeNow - startTime) / 1000);
+                dispatch({ 
+                    type: 'UPDATE_TIME_SPENT', 
+                    payload: { 
+                        questionIndex: state.attempt.currentQuestionIndex, 
+                        time: elapsedSeconds 
+                    }
+                });
+            }
+            questionStartTimeRef.current = null;
+            
+            dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
+            dispatch({ type: 'CLEAR_TARGETED_REVIEW' });
+            dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
+        });
+    },[isPreviewMode, state.status, state.attempt.currentQuestionIndex, dispatch, executeWithPrometricDelay]);
+
+    const nextQuestion = useCallback(() => {
+        if (isPreviewMode && state.attempt.currentQuestionIndex === 1) {
+            dispatch({ type: 'PROMPT_REGISTRATION' });
+            return;
+        }
+
+        const currentIndexForCalculation = pendingIndexRef.current;
+        const targetedSequence = state.uiState.targetedReviewSequence;
+
+        // A. Targeted Review Mode
+        if (targetedSequence && targetedSequence.length > 0) {
+            const seqIndex = targetedSequence.indexOf(currentIndexForCalculation);
+            
+            if (seqIndex >= 0 && seqIndex < targetedSequence.length - 1) {
+                // Determine next question in sequence
+                const nextTarget = targetedSequence[seqIndex + 1];
+                
+                // Update cursor immediately
+                pendingIndexRef.current = nextTarget;
+                
+                // Schedule navigation
+                executeWithPrometricDelay(() => {
+                    performNavigation(nextTarget);
+                });
+            } else {
+                // End of sequence -> Go to Summary
+                openReviewSummary();
+            }
+            return;
+        }
+
+        // B. Standard Linear Mode
+        const totalQuestions = state.quizContent.questions.length;
+        if (currentIndexForCalculation < totalQuestions - 1) {
+            const nextTarget = currentIndexForCalculation + 1;
+            
+            // Update cursor immediately
+            pendingIndexRef.current = nextTarget;
+
+            // Schedule navigation
+            executeWithPrometricDelay(() => {
+                performNavigation(nextTarget);
             });
         }
-        questionStartTimeRef.current = null; // Clear it so we don't double count if they resume
+    },[state.attempt.currentQuestionIndex, state.quizContent.questions.length, isPreviewMode, state.uiState.targetedReviewSequence, dispatch, performNavigation, executeWithPrometricDelay, openReviewSummary]);
+
+    const previousQuestion = useCallback(() => {
+        const currentIndexForCalculation = pendingIndexRef.current;
+        const targetedSequence = state.uiState.targetedReviewSequence;
+
+        // A. Targeted Review Mode
+        if (targetedSequence && targetedSequence.length > 0) {
+            const seqIndex = targetedSequence.indexOf(currentIndexForCalculation);
+            
+            if (seqIndex > 0) {
+                const prevTarget = targetedSequence[seqIndex - 1];
+                pendingIndexRef.current = prevTarget;
+                
+                executeWithPrometricDelay(() => {
+                    performNavigation(prevTarget);
+                });
+            }
+            return;
+        }
+
+        // B. Standard Linear Mode
+        if (currentIndexForCalculation > 0) {
+            const prevTarget = currentIndexForCalculation - 1;
+            pendingIndexRef.current = prevTarget;
+
+            executeWithPrometricDelay(() => {
+                performNavigation(prevTarget);
+            });
+        }
+    },[state.attempt.currentQuestionIndex, state.uiState.targetedReviewSequence, performNavigation, executeWithPrometricDelay]);
+
+    const jumpToQuestion = useCallback((index: number) => {
+        dispatch({ type: 'CLEAR_TARGETED_REVIEW' });
+        pendingIndexRef.current = index;
         
-        dispatch({ type: 'SUBMIT_CURRENT_ANSWER' });
-        dispatch({ type: 'OPEN_REVIEW_SUMMARY' });
-    }, [isPreviewMode, state.attempt.currentQuestionIndex, dispatch]);
+        executeWithPrometricDelay(() => {
+            performNavigation(index);
+            dispatch({ type: 'CLOSE_REVIEW_SUMMARY' });
+        });
+    }, [performNavigation, dispatch, executeWithPrometricDelay]);
+
+    const startTargetedReview = useCallback((indices: number[]) => {
+        if (!indices || indices.length === 0) return;
+        
+        dispatch({ type: 'START_TARGETED_REVIEW', payload: indices });
+        pendingIndexRef.current = indices[0];
+        
+        executeWithPrometricDelay(() => {
+            dispatch({ type: 'NAVIGATE_QUESTION', payload: indices[0] });
+            dispatch({ type: 'CLOSE_REVIEW_SUMMARY' });
+        });
+    }, [dispatch, executeWithPrometricDelay]);
 
     return {
         nextQuestion,
         previousQuestion,
         jumpToQuestion,
-        openReviewSummary
+        openReviewSummary,
+        startTargetedReview
     };
 };

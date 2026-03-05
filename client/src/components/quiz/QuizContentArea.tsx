@@ -59,11 +59,19 @@ const QuizContentArea: React.FC = () => {
     const isReviewMode = status === 'reviewing_attempt';
     
     // Visual Flags
-    const isSubmitted = (isPractice && !!attempt.submittedAnswers?.[questionIndex]) || 
-                        (!isPractice && (!!attempt.submittedAnswers?.[questionIndex] || isReviewMode || !!uiState.tempReveal[questionIndex]));
+    // FIX: In Review Mode, we treat ALL questions as "Submitted" so that stats/percentages appear,
+    // even if the user skipped the question during the attempt.
+    const isSubmitted = isReviewMode || 
+                        (isPractice && !!attempt.submittedAnswers?.[questionIndex]) || 
+                        (!isPractice && (!!attempt.submittedAnswers?.[questionIndex] || !!uiState.tempReveal[questionIndex]));
+
     const isTemporarilyRevealed = !!uiState.tempReveal[questionIndex];
     const isPracticeTestActive = isPractice && !isReviewMode;
-    const showExplanation = !!uiState.showExplanation[questionIndex];
+    
+    // Auto-expand explanation in Review Mode. 
+    const showExplanation = isReviewMode 
+        ? (uiState.showExplanation[questionIndex] ?? true) 
+        : !!uiState.showExplanation[questionIndex];
     
     // Data extraction
     const passageHtml = currentQuestion.passage?.html_content;

@@ -9,6 +9,23 @@ interface UseQuizSelectionProps {
 
 export const useQuizSelection = ({ state, dispatch, isPreviewMode }: UseQuizSelectionProps) => {
     
+    // Non-blocking Prometric delay handler for selection buttons
+    const executeWithPrometricDelay = useCallback((actionFn: () => void) => {
+        const isPrometricEnabled = state.attempt.practiceTestSettings?.prometricDelay;
+        
+        if (isPrometricEnabled) {
+            //the delay happens via setTimeout without blocking the thread.
+            dispatch({ type: 'SET_PROMETRIC_OVERLAY', payload: true });
+            setTimeout(() => {
+                actionFn();
+                dispatch({ type: 'SET_PROMETRIC_OVERLAY', payload: false });
+            }, 2000);
+        } else {
+            actionFn();
+        }
+    }, [state.attempt.practiceTestSettings?.prometricDelay, dispatch]);
+
+
     // --- Answer & Annotation Logic ---
 
     const selectOption = useCallback((questionIndex: number, optionLabel: string) => 
@@ -25,8 +42,15 @@ export const useQuizSelection = ({ state, dispatch, isPreviewMode }: UseQuizSele
 
     const toggleMark = useCallback(() => {
         if (isPreviewMode) return;
-        dispatch({ type: 'TOGGLE_MARK', payload: state.attempt.currentQuestionIndex });
-    }, [state.attempt.currentQuestionIndex, isPreviewMode, dispatch]);
+
+        // We capture the CURRENT index here 
+        // If the user navigates away before this fires, it marks the question they were looking at when they clicked.
+        const indexToMark = state.attempt.currentQuestionIndex;
+        
+        executeWithPrometricDelay(() => {
+            dispatch({ type: 'TOGGLE_MARK', payload: indexToMark });
+        });
+    }, [state.attempt.currentQuestionIndex, isPreviewMode, dispatch, executeWithPrometricDelay]);
 
 
     // --- UI Visibility Toggles ---

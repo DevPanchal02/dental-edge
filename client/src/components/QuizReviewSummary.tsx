@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/QuizReviewSummary.css';
 import { Question, QuizMetadata } from '../types/quiz.types';
 import TimerDisplay from './quiz/TimerDisplay';
-import { useQuizTimer } from '../context/QuizTimerContext'; // Import Hook
+import { useQuizTimer } from '../context/QuizTimerContext'; 
 
 interface QuizReviewSummaryProps {
     allQuizQuestions: Question[];
@@ -16,7 +16,9 @@ interface QuizReviewSummaryProps {
     onCloseReviewSummary: () => void;
     onJumpToQuestionInQuiz: (index: number) => void;
     
-    // UPDATED: Now expects the timer value to be passed back
+    // Inject the new targeted review hook
+    onStartTargetedReview: (indices: number[]) => void;
+
     onEndQuiz: (finalTime: number) => void;
     
     dynamicFooterStyle: React.CSSProperties;
@@ -31,6 +33,7 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
     currentQuestionIndexBeforeReview,
     onCloseReviewSummary,
     onJumpToQuestionInQuiz,
+    onStartTargetedReview,
     onEndQuiz,
     dynamicFooterStyle,
     isNavActionInProgress,
@@ -39,6 +42,7 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
     const { timerState } = useQuizTimer();
 
     const handleJumpFromTable = (index: number) => {
+        // Direct jump from table always breaks out of a targeted sequence
         onJumpToQuestionInQuiz(index); 
     };
 
@@ -53,11 +57,8 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
             return;
         }
         
-        let targetIndex = markedIndices.find(idx => !submittedAnswers[idx]);
-        if (targetIndex === undefined) {
-            targetIndex = markedIndices[0];
-        }
-        onJumpToQuestionInQuiz(targetIndex); 
+        // Feed the entire array into the targeted review engine
+        onStartTargetedReview(markedIndices);
     };
 
     const handleReviewAll = () => {
@@ -65,15 +66,21 @@ const QuizReviewSummary: React.FC<QuizReviewSummaryProps> = ({
     };
 
     const handleReviewIncomplete = () => {
-        const firstIncompleteIndex = allQuizQuestions.findIndex((q, idx) => !q.error && !submittedAnswers[idx]);
-        if (firstIncompleteIndex !== -1) {
-            onJumpToQuestionInQuiz(firstIncompleteIndex);
-        } else {
+        // Collect all indices that have no submitted answer
+        const incompleteIndices = allQuizQuestions
+            .map((q, idx) => ({ q, idx }))
+            .filter(({ q, idx }) => !q.error && !submittedAnswers[idx])
+            .map(({ idx }) => idx);
+
+        if (incompleteIndices.length === 0) {
             alert("All questions have been completed or attempted.");
+            return;
         }
+
+        // Feed into sequence engine
+        onStartTargetedReview(incompleteIndices);
     };
 
-    // NEW: Wrapper handler to inject the timer value
     const handleEndQuizClick = () => {
         const value = timerState.mode === 'countdown' 
             ? timerState.secondsRemaining 

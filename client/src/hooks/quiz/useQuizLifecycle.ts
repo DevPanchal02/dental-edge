@@ -28,6 +28,21 @@ interface UseQuizLifecycleProps {
     isPreviewMode: boolean;
 }
 
+// Helper to determine base time limits (in minutes) by topic
+const getBaseTimeLimit = (topicId: string): number => {
+    const t = topicId.toLowerCase();
+    // PAT and Reading Comprehension get 60 minutes
+    if (t.includes('perceptual') || t.includes('reading')) {
+        return 60;
+    }
+    // Quantitative Reasoning standard is 45 minutes
+    if (t.includes('quantitative')) {
+        return 45;
+    }
+    // Biology, General Chemistry, Organic Chemistry get 30 minutes
+    return 30; 
+};
+
 export const useQuizLifecycle = ({
     state,
     dispatch,
@@ -89,7 +104,9 @@ export const useQuizLifecycle = ({
     }, [dispatch]);
 
     const startAttemptWithOptions = useCallback(async (settings: PracticeTestSettings) => {
-        const baseMinutes = 180; // Standard DAT time
+        // Determine base minutes: 180 for Preview Mode hook, or dynamic based on topic
+        const baseMinutes = isPreviewMode ? 180 : getBaseTimeLimit(topicId);
+        
         const modifier = settings.additionalTime ? 1.5 : 1.0;
         const durationSeconds = Math.round(baseMinutes * 60 * modifier);
 
