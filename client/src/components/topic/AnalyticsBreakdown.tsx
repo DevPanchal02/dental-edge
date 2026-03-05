@@ -5,51 +5,85 @@ import { QuizAttempt, Question } from '../../types/quiz.types';
 interface AnalyticsBreakdownProps {
     userAttempt: QuizAttempt | null | undefined;
     questions: Question[];
-    // Optional because TopicPage uses this component without these props
-    categoryIndices?: Record<string, number[]>;
+    mode?: 'category' | 'difficulty' | 'auto';
     onReviewSequence?: (indices: number[]) => void;
 }
 
 const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({ 
     userAttempt, 
     questions,
-    categoryIndices,
+    mode = 'auto',
     onReviewSequence
 }) => {
     
-    // --- Data Processing ---
-    const categoryStats = useMemo(() => {
-        if (!questions.length || !userAttempt) return [];
+    // --- Data Processing & View Logic ---
+    const { displayMode, breakdownStats } = useMemo(() => {
+        if (!questions.length || !userAttempt) return { displayMode: 'category', breakdownStats:[] };
 
-        const stats: Record<string, { total: number; userCorrect: number; sumAverage: number }> = {};
+        // 1. Determine the context of the quiz (Auto or Explicit)
+        let resolvedMode = mode;
+        if (resolvedMode === 'auto') {
+            const uniqueCategories = new Set(questions.map(q => q.category?.trim() || 'General'));
+            resolvedMode = uniqueCategories.size > 1 ? 'category' : 'difficulty';
+        }
 
+        // Helper to bucket questions by peer success rate
+        const getDifficultyLabel = (percentStr?: string) => {
+            const val = parseFloat(percentStr || '50');
+            if (val >= 75) return 'Easy (≥ 75% Peer Accuracy)';
+            if (val >= 45) return 'Medium (45% - 74% Peer Accuracy)';
+            return 'Hard (< 45% Peer Accuracy)';
+        };
+
+        const stats: Record<string, { total: number; userCorrect: number; sumAverage: number; indices: number[] }> = {};
+
+        // 2. Aggregate data based on the resolved mode
         questions.forEach((q, index) => {
-            const category = q.category ? q.category.trim() : 'General';
+            const groupKey = resolvedMode === 'category' 
+                ? (q.category ? q.category.trim() : 'General')
+                : getDifficultyLabel(q.analytics?.percent_correct);
             
-            if (!stats[category]) {
-                stats[category] = { total: 0, userCorrect: 0, sumAverage: 0 };
+            if (!stats[groupKey]) {
+                stats[groupKey] = { total: 0, userCorrect: 0, sumAverage: 0, indices: [] };
             }
 
-            stats[category].total++;
+            stats[groupKey].total++;
+            stats[groupKey].indices.push(index);
             
             const userAnswer = userAttempt.userAnswers[index];
             const correctOption = q.options.find(o => o.is_correct);
             
             if (userAnswer && correctOption && userAnswer === correctOption.label) {
-                stats[category].userCorrect++;
+                stats[groupKey].userCorrect++;
             }
 
             const avg = parseFloat(q.analytics?.percent_correct || '0');
-            stats[category].sumAverage += avg;
+            stats[groupKey].sumAverage += avg;
         });
 
-        return Object.entries(stats).map(([cat, data]) => ({
-            category: cat,
+        // 3. Format and Sort the Output
+        const formattedStats = Object.entries(stats).map(([key, data]) => ({
+            label: key,
             userPercent: (data.userCorrect / data.total) * 100,
-            avgPercent: data.sumAverage / data.total
-        })).sort((a, b) => a.category.localeCompare(b.category));
+            avgPercent: data.sumAverage / data.total,
+            indices: data.indices
+        }));
 
-    }, [questions, userAttempt]);
+        if (resolvedMode === 'category') {
+            formattedStats.sort((a, b) => a.label.localeCompare(b.label)); // Alphabetical
+        } else {
+            // Force Difficulty Order: Hard -> Medium -> Easy
+            const sortOrder: Record<string, number> = {
+                'Hard (< 45% Peer Accuracy)': 1,
+                'Medium (45% - 74% Peer Accuracy)': 2,
+                'Easy (≥ 75% Peer Accuracy)': 3
+            };
+            formattedStats.sort((a, b) => sortOrder[a.label] - sortOrder[b.label]);
+        }
+
+        return { displayMode: resolvedMode, breakdownStats: formattedStats };
+
+    }, [questions, userAttempt, mode]);
 
     // --- Render ---
 
@@ -57,7 +91,7 @@ const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({
         return (
             <div className="breakdown-container-transparent">
                 <div className="breakdown-header-simple">
-                    <h3 className="breakdown-title">Category Breakdown</h3>
+                    <h3 className="breakdown-title">Performance Breakdown</h3>
                 </div>
                 <div className="breakdown-placeholder">
                     <p>Select a completed test to view analytics.</p>
@@ -69,26 +103,26 @@ const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({
     return (
         <div className="breakdown-container-transparent">
             <div className="breakdown-header-simple">
-                <h3 className="breakdown-title">Category Breakdown</h3>
+                <h3 className="breakdown-title">
+                    {displayMode === 'category' ? 'Category Breakdown' : 'Difficulty Breakdown'}
+                </h3>
             </div>
             
             <div className="breakdown-content">
-                {categoryStats.map((stat) => {
-                    // Determine interactivity
-                    const indices = categoryIndices ? (categoryIndices[stat.category] || []) : [];
-                    const isInteractive = !!onReviewSequence && !!categoryIndices;
-                    const isDisabled = isInteractive && indices.length === 0;
+                {breakdownStats.map((stat) => {
+                    const isInteractive = !!onReviewSequence;
+                    const isDisabled = isInteractive && stat.indices.length === 0;
                     
                     const hoverTitle = isInteractive
                         ? (isDisabled 
-                            ? `No questions found for ${stat.category}` 
-                            : `Review ${indices.length} questions in ${stat.category}`)
+                            ? `No questions found for ${stat.label}` 
+                            : `Review ${stat.indices.length} questions in ${stat.label}`)
                         : undefined;
 
                     // Common content for the row
                     const RowContent = (
                         <>
-                            <div className="category-label">{stat.category}</div>
+                            <div className="category-label">{stat.label}</div>
                             <div className="bar-container">
                                 {/* User Score Bar */}
                                 <div className="bar-group">
@@ -121,12 +155,12 @@ const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({
                         </>
                     );
 
-                    // Render as Button if interactive, Div if not
+                    // Render as Button if interactive (Results Page), Div if not (Topic Page)
                     return isInteractive ? (
                         <button 
-                            key={stat.category}
+                            key={stat.label}
                             className={`category-row interactive ${isDisabled ? 'disabled' : ''}`}
-                            onClick={() => !isDisabled && onReviewSequence && onReviewSequence(indices)}
+                            onClick={() => !isDisabled && onReviewSequence && onReviewSequence(stat.indices)}
                             disabled={isDisabled}
                             title={hoverTitle}
                             aria-label={hoverTitle}
@@ -134,7 +168,7 @@ const AnalyticsBreakdown: React.FC<AnalyticsBreakdownProps> = ({
                             {RowContent}
                         </button>
                     ) : (
-                        <div key={stat.category} className="category-row">
+                        <div key={stat.label} className="category-row">
                             {RowContent}
                         </div>
                     );

@@ -47,9 +47,9 @@ const ResultsPage: React.FC = () => {
     const [topicName, setTopicName] = useState<string>('');
     const [quizName, setQuizName] = useState<string>('');
     
-    const [localResult, setLocalResult] = useState<QuizResult | null>(null);
-    const [fullAttempt, setFullAttempt] = useState<QuizAttempt | null>(null);
-    const[attemptMeta, setAttemptMeta] = useState<{ number: number; date: string } | null>(null);
+    const[localResult, setLocalResult] = useState<QuizResult | null>(null);
+    const[fullAttempt, setFullAttempt] = useState<QuizAttempt | null>(null);
+    const [attemptMeta, setAttemptMeta] = useState<{ number: number; date: string } | null>(null);
     
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
@@ -165,21 +165,13 @@ const ResultsPage: React.FC = () => {
         const skippedIndices: number[] =[];
         const markedIndicesArray: number[] = [];
         const onPaceIndices: number[] =[];
-        const overPaceIndices: number[] = [];
-        const categoryIndices: Record<string, number[]> = {};
+        const overPaceIndices: number[] =[];
 
         let calculatedScore = 0;
 
         quizQuestions.forEach((q, index) => {
             const userAnswer = unifiedAttempt.userAnswers[index];
-            const category = q.category ? q.category.trim() : 'General';
             
-            // Group by Category
-            if (!categoryIndices[category]) {
-                categoryIndices[category] = [];
-            }
-            categoryIndices[category].push(index);
-
             // Group by Marked
             if (unifiedAttempt.markedQuestions?.[index]) {
                 markedIndicesArray.push(index);
@@ -219,7 +211,6 @@ const ResultsPage: React.FC = () => {
             markedIndicesArray,
             onPaceIndices,
             overPaceIndices,
-            categoryIndices,
             markedQuestions: unifiedAttempt.markedQuestions || {},
             timeSpentDict,
             totalTimeSeconds,
@@ -361,17 +352,32 @@ const ResultsPage: React.FC = () => {
                 </section>
             )}
 
-            {/* 4. CATEGORY BREAKDOWN (Bottom, Horizontal) */}
+            {/* 4. CATEGORY BREAKDOWN (Practice Tests Only - Full Width) */}
+            {sectionType === 'practice' && (
+                <section className="results-full-width-section">
+                    <div className="results-breakdown-wrapper transparent-card">
+                        <AnalyticsBreakdown 
+                            userAttempt={unifiedAttempt}
+                            questions={quizQuestions}
+                            mode="category"
+                            onReviewSequence={handleTargetedReview}
+                        />
+                    </div>
+                </section>
+            )}
+
+            {/* 5. DIFFICULTY BREAKDOWN (All Tests - Full Width) */}
             <section className="results-full-width-section">
                 <div className="results-breakdown-wrapper transparent-card">
                     <AnalyticsBreakdown 
                         userAttempt={unifiedAttempt}
                         questions={quizQuestions}
-                        categoryIndices={metrics.categoryIndices}
+                        mode="difficulty"
                         onReviewSequence={handleTargetedReview}
                     />
                 </div>
             </section>
+
         </div>
     );
 };
