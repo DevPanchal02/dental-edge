@@ -24,16 +24,21 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
   const [theme, setTheme] = useState<Theme>(() => {
-    // Safety check for localStorage
+    // Safety check for localStorage during SSR/Build
     if (typeof window !== 'undefined') {
         const localTheme = localStorage.getItem('theme');
-        return (localTheme === 'light' || localTheme === 'dark') ? localTheme : 'light';
+        // If a valid theme exists in storage, use it. Otherwise, default to dark.
+        return (localTheme === 'light' || localTheme === 'dark') ? localTheme : 'dark';
     }
-    return 'light';
+    // Fallback for non-browser environments
+    return 'dark';
   });
 
   useEffect(() => {
+    // Sync React state to LocalStorage
     localStorage.setItem('theme', theme);
+    
+    // Sync React state to the DOM body for CSS to target
     document.body.className = ''; 
     document.body.classList.add(theme + '-mode'); 
   }, [theme]);

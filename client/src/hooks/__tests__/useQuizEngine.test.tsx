@@ -38,8 +38,8 @@ const mockSaveInProgressAttempt = saveInProgressAttempt as Mock;
 
 describe('useQuizEngine Integration', () => {
     
-    const mockQuestions: Question[] = [
-        { id: '1', question: { html_content: 'Q1' }, options: [{ label: 'A', html_content: 'A', is_correct: true }], explanation: { html_content: '' } },
+    const mockQuestions: Question[] =[
+        { id: '1', question: { html_content: 'Q1' }, options:[{ label: 'A', html_content: 'A', is_correct: true }], explanation: { html_content: '' } },
         { id: '2', question: { html_content: 'Q2' }, options: [{ label: 'B', html_content: 'B', is_correct: true }], explanation: { html_content: '' } }
     ];
 
@@ -90,9 +90,12 @@ describe('useQuizEngine Integration', () => {
         expect(result.current.state.attempt.id).toBe('new-attempt-id-123');
     });
 
-    it('Correctly calculates duration based on "Additional Time" setting', async () => {
+    // --- TIMING & DURATION TESTS ---
+
+    it('Correctly calculates duration for Preview Mode (180 mins base)', async () => {
         const { result } = renderHook(() => 
-            useQuizEngine('biology', 'practice', 'test-1', null, false)
+            // isPreviewMode = true
+            useQuizEngine('biology', 'practice', 'test-1', null, true)
         );
 
         await waitFor(() => expect(result.current.state.status).toBe('prompting_options'));
@@ -109,6 +112,50 @@ describe('useQuizEngine Integration', () => {
         expect(result.current.state.timerSnapshot.initialDuration).toBe(16200);
         expect(result.current.state.timerSnapshot.isCountdown).toBe(true);
     });
+
+    it('Correctly calculates duration for Regular Mode - Biology (30 mins base)', async () => {
+        const { result } = renderHook(() => 
+            // isPreviewMode = false, topic = biology
+            useQuizEngine('biology', 'practice', 'test-1', null, false)
+        );
+
+        await waitFor(() => expect(result.current.state.status).toBe('prompting_options'));
+
+        // Start with 1.5x time
+        await act(async () => {
+            await result.current.actions.startAttemptWithOptions({ 
+                prometricDelay: false, 
+                additionalTime: true 
+            });
+        });
+
+        // Base time is 30 mins (1800s). 1.5x should be 2700s.
+        expect(result.current.state.timerSnapshot.initialDuration).toBe(2700);
+        expect(result.current.state.timerSnapshot.isCountdown).toBe(true);
+    });
+
+    it('Correctly calculates duration for Regular Mode - Reading Comp (60 mins base)', async () => {
+        const { result } = renderHook(() => 
+            // isPreviewMode = false, topic = reading-comprehension
+            useQuizEngine('reading-comprehension', 'practice', 'test-1', null, false)
+        );
+
+        await waitFor(() => expect(result.current.state.status).toBe('prompting_options'));
+
+        // Start with 1.5x time
+        await act(async () => {
+            await result.current.actions.startAttemptWithOptions({ 
+                prometricDelay: false, 
+                additionalTime: true 
+            });
+        });
+
+        // Base time is 60 mins (3600s). 1.5x should be 5400s.
+        expect(result.current.state.timerSnapshot.initialDuration).toBe(5400);
+        expect(result.current.state.timerSnapshot.isCountdown).toBe(true);
+    });
+
+    // --- END TIMING TESTS ---
 
     it('Resumes an existing attempt correctly', async () => {
         // Mock an existing attempt from DB

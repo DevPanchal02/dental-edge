@@ -1,75 +1,12 @@
-/* FILE: client/src/styles/App.css */
-
 /* --- CSS Variables for Theming --- */
 :root {
-  /* Light Mode (Default) - Based on new palette */
-  --bg-primary: #FFFAEC;                            /* Lightest Beige from palette */
-  --bg-secondary: #f4efe5;                          /* Medium Beige for secondary backgrounds */
-  --bg-sidebar: #f4efe5;                            /* Medium Beige for sidebar */
-  --bg-quiz-content-area: #FFFFFF;                  /* Explicit white for quiz area as previously requested */
-  --bg-question-card: #FFFFFF;                      /* Explicit white for question card */
-  --bg-option: #FAF6EF;                            /* Very light beige, derived from f4efe5 */
-  --bg-option-hover: #f4efe5;                       /* Medium Beige for hover */
-  --bg-option-selected: #E0D8C5;                    /* Darker shade of f4efe5 for selected */
-  --bg-option-correct: #d4edda;                     /* Standard light green - keep for clarity */
-  --bg-option-incorrect: #f8d7da;                   /* Standard light red - keep for clarity */
-  --bg-explanation: var(--bg-question-card);        /* Should resolve to #FFFFFF */
-  --bg-passage: var(--bg-question-card);            /* UPDATED: Passage bg to match question card bg */
-  --bg-modal-content: #FFFAEC;                      /* Lightest Beige for modal */
-
-  --bg-button-primary: #578E7E;                     /* Teal from palette */
-  --bg-button-primary-hover: #4A7A6B;               /* Darker shade of Teal */
-  --bg-button-secondary: #A7B0B9;                   /* Muted Grey, derived from #3D3D3D if needed, or a lighter teal */
-  --bg-button-secondary-hover: #8E9AA4;            /* Darker shade of muted grey */
-  --bg-button-danger: #dc3545;                      /* Standard red - keep for clarity */
-  --bg-button-danger-hover: #c82333;
-  --bg-button-warning: #ffc107;                     /* Standard yellow - keep for clarity */
-  --bg-button-warning-hover: #e0a800;
-  --bg-button-solution: #578E7E;                    /* Teal for solution button */
-  --bg-button-solution-hover: #4A7A6B;
-  --bg-item-link: #f4efe5;                          /* TopicPage test/QB items - Medium Beige */
-  --bg-item-link-hover: #E0D8C5;                    /* Darker Medium Beige */
-
-  --text-primary: #3D3D3D;                         /* Dark Grey/Black from palette */
-  --text-secondary: #5E5E5E;                       /* Slightly lighter than primary text */
-  --text-on-button-primary: #FFFAEC;                /* Lightest Beige on Teal buttons */
-  --text-on-button-secondary: #3D3D3D;              /* Dark Grey on lighter secondary buttons */
-  --text-on-button-danger: #FFFFFF;
-  --text-on-button-warning: #3D3D3D;                /* Dark text on yellow */
-  --text-on-button-solution: #FFFAEC;
-  --text-item-link: #3D3D3D;                        /* Dark text on Medium Beige items */
-  --text-accent: #578E7E;                           /* Teal from palette for links */
-  --text-quiz-title: #3D3D3D;
-  --text-option-correct: #155724;                   /* Standard dark green */
-  --text-option-incorrect: #721c24;                 /* Standard dark red */
-
-  --border-primary: #E0D8C5;                        /* Darker Medium Beige for borders */
-  --border-card-outline: #3D3D3D;                   /* Dark Grey/Black for question card outline */
-  --border-option-selected: #578E7E;                /* Teal border for selected */
-  --border-option-correct: #155724;
-  --border-option-incorrect: #721c24;
-  --border-button: #578E7E;                         /* Teal for theme toggle and other general buttons */
-
-  --shadow-card: 0 1px 3px rgba(61, 61, 61, 0.1);   /* Shadow based on dark grey */
-
-  --sidebar-width: 345px;
-
-  /* UPDATED Light Mode Highlight Colors */
-  --highlight-bg: #fff099; /* Darker yellow for light mode highlighting */
-  --highlight-text: #3D3D3D; /* Dark text for good contrast on light highlight */
-
-  --scrollbar-track-bg: #f4efe5;                    /* Medium Beige scrollbar track */
-  --scrollbar-thumb-bg: #C4BBAF;                    /* Muted Beige/Grey scrollbar thumb */
-}
-
-body.dark-mode {
-  /* Dark Mode - Unified theme based on #151515 */
-  --bg-primary: #151515;                            /* NEW: The primary in-app background */
-  --bg-secondary: #1f1f1f;                          /* NEW: Slightly lighter for content boxes, headers */
-  --bg-sidebar: #1f1f1f;                            /* NEW: Matches secondary content */
-  --bg-quiz-content-area: #151515;                  /* NEW: Matches the main page background */
-  --bg-question-card: #1c1c1c;                      /* NEW: A distinct, but very dark color for contrast */
-  --bg-option: #2a2a2a;                             /* NEW: Lighter shade for options */
+  /* Dark Mode (Default) - Unified theme based on #151515 */
+  --bg-primary: #151515;                            
+  --bg-secondary: #1f1f1f;                          
+  --bg-sidebar: #1f1f1f;                            
+  --bg-quiz-content-area: #151515;                  
+  --bg-question-card: #1c1c1c;                      
+  --bg-option: #2a2a2a;                             
   --bg-option-hover: #353535;                       
   --bg-option-selected: #414141;
   --bg-option-correct: #2E4B3A;                     
@@ -113,12 +50,72 @@ body.dark-mode {
 
   --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.45);     
 
-  /* UPDATED Dark Mode Highlight Colors */
   --highlight-bg: #ffd700; 
   --highlight-text: #151515; 
 
   --scrollbar-track-bg: #1f1f1f;
   --scrollbar-thumb-bg: #3D3D3D;
+
+  /* Global variables that apply to both themes */
+  --sidebar-width: 345px;
+}
+
+body.light-mode {
+  /* Light Mode (Override) - Based on new palette */
+  --bg-primary: #FFFAEC;                            
+  --bg-secondary: #f4efe5;                          
+  --bg-sidebar: #f4efe5;                            
+  --bg-quiz-content-area: #FFFFFF;                  
+  --bg-question-card: #FFFFFF;                      
+  --bg-option: #FAF6EF;                            
+  --bg-option-hover: #f4efe5;                       
+  --bg-option-selected: #E0D8C5;                    
+  --bg-option-correct: #d4edda;                     
+  --bg-option-incorrect: #f8d7da;                   
+  --bg-explanation: var(--bg-question-card);        
+  --bg-passage: var(--bg-question-card);            
+  --bg-modal-content: #FFFAEC;                      
+
+  --bg-button-primary: #578E7E;                     
+  --bg-button-primary-hover: #4A7A6B;               
+  --bg-button-secondary: #A7B0B9;                   
+  --bg-button-secondary-hover: #8E9AA4;            
+  --bg-button-danger: #dc3545;                      
+  --bg-button-danger-hover: #c82333;
+  --bg-button-warning: #ffc107;                     
+  --bg-button-warning-hover: #e0a800;
+  --bg-button-solution: #578E7E;                    
+  --bg-button-solution-hover: #4A7A6B;
+  --bg-item-link: #f4efe5;                          
+  --bg-item-link-hover: #E0D8C5;                    
+
+  --text-primary: #3D3D3D;                         
+  --text-secondary: #5E5E5E;                       
+  --text-on-button-primary: #FFFAEC;                
+  --text-on-button-secondary: #3D3D3D;              
+  --text-on-button-danger: #FFFFFF;
+  --text-on-button-warning: #3D3D3D;                
+  --text-on-button-solution: #FFFAEC;
+  --text-item-link: #3D3D3D;                        
+  --text-accent: #578E7E;                           
+  --text-quiz-title: #3D3D3D;
+  --text-option-correct: #155724;                   
+  --text-option-incorrect: #721c24;                 
+
+  --border-primary: #E0D8C5;                        
+  --border-card-outline: #3D3D3D;                   
+  --border-option-selected: #578E7E;                
+  --border-option-correct: #155724;
+  --border-option-incorrect: #721c24;
+  --border-button: #578E7E;                         
+
+  --shadow-card: 0 1px 3px rgba(61, 61, 61, 0.1);   
+
+  --highlight-bg: #fff099; 
+  --highlight-text: #3D3D3D; 
+
+  --scrollbar-track-bg: #f4efe5;                    
+  --scrollbar-thumb-bg: #C4BBAF;                    
 }
 /* --- End CSS Variables --- */
 
